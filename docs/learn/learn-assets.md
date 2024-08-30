@@ -7,8 +7,6 @@ keywords: [assets, fungible, non-fungible, asset hub, statemine, statemint]
 slug: ../learn-assets
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
 represented on several chains. They can take many forms, from a parachain's native token to on-chain
 representations of off-chain reserves. This page focuses on the latter, namely assets issued by a

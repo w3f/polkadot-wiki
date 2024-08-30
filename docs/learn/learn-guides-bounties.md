@@ -7,8 +7,7 @@ keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 slug: ../learn-guides-bounties
 ---
 
-import RPC from "./../../components/RPC-Connection"; import MessageBox from
-"../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the

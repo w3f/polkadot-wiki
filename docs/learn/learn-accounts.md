@@ -7,8 +7,8 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
-from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from
+'@theme/DocCardList';
 
 :::info User friendly wallets
 

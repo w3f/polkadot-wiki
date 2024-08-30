@@ -7,9 +7,8 @@ keywords: [gides, advanced, polkadot-js, transfers]
 slug: ../learn-guides-transfers
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
-from "@theme/TabItem"; import MessageBox from "../../components/MessageBox"; import
-"../../components/MessageBox.css";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import MessageBox from
+"../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the

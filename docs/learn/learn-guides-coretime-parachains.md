@@ -7,8 +7,6 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../learn-guides-coretime-parachains
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::info
 
 If you aren't sure what Agile Coretime is, be sure to read the

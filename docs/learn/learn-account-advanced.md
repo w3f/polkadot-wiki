@@ -7,8 +7,6 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping, EN
 slug: ../learn-account-advanced
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check

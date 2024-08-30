@@ -7,8 +7,6 @@ keywords: [token, DOT, what are the uses of DOT, KSM, faucet]
 slug: ../learn-DOT
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 ## What is DOT?
 
 DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
