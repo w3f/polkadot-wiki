@@ -63,6 +63,14 @@ The multisig deposit base on Polkadot is <RPC network="polkadot" path="consts.mu
 
 The multisig deposit factor on Polkadot is <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>.
 
+#### OpenGov Referendum Timeout
+
+A Polkadot referendum is timeout for not submitting the Decision Deposit within <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> days since its creation.
+
+#### OpenGov Submission Deposit
+
+A deposit of <RPC network="polkadot" path="consts.referenda.submissionDeposit" defaultValue={10000000000} filter="humanReadable"/> is needed to submit a referendum on Polkadot.
+
 #### Parachain ID Registration Deposit
 
 Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
@@ -135,6 +143,14 @@ The multisig deposit base on Kusama is <RPC network="kusama" path="consts.multis
 #### Multisig Deposit Factor
 
 The multisig deposit factor on Kusama is <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>.
+
+#### OpenGov Referendum Timeout
+
+A Kusama referendum is timeout for not submitting the Decision Deposit within <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> days since its creation.
+
+#### OpenGov Submission Deposit
+
+A deposit of <RPC network="kusama" path="consts.referenda.submissionDeposit" defaultValue={33333333333} filter="humanReadable"/> is needed to submit a referendum on Kusama.
 
 #### Parachain ID Registration Deposit
 
