@@ -23,9 +23,17 @@ The number of Polkadot validators in the active set is <RPC network="polkadot" p
 
 The auction ending period on Polkadot is <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
+#### Bounty Curator Deposit
+
+On Polkadot, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/>%. The deposit can range between a minimum of <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> and a maximum of <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/>.
+
 #### Bounty Deposit
 
 The deposit to submit a bounty on Polkadot is <RPC network="polkadot" path="consts.bounties.bountyDepositBase" defaultValue={10000000000} filter="humanReadable"/>.
+
+#### Bounty Duration
+
+A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
 
 #### Child Bounty Payout Delay
 
@@ -111,6 +119,10 @@ The number of period per slot auction on Polkadot is <RPC network="polkadot" pat
 
 Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="13557639805348170350" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>.
 
+#### Treasury Burn Factor
+
+At the end of every spending period on Polkadot, <RPC network="polkadot" path="consts.treasury.burn" defaultValue={10000} filter="permillToPercent"/>% of the available funds are burned.
+
 #### Treasury Spending Period
 
 The spending period on Polkadot is currently <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> days.
@@ -131,9 +143,17 @@ The number of Kusama validators in the active set is <RPC network="kusama" path=
 
 The auction ending period on Kusama is <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
+#### Bounty Curator Deposit
+
+On Kusama, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/>%. The deposit can range between a minimum of <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> and a maximum of <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/>.
+
 #### Bounty Deposit
 
 The deposit to submit a bounty on Kusama is <RPC network="kusama" path="consts.bounties.bountyDepositBase" defaultValue={33333333300} filter="humanReadable"/>.
+
+#### Bounty Duration
+
+A Kusama bounty has a predetermined duration of <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
 
 #### Child Bounty Payout Delay
 
@@ -218,6 +238,10 @@ The number of period per slot auction on Kusama is <RPC network="kusama" path="c
 #### Total Issuance
 
 Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="14017001595616667835" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="5649"/>.
+
+#### Treasury Burn Factor
+
+At the end of every spending period on Kusama, <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/>% of the available funds are burned.
 
 #### Treasury Spending Period
 
