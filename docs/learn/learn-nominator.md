@@ -26,16 +26,12 @@ help you get started.
 
 :::info Stake through Nomination Pools
 
-The minimum amount required to become an active nominator and earn rewards may change from era to
-era.
-{{ polkadot: It is currently __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :polkadot }}
-{{ kusama: It is currently __<RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/>__. :kusama }}
-If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
-nomination and still want to participate in staking, you can join the nomination pools. You can now
-stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
-{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
-in the nomination pools and earn staking rewards. For additional information, see
+The minimum amount required to become an active nominator (i.e. the
+[minimum active bond](../general/constants-variables.md#minimum-active-bond)) and earn rewards may
+change from era to era. If you have less tokens than the minimum active nomination and still want to
+participate in staking, you can join the nomination pools with a
+[smaller amount of tokens](../general/constants-variables.md#minimum-bond-to-participate-in-staking).
+For additional information, see
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
@@ -270,12 +266,9 @@ On Polkadot and Kusama, the instance of the pallet
 
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the long-term improvements of the staking/election system. Bags-list allows
-up to
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nominators to set their intention to nominate, of which the stake of the top
-{{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }} nominators is considered for
-[electing set](#staking-election-stages) that eventually determines the active validators.
+an unlimited number nominators to set their intention to nominate, of which only a portion of it
+(currently 22500) is considered for [electing set](#staking-election-stages) that eventually
+determines the active validators.
 
 The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
 stake. The `voterList.putInFrontOf` extrinsic can be issued to move up in the bag, which might be
@@ -409,9 +402,8 @@ nominate with to receive staking rewards can change between the eras.
 
 Thus, for **nominator counters**, we have:
 
-- count of nominator intentions and max possible nominator intentions
-  {{ polkadot: (unlimited) :polkadot }}
-  {{ kusama: (<RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/>) :kusama }}
+- count of nominator intentions and
+  [max possible nominator intentions](../general/constants-variables.md#maximum-number-of-nominators)
 - count of electing nominators, and maximum possible electing nominators
   {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
 - count of active nominators and maximum possible active nominators
@@ -446,11 +438,10 @@ almost always see only a single active nomination per era. See the
 
 :::info Minimum DOT required to earn staking rewards
 
-The minimum DOT required to submit intent to nominate is
-{{ polkadot: __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={1000000000000} filter="humanReadable"/>__ :polkadot }}
-, but the minimum active nomination required to earn staking rewards is dynamic and may be much
-higher, which can be viewed on
-[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
+The
+[minimum number of tokens required to submit intent to nominate](../general/constants-variables.md#minimum-bond-to-participate-in-staking)
+differs from the [minimum active nomination](../general/constants-variables.md#minimum-active-bond)
+required to earn staking rewards.
 
 :::
 

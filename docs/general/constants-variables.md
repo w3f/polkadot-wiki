@@ -43,6 +43,10 @@ Polkadot's inactive issuance is <RPC network="polkadot" path="query.balances.ina
 
 The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
 
+#### Maximum Number of Nominators
+
+The maximum number of nominators on Polkadot is uncapped and currently sits at <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={50000}/>.
+
 #### Minimum Active Bond
 
 The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
@@ -142,6 +146,10 @@ Kusama's inactive issuance is <RPC network="kusama" path="query.balances.inactiv
 #### Index Deposit
 
 The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
+
+#### Maximum Number of Nominators
+
+The maximum number of nominators on Kusama is capped at <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> and currently sits at <RPC network="kusama" path="query.staking.counterForNominators" defaultValue={50000}/>.
 
 #### Minimum Active Bond
 
