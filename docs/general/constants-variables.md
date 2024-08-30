@@ -51,6 +51,10 @@ The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" 
 
 The minimum bond to create a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable" />.
 
+#### Minimum Bond to Join a Nomination Pool
+
+The minimum bond to join a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.
+
 #### Minimum Bond to Participate in Staking
 
 The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>.
@@ -66,6 +70,14 @@ The multisig deposit base on Polkadot is <RPC network="polkadot" path="consts.mu
 #### Multisig Deposit Factor
 
 The multisig deposit factor on Polkadot is <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>.
+
+#### Nomination Pool Max Commission
+
+The maximum commission that can be set for a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/>%.
+
+#### Nomination Pool Members
+
+There are currently <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={46378} /> members in <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={285} /> Polkadot nomination pools. There is no limit to the number of pools or pool members per pool.
 
 #### OpenGov Referendum Timeout
 
@@ -95,6 +107,9 @@ Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.total
 
 The spending period on Polkadot is currently <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> days.
 
+#### Unbonding Duration
+
+The unbonding duration on Polkadot is set to <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days.
 
 </TabItem>
 <TabItem value="kusama">
@@ -136,6 +151,10 @@ The minimum amount of tokens to nominate on Kusama is <RPC network="kusama" path
 
 The minimum bond to create a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.
 
+#### Minimum Bond to Join a Nomination Pool
+
+The minimum bond to join a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.
+
 #### Minimum Bond to Participate in Staking
 
 The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>.
@@ -151,6 +170,14 @@ The multisig deposit base on Kusama is <RPC network="kusama" path="consts.multis
 #### Multisig Deposit Factor
 
 The multisig deposit factor on Kusama is <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>.
+
+#### Nomination Pool Max Commission
+
+The maximum commission that can be set for a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/>%.
+
+#### Nomination Pool Members
+
+There are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={3433} /> members in <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={202} /> Kusama nomination pools. There is no limit to the number of pools or pool members per pool.
 
 #### OpenGov Referendum Timeout
 
@@ -179,6 +206,10 @@ Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssu
 #### Treasury Spending Period
 
 The spending period on Kusama is currently <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> days.
+
+#### Unbonding Duration
+
+The unbonding duration on Kusama is set to <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days.
 
 </TabItem>
 <TabItem value="ahp">
