@@ -7,8 +7,7 @@ keywords: [opengov, polkadot opengov, referenda, treasury, tipps, polkadot-js]
 slug: ../learn-guides-treasury
 ---
 
-import RPC from "./../../components/RPC-Connection"; import MessageBox from
-"../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
@@ -369,8 +368,7 @@ Briefly, you will need to:
 - Notify the
   {{ polkadot: [Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}{{ kusama: [Kusama Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :kusama }}
   about your referendum
-- Place the decision deposit before the
-  {{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
-  timeout
+- Place the decision deposit
+  [before the timeout](../general/constants-variables.md#opengov-referendum-timeout)
 - Once the referendum ends you can
   [claim the preimage and decision deposits back](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits)
