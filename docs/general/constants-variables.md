@@ -47,6 +47,10 @@ The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="con
 
 The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
 
+#### Minimum Bond to Create a Nomination Pool
+
+The minimum bond to create a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable" />.
+
 #### Minimum Bond to Participate in Staking
 
 The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>.
@@ -127,6 +131,10 @@ The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.
 #### Minimum Active Bond
 
 The minimum amount of tokens to nominate on Kusama is <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
+
+#### Minimum Bond to Create a Nomination Pool
+
+The minimum bond to create a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.
 
 #### Minimum Bond to Participate in Staking
 
