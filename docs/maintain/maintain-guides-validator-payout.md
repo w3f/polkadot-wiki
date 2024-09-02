@@ -171,21 +171,27 @@ validators on the network.
 
 ## Nominators and Validator Payments
 
-Nominated stake allows you to "vote" for validators and share in the rewards (and
-[slashing](../learn/learn-offenses.md)) without running a validator node yourself. Validators can
-choose to keep a percentage of the rewards due to their validator to "reimburse" themselves for the
-cost of running a validator node. Other than that, all rewards are shared based on the stake behind
-each validator. This includes the stake of the validator itself, plus any stake bonded by
-nominators.
+A nominated stake allows you to "vote" for validators and share the rewards (but also
+[slashing](../learn/learn-offenses.md)) without running a validator node yourself.
+
+Although staking rewards are based on the activities of the validator node during a specific era,
+the validator never has access to or ownership of staking rewards. In fact, `staking.payoutStakers`
+or `staking.payoutStakerByPage` calls are necessary to payout staking rewards, can be called by
+anyone, and the staking rewards are "generated" because of it and automatically sent to nominators
+(i.e., rewards are produced or minted and sent to nominators, not sent from validators to
+nominators).
+
+This includes the stake of the validator itself plus any stake bonded by nominators.
 
 :::info
 
 Validators set their preference as a percentage of the block reward, _not_ an absolute number of
-DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking when
-the amount staked is at 50% of the total supply. The commission is set as the amount taken by the
-validator; that is, 0% commission means that the validator does not receive any proportion of the
-rewards besides that owed to it from self-stake, and 100% commission means that the validator
-operator gets all rewards and gives none to its nominators.
+DOT. Polkadot's block reward is
+[based on the _total_ amount at stake](../learn/learn-inflation.md#ideal-staking-rate). The
+commission is set as the amount taken by the validator; that is, 0% commission means that the
+validator does not receive any proportion of the rewards besides that owed to it from self-stake,
+and 100% commission means that the validator operator gets all rewards and gives none to its
+nominators.
 
 :::
 
