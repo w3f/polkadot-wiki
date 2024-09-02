@@ -627,7 +627,7 @@ to an off-chain worker, which validators can work on the problem without impacti
 time.
 
 To limit the complexity of the election and payout, any given nominator can only
-[select a limited number of validators](../general/constants-variables.md#maximum-votes-per-nominator)
+[select a limited number of validators](../general/chain-state-values.md#maximum-votes-per-nominator)
 to nominate.
 
 ### Phragmms (aka Balphragmms)

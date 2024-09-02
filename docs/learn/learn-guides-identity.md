@@ -153,7 +153,7 @@ use it to set a sub-identity to your Ledger account.
 
 You should now see the sub-identity displayed on-chain. You need to be aware that the creation of
 identities and sub-identities requires
-[deposits](../general/constants-variables.md#identity-deposit). This reserved account balance is
+[deposits](../general/chain-state-values.md#identity-deposit). This reserved account balance is
 freed once you [clear the identities](../learn/learn-identity.md#clearing-and-killing-an-identity)
 on the account.
 

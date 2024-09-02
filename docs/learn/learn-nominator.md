@@ -27,10 +27,10 @@ help you get started.
 :::info Stake through Nomination Pools
 
 The minimum amount required to become an active nominator (i.e. the
-[minimum active bond](../general/constants-variables.md#minimum-active-bond)) and earn rewards may
+[minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards may
 change from era to era. If you have less tokens than the minimum active nomination and still want to
 participate in staking, you can join the nomination pools with a
-[smaller amount of tokens](../general/constants-variables.md#minimum-bond-to-participate-in-staking).
+[smaller amount of tokens](../general/chain-state-values.md#minimum-bond-to-participate-in-staking).
 For additional information, see
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
@@ -403,7 +403,7 @@ nominate with to receive staking rewards can change between the eras.
 Thus, for **nominator counters**, we have:
 
 - count of nominator intentions and
-  [max possible nominator intentions](../general/constants-variables.md#maximum-number-of-nominators)
+  [max possible nominator intentions](../general/chain-state-values.md#maximum-number-of-nominators)
 - count of electing nominators, and maximum possible electing nominators
   {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
 - count of active nominators and maximum possible active nominators
@@ -439,8 +439,8 @@ almost always see only a single active nomination per era. See the
 :::info Minimum DOT required to earn staking rewards
 
 The
-[minimum number of tokens required to submit intent to nominate](../general/constants-variables.md#minimum-bond-to-participate-in-staking)
-differs from the [minimum active nomination](../general/constants-variables.md#minimum-active-bond)
+[minimum number of tokens required to submit intent to nominate](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
+differs from the [minimum active nomination](../general/chain-state-values.md#minimum-active-bond)
 required to earn staking rewards.
 
 :::

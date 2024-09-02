@@ -30,10 +30,10 @@ does not require an extension or wallet as an interface.
 :::info Stake through Nomination Pools
 
 The minimum amount required to become an active nominator (i.e.
-[the minimum active bond](../general/constants-variables.md#minimum-active-bond)) and earn rewards
+[the minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards
 may change from era to era. If you have less tokens than the minimum active nomination and still
 want to participate in staking, you can join the nomination pools with a
-[minimal bond](../general/constants-variables.md#minimum-bond-to-join-a-nomination-pool) and earn
+[minimal bond](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool) and earn
 staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
@@ -100,18 +100,17 @@ security is maximized. In the next era, a certain number of validators having th
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. For
 more information about the election algorithm go to [this](learn-phragmen.md) page on the wiki or
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Paper) research article. As a
-nominator, a
-[minimum bond](../general/constants-variables.md#minimum-bond-to-participate-in-staking) is required
-to submit an intention to nominate, which can be thought of as registering to be a nominator. Note
-that in NPoS the stake of both nominators and validators can be [slashed](./learn-offenses.md). For
-an in-depth review of NPoS see
+nominator, a [minimum bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
+is required to submit an intention to nominate, which can be thought of as registering to be a
+nominator. Note that in NPoS the stake of both nominators and validators can be
+[slashed](./learn-offenses.md). For an in-depth review of NPoS see
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 :::caution Minimum Nomination to Receive Staking Rewards
 
-[The minimum nomination intent](../general/constants-variables.md#minimum-bond-to-participate-in-staking)
+[The minimum nomination intent](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
 does not guarantee staking rewards. The nominated amount has to be greater than
-[minimum active nomination](../general/constants-variables.md#minimum-active-bond), which is a
+[minimum active nomination](../general/chain-state-values.md#minimum-active-bond), which is a
 dynamic value that can be much higher than the minimum nomination intent. This dynamic value depends
 on the amount of tokens being staked, in addition to the selected nominations.
 
@@ -450,7 +449,7 @@ can now unbond them immediately.
 :::
 
 If your bonded balance did not back any validators for a
-[pre-determined period](../general/constants-variables.md#bounty-duration), you are eligible to
+[pre-determined period](../general/chain-state-values.md#bounty-duration), you are eligible to
 perform fast unstaking. The [staking dashboard](https://staking.polkadot.cloud/#/overview) will
 automatically check if you qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
@@ -483,7 +482,7 @@ users to withdraw. For in-depth understanding, check the
 ### Cons of Staking
 
 - Tokens will be locked during the
-  [unbonding period](../general/constants-variables.md#unbonding-duration) and no rewards will be
+  [unbonding period](../general/chain-state-values.md#unbonding-duration) and no rewards will be
   earned if you unbond.
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](./learn-offenses.md)).
@@ -492,27 +491,26 @@ users to withdraw. For in-depth understanding, check the
 
 #### Unbonding Period Length
 
-The [unbonding period](../general/constants-variables.md#unbonding-duration) provides a safety net
+The [unbonding period](../general/chain-state-values.md#unbonding-duration) provides a safety net
 for slashing offenses identified in
 [past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras),
 which can hold the respective validators and their nominators accountable. The unbonding period is
 crucial in mitigating ex post facto slashing, particularly in guarding against long-range attacks.
 When a client encounters a chain finalized by
 [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than one
-[unbonding period](../general/constants-variables.md#unbonding-duration) in the past, it lacks the
+[unbonding period](../general/chain-state-values.md#unbonding-duration) in the past, it lacks the
 security of slashing protection.
 
 Essentially, this period establishes a cadence for synchronizing with the chain or acquiring a
 checkpoint within a timeframe that engenders trust. It's worth noting that while the choice of
-[unbonding period length](../general/constants-variables.md#unbonding-duration) is somewhat
+[unbonding period length](../general/chain-state-values.md#unbonding-duration) is somewhat
 arbitrary, it unquestionably provides a higher level of security compared to a shorter period.
 
 ## How many Validators?
 
-The top bound on the
-[number of validators](../general/constants-variables.md#active-validator-count) has not been
-determined yet, but should only be limited by the bandwidth strain of the network due to
-peer-to-peer message passing.
+The top bound on the [number of validators](../general/chain-state-values.md#active-validator-count)
+has not been determined yet, but should only be limited by the bandwidth strain of the network due
+to peer-to-peer message passing.
 
 {{ polkadot: The estimate of the number of validators that Polkadot will have at maturity is around 1000. :polkadot }}
 {{ polkadot: Kusama is already operating at this threshold. :polkadot }}

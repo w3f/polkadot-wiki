@@ -29,7 +29,7 @@ Start your staking journey or explore more information about staking on
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started. You can now stake natively with a
-[small number of tokens](../general/constants-variables.md#minimum-bond-to-join-a-nomination-pool)
+[small number of tokens](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool)
 and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
@@ -404,7 +404,7 @@ A maximum of
 [`pallet::Config::SignedMaxSubmissions`](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L390)
 will be stored on-chain and they will be sorted based on score. Higher the score the more optimal
 the election solution is. The
-[`SignedMaxSubmissions`](../general/constants-variables.md#staking-miner-max-submissions) variable
+[`SignedMaxSubmissions`](../general/chain-state-values.md#staking-miner-max-submissions) variable
 can be modified through governance.
 
 Upon arrival of a new solution:
@@ -447,7 +447,7 @@ Queue
 The staking miners are required to pay a deposit to post their solutions. Deposit amount is the sum
 of `SignedDepositBase` +`SignedDepositByte` + `SignedDepositWeight`. All good solutions are subject
 to receiving a `SignedRewardBase`. For more information about deposit values see the
-[Constants and Variables page](../general/constants-variables.md#staking-miner-deposit).
+[Constants and Variables page](../general/chain-state-values.md#staking-miner-deposit).
 
 ### Further Resources
 

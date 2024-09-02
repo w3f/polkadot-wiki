@@ -664,8 +664,8 @@ software.
 ## Spend Period
 
 Successfully enacted Treasury track referenda will get funded at the end of the
-[spending period](./constants-variables.md#spending-period). Treasury funds are directly sent to the
-beneficiary account at the end of the spend period.
+[spending period](./chain-state-values.md#treasury-spending-period). Treasury funds are directly
+sent to the beneficiary account at the end of the spend period.
 
 ## Staking
 

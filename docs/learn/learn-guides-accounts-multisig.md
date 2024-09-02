@@ -92,8 +92,8 @@ The deposit is dependent on the `threshold` parameter and is calculated as follo
 Deposit = depositBase + threshold * depositFactor
 ```
 
-Where [`depositBase`](../general/constants-variables.md#multisig-deposit-base) and
-[`depositFactor`](../general/constants-variables.md#multisig-deposit-factor) are chain constants set
+Where [`depositBase`](../general/chain-state-values.md#multisig-deposit-base) and
+[`depositFactor`](../general/chain-state-values.md#multisig-deposit-factor) are chain constants set
 in the runtime code.
 
 The other signatory accounts should have enough funds to pay for the transaction fees associated

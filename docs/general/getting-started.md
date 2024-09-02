@@ -151,7 +151,7 @@ ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
 [DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for
 transaction fees, staking, governance, acquisition of a parachain slot and for enabling several key
 functionalities on Polkadot. See more information on
-[the Constants and Variables page](./constants-variables.md).
+[the Constants and Variables page](./chain-state-values.md).
 
 :::info
 

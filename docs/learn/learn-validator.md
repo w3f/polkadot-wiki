@@ -36,7 +36,7 @@ the Relay Chain.
 
 Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
 blocks for all parachains connected to the relay chain. The selected para-validators are part of the
-[active validators](../general/constants-variables.md#active-validator-count) randomly selected (per
+[active validators](../general/chain-state-values.md#active-validator-count) randomly selected (per
 epoch) to participate in the validation, creating a validator pool of 200 para-validators.
 
 Para-validators verify that the information contained in an assigned set of parachain blocks is

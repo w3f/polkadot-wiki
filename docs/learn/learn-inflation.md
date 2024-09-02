@@ -27,7 +27,7 @@ DOT went through [redenomination](./archive/learn-redenomination.md) in 2020 tha
 supply increase by 100 times.
 
 The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be
-seen [here](../general/constants-variables.md#total-issuance).
+seen [here](../general/chain-state-values.md#total-issuance).
 
 :::
 

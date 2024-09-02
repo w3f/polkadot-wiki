@@ -122,7 +122,7 @@ upgrades (as determined through its local governance).
 :::info Minimum Crowdloan Contribution
 
 There is a
-[minimum balance for contributions for a crowdloan campaign](../general/constants-variables.md#minimum-crowdloan-contribution).
+[minimum balance for contributions for a crowdloan campaign](../general/chain-state-values.md#minimum-crowdloan-contribution).
 This is to make crowdloans as accessible as possible while maintaining a balance to justify using
 the network's resources.
 

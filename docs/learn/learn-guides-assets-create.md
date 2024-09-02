@@ -18,7 +18,7 @@ The Asset Hub is a generic assets system parachain which provides functionality 
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
 hub is {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations are about
-[1/10th of the values on the Relay chains](../general/constants-variables.md#existential-deposit-2).
+[1/10th of the values on the Relay chains](../general/chain-state-values.md#existential-deposit-2).
 Apart from the core protocol token {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, the
 assets held on the Asset Hub can be broadly categorized as
 
@@ -43,7 +43,7 @@ from Westend to Westend Asset Hub, are available for free through a
 :::
 
 To create an asset on the Asset Hub, you would need to
-[deposit some funds](../general/constants-variables.md#asset-deposit). Before you create an asset on
+[deposit some funds](../general/chain-state-values.md#asset-deposit). Before you create an asset on
 the Asset Hub, ensure that your Asset Hub account balance is a bit more than the sum of those two
 deposits, which should seamlessly account for the required deposits and transaction fees. You can
 send {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from a

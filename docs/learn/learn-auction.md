@@ -80,7 +80,7 @@ Random Function wins the slot auction.
 
 A parachain auction on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lasts exactly
 one week from the starting period (1 day and 18 hours) to
-[ending period](../general/constants-variables.md#auction-ending-period) (candle auction phase) and
+[ending period](../general/chain-state-values.md#auction-ending-period) (candle auction phase) and
 finally 6 hours for determining the auction winner.
 
 :::info
@@ -213,7 +213,7 @@ _Each period of the range 1 - 4 represents a
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
-[periods available for a slot](../general/constants-variables.md#period-per-slot-auction).
+[periods available for a slot](../general/chain-state-values.md#period-per-slot-auction).
 
 :::note If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way,
 you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.

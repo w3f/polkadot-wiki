@@ -11,7 +11,7 @@ slug: ../learn-identity
 participants to add personal information to their on-chain account and subsequently ask for
 verification of this information by [registrars](#registrars).
 
-Users must [reserve funds](../general/constants-variables.md#identity-deposit) in a bond to store
+Users must [reserve funds](../general/chain-state-values.md#identity-deposit) in a bond to store
 their information on chain. These funds are _locked_, not spent - they are returned when the
 identity is cleared.
 
@@ -26,7 +26,7 @@ register multiple sub accounts that represent the [Stash accounts](learn-cryptog
 their validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a
-[deposit](../general/constants-variables.md#sub-identity-deposit) is required for every sub-account.
+[deposit](../general/chain-state-values.md#sub-identity-deposit) is required for every sub-account.
 
 ## Judgements
 

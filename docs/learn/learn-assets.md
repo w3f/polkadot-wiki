@@ -78,7 +78,7 @@ to learn how to create fungible assets on the Asset Hub.
 :::
 
 Anyone on the network can create assets on the Asset Hub as long as they can reserve the
-[required deposits](../general/constants-variables.md#asset-deposit). The network reserves the
+[required deposits](../general/chain-state-values.md#asset-deposit). The network reserves the
 deposit on creation. The creator also must specify a unique `AssetId`, an integer of type `u32`, to
 identify the asset. The `AssetId` should be the canonical identifier for an asset, as the chain does
 not enforce the uniqueness of metadata like "name" and "symbol". The creator must also specify a

@@ -31,7 +31,7 @@ wallets or extensions can be imported from [Ledger](./ledger.md) or
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
 need some free balance to pay for
 [transaction fees](../learn/learn-transactions.md#transaction-fees) and
-[the minimum amount to place your nominations or join a nomination pool](./constants-variables.md#minimum-bond-to-participate-in-staking).
+[the minimum amount to place your nominations or join a nomination pool](./chain-state-values.md#minimum-bond-to-participate-in-staking).
 For more information about staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
 visit the [staking page](../learn/learn-staking.md) and the
 [advanced staking page](../learn/learn-staking-advanced.md).
@@ -121,7 +121,7 @@ Note that Sections A and B will always be visible while you use the dashboard.
   on-chain, see [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping)).
   In this case, 0.301 KSM are bonded for nominating, 0.3 KSM are bonded in a pool, and 0.145 KSM are
   not used for staking. Of the non-staking balance, 0.144 KSM are free while
-  [a small portion is reserved for the existential deposit](./constants-variables.md#existential-deposit).
+  [a small portion is reserved for the existential deposit](./chain-state-values.md#existential-deposit).
 
 - **Section F: The Recent Payouts Panel** shows a bar chart with the rewards paid out to you in the
   past 15 days either as a nominator or a pool member (manually claimed). Note how the 4th of April
@@ -262,9 +262,9 @@ Staking Dashboard.
 This page of the dashboard has four main panels (Sidebar and Accounts Panels excluded):
 
 - **Section A: The Stats Panel** shows the number of active nominators,
-  [the minimum number of tokens to nominate](./constants-variables.md#minimum-bond-to-participate-in-staking)
-  and [the minimum active bond](./constants-variables.md#minimum-active-bond). The system keeps
-  12500 nomination intents and puts them into the
+  [the minimum number of tokens to nominate](./chain-state-values.md#minimum-bond-to-participate-in-staking)
+  and [the minimum active bond](./chain-state-values.md#minimum-active-bond). The system keeps 12500
+  nomination intents and puts them into the
   [bags list](../learn/learn-staking-advanced.md#bags-list). The fact that active nominators are not
   12500 is because there are nominators that have no active validator.
 - **Section B: The Balance Panel** shows the number of tokens bonded in nominations and those that

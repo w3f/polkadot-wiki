@@ -72,7 +72,7 @@ transfer funds from one account to another:
 
 - `transfer keep-alive` (default option) will not allow you to send an amount that would allow the
   sending account to be removed due to it going below the
-  [existential deposit](../general/constants-variables.md#existential-deposit).
+  [existential deposit](../general/chain-state-values.md#existential-deposit).
 - `transfer allow-death` will allow you to send
   {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence. If the
   balance drops below the existential deposit your account will be reaped. It may be that you do not
@@ -88,7 +88,7 @@ keep-alive check is on or not. For instance, attempting to transfer
 {{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} to an account you just generated
 (and thus has no balance) will fail, since
 {{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} is less than the
-[existential deposit](../general/constants-variables.md#existential-deposit) and the account cannot
+[existential deposit](../general/chain-state-values.md#existential-deposit) and the account cannot
 be initialized with such a low balance.
 
 Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the

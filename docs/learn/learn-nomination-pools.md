@@ -106,7 +106,7 @@ ability to bond additional funds or re-stake rewards as long as they are already
 Note that a member may only belong to one pool at a time.
 
 The current minimum bond to join a pool can be seen
-[here](../general/constants-variables.md#minimum-bond-to-join-a-nomination-pool).
+[here](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool).
 
 :::info
 
@@ -162,7 +162,7 @@ learn how to claim rewards for another pool member.
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the
-[unbonding duration](../general/constants-variables.md#unbonding-duration) has passed a member may
+[unbonding duration](../general/chain-state-values.md#unbonding-duration) has passed a member may
 withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship
 with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded
 funds" section in
@@ -217,7 +217,7 @@ Three methods can be used when setting the pool commission:
 
 - **Commission Rate** (`nominationPools.setCommission` extrinsic): the start or new commission rate
   (`newCommission` parameter) that can be set between 0% and the
-  [max commission parameter](../general/constants-variables.md#nomination-pool-max-commission)
+  [max commission parameter](../general/chain-state-values.md#nomination-pool-max-commission)
   (decided through [governance referendum](./learn-polkadot-opengov.md)) via the
   [`globalMaxCommission`](https://paritytech.github.io/substrate/master/pallet_nomination_pools/pallet/type.GlobalMaxCommission.html)
   parameter. You will need to specify an Input Payee Account, i.e. the account that will receive the
@@ -293,9 +293,9 @@ Nominating is an active task, which implies that you regularly monitor that your
 active validator in all the eras and check if you are receiving your staking rewards. More
 importantly, ensure that the validators you chose always act in the best interests of the network
 protocol and have less chance of getting [slashed](./learn-offenses.md). To nominate you need a
-[minimum bond](../general/constants-variables.md#minimum-bond-to-participate-in-staking), while to
+[minimum bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking), while to
 receive rewards, you need at least a balance greater than the
-[minimum active bond](../general/constants-variables.md#minimum-active-bond). If the validator
+[minimum active bond](../general/chain-state-values.md#minimum-active-bond). If the validator
 misbehaves, It is worth noting that your stake is subject to slashing, irrespective of whether you
 are at the top nominators or not.
 
@@ -316,10 +316,10 @@ from time to time and change the pool if necessary.
 :::info Minimum Active Nomination Value is Dynamic
 
 The minimum amount required to become an active nominator and earn rewards can be seen
-[here](../general/constants-variables.md#minimum-active-bond). If you have less tokens than the
+[here](../general/chain-state-values.md#minimum-active-bond). If you have less tokens than the
 minimum active nomination and still want to participate in staking, you can join the nomination
 pools with a
-[smaller bond](../general/constants-variables.md#minimum-bond-to-participate-in-staking). For
+[smaller bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking). For
 additional information, see
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.

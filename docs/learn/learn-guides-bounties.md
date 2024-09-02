@@ -73,7 +73,7 @@ medium to explain the proposal, for example a bounty proposal document on
 can be used to submit all the information needed by OpenGov voters to make an informed decision.
 
 Submitting a bounty proposal will require a
-[deposit](../general/constants-variables.md#bounty-deposit).
+[deposit](../general/chain-state-values.md#bounty-deposit).
 
 ## Assign a Curator to a Bounty
 
@@ -182,7 +182,7 @@ bounty 17 refers to the Community Events Bounty, which has 183 child bounties.
 
 ![polkassembly-child-bounties](../assets/polkassembly-child-bounties.png)
 
-[After the child bounty delay elapsed](../general/constants-variables.md#child-bounty-payout-delay),
+[After the child bounty delay elapsed](../general/chain-state-values.md#child-bounty-payout-delay),
 follow the guidelines in the video tutorial below to learn how to claim a child bounty reward. Note
 that the extrinsic to claim the child bounty reward is permissionless, and anyone can initiate the
 claim on behalf of the beneficiary.

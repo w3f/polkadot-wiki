@@ -300,7 +300,7 @@ double.
 <VLTable />
 
 The maximum number of "doublings" of the
-[lock period](../general/constants-variables.md#conviction-voting-lock-period) is set to 6 (and thus
+[lock period](../general/chain-state-values.md#conviction-voting-lock-period) is set to 6 (and thus
 32 lock periods in total). For additional information regarding the timeline of governance events,
 check out the governance section on the
 [Polkadot Parameters page](maintain-polkadot-parameters/#governance).

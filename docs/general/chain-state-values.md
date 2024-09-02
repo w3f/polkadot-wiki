@@ -1,10 +1,12 @@
 ---
-id: chain-constants-storage
+id: chain-state-values
 title: Chain Constants and Storage Values
-sidebar_label: Chain Constants and Storage Values
-description: Chain constants and storage values that can be queried from the live network nodes of Polkadot, Kusama and their system chains.
+sidebar_label: Chain State Values
+description:
+  Chain constants and storage values that can be queried from the live network nodes of Polkadot,
+  Kusama and their system chains.
 keywords: [polkadot, kusama, constants, storage, values]
-slug: ../constants-variables
+slug: ../chain-state-values
 ---
 
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
