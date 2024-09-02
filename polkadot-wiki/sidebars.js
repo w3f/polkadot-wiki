@@ -150,7 +150,12 @@ module.exports = {
                 },
             "general/parity-data-dashboards",
             "general/staking-dashboard",
-
+            {
+              type: 'link',
+              label: 'Fellowship Dashboard',
+              description: 'Official Polkadot Technical Fellowship Dashboard.',
+              href: 'https://polkadot-fellows.xyz',
+            },
           ],
         },
         {
