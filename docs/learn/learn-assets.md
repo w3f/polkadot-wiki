@@ -17,7 +17,7 @@ The
 hosts data structures and logic that specialize in the creation, management, and use of assets in
 the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. Although other
 parachains can host applications dealing with assets on the Asset Hub, the hub can be thought of as
-the "home base" of assets in the network.
+a trusted "home base" of assets in the network.
 
 The Asset Hub uses {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as its native token. The
 chain yields its governance to its parent Relay Chain and has no inflation or era-based rewards for
@@ -39,8 +39,8 @@ have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama 
 asset on the Asset Hub can be made _sufficient_ through governance on the Relay Chain. A balance of
 a non-sufficient asset can only exist on accounts that are on-chain (i.e., accounts having the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
-That is, a user could not keep an account on-chain by transferring an non-sufficient asset to it;
-the account must already be on-chain by having more than the existential deposit in
+That is, a user could not keep an account on-chain by transferring a non-sufficient asset to it; the
+account must already be on-chain by having more than the existential deposit in
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset).
 
 Assets deemed _sufficient_ can instantiate accounts on the Asset Hub and pay for transaction fees
@@ -55,6 +55,17 @@ the existential deposit and transaction fees for future transfers. Please do so 
 transfer is successful.
 
 :::
+
+## Asset Conversion
+
+[An asset conversion pallet](https://paritytech.github.io/polkadot-sdk/master/pallet_asset_conversion/index.html)
+is deployed on AssetHub with Uniswap V2-style functionality. It implements a simple AMM (automated
+market maker), which employs a mathematical formula to determine the price of a token based on its
+ratio within the liquidity pool.
+
+This pallet enables fees to be paid in any asset that has corresponding liquidity (in DOT/KSM) on
+AssetHub. Learn more about asset conversion on AssetHub,
+[including guides on how to use it here.](./learn-asset-conversion-assethub.md)
 
 ## Creation and Management
 

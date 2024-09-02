@@ -33,9 +33,9 @@ For additional background on the Asset Hub check out
 
 :::info
 
-Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westmint,
-which is a system parachain on Westend test network. The WND tokens (Westies) can be teleported from
-Westend to Westmint, are available for free through a
+Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westend Asset
+Hub, which is a system parachain on Westend test network. The WND tokens (Westies) can be teleported
+from Westend to Westend Asset Hub, are available for free through a
 [faucet](./learn-DOT.md#getting-tokens-on-the-westend-testnet).
 
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**

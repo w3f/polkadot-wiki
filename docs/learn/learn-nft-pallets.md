@@ -21,9 +21,7 @@ Assets is under construction.
 
 NFTs is a
 [FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/nfts#readme)
-currently deployed on Westmint testnet and
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Asset Hub, which provides a multitude
-of functions to interact with NFTs.
+that provides a multitude of functions to interact with NFTs.
 
 The pallet comes with a new way to configure NFTs, as well as configure collections and items.
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling

@@ -47,12 +47,13 @@ maintained by Parity Technologies are listed below:
 
   <TabItem value="ksc">
 
-| Network      | WSS Endpoint                             |
-| ------------ | ---------------------------------------- |
-| Asset Hub    | wss://kusama-asset-hub-rpc.polkadot.io   |
-| Bridge Hub   | wss://kusama-bridge-hub-rpc.polkadot.io  |
-| Collectives  | wss://kusama-collectives-rpc.polkadot.io |
-| People Chain | wss://kusama-people-rpc.polkadot.io      |
+| Network        | WSS Endpoint                             |
+| -------------- | ---------------------------------------- |
+| Asset Hub      | wss://kusama-asset-hub-rpc.polkadot.io   |
+| Bridge Hub     | wss://kusama-bridge-hub-rpc.polkadot.io  |
+| Collectives    | wss://kusama-collectives-rpc.polkadot.io |
+| People Chain   | wss://kusama-people-rpc.polkadot.io      |
+| Coretime Chain | wss://kusama-coretime-rpc.polkadot.io    |
 
   </TabItem>
 
@@ -98,6 +99,7 @@ service, and additional metrics.
 - [NOWNodes](https://nownodes.io/)
 - [All That Node](https://www.allthatnode.com/)
 - [SubQuery](https://www.rpc.subquery.network/)
+- [dRPC](https://drpc.org/)
 
 :::note
 

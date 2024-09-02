@@ -460,7 +460,6 @@ module.exports = {
                       },
                       items: [
                         "learn/learn-guides-assets-create",
-                        "learn/learn-guides-assets-ledger",
                         "learn/learn-guides-asset-conversion",
                       ],
                     },
@@ -538,6 +537,7 @@ module.exports = {
                   items: [
                     "learn/learn-bridge-hub",
                     "learn/learn-dot-ksm-bridge",
+                    "learn/learn-snowbridge",
                     "learn/learn-hyperbridge",
                   ],
                 },

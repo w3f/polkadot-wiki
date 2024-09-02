@@ -7,7 +7,10 @@ keywords: [token, DOT, KSM, inflation]
 slug: ../learn-inflation
 ---
 
-import RPC from "./../../components/RPC-Connection";
+import RPC from "./../../components/RPC-Connection"; import MessageBox from
+"../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="[A simpler inflation model modifiable by OpenGov and a reduction in DOT inflation are currently being discussed.](https://forum.polkadot.network/t/proposal-for-adjusting-polkadots-inflation-system-reducing-issuance-and-complexity/9157)" />
 
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} is an inflationary token. On the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, inflation is

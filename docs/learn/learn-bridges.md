@@ -128,6 +128,7 @@ There is now a
 
 ## Additional Resources and Examples
 
+- [Snowbridge - a trustless, decentralized bridge between Polkadot and Ethereum](https://docs.snowbridge.network/)
 - [Parity Bridges Common Resources](https://github.com/paritytech/parity-bridges-common)
 - [Substrate/Ethereum Bridge](https://github.com/ChainSafe/ChainBridge) - ChainSafe and Centrifuge
   were awarded a grant in W3F Grants

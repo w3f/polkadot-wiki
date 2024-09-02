@@ -12,7 +12,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import Doc
 
 :::info User friendly wallets
 
-Create your Polkadot accounts with any of the secure and user-friendly wallet listed on the
+Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 See the [Wallets](./wallets-index) section for more information about different wallet options

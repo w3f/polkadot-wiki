@@ -59,40 +59,22 @@ of the `XcmExecutor`, which handles notifications of channel requests and accept
 
 ## Opening HRMP Channels with System Parachains
 
-HRMP channel management involving system parachains takes place entirely on the Relay Chain. No
-action is required from the parachain origin.
+The
+[`establish_channel_with_system`](https://paritytech.github.io/polkadot-sdk/master/polkadot_runtime_parachains/hrmp/pallet/dispatchables/fn.establish_channel_with_system.html)
+call can be used to establish a bi-directional channel between any parachain and a system chain.
+This call needs to be dispatched from the parachain via an XCM program to execute on the Relay
+Chain.
 
-Opening an HRMP channel with a system parachain requires an
-[OpenGov referendum](../learn/learn-guides-polkadot-opengov.md) using the
-[General Admin Track](../learn/learn-polkadot-opengov-origins.md#general-admin).
+For instance, the call to be executed on the relay chain to establish a bi-directional channel
+between a parachain and the Asset Hub with `ParaID` 1000 is `0x3c0ae8030000`
 
-Proposals should generally be a `batchAll` call containing two `forceOpenHrmpChannel` calls (one for
-each direction of the channel).
+![asset-hub-hrmp-channel](../assets/asset-hub/establish-channel-asset-hub.png)
 
-As an example, see [Referendum 280](https://polkadot.polkassembly.io/referenda/280), which opened
-two bi-directional channels with Asset Hub (one for Zeitgeist and one for Composable).
+Here is an example call with an XCM program sent from the parachain to Rococo relay chain to
+establish channel a bi-directional channel with Rococo Asset Hub -
+`0x0f001f000301000314000400000000070010a5d4e81300000000070010a5d4e80006000300c16678419c183c0ae8030000140d01000001003145`
 
-:::caution
-
-Please ensure that you use the new `forceOpenHrmpChannel` directly on the Relay Chain, rather than
-the old two-phase channel request/accept method.
-
-:::
-
-:::info
-
-As of Polkadot and Kusama runtimes 1,001,000, channel establishment with system chains will not
-require a deposit. However, for lower spec versions, each chain in the channel will need a free
-balance of at least the required channel deposits plus the existential deposit.
-
-For example, on Polkadot the sender and recipient deposit are both 10 DOT and the existential
-deposit is 1 DOT. Each chain, as in both the system chain and its interlocutor, will need 21 DOT; 10
-as a channel sender, 10 as a channel recipient, and 1 as existential.
-
-Someone must transfer this DOT to the parachain sovereign accounts prior to the execution of the
-`forceOpenHrmpChannel` calls.
-
-:::
+![asset-hub-hrmp-channel-xcm](../assets/asset-hub/asset-hub-establish-channel-xcm.png)
 
 ## Opening HRMP Channels Between Two System Parachains
 

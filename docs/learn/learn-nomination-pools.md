@@ -7,6 +7,12 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+
+<MessageBox message="<b>Nomination Pools are evolving!</b>
+Soon you'll be able to participate in a pool and in OpenGov with your pooled funds!
+You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check [<b>this article</b>](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) on the actions you need to take as soon as possible." />
+
 :::info Nomination Pools are live on Polkadot!
 
 Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their
