@@ -348,7 +348,7 @@ module.exports = {
                     id: "learn/learn-assets",
                   },
                   items: [
-                    "learn/learn-asset-conversion-assethub",,
+                    "learn/learn-asset-conversion-assethub",
                   ],
                 },
                 "learn/learn-teleport",
@@ -935,6 +935,24 @@ module.exports = {
             "maintain/archive/maintain-guides-how-to-vote-councillor",
           ],
         },
+      ],
+    },
+    {
+      type: "category",
+      label: "Kusama",
+      description: 'Fungible Tokens and NFTs on Polkadot.',
+      link: {
+        type: 'doc',
+        id: "general/kusama/kusama-getting-started",
+      },
+      items: [
+        "general/kusama/kusama-timeline",
+        "general/kusama/kusama-coc",
+        "general/kusama/kusama-bug-bounty",
+        "general/kusama/kusama-social-recovery",
+        "general/kusama/kusama-adversarial-cheatsheet",
+        "maintain/kusama/maintain-guides-society-kusama",
+        "maintain/kusama/maintain-guides-how-to-validate-kusama",
       ],
     },
   ],
