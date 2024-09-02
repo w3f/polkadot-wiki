@@ -15,7 +15,7 @@ from "@theme/TabItem";
 
 <TabItem value="polkadot">
 
-:::info What to do with my DOT
+:::info What to do with DOT
 
 - __<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:__
   the minimum balance required to have an active account on Polkadot Network. If your account
