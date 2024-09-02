@@ -31,6 +31,35 @@ dedicated [cross consensus](learn-xcm.md) page on the Wiki.
 
 <DocCardList />
 
+## Bridge Comparison
+
+Snowbridge and Hyperbridge are two trustless bridges that connect Polkadot with other ecosystems.
+Here below a main technical comparison between the two.
+
+:::info Under Development
+
+Trustless bridges like Snowbridge and Hyperbridge are under development. Information in this table
+will be updated accordingly.
+
+:::
+
+|                                                             Snowbridge                                                             |                                             Hyperbridge                                             |
+| :--------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+|                                                           Ethereum only.                                                           |                                             Multichain.                                             |
+|                             Ethereum light client on [Bridge Hub System Chain](./learn-bridge-hub.md).                             |                                            Own parachain                                            |
+|                                                    [DOT token](./learn-DOT.md).                                                    |                                      Hyperbridge native token.                                      |
+|                                                       Random-sampling BEEFY.                                                       |                                       Zero-knowledge Proofs.                                        |
+|                                       Simple codebase, but complex analysis by the verifier.                                       |                       Complex codebase, but simple analysis by the verifier.                        |
+|                                           Low-spec hardware for prover, permissionless.                                            | High-spec hardware for prover, permissionless but somewhat permissioned due to the ZK-based nature. |
+| High-latency as two epochs (15-20 minutes) are needed on Ethereum to achieve unpredictable randomness to updated Polkadot's state. |                           Low-latency, 5-7 minutes on reference hardware.                           |
+|                                                No dependency on external libraries.                                                |                      Dependency on external libraries due to ZK-based nature.                       |
+|                                                               Live.                                                                |                                             On Testnet.                                             |
+
+Note that WETH sent through different bridges are different. Unless specific logic is implemented,
+WETH sent through Snowbridge cannot be sent back using Hyperbridge. Because Snowbridge is deployed
+on a system chain, Snowbridge WETH can be considered as the "official" WETH on Polkadot (although
+this must not be interpreted as a positive sign for Snowbridge and negative sign for Hyperbridge).
+
 ## Bridging Methods
 
 Building a bridge that is as decentralised and trustless as possible can be done through any of the
