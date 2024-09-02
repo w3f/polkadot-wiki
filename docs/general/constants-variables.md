@@ -1,5 +1,5 @@
 ---
-id: constants-variables
+id: chain-constants-storage
 title: Constants and Variables
 sidebar_label: Constants and Variables
 description: Constants and Variables.
