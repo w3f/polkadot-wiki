@@ -97,7 +97,7 @@ The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="con
 
 #### Maximum Number of Nominators
 
-The maximum number of nominators on Polkadot is uncapped and currently sits at <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={36793}/>.
+The maximum number of nominators on Polkadot is uncapped and the current value is <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={36793}/>.
 
 #### Maximum Number of Proxies per Account
 
