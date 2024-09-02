@@ -87,7 +87,7 @@ The minimum number of tokens to keep an account alive on the Polkadot Relay Chai
 
 #### Inactive Issuance
 
-Polkadot's inactive issuance is <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="1784854324418488473" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>.
+Polkadot's inactive issuance is <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="20115636146084858300" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1553"/>.
 
 #### Index Deposit
 
@@ -95,7 +95,7 @@ The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="con
 
 #### Maximum Number of Nominators
 
-The maximum number of nominators on Polkadot is uncapped and currently sits at <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={50000}/>.
+The maximum number of nominators on Polkadot is uncapped and currently sits at <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={36793}/>.
 
 #### Maximum Number of Proxies per Account
 
@@ -107,7 +107,7 @@ A nominator on Polkadot can select up to <RPC network="polkadot" path="consts.el
 
 #### Minimum Active Bond
 
-The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
+The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={5521439075539} filter="humanReadable"/>.
 
 #### Minimum Bond to Create a Nomination Pool
 
@@ -151,15 +151,15 @@ A deposit of <RPC network="polkadot" path="consts.referenda.submissionDeposit" d
 
 #### Parachain ID Registration Deposit
 
-Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
+Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={1000000000000} filter="humanReadable"/>.
 
 #### Parachain Genesis State Registration Deposit
 
-Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
+Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={10000000} filter="humanReadable"/> per byte.
 
 #### Period per Slot Auction
 
-The number of period per slot auction on Polkadot is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
+The number of periods per slot auction on Polkadot is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
 
 #### Proxy Deposits
 
@@ -179,7 +179,7 @@ The maximum number of submission for a staking miner on Polkadot is <RPC network
 
 #### Total Issuance
 
-Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="13557639805348170350" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1200"/>.
+Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="14883815224560918110" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1553"/>.
 
 #### Treasury Burn Factor
 
@@ -334,7 +334,7 @@ Registering the genesis state and WASM code of a Kusama parachain requires a dep
 
 #### Period per Slot Auction
 
-The number of period per slot auction on Kusama is <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
+The number of periods per slot auction on Kusama is <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
 
 #### Proxy Deposits
 
