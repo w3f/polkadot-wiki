@@ -210,10 +210,6 @@ The unbonding duration on Polkadot is set to <RPC network="polkadot" path="const
   to the security of the network. Learn more about
   [nomination pools](../learn/learn-nomination-pools.md).
 
-- __<RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={999999999000} filter="humanReadable"/>:__
-  the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md)
-  for [parachain slot auctions](../learn/learn-auction.md).
-
 - __<RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/>:__
   register an [on-chain identity](../learn/learn-identity.md)
 
