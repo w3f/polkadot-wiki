@@ -258,7 +258,7 @@ The minimum number of tokens to keep an account alive on the Kusama Relay Chain 
 
 #### Inactive Issuance
 
-Kusama's inactive issuance is <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="320302796457002024" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="5649"/>.
+Kusama's inactive issuance is <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="288091772937830827" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="7061"/>.
 
 #### Index Deposit
 
@@ -266,7 +266,7 @@ The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.
 
 #### Maximum Number of Nominators
 
-The maximum number of nominators on Kusama is capped at <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> and currently sits at <RPC network="kusama" path="query.staking.counterForNominators" defaultValue={50000}/>.
+The maximum number of nominators on Kusama is capped at <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> and currently sits at <RPC network="kusama" path="query.staking.counterForNominators" defaultValue={15560}/>.
 
 #### Maximum Number of Proxies per Account
 
@@ -310,7 +310,7 @@ The maximum commission that can be set for a Kusama nomination pool is <RPC netw
 
 #### Nomination Pool Members
 
-There are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={3433} /> members in <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={202} /> Kusama nomination pools. There is no limit to the number of pools or pool members per pool.
+There are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={3442} /> members in <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={202} /> Kusama nomination pools. There is no limit to the number of pools or pool members per pool.
 
 #### OpenGov Referendum Timeout
 
@@ -322,11 +322,11 @@ A deposit of <RPC network="kusama" path="consts.referenda.submissionDeposit" def
 
 #### Parachain ID Registration Deposit
 
-Reserving a `ParaID` on Kusama requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={0} filter="humanReadable"/>.
+Reserving a `ParaID` on Kusama requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={40000000000000} filter="humanReadable"/>.
 
 #### Parachain Genesis State Registration Deposit
 
-Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={0} filter="humanReadable"/> per byte.
+Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={333333333} filter="humanReadable"/> per byte.
 
 #### Period per Slot Auction
 
@@ -350,7 +350,7 @@ The maximum number of submission for a staking miner on Kusama is <RPC network="
 
 #### Total Issuance
 
-Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="14017001595616667835" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="5649"/>.
+Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="15410382600026732448" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="7061"/>.
 
 #### Treasury Burn Factor
 
