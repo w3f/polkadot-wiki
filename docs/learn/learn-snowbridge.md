@@ -7,9 +7,10 @@ keywords: [Bridge, XCM, Bridge Hub, Snowbridge, Snowfork]
 slug: ../learn-snowbridge
 ---
 
-Snowbridge by [Snowfork](https://snowfork.com/) is a general-purpose, trustless bridge between Polkadot and Ethereum. It
-utilizes the [Bridge Hub system parachain](./learn-bridge-hub.md) to establish a connection to its
-relayers, allowing for permissionless messaging between Ethereum and Polkadot.
+Snowbridge by [Snowfork](https://snowfork.com/) is a general-purpose, trustless bridge between
+Polkadot and Ethereum. It utilizes the [Bridge Hub system parachain](./learn-bridge-hub.md) to
+establish a connection to its relayers, allowing for permissionless messaging between Ethereum and
+Polkadot.
 
 ## Trustlessness in Snowbridge
 

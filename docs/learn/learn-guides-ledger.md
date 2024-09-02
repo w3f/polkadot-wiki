@@ -18,7 +18,9 @@ The [Ledger devices](../general/ledger.md) are hardware wallets that keep your p
 on a physical device not directly exposed to your computer or the internet.
 
 The [Polkadot Generic application](../general/ledger.md#polkadot-generic-app) allows you to manage
-your DOT/KSM on Polkadot/Kusama networks, tokens on their Asset Hubs and possibly all chains within the Polkadot ecosystem. It is versatile and capable of handling parachains and relay chains without being affected by their runtime upgrades. 
+your DOT/KSM on Polkadot/Kusama networks, tokens on their Asset Hubs and possibly all chains within
+the Polkadot ecosystem. It is versatile and capable of handling parachains and relay chains without
+being affected by their runtime upgrades.
 
 ## Loading Your Account
 
@@ -116,9 +118,8 @@ vigilant around copy-paste operations makes sense.
 :::
 
 The easiest way to get your address is to click on the account name. This will open a sidebar
-showing your address and other information, such as on-chain identity. Another
-method is just clicking on your account's avatar icon - this immediately copies your address to the
-clipboard.
+showing your address and other information, such as on-chain identity. Another method is just
+clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
 :::note Your Asset Hub address is the same as your Relay Chain address
 
