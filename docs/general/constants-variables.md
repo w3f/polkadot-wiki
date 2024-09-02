@@ -1,6 +1,6 @@
 ---
 id: chain-constants-storage
-title: Constants and Variables
+title: Chain Constants and Storage Values
 sidebar_label: Constants and Variables
 description: Constants and Variables.
 keywords: [polkadot, kusama, constants, variables]
