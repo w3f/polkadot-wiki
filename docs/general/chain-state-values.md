@@ -63,6 +63,10 @@ The number of Polkadot validators in the active set is <RPC network="polkadot" p
 
 The auction ending period on Polkadot is <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
+#### Block Hash Count
+
+On Polkadot, the maximum block number to block hash mappings to keep is <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> (about seven hours).
+
 #### Bounty Curator Deposit
 
 On Polkadot, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/>%. The deposit can range between a minimum of <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> and a maximum of <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/>.
@@ -78,6 +82,10 @@ A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="
 #### Child Bounty Payout Delay
 
 The waiting time before claiming a Polkadot child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
+
+#### Chill Threshold
+
+The chill threshold for Polkadot is currently set to <RPC network="polkadot" path="query.staking.chillThreshold" defaultValue={90}/>%.
 
 #### Conviction Voting Lock Period
 
@@ -126,6 +134,15 @@ The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.
 #### Minimum Crowdloan contribution
 
 The minimum amount to participate to a Polkadot crowdloan is <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>.
+
+#### Minimum Validator Bond
+
+To start a validator instance on Polkadot, the
+minimum bond required is <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>.
+
+#### Minimum Validator Commission
+
+The minimum commission a Polkadot Validator can set is <RPC network="polkadot" path="query.staking.minCommission" filter = "percentage" defaultValue="0"/>%.
 
 #### Multisig Deposit Base
 
@@ -234,6 +251,10 @@ The number of Kusama validators in the active set is <RPC network="kusama" path=
 
 The auction ending period on Kusama is <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
+#### Block Hash Count
+
+On Kusama, the maximum block number to block hash mappings to keep is <RPC network="kusama" path="consts.system.blockHashCount" defaultValue={4096}/> (about seven hours).
+
 #### Bounty Curator Deposit
 
 On Kusama, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/>%. The deposit can range between a minimum of <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> and a maximum of <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/>.
@@ -249,6 +270,10 @@ A Kusama bounty has a predetermined duration of <RPC network="kusama" path="cons
 #### Child Bounty Payout Delay
 
 The waiting time before claiming a Kusama child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
+
+#### Chill Threshold
+
+The chill threshold for Kusama is currently set to <RPC network="kusama" path="query.staking.chillThreshold" defaultValue={90}/>%.
 
 #### Conviction Voting Lock Period
 
@@ -297,6 +322,15 @@ The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.stak
 #### Minimum Crowdloan contribution
 
 The minimum amount to participate to a Kusama crowdloan is <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>.
+
+#### Minimum Validator Bond
+
+To start a validator instance on Kusama, the
+minimum bond required is <RPC network="kusama" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>.
+
+#### Minimum Validator Commission
+
+The minimum commission a Kusama Validator can set is <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%.
 
 #### Multisig Deposit Base
 
