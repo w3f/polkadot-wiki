@@ -402,7 +402,7 @@ The creation of a Polkadot sub-identity required a deposit of <RPC network="polk
 
 #### Identity Deposit
 
-The creation of a Polkadot identity required a deposit of <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> and <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> (per byte) per each field beyond the legal name.
+The creation of a Kusama identity required a deposit of <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> and <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> (per byte) per each field beyond the legal name.
 
 #### Sub-identity Deposit
 
