@@ -150,34 +150,7 @@ For brand-new learners of Kusama's cousin network, Polkadot, please head over to
 
 KSM is the native token of the Kusama Network. KSM can be used for transaction fees, staking,
 governance, acquisition of a parachain slot and for enabling several key functionalities on Kusama.
-
-- {{ kusama: __<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>:__ :kusama }}
-  the minimum balance required to have an active account on Kusama Network. If your account balance
-  drops below the minimum, your account will be reaped. Learn more about
-  [Accounts](../../learn/learn-accounts.md) and the
-  [Existential Deposit](../../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
-
-- {{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable"/>:__ :kusama }}
-  the minimum contribution required to join a
-  [nomination pool](../../learn/learn-nomination-pools.md) and earn staking rewards for contributing
-  to the security of the network. Learn more about
-  [nomination pools](../../learn/learn-nomination-pools.md).
-
-- {{ kusama: __<RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={999999999000} filter="humanReadable"/>:__ :kusama }}
-  the minimum contribution required to participate in [crowdloans](../../learn/learn-crowdloans.md)
-  for [parachain slot auctions](../../learn/learn-auction.md).
-
-- {{ kusama: __<RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/>:__ :kusama }}
-  register an [on-chain identity](../../learn/learn-identity.md)
-
-- {{ kusama: __<RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>:__ :kusama }}
-  create a [proxy account](../../learn/learn-proxies.md).
-
-- {{ kusama: __<RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable"/>:__ :kusama }}
-  you can create your own [nomination pool](../../learn/learn-nomination-pools.md).
-
-- {{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={0} filter="humanReadable"/>:__ :kusama }}
-  the minimum amount of KSM required to become an active nominator and earn rewards.
+See more information on [the Constants and Variables page](../chain-state-values.md).
 
 KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) where you can
 [vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum),

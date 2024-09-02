@@ -7,9 +7,8 @@ keywords: [gides, advanced, polkadot-js, transfers]
 slug: ../learn-guides-transfers
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
-from "@theme/TabItem"; import MessageBox from "../../components/MessageBox"; import
-"../../components/MessageBox.css";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import MessageBox from
+"../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
@@ -73,10 +72,7 @@ transfer funds from one account to another:
 
 - `transfer keep-alive` (default option) will not allow you to send an amount that would allow the
   sending account to be removed due to it going below the
-  [existential deposit](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
-  of
-  {{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
-  {{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/>. :kusama }}
+  [existential deposit](../general/chain-state-values.md#existential-deposit).
 - `transfer allow-death` will allow you to send
   {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} regardless of the consequence. If the
   balance drops below the existential deposit your account will be reaped. It may be that you do not
@@ -91,11 +87,9 @@ Attempting to send less than the existential deposit to an account with
 keep-alive check is on or not. For instance, attempting to transfer
 {{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} to an account you just generated
 (and thus has no balance) will fail, since
-{{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} is less than the existential
-deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/> :kusama }}
-and the account cannot be initialized with such a low balance.
+{{ polkadot: 0.1 DOT :polkadot }}{{ kusama: 0.0001 KSM :kusama }} is less than the
+[existential deposit](../general/chain-state-values.md#existential-deposit) and the account cannot
+be initialized with such a low balance.
 
 Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the
 sending account if you attempt to transfer.

@@ -28,26 +28,10 @@ Teams wishing to run a parachain are required to bond tokens as security. The bo
 Kusama is lower than on Polkadot, making it the more affordable development environment.
 
 Another key technical difference between Polkadot and Kusama is that Kusama has modified governance
-parameters that allow for faster upgrades. Kusama is up to four times faster than Polkadot. On
-Polkadot, the voting period on referendums lasts
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
-{{ kusama:  <RPC network="polkadot" path="consts.democracy.votingPeriod" defaultValue={403200} filter="blocksToDays"/> :kusama }}
-days, followed by an enactment period of
-{{ polkadot: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="polkadot" path="consts.democracy.enactmentPeriod" defaultValue={403200} filter="blocksToDays"/> :kusama }}
-days before the changes are enacted on-chain. On Kusama, voting lasts
-{{ polkadot: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.votingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
-days, followed by an
-{{ polkadot: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.enactmentPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }}
-day enactment period. This means stakeholders need to stay active and vigilant if they want to keep
-up with all the proposals, referenda, and upgrades, and validators on Kusama often need to update on
-short notice.
-
-This does not mean that the Kusama blockchain itself is faster, in the sense of faster block times
-or transaction throughput (these are the same on both networks), but that there's a shorter amount
-of time between governance events such as proposing new referenda, voting, and enacting approved
+parameters that allow for faster upgrades. Kusama is up to four times faster than Polkadot. This
+does not mean that the Kusama blockchain itself is faster, in the sense of faster block times or
+transaction throughput (these are the same on both networks), but that there's a shorter amount of
+time between governance events such as proposing new referenda, voting, and enacting approved
 upgrades. This allows Kusama to adapt and evolve faster than Polkadot.
 
 ## Canary network

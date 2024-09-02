@@ -64,14 +64,7 @@ are about 1/10th of their respective value on the Relay Chain.
 
 These low fee levels mean that the Asset Hub is well suited for handling
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balances and transfers as well as managing
-on-chain assets. For example, the existential deposit for
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
-{{ polkadot: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>,  :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>,  :kusama }}
-while only
-{{ polkadot: <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>  :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={3333333} filter="humanReadable"/>  :kusama }}
-on the Asset Hub.
+on-chain assets.
 
 ### Collectives
 

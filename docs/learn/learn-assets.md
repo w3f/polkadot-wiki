@@ -7,8 +7,6 @@ keywords: [assets, fungible, non-fungible, asset hub, statemine, statemint]
 slug: ../learn-assets
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
 represented on several chains. They can take many forms, from a parachain's native token to on-chain
 representations of off-chain reserves. This page focuses on the latter, namely assets issued by a
@@ -79,18 +77,12 @@ to learn how to create fungible assets on the Asset Hub.
 
 :::
 
-Anyone on the network can create assets on the Asset Hub as long as they can reserve the required
-deposit of
-{{ polkadot: <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-and around
-{{ polkadot: <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> :kusama }}
-for the metadata. The network reserves the deposit on creation. The creator also must specify a
-unique `AssetId`, an integer of type `u32`, to identify the asset. The `AssetId` should be the
-canonical identifier for an asset, as the chain does not enforce the uniqueness of metadata like
-"name" and "symbol". The creator must also specify a minimum balance, preventing accounts from
-having dust balances.
+Anyone on the network can create assets on the Asset Hub as long as they can reserve the
+[required deposits](../general/chain-state-values.md#asset-deposit). The network reserves the
+deposit on creation. The creator also must specify a unique `AssetId`, an integer of type `u32`, to
+identify the asset. The `AssetId` should be the canonical identifier for an asset, as the chain does
+not enforce the uniqueness of metadata like "name" and "symbol". The creator must also specify a
+minimum balance, preventing accounts from having dust balances.
 
 :::info Advanced How-to Guides
 

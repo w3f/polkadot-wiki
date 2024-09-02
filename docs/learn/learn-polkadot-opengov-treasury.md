@@ -7,8 +7,6 @@ keywords: [treasury, funds, funding, tips, tipping]
 slug: ../learn-polkadot-opengov-treasury
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 The Treasury is a pot of funds collected through a portion of block production rewards,
 [transaction fees](./learn-transactions.md#transaction-fees), [slashing](./learn-offenses.md), and
 [staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
@@ -42,9 +40,9 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each spend period
-  {{ polkadot: <RPC network="polkadot" path="consts.treasury.burn" defaultValue={10000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/> :kusama }}%
-  of the available funds are burned.
+- **Burned tokens:** at the end of each spend period,
+  [a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
+  burned.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
   community and need to be approved by governance. Then, payouts occur at the end of a
   [spend period](../general/glossary.md#spend-period).
@@ -165,16 +163,10 @@ total value of the bounty. In this sense, the curator's fee can be defined as th
 the amounts paid to child bounty awardees and the total value of the bounty.
 
 Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to
-pay an upfront deposit to take the position. The deposit is calculated by multiplying the curator
-fee by
-{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/> :kusama }}%,
-and it can range between a minimum of
-{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> :kusama }}
-and a maximum of
-{{ polkadot: <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/> :kusama }}.
-This deposit can be used to punish curators if they act maliciously. However, if they are successful
-in managing the bounty to completion, they will receive their deposit back, and part of the bounty
-funding as a payment for their efforts.
+pay an upfront [deposit](../general/chain-state-values.md#bounty-curator-deposit) to take the
+position. This deposit can be used to punish curators if they act maliciously. However, if they are
+successful in managing the bounty to completion, they will receive their deposit back, and part of
+the bounty funding as a payment for their efforts.
 
 Curators are expected to have a decent track record in addressing the issues the bounty wants to
 solve. They should be very knowledgeable on the topics covered by the bounty and have proven project
@@ -183,10 +175,9 @@ mechanism. A Bounty is a reward for a specified body of work or set of objective
 executed for a predefined treasury amount designated to be paid out. The responsibility of assigning
 a payout address once the specified set of objectives is completed is delegated to the curator.
 
-The bounty has a predetermined duration of
-{{ polkadot: <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> :kusama }}
-days, with possible extension(s) to be requested by the curator. To maintain flexibility during the
-tasks’ curation, the curator will also be able to create child bounties for more granularity in the
+The bounty has a [predetermined duration](../general/chain-state-values.md#bounty-duration), with
+possible extension(s) to be requested by the curator. To maintain flexibility during the tasks’
+curation, the curator will also be able to create child bounties for more granularity in the
 allocation of funds and as part of a nested iteration of the bounty mechanism.
 
 ### Child Bounties

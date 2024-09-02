@@ -7,8 +7,7 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
-import RPC from "./../../components/RPC-Connection"; import MessageBox from
-"../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="<b>Nomination Pools are evolving!</b>
 Soon you'll be able to participate in a pool and in OpenGov with your pooled funds!
@@ -24,14 +23,6 @@ as little as
 Note that rewards are not guaranteed for those pools that do not have enough bonded funds to be
 included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active
 pools will receive rewards.**
-
-There are currently
-{{ polkadot: <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={4376} /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={389} /> :kusama }}
-members in
-{{ polkadot: <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={80} /> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={115} /> :kusama }}
-pools. There is no limit to the number of pools or pool members per pool.
 
 :::
 
@@ -114,10 +105,8 @@ A member delegates funds to a pool by transferring some amount to the pool’s b
 ability to bond additional funds or re-stake rewards as long as they are already actively bonded.
 Note that a member may only belong to one pool at a time.
 
-**The current minimum bond to join a pool on**
-{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
-{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.** :polkadot }}
-{{ kusama: **is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable" />.** :kusama }}
+The current minimum bond to join a pool can be seen
+[here](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool).
 
 :::info
 
@@ -173,16 +162,10 @@ learn how to claim rewards for another pool member.
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the
-unbonding duration has passed
-{{ polkadot: (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}
-{{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-eras which correspond to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> :kusama }}
-days on {{ polkadot: Polkadot), :polkadot }} {{ kusama: Kusama), :kusama }} a member may withdraw
-their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their
-pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section
-in
+[unbonding duration](../general/chain-state-values.md#unbonding-duration) has passed a member may
+withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship
+with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded
+funds" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
 
@@ -233,8 +216,8 @@ commissions through the [Polkadot Staking Dashboard](../general/staking-dashboar
 Three methods can be used when setting the pool commission:
 
 - **Commission Rate** (`nominationPools.setCommission` extrinsic): the start or new commission rate
-  (`newCommission` parameter) that can be set between 0% and
-  {{ polkadot: <RPC network="polkadot" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/> :polkadot }}%
+  (`newCommission` parameter) that can be set between 0% and the
+  [max commission parameter](../general/chain-state-values.md#nomination-pool-max-commission)
   (decided through [governance referendum](./learn-polkadot-opengov.md)) via the
   [`globalMaxCommission`](https://paritytech.github.io/substrate/master/pallet_nomination_pools/pallet/type.GlobalMaxCommission.html)
   parameter. You will need to specify an Input Payee Account, i.e. the account that will receive the
@@ -309,12 +292,12 @@ Nominating is the action of choosing validators. It does not simply involve bond
 Nominating is an active task, which implies that you regularly monitor that your stake is backing an
 active validator in all the eras and check if you are receiving your staking rewards. More
 importantly, ensure that the validators you chose always act in the best interests of the network
-protocol and have less chance of getting [slashed](./learn-offenses.md). To nominate, you need a
-minimum of
-{{ polkadot: <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
-and to receive rewards, you need at least a balance greater than the minimum active bond. If the
-validator misbehaves, It is worth noting that your stake is subject to slashing, irrespective of
-whether you are at the top nominators or not.
+protocol and have less chance of getting [slashed](./learn-offenses.md). To nominate you need a
+[minimum bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking), while to
+receive rewards, you need at least a balance greater than the
+[minimum active bond](../general/chain-state-values.md#minimum-active-bond). If the validator
+misbehaves, It is worth noting that your stake is subject to slashing, irrespective of whether you
+are at the top nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the
 threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
@@ -332,15 +315,12 @@ from time to time and change the pool if necessary.
 
 :::info Minimum Active Nomination Value is Dynamic
 
-The minimum amount required to become an active nominator and earn rewards is
-{{ polkadot: __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>__. :kusama }}
-If you have less {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than the minimum active
-nomination and still want to participate in staking, you can join the nomination pools. You can now
-stake on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
-{{ polkadot: __<RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/>__ :polkadot }}
-{{ kusama: __<RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/>__ :kusama }}
-in the nomination pools and earn staking rewards. For additional information, see
+The minimum amount required to become an active nominator and earn rewards can be seen
+[here](../general/chain-state-values.md#minimum-active-bond). If you have less tokens than the
+minimum active nomination and still want to participate in staking, you can join the nomination
+pools with a
+[smaller bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking). For
+additional information, see
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 

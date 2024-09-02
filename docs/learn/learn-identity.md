@@ -7,20 +7,13 @@ keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows
 participants to add personal information to their on-chain account and subsequently ask for
 verification of this information by [registrars](#registrars).
 
-Users must reserve funds in a bond to store their information on chain:
-{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> :kusama }}
-and
-{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.byteDeposit" defaultValue={100000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> :kusama }}
-(per byte) per each field beyond the legal name. These funds are _locked_, not spent - they are
-returned when the identity is cleared.
+Users must [reserve funds](../general/chain-state-values.md#identity-deposit) in a bond to store
+their information on chain. These funds are _locked_, not spent - they are returned when the
+identity is cleared.
 
 Identities are managed on the [People system chain](./learn-system-chains.md).
 
@@ -32,10 +25,8 @@ be a validation company running multiple validators. A single entity, "My Stakin
 register multiple sub accounts that represent the [Stash accounts](learn-cryptography.md) of each of
 their validators.
 
-An account can have a maximum of 100 sub-accounts. Note that a deposit of
-{{ polkadot: <RPC network="polkadotpeople" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
-is required for every sub-account.
+An account can have a maximum of 100 sub-accounts. Note that a
+[deposit](../general/chain-state-values.md#sub-identity-deposit) is required for every sub-account.
 
 ## Judgements
 

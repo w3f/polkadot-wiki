@@ -7,8 +7,7 @@ keyword: [stake, staking, pools, create, destroy, claim, rewards, polkadot-js]
 slug: ../learn-guides-staking-pools
 ---
 
-import RPC from "./../../components/RPC-Connection"; import MessageBox from
-"../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
@@ -34,10 +33,8 @@ be a member as long as the pool exists; they will be the last member to leave, e
 have some skin in the game. A significant stake from the depositor is always a good indicator of the
 pool's credibility.
 
-**The current minimum bond to create a pool on**
-{{ polkadot: **Polkadot** :polkadot }}{{ kusama: **Kusama** :kusama }}
-{{ polkadot: **is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable" />.** :polkadot }}
-{{ kusama: **is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
+The current minimum bond to create a pool can be found
+[here](../general/chain-state-values.md#minimum-bond-to-create-a-nomination-pool).
 
 The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
 navigate to Network > Staking > Pools and click on Add Pool button.

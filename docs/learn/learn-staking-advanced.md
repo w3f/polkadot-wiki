@@ -21,8 +21,6 @@ keywords:
 slug: ../learn-staking-advanced
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
@@ -30,10 +28,8 @@ Start your staking journey or explore more information about staking on
 [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and
 check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. You can now stake on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} natively with just
-{{ polkadot: <RPC network="polkadot" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={10000000000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.nominationPools.minJoinBond" filter="humanReadable" defaultValue={1666666650}/> :kusama }}
+help you get started. You can now stake natively with a
+[small number of tokens](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool)
 and earn staking rewards. For additional information, check out
 [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
@@ -138,11 +134,8 @@ rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) secti
 information.
 
 The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime
-storage. In the current staking system configuration, the bags list keeps
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nomination intents, of which, at most {{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }}
-come out as the electing nominators. See
+storage. In the current staking system configuration, at most {{ polkadot: 22500 :polkadot }}
+{{ kusama: 12500 :kusama }} nominators in the bags-list come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 This means that only a portion of the nomination intents is kept. Once the nomination period ends,
@@ -407,14 +400,12 @@ pub struct RawSolution<S> {
 }
 ```
 
-A maximum of `pallet::Config::SignedMaxSubmissions` will be stored on-chain and they will be sorted
-based on score. Higher the score the more optimal the election solution is. On both Polkadot and
-Kusama the
-['SignedMaxSubmissions'](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L390)
-is set to
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :kusama }}
-submissions. This variable can be modified if needed through governance.
+A maximum of
+[`pallet::Config::SignedMaxSubmissions`](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L390)
+will be stored on-chain and they will be sorted based on score. Higher the score the more optimal
+the election solution is. The
+[`SignedMaxSubmissions`](../general/chain-state-values.md#staking-miner-max-submissions) variable
+can be modified through governance.
 
 Upon arrival of a new solution:
 
@@ -455,30 +446,8 @@ Queue
 
 The staking miners are required to pay a deposit to post their solutions. Deposit amount is the sum
 of `SignedDepositBase` +`SignedDepositByte` + `SignedDepositWeight`. All good solutions are subject
-to receiving a `SignedRewardBase`.
-
-#### Deposit
-
-Current deposit(`SignedDepositBase`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/> :kusama }}
-which is a fixed amount.
-
-Current deposit per byte(`SignedDepositByte`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/> :kusama }}
-and the total is variable depending on the size of the solution data. For example, a solution
-weighing 200KB would yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 DOT**. :polkadot }}
-{{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
-
-And the weight deposit(`SignedDepositWeight`) is currently set to `0` and has no effect.
-
-#### Reward
-
-Current reward(`SignedRewardBase`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-which is a fixed amount.
+to receiving a `SignedRewardBase`. For more information about deposit values see the
+[Constants and Variables page](../general/chain-state-values.md#staking-miner-deposit).
 
 ### Further Resources
 

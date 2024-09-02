@@ -26,9 +26,8 @@ inflation is distributed to the stakers and part to the
 DOT went through [redenomination](./archive/learn-redenomination.md) in 2020 that saw the DOT token
 supply increase by 100 times.
 
-The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is
-{{ polkadot: <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (1.4 Billion DOT). :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.balances.totalIssuance" defaultValue={12619256191792480093} filter="humanReadable"/> (15 Million KSM). :kusama }}
+The current token supply on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can be
+seen [here](../general/chain-state-values.md#total-issuance).
 
 :::
 

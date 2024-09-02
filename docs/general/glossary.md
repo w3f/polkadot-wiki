@@ -663,11 +663,9 @@ software.
 
 ## Spend Period
 
-Successfully enacted Treasury track referenda will get funded at the end of the spending period that
-resets every
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
-days. Treasury funds are directly sent to the beneficiary account at the end of the spend period.
+Successfully enacted Treasury track referenda will get funded at the end of the
+[spending period](./chain-state-values.md#treasury-spending-period). Treasury funds are directly
+sent to the beneficiary account at the end of the spend period.
 
 ## Staking
 

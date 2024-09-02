@@ -7,8 +7,6 @@ keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms
 slug: ../learn-phragmen
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 ## NPoS Election Algorithms
 
 Since validators are paid almost equally in
@@ -628,12 +626,9 @@ constant block production time of the network. Therefore, as much computation as
 to an off-chain worker, which validators can work on the problem without impacting block production
 time.
 
-There are several restrictions put in place to limit the complexity of the election and payout. As
-already mentioned, any given nominator can only select up to {{ polkadot: 16 :polkadot }}
-{{ kusama: 24 :kusama }} validators to nominate. Conversely, a single validator can have only
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
-nominators.
+To limit the complexity of the election and payout, any given nominator can only
+[select a limited number of validators](../general/chain-state-values.md#maximum-votes-per-nominator)
+to nominate.
 
 ### Phragmms (aka Balphragmms)
 

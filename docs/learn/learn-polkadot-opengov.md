@@ -299,13 +299,11 @@ double.
 
 <VLTable />
 
-The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
-total), and one lock period equals
-{{ polkadot: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> :kusama }}
-days. For additional information regarding the timeline of governance events, check out the
-governance section on the
-{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
+The maximum number of "doublings" of the
+[lock period](../general/chain-state-values.md#conviction-voting-lock-period) is set to 6 (and thus
+32 lock periods in total). For additional information regarding the timeline of governance events,
+check out the governance section on the
+[Polkadot Parameters page](maintain-polkadot-parameters/#governance).
 
 Votes are always "counted" at the same time (at the end of the voting period), no matter how long
 the tokens are locked.

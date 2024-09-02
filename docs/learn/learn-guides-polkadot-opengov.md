@@ -7,8 +7,7 @@ keywords: [opengov, polkadot opengov, referenda, cancel, polkadot-js]
 slug: ../learn-guides-polkadot-opengov
 ---
 
-import RPC from "./../../components/RPC-Connection"; import MessageBox from
-"../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the
 [Polkadot-JS UI](../general/polkadotjs-ui.md), you can contact the
@@ -283,12 +282,12 @@ The submission deposit can be claimed by issuing the `refundSubmissionDeposit` e
 
 Users can not refund their submission deposit while the referendum is `Ongoing` or `Rejected`.
 Similarly, users cannot refund their submission deposit if the proposal has `TimedOut` (failing to
-submit the decision deposit within a
-{{ polkadot: <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
-period will lead to a referendum timeout). This behavior exists so that users can refrain from
-spamming the chain with proposals that have no interest from the community. If a proposal is in the
-`TimedOut` state, any user can call `slash_proposal_deposit`, which will move the funds from the
-user to a runtime-configured account, like the treasury.
+submit the decision deposit
+[within specific period](../general/chain-state-values.md#opengov-referendum-timeout) will lead to a
+referendum timeout). This behavior exists so that users can refrain from spamming the chain with
+proposals that have no interest from the community. If a proposal is in the `TimedOut` state, any
+user can call `slash_proposal_deposit`, which will move the funds from the user to a
+runtime-configured account, like the treasury.
 
 To refund your slashed deposit, you can start a new referendum and specifically request a refund
 from the treasury. You need to make sure you have enough balance for a new submission and decision
@@ -346,16 +345,14 @@ button.
 You must specify the account to submit the proposal (this can differ from the account used to create
 the preimage). Then you will need to specify the track `20 / Referendum Canceller` and add the
 preimage hash containing the specific action that will be enacted if the referendum passes. Note
-that a submission deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.referenda.submissionDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.submissionDeposit" defaultValue={33333333333} filter="humanReadable"/> :kusama }}
-will be reserved for submitting the proposal.
+that a [submission deposit](../general/chain-state-values.md#opengov-submission-deposit) will be
+reserved for submitting the proposal.
 
 Once the proposal has been submitted, it will stay in the Lead-in period until there is enough space
 within the track, and a
 [track-dependent preparation period and decision deposit](./learn-polkadot-opengov-origins.md#polkadot-opengov-terminology-and-parameters)
-have been met. Failing to submit the decision deposit within a
-{{ polkadot: <RPC network="polkadot" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> :kusama }}-day
-period will lead to a referendum timeout.
+have been met. Failing to submit the decision deposit will ultimately lead to a
+[referendum timeout](../general/chain-state-values.md#opengov-referendum-timeout).
 
 ## Interpreting On-Chain Voting Data
 

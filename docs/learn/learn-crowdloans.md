@@ -8,7 +8,6 @@ slug: ../learn-crowdloans
 ---
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-import RPC from "./../../components/RPC-Connection";
 
 <MessageBox message="Crowdloans will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For fundraising in a decentralized, transparent, and regulatory compliant manner within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
@@ -122,9 +121,8 @@ upgrades (as determined through its local governance).
 
 :::info Minimum Crowdloan Contribution
 
-The minimum balance for contributions for a crowdloan campaign is currently set to
-{{ polkadot: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>. :kusama }}
+There is a
+[minimum balance for contributions for a crowdloan campaign](../general/chain-state-values.md#minimum-crowdloan-contribution).
 This is to make crowdloans as accessible as possible while maintaining a balance to justify using
 the network's resources.
 

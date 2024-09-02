@@ -197,6 +197,7 @@ module.exports = {
           ],
         },
         "general/metadata",
+        "general/chain-state-values",
       ],
     },
     {

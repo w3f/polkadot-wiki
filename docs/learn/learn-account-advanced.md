@@ -7,8 +7,6 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping, EN
 slug: ../learn-account-advanced
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
@@ -399,10 +397,9 @@ nomination pool and parachain accounts as well.
 ## Indices
 
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
-is like a short and easy-to-remember version of an address. Claiming an index requires a deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.indices.deposit" defaultValue={33333333300} filter="humanReadable"/> :kusama }}
-that is released when the index is cleared. Any index can be claimed if it is not taken by someone
-else.
+is like a short and easy-to-remember version of an address. Claiming an index requires
+[a deposit](../general/chain-state-values.md#index-deposit) released when the index is cleared. Any
+index can be claimed if it is not taken by someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_
