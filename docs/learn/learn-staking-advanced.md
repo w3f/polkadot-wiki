@@ -447,7 +447,7 @@ Queue
 The staking miners are required to pay a deposit to post their solutions. Deposit amount is the sum
 of `SignedDepositBase` +`SignedDepositByte` + `SignedDepositWeight`. All good solutions are subject
 to receiving a `SignedRewardBase`. For more information about deposit values see the
-[Constants and Variables page](../general/chain-state-values.md#staking-miner-deposit).
+[Chain State Values page](../general/chain-state-values.md#staking-miner-deposit).
 
 ### Further Resources
 
