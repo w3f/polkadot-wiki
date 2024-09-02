@@ -406,7 +406,7 @@ The creation of a Kusama identity required a deposit of <RPC network="kusamapeop
 
 #### Sub-identity Deposit
 
-The creation of a Polkadot sub-identity required a deposit of <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6684333309} filter="humanReadable"/>.
+The creation of a Kusama sub-identity required a deposit of <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6684333309} filter="humanReadable"/>.
 
 </TabItem>
 
