@@ -693,7 +693,7 @@ parachains. For developers, see the
 
 Parachains that are part of the Polkadot core protocol. These are allocated a parachain execution
 core by governance rather than by auction. Examples of system parachains include
-[Asset Hub](../learn/learn-assets.md), [Bridge Hub](../learn/learn-bridge-hub.md),
+[Asset Hub](../learn/learn-assets.md), [Bridge Hub](../learn/learn-system-chains.md#bridge-hub),
 [Collectives](../learn/learn-system-chains.md#collectives) and People Chain.
 
 ## Tabling
