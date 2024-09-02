@@ -196,7 +196,7 @@ The unbonding duration on Polkadot is set to <RPC network="polkadot" path="const
 </TabItem>
 <TabItem value="kusama">
 
-:::info What to do with my KSM
+:::info What to do with KSM
 
 - __<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>:__
   the minimum balance required to have an active account on Kusama Network. If your account balance
