@@ -150,7 +150,7 @@ For brand-new learners of Kusama's cousin network, Polkadot, please head over to
 
 KSM is the native token of the Kusama Network. KSM can be used for transaction fees, staking,
 governance, acquisition of a parachain slot and for enabling several key functionalities on Kusama.
-See more information on [the Constants and Variables page](../chain-state-values.md).
+See more information on [the Chain State Values page](../chain-state-values.md).
 
 KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) where you can
 [vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
