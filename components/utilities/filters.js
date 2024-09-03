@@ -23,12 +23,12 @@ const values = {
     symbol: "KSM",
   },
   polkadotpeople: {
-    precision: 1e7,
-    symbol: "milliDOT",
+    precision: 1e10,
+    symbol: "DOT",
   },
   kusamapeople: {
-    precision: 1e9,
-    symbol: "milliKSM",
+    precision: 1e12,
+    symbol: "KSM",
   },
 };
 
@@ -36,10 +36,12 @@ module.exports = {
 
   HumanReadable: function (value, network, setReturnValue) {
     let decimals = undefined;
-    if (network === Polkadot || network === Statemint || network == PolkadotPeople) {
+    if (network === Polkadot || network === Statemint) {
       decimals = 3;
-    } else if (network === Kusama || network === Statemine || network == KusamaPeople) {
+    } else if (network === Kusama || network === Statemine || network === PolkadotPeople) {
       decimals = 6;
+    } else if (network == KusamaPeople) {
+      decimals = 8;
     } else {
       console.log("Unknown network type found when attempting to apply 'Human Readable' filter");
       return;
