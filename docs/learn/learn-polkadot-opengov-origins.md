@@ -8,7 +8,7 @@ slug: ../learn-polkadot-opengov-origins
 ---
 
 import Tracks from "./../../components/Referenda-Tracks"; import Chart from
-"./../../components/Chart";
+"./../../components/Chart"; import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 :::info Learn more about Polkadot OpenGov
 
@@ -67,7 +67,20 @@ than the min enactment period.
 
 ## Origins and Tracks Info
 
-{{ polkadot: <Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/> :polkadot }}{{ kusama: <Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="tracks" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Tracks network="polkadot" defaultValue="Loading Polkadot Tracks..."/>
+
+</TabItem>
+<TabItem value="kusama">
+
+<Tracks network="kusama" defaultValue="Loading Kusama Tracks..."/>
+
+</TabItem>
+</Tabs>
 
 :::info
 
@@ -80,33 +93,69 @@ support and approval.
 
 ### Root
 
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
 The origin with the highest level of privileges. This track requires extremely high levels of
 approval and support for early passing. The prepare and enactment periods are also large. For
-instance, a referendum proposed in this track needs to amass
-{{ polkadot: 48.2% :polkadot }}{{ kusama:  46.8%  :kusama }} support (total network issuance) by the
-end of the first day with over {{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval
-to be considered to be part of the confirm period. The support curve drops linearly to 25% by the
-end of day {{ polkadot: 14 :polkadot }}{{ kusama:  7  :kusama }} and almost to 0% by the end of day
-{{ polkadot: 28 :polkadot }}{{ kusama:  14  :kusama }}. This ensures that the token holders receive
-ample time to vote on the proposal during the decision period.
+instance, a referendum proposed in this track needs to amass 48.2% support (total network issuance)
+by the end of the first day with over 93.5% approval to be considered to be part of the confirm
+period. The support curve drops linearly to 25% by the end of day 14 and almost to 0% by the end of
+day 28. This ensures that the token holders receive ample time to vote on the proposal during the
+decision period.
 
-{{ polkadot: <Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+The origin with the highest level of privileges. This track requires extremely high levels of
+approval and support for early passing. The prepare and enactment periods are also large. For
+instance, a referendum proposed in this track needs to amass 46.8% support (total network issuance)
+by the end of the first day with over 88% approval to be considered to be part of the confirm
+period. The support curve drops linearly to 25% by the end of day 7 and almost to 0% by the end of
+day 14. This ensures that the token holders receive ample time to vote on the proposal during the
+decision period.
+
+<Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Whitelisted Caller
+
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
 
 Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md) whitelist some
 hash of a call and allow the call to be dispatched with the root origin (after the referendum
 passes). This track allows for a shorter voting turnaround, safe in the knowledge through an open
 and transparent process for time-critical proposals. For instance, a referendum proposed in this
-track needs to amass {{ polkadot: 20% :polkadot }}{{ kusama:  14%  :kusama }} support (much lesser
-than the root) by the end of the first day with over
-{{ polkadot: 93.5% :polkadot }}{{ kusama:  88%  :kusama }} approval to be considered to be part of
-the confirm period. **Note how no referendum on the Whitelisted track can ever pass with less than
-5% support.**
+track needs to amass 20% :polkadot support (much lesser than the root) by the end of the first day
+with over 93.5% approval to be considered to be part of the confirm period. **Note how no referendum
+on the Whitelisted track can ever pass with less than 5% support.**
 
-{{ polkadot: <Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<Chart title="" type="line" dataId="Whitelist" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+Origin commanded by the [Fellowship](../learn/learn-polkadot-technical-fellowship.md) whitelist some
+hash of a call and allow the call to be dispatched with the root origin (after the referendum
+passes). This track allows for a shorter voting turnaround, safe in the knowledge through an open
+and transparent process for time-critical proposals. For instance, a referendum proposed in this
+track needs to amass 14% support (much lesser than the root) by the end of the first day with over
+88% approval to be considered to be part of the confirm period. **Note how no referendum on the
+Whitelisted track can ever pass with less than 5% support.**
+
+<Chart title="" type="line" dataId="Whitelist" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Wish For Change
 
@@ -119,62 +168,160 @@ lack stateful logic impacting the network. They should not delay voting on propo
 or be obligated to its queue. The approval/support criteria resemble Root, and passing items on this
 track serves as a signal for a change without conferring privileges.
 
-{{ polkadot: <Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="Root" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="Root" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Staking Admin
 
 The origin for canceling [slashes](./learn-offenses.md). This origin has the privilege to execute
 calls from the staking pallet and the Election Provider Multiphase Pallet.
 
-{{ polkadot: <Chart title="" type="line" dataId="AdminStaking" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="AdminStaking" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="AdminStaking" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="AdminStaking" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Treasurer
 
-The origin for spending funds from the treasury (up to
-{{ polkadot: 10M DOT :polkadot }}{{ kusama:  333333.33 KSM  :kusama }}). This origin has the
-privilege to execute calls from the Treasury pallet.
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-{{ polkadot: <Chart title="" type="line" dataId="Treasurer" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="Treasurer" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<TabItem value="polkadot">
+
+The origin for spending funds from the treasury (up to 10M DOT). This origin has the privilege to
+execute calls from the Treasury pallet.
+
+<Chart title="" type="line" dataId="Treasurer" network="Polkadot" maxX="672" maxY="100" /> :polkadot
+
+</TabItem>
+<TabItem value="kusama">
+
+The origin for spending funds from the treasury (up to 333333.33 KSM). This origin has the privilege
+to execute calls from the Treasury pallet.
+
+<Chart title="" type="line" dataId="Treasurer" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Lease Admin
 
 Origin can force slot leases. This origin has the privilege to execute calls from the Slots pallet.
 
-{{ polkadot: <Chart title="" type="line" dataId="AdminLease" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="AdminLease" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="AdminLease" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="AdminLease" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Fellowship Admin
 
 The origin for managing the composition of the fellowship.
 
-{{ polkadot: <Chart title="" type="line" dataId="AdminFellowship" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="AdminFellowship" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="AdminFellowship" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="AdminFellowship" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### General Admin
 
 The origin managing the registrar and permissioned HRMP channel operations.
 
-{{ polkadot: <Chart title="" type="line" dataId="AdminGeneral" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="AdminGeneral" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="AdminGeneral" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="AdminGeneral" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Auction Admin
 
 The origin for starting auctions. This origin can execute calls from the Auctions pallet and the
 Scheduler Pallet.
 
-{{ polkadot: <Chart title="" type="line" dataId="AdminAuction" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="AdminAuction" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="AdminAuction" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="AdminAuction" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Referendum Canceller
 
 The origin can cancel referenda. This track has a low lead time and approval/support curves with
 slightly sharper reductions in their thresholds for passing.
 
-{{ polkadot: <Chart title="" type="line" dataId="RefCanceller" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="RefCanceller" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="RefCanceller" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="RefCanceller" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Referendum Killer
 
@@ -182,45 +329,122 @@ The origin can cancel an ongoing referendum and slash the deposits. This track a
 lead-time and approval/support curves with slightly sharper reductions in their thresholds for
 passing.
 
-{{ polkadot: <Chart title="" type="line" dataId="RefKiller" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="RefKiller" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+<Chart title="" type="line" dataId="RefKiller" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+<Chart title="" type="line" dataId="RefKiller" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Small Tipper
 
-Origin able to spend up to {{ polkadot: 250 DOT :polkadot }}{{ kusama:  8.25 KSM  :kusama }} from
-the treasury at once.
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-{{ polkadot: <Chart title="" type="line" dataId="SmallTipper" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="SmallTipper" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<TabItem value="polkadot">
+
+Origin able to spend up to 250 DOT from the treasury at once.
+
+<Chart title="" type="line" dataId="SmallTipper" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+Origin able to spend up to 8.25 KSM from the treasury at once.
+
+<Chart title="" type="line" dataId="SmallTipper" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Big Tipper
 
-Origin able to spend up to {{ polkadot: 1000 DOT :polkadot }}{{ kusama:  33.33 KSM  :kusama }} from
-the treasury at once.
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-{{ polkadot: <Chart title="" type="line" dataId="BigTipper" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="BigTipper" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<TabItem value="polkadot">
+
+Origin able to spend up to 1000 DOT from the treasury at once.
+
+<Chart title="" type="line" dataId="BigTipper" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+Origin able to spend up to 33.33 KSM from the treasury at once.
+
+<Chart title="" type="line" dataId="BigTipper" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Small Spender
 
-Origin able to spend up to {{ polkadot: 10000 DOT :polkadot }}{{ kusama:  333.33 KSM  :kusama }}
-from the treasury at once.
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-{{ polkadot: <Chart title="" type="line" dataId="SmallSpender" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="SmallSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<TabItem value="polkadot">
+
+Origin able to spend up to 10000 DOT from the treasury at once.
+
+<Chart title="" type="line" dataId="SmallSpender" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+Origin able to spend up to 333.33 KSM from the treasury at once.
+
+<Chart title="" type="line" dataId="SmallSpender" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Medium Spender
 
-Origin able to spend up to {{ polkadot: 100000 DOT :polkadot }}{{ kusama:  3333.33 KSM  :kusama }}
-from the treasury at once.
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-{{ polkadot: <Chart title="" type="line" dataId="MediumSpender" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="MediumSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<TabItem value="polkadot">
+
+Origin able to spend up to 100000 DOT from the treasury at once.
+
+<Chart title="" type="line" dataId="MediumSpender" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+Origin able to spend up to 3333.33 KSM from the treasury at once.
+
+<Chart title="" type="line" dataId="MediumSpender" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
 
 ### Big Spender
 
-Origin able to spend up to {{ polkadot: 1000000 DOT :polkadot }}{{ kusama:  33333.33 KSM  :kusama }}
-from the treasury at once.
+<!-- prettier-ignore -->
+<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
-{{ polkadot: <Chart title="" type="line" dataId="BigSpender" network="Polkadot" maxX="672" maxY="100" /> :polkadot }}
-{{ kusama: <Chart title="" type="line" dataId="BigSpender" network="Kusama" maxX="336" maxY="100" /> :kusama }}
+<TabItem value="polkadot">
+
+Origin able to spend up to 1000000 DOT from the treasury at once.
+
+<Chart title="" type="line" dataId="BigSpender" network="Polkadot" maxX="672" maxY="100" />
+
+</TabItem>
+<TabItem value="kusama">
+
+Origin able to spend up to 33333.33 KSM from the treasury at once.
+
+<Chart title="" type="line" dataId="BigSpender" network="Kusama" maxX="336" maxY="100" />
+
+</TabItem>
+</Tabs>
