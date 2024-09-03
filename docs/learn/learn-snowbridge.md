@@ -87,6 +87,6 @@ Snowbridge relies on two major assumptions:
 
 - Medium article
   ["Random Sampling BEEFY: Pillaring the trust-less Snowbridge"](https://medium.com/@bhargav_22496/18a43a2cba9b)
-  by Bhargav Batt at Web3 Foundation
+  by Bhargav Bhatt at Web3 Foundation
 - [Snowbridge GitHub repository](https://github.com/Snowfork/snowbridge)
 - Web3 Foundation Research Repository
