@@ -539,9 +539,9 @@ module.exports = {
                     id: "learn/learn-bridges",
                   },
                   items: [
-                    "learn/learn-dot-ksm-bridge",
                     "learn/learn-snowbridge",
                     "learn/learn-hyperbridge",
+                    "learn/learn-dot-ksm-bridge",
                   ],
                 },
                 {

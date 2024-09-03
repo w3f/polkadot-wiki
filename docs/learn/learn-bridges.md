@@ -9,25 +9,33 @@ slug: ../learn-bridges
 
 import DocCardList from '@theme/DocCardList';
 
-A cornerstone technology of blockchain interoperability is the blockchain bridge. Blockchain bridges
-are ways for two economically sovereign and technologically diverse chains to communicate with each
-other. Bridge designs come in a variety of flavors ranging from centralised and trusted to more
-decentralised and trustless. Polkadot favors the latter bridge designs for its ecosystem. However,
-there is nothing that blocks a development team from building and deploying the former.
+Bridges serve as vital infrastructure, enabling cross-chain communication between technically
+diverse networks like Polkadot and Ethereum. Essentially, bridges allow these chains to acknowledge
+and trust each other’s finalized states, paving the way for plethora of applications like asset
+swaps and chain migrations.
 
-While bridge designs are now getting to a place where they are sufficiently planned out, there have
-not been too many used heavily in production. For this reason, you can consider this page a work in
-progress. It will be updated as more information is determined and available.
+Current bridge architectures rely on centralized intermediaries, such as multi-signature relayers,
+to validate information passed between chains. This approach introduces additional trust assumptions
+and creates a single point of failure, opening up attack vectors like censorship. Recent history has
+shown just how risky this can be — centralized entities can be compromised or even act maliciously.
+According to [Chainalysis report](https://www.chainalysis.com/blog/cross-chain-bridge-hacks-2022/),
+failures in centralized bridges account for over 60% of all crypto hacks, resulting in losses
+exceeding $2 billion. Shockingly, 4 out of the top 5 incidents on the
+[rekt leaderboard](https://rekt.news/tr/leaderboard/) are bridge-related hacks. It’s clear: a
+system’s security is only **as strong as its weakest link**, and bridges have proven to be a
+critical vulnerability.
 
 :::info Purpose of bridging
 
-Bridges are specifically for making the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem compatible with external
-blockchains such as Bitcoin and Ethereum. For information on XCM, the native interoperability
-technology that allows parachains to communicate trustlessly, please see the dedicated
-[cross consensus](learn-xcm.md) page on the Wiki.
+Bridges make Polkadot able to communicate with external blockchains such as Bitcoin and Ethereum.
+Within Polkadot, chains already benefit from secure interoperability. For more information about the
+native interoperability technology that allows parachains to communicate trustlessly, please see the
+dedicated [cross consensus](learn-xcm.md) page on the Wiki.
 
 :::
+
+Bridge designs come thus in a variety of flavors ranging from centralized and trusted to more
+decentralized and trustless. Polkadot favors the latter bridge designs for its ecosystem.
 
 <DocCardList />
 
@@ -36,6 +44,14 @@ technology that allows parachains to communicate trustlessly, please see the ded
 A two-way trustless bridge between chains A and B can be viewed as two one-way bridges (A → B and B
 → A). Hence, the design of a two-way bridge can be explained in terms of a one-way bridge with a
 source and a target chain. Any trustless bridge will have **on-chain and offchain components**.
+
+Trustlessness means that the users do not need to trust any particular individuals or organizations,
+but rather only the mathematics, code, cryptography, and protocol. An example of a system which
+implies a high level of trust would be that of a bridge which is controlled via a multi-signature
+scheme, wherein you must trust the cosignatories.
+
+Basic assumptions are always needed in principle when defining a trustless system, as a completely
+trustless setup cannot always be guaranteed.
 
 ## On-chain Bridge Components
 
@@ -154,17 +170,18 @@ will be updated accordingly.
 
 :::
 
-|                                                              Snowbridge                                                               |                                             Hyperbridge                                             |
-| :-----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-|                                                            Ethereum only.                                                             |                                             Multichain.                                             |
-|                       Ethereum light client on [Bridge Hub System Chain](./learn-system-chains.md#bridge-hub).                        |                                            Own parachain                                            |
-|                                                     [DOT token](./learn-DOT.md).                                                      |                                      Hyperbridge native token.                                      |
-|                                                        Random-sampling BEEFY.                                                         |                                       Zero-knowledge Proofs.                                        |
-|                                        Simple codebase, but complex analysis by the verifier.                                         |                       Complex codebase, but simple analysis by the verifier.                        |
-|                                             Low-spec hardware for prover, permissionless.                                             | High-spec hardware for prover, permissionless but somewhat permissioned due to the ZK-based nature. |
-| High-latency as two epochs (15-20 minutes) are needed on Ethereum to achieve unpredictable randomness to update the Polkadot's state. |                           Low-latency, 5-7 minutes on reference hardware.                           |
-|                                                 No dependency on external libraries.                                                  |                      Dependency on external libraries due to ZK-based nature.                       |
-|                                                                 Live.                                                                 |                                             On Testnet.                                             |
+|                                                                  Snowbridge                                                                   |                                                                                                          Hyperbridge                                                                                                          |
+| :-------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                Ethereum only.                                                                 |                                                                                                          Multichain.                                                                                                          |
+| Ethereum light client on [Bridge Hub System Chain](./learn-system-chains.md#bridge-hub) and Polkadot light client on Ethereum smart contract. |                                                                                                        Own parachain.                                                                                                         |
+|                                                         [DOT token](./learn-DOT.md).                                                          |                                                                                                   Hyperbridge native token.                                                                                                   |
+|                                                       Random-sampling BEEFY for prover.                                                       |                                                                                                    Zero-knowledge Proofs.                                                                                                     |
+|                                            Simple codebase, but complex analysis by the verifier.                                             |                                                                                    Complex codebase, but simple analysis by the verifier.                                                                                     |
+|                                                 Low-spec hardware for prover, permissionless.                                                 |                                                              High-spec hardware for prover, permissionless but somewhat permissioned due to the ZK-based nature.                                                              |
+|                                             Possible high-level decentralization for the prover.                                              | Prover decentralization possible but probably by removing dependency on ZK circuits through BLS ([Boneh–Lynn–Shacham](https://en.wikipedia.org/wiki/BLS_digital_signature)) version of BEEFY and BLS precompiles on Ethereum. |
+|     High-latency as two epochs (15-20 minutes) are needed on Ethereum to achieve unpredictable randomness to update the Polkadot's state.     |                                                                                        Low-latency, 5-7 minutes on reference hardware.                                                                                        |
+|                                                     No dependency on external libraries.                                                      |                                                Dependency on external libraries due to ZK-based nature. Such libraries include [PLONK](https://eprint.iacr.org/2019/953.pdf).                                                 |
+|                                                                     Live.                                                                     |                                                                                                          On Testnet.                                                                                                          |
 
 Note that WETH sent through different bridges are different. Unless specific logic is implemented,
 WETH sent through Snowbridge cannot be sent back using Hyperbridge. Because Snowbridge is deployed
