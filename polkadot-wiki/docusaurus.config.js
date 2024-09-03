@@ -276,7 +276,7 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://guide.kusama.network",
+          to: "docs/kusama-getting-started",
           label: "Kusama",
           position: "right",
         },
