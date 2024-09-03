@@ -21,8 +21,9 @@ Polkadot and Ethereum. It utilizes the
 [Bridge Hub system parachain](./learn-system-chains.md#bridge-hub) to establish a connection to its
 relayers, allowing for permissionless and trustless messaging between Ethereum and Polkadot.
 
-With Snowbridge, a sender can run a [relayer](https://docs.snowbridge.network/architecture/relayers)
-to ensure that their cross-chain transaction is successful.
+With Snowbridge, a sender can (but does not need to) run a
+[relayer](https://docs.snowbridge.network/architecture/relayers) to ensure that their cross-chain
+transaction is successful. A sender is a user using relayers provided by others.
 
 Snowbridge currently supports
 [two-way token transfers](https://docs.snowbridge.network/applications/token-transfers) between
@@ -81,16 +82,6 @@ Snowbridge relies on two major assumptions:
   bias and extended the state-of-the-art in analysing the last-revealer attack on RANDAO. Assuming
   1/3rd of Ethereum validators are malicious, the effect of such bias is mitigated by proportionally
   increasing the security parameter.
-
-## Snowbridge Challenges
-
-### Concurrency Attacks
-
-Concurrency attacks involve relayers spawning multiple instances of the protocol to relay the same
-block, increasing the probability of the verifier drawing favorable randomness. This is akin to
-rolling the dice multiple times. Snowbridge is safeguarded against concurrency attacks by
-dynamically increasing the security parameter only in case an attack is launched (i.e., the relayers
-spawn multiple instances).
 
 ## Resources
 
