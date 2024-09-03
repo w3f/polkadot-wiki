@@ -255,7 +255,7 @@ module.exports = {
             },
             {
               type: 'link',
-              label: 'Research Pages',
+              label: 'Web3 Foundation Research',
               description: 'Official Pages maintained by the Web3 Foundation Research Team.',
               href: 'https://research.web3.foundation/',
             },
