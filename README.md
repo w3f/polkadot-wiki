@@ -203,37 +203,8 @@ command. After these jobs are completed, the CICD production workflow will autom
 
 ### Conditional Rendering
 
-The two Wikis support conditional rendering depending on which Wiki is being deployed. This is
-useful for mirrored pages with most content in common but have minor differences. To use this
-functionality, surround Kusama specific content with
-`{{ kusama: KUSAMA_SPECIFIC_CONTENT :kusama }}`, and polkadot specific content with
-`{{ polkadot: POLKADOT_SPECIFIC_CONTENT :polkadot }}`.
-
-For example the syntax:
-
-```markdown
-The {{ polkadot: Polkdadot Wiki :polkadot }} {{ kusama: Kusama Guide :kusama }} is a great resource!
-```
-
-Will render:
-
-```
-The Polkdadot Wiki is a great resource!
-```
-
-or
-
-```
-The Kusama Guide is a great resource!
-```
-
-depending on which project is currently loaded.
-
-To verify the appropriate values have been substituted in each scenario, run `polkadot:start` and
-`kusama:start` in separate terminals. If prompted with
-`[WARNING] Something is already running on port 3000. Would you like to run the app on another port instead?`,
-proceed with `yes`. This will likely launch one project on port 3000 and the other on 3001, allowing
-you to compare the rendered outputs for both projects locally and simultaneously.
+The Polkadot Wiki does not support conditional rendering. If needed, use `Tabs` and `TabItem` to
+display values for Polkadot and Kusama.
 
 ### Inline React Components
 
@@ -251,30 +222,7 @@ A full list of sample components can be found
 
 Try and reuse existing components as much as possible instead of creating new ones to keep the code
 lean and comprehensive. It is also important to verify prettier has not modified the formatting of
-your component after making a commit. Below are some best practices for achieving common formatting
-that will not be modified by the prettier command:
-
-Always wrap RPC components in conditional rendering & keep them on new lines:
-
-```
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
-```
-
-To add grammar without added spacing, place the grammar inside the conditional brackets:
-
-```
-The validator count followed by a period is
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>. :kusama }}
-
-The validator count in parentheses is
-{{ polkadot: (<RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>) :polkadot }}
-{{ kusama: (<RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>) :kusama }}
-```
-
-Failing to follow this schema can results in unexpected formatting, such as added line-breaks or
-spacing, especially after running prettier.
+your component after making a commit.
 
 ## Internationalization
 
