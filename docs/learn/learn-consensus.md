@@ -193,31 +193,24 @@ The two main differences between GRANDPA and Casper FFG are:
 ## Bridging: BEEFY
 
 The BEEFY (Bridge Efficiency Enabling Finality Yielder) is a secondary protocol to GRANDPA to
-support efficient bridging between the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network (relay chain) and remote,
-segregated blockchains, such as Ethereum, which were not built with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} interchain operability in mind. The
-protocol allows participants of the remote network to verify finality proofs created by the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain validators. In other
-words: clients in the Ethereum network should be able to verify that the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network is at a specific state.
+support efficient bridging between relay chains (Polkadot and Kusama) and remote, segregated
+blockchains, such as Ethereum, which were not built with the Polkadot native interoperability in
+mind. The protocol allows participants of the remote network to efficiently verify finality proofs
+created by validators on the relay chain, i.e. clients in the Ethereum network can verify that the
+Polkadot network is at a specific state.
 
 Storing all the information necessary to verify the state of the remote chain, such as the block
-headers, is too expensive. BEEFY addresses the limitations of GRANDPA finality for certain use
-cases, such as bridges to chains like Ethereum, by providing a more lightweight and efficient
-finality solution.
+headers, is too expensive. In BEEFY, all honest validators sign on a GRANDPA finalized block. This
+reduces the efforts on the light client side, as tracking forks, GRANDPA justifications, etc., is no
+longer necessary. Moreover, BEEFY utilizes Merkle Mountain Ranges (MMR) as an efficient data
+structure for storing and transmitting block headers and signatures to light clients and the ECDSA
+signature schemes (more efficiently verifiable on EVM). Light clients now only have to check if the
+block has a super-majority of BEEFY votes by validators.
 
-BEEFY operates on top of GRANDPA, utilizing a consensus extension and a light client protocol. This
-allows for smaller consensus justifications and efficient communication between nodes. It utilizes
-Merkle Mountain Ranges (MMR) as an efficient data structure for storing and transmitting block
-headers and signatures to light clients. Payload, signed commitment, and witness data are essential
-for verifying finality proofs.
+Overall, BEEFY addresses the limitations of GRANDPA finality for bridges to chains like Ethereum by
+providing a more lightweight and efficient finality solution.
 
-Overall, BEEFY aims to enhance the efficiency and reliability of cross-chain communication within
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem by providing a
-lightweight finality solution compatible with a variety of target chains.
-
-For additional implementation details, see
+For additional implementation details about BEEFY, see
 [the Polkadot Specification](https://spec.polkadot.network/#sect-grandpa-beefy).
 
 ## Resources
