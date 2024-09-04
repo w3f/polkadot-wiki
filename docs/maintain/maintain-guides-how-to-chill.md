@@ -75,7 +75,7 @@ requirements.
 :::note Chill Threshold
 
 `ChillThreshold` defines how close to the max nominators or validators we must reach before users
-can start chilling one-another.
+can start chilling one another.
 
 :::
 
