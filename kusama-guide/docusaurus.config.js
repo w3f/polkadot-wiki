@@ -129,6 +129,10 @@ module.exports = {
             to: '/docs/learn-transactions',
             from: ['/docs/learn-transaction-fees']
           },
+          {
+            to: '/docs/learn-system-chains',
+            from: ['/docs/learn-bridge-hub']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {

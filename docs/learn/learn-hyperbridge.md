@@ -122,24 +122,19 @@ For example, Consensus Proofs in a proof of stake system are given as the signat
 block header in the chain from a supermajority (two-thirds plus one) subset of the full authority
 set.
 
-## Learn More
+## Resources
 
-The information provided here is subject to change; keep up to date using the following resources:
+To learn more about Hyperbridge, see the resources below.
 
 - [Introducing Hyperbridge: An Interoperability Coprocessor](https://blog.polytope.technology/introducing-hyperbridge-interoperability-coprocessor) -
   Article by Seun Lanlege, Polytope Lab founder.
+- [Hyperbridge: The New Interoperability Coprocessor on Polkadot](https://medium.com/simplystaking/hyperbridge-the-new-interoperability-coprocessor-on-polkadot-b532ae622d8e) -
+  Article by Erik from Simply Staking
 - [Digital Services as State Machines](https://polkadot-blockchain-academy.github.io/pba-book/blockchain-contracts/services-as-state-machines/page.html) -
   Lecture about state machine from Polkadot Blockchain Academy
-- [Polkadot Wiki - Bridges](https://wiki.polkadot.network/docs/learn-bridges) - Learn about bridges
-  in Polkadot
-- [Polkadot Wiki - Parachain](https://wiki.polkadot.network/docs/learn-parachains) - Learn about
-  parachain in Polkadot
 - [Hyperbridge Source Code](https://github.com/polytope-labs/hyperbridge) - Public codebase
   repository of hyperbridge.
 - [Interoperable State Machine Protocol (ISMP) Book](https://ismp.polytope.technology/) - Guidebook
   of the ISMP
 - [The Puzzle of Blockchain Interoperability](https://twitter.com/stakenode_dev/status/1744653040764817675)
-- [RFC-1: Agile Coretime](https://github.com/polkadot-fellows/RFCs/blob/6f29561a4747bbfd95307ce75cd949dfff359e39/text/0001-agile-coretime.md) -
-  Agile periodic-sale-based model for assigning Coretime on the Polkadot Ubiquitous Computer.
 - [ISMP, The Endgame for Parachain Interoperability | Sub0 2023](https://www.youtube.com/watch?v=MCOAwooWecs)
-- [Research Summary: PlonK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge](https://www.smartcontractresearch.org/t/research-summary-plonk-permutations-over-lagrange-bases-for-oecumenical-noninteractive-arguments-of-knowledge/382)

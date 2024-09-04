@@ -10,6 +10,13 @@ slug: ../learn-system-chains
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem";
 
+The primary functionality of the Relay chain is to secure the parachains and facilitate secure
+communication between them. All other functionalities like asset transfers, governance, identities
+and bridging (a potentially resource intensive task) can benefit from operating separately on system
+chains. System chains are responsible for delegating functionality away from the relay chain for
+peformance reasons, taking advantage of the inherent parallelization the architecture of Polkadot
+provides.
+
 ## Overview
 
 System parachains are those that contain core Polkadot protocol features, but in parachains rather
@@ -79,14 +86,20 @@ Some of these collectives are the
 important roles in the future of network stewardship and decentralized governance.
 
 Networks themselves can act as collectives and express their legislative voices as single opinions
-within other networks. This is achieved with the assistance from a [bridge hub](#bridge-hubs).
+within other networks. This is achieved with the assistance from a [bridge hub](#bridge-hub).
 
-### Bridge Hubs
+### Bridge Hub
 
 Before Polkadot and Kusama supported their first parachains, the only way to design a bridge was to
 put the logic onto the Relay Chain itself. Since both networks now support parachains, it makes
 sense to have a parachain on each network dedicated to bridges. This is because of the execution
 isolation provided by parachains.
+
+The Bridge Hub system parachain operates on the relay chain, and is responsible for faciliating
+bridges to the wider Web3 space. It contains the required bridge
+[pallets](../general/glossary.md#pallet) in its runtime, which enable trustless bridging with other
+blockchain networks like Polkadot, Kusama and Ethereum. The Bridge Hub uses the native token of the
+relay chain.
 
 See the [Bridges page](learn-bridges.md) for information on the latest bridge projects.
 

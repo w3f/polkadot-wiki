@@ -217,6 +217,10 @@ module.exports = {
             to: '/docs/learn-guides-ledger',
             from: ['/docs/learn-guides-assets-ledger']
           },
+          {
+            to: '/docs/learn-system-chains',
+            from: ['/docs/learn-bridge-hub']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {

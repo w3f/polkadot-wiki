@@ -366,11 +366,11 @@ networks that can quickly gossip the message across the networks.
 
 Due to the necessary latency in sending crosschain messages, some parachains plan to become _hubs_
 for an entire industry (see the [Asset Hub](./learn-assets.md) and
-[Bridge Hub](./learn-bridge-hub.md)). For example, many DeFi applications could take advantage of a
-property known as _composability_ which means that functions of one application can be
-synergistically composed with others to create new applications. One example of this includes flash
-loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the end of
-the transaction.
+[Bridge Hub](./learn-system-chains.md#bridge-hub)). For example, many DeFi applications could take
+advantage of a property known as _composability_ which means that functions of one application can
+be synergistically composed with others to create new applications. One example of this includes
+flash loans, which borrow funds to execute some on-chain logic as long as the loan is repaid at the
+end of the transaction.
 
 An issue with crosschain latency means that composability property weakens among parachains compared
 to a single blockchain. **This implication is common to all sharded blockchain designs, including
