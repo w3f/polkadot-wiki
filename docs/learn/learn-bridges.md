@@ -20,10 +20,9 @@ and creates a single point of failure, opening up attack vectors like censorship
 shown how risky this can be — centralized entities can be compromised or act maliciously. According
 to [Chainalysis report](https://www.chainalysis.com/blog/cross-chain-bridge-hacks-2022/), failures
 in centralized bridges account for over 60% of all crypto hacks, resulting in losses exceeding $2
-billion. Shockingly, 4 of the top 5 incidents on the
-[rekt leaderboard](https://rekt.news/tr/leaderboard/) are bridge-related hacks. It’s clear: a
-system’s security is only **as strong as its weakest link**, and bridges have proven to be a
-critical vulnerability.
+billion. Four of the top five incidents on the [rekt leaderboard](https://rekt.news/tr/leaderboard/)
+are bridge-related hacks. A system’s security is only **as strong as its weakest link**, and bridges
+have proven to be a critical vulnerability.
 
 :::info Purpose of bridging
 
