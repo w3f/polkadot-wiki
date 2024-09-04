@@ -74,7 +74,7 @@ stake, and `p` is the probability of a successful attack.
 
 Snowbridge relies on two major assumptions:
 
-- the crypto-economic assumption that an adversary is rational, i.e., an attack is launched only if
+- The crypto-economic assumption that an adversary is rational, i.e., an attack is launched only if
   the expected value of an attack is positive. Hence, we derive our security parameter `m` by
   ensuring the expected value of an attack is negative, i.e., `E(A) < 0`.
 
