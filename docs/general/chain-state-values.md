@@ -65,7 +65,7 @@ The auction ending period on Polkadot is <RPC network="polkadot" path="consts.au
 
 #### Block Hash Count
 
-On Polkadot, the maximum block number to block hash mappings to keep is <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> (about seven hours).
+On Polkadot, the maximum number of block hashes retained on-chain at any given time is <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> (which maps to seven hours given 6-second block times).
 
 #### Bounty Curator Deposit
 
