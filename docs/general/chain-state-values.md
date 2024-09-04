@@ -138,7 +138,7 @@ minimum bond required is <RPC network="polkadot" path="query.staking.minValidato
 
 #### Minimum Validator Commission
 
-The minimum commission a Polkadot Validator can set is <RPC network="polkadot" path="query.staking.minCommission" filter = "percentage" defaultValue="0"/>%. [This does not guarantee entry into active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
+The minimum commission a Polkadot Validator can set is <RPC network="polkadot" path="query.staking.minCommission" filter = "percentage" defaultValue="0"/>%. [This does not guarantee entry into the active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
 
 #### Multisig Deposit Base
 
