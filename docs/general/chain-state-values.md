@@ -83,10 +83,6 @@ A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="
 
 The waiting time before claiming a Polkadot child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
 
-#### Chill Threshold
-
-The chill threshold for Polkadot is currently set to <RPC network="polkadot" path="query.staking.chillThreshold" defaultValue={90}/>%.
-
 #### Conviction Voting Lock Period
 
 One conviction voting lock period on Polkadot equals <RPC network="polkadot" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
@@ -142,7 +138,7 @@ minimum bond required is <RPC network="polkadot" path="query.staking.minValidato
 
 #### Minimum Validator Commission
 
-The minimum commission a Polkadot Validator can set is <RPC network="polkadot" path="query.staking.minCommission" filter = "percentage" defaultValue="0"/>%.
+The minimum commission a Polkadot Validator can set is <RPC network="polkadot" path="query.staking.minCommission" filter = "percentage" defaultValue="0"/>%. [This does not guarantee entry into active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
 
 #### Multisig Deposit Base
 
@@ -253,7 +249,7 @@ The auction ending period on Kusama is <RPC network="kusama" path="consts.auctio
 
 #### Block Hash Count
 
-On Kusama, the maximum block number to block hash mappings to keep is <RPC network="kusama" path="consts.system.blockHashCount" defaultValue={4096}/> (about seven hours).
+On Kusama, the maximum block number to block hash mappings to keep is <RPC network="kusama" path="consts.system.blockHashCount" defaultValue={4096}/> (which maps to seven hours given 6-second block times).
 
 #### Bounty Curator Deposit
 
@@ -270,10 +266,6 @@ A Kusama bounty has a predetermined duration of <RPC network="kusama" path="cons
 #### Child Bounty Payout Delay
 
 The waiting time before claiming a Kusama child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
-
-#### Chill Threshold
-
-The chill threshold for Kusama is currently set to <RPC network="kusama" path="query.staking.chillThreshold" defaultValue={90}/>%.
 
 #### Conviction Voting Lock Period
 
