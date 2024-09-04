@@ -533,12 +533,9 @@ a non-canonical chain.
 
 ## Bond DOT
 
-To start a validator instance on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the
-minimum bond required is
-{{ polkadot: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>. :kusama }}
-But to enter the active validator set and be eligible to earn rewards, your validator node should be
-nominated by a minimum number of DOT tokens.
+There is a [minimum bond](../general/chain-state-values.md#minimum-validator-bond) to start a
+validator instance, but to enter the active validator set and be eligible to earn rewards, your
+validator node should be nominated by a minimum number of DOT tokens.
 
 For example, the minimum stake backing a validator in era
 {{ polkadot: 1449 :polkadot }}{{ kusama: 6646 :kusama }} (May 21st 2024) is
