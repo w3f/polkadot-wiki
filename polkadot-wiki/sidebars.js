@@ -328,6 +328,12 @@ module.exports = {
                   description: 'Community-maintained Support Pages about Polkadot OpenGov.',
                   href: 'https://www.opengov.watch/',
                 },
+                {
+                  type: 'link',
+                  label: 'OpenGov Tracker',
+                  description: 'Community-maintained Support Pages about Polkadot OpenGov.',
+                  href: 'https://ogtracker.io/',
+                },
               ],
             },
             "learn/learn-polkadot-opengov-treasury",
