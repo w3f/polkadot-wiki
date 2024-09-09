@@ -48,8 +48,6 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
 - [Ryabina's Telegram Bot](https://github.com/Ryabina-io/substratebot) - A Telegram bot for
   monitoring on-chain events of Substrate chains.
   [GitHub Repository](https://gitlab.com/Polkabot/polkabot)
-- [PolkaStats](https://polkastats.io/) - Polkadot network statistics (includes Kusama). Shows
-  network information and staking details from validators and intentions.
   [GitHub Repository](https://github.com/Colm3na/polkastats-v2/).
 - [Panic](https://github.com/SimplyVC/panic) - A node monitoring and alert server for validators.
 - [OpenWeb3/Guardian](https://github.com/open-web3-stack/guardian) - A CLI tool and JS library to
@@ -78,17 +76,16 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
   Substrate.
 - [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and tutorials for
   building a blockchain using Substrate.
-- [Substrate VSCode plugin](https://github.com/paritytech/vscode-substrate).
-- [Substrate Debug Kit](https://github.com/paritytech/substrate-debug-kit) - A collection of debug
+- [Substrate VSCode plugin (deprecated)](https://github.com/paritytech/vscode-substrate).
+- [Substrate Debug Kit (deprecated)](https://github.com/paritytech/substrate-debug-kit) - A collection of debug
   tools and libraries around substrate chains. Includes tools to calculate NPoS elections offline,
   disk usage monitoring, test templates against chain state and other pallet-specific helper.
 - [POP CLI](https://github.com/r0gue-io/pop-cli) - An all-in-one tool for Polkadot development.
+- [Zombienet](https://github.com/paritytech/zombienet) - Testing framework for Substrate based blockchains
 - [Diener](https://crates.io/crates/diener) - A tool for easy changing of Polkadot or Substrate
   dependency versions.
-- [Polkadot Launch](https://github.com/shawntabrizi/polkadot-launch) - A tool to easily launch
+- [Polkadot Launch (deprecated)](https://github.com/shawntabrizi/polkadot-launch) - A tool to easily launch
   custom local parachain-enabled Polkadot versions.
-- [Halva](https://github.com/halva-suite/halva) - A Truffle-inspired local development environment
-  for Substrate.
 - [Fork-off Substrate](https://github.com/maxsam4/fork-off-substrate) - Copies the state of an
   existing chain into your local version and lets you further experiment on it.
 - [srtool](https://www.chevdor.com/tags/srtool/) - A tool for verifying runtime versions against
@@ -97,7 +94,7 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
   the sake of benchmarking.
 - [substrate-devhub-utils](https://github.com/danforbes/substrate-devhub-utils) - A set of
   JavaScript utilities making life with Substrate a little easier.
-- [sub-flood](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by flooding it
+- [sub-flood (archived)](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by flooding it
   with requests.
 - [Apillon](https://github.com/Apillon) - A Web3 development platform with a complete toolbox and
   access to Polkadot’s technology stack.
