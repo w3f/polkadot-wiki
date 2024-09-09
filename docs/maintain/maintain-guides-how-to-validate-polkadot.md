@@ -88,9 +88,9 @@ slashed.
 - **CPU**
   - x86-64 compatible;
   - Intel Ice Lake, or newer (Xeon or Core series); AMD Zen3, or newer (EPYC or Ryzen);
-  - ~4~ 8 physical cores @ 3.4GHz; starting with January 2025, the recommendation is to use
-    a hardware with at least **8** physical cores, see [referenda](https://polkadot.subsquare.io/referenda/1051) for more details
-    about the rationale;
+  - ~4~ 8 physical cores @ 3.4GHz; starting with January 2025, the recommendation is to use a
+    hardware with at least **8** physical cores, see
+    [referenda](https://polkadot.subsquare.io/referenda/1051) for more details about the rationale;
   - Simultaneous multithreading disabled (Hyper-Threading on Intel, SMT on AMD);
   - Prefer single-threaded performance over higher cores count. A comparison of single-threaded
     performance can be found [here](https://www.cpubenchmark.net/singleThread.html).
