@@ -94,6 +94,7 @@ service, and additional metrics.
 - [OnFinality](https://onfinality.io)
 - [Dwellir](https://dwellir.com)
 - [Radium Block](https://radiumblock.com/)
+- [GetBlock](https://getblock.io/)
 - [1RPC](https://1rpc.io/)
 - [NOWNodes](https://nownodes.io/)
 - [All That Node](https://www.allthatnode.com/)
