@@ -65,7 +65,7 @@ but does not store past blocks and so cannot read historical data without reques
 that has it. Light nodes are useful for resource-restricted devices. An interesting use-case of
 light nodes is a browser extension, which is a node in its own right, running the runtime in WASM
 format, as well as a full or light node that is completely encapsulated in WASM and can be
-integrated into web apps: https://github.com/paritytech/smoldot#wasm-light-node.
+integrated into web apps: https://github.com/smol-dot/smoldot.
 
 :::note Substrate Connect
 
