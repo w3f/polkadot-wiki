@@ -21,7 +21,7 @@ Polkadot will enable agile coretime after it has been thoroughly tested on Kusam
 This guide aims to get you up and running with the basics of:
 
 - **Compiling** and configuring your first template
-- **Obtaining** coretime (bulk or on-demand)
+- **Obtaining** Coretime (bulk or on-demand)
 - **Deploying** your template on your procured core
 
 ## Getting ROC and Reserving a ParaId
@@ -42,9 +42,9 @@ to upload our parachain's code:
    [Network > Parachains > Parathreads (the tab)](https://polkadot.js.org/apps/#/parachains/parathreads)
 5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains#reserve-paraid)
 
-You can also visit the [Accounts](https://polkadot.js.org/apps/#/accounts) tab to view all
-registered accounts and associated balances within the Polkadot.js Extension. Once finished, you
-should see your new ParaId at the bottom of the list within
+Visit the [Accounts](https://polkadot.js.org/apps/#/accounts) tab to view all registered accounts
+and associated balances within the Polkadot.js Extension. Once finished, you should see your new
+ParaId at the bottom of the list within
 [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) with the
 option to "Deregister" to the right:
 
@@ -65,7 +65,7 @@ Visit [the dependencies' installation](./build-guides-install-deps.md) page befo
 :::
 
 This guide uses release
-[`polkadot-v1.15.0`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.15.0), for
+[`polkadot-v1.15.1`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.15.1), for
 associated tooling (such as `polkadot-parachain` and `chain-spec-builder`).
 
 We will be using the
@@ -258,7 +258,7 @@ fields are in place:
 3. **Make** sure that our `chain_type` is set to `Live`
 4. **Optionally**, change the name, id, and token symbol of your chain.
 
-If you fail to do one of these, there is a large chance that your chain may fail to produce blocks.
+If you fail to do one of these, your chain may fail to produce blocks.
 
 For more information on chain specifications,
 [check out the reference document from the Polkadot SDK.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/chain_spec_genesis/index.html)
@@ -291,10 +291,9 @@ Within your project folder, you should now have two files:
 > Make sure you have the
 > [`polkadot-parachain`](./build-guides-install-deps.md#installing-the-omninode) binary installed!
 
-Keep in mind that you will need to sync Rococo first - this could take some time depending on your
-download speed, so it is best to start this process. In order to avoid storing the full state of the
-relay chain, be sure to run with the appropriate pruning flags (`blocks-pruning` and
-`state-pruning`):
+Before you are able to connect your collator, you must sync the relay chain. Depending on your
+download speed, the time to sync may vary. In order to avoid storing the full state of the relay
+chain, be sure to run with the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
 
 :::info Explaining `blocks-pruning` and `state-pruning`
 
