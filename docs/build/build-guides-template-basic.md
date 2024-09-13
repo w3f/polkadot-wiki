@@ -9,11 +9,12 @@ slug: ../build-guides-template-basic
 
 :::warning Not a production ready guide.
 
-This guide is considered a moving document and currently uses the **Rococo** testnet. This guide is also applicable to the parachains on the Kusama
-relay chain, as coretime is also enabled there. Polkadot will
-enable agile coretime after it has been thoroughly tested on Kusama.
+This guide is considered a moving document and currently uses the **Rococo** testnet. This guide is
+also applicable to the parachains on the Kusama relay chain, as coretime is also enabled there.
+Polkadot will enable agile coretime after it has been thoroughly tested on Kusama.
 
-**This instructions on this guide are applicable for the Polkadot SDK repository with tag `polkadot-v1.15.1`**
+**This instructions on this guide are applicable for the Polkadot SDK repository with tag
+`polkadot-v1.15.1`**
 
 :::
 
@@ -114,9 +115,9 @@ definitely a next step after you get used to deploying your parachain on Rococo!
 
 ### Customizing our chain specification's patch file
 
-The chain specification is a JSON file that describes Polkadot SDK-based networks. It usually contains
-the genesis runtime (in hex) under `genesis.runtimeGenesis.code` and also contains
-genesis values/state for the pallets included in your runtime.
+The chain specification is a JSON file that describes Polkadot SDK-based networks. It usually
+contains the genesis runtime (in hex) under `genesis.runtimeGenesis.code` and also contains genesis
+values/state for the pallets included in your runtime.
 
 You can bootstrap your network with some initial values, such as initial collators, balances for
 certain accounts, and more. This is done using a patch file, which the `chain-spec-builder` tool
@@ -290,10 +291,23 @@ Within your project folder, you should now have two files:
 > Make sure you have the
 > [`polkadot-parachain`](./build-guides-install-deps.md#installing-the-omninode) binary installed!
 
-You should start syncing your collator. Keep in mind that you will need to sync Rococo first - this
-could take some time depending on your download speed, so it is best to start this process ASAP. In
-order to avoid storing the full state of the relay chain, be sure to run with the appropriate
-pruning flags (`blocks-pruning` and `state-pruning`):
+Keep in mind that you will need to sync Rococo first - this could take some time depending on your
+download speed, so it is best to start this process. In order to avoid storing the full state of the
+relay chain, be sure to run with the appropriate pruning flags (`blocks-pruning` and
+`state-pruning`):
+
+:::info Explaining `blocks-pruning` and `state-pruning`
+
+A Polkadot SDK-based node has two pruning modes:
+
+- `blocks-pruning` - Prunes block bodies (the list of extrinsics in the block) from a specified
+  height (default: `256`)
+- `state-pruning` - Prunes the overall state from a specified height
+
+Both of these flags aid in reducing the amount of disk space taken up by the relay chain. Note that
+`state-pruning` is only be used for the first initial sync for the database.
+
+:::
 
 ```shell
 polkadot-parachain --collator \
