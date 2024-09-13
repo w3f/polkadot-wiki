@@ -304,7 +304,7 @@ A Polkadot SDK-based node has two pruning modes:
 - `state-pruning` - Prunes the overall state from a specified height
 
 Both of these flags aid in reducing the amount of disk space taken up by the relay chain. Note that
-`state-pruning` is only be used for the first initial sync for the database.
+`state-pruning` is only used for the first initial sync for the database.
 
 :::
 
