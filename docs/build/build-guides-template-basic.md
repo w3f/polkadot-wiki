@@ -9,11 +9,11 @@ slug: ../build-guides-template-basic
 
 :::warning Not a production ready guide.
 
-This guide is considered a moving document and currently uses the **Rococo** testnet. The Kusama
-relay chain can also be used in place of Rococo, as coretime is also enabled there. Polkadot will
+This guide is considered a moving document and currently uses the **Rococo** testnet. This guide is also applicable to the parachains on the Kusama
+relay chain, as coretime is also enabled there. Polkadot will
 enable agile coretime after it has been thoroughly tested on Kusama.
 
-**This guide assumes Polkadot SDK tag `polkadot-v1.15.1`**
+**This instructions on this guide are applicable for the Polkadot SDK repository with tag `polkadot-v1.15.1`**
 
 :::
 
@@ -69,7 +69,7 @@ associated tooling (such as `polkadot-parachain` and `chain-spec-builder`).
 
 We will be using the
 [Polkadot SDK's parachain template](https://github.com/paritytech/polkadot-sdk-parachain-template),
-which is kept in sync with the Polkadot SDK.
+which is mirrored in the templates folder within Polkadot SDK repository.
 
 Clone the repository:
 
@@ -114,8 +114,8 @@ definitely a next step after you get used to deploying your parachain on Rococo!
 
 ### Customizing our chain specification's patch file
 
-The chain specification is a JSON file which describes Substrate-based networks. It usually contains
-the genesis runtime (in hex) under `genesis.runtimeGenesis.code`. Under that, it also contains
+The chain specification is a JSON file that describes Polkadot SDK-based networks. It usually contains
+the genesis runtime (in hex) under `genesis.runtimeGenesis.code` and also contains
 genesis values/state for the pallets included in your runtime.
 
 You can bootstrap your network with some initial values, such as initial collators, balances for
@@ -123,7 +123,7 @@ certain accounts, and more. This is done using a patch file, which the `chain-sp
 uses to create the full chain specification of your network. You should do the following to create
 your `patch.json`:
 
-Feel free to use the patch provided here, which you can look to tweaking to your liking.
+Feel free to use the patch provided here, which you can look to tweak to your liking.
 
 1. Create the file: `touch patch.json`
 2. Paste the below patch JSON.
@@ -267,7 +267,7 @@ For more information on chain specifications,
 With our chain specification successfully generated, we can move to generating the genesis state and
 runtime.
 
-Generate the genesis as follows:
+Generate the genesis following the instructions below:
 
 ```shell
 polkadot-parachain export-genesis-head --chain chain_spec.json genesis

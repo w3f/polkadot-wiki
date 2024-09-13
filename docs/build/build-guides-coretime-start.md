@@ -20,7 +20,7 @@ Polkadot. These guides are **not** production ready due to the moving nature of 
 
 ## Using the Polkadot SDK
 
-The Polkadot SDK used to be overarching **three** repositories:
+The Polkadot SDK is comprised of **three** important repositories:
 
 - [**Polkadot**](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/index.html#polkadot) -
   Which for a time, included both the client implementation and runtime, until the runtime was moved
@@ -37,9 +37,9 @@ The Polkadot SDK used to be overarching **three** repositories:
 
 :::info What is a task?
 
-You might see the term "task" referenced in place of "parachain". In most cases, it refers to a
+You might see the term "task" referenced often in place of "parachain". In most cases, it refers to a
 process utilizing the relay chain's compute. This could be a parachain or any other computational
-process, provided that it adheres to the Polkadot protocol.
+process, provided that it adheres to the Polkadot protocol interface.
 
 The full definition can be found [here](../learn/learn-agile-coretime.md#task).
 
@@ -107,8 +107,7 @@ PC-->DEP
 Make sure you have everything you need for your target system
 [here.](./build-guides-install-deps.md).
 
-Be sure you also install the `polkadot-parachain` and `chain-spec-builder` binaries, as they will be
-used to start and run your chain!
+Be sure you also install the `polkadot-parachain` and `chain-spec-builder` binaries, as they needed to start and run your chain!
 
 ### Deployment Example - Adder Collator
 
