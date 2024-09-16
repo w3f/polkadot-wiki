@@ -77,15 +77,17 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
 - [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and tutorials for
   building a blockchain using Substrate.
 - [Substrate VSCode plugin (deprecated)](https://github.com/paritytech/vscode-substrate).
-- [Substrate Debug Kit (deprecated)](https://github.com/paritytech/substrate-debug-kit) - A collection of debug
-  tools and libraries around substrate chains. Includes tools to calculate NPoS elections offline,
-  disk usage monitoring, test templates against chain state and other pallet-specific helper.
+- [Substrate Debug Kit (deprecated)](https://github.com/paritytech/substrate-debug-kit) - A
+  collection of debug tools and libraries around substrate chains. Includes tools to calculate NPoS
+  elections offline, disk usage monitoring, test templates against chain state and other
+  pallet-specific helper.
 - [POP CLI](https://github.com/r0gue-io/pop-cli) - An all-in-one tool for Polkadot development.
-- [Zombienet](https://github.com/paritytech/zombienet) - Testing framework for Substrate based blockchains
+- [Zombienet](https://github.com/paritytech/zombienet) - Testing framework for Substrate based
+  blockchains
 - [Diener](https://crates.io/crates/diener) - A tool for easy changing of Polkadot or Substrate
   dependency versions.
-- [Polkadot Launch (deprecated)](https://github.com/shawntabrizi/polkadot-launch) - A tool to easily launch
-  custom local parachain-enabled Polkadot versions.
+- [Polkadot Launch (deprecated)](https://github.com/shawntabrizi/polkadot-launch) - A tool to easily
+  launch custom local parachain-enabled Polkadot versions.
 - [Fork-off Substrate](https://github.com/maxsam4/fork-off-substrate) - Copies the state of an
   existing chain into your local version and lets you further experiment on it.
 - [srtool](https://www.chevdor.com/tags/srtool/) - A tool for verifying runtime versions against
@@ -94,8 +96,8 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
   the sake of benchmarking.
 - [substrate-devhub-utils](https://github.com/danforbes/substrate-devhub-utils) - A set of
   JavaScript utilities making life with Substrate a little easier.
-- [sub-flood (archived)](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by flooding it
-  with requests.
+- [sub-flood (archived)](https://github.com/NikVolf/sub-flood) - A tool to benchmark Substrate by
+  flooding it with requests.
 - [Apillon](https://github.com/Apillon) - A Web3 development platform with a complete toolbox and
   access to Polkadot’s technology stack.
 
