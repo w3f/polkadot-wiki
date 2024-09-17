@@ -46,6 +46,7 @@ flowchart LR
     click C "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click F "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click H "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" _blank
+```
 
 For a longer list and a description of the programs listed below, check out
 [our page on alternative funding opportunities](./grants.md#alternative-funding-sources).
