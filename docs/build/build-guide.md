@@ -9,17 +9,16 @@ slug: ../build-guide
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a blockchain network protocol that
-provides **shared security** among all connected parachains and allowing all connected tasks to
-**interoperate** by using [XCM](../learn/learn-xcm.md).
+Polkadot is a blockchain network protocol that provides **shared security** among all connected
+parachains and allowing all connected tasks to **interoperate** by using
+[XCM](../learn/learn-xcm.md).
 
 With the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) and
 [Agile Coretime](../learn/learn-agile-coretime.md), the time it takes to develop and launch a new
 chain has dropped significantly. Depending on your goals, it may only take weeks or even days.
 
 This starters guide will walk you through the steps you can take today to get started building your
-vision with {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It will also point to
-resources you can use to start building immediately.
+vision with Polkadot. It will also point to resources you can use to start building immediately.
 
 :::note For Developers!
 
@@ -41,9 +40,8 @@ development to user-facing applications:
 
 :::tip Keep reading to find out more, or explore each respective area
 
-Keep in mind that these areas are merely suggestive, and there are many ways to utilize
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, Substrate, and their various
-developmental components. For more inspiration, look at the
+Keep in mind that these areas are merely suggestive, and there are many ways to utilize Polkadot,
+Substrate, and their various developmental components. For more inspiration, look at the
 [open source projects](./build-open-source.md) featured here in the wiki!
 
 :::
@@ -101,26 +99,23 @@ flowchart TB
  end
 ```
 
-Before diving into the various paths one can take in developing on
-{{ polkadot: Polkadot :polkadot }}, it's essential to realize and know key terms that make up the
-following sections. Even before considering what kind of application you want to build, it's prudent
-to understand what {{ polkadot: Polkadot :polkadot }} _is_ and how {{ kusama: Kusama :kusama }}
-relates to it, and what each developmental component can do for you within the Polkadot ecosystem.
+Before diving into the various paths one can take in developing on Polkadot, it's essential to
+realize and know key terms that make up the following sections. Even before considering what kind of
+application you want to build, it's prudent to understand what Polkadot _is_, and what each
+developmental component can do for you within the Polkadot ecosystem.
 
-Before diving into any one of these tracks, it is encouraged to read about
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its networks in order to gain
-context about the application you could make.
+Before diving into any one of these tracks, it is encouraged to read about Polkadot and its networks
+in order to gain context about the application you could make.
 
 [Take a look at the various development network options here.](./build-network-overview.md)
 
 ## Building Parachains
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is canonically referred to as the
-Relay Chain. It is also considered a _layer zero_ protocol, as it enables the interoperability and
-shared security of multiple [parachains](../learn/learn-parachains.md), which are _layer one_
-protocols. Parachains currently connect to a relay chain using the
-[Parachains Protocol](../learn/learn-parachains-protocol.md). More elaborate (or simpler) tasks
-could be constructed in the future.
+Polkadot is canonically referred to as the Relay Chain. It is also considered a _layer zero_
+protocol, as it enables the interoperability and shared security of multiple
+[parachains](../learn/learn-parachains.md), which are _layer one_ protocols. Parachains currently
+connect to a relay chain using the [Parachains Protocol](../learn/learn-parachains-protocol.md).
+More elaborate (or simpler) tasks could be constructed in the future.
 
 ![build 1](../assets/build-1.png)
 
@@ -129,7 +124,7 @@ could be constructed in the future.
 Throughout this document, you may encounter the term **runtime** or **STF (State Transition
 Function)**. Both refer to the same concept, as they define how a particular system, i.e., a
 blockchain, should deal with state changes externally and internally. Both of these terms are used
-extensively in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate.
+extensively in Polkadot and Substrate.
 
 :::
 
@@ -226,10 +221,10 @@ get started on building and deploying a parachain.
 #### Parachains Benefits
 
 Parachains contain their own runtime/STF logic and benefit from the shared security and the
-cross-consensus messaging provided by the {{ polkadot: Polkadot :polkadot }} relay chain. Parachains
-permit high flexibility and customization but require more effort to create and maintain over time.
-A production-grade parachain is typically more involved to create due to the complexity involved in
-blockchain networks' technical and economic aspects.
+cross-consensus messaging provided by the Relay Chain. Parachains permit high flexibility and
+customization but require more effort to create and maintain over time. A production-grade parachain
+is typically more involved to create due to the complexity involved in blockchain networks'
+technical and economic aspects.
 
 Parachains grant the creators more space to build the monetary system and other chain aspects from
 the ground up. They will allow for a more concise and efficient execution of complex logic than a
