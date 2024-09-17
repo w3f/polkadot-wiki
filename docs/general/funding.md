@@ -33,7 +33,7 @@ flowchart LR
     A -->|Development| B[Stage of Development]
     A -->|Research| C[Grants Program]
     A -->|Other| D[Business model exists]
-    B -->|Existing POC| E[Treasury or Decentralized Futures]
+    B -->|Existing POC| E[Treasury]
     B -->|No POC| F[Grants Program]
     D -->|No|H[Treasury]
     D -->|Yes|J[Decentralized Futures]
