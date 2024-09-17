@@ -36,7 +36,7 @@ flowchart LR
     B -->|Existing POC| E[Treasury]
     B -->|No POC| F[Grants Program]
     D -->|No|H[Treasury]
-    D -->|Yes|J[Decentralized Futures]
+    D -->|Yes|J[Venture Capital]
     style C stroke:#e83e8c,stroke-width:2px,stroke-dasharray: 5 5
     style E stroke:#e83e8c,stroke-width:2px,stroke-dasharray: 5 5
     style F stroke:#e83e8c,stroke-width:2px,stroke-dasharray: 5 5
