@@ -44,11 +44,8 @@ flowchart LR
     style J stroke:#e83e8c,stroke-width:2px,stroke-dasharray: 5 5
 
     click C "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
-    click E "https://wiki.polkadot.network/docs/decentralized-futures" "Apply Now"
     click F "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click H "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" _blank
-    click J "https://wiki.polkadot.network/docs/decentralized-futures" "https://wiki.polkadot.network/docs/decentralized-futures" _blank
-```
 
 For a longer list and a description of the programs listed below, check out
 [our page on alternative funding opportunities](./grants.md#alternative-funding-sources).
