@@ -23,10 +23,10 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 ## Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a web3 application
-dedicated to native non-custodial [staking](../learn/learn-staking.md) on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. The dashboard allows to
-stake as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member.
-Users can also create their nomination pools. The dashboard supports [Ledger](../general/ledger.md),
+dedicated to native non-custodial [staking](../learn/learn-staking.md) on the Relay Chain. The
+dashboard allows to stake as a solo nominator or as a
+[nomination pool](../learn/learn-nomination-pools.md) member. Users can also create their nomination
+pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
 [SubWallet](../general/wallets-and-extensions.md#subwallet),
 [Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
@@ -89,15 +89,13 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
 
 [Sub.ID](https://sub.id/) is a one-stop-shop for managing your Polkadot accounts, viewing your
 addresses and balances, and looking at other accounts. It features a Polkadot
-[staking page](https://sub.id/validator/polkadot), where you can easily start staking
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Stakers can choose their preferred
-validators or stake with the recommended validator set.
+[staking page](https://sub.id/validator/polkadot), where you can easily start staking. Stakers can
+choose their preferred validators or stake with the recommended validator set.
 
 ## NOMI
 
-[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve Nominators in Native
-Staking within the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} networks. It aims
-to offer a unique and enhanced nomination experience, using
+[NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve nominators in native
+staking on the Relay Chain. It aims to offer a unique and enhanced nomination experience, using
 [Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
 (MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
 evaluating numerous conflicting traits in the decision-making process. For the analysis, validator
