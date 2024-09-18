@@ -23,7 +23,9 @@ Check out the [programs](programs-index) for numerous ecosystem support opportun
 If you are certain you want to apply for a W3F grant, head straight to the
 [application process documentation](https://grants.web3.foundation/docs/Process/how-to-apply).
 Alternatively, the flowchart below outlines where we think the grants program fits in relation to
-other popular funding opportunities.
+other popular funding opportunities. For a longer list and a description of the programs listed
+below, check out
+[the page on alternative funding opportunities](./grants.md#alternative-funding-sources).
 
 ## Funding Opportunities Overview
 
@@ -47,9 +49,6 @@ flowchart LR
     click F "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click H "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" _blank
 ```
-
-For a longer list and a description of the programs listed below, check out
-[our page on alternative funding opportunities](./grants.md#alternative-funding-sources).
 
 ## Funding FAQ
 
