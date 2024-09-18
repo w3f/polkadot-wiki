@@ -49,7 +49,7 @@ flowchart LR
     click E "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "Submit your Referendum"
     click F "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click H "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" _blank
-    click J "https://wiki.polkadot.network/docs/en/vc-funds"
+    click J "https://wiki.polkadot.network/docs/en/ecosystem-funds"
 ```
 
 ## Funding FAQ
