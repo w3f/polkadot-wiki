@@ -46,8 +46,10 @@ flowchart LR
     style J stroke:#e83e8c,stroke-width:2px,stroke-dasharray: 5 5
 
     click C "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
+    click E "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "Submit your Referendum"
     click F "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click H "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" "https://wiki.polkadot.network/docs/en/learn-polkadot-opengov-treasury" _blank
+    click J "https://wiki.polkadot.network/docs/en/vc-funds"
 ```
 
 ## Funding FAQ
