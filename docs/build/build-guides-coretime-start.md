@@ -37,8 +37,8 @@ The Polkadot SDK is comprised of **three** important repositories:
 
 :::info What is a task?
 
-You might see the term "task" referenced often in place of "parachain". In most cases, it refers to a
-process utilizing the relay chain's compute. This could be a parachain or any other computational
+You might see the term "task" referenced often in place of "parachain". In most cases, it refers to
+a process utilizing the relay chain's compute. This could be a parachain or any other computational
 process, provided that it adheres to the Polkadot protocol interface.
 
 The full definition can be found [here](../learn/learn-agile-coretime.md#task).
@@ -107,7 +107,8 @@ PC-->DEP
 Make sure you have everything you need for your target system
 [here.](./build-guides-install-deps.md).
 
-Be sure you also install the `polkadot-parachain` and `chain-spec-builder` binaries, as they needed to start and run your chain!
+Be sure you also install the `polkadot-parachain` and `chain-spec-builder` binaries, as they needed
+to start and run your chain!
 
 ### Deployment Example - Adder Collator
 
