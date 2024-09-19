@@ -192,6 +192,13 @@ The **signed reward base** on Polkadot is <RPC network="polkadot" path="consts.e
 
 The maximum number of submission for a staking miner on Polkadot is <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
 
+#### Staking Reward Retention
+
+Polkadot staking rewards are kept available for 84 eras. The following calculation can be used to
+approximate this length in days:
+
+`84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days`
+
 #### Total Issuance
 
 Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="14883815224560918110" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1553"/>.
@@ -377,6 +384,13 @@ The **signed reward base** on Kusama is <RPC network="kusama" path="consts.elect
 #### Staking Miner Max Submissions
 
 The maximum number of submission for a staking miner on Kusama is <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
+
+#### Staking Reward Retention
+
+Kusama staking rewards are kept available for 84 eras. The following calculation can be used to
+approximate this length in days:
+
+`84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days`
 
 #### Total Issuance
 

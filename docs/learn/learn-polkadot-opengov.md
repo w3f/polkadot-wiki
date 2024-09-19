@@ -305,21 +305,14 @@ the tokens are locked.
 
 See below an example that shows how voluntary locking works.
 
-Peter: Votes `No` with
-{{ polkadot: 10 DOT for a 32-week :polkadot }}{{ kusama: 1 KSM for a 32-week :kusama }} lock period
-=> {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+Peter: Votes `No` with 10 DOT for a 32-week lock period => 10 x 6 = 60 Votes
 
-Logan: Votes `Yes` with
-{{ polkadot: 20 DOT for one week :polkadot }}{{ kusama: 2 KSM for one week :kusama }} lock period =>
-{{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+Logan: Votes `Yes` with 20 DOT for one week lock period => 20 x 1 = 20 Votes
 
-Kevin: Votes `Yes` with
-{{ polkadot: 15 DOT for a 2-week :polkadot }}{{ kusama: 1.5 KSM for a 2-week :kusama }} lock period
-=> {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+Kevin: Votes `Yes` with 15 DOT for a 2-week lock period => 15 x 2 = 30 Votes
 
-Even though both Logan and Kevin vote with more
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
-is less than Peter’s, leading to their voting power counting as less.
+Even though both Logan and Kevin vote with more DOT than Peter, the lock period for both of them is
+less than Peter’s, leading to their voting power counting as less.
 
 :::info Staked tokens can be used in governance
 

@@ -378,11 +378,8 @@ timeline. See the page on [Validator Payout Guide](../maintain/maintain-guides-v
 The distribution of staking rewards to the nominators is not automatic and needs to be triggered by
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
 payout for all the nominators whose stake has backed a specific validator in the active set of that
-era. Staking rewards are kept available for 84 eras. The following calculation can be used to
-approximate this length in days:
-
-{{ polkadot: `84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days` :polkadot }}
-{{ kusama: `84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days` :kusama }}
+era. Staking rewards are kept available for
+[a limited amount of time](../general/chain-state-values.md#staking-reward-retention).
 
 For more information on why this is so, see the page on [simple payouts](learn-staking-advanced.md).
 
