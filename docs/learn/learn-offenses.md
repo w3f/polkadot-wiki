@@ -21,9 +21,8 @@ staked tokens via [Nominated Proof-of-Stake](./learn-staking.md#nominated-proof-
 
 :::
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a public permissionless network.
-As such, it has a mechanism to disincentivize offenses and incentivize good behavior. Below, you can
-find a summary of punishments for specific offenses:
+Polkadot is a public permissionless network. As such, it has a mechanism to disincentivize offenses
+and incentivize good behavior. Below, you can find a summary of punishments for specific offenses:
 
 |               Offense                | [Slash (%)](#slashing) | [On-chain Disabling](#disabling) | Off-chain Disabling | [Reputational Changes](#reputation-changes) |
 | :----------------------------------: | :--------------------: | :------------------------------: | :-----------------: | :-----------------------------------------: |
@@ -43,8 +42,7 @@ To better understand the terminology used for offenses, it is recommended to get
 
 :::
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are six main validator
-offenses as shown below.
+On Polkadot, there are six main validator offenses as shown below.
 
 - **Backing Invalid:** A para-validator is backing an invalid block.
 - **ForInvalid Vote:** A validator (secondary checker) votes in favor of an invalid block.
@@ -90,21 +88,19 @@ never duplicated, the probability of an honest equivocation slash decreases to n
 
 ## Punishments
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, offenses to the network can be
-punished depending on their severity. There are three main punishments: slashing, disabling, and
-reputation changes.
+On Polkadot, offenses to the network can be punished depending on their severity. There are three
+main punishments: slashing, disabling, and reputation changes.
 
 ### Slashing
 
 **Slashing** will happen if a validator misbehaves in the network. They and their nominators will
-get slashed by losing a percentage of their staked
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, from as little as 0.01% up to 100%.
+get slashed by losing a percentage of their staked tokens, from as little as 0.01% up to 100%.
 
-Any slashed {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be added to the
-[Treasury](./archive/learn-treasury.md). The rationale for this (rather than burning or distributing
-them as rewards) is that slashes may be reverted by simply paying out from the Treasury. This would
-be useful in situations such as faulty slashes. In the case of legitimate slashing, tokens are moved
-away from malicious validators to those building the ecosystem through the normal Treasury process.
+Any slashed token will be added to the [Treasury](./archive/learn-treasury.md). The rationale for
+this (rather than burning or distributing them as rewards) is that slashes may be reverted by simply
+paying out from the Treasury. This would be useful in situations such as faulty slashes. In the case
+of legitimate slashing, tokens are moved away from malicious validators to those building the
+ecosystem through the normal Treasury process.
 
 Slashing only occurs for active validations for a given nominator, and slashes are not mitigated by
 having other inactive or waiting nominations. They are also not mitigated by the validator operator

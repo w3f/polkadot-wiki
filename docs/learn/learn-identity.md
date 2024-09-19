@@ -7,9 +7,11 @@ keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides a naming system that allows
-participants to add personal information to their on-chain account and subsequently ask for
-verification of this information by [registrars](#registrars).
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
+Polkadot provides a naming system that allows participants to add personal information to their
+on-chain account and subsequently ask for verification of this information by
+[registrars](#registrars).
 
 Users must [reserve funds](../general/chain-state-values.md#identity-deposit) in a bond to store
 their information on chain. These funds are _locked_, not spent - they are returned when the
@@ -57,14 +59,13 @@ issuing faulty judgments.
 ## Registrars
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For
-example, a registrar could charge {{ polkadot: 1 DOT :polkadot }}{{ kusama: 0.1 KSM :kusama }} to
-verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee
-to the registrar who provides the judgement on those claims. Users set a maximum fee they are
-willing to pay and only registrars below this amount would provide judgement.
+example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user
+requests judgement, they will pay this fee to the registrar who provides the judgement on those
+claims. Users set a maximum fee they are willing to pay and only registrars below this amount would
+provide judgement.
 
-There are multiple registrars on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-Unless no additional information is available here, you must reach out to specific registrars
-individually if you want to be judged by those.
+There are multiple registrars on Polkadot and Kusama. Unless no additional information is available
+here, you must reach out to specific registrars individually if you want to be judged by those.
 
 :::info Decommissioned Registrar Service
 
@@ -77,37 +78,53 @@ new identity judgment, please use the other registrars.
 
 :::
 
+<!-- prettier-ignore -->
+<Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
 ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
-{{ polkadot: ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ :polkadot }}
-{{ kusama: ~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ :kusama }} <br /> **Fee**:
-{{ polkadot: ~~0 DOT~~ :polkadot }}{{ kusama:  ~~0.04 KSM~~ :kusama }} <br />
+~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ <br /> **Fee**: ~~0 DOT~~ <br />
 
 Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-{{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ :polkadot }}
-{{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn :kusama }} <br /> **Fee**:
-{{ polkadot: 20 DOT :polkadot }}{{ kusama: 4.5 KSM :kusama }} <br />
+1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ <br /> **Fee**: 20 DOT <br />
 
-{{ polkadot: Registrar 2: :polkadot }} {{ kusama: ~~Registrar 2~~ :kusama }} <br /> **Account**:
-{{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB :polkadot }}
-{{ kusama: ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~  :kusama }} <br /> **Fee**:
-{{ polkadot: 0 DOT :polkadot }}{{ kusama: ~~1 KSM~~ :kusama }} <br />
+Registrar 2: <br /> **Account**: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB <br /> **Fee**: 0
+DOT <br />
 
-Registrar 3: <br /> **Account**:
-{{ polkadot: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC :polkadot }}
-{{ kusama: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM :kusama }} <br /> **Fee**:
-{{ polkadot: 0.5 DOT :polkadot }}{{ kusama: 1 KSM :kusama }} <br />
+Registrar 3: <br /> **Account**: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC <br /> **Fee**:
+0.5 DOT <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
+[website](https://polkadot.polkassembly.io/).
 
-{{ polkadot: Polkassembly (Registrar 3) provides setting on-chain ID as a service on their [website](https://polkadot.polkassembly.io/). :polkadot }}
+</TabItem>
+<TabItem value="kusama">
 
-{{ kusama: Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**: 0.04 KSM <br /> :kusama }}
+~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
+~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
 
-{{ kusama: Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**: 0.04 KSM <br /> :kusama }}
+Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
+Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn <br /> **Fee**: 4.5 KSM <br />
 
-{{ kusama: Polkassembly (Registrar 5) provides setting on-chain ID as a service on their [website](https://kusama.polkassembly.io/). :kusama }}
+Registrar 2: is no longer offering registrar services on Kusama. <br /> **Account**:
+~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ <br /> **Fee**: ~~1 KSM~~ <br />
 
-{{ kusama: Registrar 6: <br /> **Account**: HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**: 0.04 KSM <br /> :kusama }}
+Registrar 3: <br /> **Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM <br /> **Fee**: 1
+KSM <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
+[website](https://kusama.polkassembly.io/).
 
-{{ kusama: PolkaIdentity (Registrar 6) provides setting on-chain ID as a service on their [website](https://polkaidentity.com/). :kusama }}
+Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**:
+0.04 KSM <br />
+
+Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**:
+0.04 KSM <br /> Polkassembly (Registrar 5) provides setting on-chain ID as a service on their
+[website](https://kusama.polkassembly.io/).
+
+Registrar 6: <br /> **Account**: HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**:
+0.04 KSM <br /> PolkaIdentity (Registrar 6) provides setting on-chain ID as a service on their
+[website](https://polkaidentity.com/).
+
+</TabItem>
+</Tabs>
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 

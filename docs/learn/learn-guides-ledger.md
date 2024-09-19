@@ -43,20 +43,16 @@ while if you want to import Ledger accounts to the Polkadot-JS UI, you can consu
 When adding a Ledger account using the extension or the UI, you will be asked to select an
 `account type` and an `account index`. The first lets you select an account, while the second lets
 you pick a derivation path from that account - think of it like a formula from which child accounts
-are generated. When you are creating a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ledger account for the first time on
-Ledger Live with name {{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }}, this
-can be added to Polkadot-JS using the 0/0 derivation path (i.e. account type = 0 and account index =
-0). If you add a second account called
-{{ polkadot: `Polkadot 2` :polkadot }}{{ kusama: `Kusama 2` :kusama }}, this will correspond to the
-1/0 derivation path, and so on. We thus have multiple parent accounts that can be viewed and used in
-both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to create multiple
-children accounts from each parent account. For example,
-{{ polkadot: `Polkadot 1` :polkadot }}{{ kusama: `Kusama 1` :kusama }} with 0/0 derivation path can
-have child 0/1, 0/2, etc. that can be used within the UI. However, such children accounts cannot be
-used in Ledger Live, as it only scans through the parent accounts. So, remember that the balances on
-the children accounts cannot be viewed, and you will not be able to transact with those accounts on
-Ledger Live.
+are generated. When you are creating a Polkadot ledger account for the first time on Ledger Live
+with name `Polkadot 1`, this can be added to Polkadot-JS using the 0/0 derivation path (i.e. account
+type = 0 and account index = 0). If you add a second account called `Polkadot 2`, this will
+correspond to the 1/0 derivation path, and so on. We thus have multiple parent accounts that can be
+viewed and used in both Ledger Live and Polkadot-JS. Additionally, we can use Polkadot-JS UI to
+create multiple children accounts from each parent account. For example, `Polkadot 1` with 0/0
+derivation path can have child 0/1, 0/2, etc. that can be used within the UI. However, such children
+accounts cannot be used in Ledger Live, as it only scans through the parent accounts. So, remember
+that the balances on the children accounts cannot be viewed, and you will not be able to transact
+with those accounts on Ledger Live.
 
 ### Confirming the Address on your Device
 
@@ -88,8 +84,7 @@ while signing transactions.
 :::info Signature error message
 
 If you have already connected your device, but an error message appears before signing a
-transaction, make sure you have opened the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} application on your Ledger Nano
+transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano
 device. Visit
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
 more information about signing transactions using your ledger.
@@ -124,9 +119,8 @@ clicking on your account's avatar icon - this immediately copies your address to
 :::note Your Asset Hub address is the same as your relay chain address
 
 Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub
-parachain, otherwise (if you're receiving {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-tokens) they could be sent on the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-chain.
+parachain, otherwise (if you're receiving DOT or KSM tokens) they could be sent on the Polkadot or
+Kusama relay chain.
 
 :::
 
@@ -146,15 +140,14 @@ unless you _know precisely what you're doing_.
 
 ### Why you might need the Developer Release
 
-Ledger apps for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem are
-developed by [Zondax](https://zondax.ch/). When new functionalities are added to the Ledger apps,
-they are made available on a developer release for testing purposes. After a successful audit and
-review, the apps would be available for download and installation using
-[Ledger Live](https://www.ledger.com/ledger-live). As it takes some time for Ledger to audit and
-review the release, the app upgrade option may not be available on Ledger Live when the new runtime
-is deployed on the network. If this happens, users cannot use Ledger devices to sign transactions.
-Suppose you cannot wait a few days until the app passes the Ledger audit, you can install the
-developer release from the shell using the latest version published on
+Ledger apps for the Polkadot ecosystem are developed by [Zondax](https://zondax.ch/). When new
+functionalities are added to the Ledger apps, they are made available on a developer release for
+testing purposes. After a successful audit and review, the apps would be available for download and
+installation using [Ledger Live](https://www.ledger.com/ledger-live). As it takes some time for
+Ledger to audit and review the release, the app upgrade option may not be available on Ledger Live
+when the new runtime is deployed on the network. If this happens, users cannot use Ledger devices to
+sign transactions. Suppose you cannot wait a few days until the app passes the Ledger audit, you can
+install the developer release from the shell using the latest version published on
 [the Zondax GitHub repository](https://github.com/Zondax/ledger-polkadot/releases).
 
 ### Install the Developer Release

@@ -15,13 +15,12 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 
 ### What is "parachain consensus"?
 
-"Parachain consensus" is special in that it will follow the {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} relay chain. Parachains cannot use other consensus algorithms that
-provide their own finality. Only sovereign chains (that must bridge to the relay chain via a
-parachain) can control their own consensus. Parachains have control over how blocks are authored and
-by whom. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} guarantees valid state
-transitions. Executing a block finality outside the context of the relay chain is outside the scope
-of trust that {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} provides.
+"Parachain consensus" is special in that it will follow the relay chain. Parachains cannot use other
+consensus algorithms that provide their own finality. Only sovereign chains (that must bridge to the
+relay chain via a parachain) can control their own consensus. Parachains have control over how
+blocks are authored and by whom. The relay chain guarantees valid state transitions. Executing a
+block finality outside the context of the relay chain is outside the scope of trust that the relay
+chain provides.
 
 ### How about parachains that are not Substrate-based?
 

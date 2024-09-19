@@ -206,7 +206,9 @@ The spending period on Polkadot is currently <RPC network="polkadot" path="const
 
 #### Unbonding Duration
 
-The unbonding duration on Polkadot is set to <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days.
+The unbonding duration on Polkadot is set to <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days. This is
+calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 24 ÷ 24 = 28 days.
 
 </TabItem>
 <TabItem value="kusama">
@@ -390,7 +392,9 @@ The spending period on Kusama is currently <RPC network="kusama" path="consts.tr
 
 #### Unbonding Duration
 
-The unbonding duration on Kusama is set to <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days.
+The unbonding duration on Kusama is set to <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days. This is
+calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 6 ÷ 24 = 7 days.
 
 </TabItem>
 <TabItem value="ahp">
