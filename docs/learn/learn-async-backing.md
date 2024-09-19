@@ -213,11 +213,11 @@ executed before others are complete. Instructions may also be executed in parall
 multiple processor parts to work on potentially different instructions simultaneously.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
-throughput of the entire network by completing the backing and inclusion steps for different blocks
-at the same time. Asynchronous backing does not just allow for pipelining within a single pipe (or
-core). It lays the foundation for a large number of pipes (or cores) to run for the same parachain
-at the same time. In that way, we have two distinct new forms of parallel computation.
+Polkadot, pipelining aims to increase the throughput of the entire network by completing the backing
+and inclusion steps for different blocks at the same time. Asynchronous backing does not just allow
+for pipelining within a single pipe (or core). It lays the foundation for a large number of pipes
+(or cores) to run for the same parachain at the same time. In that way, we have two distinct new
+forms of parallel computation.
 
 ### Unincluded Segments
 

@@ -11,8 +11,7 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 
 <MessageBox message="Crowdloans will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For fundraising in a decentralized, transparent, and regulatory compliant manner within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows parachains to source tokens
-for their parachain bids in a decentralized crowdloan.
+Polkadot allows parachains to source tokens for their parachain bids in a decentralized crowdloan.
 
 :::note Contributing to a crowdloan
 
@@ -46,16 +45,14 @@ a parachain slot auction. The parachain slot auction can also be won directly th
 without community involvement. To reiterate, crowdloan campaigns are just one of the means to win
 auctions, which allow the community to participate in a trustless and permissionless way.
 
-Let's look at a scenario where Project A is hoping to gain a parachain slot on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but they don't have enough tokens to
-bid directly to win the parachain auction. Project A could benefit from starting a new crowdloan
-campaign to help secure a parachain slot. Crowdloans are trustless and are supported natively on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, allowing the community to bond their
-tokens on Project A's behalf for the entire parachain lease duration. This will allow Project A to
-compete with projects that may have access to greater capital, given the project has sufficient
-community support. In return, the community contributors are rewarded by the projects that win the
-parachain slot, which would compensate for the opportunity cost of bonding their tokens for the
-lease duration.
+Let's look at a scenario where Project A is bidding for a parachain slot, but they don't have enough
+tokens to bid directly to win the parachain auction. Project A could benefit from starting a new
+crowdloan campaign to help secure a parachain slot. Crowdloans are trustless and are supported
+natively on the relay chain, allowing the community to bond their tokens on Project A's behalf for
+the entire parachain lease duration. This will allow Project A to compete with projects that may
+have access to greater capital, given the project has sufficient community support. In return, the
+community contributors are rewarded by the projects that win the parachain slot, which would
+compensate for the opportunity cost of bonding their tokens for the lease duration.
 
 On the other hand, let's say Project B, which is more established and has access to capital, is
 hoping to secure a parachain slot through self-funding. Project B is not relying on community
@@ -83,9 +80,8 @@ need to restart the campaign just because they do not secure a slot on their fir
 
 :::info Crowdloan Submission Deposit Required
 
-To create a new crowdloan campaign, your account must have
-{{ polkadot: 500 DOT :polkadot }}{{ kusama: 100 KSM :kusama }} transferrable which will be reserved
-for the duration of the crowdloan.
+To create a new crowdloan campaign, your account must have 500 DOT (or 100 KSM on Kusama)
+transferrable which will be reserved for the duration of the crowdloan.
 
 :::
 

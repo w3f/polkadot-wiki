@@ -7,26 +7,24 @@ keywords: [assets, fungible, non-fungible, asset hub, statemine, statemint]
 slug: ../learn-assets
 ---
 
-Assets in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network can be
-represented on several chains. They can take many forms, from a parachain's native token to on-chain
-representations of off-chain reserves. This page focuses on the latter, namely assets issued by a
-creator (e.g. rights to audited, off-chain reserves held by the creator, or art issued as an NFT).
+Assets in the Polkadot ecosystem can be represented on several chains. They can take many forms,
+from a parachain's native token to on-chain representations of off-chain reserves. This page focuses
+on the latter, namely assets issued by a creator (e.g. rights to audited, off-chain reserves held by
+the creator, or art issued as an NFT).
 
 The
 [Asset Hub system parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/)
 hosts data structures and logic that specialize in the creation, management, and use of assets in
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. Although other
-parachains can host applications dealing with assets on the Asset Hub, the hub can be thought of as
-a trusted "home base" of assets in the network.
+the network. Although other parachains can host applications dealing with assets on the Asset Hub,
+the hub can be thought of as a trusted "home base" of assets in the network.
 
-The Asset Hub uses {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as its native token. The
-chain yields its governance to its parent relay chain and has no inflation or era-based rewards for
-collators (although collators receive a portion of transaction fees). As a
+The Asset Hub uses the relay chain's native token. The chain yields its governance to its parent
+relay chain and has no inflation or era-based rewards for collators (although collators receive a
+portion of transaction fees). As a
 [system parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-the Asset Hub has a trusted relationship with the relay chain, and as such, can teleport
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} between itself and the relay chain. That is,
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Asset Hub is just as good as
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the relay chain.
+the Asset Hub has a trusted relationship with the relay chain, and as such, can teleport the relay
+chain's native token between itself and the relay chain. That is, the native token on the relay
+chain is just as good on Asset Hub.
 
 The Asset Hub does not support smart contracts. See the [Advanced](#advanced-techniques) section at
 the bottom for a discussion on using proxy and multisig accounts to replicate oft-used contract
@@ -35,18 +33,18 @@ logic.
 ## Sufficient Assets
 
 A sufficient asset on Asset Hub can allow for an account to exist on-chain even though it does not
-have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Any registered
-asset on the Asset Hub can be made _sufficient_ through governance on the relay chain. A balance of
-a non-sufficient asset can only exist on accounts that are on-chain (i.e., accounts having the
+have any account balance in the native asset. Any registered asset on the Asset Hub can be made
+_sufficient_ through governance on the relay chain. A balance of a non-sufficient asset can only
+exist on accounts that are on-chain (i.e., accounts having the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
 That is, a user could not keep an account on-chain by transferring a non-sufficient asset to it; the
-account must already be on-chain by having more than the existential deposit in
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} (or a sufficient asset).
+account must already be on-chain by having more than the existential deposit in native asset (or a
+sufficient asset).
 
 Assets deemed _sufficient_ can instantiate accounts on the Asset Hub and pay for transaction fees
-without the need for {{ polkadot: DOT. :polkadot }}{{ kusama: KSM. :kusama }} An example would be
-USDT on the Polkadot Asset Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset
-Hub system parachain without the need to hold DOT.
+without the need for the native token (DOT or KSM). An example would be USDT on the Polkadot Asset
+Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset Hub system parachain without
+the need to hold DOT.
 
 :::warning Transfers of Non-sufficient assets
 
@@ -115,8 +113,7 @@ An asset's details contain one field not accessible to its owner or admin team,
 
 Polkadot-JS UI
 [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812).
-When using Polkadot-JS UI, transaction fee needs to be paid in
-{{ polkadot:  DOT :polkadot }}{{ kusama: KSM :kusama }}.
+When using Polkadot-JS UI, transaction fee needs to be paid using the native asset (DOT or KSM).
 
 :::
 

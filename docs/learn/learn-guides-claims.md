@@ -19,9 +19,8 @@ see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashb
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
 tokens, you can now claim your DOT (and a proportional amount of KSM on the Kusama network). The
 claim process connects the address where your DOT indicators have been stored on Ethereum with a
-native {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} address and, if your ETH
-address is eligible, will pay the tokens to the
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} address.
+native Polkadot address and, if your ETH address is eligible, will pay the tokens to the Polkadot
+address.
 
 To do this, you must sign a message on Ethereum containing the address of your
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can do this by using the

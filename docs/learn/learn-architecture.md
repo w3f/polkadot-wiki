@@ -53,8 +53,7 @@ shared state between the relay chain and all of the connected parachains. If the
 revert for any reason, then all of the parachains would also revert. This is to ensure that the
 validity of the entire system can persist and no individual part is corruptible.
 
-The shared state ensures that the trust assumptions when using
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains are only those of the
+The shared state ensures that the trust assumptions when using parachains are only those of the
 relay chain validator set and no other. Since the validator set on the relay chain is expected to be
 secure with a large amount of stake put up to back it, parachains should benefit from this security.
 
@@ -73,14 +72,13 @@ reading the [specification](https://github.com/paritytech/xcm-format).
 
 A blockchain [bridge](../general/glossary.md#bridge) is a connection that allows for arbitrary data
 to transfer from one network to another. These chains are interoperable through the bridge but can
-exist as standalone chains with different protocols, rules, and governance models. In
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, bridges connect to the relay chain
-and are secured through the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus
-mechanism, maintained by [collators](#collators).
+exist as standalone chains with different protocols, rules, and governance models. In Polkadot,
+bridges connect to the relay chain and are secured through the consensus mechanism, maintained by
+[collators](#collators).
 
-Polkadot uses bridges to bridge the future of Web 3.0, as bridges are fundamental to
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s interoperable architecture by
-acting as a [secure and robust] communication channel for chains in isolation.
+Polkadot uses bridges to bridge the future of Web 3.0, as bridges are fundamental to Polkadot's
+interoperable architecture by acting as a secure and robust communication channel for chains in
+isolation.
 
 # Main Actors
 

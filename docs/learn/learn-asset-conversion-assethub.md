@@ -16,20 +16,19 @@ tokens in a liquidity pool, unlike traditional exchanges that use an order book.
 
 :::note
 
-The asset pairs of the liquidity pools of AssetHub will always contain
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as one of the assets. Provision of liquidity
-for pools with arbitrary asset pairs is not allowed.
+The asset pairs of the liquidity pools of AssetHub will always contain the relay chain's native
+token as one of the assets. Provision of liquidity for pools with arbitrary asset pairs is not
+allowed.
 
 :::
 
 Asset Conversion on Asset Hub enables fee payment in any asset, given it has a liquidity pool, such
-that the fee handler (in this case, a Collator) only receives the native asset
-({{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} ).
+that the fee handler (in this case, a Collator) only receives the native asset.
 
 Asset Conversion pallet allows you to:
 
 - [Create a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.create_pool)
-  with {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and an asset
+  with the relay chain's native token and an asset
 - [Provide the liquidity](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.add_liquidity)
   and receive back an LP token
 - [Exchange the LP token back to assets](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/pallet/struct.Pallet.html#method.remove_liquidity)
