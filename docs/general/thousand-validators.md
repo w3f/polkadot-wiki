@@ -7,6 +7,8 @@ keywords: [thousand validators program, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
 The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use
 the funds held by both organizations to nominate validators in the community.
 
@@ -18,9 +20,8 @@ It serves two major purposes:
 ## How it Works
 
 The [nominating backend](https://github.com/w3f/1k-validators-be) will routinely change its
-nominations at every {{ polkadot: era :polkadot }}{{ kusama: four eras :kusama }}. The backend does
-this by short-listing candidates by validity and then sorts validators by their weighted score in
-descending order.
+nominations at every era (four eras on Kusama). The backend does this by short-listing candidates by
+validity and then sorts validators by their weighted score in descending order.
 
 - Validators with a higher weighted score are selected for any possible slots. As validators are
   nominated and actively validate, their weighted scores decrease allowing other validators to be
@@ -42,11 +43,12 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 
 ## How to Apply
 
-{{ polkadot: **Entrance to the Polkadot program requires a rank of 100 or higher in the Kusama program.**
+**Entrance to the Polkadot program requires a rank of 100 or higher in the Kusama program.**
 Attaining a rank of 100 usually takes around two months. The leaderboard is available
-[here](https://thousand-validators.kusama.network/#/leaderboard).
-In order to apply to the Polkadot 1KV programme, set up your Polkadot node to adhere to the [requirements](#requirements) below
-and fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the team shortly. :polkadot }}
+[here](https://thousand-validators.kusama.network/#/leaderboard). In order to apply to the Polkadot
+1KV programme, set up your Polkadot node to adhere to the [requirements](#requirements) below and
+fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the
+team shortly.
 
 {{ kusama: In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below
 and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard, if accepted. :kusama }}
@@ -56,35 +58,53 @@ and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The pro
 - Verified identity (see [here](../learn/learn-identity.md#setting-an-identity) for instructions)
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
-- {{ polkadot: Minimum of 5_000 DOTs self stake :polkadot }}{{ kusama: Minimum of 10 KSM self-stake :kusama }}
-- {{ polkadot: No more than 5% commission :polkadot }}{{ kusama: No more than 15% commission :kusama }}
+- Minimum of 5_000 DOTs self stake on Polkadot and 10 KSM on Kusama
+- No more than 5% commission on Polkadot and 15% commission on Kusama
 - Have a staking proxy set up
 - Must be on the latest release
-- {{ polkadot: Maximum one node per applicant :polkadot }}{{ kusama: Max two nodes (under same sub/super identity) :kusama }}
+- Maximum one node per applicant on Polkadot and two nodes (under same sub/super identity) on Kusama
 - Validators must operate nodes themselves. They may not be operated by third parties or staking
   providers.
 
 #### Nominators
 
 The below addresses are the stash / staking proxy pairs for the primary nominators involved in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Thousand Validators programme. They
-are formatted like "`stash` / `staking proxy`".
+Thousand Validators programme. They are formatted like "`stash` / `staking proxy`".
 
-{{ polkadot: - `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
-{{ kusama: - `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
+<!-- prettier-ignore-start -->
 
-{{ polkadot: - `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
-{{ kusama: - `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
+<Tabs groupId="chains" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value:
+'kusama'} ]}>
 
-{{ polkadot: - `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
-{{ kusama: - `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
+<TabItem value="polkadot">
 
-{{ polkadot: - `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
-{{ kusama: - `JLENz97TFT2kYaQmyCSEnBsK8VhaDZNmYATfsLCHyLF6Gzu` / `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy` :kusama }}
+- `14Ns6kKbCoka3MS4Hn6b7oRw9fFejG8RH5rq5j63cWUfpPDJ` /
+  `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg`
+- `12RYJb5gG4hfoWPK3owEYtmWoko8G6zwYpvDYTyXFVSfJr8Y` /
+  `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg`
+- `16GMHo9HZv8CcJy4WLoMaU9qusgzx2wxKDLbXStEBvt5274B` /
+  `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg`
+- `13yk62yQYctYsRPXDFvC5WzBtanAsHDasenooLAxKvf5bNkK` /
+  `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg`
+- `13SkL2uACPqBzpKBh3d2n5msYNFB2QapA5vEDeKeLjG2LS3Y` /
+  `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg`
+- `12WLDL2AXoH3MHr1xj8K4m9rCcRKSWKTUz8A4mX3ah5khJBn` /
+  `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg`
 
-{{ polkadot: - `13SkL2uACPqBzpKBh3d2n5msYNFB2QapA5vEDeKeLjG2LS3Y` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
+</TabItem>
+<TabItem value="kusama">
 
-{{ polkadot: - `12WLDL2AXoH3MHr1xj8K4m9rCcRKSWKTUz8A4mX3ah5khJBn` / `12iz6aJ75KdqVZLGyvFJmgc5k74Pdokgy9UGTgWtnt67RNTg` :polkadot }}
+- `G1rrUNQSk7CjjEmLSGcpNu72tVtyzbWdUvgmSer9eBitXWf` /
+  `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy`
+- `HgTtJusFEn2gmMmB5wmJDnMRXKD6dzqCpNR7a99kkQ7BNvX` /
+  `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy`
+- `EX9uchmfeSqKTM7cMMg8DkH49XV8i4R7a7rqCn8btpZBHDP` /
+  `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy`
+- `JLENz97TFT2kYaQmyCSEnBsK8VhaDZNmYATfsLCHyLF6Gzu` /
+  `Edyfdyoi4KJVdXUJ3SU3nuZYMpg13HHa1SWYtPDCV8UPdxy`
+
+</TabItem>
+</Tabs>
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
@@ -92,9 +112,8 @@ A time delay proxy is used as the interaction method for some of these accounts.
 
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
-can be anywhere from a few validators receiving nomination from a single nominator, to the max of
-{{ polkadot: 16 :polkadot }}{{ kusama: 24 :kusama }} nominators on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+can be anywhere from a few validators receiving nomination from a single nominator, to the
+[max of nominators](./chain-state-values.md#maximum-votes-per-nominator).
 
 ## Selection
 
@@ -133,9 +152,9 @@ within the program.
 
 #### Unclaimed
 
-The unclaimed weight relates to the number of payouts outstanding for greater than
-{{ polkadot: four :polkadot }}{{ kusama: sixteen :kusama }} eras. Each payout that exceeds this
-threshold would attribute a negative score of 10 points.
+The unclaimed weight relates to the number of payouts outstanding for greater than four eras on
+Polkadot and sixteen on Kusama. Each payout that exceeds this threshold would attribute a negative
+score of 10 points.
 
 #### Bonded \*
 
@@ -169,8 +188,7 @@ allocate > 75% of their bond to the respective council members.
 #### Democracy
 
 Candidates will receive 10 \* 1KV points for each referendum they have voted on (Aye/Nay) to a limit
-of 100 points. Scores are based on votes for referendum
-{{ polkadot: 49 :polkadot }}{{ kusama: 163 :kusama }} and beyond.
+of 100 points. Scores are based on votes for referendum 49 on Polkadot (163 on Kusama) and beyond.
 
 \* Scores that are based on their relative position against others are assessed as follows:
 

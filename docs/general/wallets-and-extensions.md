@@ -38,10 +38,9 @@ can access your account's private key.
 
 :::
 
-To realize the multichain vision of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
-it is important to have non-custodial wallets that make it convenient to interact with multiple
-blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem. Below there
-is a list of all non-custodial treasury-funded wallets developed by the community.
+To realize Polkadot's multichain vision, it is important to have non-custodial wallets that make it
+convenient to interact with multiple blockchains within the Polkadot ecosystem. Below there is a
+list of all non-custodial treasury-funded wallets developed by the community.
 
 ## Overview
 

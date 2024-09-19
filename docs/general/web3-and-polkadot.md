@@ -81,9 +81,8 @@ together with the hash of the previous block `N`. This creates the situation whe
 content of block `N` you will change the hash of block `N + 1`, `N + 2`, etc. essentially breaking
 the chain. Although it can be possible to add an invalid block (a block with invalid transactions)
 or censor certain transactions, if the blockchain network is not sufficiently decentralized. In
-decentralized proof-of-stake blockchains like
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} such attacks are financially
-expensive, and attempting to do it can get you [slashed](../learn/learn-offenses.md).
+decentralized proof-of-stake blockchains like Polkadot such attacks are financially expensive, and
+attempting to do it can get you [slashed](../learn/learn-offenses.md).
 
 So, with blockchain as a means of storing data and transactions permanently without an option to
 modify them, we can ensure what we cryptographically sign with our digital identity is set in stone
@@ -136,9 +135,8 @@ Nowadays, most of the nodes cannot be run on consumer-grade hardware. Node runni
 typically rented through service providers. Resiliency is also achieved by ensuring nodes run on as
 many different providers as possible and avoiding a significant share of the nodes being run under
 the same provider in the same geographic region. A legislation change or a natural disaster could
-impact a considerable fraction of the nodes and potentially stop the network.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} level of decentralization can be
-explored through the [Polkawatch app](https://polkawatch.app/).
+impact a considerable fraction of the nodes and potentially stop the network. Polkadot's level of
+decentralization can be explored through the [Polkawatch app](https://polkawatch.app/).
 
 The [One Thousand Validator Programme](./thousand-validators.md) aims to incentivize the creation of
 new validator nodes to increase the level of node decentralization.
@@ -158,8 +156,7 @@ protocols like [IPFS](https://ipfs.tech/).
 
 In Proof-of-Stake blockchains, security is dictated by how much stake is locked on-chain (financial
 security). In a decentralized network, you want to ensure that the difficulty level for a financial
-attack to happen is equally difficult across all nodes.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
+attack to happen is equally difficult across all nodes. Polkadot's
 [election algorithm](../learn/learn-phragmen.md) makes sure that the stake is maximized across all
 active validators, and the variance in stake across validators is minimized as much as possible.
 
@@ -178,8 +175,7 @@ the staking rate, part of the inflation is diverted to the treasury.
 
 ### Governance and Treasury
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} an on-chain
-[treasury](../learn/learn-polkadot-opengov-treasury.md) together with an
+In Polkadot, an on-chain [treasury](../learn/learn-polkadot-opengov-treasury.md) together with an
 [open governance](../learn/learn-polkadot-opengov.md) model allow to access funds in a fully
 decentralized manner without any bank transaction whatsoever. This opens up the possibility to come
 to a decision through on-chain voting mechanism, promoting a sense of community and creating an

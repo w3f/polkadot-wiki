@@ -12,11 +12,10 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 <MessageBox message="If you need help using Ledger, see [this support article](https://support.ledger.com/hc/en-us/articles/360016289919-Polkadot-DOT?docs=true). If the problem persists, you can contact the
 [Polkadot Support Team](https://support.polkadot.network/support/home)." />
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} [Ledger](https://www.ledger.com/)
-application is compatible with the Ledger Nano S, Nano X, and Stax devices. Ledger devices are
-hardware wallets that keep your secret key secured on a physical device that does not expose it to
-your computer or the internet. The private keys will not be exposed even if you connect your Ledger
-device via USB to your computer.
+The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S,
+Nano X, and Stax devices. Ledger devices are hardware wallets that keep your secret key secured on a
+physical device that does not expose it to your computer or the internet. The private keys will not
+be exposed even if you connect your Ledger device via USB to your computer.
 
 Ledger devices are hierarchical deterministic wallets (HD wallets), where:
 
@@ -55,16 +54,13 @@ More information on Ledger device comparisons
 
 ## Requirements
 
-Here is a list of what you will need before using
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with Ledger:
+Here is a list of what you will need before using Polkadot with Ledger:
 
-- A Ledger Nano X, Stax, or Nano S plus (recommended for
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger App space requirements and
-  functionalities).
+- A Ledger Nano X, Stax, or Nano S plus (recommended for the Polkadot Ledger App space requirements
+  and functionalities).
 - [Ledger Live](https://www.ledger.com/ledger-live) installed and up-to-date.
-- The latest firmware of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Ledger
-  App installed (always check for updates in Ledger Live under the "Manager" tab; you will need to
-  allow access with your nano).
+- The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live
+  under the "Manager" tab; you will need to allow access with your nano).
 - A Chromium-based web browser if you use a browser extension.
 
 Ledger devices are tiny computers. They have an operating system (or firmware), and on top of it,
@@ -76,17 +72,14 @@ devices. Make sure you have your Ledger devices with firmware and apps up-to-dat
 Ledger devices can be equipped with applications that are blockchain-specific. Third parties usually
 develop such applications, enabling users to transact securely on the blockchain network. Polkadot
 Ledger apps are developed by [Zondax](https://zondax.ch/) and are available
-[here](https://github.com/Zondax/ledger-polkadot). The Polkadot Ledger applications allow you to
-manage {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native token,
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, and more depending on the version of the
-app.
+[here](https://github.com/Zondax/ledger-polkadot). The Polkadot Ledger application allows you to
+manage Polkadot, Kusama and their parachains native tokens.
 
 :::note Ledger apps may not support all the transactions
 
-Check the
-{{ polkadot: [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) :polkadot }}{{ kusama: [Ledger Kusama App](https://github.com/Zondax/ledger-kusama) :kusama }}
-specification for the list of transactions supported. Some transactions are supported only on a
-specific app version, and others are not supported by any version. For instance, joining a
+Check the [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the
+list of transactions supported. Some transactions are supported only on a specific app version, and
+others are not supported by any version. For instance, joining a
 [nomination pool](../learn/learn-nomination-pools.md) is only possible with the **XL version** but
 not on the **lite version**.
 
@@ -167,7 +160,7 @@ the new account, and stake again.
 
 See
 [this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
-to learn how to use {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} with ledger live.
+to learn how to use Polkadot with ledger live.
 
 ---
 

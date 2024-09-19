@@ -84,7 +84,7 @@ There is no central authority that decides on validators, so there is not per se
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
 on how to do validate you can consult the
-{{ polkadot: [Polkadot validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md) :polkadot }}{{ kusama: [Kusama validator guide](../maintain/kusama/maintain-guides-how-to-validate-kusama.md) :kusama }}.
+[validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md).
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based

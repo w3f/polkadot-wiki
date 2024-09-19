@@ -77,8 +77,7 @@ relatively short mortality window will almost certainly ensure that replay attac
 with the only exception being if the account is reaped and then re-funded shortly after submitting a
 mortal transaction, and then an attacker replays that transaction within the mortality window (i.e.,
 the specified block interval) and such transaction is valid (e.g. if you only have 10 DOT, and you
-try to issue an extrinsic sending 20 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, the
-transfer will fail).
+try to issue an extrinsic sending 20 DOT, the transfer will fail).
 
 ## Defense against Attacks
 
