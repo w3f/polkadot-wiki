@@ -79,10 +79,6 @@ The deposit to submit a bounty on Polkadot is <RPC network="polkadot" path="cons
 
 A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
 
-#### Child Bounty Payout Delay
-
-The waiting time before claiming a Polkadot child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
-
 #### Conviction Voting Lock Period
 
 One conviction voting lock period on Polkadot equals <RPC network="polkadot" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
@@ -262,10 +258,6 @@ The deposit to submit a bounty on Kusama is <RPC network="kusama" path="consts.b
 #### Bounty Duration
 
 A Kusama bounty has a predetermined duration of <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
-
-#### Child Bounty Payout Delay
-
-The waiting time before claiming a Kusama child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
 
 #### Conviction Voting Lock Period
 
