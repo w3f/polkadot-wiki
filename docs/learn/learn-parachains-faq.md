@@ -26,26 +26,23 @@ chain provides.
 
 Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
-that can be used for consensus. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}
-being a Substrate-based chain rely on BABE as the block production scheme and GRANDPA as the
-finality gadget as part of its consensus mechanism. Collectively, this is a
-[Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block
-finality are separate. Parachains only need to produce blocks as they can rely on the relay chain to
-validate the state transitions. Thus, parachains can have their own block production where the
-[collators](learn-collator.md) act as the block producers, even if the parachain is not
-Substrate-based.
+that can be used for consensus. Polkadot, being a Substrate-based chain, relies on BABE as the block
+production scheme and GRANDPA as the finality gadget as part of its consensus mechanism.
+Collectively, this is a [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block
+production and block finality are separate. Parachains only need to produce blocks as they can rely
+on the relay chain to validate the state transitions. Thus, parachains can have their own block
+production where the [collators](learn-collator.md) act as the block producers, even if the
+parachain is not Substrate-based.
 
 ### Is 100 a hard limit on the number of Parachains that can be supported?
 
-No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a
-significant number of optimizations, and there are
+No. The network went through a significant number of optimizations, and there are
 [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) in the near
 future. The exact number of parachains that the relay chain can support without any degradation in
 performance is yet to be discovered. Also, with the
 [blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm
 which brings on-demand parachains into the picture, there is no hard limit number on the number of
-blockchains that can be supported by {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }}.
+blockchains that can be supported by the relay chain.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
@@ -126,16 +123,14 @@ leveraged for something else.
 
 The method for dividing the parachain slots into intervals was partly inspired by the desire to
 allow for a greater amount of parachain diversity, while preventing particularly large and
-well-funded parachains from hoarding slots. By making each period a
-{{ polkadot: three-month duration but the
-overall slot a 2-year duration :polkadot }}{{ kusama: 6-week duration but the overall slot a 1-year
-duration :kusama }}, the mechanism can cope with well-funded parachains, ensuring they secure a slot
-at the end of their lease, while gradually allowing other parachains to enter the ecosystem to
-occupy the durations that are not filled. For example, if a large, well-funded parachain has already
-acquired a slot for range 1 - 8, they would be very interested in getting the next slot that would
-open for 2 - 9. Under this mechanism, that parachain could acquire just period 9 (since that is the
-only one required) and allow the 2 - 8 range of the second parachain slot to be occupied by another
-party.
+well-funded parachains from hoarding slots. By making each period a three-month duration but the
+overall slot a 2-year duration (and 6-week duration but the overall slot a 1-year duration on
+Kusama), the mechanism can cope with well-funded parachains, ensuring they secure a slot at the end
+of their lease, while gradually allowing other parachains to enter the ecosystem to occupy the
+durations that are not filled. For example, if a large, well-funded parachain has already acquired a
+slot for range 1 - 8, they would be very interested in getting the next slot that would open for
+2 - 9. Under this mechanism, that parachain could acquire just period 9 (since that is the only one
+required) and allow the 2 - 8 range of the second parachain slot to be occupied by another party.
 
 ### Why is randomness difficult on blockchains?
 
@@ -143,8 +138,7 @@ Generating a random number trustlessly on a transparent and open network opens u
 for bad actors to attempt to alter or manipulate the randomness. There have been a few solutions
 that have been proposed, including hash-onions like [RANDAO](https://github.com/randao/randao) and
 [verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The
-latter is what {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses as a base for its
-randomness.
+latter is what the relay chain uses as a base for its randomness.
 
 ### Are there other ways of acquiring a slot besides the candle auction?
 
