@@ -7,9 +7,9 @@ keywords: [Polkadot, Kusama, locks, balance, account]
 slug: ../learn-account-balances
 ---
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, there are different types of
-balances depending on the account activity. Different balance types dictate whether your balance can
-be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
+In the Polkadot ecosystem, there are different types of balances depending on the account activity.
+Different balance types dictate whether your balance can be used for transfers, to pay fees, or must
+remain frozen and unused due to an on-chain requirement.
 
 :::info A more efficient distribution of account balance types
 

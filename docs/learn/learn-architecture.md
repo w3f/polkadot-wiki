@@ -9,17 +9,14 @@ slug: ../learn-architecture
 
 import DocCardList from '@theme/DocCardList';
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a heterogeneous multichain with
-shared security and interoperability.
+Polkadot is a heterogeneous multichain with shared security and interoperability.
 
 <DocCardList />
 
 ## Relay Chain
 
-The relay chain is the central chain of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. All validators of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are staked on the relay chain in DOT
-and validate for the relay chain. The relay chain is composed of a relatively small number of
+The relay chain is the central chain of Polkadot. All validators of are staked on the relay chain in
+DOT and validate for the relay chain. The relay chain is composed of a relatively small number of
 transaction types that include ways to interact with the governance mechanism, parachain auctions,
 and participating in NPoS. The relay chain has deliberately minimal functionality - for instance,
 smart contracts are not supported. The main responsibility is to coordinate the system as a whole,
@@ -28,39 +25,33 @@ implementations and features.
 
 ## [Parachain](learn-parachains.md) Slots
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can support a number of execution
-slots. These slots are like cores on a computer's processor (a modern laptop's processor may have
-eight cores, for example). Each one of these cores can run one process at a time.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows these slots using two
-subscription models: parachains and on-demand parachains. Parachains have a dedicated slot (core)
-for their chain and are like a process that runs constantly. On-demand parachains share slots
-amongst a group, and are thus more like processes that need to be woken up and run less frequently.
+The relay chain can support a number of execution slots. These slots are like cores on a computer's
+processor (a modern laptop's processor may have eight cores, for example). Each one of these cores
+can run one process at a time. The relay chain allows these slots using two subscription models:
+parachains and on-demand parachains. Parachains have a dedicated slot (core) for their chain and are
+like a process that runs constantly. On-demand parachains share slots amongst a group, and are thus
+more like processes that need to be woken up and run less frequently.
 
-Most of the computation that happens across the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network as a whole will be delegated
-to specific parachain implementations that handle various use cases.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} places no constraints over what
-parachains can do besides that they must be able to generate a proof that can be validated by the
-validators assigned to the parachain. This proof verifies the state transition of the parachain.
+Most of the computation that happens across the network as a whole will be delegated to specific
+parachain implementations that handle various use cases. The relay chain places no constraints over
+what parachains can do besides that they must be able to generate a proof that can be validated by
+the validators assigned to the parachain. This proof verifies the state transition of the parachain.
 Some parachains may be specific to a particular application, others may focus on specific features
 like smart contracts, privacy, or scalability &mdash; still, others might be experimental
 architectures that are not necessarily blockchain in nature.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides many ways to secure a slot
-for a parachain for a particular length of time. On-demand parachains share slots with other
-parachains. Both regular and on-demand parachains have the same API; their difference is economic.
-Parachains will have to reserve {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} for the
-duration of their slot lease; on-demand parachains will pay on a per-block basis. Parachains can
-switch between being on-demand and permanent.
+The relay chain provides many ways to secure a slot for a parachain for a particular length of time.
+On-demand parachains share slots with other parachains. Both regular and on-demand parachains have
+the same API; their difference is economic. Parachains will have to reserve relay chain's native
+token for the duration of their slot lease; on-demand parachains will pay on a per-block basis.
+Parachains can switch between being on-demand and permanent.
 
 ### [Shared Security](learn-parachains.md)
 
-Parachains connected to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay
-Chain all share in the security of the relay chain.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has a shared state between the Relay
-Chain and all of the connected parachains. If the relay chain must revert for any reason, then all
-of the parachains would also revert. This is to ensure that the validity of the entire system can
-persist and no individual part is corruptible.
+Parachains connected to the relay chain all share in the security of the relay chain. Polkadot has a
+shared state between the Relay Chain and all of the connected parachains. If the relay chain must
+revert for any reason, then all of the parachains would also revert. This is to ensure that the
+validity of the entire system can persist and no individual part is corruptible.
 
 The shared state ensures that the trust assumptions when using
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains are only those of the

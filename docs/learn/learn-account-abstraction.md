@@ -67,10 +67,10 @@ Neither of those origins is subservient to the concept of an account or assume a
 or associated data. Custom origins can be created while designing your chain using the Substrate
 (which is part of the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk)).
 
-The figure below shows the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s origin
-abstraction. Accounts happen to be just one variant (or corner case) of Substrate's FRAME possible
-origins, the `frame_system::RawOrigin::Signed`. OpenGov origins function in a way that, if
-conditions (approval and support) are met and a proposal passes, the appropriate
+The figure below shows Polkadot's origin abstraction. Accounts happen to be just one variant (or
+corner case) of Substrate's FRAME possible origins, the `frame_system::RawOrigin::Signed`. OpenGov
+origins function in a way that, if conditions (approval and support) are met and a proposal passes,
+the appropriate
 [origin is then associated with the scheduled call](https://github.com/paritytech/polkadot-sdk/blob/1835c091c42456e8df3ecbf0a94b7b88c395f623/substrate/frame/referenda/src/lib.rs#L884).
 Those origins are caller-personas that do not have any entity behind them, and do not hold any state
 on chain.

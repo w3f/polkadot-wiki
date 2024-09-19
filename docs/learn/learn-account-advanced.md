@@ -247,10 +247,9 @@ with the second. These derivation methods have their use cases, given that the p
 the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
 recommended to generate the account using a hard derivation path.
 
-Many {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support
-hard and soft derivation. For instance, if you intend to create an account to be used on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
-child account using **//** after the mnemonic phrase.
+Many Polkadot key generation tools support hard and soft derivation. For instance, if you intend to
+create an account to be used on the relay chain, you can derive a **hard key** child account using
+**//** after the mnemonic phrase.
 
 ```
 'caution juice atom organ advance problem want pledge someone senior holiday very//0'
