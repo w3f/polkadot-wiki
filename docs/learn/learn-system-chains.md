@@ -55,10 +55,9 @@ The [Asset Hub](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#a
 Polkadot and Kusama are the first system parachains.
 
 The Asset Hub is an asset portal for the entire network. It helps asset creators (e.g. reserve
-backed stablecoin issuers) to track the total issuance of their asset in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network, including amounts that have
-been transferred to other parachains. It is also the point where they can transact, to mint and
-burn, to manage the on-chain asset.
+backed stablecoin issuers) to track the total issuance of their asset in the network, including
+amounts that have been transferred to other parachains. It is also the point where they can
+transact, to mint and burn, to manage the on-chain asset.
 
 The Asset Hub also supports non-fungible assets (NFTs) via the
 [Uniques pallet](https://polkadot.js.org/docs/substrate/extrinsics#uniques) and the new
@@ -69,9 +68,8 @@ This logic for asset management is not encoded in smart contracts, but rather di
 runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and deposits
 are about 1/10th of their respective value on the relay chain.
 
-These low fee levels mean that the Asset Hub is well suited for handling
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balances and transfers as well as managing
-on-chain assets.
+These low fee levels mean that the Asset Hub is well suited for handling balances and transfers as
+well as managing on-chain assets.
 
 ### Collectives
 

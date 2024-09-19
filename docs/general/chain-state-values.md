@@ -384,7 +384,7 @@ Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssu
 
 #### Treasury Burn Factor
 
-At the end of every spending period on Kusama, <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/>% of the available funds are burned.
+At the end of every spending period on Kusama, <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/>% of the available funds are burned, with the amount currently going to [Society](../maintain/kusama/maintain-guides-society-kusama.md) rather than being burned.
 
 #### Treasury Spending Period
 

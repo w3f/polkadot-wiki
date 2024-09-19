@@ -24,20 +24,19 @@ For additional support about Polkadot OpenGov, see the
 
 :::
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
-mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
-stakeholders. The goal is to ensure that most of the stake can always command the network.
+Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
+the ultimate behest of its assembled stakeholders. The goal is to ensure that most of the stake can
+always command the network.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
-mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
-defined in a platform-agnostic language (i.e. [WebAssembly](learn-wasm.md)), and several on-chain
-voting mechanisms such as referenda and batch approval voting. All changes to the protocol must be
-agreed upon by stake-weighted referenda.
+Polkadot brings together various novel mechanisms, including an amorphous (abstract) form of
+state-transition function stored on-chain defined in a platform-agnostic language (i.e.
+[WebAssembly](learn-wasm.md)), and several on-chain voting mechanisms such as referenda and batch
+approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 ## Premise
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s first governance system
-([Governance V1](./archive/learn-governance.md)) included three main components.
+Polkadot's first governance system ([Governance V1](./archive/learn-governance.md)) included three
+main components.
 
 - The [Technical Committee](./archive/learn-governance.md#technical-committee): A technocratic
   committee to manage upgrade timelines.
@@ -51,19 +50,17 @@ mature to improve their shortcomings and keep up with modern advancements. In Go
 referenda carried the same weight as only one referendum could be voted on at a time (except for
 emergency proposals), and the voting period could last multiple weeks. Also, an
 [alternating voting timetable](./archive/learn-governance.md#alternating-voting-timetable) allowed
-to vote either for a public referendum or a council motion every
-{{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}. This resulted in the system favoring
-careful consideration of very few proposals instead of broad consideration of many.
+to vote either for a public referendum or a council motion every 28 days (7 days on Kusama). This
+resulted in the system favoring careful consideration of very few proposals instead of broad
+consideration of many.
 
 Polkadot OpenGov changes how the practical means of day-to-day decisions are made, making the
 repercussions of referenda better scoped and agile to increase the number of collective decisions
 the system can make at any given time.
 
-The following content is focused on what the new Polkadot OpenGov version brings to the governance
-on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, and on the main differences with
-previous governance versions. We recommend learning about
-[Governance v1](./archive/learn-governance.md) to better understand the need for and the direction
-of Polkadot OpenGov.
+The following content is focused on Polkadot OpenGov, and on the main differences with previous
+governance versions. We recommend learning about [Governance v1](./archive/learn-governance.md) to
+better understand the need for and the direction of Polkadot OpenGov.
 
 ## Summary
 
@@ -72,9 +69,8 @@ decisions. Whether the public or the council initiated the proposal, it would ev
 through a referendum to let all holders (weighted by stake and conviction) make the decision.
 
 The Council fulfilled its role as the representative of the public, guardian of the treasury and
-initiator of legislation, but it was often seen as a centralized entity. To further decentralize
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, Polkadot OpenGov proposes the
-following main changes:
+initiator of legislation, but it was often seen as a centralized entity. To further decentralize the
+network, Polkadot OpenGov proposes the following main changes:
 
 - Migrating all responsibilities of the Council to the public via a direct democracy voting system.
 - Dissolving the current [Council](./archive/learn-governance.md#council) collective
@@ -285,10 +281,9 @@ Delegations under Governance v1 will need to be re-issued under OpenGov.
 
 :::
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} utilizes an idea called voluntary
-locking that allows token holders to increase their voting power by declaring how long they are
-willing to lock up their tokens; hence, the number of votes for each token holder will be calculated
-by the following formula:
+Polkadot utilizes an idea called voluntary locking that allows token holders to increase their
+voting power by declaring how long they are willing to lock up their tokens; hence, the number of
+votes for each token holder will be calculated by the following formula:
 
 ```
 votes = tokens * conviction_multiplier
@@ -361,19 +356,14 @@ satisfy the approval and support criteria for the **Confirmation Period**.
   conviction) compared to the total possible votes ([active issuance](learn-DOT.md#token-issuance))
   that could be made in the system. In case of _split_ votes, only _aye_ and _abstain_ will count.
 
-For example, let us consider a hypothetical example where the total active issuance is
-{{ polkadot: 100 DOT :polkadot }}{{ kusama: 100 KSM :kusama }}
+For example, let us consider a hypothetical example where the total active issuance is 100 DOT.
 
-- An account A votes "Aye" with 10 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} with 4x
-  conviction
-- An account B votes "Nay" with 5 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} with 2x
-  conviction
-- An account C votes "Abstain" with 20 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. (no
-  conviction can be applied to "Abstain" votes)
+- An account A votes "Aye" with 10 DOT with 4x conviction
+- An account B votes "Nay" with 5 DOT with 2x conviction
+- An account C votes "Abstain" with 20 DOT. (no conviction can be applied to "Abstain" votes)
 
-In this scenario, only 35 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} from the total
-active issuance participated in voting on the referendum. Now, let us calculate the Approval and
-Support values for that referendum.
+In this scenario, only 35 DOT from the total active issuance participated in voting on the
+referendum. Now, let us calculate the Approval and Support values for that referendum.
 
 - Approval is calculated as (Aye') / (Aye' + Nay’), where Aye' and Nay' are the votes after applying
   the conviction multiplier. Hence, Approval = (10 x 4) / (10 x 4 + 5 x 2) = 40/50 which is 80%.
@@ -482,8 +472,7 @@ Blacklisting referenda in Polkadot OpenGov is
 
 ## Voting on a Referendum
 
-If you are a voter, it means that you will vote with your
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on each single referendum.
+If you are a voter, it means that you will vote with your tokens on each single referendum.
 
 In Governance V1, voters could cast only an _aye_ or _nay_ vote. In Polkadot OpenGov, voters can
 additionally cast a _abstain_ and _split_ votes.
@@ -493,11 +482,8 @@ abstaining or splitting the votes.
 
 :::info Only the last vote counts
 
-Voting a second time replaces your original vote, e.g. voting with 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, then a second extrinsic to vote with 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, means that you are voting with 5
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, not 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+Voting a second time replaces your original vote, e.g. voting with 10 DOT, then a second extrinsic
+to vote with 5 DOT, means that you are voting with 5 DOT, not 10 DOT.
 
 :::
 
@@ -530,7 +516,7 @@ If you vote without conviction, the referendum is ongoing, and you remove the vo
 your tokens immediately. If the referendum ended, you can remove your vote and unlock your tokens
 immediately, regardless of whether you are on the winning or losing side of the referendum. The
 governance app or interface you used for participating in Polkadot OpenGov should show an option to
-unlock your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+unlock your tokens.
 
 ### Voting with Conviction
 
@@ -542,13 +528,12 @@ you will get a conviction lock.
 Conviction locks are calculated from the time the referendum ended but are applied when you remove
 the vote.
 
-For example, if you voted with conviction 1x with 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, those 10
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will be locked for 7 days after the
-referendum ends (assuming you are on the winning side). If you remove the vote 3 days after the
-referendum ended, your tokens will be locked for 4 more days. If you remove it on the 8th day after
-the end of the referendum, the tokens can be unlocked right away (after you remove the vote). When
-you remove the vote, the lock expiration block is calculated and added to the chain state.
+For example, if you voted with conviction 1x with 10 DOT, those 10 DOT will be locked for 7 days
+after the referendum ends (assuming you are on the winning side). If you remove the vote 3 days
+after the referendum ended, your tokens will be locked for 4 more days. If you remove it on the 8th
+day after the end of the referendum, the tokens can be unlocked right away (after you remove the
+vote). When you remove the vote, the lock expiration block is calculated and added to the chain
+state.
 
 If you voted on multiple referenda, and you are on the winning side of all those referenda, you will
 get multiple conviction voting locks for all those referenda. **Locks do not stack**; the length and

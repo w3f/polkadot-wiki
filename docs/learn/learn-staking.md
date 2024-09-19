@@ -40,8 +40,7 @@ Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more inf
 
 :::
 
-Here you will learn about what staking is, why it is important and how it works on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+Here you will learn about what staking is, why it is important, and how it works.
 
 ## Proof-of-Stake (PoS)
 
@@ -62,11 +61,10 @@ who are responsible for adding blocks to the chain must compete to solve difficu
 puzzles to add blocks - a solution that has been criticized for the wastage of energy. For doing
 this work, miners are typically rewarded with tokens.
 
-In PoS networks like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the security of
-the network depends on the amount of capital locked on the chain: the more the capital locked, the
-lower the chance of an attack on the network, as the attacker needs to incur a heavy loss to
-orchestrate a successful attack (more on this later on). The process of locking tokens on the chain
-is called **staking**.
+In PoS networks like Polkadot, the security of the network depends on the amount of capital locked
+on the chain: the more the capital locked, the lower the chance of an attack on the network, as the
+attacker needs to incur a heavy loss to orchestrate a successful attack (more on this later on). The
+process of locking tokens on the chain is called **staking**.
 
 Similar to the miners in PoW networks, PoS networks have **validators**, but they do not have to
 compete with each other to solve mathematical puzzles. They are instead pre-selected to produce the
@@ -86,19 +84,18 @@ to get rewarded, and the PoS network rewards good behavior and punishes bad beha
 
 ## Nominated Proof-of-Stake (NPoS)
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements
-[Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake), a relatively novel
-and sophisticated mechanism to select the validators who are allowed to participate in its
-[consensus](learn-consensus.md) protocol. NPoS encourages
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} holders to participate as **nominators**.
+Polkadot implements [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake),
+a relatively novel and sophisticated mechanism to select the validators who are allowed to
+participate in its [consensus](learn-consensus.md) protocol. NPoS encourages token holders to
+participate as **nominators**.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
-are made public to all nominators, and a nominator, in turn, submits a list of up to
-{{ polkadot: 16 :polkadot }} {{ kusama: 24 :kusama }} candidates that it supports, and the network
-will automatically distribute the stake among validators in an even manner so that the economic
-security is maximized. In the next era, a certain number of validators having the most
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} backing get elected and become active. For
-more information about the election algorithm go to [this](learn-phragmen.md) page on the wiki or
+are made public to all nominators, and a nominator, in turn, submits a
+[capped list of candidates](../general/chain-state-values.md#maximum-votes-per-nominator) that it
+supports, and the network will automatically distribute the stake among validators in an even manner
+so that the economic security is maximized. In the next era, a certain number of validators having
+the highest backing get elected and become active. For more information about the election algorithm
+go to [this](learn-phragmen.md) page on the wiki or
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Paper) research article. As a
 nominator, a [minimum bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
 is required to submit an intention to nominate, which can be thought of as registering to be a
@@ -118,7 +115,7 @@ on the amount of tokens being staked, in addition to the selected nominations.
 
 ### Nominating Validators
 
-Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} requires 2 actions:
+Nominating requires 2 actions:
 
 - Locking tokens on-chain.
 - Selecting a set of validators, to whom these locked tokens will automatically be allocated to.
@@ -131,38 +128,34 @@ tokens will be referred to as bonded tokens.
 
 Once the previous 2 steps are completed and you are nominating, your bonded tokens could be
 allocated to one or more of your selected validators, and this happens every time the active
-validator set changes. This validator set is updated every era on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+validator set changes. This validator set is updated every era.
 
-Unlike other staking systems, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-automatically chooses which of your selected validators will be backed by your bonded tokens.
-Selecting a group of validators increases your chances of consistently backing at least one who is
-active. This results in your bonded tokens being allocated to validators more often, which means
-more network security and more rewards. This is in strong contrast to other staking systems that
-only allow you to back one validator; if that validator is not active, you as a staker will also not
-be. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s nomination model solves this.
+Unlike other staking systems, Polkadot automatically chooses which of your selected validators will
+be backed by your bonded tokens. Selecting a group of validators increases your chances of
+consistently backing at least one who is active. This results in your bonded tokens being allocated
+to validators more often, which means more network security and more rewards. This is in strong
+contrast to other staking systems that only allow you to back one validator; if that validator is
+not active, you as a staker will also not be.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses tools ranging from election
-theory to game theory to discrete optimization, to develop an efficient validator selection process
-that offers fair representation and security, thus avoiding uneven power and influence among
-validators. The election algorithms used by
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are based on the Proportional
-Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information
-about PJR methods visit [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview)
-research article.
+Polkadot's nomination model solves this. It uses tools ranging from election theory to game theory
+to discrete optimization, to develop an efficient validator selection process that offers fair
+representation and security, thus avoiding uneven power and influence among validators. The election
+algorithms are based on the Proportional Justified Representation (PJR) methods like
+[Phragmen](learn-phragmen.md). For more information about PJR methods visit
+[this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 ### Eras and Sessions
 
 The stake from nominators is used to increase the number of tokens held by such candidates,
 increasing their chance of being selected by the election algorithm for block production during a
-specific **era**. An era is a period of {{ polkadot: 24 :polkadot }}{{ kusama: 6 :kusama }} hours
-during which an **active set** of validators is producing blocks and performing other actions on the
-chain. This means that not all validators are in the active set and such set changes between eras.
-Each era is divided into 6 epochs or **sessions** during which validators are assigned as block
-producers to specific time frames or **slots**. This means that validators know the slots when they
-will be required to produce a block within a specific session, but they do not know all the slots
-within a specific era. Having sessions adds a layer of security because it decreases the chance of
-having multiple validators assigned to a slot colluding to harm the network.
+specific **era**. An era is a period of 24 hours (6 hours on Kusama) during which an **active set**
+of validators is producing blocks and performing other actions on the chain. This means that not all
+validators are in the active set and such set changes between eras. Each era is divided into 6
+epochs or **sessions** during which validators are assigned as block producers to specific time
+frames or **slots**. This means that validators know the slots when they will be required to produce
+a block within a specific session, but they do not know all the slots within a specific era. Having
+sessions adds a layer of security because it decreases the chance of having multiple validators
+assigned to a slot colluding to harm the network.
 
 ### Staking Rewards
 
@@ -194,10 +187,10 @@ lead to centralization.
 
 ### Tasks and Responsibilities of a Nominator
 
-**Validators.** Since validator slots are limited, most of those who wish to stake their
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and contribute to the economic security of
-the network will be nominators, thus here we focus on the role of nominators. However, it is worth
-mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
+**Validators.** Since validator slots are limited, most of those who wish to stake their tokens and
+contribute to the economic security of the network will be nominators, thus here we focus on the
+role of nominators. However, it is worth mentioning that validators do most of the heavy lifting:
+they run the validator nodes and manage
 [session keys](https://research.web3.foundation/Polkadot/security/keys/session), produce new block
 candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in
 [GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition function of
@@ -259,7 +252,7 @@ To maximize rewards and minimize risk, one could select those validators that:
 
 - have era points above average (because they will get more rewards for being active),
 - have the total stake backing the validator below the average active validator stake (because they
-  will pay out more rewards per staked {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}),
+  will pay out more rewards per staked token),
 - have high own stake (because if slashed they have something to lose),
 - have low commission fees but not 0% (because it makes sense that for doing the heavy lifting,
   validators ask for a small commission),
@@ -386,7 +379,7 @@ The distribution of staking rewards to the nominators is not automatic and needs
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
 payout for all the nominators whose stake has backed a specific validator in the active set of that
 era. Staking rewards are kept available for 84 eras. The following calculation can be used to
-approximate this length in days on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}:
+approximate this length in days:
 
 {{ polkadot: `84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days` :polkadot }}
 {{ kusama: `84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days` :kusama }}
@@ -442,8 +435,7 @@ this wiki.
 
 :::info Fast Unstaking feature is live!
 
-If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
-bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
+If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you
 can now unbond them immediately.
 
 :::
@@ -460,14 +452,14 @@ automatically check if you qualify. For more information, visit the
 
 - Earn rewards for contributing to the network's security through staking.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
-- Can choose up-to {{ polkadot: 16 :polkadot }} {{ kusama: 24 :kusama }} validators which can help
-  to decentralize the network through the sophisticated
+- Can choose [multiple validators](../general/chain-state-values.md#maximum-votes-per-nominator)
+  which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
 - 10% inflation/year of the tokens is primarily intended for staking rewards.
 
 When the system staking rate matches with the ideal staking rate, the entire inflation of the
 network is given away as the staking rewards.
-{{ polkadot: Up until now, the network has been following an inflation model that excludes the metric of active parachains. :polkadot }}
+
 The ideal staking rate is a dynamic value - as the number of active parachains influences the
 available liquidity that is available to secure the network.
 
@@ -512,19 +504,18 @@ The top bound on the [number of validators](../general/chain-state-values.md#act
 has not been determined yet, but should only be limited by the bandwidth strain of the network due
 to peer-to-peer message passing.
 
-{{ polkadot: The estimate of the number of validators that Polkadot will have at maturity is around 1000. :polkadot }}
-{{ polkadot: Kusama is already operating at this threshold. :polkadot }}
+The estimate of the number of validators that Polkadot will have at maturity is around 1000, while
+Kusama is already operating at this threshold.
 
 ## Why am I not receiving rewards?
 
-Nominating on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
-action. Nominators need to monitor their nominations and ensure they are eligible to receive staking
-rewards. Otherwise, they would be risking their funds to secure the chain with no reward. If you are
-bonding significantly more than the Minimum Active Bond and yet not receiving rewards, your
-nominations are all waiting, or your active validator has 100% commission. However, if you bond
-funds close to the Minimum Active Bond, there could be several possibilities for not receiving
-staking rewards. The table below can be used to troubleshoot why you might not be receiving staking
-rewards using Polkadot-JS UI.
+Nominating is not a set-and-forget action. Nominators need to monitor their nominations and ensure
+they are eligible to receive staking rewards. Otherwise, they would be risking their funds to secure
+the chain with no reward. If you are bonding significantly more than the Minimum Active Bond and yet
+not receiving rewards, your nominations are all waiting, or your active validator has 100%
+commission. However, if you bond funds close to the Minimum Active Bond, there could be several
+possibilities for not receiving staking rewards. The table below can be used to troubleshoot why you
+might not be receiving staking rewards using Polkadot-JS UI.
 
 |                   Nomination Status                   |                                                                                                                                               What's happening?                                                                                                                                                |                                                                                                                                                    Causes                                                                                                                                                    |                                                                                                                                                What to do?                                                                                                                                                |
 | :---------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |

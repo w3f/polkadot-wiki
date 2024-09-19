@@ -13,17 +13,15 @@ import MessageBox from "../../../components/MessageBox"; import
 <MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
 [Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md)." />
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
-mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
-stakeholders. The stated goal is to ensure that the majority of the stake can always command the
-network.
+Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
+the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of
+the stake can always command the network.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} brings together various novel
-mechanisms, including an amorphous (abstract) form of state-transition function stored on-chain
-defined in a platform-agnostic language (i.e. [WebAssembly](../learn-wasm.md)). It also allows for
-several on-chain voting mechanisms, such as referenda with the novel concept of
-[Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch approval voting. All changes to the
-protocol must be agreed upon by stake-weighted referenda.
+Polkadot brings together various novel mechanisms, including an amorphous (abstract) form of
+state-transition function stored on-chain defined in a platform-agnostic language (i.e.
+[WebAssembly](../learn-wasm.md)). It also allows for several on-chain voting mechanisms, such as
+referenda with the novel concept of [Adaptive Quorum Biasing](#adaptive-quorum-biasing) and batch
+approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 To make any changes to the network, the idea is to compose active token holders and the council
 together to administrate a network upgrade decision. No matter whether the proposal is proposed by
@@ -122,10 +120,10 @@ hash cannot re-appear in the proposal queue. Blacklisting is useful when removin
 proposals that could be submitted with the same hash.
 
 Upon seeing their proposal removed, a submitter who is not properly introduced to the democracy
-system of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} might be tempted to
-re-submit the same proposal. That said, this is far from a fool-proof method of preventing invalid
-proposals from being submitted - a single changed character in a proposal's text will also change
-the hash of the proposal, rendering the per-hash blacklist invalid.
+system of Polkadot might be tempted to re-submit the same proposal. That said, this is far from a
+fool-proof method of preventing invalid proposals from being submitted - a single changed character
+in a proposal's text will also change the hash of the proposal, rendering the per-hash blacklist
+invalid.
 
 ## Referenda
 
@@ -326,10 +324,10 @@ outcome, i.e. being voted on.
 All referenda are associated with an enactment delay or **enactment period**. This is the period
 between a referendum ending and (assuming it was approved) the changes being enacted.
 
-For public and Council referenda, the enactment period is a fixed time of
-{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For proposals submitted as part of
-the enactment of a prior referendum, it can be set as desired. Emergency proposals deal with major
-problems with the network and need to be "fast-tracked". These will have a shorter enactment period.
+For public and Council referenda, the enactment period is a fixed time of 28 days (8 days on
+Kusama). For proposals submitted as part of the enactment of a prior referendum, it can be set as
+desired. Emergency proposals deal with major problems with the network and need to be
+"fast-tracked". These will have a shorter enactment period.
 
 ## Voting on a Referendum
 
@@ -360,7 +358,7 @@ For more information about voluntary locking or conviction voting see
 
 ### Delegations
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can
+In Polkadot, you can
 [delegate your voting power](../../maintain/archive/maintain-guides-democracy.md#delegate-a-vote) to
 another account you trust if you are not willing to stay up-to-date with all referenda.
 
@@ -370,11 +368,9 @@ vote with your stash. Learn more from the [dedicated page on Proxy Accounts](../
 
 ## Council
 
-To represent passive stakeholders, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-introduces the idea of a "council". The council is an on-chain entity comprising several actors,
-each represented as an on-chain account. On
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, the council currently consists of
-{{ polkadot: 13 :polkadot }} {{ kusama: 19 :kusama }} members.
+To represent passive stakeholders, Polkadot introduces the idea of a "council". The council is an
+on-chain entity comprising several actors, each represented as an on-chain account. The Polkadot
+council consists of 13 members (19 on Kusama).
 
 Along with [controlling the treasury](./learn-treasury.md), the council is called upon primarily for
 three tasks of governance:
@@ -419,9 +415,9 @@ prime.
 The Technical Committee(TC) was introduced in the
 [Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
-TC is composed of the teams that have successfully implemented or specified either a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime or Polkadot Host. Teams are
-added or removed from the TC via a simple majority vote of the [Council](#council).
+TC is composed of the teams that have successfully implemented or specified either a Polkadot
+runtime or Polkadot Host. Teams are added or removed from the TC via a simple majority vote of the
+[Council](#council).
 
 The TC aims to safeguard against malicious referenda, implement bug fixes, reverse faulty runtime
 updates, or add new but battle-tested features. The TC can fast-track proposals using the Democracy
@@ -443,13 +439,12 @@ All stakeholders can signal their approval of any of the registered candidates.
 Council elections are handled by the same [Phragmén election](../learn-phragmen.md) process that
 selects validators from the available pool based on nominations. However, token holders' votes for
 councilors are isolated from any nominations they may have on validators. Council terms last for one
-{{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
+week on Polkadot and one day day on Kusama.
 
 At the end of each term, [Phragmén election algorithm](../learn-phragmen#algorithm) runs and the
 result will choose the new councilors based on the vote configurations of all voters. The election
-also chooses a set number of runners-up, which is currently
-{{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
-intact.
+also chooses a set number of runners-up, which is 20 on Polkadot (12 on Kusama), that will remain in
+the queue with their votes intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
 candidate from a list, a Phragmén election is a more expressive way to include each voter’s views.
@@ -496,13 +491,11 @@ let you sign a message easily. When these circumstances can be proven beyond a r
 be an error, the council _may_ consider a governance motion to correct it.
 
 The first step to appeal to the council is to contact the councilors. There is no singular place
-where you are guaranteed to grab every councilor’s ear with your message. However, there are a
-handful of good places to start where you can get the attention of some of them. The
-{{ polkadot: [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}
-{{ kusama: [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} matrix
-room is one such place. After creating an account and joining this room, you can post a
-well-thought-through message here that lays down your case and justifies why you think the council
-should consider enacting a change to the protocol on your behalf.
+where you are guaranteed to grab every councilor’s ear with your message. However, there are
+[a handful of good places](../../general/community.md) to start where you can get the attention of
+some of them. After creating an account and joining this room, you can post a well-thought-through
+message here that lays down your case and justifies why you think the council should consider
+enacting a change to the protocol on your behalf.
 
 At some point, you will likely need a place for a longer-form discussion. For this, making a post on
 [Polkassembly](https://polkadot.polkassembly.io/) is the recommended place to do so. When you write
