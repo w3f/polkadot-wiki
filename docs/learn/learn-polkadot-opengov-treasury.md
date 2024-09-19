@@ -88,9 +88,8 @@ bottom right corner. Then,
   ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
 
   - Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
-    preimage, add the beneficiary address and the
-    {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} amount. The track will be auto-selected
-    and the user can proceed with the creation of a preimage.
+    preimage, add the beneficiary address and the token amount. The track will be auto-selected and
+    the user can proceed with the creation of a preimage.
 
   ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
 
@@ -99,13 +98,11 @@ bottom right corner. Then,
 
 ## Sub-treasuries
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} treasury currently operates on a
-single account on-chain. The above tracks manage the outflow of the treasury on the network. With
-_sub_-treasuries, having treasury accounts that correspond to each
+The treasury currently operates on a single account on-chain. The above tracks manage the outflow of
+the treasury on the network. With _sub_-treasuries, having treasury accounts that correspond to each
 [collective](./learn-system-chains#collectives) is also possible.
 
-Rather than have many referenda through OpenGov, the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Treasury can allocate funds to each
+Rather than have many referenda through OpenGov, the treasury can allocate funds to each
 sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
 can spend funds (depending on their specific rule set).
 
@@ -115,16 +112,15 @@ instances of this pallet.
 
 ## Multi-Asset Treasury Support
 
-The treasuries can support multiple asset types and thus can spend assets other than
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} held within the treasury, and their transfers
-and interactions across the chains facilitated by [cross-consensus messaging](./learn-xcm.md). These
-assets have a few requirements:
+The treasuries can support multiple asset types and thus can spend assets other than DOT (or KSM on
+Kusama) held within the treasury, and their transfers and interactions across the chains facilitated
+by [cross-consensus messaging](./learn-xcm.md). These assets have a few requirements:
 
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
 2. The asset is active and has sufficient liquidity to be utilized for payouts.
 3. The asset has a set conversion rate, as per OpenGov referenda on the Treasurer track (set via the
    asset rate pallet). This conversion rate defines a fixed-point representation for converting from
-   that asset to {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}.
+   that asset to the native asset (DOT or KSM).
 4. The asset must be approved and onboarded via OpenGov to become spendable via the treasury as a
    valid spend method.
 
@@ -150,7 +146,7 @@ Bounties are managed by curators, where the curator is usually a
 so managing those funds with a multisig is a good practice to enhance security. Essentially,
 curators are multisig addresses with agency over a portion of the treasury to promote events, fix a
 bug or vulnerability, develop a strategy, or monitor a set of tasks related to a specific topic, all
-for the benefit of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
+for the benefit of the ecosystem.
 
 A proposer can [submit a bounty proposal](./learn-guides-bounties.md#submit-a-bounty-proposal) to
 OpenGov,

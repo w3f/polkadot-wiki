@@ -161,9 +161,7 @@ separately, depending on the process curators consider appropriate for their bou
   </div>
 </div>
 
-Note that once a child bounty is awarded, awardees need to wait for the
-{{ polkadot: 8 :polkadot }}{{ kusama: 4 :kusama }}-day delay to be complete before claiming the
-child bounty.
+Once a child bounty is awarded, awardees can claim the child bounty.
 
 ## Claim a Child Bounty Reward
 

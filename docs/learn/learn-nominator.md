@@ -19,8 +19,9 @@ Discover the new [**Staking Dashboard**](https://staking.polkadot.cloud/#/overvi
 staking much easier and check this
 [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
 help you get started.
-{{ polkadot: You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
-{{ kusama: All the examples presented on Polkadot also apply to Kusama. :kusama }}
+
+You can now
+[stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 :::
 
@@ -47,10 +48,9 @@ Make sure you read those pages as well before nominating.
 
 ## Who are Nominators?
 
-Nominators are one type of participant in the staking subsystem of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. They appoint their stake to the
-validators, the second type of participant. By appointing their stake, they can elect the active set
-of validators and share in the rewards that are paid out.
+Nominators are one type of staking participant. They appoint their stake to the validators, the
+second type of participant. By appointing their stake, they can elect the active set of validators
+and share in the rewards that are paid out.
 
 While the [validators](../maintain/maintain-guides-how-to-validate-polkadot.md) are active
 participants in the network that engage in the block production and finality mechanisms, nominators
@@ -62,57 +62,46 @@ being [slashed](./learn-offenses.md) if the validator gets slashed.
 
 ## Why Nominate?
 
-- You become part of the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} movement, a
-  group of diverse professionals and enthusiasts around the world aspiring to build and foster the
-  next-gen Internet, Web3: a decentralized, privacy-focused, and trustless internet.
-- You are an essential piece of the puzzle, keeping
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure. The bonded balance can be
-  used to vote in [Polkadot OpenGov](./learn-polkadot-opengov.md) and shape the future direction of
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-- You will start to understand how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-  works at a technical-level. When you feel comfortable with your nomination skills and knowledge,
-  you can open your [nomination pool](./learn-nomination-pools.md), help others secure the network
-  and earn rewards, and build your reputation as a trusted nomination pool operator. If you like to
-  be more involved, the next step is to become a [validator](./learn-validator.md).
+- You become a network participant, a group of diverse professionals and enthusiasts around the
+  world aspiring to build and foster the next-gen Internet, Web3: a decentralized, privacy-focused,
+  and trustless internet.
+- You are an essential piece of the puzzle, keeping the network secure. The bonded balance can be
+  used to vote in [Polkadot OpenGov](./learn-polkadot-opengov.md) and shape the network's future
+  direction.
+- You will start to understand how Polkadot works at a technical-level. When you feel comfortable
+  with your nomination skills and knowledge, you can open your
+  [nomination pool](./learn-nomination-pools.md), help others secure the network and earn rewards,
+  and build your reputation as a trusted nomination pool operator. If you like to be more involved,
+  the next step is to become a [validator](./learn-validator.md).
 - By getting [staking](./learn-staking.md) rewards you keep up with or (likely) stay ahead of
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation.
+  network inflation.
 
-Nominators secure the relay chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
-and nominating validators. You may have an account with
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn fresh
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as a validator, which
-requires experience setting up a node and running and maintaining it 24/7.
+Nominators secure the relay chain by staking native tokens (DOT on Polkadot or KSM on Kusama) and
+nominating validators. You may have an account with DOT and want to earn fresh DOT. You could do so
+as a validator, which requires experience setting up a node and running and maintaining it 24/7.
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} you can also earn
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} by nominating one or more validators. Doing
-so makes you a nominator for the validator(s) you chose. Pick your validators carefully - if they do
-not behave properly, they will get slashed, and you will lose
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. However, if they follow the network rules,
-you can share the staking rewards they generate.
+On Polkadot, you can also earn DOT by nominating one or more validators. Doing so makes you a
+nominator for the validator(s) you chose. Pick your validators carefully -
+[if they do not behave properly, they will get slashed, and you will lose some DOT](./learn-offenses.md).
+However, if they follow the network rules, you can share the staking rewards they generate.
 
-While your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} are staked for nominations, they
-are 'locked' (bonded). You can
+While your tokens are staked for nominations, they are 'locked' (bonded). You can
 [stop nominating at any time](./learn-guides-nominator.md#stop-nominating), but remember that the
 action is effective in the next era and does not automatically unbond your funds. Unbonding is a
-separate action, and it takes effect after the unbonding period, which is
-{{ polkadot: 28-day long on Polkadot :polkadot }}{{ kusama: 7-day long on Kusama :kusama }}. This is
-calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
-era** (in hours), and dividing by the **hours in a day** (24). Example:
-({{ polkadot: 28 × 24 ÷ 24 = 28 days :polkadot }}{{ kusama: 28 × 6 ÷ 24 = 7 days :kusama }}). A
-staking lock will be visible on the Polkadot-JS UI during the unbonding period, and after it, the
-staking lock can be unlocked, and the bonded funds become free balance you can transfer.
+separate action, and it takes effect after the
+[unbonding period](../general/chain-state-values.md#unbonding-duration). A staking lock will be
+visible on the Polkadot-JS UI during the unbonding period, and after it, the staking lock can be
+unlocked, and the bonded funds become free balance you can transfer.
 
 :::info Fast Unstaking
 
-If you accidentally bonded your {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} or your
-bonded {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} never backed any active validator, you
+If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you
 can now unbond them immediately.
 
 :::
 
-If your bonded balance did not back any validators in the last
-{{ polkadot: 28 days on Polkadot (when the feature goes live) :polkadot }}{{ kusama: 7 days on Kusama :kusama }},
-you are eligible to perform fast unstaking. The
+If your bonded balance did not back any validators in the last 28 days on Polkadot (7 days on
+Kusama), you are eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.cloud/#/overview) will automatically check if you
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
@@ -184,13 +173,14 @@ metrics shown as an example, followed by a brief description of each.
   all nominators who nominated Validator A. This includes the active count and all the other
   nominators whose stake in the current era is baking other validators.
 
-  Every nominator can select up to a maximum of {{ polkadot: 16 :polkadot }}
-  {{ kusama: 24 :kusama }} validators, which contributes towards maximizing the probability of
-  having the nominator’s stake applied to the validators active set. Nominating too few validators
-  could result in the nominators not receiving their rewards when none of them make it to the active
-  set or when those validators stop validating. The election algorithm attempts to maximize the
-  overall network stake while minimizing the variance of the active stake across the validators. For
-  additional information on the election process, check out the research behind
+  Every nominator can select up to
+  [a maximum number of validators](../general/chain-state-values.md#maximum-votes-per-nominator),
+  which contributes towards maximizing the probability of having the nominator’s stake applied to
+  the validators active set. Nominating too few validators could result in the nominators not
+  receiving their rewards when none of them make it to the active set or when those validators stop
+  validating. The election algorithm attempts to maximize the overall network stake while minimizing
+  the variance of the active stake across the validators. For additional information on the election
+  process, check out the research behind
   [nominated proof-of-stake](https://research.web3.foundation/Polkadot/protocols/NPoS).
 
 - **comm.**: Total commission kept by the validator (100% means the validator will keep all rewards
@@ -203,13 +193,12 @@ metrics shown as an example, followed by a brief description of each.
   to payout their staking service clients and therefore do not provide any rewards to external
   nominators. The commission is just one piece of the puzzle you should consider when picking
   nominating validators.
-- **total stake**: The total amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :Kusama }} tokens
-  staked by nominators and the validator (i.e. own stake, see below).
-- **own stake**: The amount of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :Kusama }} tokens the
-  validator has put up as a stake. A higher own stake can be considered as having more "skin in the
-  game". This can imply increased trustworthiness. However, a validator not having a large amount of
-  "own stake" is not automatically untrustworthy, as the validator could nominate from a different
-  address.
+- **total stake**: The total amount of tokens staked by nominators and the validator (i.e. own
+  stake, see below).
+- **own stake**: The amount of tokens the validator has put up as a stake. A higher own stake can be
+  considered as having more "skin in the game". This can imply increased trustworthiness. However, a
+  validator not having a large amount of "own stake" is not automatically untrustworthy, as the
+  validator could nominate from a different address.
 - **return**: Average annual yield paid out to nominators (i.e. number of rewards divided by the
   number of bonded tokens). Note that nominating those with a higher yield may not guarantee similar
   future performance.
@@ -348,8 +337,7 @@ fully distributed to one or more validators. That being said, you may not receiv
 nominated very few validator candidates and no one got elected, or your stake is small, and you are
 not part of the [top 22,500 nominators](./learn-staking-advanced.md#bags-list), or the validator you
 are nominating has 100% commission. It is generally wise to choose as many trustworthy validators as
-you can {{ polkadot: (up to 16) :polkadot }}{{ kusama: (up to 24) :kusama }} to reduce the risk of
-none of your nominated validators being elected.
+you can to reduce the risk of none of your nominated validators being elected.
 
 :::info Not receiving Staking Rewards?
 
@@ -404,18 +392,18 @@ Thus, for **nominator counters**, we have:
 
 - count of nominator intentions and
   [max possible nominator intentions](../general/chain-state-values.md#maximum-number-of-nominators)
-- count of electing nominators, and maximum possible electing nominators
-  {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
-- count of active nominators and maximum possible active nominators
-  {{ polkadot: (22500) :polkadot }} {{ kusama: (12500) :kusama }}
+- count of electing nominators, and maximum possible electing nominators (22500 on Polkadot and
+  12500 on Kusama)
+- count of active nominators and maximum possible active nominators (22500 on Polkadot and 12500 on
+  Kusama)
 
 ### Active vs. Inactive Nomination
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
 [this](./learn-guides-nominator.md#nominate-using-polkadot-js) guide to configure it first. Your
-nominations will be effective in the next era; eras are roughly
-{{ polkadot: 24 hours on Polkadot. :polkadot }}{{ kusama: 6 hours on Kusama. :kusama }}
+nominations will be effective in the next era; eras are roughly 24 hours on Polkadot (6 hours on
+Kusama).
 
 ![Nominations](../assets/staking/polkadotjs_nominator_account.png)
 

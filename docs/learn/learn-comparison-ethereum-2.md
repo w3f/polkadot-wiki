@@ -66,10 +66,9 @@ data will be verifiable for an amount of time before being pruned from the netwo
 will enable data availability at layer one and further enable layer two protocols on Ethereum to
 flourish more readily.
 
-In contrast, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} require parachains to
-register themselves in accordance with the [Parachains Protocol](./learn-parachains-protocol.md).
-Once registered, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} validates the state
-transitions of each parachain as per their parachain validation function (PVF).
+In contrast, the relay chain requires parachains to register themselves in accordance with the
+[Parachains Protocol](./learn-parachains-protocol.md). Once registered, the relay chain validates
+the state transitions of each parachain as per their parachain validation function (PVF).
 [Data availability](./learn-parachains-protocol#availability-and-unavailability-phase) is an
 integral part of validating the parachain state. This approach enables parallelized interactions
 between parachains. They can trust that each sub-protocol's respective state is valid, as Polkadot
@@ -87,10 +86,8 @@ For a more in-depth comparison of parachains versus rollups, take a look at the
 
 :::
 
-On {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, each parachain hosts its own core
-logic, called a **runtime** (sometimes called a **state transition function**).
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses WebAssembly
-([Wasm](./learn-wasm.md)) as a "meta-protocol".
+Each parachain hosts its own core logic, called a **runtime** (sometimes called a **state transition
+function**). Polkadot uses WebAssembly ([Wasm](./learn-wasm.md)) as a "meta-protocol".
 
 Parachains have the option of using [cross-consensus messaging (XCM)](learn-xcm.md) to communicate
 with one another and facilitate inter-chain reactions. It is also possible to utilize XCM on
@@ -118,24 +115,23 @@ medium other than the protocol itself. Upgrades on Ethereum will follow the stan
 procedure, coordinating the community and validators to upgrade their nodes to implement protocol
 changes.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses on-chain
-[governance, called OpenGov](./learn-polkadot-opengov.md), to facilitate upgrades to the Polkadot
-runtime. The stakeholders of Polkadot vote on these upgrades, and if successful, the upgrade is
-enacted automatically in the blocks to come. Polkadot validator operators only upgrade their nodes
-when the client itself gets updated.
+Polkadot uses on-chain [governance, called OpenGov](./learn-polkadot-opengov.md), to facilitate
+runtime upgrades. The stakeholders of Polkadot vote on these upgrades, and if successful, the
+upgrade is enacted automatically in the blocks to come. Polkadot validator operators only upgrade
+their nodes when the client itself gets updated.
 
-Because of this mechanism, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can enact
-chain upgrades using the Wasm meta-protocol _without_ a hard fork. As the WebAssembly runtime for
-Polkadot (and all of its subsequent parachains) are stored on-chain, this involves simply replacing
-the runtime with a new WebAssembly blob once governance allowed the upgrade to be enacted.
+Because of this mechanism, the relay chain can enact upgrades using the Wasm meta-protocol _without_
+a hard fork. As the WebAssembly runtime for Polkadot (and all of its subsequent parachains) are
+stored on-chain, this involves simply replacing the runtime with a new WebAssembly blob once
+governance allowed the upgrade to be enacted.
 
 Anything within the state transition function, the transaction queue, or off-chain workers can be
 upgraded without forking the chain, as these are all part of the WebAssembly runtime.
 
 ### Block Production & Finalization
 
-Both Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} use hybrid
-consensus models where **block production** and **finality** are decoupled.
+Both Ethereum and Polkadot use hybrid consensus models where **block production** and **finality**
+are decoupled.
 
 For finalization, Ethereum utilizes [Casper FFG](https://ethereum.org/glossary#casper-ffg), which
 works with [LMD-GHOST](https://ethereum.org/glossary#lmd-ghost) as the fork choice rule for
@@ -154,11 +150,9 @@ mechanisms for selecting block producers, one of which is a fallback in case the
 allows for chain liveness. BABE produces unfinalized blocks on top of the chain already finalized by
 GRANDPA.
 
-There are two main differences between Ethereum and
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus:
+There are two main differences between Ethereum and Polkadot consensus:
 
-1.  {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} finality protocol, GRANDPA,
-    finalizes batches of blocks based on
+1.  Polkadot finality protocol, GRANDPA, finalizes batches of blocks based on
     [availability and validity checks](./learn-parachains-protocol.md#availability-and-unavailability-phase)
     that happen as the proposed chain grows. The time to finality varies with the number of checks
     that need to be performed (and invalidity reports, which cause extra checks). The expected time
@@ -166,15 +160,14 @@ There are two main differences between Ethereum and
 
 2.  Ethereum typically has many validators per round (called an
     [epoch](https://ethereum.org/en/glossary/#epoch) on Ethereum) to provide strong validity
-    guarantees while {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide
-    stronger guarantees with fewer validators per round.
-    {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} achieves this by making
-    validators distribute an [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all
-    validators in the system, such that anyone - not only the round's validators - can reconstruct a
-    parachain's block and test its validity. This data availability is a core part of Polkadot -
-    ensuring state is valid for its state transitions. The random parachain-validator assignments
-    and secondary checks are performed by randomly selected validators, making it less likely for
-    the small set of validators on each parachain to collude.
+    guarantees while Polkadot can provide stronger guarantees with fewer validators per round.
+    Polkadot achieves this by making validators distribute an
+    [erasure coding](./learn-parachains-protocol.md#erasure-codes) to all validators in the system,
+    such that anyone - not only the round's validators - can reconstruct a parachain's block and
+    test its validity. This data availability is a core part of Polkadot - ensuring state is valid
+    for its state transitions. The random parachain-validator assignments and secondary checks are
+    performed by randomly selected validators, making it less likely for the small set of validators
+    on each parachain to collude.
 
 ### Staking Mechanics: Ethereum PoS vs. Polkadot NPoS
 
@@ -190,12 +183,11 @@ in the network.
 
 ### Interoperability and Message Passing
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses
-[Cross-Consensus Messaging (XCM)](./learn-xcm.md) for parachains to send arbitrary messages to each
-other. Parachains open connections with each other and can send messages via their established
-channels. Given that [collators](./learn-collator.md) communicate directly to the relay chain, they
-will be connected and can relay messages from parachain A to parachain B if needed through these
-message passing channels (see:
+Polkadot uses [Cross-Consensus Messaging (XCM)](./learn-xcm.md) for parachains to send arbitrary
+messages to each other. Parachains open connections with each other and can send messages via their
+established channels. Given that [collators](./learn-collator.md) communicate directly to the relay
+chain, they will be connected and can relay messages from parachain A to parachain B if needed
+through these message passing channels (see:
 [HRMP, VMP, and other message passing mechanisms for XCM](./learn-xcm-transport.md)).
 
 Messages do not pass through the relay chain. Only validity proofs and channel operations do (open,
@@ -220,11 +212,11 @@ provides shared logic for cross-consensus messages, and will be used to construc
 Ethereum supports smart contract development using Solidity. These contracts are immutable, and
 cannot be changed once published on-chain.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} supports smart contracts through
-parachains, usually using the [ink! smart contract language](https://use.ink/), but also Solidity
-through Frontier-enabled parachains. On Ethereum, smart contracts can call each other; however, they
-are fixed on-chain to the domain of Ethereum. On Polkadot, smart contracts can call each other in
-the same parachain _and_ across parachains.
+Polkadot supports smart contracts through parachains, usually using the
+[ink! smart contract language](https://use.ink/), but also Solidity through Frontier-enabled
+parachains. On Ethereum, smart contracts can call each other; however, they are fixed on-chain to
+the domain of Ethereum. On Polkadot, smart contracts can call each other in the same parachain _and_
+across parachains.
 
 On Polkadot, developers have the option of either using smart contracts, calling extrinsics from
 pallets that modify the chain's state in some particular way or merely use Polkadot's RPC to
@@ -237,21 +229,18 @@ For a more comprehensive list of how to build on Polkadot, be sure to check the
 
 ## Conclusion
 
-Ethereum and {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} both use a sharded
-model. Danksharding plans to utilize a rollup-centric approach by focusing on data availability. The
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem is secured by a main chain,
-called the "relay chain," which in turn manages cores and allows tasks, such as parachains, to be
-run on top of those cores and messages to be sent between them.
+Ethereum and Polkadot both use a sharded model. Danksharding plans to utilize a rollup-centric
+approach by focusing on data availability. The Polkadot ecosystem is secured by a main chain, called
+the "relay chain," which in turn manages cores and allows tasks, such as parachains, to be run on
+top of those cores and messages to be sent between them.
 
 The primary differences between the two protocols are:
 
 - Ethereum processes EVM-compatible state transitions, whether through rollups or on the mainnet
-  itself, while {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows its parachains
-  to have an abstract state transition function implementation.
+  itself, while Polkadot allows its parachains to have an abstract state transition function
+  implementation.
 - Governance processes in Ethereum are planned to be off-chain and thus require coordination for a
-  hard fork to enact governance decisions. In contrast, in
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} the decisions are on-chain and
+  hard fork to enact governance decisions. In contrast, in Polkadot the decisions are on-chain and
   enacted autonomously via forkless upgrades.
-- Validator selection mechanisms differ as
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can provide strong availability and
-  validity guarantees with fewer validators per protocol.
+- Validator selection mechanisms differ as Polkadot can provide strong availability and validity
+  guarantees with fewer validators per protocol.

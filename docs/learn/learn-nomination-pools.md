@@ -16,9 +16,8 @@ You do not need to do anything, unless you are participating in a pool and also 
 :::info Nomination Pools are live on Polkadot!
 
 Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} tokens together on-chain to nominate
-validators and receive rewards, significantly improving the system’s scalability. Now, anyone with
-as little as
+tokens together on-chain to nominate validators and receive rewards, significantly improving the
+system’s scalability. Now, anyone with as little as
 [1 DOT can receive rewards for staking natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 Note that rewards are not guaranteed for those pools that do not have enough bonded funds to be
 included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active
@@ -50,34 +49,31 @@ Nomination Pools. If you are a developer, please join our
 
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
-Nomination pools are one of the key features from the roadmap of staking improvements on
-{{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}. They are designed to
-permissionlessly allow members to pool their funds together and act as a single nominator account.
+Nomination pools are one of the key features from the roadmap of staking improvements. They are
+designed to permissionlessly allow members to pool their funds together and act as a single
+nominator account.
 
-Due to the current runtime constraints,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can only handle
-{{ polkadot: 22500 :polkadot }} {{ kusama: 12500 :kusama }} nominators comfortably in the
+Due to the current runtime constraints, the relay chain can only handle a limited number of
+nominators (22500 on Polkadot and 12500 on Kusama) comfortably in the
 [electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
 [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
-inferred that the staking system on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-favors nominators with a larger stake. Only the nominator accounts which back the validators in the
-active set are eligible for receiving staking rewards. This leaves out nomination intents from the
-accounts with lower token balance than the min-active nomination and places them in a waiting queue
-to enter electing set. Nomination pools will be handy for members who want to participate in the
-staking system with a stake much lower than the dynamic min-active nomination threshold on the
-network. All operations are constant space and time complexity relative to the number of members,
-eliminating any theoretical upper bound on the number of members the system can handle and thus
-scaling the number of accounts that can participate and earn rewards in the staking system on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. In summary, each nomination pool is
-viewed as a single nominator from the NPoS system point of view.
+inferred that the staking system favors nominators with a larger stake. Only the nominator accounts
+which back the validators in the active set are eligible for receiving staking rewards. This leaves
+out nomination intents from the accounts with lower token balance than the min-active nomination and
+places them in a waiting queue to enter electing set. Nomination pools will be handy for members who
+want to participate in the staking system with a stake much lower than the dynamic min-active
+nomination threshold on the network. All operations are constant space and time complexity relative
+to the number of members, eliminating any theoretical upper bound on the number of members the
+system can handle and thus scaling the number of accounts that can participate and earn rewards in
+the staking system. In summary, each nomination pool is viewed as a single nominator from the NPoS
+system point of view.
 
 :::info Why aren't the members in the nomination pools called delegators?
 
-The term `delegator` is associated too much with Delegated Proof of Staking (DPoS), and since
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements Nominated Proof of Staking
-(NPoS), naming them delegators would be misleading. The term `member` is our generic replacement for
-`delegator`. In action, members are quite similar to delegators and delegate their nomination power
-to the pool.
+The term `delegator` is associated too much with Delegated Proof of Staking (DPoS), and since the
+network implements Nominated Proof of Staking (NPoS), naming them delegators would be misleading.
+The term `member` is our generic replacement for `delegator`. In action, members are quite similar
+to delegators and delegate their nomination power to the pool.
 
 :::
 

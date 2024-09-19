@@ -11,13 +11,11 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 
 <MessageBox message="Parachain Slot Auctions will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
 
-For a [parachain](learn-parachains.md) to be added to
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} it must inhabit one of the available
-parachain slots. The number of parachain slots is not unbounded on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, as only a limited number are
-available. A limited number of slots are unlocked every few months through on-chain governance. If a
-parachain wants to have guaranteed block inclusion at every relay chain block, it must acquire a
-parachain slot. The development of
+For a [parachain](learn-parachains.md) to be added to the relay chain it must inhabit one of the
+available parachain slots. The number of parachain slots is not unbounded, as only a limited number
+are available. A limited number of slots are unlocked every few months through on-chain governance.
+If a parachain wants to have guaranteed block inclusion at every relay chain block, it must acquire
+a parachain slot. The development of
 [on-demand parachains](https://forum.polkadot.network/t/on-demand-parachains/2208) is complete, and
 they can be deployed after Agile Coretime is live on the network.
 
@@ -53,8 +51,7 @@ termination. Parachain slot auctions differ slightly from a normal candle auctio
 not randomly terminate the auction. Instead, they run for an entire fixed duration and the winner is
 randomly chosen retroactively.
 
-The candle auction on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is split into
-two parts:
+The candle auction is split into two parts:
 
 1. The _opening period_ which is in effect immediately after the auction starts. This period lasts
    for one day and eighteen hours and serves as a buffer time for parachain candidates to setup
@@ -78,8 +75,7 @@ Random Function wins the slot auction.
 
 :::
 
-A parachain auction on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} lasts exactly
-one week from the starting period (1 day and 18 hours) to
+A parachain auction lasts exactly one week from the starting period (1 day and 18 hours) to
 [ending period](../general/chain-state-values.md#auction-ending-period) (candle auction phase) and
 finally 6 hours for determining the auction winner.
 
@@ -166,15 +162,14 @@ ended before having an opportunity to bid.
 
 ## Network Implementation
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will use a _random beacon_ based on
-the [Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The VRF will provide the base
-of the randomness, which will retroactively determine the end-time of the auction.
+The relay chain will use a _random beacon_ based on the
+[Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The VRF will provide the base of
+the randomness, which will retroactively determine the end-time of the auction.
 
-The slot durations are capped to {{ polkadot: 2 years and divided into 3-month periods. :polkadot }}
-{{ kusama: 1 year and divided into 6-week periods. :kusama }} Parachains may lease a slot for any
-combination of periods of the slot duration. Parachains may lease more than one slot over time,
-meaning that they could extend their lease to the network past the maximum duration by leasing a
-contiguous slot.
+Polkadot's slot durations are capped to 2 years and are divided into 3-month periods (1 year divided
+into 6-week periods for Kusama). Parachains may lease a slot for any combination of periods of the
+slot duration. Parachains may lease more than one slot over time, meaning that they could extend
+their lease to the network past the maximum duration by leasing a contiguous slot.
 
 :::note Individual parachain slots are fungible
 
@@ -207,9 +202,8 @@ Slot E |__________|___________|     1     |     2     |     3     |     4    |  
 
 ```
 
-_Each period of the range 1 - 4 represents a
-{{ polkadot: 3-month duration for a total of 2 years :polkadot }}
-{{ kusama: 6-week duration for a total of 1 year :kusama }} _
+_Each period of the range 1 - 4 represents a 3-month duration for a total of 2 years for Polkadot
+(or 6-week duration for a total of 1 year for Kusama)._
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
@@ -248,13 +242,12 @@ amount of tokens held over the entire lease duration of the parachain slot. This
 highest bidder for any given slot lease period might not always win (see the
 [example below](#examples)).
 
-A random number, which is based on the [VRF](./learn-cryptography.md#vrf) used by
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, is determined at each block.
-Additionally, each auction will have a threshold that starts at 0 and increases to 1. The random
-number produced by the VRF is examined next to the threshold to determine if that block is the end
-of the auction within the so-called _ending period_. Additionally, the VRF will pick a block from
-the last epoch to access the state of bids which can help aid in mitigating some types of attacks
-from malicious validators.
+A random number, which is based on the [VRF](./learn-cryptography.md#vrf) used by the relay chain,
+is determined at each block. Additionally, each auction will have a threshold that starts at 0 and
+increases to 1. The random number produced by the VRF is examined next to the threshold to determine
+if that block is the end of the auction within the so-called _ending period_. Additionally, the VRF
+will pick a block from the last epoch to access the state of bids which can help aid in mitigating
+some types of attacks from malicious validators.
 
 ### Examples
 

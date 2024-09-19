@@ -35,12 +35,14 @@ contact and anyone doing so is likely trying to scam you.
       <li><a href="https://research.web3.foundation/news">Polkadot's Latest Research (news)</a></li>
       <li><a href="https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be">Polkadot Meetup Hub</a> - Information on hosting meetups, applying for funding, and materials for running it.</li>
       <li><a href="https://polkadot.polkassembly.io/">Polkadot Discussion and Governance on Polkassembly</a></li>
+      <li><a href="https://polkadot.subsquare.io/discussions">Polkadot Discussion and Governance on Subsquare</a></li>
     </ul>
   </TabItem>
 
   <TabItem value="kusama">
     <ul>
       <li><a href="https://kusama.polkassembly.io/">Kusama Discussion and Governance on Polkassembly</a></li>
+      <li><a href="https://kusama.subsquare.io/discussions">Kusama Discussion and Governance on Subsquare</a></li>
     </ul>
   </TabItem>
 

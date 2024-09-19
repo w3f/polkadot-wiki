@@ -20,7 +20,7 @@ risk their lives to ensure the VIP's protection. But proxies are also useful in 
 as efficient account management at the corporate level. They also provide an elegant solution to
 change signatories within multi-signature accounts, and they can be used within proxy calls and
 nested proxy calls. In this page we will explore all these interesting use cases of proxies within
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
+the Polkadot ecosystem.
 
 Shown below is an example of how you might use these accounts. Imagine you have one stash account as
 your primary token-holding account and don't want to access it very often, but you want to
@@ -43,14 +43,11 @@ participate in the network.
 
 ## Proxy Types
 
-When a proxy account makes a transaction,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} filters the desired transaction to
-ensure that the proxy account has the appropriate permission to make that transaction on behalf of
-the proxied account. For example, staking proxies have permission to do only staking-related
-transactions.
+When a proxy account makes a transaction, Polkadot filters the desired transaction to ensure that
+the proxy account has the appropriate permission to make that transaction on behalf of the proxied
+account. For example, staking proxies have permission to do only staking-related transactions.
 
-When you set a proxy, you must choose a type of proxy for the relationship.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} offers:
+When you set a proxy, you must choose a type of proxy for the relationship with the proxied account.
 
 - **Any**: allow any transaction, including balance transfers. In most cases, this should be avoided
   as the proxy account is used more frequently than the cold account and is therefore less secure.
@@ -101,9 +98,8 @@ every proxy the account has, an additional amount defined by the
 ## Time-delayed Proxy
 
 We can add a layer of security to proxies by giving them a delay time. The delay will be quantified
-in blocks. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has approximately 6
-seconds of block time. A delay value of 10 will mean ten blocks, which equals about one minute
-delay.
+in blocks. Polkadot has approximately 6 seconds of block time. A delay value of 10 will mean ten
+blocks, which equals about one minute delay.
 
 The proxy will announce its intended action and will wait for the number of blocks defined in the
 delay time before executing it. Within this time window, the intended action may be canceled by

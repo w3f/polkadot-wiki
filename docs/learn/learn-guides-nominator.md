@@ -96,9 +96,10 @@ Read the support article about
 :::
 
 You are now bonded. Being bonded means your tokens are locked and could be
-[slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can now be
-distributed to up to {{ polkadot: 16 :polkadot }} {{ kusama: 24 :kusama }} validators. Be careful
-about the validators you choose since you will be slashed if your validator commits an offence.
+[slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can be
+distributed to [multiple validators](../general/chain-state-values.md#maximum-votes-per-nominator).
+Be careful about the validators you choose since you will be slashed if your validator commits an
+[offence](./learn-offenses.md).
 
 Click on "Nominate" on an account you've bonded and you will be presented with another popup asking
 you to select some validators.
@@ -135,9 +136,8 @@ you're nominating, but you cannot withdraw your tokens unless you unbond them.
 ## Claiming Rewards with Polkadot-JS
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
-fee. Someone must submit a transaction with a validator ID and an era index.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will automatically calculate that
-validator's reward and distribute the rewards pro rata.
+fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will
+automatically calculate that validator's reward and distribute the rewards pro rata.
 
 These details are handled for you automatically if you use the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
@@ -161,8 +161,7 @@ transaction.
 ## Using Command-Line Interface (CLI)
 
 Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in
-CLI instead. The CLI approach allows you to interact with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network without using Polkadot-JS.
+CLI instead. The CLI approach allows you to interact with the network without using Polkadot-JS.
 
 ### Step 1: Install @polkadot/api-cli
 
@@ -193,18 +192,15 @@ are now deprecated. Refer to
 [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)
 for additional context)
 
-`NUMBER_OF_TOKENS`: The number of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} you would
-like to stake to the network.
-{{ polkadot: DOT has ten decimal places and is always represented as an integer with zeroes at the end. So 1 DOT = 10_000_000_000 Plancks. :polkadot }}{{ kusama: KSM has twelve decimal places and is always represented as an integer with zeroes at the end. So 1 KSM =
-1_000_000_000_000 Plancks. :kusama }}
+`NUMBER_OF_TOKENS`: The number of native tokens (in Plancks) you would like to stake to the network.
 For more information, see [this page](../learn/learn-DOT.md).
 
 `REWARD_DESTINATION`:
 
 - `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
-- `Account` - Pay into a custom account, like so:
-  {{ polkadot: `Account 1n8msHozaNxHicWFnRnNXzvqkYPWczkzUUkHhKw6o2BLBdo` :polkadot }}{{ kusama: `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX` :kusama }}.
+- `Account` - Pay into a custom account that is not the stash (can be a proxy or another type of
+  account).
 - `Controller` - Pay into the controller account.
 
 Example for Kusama:

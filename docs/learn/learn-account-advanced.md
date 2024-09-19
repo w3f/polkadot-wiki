@@ -7,6 +7,8 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping, EN
 slug: ../learn-account-advanced
 ---
 
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
@@ -375,15 +377,25 @@ private key being unknown (and unattainable). So, that means that only the palle
 interact with this account. These accounts can never issue a signed
 [extrinsic](./learn-transactions.md) since they do not have a private key.
 
-:::info Explore System Accounts
+Explore the main system accounts below.
 
-Treasury account address -
-{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="system" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+Treasury account address - `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB`
+
+</TabItem>
+<TabItem value="kusama">
+
+Treasury account address - `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29`
+
+</TabItem>
+</Tabs>
 
 You can view the existing system accounts on
 [Subscan](https://polkadot.subscan.io/account_list?role=module).
-
-:::
 
 Let us take a look at how system accounts are generated under the hood. For instance, to generate
 the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined to create the
@@ -395,10 +407,9 @@ nomination pool and parachain accounts as well.
 
 ## Indices
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
-is like a short and easy-to-remember version of an address. Claiming an index requires
-[a deposit](../general/chain-state-values.md#index-deposit) released when the index is cleared. Any
-index can be claimed if it is not taken by someone else.
+Polkadot addresses can have indices. An index is like a short and easy-to-remember version of an
+address. Claiming an index requires [a deposit](../general/chain-state-values.md#index-deposit)
+released when the index is cleared. Any index can be claimed if it is not taken by someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_

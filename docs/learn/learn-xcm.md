@@ -17,10 +17,10 @@ mind that XCM is under active development.
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
 communicate between consensus systems.
 
-One of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s main functionalities is
-interoperability amongst parachains and any other participating consensus-driven systems. XCM is the
-language through which complex, cross-consensus interactions can occur. Two blockchains can "speak"
-XCM to seamlessly interact with each other using a standard messaging format.
+One of Polkadot's main functionalities is interoperability amongst parachains and any other
+participating consensus-driven systems. XCM is the language through which complex, cross-consensus
+interactions can occur. Two blockchains can "speak" XCM to seamlessly interact with each other using
+a standard messaging format.
 
 :::info
 
@@ -31,9 +31,8 @@ parachain, an EVM smart contract, or other bridged consensus systems.
 
 :::
 
-XCM is not meant to be only specific to
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, but rather its primary intention is
-to define a **generic** and **common** format amongst different consensus systems to communicate.
+XCM is not meant to be only specific to Polkadot, but rather its primary intention is to define a
+**generic** and **common** format amongst different consensus systems to communicate.
 
 It's important to note that XCM does not define how messages are delivered but rather define how
 they should look, act, and contain relative instructions to the on-chain actions the message intends
@@ -66,8 +65,7 @@ issues.
 :::note
 
 XCM is constantly in development - meaning the format is expected to change over time. XCM v3 is the
-latest version, and is deployed on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-To view updates on the XCM format, visit the
+latest version, and is deployed on Polkadot. To view updates on the XCM format, visit the
 [xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been
 submitted that would contribute to the next release.
 

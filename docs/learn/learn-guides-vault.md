@@ -75,8 +75,11 @@ terminal within the `/generate_message` folder and type the following:
 
 where `wss://kusama-asset.hub-rpc.polkadot.io` is the Parity RPC endpoint for the Asset Hub on
 Kusama. This will create the file `sign_me_add_specs_statemine_sr25510` under the
-`files/in_progress` folder. See
-{{ polkadot: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts) for a list of all endpoints listed in the Polkadot-JS UI. :polkadot }}{{ kusama: [this GitHub page](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts) for a list of all endpoints listed in the Polkadot-JS UI. :kusama}}
+`files/in_progress` folder. See all endpoints listed for
+[Polkadot](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts)
+and
+[Kusama](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts)
+on the Polkadot-JS UI.
 
 #### Generating Signature
 

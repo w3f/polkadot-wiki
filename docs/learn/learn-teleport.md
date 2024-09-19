@@ -9,12 +9,12 @@ slug: ../learn-teleport
 
 import RPC from "./../../components/RPC-Connection";
 
-One of the main properties that {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-brings to the blockchain industry is secure interoperability. This interoperability allows for
-**asset teleportation**, i.e., the process of moving assets (such as fungible and non-fungible
-tokens) between chains (parachains) to use them as any other asset native to that chain.
-Interoperability is possible through [XCM](learn-xcm.md) and [SPREE modules](learn-spree.md), which
-together ensure that assets are not lost or duplicated across multiple chains.
+One of the main properties that Polkadot brings to the blockchain industry is secure
+interoperability. This interoperability allows for **asset teleportation**, i.e., the process of
+moving assets (such as fungible and non-fungible tokens) between chains (parachains) to use them as
+any other asset native to that chain. Interoperability is possible through [XCM](learn-xcm.md) and
+[SPREE modules](learn-spree.md), which together ensure that assets are not lost or duplicated across
+multiple chains.
 
 :::info Walk-through video tutorial about teleporting assets
 

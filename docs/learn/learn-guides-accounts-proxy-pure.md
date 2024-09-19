@@ -29,8 +29,8 @@ testnet, you can comfortably replicate the procedure on the main networks.
 
 :::danger Risk of loss of funds
 
-Read carefully the text below and before performing any action using anonymous proxies on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, experiment on the Westend testnet.
+Read carefully the text below and before performing any action using pure proxies, experiment on the
+Westend testnet.
 
 :::
 

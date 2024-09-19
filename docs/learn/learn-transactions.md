@@ -12,11 +12,10 @@ from "@theme/TabItem"; import DocCardList from '@theme/DocCardList';
 
 ## Pallets and Extrinsics
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is built using
-[Substrate](https://substrate.io/), a modular framework to efficiently build blockchains.
-Substrate's FRAME development environment provides modules called pallets and support libraries that
-you can use, modify, and extend to build the runtime logic to suit the needs of your blockchain. You
-can explore Substrate's FRAME pallets on
+Polkadot is built using [Substrate](https://substrate.io/), a modular framework to efficiently build
+blockchains. Substrate's FRAME development environment provides modules called pallets and support
+libraries that you can use, modify, and extend to build the runtime logic to suit the needs of your
+blockchain. You can explore Substrate's FRAME pallets on
 [this dedicated page](https://docs.substrate.io/reference/frame-pallets/).
 
 Within each functional **pallet** on the blockchain, one can **call** its functions and execute them
@@ -42,24 +41,21 @@ really are. Extrinsics can be one of 3 distinct types:
 - **Inherents:** are a special type of unsigned transaction made by block authors which carry
   information required to build a block such as timestamps, storage proofs and uncle blocks.
 
-Signed transactions is the way that most users will interact with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. Signed transactions come from an
-account that has funds, and therefore {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-can charge a transaction fee as a way to prevent spam.
+Signed transactions is the way that most users will interact with Polkadot. Signed transactions come
+from an account that has funds, and therefore Polkadot can charge a transaction fee as a way to
+prevent spam.
 
 Unsigned transactions are for special cases where a user needs to submit an extrinsic from a key
 pair that does not control funds. For example, validator's [session keys](learn-cryptography.md)
-never control funds. Unsigned transactions are only used in special cases because, since
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} cannot charge a fee for them, each
-one needs its own, custom validation logic.
+never control funds. Unsigned transactions are only used in special cases because, since Polkadot
+cannot charge a fee for them, each one needs its own, custom validation logic.
 
 Inherents are pieces of information that are not signed or included in the transaction queue. As
 such, only the block author can add inherents to a block. Inherents are assumed to be "true" simply
 because a sufficiently large number of validators have agreed on them being reasonable. For example,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blocks include a timestamp inherent.
-There is no way to prove that a timestamp is true the way one proves the desire to send funds with a
-signature. Rather, validators accept or reject the block based on how reasonable they find the
-timestamp. In {{ polkadot: Polkadot, :polkadot }}{{ kusama: Kusama, :kusama }} it must be within
+the relay chain blocks include a timestamp inherent. There is no way to prove that a timestamp is
+true the way one proves the desire to send funds with a signature. Rather, validators accept or
+reject the block based on how reasonable they find the timestamp. In Polkadot, it must be within
 some acceptable range of their own system clocks.
 
 Here are some key differences between the different types of extrinsics:
@@ -74,16 +70,15 @@ Here are some key differences between the different types of extrinsics:
 ### Mortal and Immortal Extrinsics
 
 Transactions are generally irreversible once confirmed and added to the blockchain, an immutable
-ledger of all transactions. This means users must exercise caution, as mistakes such as sending
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to the wrong address cannot be reverted. The
-permanence of transactions highlights the importance of careful verification before signing any
-transaction on a blockchain network. It is usually a
+ledger of all transactions. This means users must exercise caution, as mistakes such as sending DOT
+to the wrong address cannot be reverted. The permanence of transactions highlights the importance of
+careful verification before signing any transaction on a blockchain network. It is usually a
 [good practice not to blind sign transactions](../general/transaction-attacks.md) to avoid being
 victim of an attack.
 
 In blockchain terms, transactions can be **mortal** extrinsics (i.e. valid within a defined block
 interval, usually short), or **immortal** extrinsics (i.e. always valid). It is possible to make
-immortal transactions on {{ polkadot: Polkadot. :polkadot }}{{ kusama: Kusama. :kusama }} However,
+immortal transactions on Polkadot. However,
 [for security reasons](../general/transaction-attacks.md#replay-attack), it is highly recommended
 not to do so and most wallet software will not allow you to make an immortal extrinsic.
 
@@ -94,10 +89,10 @@ of transfer.
 
 ### Vested Transfers
 
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} may have a lock to account for vesting funds.
-Like other types of [locks](./learn-account-balances.md#locks), these funds cannot be transferred
-but can be used in other parts of the protocol such as voting in governance or being staked as a
-validator or nominator.
+DOT may have a lock to account for vesting funds. Like other types of
+[locks](./learn-account-balances.md#locks), these funds cannot be transferred but can be used in
+other parts of the protocol such as voting in governance or being staked as a validator or
+nominator.
 
 Vesting funds are on a release schedule that unlocks a constant number of tokens at each block
 (**linear vesting**) or the full amount after a specific block number (**cliff vesting**). In all
@@ -120,8 +115,7 @@ funds to the desired destination account.
 ## Transaction Fees
 
 Storage and computation are limited resources in a blockchain network. Transaction fees prevent
-individual users from consuming too many resources.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a **weight-based fee model** as
+individual users from consuming too many resources. Polkadot uses a **weight-based fee model** as
 opposed to a gas-metering model. As such, fees are charged before transaction execution. Once the
 fee is paid, nodes will execute the transaction.
 
@@ -160,13 +154,12 @@ details.
 
 ### Fee Multiplier
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can add an additional fee to
-transactions if the network becomes too busy and starts to decelerate the system. This additional
-fee is known as the `Fee Multiplier` and its value is defined by the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime. The multiplier compares the
-saturation of blocks; if the previous block is less saturated than the current block (implying an
-uptrend in usage), the fee is slightly increased. Similarly, the fee is decreased if the previous
-block is more saturated than the current block (implying a downtrend in usage).
+Polkadot can add an additional fee to transactions if the network becomes too busy and starts to
+decelerate the system. This additional fee is known as the `Fee Multiplier` and its value is defined
+by the runtime. The multiplier compares the saturation of blocks; if the previous block is less
+saturated than the current block (implying an uptrend in usage), the fee is slightly increased.
+Similarly, the fee is decreased if the previous block is more saturated than the current block
+(implying a downtrend in usage).
 
 The multiplier can create an incentive to avoid the production of low-priority or insignificant
 transactions. In contrast, those additional fees will decrease if the network calms down and
@@ -200,11 +193,10 @@ transactions warrant limiting resources with other strategies. For example:
 
 ## Parachain Transactions
 
-The transactions that take place within
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s parachains do not incur relay chain
-transaction fees. Users of shard applications do not even need to hold DOT tokens, as each shard has
-its own economic model and may or may not have a token. There are, however, situations where shards
-themselves make transactions on the relay chain.
+The transactions that take place within parachains do not incur relay chain transaction fees. Users
+of shard applications do not even need to hold DOT tokens, as each shard has its own economic model
+and may or may not have a token. There are, however, situations where shards themselves make
+transactions on the relay chain.
 
 [Parachains](learn-parachains.md) have a dedicated slot on the relay chain for execution, so their
 collators do not need to own DOT in order to include blocks. The parachain will make some
@@ -215,11 +207,10 @@ parachain's behalf.
 
 ## Block Limits and Transaction Priority
 
-Blocks in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} have both a maximum length
-(in bytes) and a maximum weight. Block producers will fill blocks with transactions up to these
-limits. A portion of each block - currently 25% - is reserved for critical transactions that are
-related to the chain's operation. Block producers will only fill up to 75% of a block with normal
-transactions. Some examples of operational transactions:
+Relay chain blocks have both a maximum length (in bytes) and a maximum weight. Block producers will
+fill blocks with transactions up to these limits. A portion of each block - currently 25% - is
+reserved for critical transactions that are related to the chain's operation. Block producers will
+only fill up to 75% of a block with normal transactions. Some examples of operational transactions:
 
 - Misbehavior reports
 - Council operations

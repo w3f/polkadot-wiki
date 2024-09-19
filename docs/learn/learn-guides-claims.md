@@ -19,15 +19,13 @@ see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashb
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
 tokens, you can now claim your DOT (and a proportional amount of KSM on the Kusama network). The
 claim process connects the address where your DOT indicators have been stored on Ethereum with a
-native {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} address and, if your ETH
-address is eligible, will pay the tokens to the
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} address.
+native Polkadot address and, if your ETH address is eligible, will pay the tokens to the Polkadot
+address.
 
-To do this, you must sign a message on Ethereum containing the address of your
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can do this by using the
-Polkadot-JS UI [Claims app](https://polkadot.js.org/apps/#/claims). Ensure that you are connected to
-the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network (displayed in the
-upper-left-hand corner of the screen).
+To do this, you must sign a message on Ethereum containing the address of your Polkadot account. You
+can do this by using the Polkadot-JS UI [Claims app](https://polkadot.js.org/apps/#/claims). Ensure
+that you are connected to the Polkadot network (displayed in the upper-left-hand corner of the
+screen).
 
 :::warning Third-party claim processes
 
@@ -39,8 +37,7 @@ claims process below, is the only way to ensure you will receive your allocation
 
 ## Generate an Account
 
-You will need to generate a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account
-to claim {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. See the
+You will need to generate an account on the relay chain to claim DOT (or KSM on Kusama). See the
 [available wallets and extensions](../general/wallets-and-extensions.md) for more information about
 wallets and browser extensions you can use to create an account. In terms of hardware wallet
 support, you can use the [Ledger](../general/ledger.md) devices or
@@ -53,8 +50,7 @@ process of claiming the tokens.
 
 ### Select Accounts
 
-Select the account you would like to claim the
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} into and click the "Continue" button to
+Select the account you would like to claim the tokens into and click the "Continue" button to
 proceed. Your screen should look something like this:
 
 ![claim select dot account](../assets/claim-select-dot-account.png)
@@ -68,11 +64,8 @@ to proceed.
 
 ### Sign Message on Ethereum & Claim
 
-The hex-encoded string that follows the sentence: "Pay
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account:" is the hex-encoded public
-key of your {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account, minus the `0x`
-prefix.
+The hex-encoded string that follows the sentence "Pay DOT to the Polkadot account:" is the
+hex-encoded public key of your Polkadot account, minus the `0x` prefix.
 
 ![claim copy msg](../assets/claim-copy-msg.png)
 
@@ -92,12 +85,10 @@ Polkadot-JS UI and click "Confirm Claim."
 ![claim paste signature](../assets/claim-paste-signature.png)
 
 At this point, if you are eligible, you will see a success message if everything went right and your
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} will now be in the account that you claimed
-to. Congratulations! You can now participate in aspects of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network such as
-[governance](../learn/learn-polkadot-opengov.md) and [staking](../learn/learn-staking.md).
+tokens will now be in the account that you claimed to. Congratulations! You can now participate in
+aspects of the network such as [governance](../learn/learn-polkadot-opengov.md) and
+[staking](../learn/learn-staking.md).
 
 ### Verifying your Claim
 
-After you make an on-chain claim for {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, your
-Your account balance should be updated immediately.
+After you make an on-chain claim, your Your account balance should be updated immediately.
