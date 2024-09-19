@@ -49,7 +49,7 @@ Parachains can switch between being on-demand and permanent.
 ### [Shared Security](learn-parachains.md)
 
 Parachains connected to the relay chain all share in the security of the relay chain. Polkadot has a
-shared state between the Relay Chain and all of the connected parachains. If the relay chain must
+shared state between the relay chain and all of the connected parachains. If the relay chain must
 revert for any reason, then all of the parachains would also revert. This is to ensure that the
 validity of the entire system can persist and no individual part is corruptible.
 
