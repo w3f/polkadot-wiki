@@ -31,15 +31,13 @@ data as everyone else. Solutions such as
 the middle, where the amount of trust you put into the reporting oracles can be adjusted based on
 your preferences. A Chainlink
 [Feed Pallet](https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md)
-was recently released to allow smart contract applications across
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to access price reference data, made
-available as a Substrate oracle pallet. [Acurast](https://acurast.com/) is another solution that
-enables developers to define their off-chain data and computation requirements and receive the
-outputs to the [Acurast Pallet](https://docs.acurast.com/integrations/substrate) and EVM or WASM
-environments.
+was recently released to allow smart contract applications across Polkadot to access price reference
+data, made available as a Substrate oracle pallet. [Acurast](https://acurast.com/) is another
+solution that enables developers to define their off-chain data and computation requirements and
+receive the outputs to the [Acurast Pallet](https://docs.acurast.com/integrations/substrate) and EVM
+or WASM environments.
 
 When using an oracle in your application you should be aware of the benefits and risks that are
-baked into its specific model. As the {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} ecosystem develops and oracle parachains begin to appear, this article
-will be updated with a comparison of the different solutions and the benefits and drawbacks that
-each provide.
+baked into its specific model. As the Polkadot ecosystem develops and oracle parachains begin to
+appear, this article will be updated with a comparison of the different solutions and the benefits
+and drawbacks that each provide.

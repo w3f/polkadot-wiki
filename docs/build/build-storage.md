@@ -8,9 +8,8 @@ slug: ../build-storage
 ---
 
 Storage is an integral part of modern computer systems, and the same is true for distributed and
-decentralized systems like a blockchain. When interacting with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem, it will be helpful if you
-familiarize yourself with the current Web3 approach towards decentralized storage.
+decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it will be
+helpful if you familiarize yourself with the current Web3 approach towards decentralized storage.
 
 ## DCS (Decentralized Cloud Storage)
 

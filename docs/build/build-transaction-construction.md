@@ -62,17 +62,16 @@ the `metadataHash` field is empty/None.
 **Serialized transactions and metadata**
 
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded
-SCALE-encoded bytes. The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtimes are
-upgradable and therefore any interfaces are subject to change, the metadata allows developers to
-structure any extrinsics or storage entries accordingly. The metadata provides you with all of the
-information required to know how to construct the serialized call data specific to your transaction.
-You can read more about the metadata, its format and how to get it in the
+SCALE-encoded bytes. The Relay Chain runtimes are upgradable and therefore any interfaces are
+subject to change, the metadata allows developers to structure any extrinsics or storage entries
+accordingly. The metadata provides you with all of the information required to know how to construct
+the serialized call data specific to your transaction. You can read more about the metadata, its
+format and how to get it in the
 [Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
 
 **Summary**
 
-The typical transaction workflow for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-is as follows:
+The typical transaction workflow is as follows:
 
 1. Construct an unsigned transaction.
 2. Create a signing payload.

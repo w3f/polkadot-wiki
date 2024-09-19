@@ -10,13 +10,11 @@ slug: ../build-client-side
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 As with any blockchain, building decentralized applications (dApps) is a significant part of how a
-developer can build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+developer can build on Polkadot.
 
 As an application developer, you can compose your front-end apps in a few different ways. Because
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and its parachains are all built
-using the Polkadot SDK. You can often use the same SDK to communicate with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, a parachain, or any other
-Substrate-based chain.
+the Relay Chain and its parachains are all built using the Polkadot SDK. You can often use the same
+SDK to communicate with the Relay Chain, a parachain, or any other Substrate-based chain.
 
 :::note Substrate-based chains use an SS58 encoding for their address formats.
 
@@ -116,9 +114,8 @@ baked into its specific model.
 ## Decentralized Storage Options
 
 Storage is an integral part of modern computer systems, and the same is true for distributed and
-decentralized systems like a blockchain. When interacting with the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem, it will be helpful if you
-familiarize yourself with the current Web3 approach towards decentralized storage.
+decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it will be
+helpful if you familiarize yourself with the current Web3 approach towards decentralized storage.
 
 ## DCS (Decentralized Cloud Storage)
 

@@ -10,16 +10,15 @@ slug: ../build-hackathon
 ## Join a Hackathon
 
 Web3 Foundation regularly supports developer focused events! Be the first to know by signing up for
-the {{ polkadot: [Polkadot newsletter](https://info.polkadot.network/subscribe). :polkadot }}
-{{ kusama: [Kusama newsletter](https://kusama.network/newsletter/). :kusama }}
+the [Polkadot newsletter](https://polkadot.com/community/newsroom) and the
+[Kusama newsletter](https://kusama.network/newsletter/).
 
 ## Host a Hackathon
 
 As one of our objectives in the Web3 Foundation is promoting the
 [Web3 technology stack](https://wiki.polkadot.network/docs/build-open-source), we would like to
 support any individual or team who wants to organize a hackathon that gets more developers to
-understand {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate in your city
-or online.
+understand Polkadot and Substrate in your city or online.
 
 We are not only providing technical resources for you, but we can have someone from our team give a
 hands-on workshop/presentation about the technology to help participants get started hacking on it
