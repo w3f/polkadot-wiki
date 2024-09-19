@@ -30,9 +30,9 @@ trust-free environment.
 
 Parachain validators (i.e. para-validators) participate to the
 [Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md/#parachain-phase), and submit
-[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the Relay Chain
+[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the relay chain
 transaction queue so that a block author can include information on the parablock in a fork of of
-the Relay Chain.
+the relay chain.
 
 Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
 blocks for all parachains connected to the relay chain. The selected para-validators are part of the
@@ -47,15 +47,15 @@ _backable_.
 
 ## Block Authors
 
-There are validators on the Relay Chain who participate in the consensus mechanism to produce the
+There are validators on the relay chain who participate in the consensus mechanism to produce the
 relay chain blocks based on validity statements from other validators. These validators are called
 block authors, they are selected by [BABE](./learn-consensus.md/#block-production-babe) and can note
 up to one backable candidate for each parachain to include in the relay chain. A backable candidate
 included in the relay chain is considered _backed_ in that fork of the chain.
 
-In a Relay Chain block, block authors will only include
+In a relay chain block, block authors will only include
 [candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) that have a parent
-candidate receipt in an earlier Relay Chain block. This ensures the parachain follows a valid chain.
+candidate receipt in an earlier relay chain block. This ensures the parachain follows a valid chain.
 Also, the block authors will only include a receipt for which they have an erasure coding chunk,
 ensuring that the system can perform the next round of availability and validity checks.
 
@@ -87,7 +87,7 @@ for their activities.
 
 Finally, validators participate in the
 [chain selection process within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring
-that only available and valid blocks end within the finalized Relay Chain.
+that only available and valid blocks end within the finalized relay chain.
 
 :::info Within an era roles can change
 

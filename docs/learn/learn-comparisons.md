@@ -38,7 +38,7 @@ on a single virtual machine, called the Ethereum Virtual Machine (EVM). In
 logic into individual blockchains, where the interface is part of the state transition function of
 the blockchain itself. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} will also
 support smart contract blockchains for Wasm and EVM to provide compatibility with existing
-contracts, but will not have smart contract functionality on its core chain, the Relay Chain.
+contracts, but will not have smart contract functionality on its core chain, the relay chain.
 
 As such, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is a possible augmentation
 and scaling method for Ethereum 1.x, rather than competition.

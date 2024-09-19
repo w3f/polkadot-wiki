@@ -7,7 +7,7 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
-The Relay Chain which is a layer 0 blockchain, does not support smart contracts natively. However,
+The relay chain which is a layer 0 blockchain, does not support smart contracts natively. However,
 parachains which are layer 1 blockchains are equipped with the functionality to support smart
 contracts.
 
@@ -51,12 +51,12 @@ Leaving certain logic, such as complex loops that could run indefinitely, to a n
 layer, or even trying to eliminate it, will often be a wiser choice. Parachains try to be proactive,
 while smart contract platforms are event-driven.
 
-Relay Chain and parachians typically use the _weight-fee model_ and not a _gas-metering model_.
+relay chain and parachians typically use the _weight-fee model_ and not a _gas-metering model_.
 
 ## Building a Smart Contract
 
-The Relay Chain does not natively support smart contracts. However, since the parachains that
-connect to the Relay Chain can support arbitrary state transitions, they support smart contracts.
+The relay chain does not natively support smart contracts. However, since the parachains that
+connect to the relay chain can support arbitrary state transitions, they support smart contracts.
 
 Substrate presently supports smart contracts out-of-the-box in several ways:
 
@@ -168,7 +168,7 @@ smart contract example? Ask us to add it to this page!**
 
 ## Smart Contract Environments
 
-It is still early for smart contracts on the Relay Chain and the development is only now
+It is still early for smart contracts on the relay chain and the development is only now
 stabilizing. We are actively producing content to help developers get up to speed and will maintain
 the Wiki with the latest resources. You should also keep up to date with the following links:
 

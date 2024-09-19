@@ -20,12 +20,12 @@ provides.
 ## Overview
 
 System parachains are those that contain core Polkadot protocol features, but in parachains rather
-than the Relay Chain. Rather than leasing an execution core by economic means (e.g., auction),
+than the relay chain. Rather than leasing an execution core by economic means (e.g., auction),
 execution cores are allocated by network [governance](./learn-guides-polkadot-opengov.md).
 
-By hosting core protocol logic in parachains instead of the Relay Chain, Polkadot uses its own
+By hosting core protocol logic in parachains instead of the relay chain, Polkadot uses its own
 scaling technology -- namely, parallel execution -- to host _itself_. System parachains remove
-transactions from the Relay Chain, allowing more Relay Chain
+transactions from the relay chain, allowing more relay chain
 [blockspace](https://www.rob.tech/polkadot-blockspace-over-blockchains/) to be used for Polkadot's
 primary purpose: validating parachains.
 
@@ -67,7 +67,7 @@ NFTs see the [dedicated wiki page](./learn-nft-pallets.md).
 
 This logic for asset management is not encoded in smart contracts, but rather directly in the
 runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and deposits
-are about 1/10th of their respective value on the Relay Chain.
+are about 1/10th of their respective value on the relay chain.
 
 These low fee levels mean that the Asset Hub is well suited for handling
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} balances and transfers as well as managing
@@ -91,7 +91,7 @@ within other networks. This is achieved with the assistance from a [bridge hub](
 ### Bridge Hub
 
 Before Polkadot and Kusama supported their first parachains, the only way to design a bridge was to
-put the logic onto the Relay Chain itself. Since both networks now support parachains, it makes
+put the logic onto the relay chain itself. Since both networks now support parachains, it makes
 sense to have a parachain on each network dedicated to bridges. This is because of the execution
 isolation provided by parachains.
 

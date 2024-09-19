@@ -58,7 +58,7 @@ and is
 
 You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and
 `treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of
-DOT that is locally available, i.e., DOT from the Relay Chain's treasury account. `spend` actually
+DOT that is locally available, i.e., DOT from the relay chain's treasury account. `spend` actually
 allows the caller to specify an asset other than DOT, or even assets in other locations, e.g.
 [Asset Hub](../general/glossary.md#asset-hub).
 
@@ -216,7 +216,7 @@ Now, let's go through each field one-by-one and fill them in accordingly:
 - The relative location of the asset, and
 - How it is identified within this location.
 
-For this example, we are using USDT, which from the perspective of the Relay Chain would be:
+For this example, we are using USDT, which from the perspective of the relay chain would be:
 
 `Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
 
@@ -267,7 +267,7 @@ an account address on the chain.
 
 ### Specifying `validFrom` (optional)
 
-The `validFrom` field is optional, and refers to the block height of the Relay Chain upon which the
+The `validFrom` field is optional, and refers to the block height of the relay chain upon which the
 payout can be issued. If the `validFrom` parameter is not set, the spend can be paid out immediately
 after approval. For more information on this field, refer to the
 [guide below](#creating-a-staged-proposal-with-validfrom).

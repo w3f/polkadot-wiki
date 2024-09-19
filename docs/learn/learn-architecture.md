@@ -16,12 +16,12 @@ shared security and interoperability.
 
 ## Relay Chain
 
-The Relay Chain is the central chain of
+The relay chain is the central chain of
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. All validators of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are staked on the Relay Chain in DOT
-and validate for the Relay Chain. The Relay Chain is composed of a relatively small number of
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} are staked on the relay chain in DOT
+and validate for the relay chain. The relay chain is composed of a relatively small number of
 transaction types that include ways to interact with the governance mechanism, parachain auctions,
-and participating in NPoS. The Relay Chain has deliberately minimal functionality - for instance,
+and participating in NPoS. The relay chain has deliberately minimal functionality - for instance,
 smart contracts are not supported. The main responsibility is to coordinate the system as a whole,
 including parachains. Other specific work is delegated to the parachains, which have different
 implementations and features.
@@ -56,15 +56,15 @@ switch between being on-demand and permanent.
 ### [Shared Security](learn-parachains.md)
 
 Parachains connected to the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay
-Chain all share in the security of the Relay Chain.
+Chain all share in the security of the relay chain.
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} has a shared state between the Relay
-Chain and all of the connected parachains. If the Relay Chain must revert for any reason, then all
+Chain and all of the connected parachains. If the relay chain must revert for any reason, then all
 of the parachains would also revert. This is to ensure that the validity of the entire system can
 persist and no individual part is corruptible.
 
 The shared state ensures that the trust assumptions when using
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} parachains are only those of the
-Relay Chain validator set and no other. Since the validator set on the Relay Chain is expected to be
+relay chain validator set and no other. Since the validator set on the relay chain is expected to be
 secure with a large amount of stake put up to back it, parachains should benefit from this security.
 
 ## Interoperability
@@ -83,7 +83,7 @@ reading the [specification](https://github.com/paritytech/xcm-format).
 A blockchain [bridge](../general/glossary.md#bridge) is a connection that allows for arbitrary data
 to transfer from one network to another. These chains are interoperable through the bridge but can
 exist as standalone chains with different protocols, rules, and governance models. In
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, bridges connect to the Relay Chain
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, bridges connect to the relay chain
 and are secured through the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} consensus
 mechanism, maintained by [collators](#collators).
 
@@ -96,7 +96,7 @@ acting as a [secure and robust] communication channel for chains in isolation.
 ## Validators
 
 [Validators](../general/glossary.md#validator), if elected to the validator set, produce blocks on
-the Relay Chain. They also accept proofs of valid state transition from collators and receive
+the relay chain. They also accept proofs of valid state transition from collators and receive
 staking rewards in return.
 
 Validators are required to keep enough parachain blocks available for later use in their local
@@ -113,9 +113,9 @@ nominators are generally rewarded with a portion of the staking rewards from tha
 
 ## Collators
 
-[Collators](../general/glossary.md#collator) are full nodes on both a parachain and the Relay Chain.
+[Collators](../general/glossary.md#collator) are full nodes on both a parachain and the relay chain.
 They collect parachain transactions and produce state transition proofs for the validators on the
-Relay Chain. They can also send and receive messages from other parachains using XCMP.
+relay chain. They can also send and receive messages from other parachains using XCMP.
 
 Parachain blocks themselves are produced by collators, whereas the relay chain validators only
 verify their validity (and later, their availability).

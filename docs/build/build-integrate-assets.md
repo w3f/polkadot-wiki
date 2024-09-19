@@ -7,7 +7,7 @@ keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
 
-The Relay Chain does not natively support assets beyond its native token. This functionality exists
+The relay chain does not natively support assets beyond its native token. This functionality exists
 in parachains. On both Polkadot and Kusama, this parachain is called Asset Hub.
 
 The Asset Hub provides a first-class interface for creating, managing, and using fungible and
@@ -19,18 +19,18 @@ Beyond merely supporting assets, integrating an Asset Hub into your systems has 
 infrastructure providers and users:
 
 - Support for on-chain assets.
-- Significantly lower transaction fees (about 1/10) than the Relay Chain.
-- Significantly lower deposits (1/100) than the Relay Chain. This includes the existential deposit
+- Significantly lower transaction fees (about 1/10) than the relay chain.
+- Significantly lower deposits (1/100) than the relay chain. This includes the existential deposit
   and deposits for proxy/multisig operations.
 - Ability to pay transaction fees in certain assets. As in, accounts would **not** need DOT to exist
   on-chain or pay fees.
 
-The Asset Hub will use DOT as its native currency. Users can transfer DOT from the Relay Chain into
-the Asset Hub and use it natively. The Relay Chain will also accept DOT transfers from the Asset Hub
-back to the Relay Chain for staking, governance, or any other activity.
+The Asset Hub will use DOT as its native currency. Users can transfer DOT from the relay chain into
+the Asset Hub and use it natively. The relay chain will also accept DOT transfers from the Asset Hub
+back to the relay chain for staking, governance, or any other activity.
 
-Using the Asset Hub for DOT/KSM balance transfers will be much more efficient than the Relay Chain
-and is highly recommended. Until domain-specific parachains are built, the Relay Chain will still
+Using the Asset Hub for DOT/KSM balance transfers will be much more efficient than the relay chain
+and is highly recommended. Until domain-specific parachains are built, the relay chain will still
 need to be used for staking and governance.
 
 ## Assets Basics
@@ -71,7 +71,7 @@ transfers.
 
 Note that you can use the same addresses (except
 [pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that
-you use on the Relay Chain. The SS58 encodings are the same; only the chain information (genesis
+you use on the relay chain. The SS58 encodings are the same; only the chain information (genesis
 hash, etc.) will change on transaction construction.
 
 #### Paying Transaction Fees in Another Asset
@@ -138,7 +138,7 @@ issue so a developer can help.
 ### Parachain Node
 
 Using the Asset Hub will require running a parachain node to sync the chain. This is very similar to
-running a Relay Chain node, with the addition of some extra flags. You can follow
+running a relay chain node, with the addition of some extra flags. You can follow
 [these guidelines](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) to set
 up an Asset Hub node.
 
@@ -154,7 +154,7 @@ the complete documentation, including installation guide and usage examples.
 
 ### Sidecar
 
-API Sidecar is a REST service for Relay Chain and parachain nodes. It comes with endpoints to query
+API Sidecar is a REST service for relay chain and parachain nodes. It comes with endpoints to query
 information about assets and asset balances on the Asset Hub.
 
 - Asset lookups always use the `AssetId` to refer to an asset class. On-chain metadata is subject to
@@ -182,7 +182,7 @@ or any other critical purpose.
 
 TxWrapper Polkadot is a library designed to facilitate transaction construction and signing in
 offline environments. It comes with asset-specific functions to use on the Asset Hub. When
-constructing parachain transactions, you can use `txwrapper-polkadot` exactly as on the Relay Chain,
+constructing parachain transactions, you can use `txwrapper-polkadot` exactly as on the relay chain,
 but construct transactions with the appropriate parachain metadata like genesis hash, spec version,
 and type registry.
 
@@ -190,11 +190,11 @@ and type registry.
 
 #### Monitoring of XCM deposits
 
-Thanks to XCM and a growing number of parachains, the Relay Chain native token can exist across
+Thanks to XCM and a growing number of parachains, the relay chain native token can exist across
 several blockchains, which means the providers need to monitor cross-chain transfers on top of local
 transfers and corresponding `balances.transfer` events.
 
-Currently, DOT can be sent and received in the Relay Chain and in the Asset Hub either with a
+Currently, DOT can be sent and received in the relay chain and in the Asset Hub either with a
 [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
 [system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a
 [Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport)
@@ -212,7 +212,7 @@ that emitted the relevant `balances.minted` event. This can be done as follows:
 1. Query the relevant chain `at` the block the `balances.minted` event was emitted.
 2. Filter for a `messageQueue(Processed)` event, also emitted during block initialization. This
    event has a parameter `Id`. The value of `Id` identifies the cross-chain message received in the
-   Relay Chain or in the Asset Hub. It can be used to track back the message in the origin parachain
+   relay chain or in the Asset Hub. It can be used to track back the message in the origin parachain
    if needed. Note that a block may contain several `messageQueue(Processed)` events corresponding
    to several cross-chain messages processed for this block.
 

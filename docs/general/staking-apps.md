@@ -23,7 +23,7 @@ and add your protocol native, permissionless, non-custodial NPoS Staking app to 
 ## Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a web3 application
-dedicated to native non-custodial [staking](../learn/learn-staking.md) on the Relay Chain. The
+dedicated to native non-custodial [staking](../learn/learn-staking.md) on the relay chain. The
 dashboard allows to stake as a solo nominator or as a
 [nomination pool](../learn/learn-nomination-pools.md) member. Users can also create their nomination
 pools. The dashboard supports [Ledger](../general/ledger.md),
@@ -95,7 +95,7 @@ choose their preferred validators or stake with the recommended validator set.
 ## NOMI
 
 [NOMI](https://apps.turboflakes.io/?app=nomi) is designed to actively involve nominators in native
-staking on the Relay Chain. It aims to offer a unique and enhanced nomination experience, using
+staking on the relay chain. It aims to offer a unique and enhanced nomination experience, using
 [Multiple-Criteria Decision Analysis](https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis)
 (MCDA) as a base for the analytical research. MCDA is an open and transparent approach for
 evaluating numerous conflicting traits in the decision-making process. For the analysis, validator

@@ -7,7 +7,7 @@ keywords: [build, parachain, develop, implement, PDK]
 slug: ../build-pdk
 ---
 
-Parachains are connected to and secured by the Relay Chain. They benefit from the _pooled security_,
+Parachains are connected to and secured by the relay chain. They benefit from the _pooled security_,
 _thought-through governance_, and overall _scalability_ of the heterogeneous sharding approach of
 the network. Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its
 own logic and runs in parallel within the Polkadot ecosystem.
@@ -66,7 +66,7 @@ faced with the network constraint of processing transactions in sequence, causin
 #### Interoperability
 
 Any decentralised application or chain that wants to enable trustless messaging to other parachains
-already connected to the Relay Chain would want to become a parachain. Interoperability between
+already connected to the relay chain would want to become a parachain. Interoperability between
 sovereign chains involves certain constraints and complex protocols to enable across a wide breadth
 of chains.
 
@@ -125,7 +125,7 @@ parachain. They can be incentivized with a native token payout from:
 
 ### Para-objects
 
-:::info The Relay Chain can host arbitrary state machines, not just blockchains.
+:::info The relay chain can host arbitrary state machines, not just blockchains.
 
 The Polkadot network will encourage the connection and interoperability between different
 _para-objects_.
@@ -139,12 +139,12 @@ These could be in the form of:
 
 - System level chains (permanent chains): [leased slots](../learn/learn-auction.md)
 - [Bridge](../learn/learn-bridges.md) Hubs
-- Nested Relay Chains
+- Nested relay chains
 
 ### Migration
 
 Projects that are already functioning as "solochains" or in isolated environments may be interested
-in migrating onto the Relay Chain as a para-object. While the parachain model has its benefits, it
+in migrating onto the relay chain as a para-object. While the parachain model has its benefits, it
 may not be the go-to strategy for some projects.
 
 As a path for migration onto Polkadot, it may be more viable to migrate to one of the chains in one
@@ -196,7 +196,7 @@ Currently, the only PDK is
 **[Substrate](https://substrate.io/)** is a blockchain framework that provides the basic building
 blocks of a blockchain (things like the networking layer, consensus, a Wasm interpreter) while
 providing an intuitive way to construct your runtime. Substrate is made to ease the process of
-creating a new chain, but it does not provide support for Relay Chain compatibility directly. For
+creating a new chain, but it does not provide support for relay chain compatibility directly. For
 this reason, `Cumulus`, an added _library_ contains all of the Polkadot compatibility glue code.
 
 :::note Get started with Substrate
@@ -220,7 +220,7 @@ beautiful and functional.
 Substrate that makes it easy to make any Substrate-built runtime into a Polkadot-compatible
 parachain.
 
-Cumulus Consensus is a consensus engine for Substrate that follows a Relay Chain. This runs a Relay
+Cumulus Consensus is a consensus engine for Substrate that follows a relay chain. This runs a Relay
 Chain node internally, and dictates to the client and synchronization algorithms which chain to
 follow, finalize, and treat as correct.
 
@@ -243,11 +243,11 @@ Everything else is up to the implementer of the PDK.
 :::
 
 Cumulus handles the network compatibility overhead that any parachain would need to implement to be
-connected to the Relay Chain. This includes:
+connected to the relay chain. This includes:
 
 - Cross-chain message passing (XCMP)
 - Out-of-the-box Collator node setup
-- An embedded full client of the Relay Chain
+- An embedded full client of the relay chain
 - Block authorship compatibility
 
 Are you interested in building a PDK? See the [future PDKs](#future-pdks) section for details.
@@ -256,21 +256,21 @@ Are you interested in building a PDK? See the [future PDKs](#future-pdks) sectio
 
 After creating your chain runtime logic with Substrate, you will be able to compile it down to a
 Wasm executable. This Wasm code blob will contain the entire state transition function of your
-chain, and is what you will need to deploy your project to the Relay Chain as a parachain.
+chain, and is what you will need to deploy your project to the relay chain as a parachain.
 
-Validators on the Relay Chain will use the submitted Wasm code to validate the state transitions of
+Validators on the relay chain will use the submitted Wasm code to validate the state transitions of
 your chain or thread, but doing this requires some additional infrastructure. A validator needs some
-way to stay up to date with the most recent state transitions, since Relay Chain nodes will not be
+way to stay up to date with the most recent state transitions, since relay chain nodes will not be
 required to also be nodes of your chain.
 
 This is where the collator node comes into play. A collator is a maintainer of your parachain and
 performs the critical action of producing new block candidates for your chain and passing them to
-Relay Chain validators for inclusion in the Relay Chain.
+relay chain validators for inclusion in the relay chain.
 
 Substrate comes with its own networking layer built-in but unfortunately only supports solo chains
 (that is, chains that do not connect to the relay chain). However, there is the Cumulus extension
 that includes a collator node and allows for your Substrate-built logic to be compatible with the
-Relay Chain as a parachain.
+relay chain as a parachain.
 
 ### Future PDKs
 
@@ -290,7 +290,7 @@ updates** into a single on-chain update. It should be straightforward to see how
 this to the parachain terms. The state transition function for a roll-up-like parachain would be
 updating the state (in practice, most likely a Merkle tree, which would be easily verifiable) from
 the user inputs. The operator would act as the collator node, which would aggregate the state and
-create the zk-SNARK proof that it would hand to a Relay Chain's validators for verification.
+create the zk-SNARK proof that it would hand to a relay chain's validators for verification.
 
 If you or your team are interested in developing a PDK feel free to apply for a grant on the
 [W3F Grants Program repository](https://github.com/w3f/Grants-Program). There may be grants
@@ -355,7 +355,7 @@ Then, connect your local node with Polkadot-JS Apps.
 
 ## Deploy
 
-Substrate-based chains, including the Polkadot and Kusama Relay Chains, use an
+Substrate-based chains, including the Polkadot and Kusama relay chains, use an
 [SS58 encoding](../learn/learn-account-advanced.md#address-format) for their address formats.
 [This page](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json) serves as the
 canonical registry for teams to see which chain corresponds to a given prefix, and which prefixes

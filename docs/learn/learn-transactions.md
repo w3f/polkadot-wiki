@@ -201,16 +201,16 @@ transactions warrant limiting resources with other strategies. For example:
 ## Parachain Transactions
 
 The transactions that take place within
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s parachains do not incur Relay Chain
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s parachains do not incur relay chain
 transaction fees. Users of shard applications do not even need to hold DOT tokens, as each shard has
 its own economic model and may or may not have a token. There are, however, situations where shards
-themselves make transactions on the Relay Chain.
+themselves make transactions on the relay chain.
 
-[Parachains](learn-parachains.md) have a dedicated slot on the Relay Chain for execution, so their
+[Parachains](learn-parachains.md) have a dedicated slot on the relay chain for execution, so their
 collators do not need to own DOT in order to include blocks. The parachain will make some
 transactions itself, for example, opening or closing an [XCM](learn-xcm.md) channel, participating
 in an [auction](learn-auction.md) to renew its slot, or upgrading its runtime. Parachains have their
-own accounts on the Relay Chain and will need to use those funds to issue transactions on the
+own accounts on the relay chain and will need to use those funds to issue transactions on the
 parachain's behalf.
 
 ## Block Limits and Transaction Priority

@@ -51,7 +51,7 @@ allow assets to be specified by a 32-byte blob. This is convenient, but it relie
 interpret the blob in the way that the sender expects, which will require a common definition
 between the sender and the receiver, and may not be simple to achieve. Concrete identities use a
 `MultiLocation` to identify an asset unambiguously. For native assets (such as DOT), the asset is
-identified as the chain which mints the asset (the Polkadot Relay Chain in this case, which would be
+identified as the chain which mints the asset (the Polkadot relay chain in this case, which would be
 the location `..` from one of its parachains). Other assets (e.g. non-native assets or NFTs) can be
 identified by a `GeneralIndex` junction. Depending on the implementation of the encapsulating
 consensus system, the exact location may differ (e.g. `GeneralIndex(AssetID)` or
@@ -140,7 +140,7 @@ For more information about the MultiLocations used to define concrete assets, se
 [MultiLocation](multilocation/summary.md) and [Junction](multilocation/junction.md).
 
 ```rust
-// Location Relay Chain
+// Location relay chain
 // 100 Native Asset (three ways)
 MultiAsset {id: Concrete(MultiLocation {parents: 0, interior: Here}), fun: Fungible(100u128)};
 MultiAsset {id: Here.into(), fun: 100.into()};

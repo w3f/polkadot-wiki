@@ -8,9 +8,9 @@ slug: ../build-hrmp-channels
 ---
 
 In order to communicate over [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite), parachains must
-establish channels by registering them on the Relay Chain. Like
+establish channels by registering them on the relay chain. Like
 [XCMP](../learn/learn-xcm-transport.md#xcmp-cross-chain-message-passing), HRMP is a message
-transport protocol, but passes all messages via the Relay Chain. When XCMP is implemented on
+transport protocol, but passes all messages via the relay chain. When XCMP is implemented on
 Polkadot, HRMP is planned to be deprecated and phased out.
 
 HRMP channels are uni-directional. Bi-directional communication between two parachains will require
@@ -23,7 +23,7 @@ channel request and then the second chain accepting it. When neither chain is a
 [system chain](../learn/learn-system-chains.md), they will use the `hrmpInitOpenChannel` and
 `hrmpAcceptOpenChannel` calls, respectively.
 
-Each chain must dispatch the following calls on the Relay Chain from its parachain origin.
+Each chain must dispatch the following calls on the relay chain from its parachain origin.
 
 1. `hrmp > hrmpInitOpenChannel(recipient, proposedMaxCapacity, proposedMaxMessageSize)`: Initiates
    channel establishment by creating a channel request with a given configuration. Note that the max
@@ -32,7 +32,7 @@ Each chain must dispatch the following calls on the Relay Chain from its paracha
 2. `hrmp > hrmpAcceptOpenChannel(sender)`: Accept the channel open request from the given sender.
 
 In order to dispatch a call from its sovereign origin, a parachain may use governance to send the
-encoded call in a `Transact` instruction to the Relay Chain, but it may also execute this logic
+encoded call in a `Transact` instruction to the relay chain, but it may also execute this logic
 autonomously (e.g. on the notification that a channel was requested).
 
 ### Examples of HRMP Channel Management

@@ -121,7 +121,7 @@ The easiest way to get your address is to click on the account name. This will o
 showing your address and other information, such as on-chain identity. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-:::note Your Asset Hub address is the same as your Relay Chain address
+:::note Your Asset Hub address is the same as your relay chain address
 
 Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub
 parachain, otherwise (if you're receiving {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}

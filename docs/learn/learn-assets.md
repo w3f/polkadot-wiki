@@ -20,13 +20,13 @@ parachains can host applications dealing with assets on the Asset Hub, the hub c
 a trusted "home base" of assets in the network.
 
 The Asset Hub uses {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} as its native token. The
-chain yields its governance to its parent Relay Chain and has no inflation or era-based rewards for
+chain yields its governance to its parent relay chain and has no inflation or era-based rewards for
 collators (although collators receive a portion of transaction fees). As a
 [system parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-the Asset Hub has a trusted relationship with the Relay Chain, and as such, can teleport
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} between itself and the Relay Chain. That is,
+the Asset Hub has a trusted relationship with the relay chain, and as such, can teleport
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} between itself and the relay chain. That is,
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Asset Hub is just as good as
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the Relay Chain.
+{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} on the relay chain.
 
 The Asset Hub does not support smart contracts. See the [Advanced](#advanced-techniques) section at
 the bottom for a discussion on using proxy and multisig accounts to replicate oft-used contract
@@ -36,7 +36,7 @@ logic.
 
 A sufficient asset on Asset Hub can allow for an account to exist on-chain even though it does not
 have any account balance in {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. Any registered
-asset on the Asset Hub can be made _sufficient_ through governance on the Relay Chain. A balance of
+asset on the Asset Hub can be made _sufficient_ through governance on the relay chain. A balance of
 a non-sufficient asset can only exist on accounts that are on-chain (i.e., accounts having the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) of a sufficient asset).
 That is, a user could not keep an account on-chain by transferring a non-sufficient asset to it; the

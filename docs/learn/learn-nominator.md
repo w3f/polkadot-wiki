@@ -77,7 +77,7 @@ being [slashed](./learn-offenses.md) if the validator gets slashed.
 - By getting [staking](./learn-staking.md) rewards you keep up with or (likely) stay ahead of
   {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} inflation.
 
-Nominators secure the Relay Chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
+Nominators secure the relay chain by staking {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}
 and nominating validators. You may have an account with
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} and want to earn fresh
 {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}. You could do so as a validator, which

@@ -89,7 +89,7 @@ One conviction voting lock period on Polkadot equals <RPC network="polkadot" pat
 
 #### Existential Deposit
 
-The minimum number of tokens to keep an account alive on the Polkadot Relay Chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+The minimum number of tokens to keep an account alive on the Polkadot relay chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
 #### Inactive Issuance
 
@@ -273,7 +273,7 @@ One conviction voting lock period on Kusama equals <RPC network="kusama" path="c
 
 #### Existential Deposit
 
-The minimum number of tokens to keep an account alive on the Kusama Relay Chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+The minimum number of tokens to keep an account alive on the Kusama relay chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
 #### Inactive Issuance
 

@@ -76,7 +76,7 @@ reserved specifically for on-demand orders.
 :::info Parathreads are renamed to on-demand parachains
 
 On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and
-use it to access the Relay Chain through the on-demand coretime pool.
+use it to access the relay chain through the on-demand coretime pool.
 
 :::
 
@@ -93,7 +93,7 @@ cores on the relay chain to the parachains.
 
 ### Timeslice
 
-A timeslice represents the granularity the Coretime Chain schedules cores on the Relay Chain. The
+A timeslice represents the granularity the Coretime Chain schedules cores on the relay chain. The
 Coretime Chain announces a schedule for each core, comprising the next 80 relay chain blocks in
 advance. 5,040 timeslices corresponds to the region length of 28 days (which is the initial
 configuration set for bulk coretime).
@@ -107,7 +107,7 @@ limited to securing parachains.
 
 Coretime is managed through the
 [broker pallet](https://github.com/paritytech/polkadot-sdk/blob/eefd5fe4499515da66d088505093f75b5aa22550/substrate/frame/broker/src/lib.rs)
-which is deployed on the Coretime Chain. In theory, the Polkadot Relay Chain can support around a
+which is deployed on the Coretime Chain. In theory, the Polkadot relay chain can support around a
 hundred cores seamlessly and can support over a few hundred cores through optimizations. Preliminary
 tests ran successfully with 80 cores with 12-second block times.
 
@@ -144,7 +144,7 @@ these actions makes you lose the right to a price-capped renewal.
 
 With elastic scaling (still under development) projects can scale seamlessly and without being
 limited to previously allocated resources. Elastic scaling is the process of getting multiple cores
-for one task. This allows parachains to include more blocks per unit time (Relay Chain-side), and
+for one task. This allows parachains to include more blocks per unit time (relay chain-side), and
 produce more blocks per unit time (async backing on the parachain side). Elastic scaling can be
 paired with on-demand coretime to increase your bandwidth seamlessly.
 
@@ -208,7 +208,7 @@ another one gets it at block Y. This may change in future.
 #### What limits are there to the number of cores?
 
 Successful tests were made with around 80 cores and 12-second block times for parachains. A single
-test validator set is able to validate 80 blockchains simultaneously. In theory a single Relay Chain
+test validator set is able to validate 80 blockchains simultaneously. In theory a single relay chain
 should be able to support a few hundred cores. Optimizations to get closer to this theoretical limit
 will be developed and deployed continuously.
 
@@ -363,7 +363,7 @@ Specific benefits for decision makers and developers:
   coretime on secondary marketplaces.
 - With elastic scaling (not supported yet) projects can scale seamlessly and without being limited
   to previously allocated resources. Elastic scaling is the process of getting multiple cores for
-  one task. This allows parachains to include more blocks per unit time (Relay Chain-side), and
+  one task. This allows parachains to include more blocks per unit time (relay chain-side), and
   produce more blocks per unit time (async backing on the parachain side). With elastic scaling, add
   on-demand coretime to increase your bandwidth seamlessly.
 - Bulk coretime enables strategic resource planning: secure bulk coretime at a fixed price to
@@ -390,7 +390,7 @@ Agile Coretime mainly improves allocation efficiency. With
 [elastic scaling](https://github.com/paritytech/polkadot-sdk/issues/1829), we take a big step
 towards enabling Web2 scale in Web3 by reducing parachain block production below 6 seconds.
 Theoretically, parachains will be able to produce blocks very fast and the limitations will lie on
-the Relay Chain side’s cores and how many cores a parachain uses.
+the relay chain side’s cores and how many cores a parachain uses.
 
 ### Implementation
 
@@ -474,19 +474,19 @@ cores offered in the sales.
 The Coretime Chain is a proposed new system parachain within the Polkadot network that is
 responsible for the management of coretime. It is designed to handle the allocation of bulk coretime
 and track ownership of coretime as non-fungible assets (NFTs). The Coretime Chain provides
-information to the Relay Chain regarding the number of cores available, the tasks running on each
+information to the relay chain regarding the number of cores available, the tasks running on each
 core, and accounting information for on-demand coretime credit. Additionally, it processes renewals
 and allows for various manipulations of bulk coretime, such as transfers, partitioning, interlacing,
 assignment to tasks, and pooling for on-demand coretime.
 
-#### Why are sales of on-demand coretime happening on the Relay Chain?
+#### Why are sales of on-demand coretime happening on the relay chain?
 
-In the beginning, sales are executed on the Relay Chain, but they could move to the Coretime Chain.
+In the beginning, sales are executed on the relay chain, but they could move to the Coretime Chain.
 Latency is the only drawback: at low demand, the buyer would receive the coretime instantly when via
-the Relay Chain, but there’ll be a delay when executed on the Coretime Chain. At times of high
+the relay chain, but there’ll be a delay when executed on the Coretime Chain. At times of high
 demand, there will be a queue anyway and this delay matters less.
 
-#### What's the best way for on-demand tasks (previously known as on-demand parachains) to regularly send extrinsics to the Relay Chain for allowing a block to be validate?
+#### What's the best way for on-demand tasks (previously known as on-demand parachains) to regularly send extrinsics to the relay chain for allowing a block to be validate?
 
 A ready-to-use automated and decentralized method for ordering on-demand coretime is
 currently [being implemented](https://github.com/paritytech/polkadot-sdk/issues/1487). Some teams

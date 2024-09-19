@@ -147,7 +147,7 @@ It is up to individual parachain teams to decide if and how they want to reward 
 forgo staking and choose to lock their tokens in support of the parachain’s campaign. As one can
 imagine, rewards will take many forms and may vary widely among projects.
 
-If a crowdloan campaign is successful, that parachain will be on-boarded to the Relay Chain. The
+If a crowdloan campaign is successful, that parachain will be on-boarded to the relay chain. The
 collective tokens will be locked in that parachain's account for the entire duration that it is
 active.
 
