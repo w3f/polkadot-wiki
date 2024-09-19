@@ -105,10 +105,10 @@ achieved milestones by the recipient.
 
 ## Bridge
 
-A parachain that acts as an intermediary between the Relay Chain and an external chain, in such a
-way that it appears to the Relay Chain that the external chain is a parachain (i.e., meets the
+A parachain that acts as an intermediary between the relay chain and an external chain, in such a
+way that it appears to the relay chain that the external chain is a parachain (i.e., meets the
 network Host's requirements of parachains). Bridges allow for interaction between other blockchains,
-such as Ethereum and Bitcoin, that are not natively compatible with the Relay Chain.
+such as Ethereum and Bitcoin, that are not natively compatible with the relay chain.
 
 ## Byzantine Fault Tolerance
 
@@ -129,7 +129,7 @@ being referred to as a candidate as soon it has been finalized.
 
 ## Collations
 
-Parachain blocks or candidates that are being proposed to the Relay Chain validators. More
+Parachain blocks or candidates that are being proposed to the relay chain validators. More
 specifically, a collation is a [data structure](https://spec.polkadot.network/#defn-collation) which
 contains the proposed parachain candidate, including an optional validation parachain Runtime update
 and upward messages.
@@ -190,7 +190,7 @@ network as opposed to being run on a specific system or set of systems.
 The native token for Polkadot. DOT serves three purposes: network governance (allowing them to vote
 on-chain upgrades and other exceptional events), general operation (rewarding good actors and
 punishing bad actors), and bonding (adding new parachains by "freezing" DOT while they are connected
-the Relay Chain).
+the relay chain).
 
 ## Duty Roster
 
@@ -237,7 +237,7 @@ contain the technical knowledge base of the Kusama and/or Polkadot networks and 
 ## Finality
 
 The property of a block that cannot be reverted. Generally, created blocks are not final until some
-point in the future - perhaps never, in the case of "probabilistic finality". The Relay Chain uses a
+point in the future - perhaps never, in the case of "probabilistic finality". The relay chain uses a
 deterministic finality gadget known as [GRANDPA](#grandpa-finality-gadget).
 
 ## Finality Gadget
@@ -294,7 +294,7 @@ of the underlying blockchain and creates a new branch of _the same blockchain_.
 
 Horizontal Relay-routed Message Passing, also known as HRMP, is a precursor to the complete XCMP
 implementation, that mimics the same interface and semantics of XCMP. It is similar to XCMP except
-for how it stores all messages in the Relay Chain storage, therefore making it more expensive and
+for how it stores all messages in the relay chain storage, therefore making it more expensive and
 demanding more resources than XCMP. The plan is to retire HRMP once the implementation of XCMP is
 complete.
 
@@ -338,7 +338,7 @@ is entirely in the hands of the community (i.e., Kusama token holders).
 
 ## Lease Period
 
-A particular amount of time that a parachain for which the parachain can connect to the Relay Chain.
+A particular amount of time that a parachain for which the parachain can connect to the relay chain.
 
 ## LIBP2P
 
@@ -450,7 +450,7 @@ A unique numeric (non-negative integer) identifier for a parachain.
 
 Historically, the term "parathread" has been used in two contexts: a chain registered with a
 `ParaID` on the [relay chain](#relay-chain) that has not yet become a parachain (i.e. not connected
-to a Relay Chain core), or as an on-demand parachain (i.e. a parachain using on-demand coretime)
+to a relay chain core), or as an on-demand parachain (i.e. a parachain using on-demand coretime)
 which does not produce blocks at regular intervals.
 
 ## Parachain Registry
@@ -515,7 +515,7 @@ systems limit the number of participants.
 
 A proof produced by parachain collators. Based on this proof and the parachain registry, a validator
 can verify that a parachain has properly executed its state transition function. Proofs of Validity
-go into the Relay Chain blocks.
+go into the relay chain blocks.
 
 ## Proof of Work (PoW)
 
@@ -599,7 +599,7 @@ network to scale in capabilities (e.g. processing more transactions) when needed
 
 ## Sealing
 
-The process of adding a block to the Relay Chain. Note that finalization is a separate process -
+The process of adding a block to the relay chain. Note that finalization is a separate process -
 blocks are finalized sometime after they are sealed.
 
 ## Session
@@ -619,7 +619,7 @@ Hot keys that are used for performing network operations by validators, for exam
 ## Shared Security
 
 The security model used whereby all chains are equally secured. This is achieved by placing proofs
-of the validity of parachain blocks into the Relay Chain such that, in order to revert finality of a
+of the validity of parachain blocks into the relay chain such that, in order to revert finality of a
 single parachain, an attacker would need to attack the entire system.
 
 ## Slashing
@@ -719,16 +719,16 @@ send funds to Bob by the fact that she signed a transfer-funds message with her 
 
 ## Validator
 
-A node that secures the Relay Chain by staking DOT, validating proofs from collators on parachains
+A node that secures the relay chain by staking DOT, validating proofs from collators on parachains
 and voting on consensus along with other validators.
 
 ## Vertical Message Passing
 
 Vertical message passing consists of two separate types of message passing, Downward Message Passing
-(DMP) and Upward Message Passing (UMP). Downward messages pass from the Relay Chain to a parachain,
+(DMP) and Upward Message Passing (UMP). Downward messages pass from the relay chain to a parachain,
 although they may also originate from another parachain via
 [HRMP](#Horizontal-Relay-routed-Message-Passing). Upward messages originate from parachains and go
-up to the Relay Chain via runtime entry points.
+up to the relay chain via runtime entry points.
 
 ## Voting
 
@@ -782,7 +782,7 @@ execution. Checkout this section of the Substrate docs covering
 
 ## Westend
 
-The [testnet](#testnet) is set aside for testing the Polkadot Relay Chain. Contrary to the
+The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the
 [Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on
 protocol-level features like [asynchronous backing](../learn/learn-async-backing.md), etc, that are
 not relevant for parachain developers.

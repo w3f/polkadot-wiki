@@ -10,7 +10,7 @@ slug: ../learn-spree
 
 Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "trust wormholes," are
 fragments of logic comparable to runtime modules in Substrate, but live on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain and maybe opted into by
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain and maybe opted into by
 parachains.
 
 SPREE in brief was described with the following properties and functions:
@@ -29,7 +29,7 @@ On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on
 [Smart Protocols](https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/). The core
 insight of the post was that XCMP had a complication in that it was difficult to verify and prove
 code was executed on a parachain without trust. A solution was to install the SmartProtocols in the
-Relay Chain that would be isolated blobs of code with their own storage per instance that could only
+relay chain that would be isolated blobs of code with their own storage per instance that could only
 be changed through an interface with each parachain. SmartProtocols are the precursor to SPREE.
 
 ## What is a SPREE module?
@@ -86,7 +86,7 @@ The diagram above is a simplification of the
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} system.
 
 In this diagram, we see that the Wasm code for SPREE module "X" has been uploaded to the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain. The two cylinders "A"
+{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain. The two cylinders "A"
 and "B" represent two distinct parachains that have both opted-in to this SPREE module creating two
 distinct instances of it with their own XCMP endpoints "A.X" and "B.X".
 

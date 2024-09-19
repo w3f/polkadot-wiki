@@ -62,7 +62,7 @@ the `metadataHash` field is empty/None.
 **Serialized transactions and metadata**
 
 Before being submitted, transactions are serialized. Serialized transactions are hex encoded
-SCALE-encoded bytes. The Relay Chain runtimes are upgradable and therefore any interfaces are
+SCALE-encoded bytes. The relay chain runtimes are upgradable and therefore any interfaces are
 subject to change, the metadata allows developers to structure any extrinsics or storage entries
 accordingly. The metadata provides you with all of the information required to know how to construct
 the serialized call data specific to your transaction. You can read more about the metadata, its

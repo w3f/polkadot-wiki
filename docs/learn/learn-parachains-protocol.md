@@ -76,7 +76,7 @@ The parachain protocol is divided into two main phases:
 - [**Inclusion Pipeline**](#inclusion-pipeline): Collators send parachain blocks (parablocks) with
   PoV to Validators. Validators verify if the parablocks follow the state transition rules of the
   parachain and sign statements that can have a positive or negative outcome. With enough positive
-  statements, the block is **backed** and **included** in the Relay Chain, but is still pending
+  statements, the block is **backed** and **included** in the relay chain, but is still pending
   approval.
 - [**Approval Process**](#approval-process): Validators perform additional checks that, if positive,
   allow the parablock to be **approved**.
@@ -91,7 +91,7 @@ Approval Process.
 
 The Availability and Validity (AnV) Protocol is a way of looking at the Parachain Protocol from
 another perspective, emphasizing the importance of a parablock being available and valid before
-being included in the finalized Relay Chain. It is divided into five different phases, three within
+being included in the finalized relay chain. It is divided into five different phases, three within
 the [Inclusion Pipeline](#inclusion-pipeline) and two within the
 [Approval Process](#approval-process):
 
@@ -111,7 +111,7 @@ Process a parablock is checked if it is valid or not.
 ### Overview
 
 The inclusion pipeline is the path of a parachain block (or parablock) from its creation to its
-inclusion into the non-finalized Relay Chain (i.e. in a fork of the Relay Chain).
+inclusion into the non-finalized relay chain (i.e. in a fork of the relay chain).
 
 ![parachain-inclusion-pipeline](../assets/parachain-inclusion-pipeline.png)
 
@@ -129,10 +129,10 @@ changes its status through this path as follows:
   is shown as white square with a white tick mark and three yellow tick marks on top of it. The
   yellow marks show the PoV from the para-validators, while the white mark the PoV from the
   collator.
-- Backed: The block is backed and noted in a fork on the Relay Chain by a relay chain block author
+- Backed: The block is backed and noted in a fork on the relay chain by a relay chain block author
   (in this case V4). The backed block is shown as a square with white background and yellow border
-  enclosing a "B". The backed block can still fail to be included in the Relay Chain. Note that for
-  simplicity here the backed parachain block is represented within the Relay Chain block, but in
+  enclosing a "B". The backed block can still fail to be included in the relay chain. Note that for
+  simplicity here the backed parachain block is represented within the relay chain block, but in
   reality a relay chain block does not contain the parablocks themselves (more about this later).
 - Pending availability: The block is backed but not considered available yet.
 - Included: The block is backed and considered available (we have a parablock). Included parablocks
@@ -170,7 +170,7 @@ Once a para-validator has the PoV, it gossips this information to the other para
 check the candidate block against the PoV. Candidates that gather more than half of signed validity
 statements are considered **backable** (i.e. they _seem_ to represent a valid state transition), and
 their backing is the set of signed statements. The para-validators can then start to construct the
-[**candidate receipt**](#candidate-receipts) (this is what goes into the Relay Chain block) and an
+[**candidate receipt**](#candidate-receipts) (this is what goes into the relay chain block) and an
 [**erasure coding**](#erasure-codes) (this is what will make the parablock available, more on this
 later on) that will be sent to all validators in the network.
 
@@ -188,16 +188,16 @@ parablock is fully valid.
 
 ### Relay Chain Submission Phase
 
-The [receipt](#candidate-receipts) of the backable parablock is added to the Relay Chain transaction
+The [receipt](#candidate-receipts) of the backable parablock is added to the relay chain transaction
 queue together with other receipts from other parachains. Receipts are gossiped around, and when a
 relay chain block author wins [BABE](./learn-consensus.md#block-production-babe) slot leadership, it
-will select a candidate receipt to include in a block on a fork of the Relay Chain.
+will select a candidate receipt to include in a block on a fork of the relay chain.
 
 A block author can note up to 1 backable candidate for each parachain to be included in the Relay
-Chain block alongside its backing. Once included in a fork of the Relay Chain the candidate is
+Chain block alongside its backing. Once included in a fork of the relay chain the candidate is
 considered **backed** in that fork. The candidate is considered to be in **"pending availability"**
 status, and it can only be considered a part of the parachain once proven available. Remember, at
-this stage validators of the Relay Chain already received the
+this stage validators of the relay chain already received the
 [erasure coding information](#erasure-codes) of that specific parablock.
 
 ### Availability and Unavailability Phase
@@ -207,7 +207,7 @@ Distribution Subsystem** to ensure availability of the candidate. They gossip th
 [erasure coded](#erasure-codes) pieces among the network. At least 1/3 + 1 validators must report
 that they possess their piece of the code word. Once this threshold of validators has been reached,
 the network can consider the candidate block available. The block is graduated to being a full
-parachain block, and its header will be included in that fork of the Relay Chain. The information
+parachain block, and its header will be included in that fork of the relay chain. The information
 about the candidate availability is noted in the subsequent relay chain blocks of that fork.
 
 The availability check by the block author ensures that
@@ -243,7 +243,7 @@ The candidate can fail to be included in the parachain in any of the following w
 - The candidate is not backed by validators participating in the Candidate Backing subsystem.
 - A relay chain block author does not select the candidate.
 - The candidate's PoV is not considered available within a timeout, and the block is discarded from
-  the Relay Chain.
+  the relay chain.
 
 ## Approval Process
 
@@ -301,7 +301,7 @@ The result of the dispute must be transplantable to all other forks so that mali
 slashed in all possible histories and so that honest validators will ignore any forks containing
 that parablock.
 
-:::info Parablocks vs. Relay Chain Blocks
+:::info Parablocks vs. relay chain Blocks
 
 It is important to understand that a relay chain block does not contain parablocks, but
 para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of
@@ -386,9 +386,9 @@ For detailed information about chain selection, see dedicated section in
 
 ## Candidate Receipts
 
-PoV are typically between 1 MB and 10 MB in size and are not included in the Relay Chain blocks. For
+PoV are typically between 1 MB and 10 MB in size and are not included in the relay chain blocks. For
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to scale to hundreds of parachains,
-PoV need to be represented by something smaller on the Relay Chain: candidate receipts. A
+PoV need to be represented by something smaller on the relay chain: candidate receipts. A
 para-validator constructs a candidate receipt for a parachain block by signing:
 
 - The parachain ID.
@@ -406,7 +406,7 @@ transition contained inside of it.
 
 ## Erasure Codes
 
-Before sending the candidate receipt to the Relay Chain transaction queue, the para-validator who
+Before sending the candidate receipt to the relay chain transaction queue, the para-validator who
 constructs the receipt must also construct an erasure coding of the parachain block.
 
 An erasure coding takes a message (in this case, the parachain block and PoV) and creates a set of
@@ -417,7 +417,7 @@ total number of smaller messages is equal to the total number of validators and 
 The para-validator creates the erasure coding chunks, puts them into their Merkle tree, and sends
 out each chunk (together with the candidate receipt) to a corresponding validator on the Relay
 Chain. Validators who receive the receipts with an erasure coding chunk will include the receipt in
-the Relay Chain queue, where an author can include it in a block.
+the relay chain queue, where an author can include it in a block.
 
 The type of erasure codes used by {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s
 availability scheme are
@@ -448,7 +448,7 @@ include something invalid is caught and the offending validators are punished.
 
 False positives can happen; those actors responsible for it will be [slashed](./learn-offenses.md).
 To detect false positives, PoV information must be available after the block has been included to
-the Relay Chain via the [availability scheme](#availability-and-unavailability-phase).
+the relay chain via the [availability scheme](#availability-and-unavailability-phase).
 
 Disputes are _independent from a particular fork_, while backing and approval operate on particular
 forks. The approval voting stops if an alternative fork (which might not contain the

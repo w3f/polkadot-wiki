@@ -97,7 +97,7 @@ For more details on BABE, please see the
 ## Finality Gadget: GRANDPA
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
-implemented for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain.
+implemented for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay chain.
 
 The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host uses the GRANDPA Finality
 protocol to finalize blocks. Finality is obtained by consecutive rounds of voting by the validator

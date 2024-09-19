@@ -95,19 +95,19 @@ App.
 
 :::
 
-The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot Relay Chain
+The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot relay chain
 and [Polkadot System Chains](./glossary.md#system-parachains)**. Old Ledger accounts are accounts
 that have been created using the old Kusama Ledger app and any parachain Ledger apps (for both
 Kusama and Polkadot) except for Polkadot System Chains.
 
-Suppose you have accounts on any Polkadot parachain, Kusama Relay Chain, and Kusama parachains. In
+Suppose you have accounts on any Polkadot parachain, Kusama relay chain, and Kusama parachains. In
 that case, you will need the Polkadot Migration app to move fungible and non-fungible assets (NFT),
 identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot
 Ledger app.
 
 ### Polkadot (Generic) App
 
-The Polkadot Ledger Generic App will allow you to use your Ledger device on the Relay Chain and
+The Polkadot Ledger Generic App will allow you to use your Ledger device on the relay chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
 for the entire Polkadot ecosystem without compromising security. This new app will also count with
 Clear Signing, allowing you to see what you sign on a trusted display. This way, unintentionally
@@ -135,8 +135,8 @@ and [Zondax beryx page](https://substrate.beryx.io/new_polkadot_ledger_app).
 
 ## Migration Process
 
-The migration process is not meant for Polkadot Relay Chain and System Chains users. Those users can
-install the Polkadot app and operate it as usual. For users of Kusama Relay Chain, Kusama System
+The migration process is not meant for Polkadot relay chain and System Chains users. Those users can
+install the Polkadot app and operate it as usual. For users of Kusama relay chain, Kusama System
 Chains and parachains, and Polkadot parachains, see the procedure below:
 
 - Install Polkadot Migration and Polkadot App.

@@ -53,7 +53,7 @@ offenses as shown below.
 - **Equivocation:** A validator produces two or more of the same block or vote.
   - GRANDPA and BEEFY Equivocation: A validator signs two or more votes in the same round on
     different chains.
-  - BABE Equivocation: A validator produces two or more blocks on the Relay Chain in the same time
+  - BABE Equivocation: A validator produces two or more blocks on the relay chain in the same time
     slot.
 - **Double Seconded Equivocation:** Within a backing group of 5 para-validators, at most 5 backed
   parablocks are possible. Each parablock requires exactly one seconded and at least two more valid

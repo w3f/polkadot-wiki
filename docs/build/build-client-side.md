@@ -13,8 +13,8 @@ As with any blockchain, building decentralized applications (dApps) is a signifi
 developer can build on Polkadot.
 
 As an application developer, you can compose your front-end apps in a few different ways. Because
-the Relay Chain and its parachains are all built using the Polkadot SDK. You can often use the same
-SDK to communicate with the Relay Chain, a parachain, or any other Substrate-based chain.
+the relay chain and its parachains are all built using the Polkadot SDK. You can often use the same
+SDK to communicate with the relay chain, a parachain, or any other Substrate-based chain.
 
 :::note Substrate-based chains use an SS58 encoding for their address formats.
 

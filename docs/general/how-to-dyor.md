@@ -192,13 +192,13 @@ shows which projects are gathering funds from their community to participate in 
 
 But not all projects that build a chain using [Substrate](https://substrate.io) aim to become a
 parachain. Some use it simply because of its infrastructure to build their customised chain, without
-any plans to connect to the Relay Chain. And other projects may aim to become a parachain only on
+any plans to connect to the relay chain. And other projects may aim to become a parachain only on
 Kusama or directly on Polkadot.
 
 However, building a potential parachain is not the only way to build on Polkadot and expand its
 ecosystem. A project might aim to build a DeFi platform on a parachain, launch a stablecoin or other
 token on the Asset Hub, build a decentralized exchange, or any other dApp that one might think of,
-without ever touching the Relay Chain.
+without ever touching the relay chain.
 
 But in all of those cases, their plans to build on Polkadot whatever they may be, should be clearly
 stated on their site and in their documentation. Most importantly, you should look for an
@@ -210,7 +210,7 @@ This is especially true for projects that are already running on another network
 or Binance Smart Chain, and have issued tokens there. Many projects do that either to raise funds
 and test their infrastructure or because they aim to build a "multi-chain" solution or both. But
 because those projects are not currently built on Substrate, the existence of a clear and robust
-integration plan with the Relay Chain should be essential in your research to ensure that they will
+integration plan with the relay chain should be essential in your research to ensure that they will
 indeed build on it one day.
 
 ## _Soft_ metrics

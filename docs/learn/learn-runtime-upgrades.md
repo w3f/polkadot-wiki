@@ -148,7 +148,7 @@ Polkadot Fellowship's
 changes in the runtime logic.
 
 Runtime upgrades are voted on and executed via [Polkadot OpenGov](./learn-polkadot-opengov.md). You
-should monitor the Relay Chain as follows to know when the next runtime upgrade will be enacted:
+should monitor the relay chain as follows to know when the next runtime upgrade will be enacted:
 
 1. Check each block for `referenda (Submitted)` events and check if the `track` is `0` or `1`, which
    correspond to the `Root` and `whitelistedCaller` tracks, respectively. These are the only tracks

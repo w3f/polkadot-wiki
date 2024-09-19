@@ -255,7 +255,7 @@ interface is broken/not compatible.
 
 ## Smart Contracts
 
-The Polkadot Relay Chain does not support smart contracts, but a number of its parachains do,
+The Polkadot relay chain does not support smart contracts, but a number of its parachains do,
 [see here for more.](./build-smart-contracts.md)
 
 ## Other F.A.Q.

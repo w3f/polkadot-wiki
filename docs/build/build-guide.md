@@ -111,7 +111,7 @@ in order to gain context about the application you could make.
 
 ## Building Parachains
 
-Polkadot is canonically referred to as the Relay Chain. It is also considered a _layer zero_
+Polkadot is canonically referred to as the relay chain. It is also considered a _layer zero_
 protocol, as it enables the interoperability and shared security of multiple
 [parachains](../learn/learn-parachains.md), which are _layer one_ protocols. Parachains currently
 connect to a relay chain using the [Parachains Protocol](../learn/learn-parachains-protocol.md).
@@ -140,8 +140,8 @@ benchmarks.
 :::info What is an on-demand parachain?
 
 On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
-Relay Chain. On-demand parachains will only produce a block when needed, unlike full parachains,
-which have access to bulk coretime to produce a block at every block of the Relay Chain. When
+relay chain. On-demand parachains will only produce a block when needed, unlike full parachains,
+which have access to bulk coretime to produce a block at every block of the relay chain. When
 building an on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of
 building a parachain without the cost drawback of purchasing bulk coretime.
 
@@ -221,7 +221,7 @@ get started on building and deploying a parachain.
 #### Parachains Benefits
 
 Parachains contain their own runtime/STF logic and benefit from the shared security and the
-cross-consensus messaging provided by the Relay Chain. Parachains permit high flexibility and
+cross-consensus messaging provided by the relay chain. Parachains permit high flexibility and
 customization but require more effort to create and maintain over time. A production-grade parachain
 is typically more involved to create due to the complexity involved in blockchain networks'
 technical and economic aspects.
