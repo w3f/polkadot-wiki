@@ -19,6 +19,8 @@ identity is cleared.
 
 Identities are managed on the [People system chain](./learn-system-chains.md).
 
+You can cross-chain transfer your DOT tokens to the People system chain using [Nova Wallet](https://novawallet.io/). A guide on how to do this can be found [here](https://docs.novawallet.io/nova-wallet-wiki/asset-management/how-to-send-tokens/send-tokens-cross-chain).
+
 ## Sub-Identities
 
 Users can also link accounts by setting "sub accounts", each with its own identity, under a primary
