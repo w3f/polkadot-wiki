@@ -183,17 +183,6 @@ module.exports = {
           rel: 'noopener noreferrer',
           position: 'right',
         },
-        {
-          type: "localeDropdown",
-          position: "right",
-          dropdownItemsBefore: [],
-          dropdownItemsAfter: [
-            {
-              to: "https://crowdin.com/project/polkadot-wiki",
-              label: "Help us translate",
-            },
-          ],
-        },
       ],
     },
     footer: {
