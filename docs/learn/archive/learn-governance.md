@@ -292,6 +292,10 @@ JJ: Votes `No` for a 16 week lock period => 150 x 3 = 450 Votes
 - turnout = 750 Votes
 - electorate = 1500 Votes
 
+![](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
+
+![](https://latex.codecogs.com/svg.latex?\large&space;{16.432}&space;<&space;{15.492})
+
 Since the above example is a public referendum, **Super-Majority Approve** would be used to
 calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
 turnout is low; therefore, based on the above result, the referendum will be rejected.
