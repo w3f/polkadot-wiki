@@ -166,18 +166,22 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/kusama-getting-started",
-          label: "Docs",
-          position: "right",
+          label: 'Docs',
+          href: 'https://wiki.polkadot.network/docs/kusama-getting-started',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          position: 'right', 
         },
         {
           type: "search",
           position: "right",
         },
         {
-          to: "docs/contributing",
-          label: "Contribute",
-          position: "right",
+          label: 'Contribute',
+          href: 'https://wiki.polkadot.network/docs/contributing',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          position: 'right',
         },
         {
           type: "localeDropdown",
