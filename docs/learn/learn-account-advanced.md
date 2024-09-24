@@ -327,7 +327,8 @@ derived accounts using the Ledger Live App, but it is possible to do so using Po
 [the accounts page](../learn/learn-accounts.md) for more information about derived accounts and
 derivation paths.
 
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
+Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances,
+you must import your ledger account into a [**wallet**](./wallets).
 
 ### Account Derivation on [Subkey](#creating-accounts-with-subkey) and [Polkadot Vault](../general/polkadot-vault.md)
 

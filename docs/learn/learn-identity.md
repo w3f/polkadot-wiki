@@ -19,7 +19,9 @@ identity is cleared.
 
 Identities are managed on the [People system chain](./learn-system-chains.md).
 
-You can cross-chain transfer your DOT tokens to the People system chain using [Nova Wallet](https://novawallet.io/). A guide on how to do this can be found [here](https://docs.novawallet.io/nova-wallet-wiki/asset-management/how-to-send-tokens/send-tokens-cross-chain).
+You can cross-chain transfer your DOT tokens to the People system chain using
+[Nova Wallet](https://novawallet.io/). A guide on how to do this can be found
+[here](https://docs.novawallet.io/nova-wallet-wiki/asset-management/how-to-send-tokens/send-tokens-cross-chain).
 
 ## Sub-Identities
 
@@ -75,10 +77,6 @@ From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain bu
 any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity
 judgement requests. Identities judged by the registrar before that date will not be affected. For
 new identity judgment, please use the other registrars.
-
-{{ kusama: **Registrar 2** is no longer offering registrar services on Kusama. :kusama }}
-
-:::
 
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>

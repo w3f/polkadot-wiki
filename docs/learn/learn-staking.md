@@ -211,8 +211,8 @@ nominator [guide](learn-nominator.md) to understanding your responsibilities as 
 If you want to become a nominator, see [this](../learn/learn-nominator.md) guide. If you are a
 beginner and would like to securely stake your tokens using the Polkadot-JS UI, refer to
 [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-)
-support article.
-{{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama. :kusama }}
+support article. The tutorial presented in the support article is demonstrated on Polkadot, but the
+procedure is the same for Kusama.
 
 :::info Polkadot Staking Dashboard
 
@@ -366,8 +366,8 @@ other wallets that officially secured funding from the treasury
 
 ### Claiming Staking Rewards
 
-{{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
-Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
+Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
+Polkadot will also produce blocks at approximately six-second intervals.
 
 Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on
 Polkadot). These rewards are calculated based on era points, which have a probabilistic component.
