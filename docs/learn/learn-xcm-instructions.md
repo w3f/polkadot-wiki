@@ -7,7 +7,7 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-instructions
 ---
 
-import Tabs from "@theme/Tabs";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 :::info XCM Documentation
 
@@ -86,9 +86,11 @@ The following presents the practical mapping of instructions to some
 <Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'},
 {label: 'Functional Multichain Decomposition', value: 'fmd'} ]}>
 
-<TabItem value="program"> These are the primary instructions that enable programmability and
-branching to be possible. Branching in this context is the ability for errors and logic to be
-handled as needed when dealing with a message.
+<TabItem value="program">
+
+These are the primary instructions that enable programmability and branching to be possible.
+Branching in this context is the ability for errors and logic to be handled as needed when dealing
+with a message.
 
 - [`ExpectAsset(MultiAssets)`](https://github.com/paritytech/xcm-format/tree/master#expectassetmultiassets) -
   Checks if the Holding register has a specific amount of assets, throws an error if it doesn't.

@@ -91,7 +91,7 @@ Apart from RMRK (Substrate-to-Substrate seamless teleportation natively with [XC
 and Efinity (Paratoken), the following efforts are underway:
 
 - [**MyNFT**](https://mynft.com/): an EVM to EVM bridging effort.
-- **RMRK <-> EVM** Simplification bridge: a bridge developed during the
+- **RMRK \<-\> EVM** Simplification bridge: a bridge developed during the
   [RMRK hackathon](https://rmrk.devpost.com) for porting RMRK NFTs into simplified IOUs on EVM
   chains
 

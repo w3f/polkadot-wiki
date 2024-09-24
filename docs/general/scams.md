@@ -148,7 +148,7 @@ responsibility to make sure that you understand where you are sending your funds
 decentralized space and your only recourse if a mistake is made is by appealing to the council (who
 usually will not get involved in matters of mistaken transfers - see below).
 
-### Install the Polkadot{.js} extension
+### Install the Polkadot-JS extension
 
 The extension uses crowd-sourced [anti-phishing measures](https://polkadot.js.org/phishing/) to
 automatically prevent your browser from displaying known phishing or scam sites. They will be

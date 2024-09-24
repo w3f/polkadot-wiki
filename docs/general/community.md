@@ -29,20 +29,38 @@ contact and anyone doing so is likely trying to scam you.
 
   <TabItem value="polkadot">
     <ul>
-      <li><a href="https://forum.polkadot.network/">Polkadot Forum</a> - a place for thoughtful comments and discussions on the future of Polkadot, and the steps we can take to get there together.</li>
-      <li><a href="https://github.com/paritytech/polkadot-sdk/tree/master/polkadot">Polkadot GitHub</a> - Parity maintained repository that houses the Rust implementation of the Polkadot Host.</li>
-      <li><a href="https://support.polkadot.network/support/home">Polkadot Support Knowledgebase</a> and <a href="https://support.polkadot.network">Polkadot Support Contact</a></li>
-      <li><a href="https://research.web3.foundation/news">Polkadot's Latest Research (news)</a></li>
-      <li><a href="https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be">Polkadot Meetup Hub</a> - Information on hosting meetups, applying for funding, and materials for running it.</li>
-      <li><a href="https://polkadot.polkassembly.io/">Polkadot Discussion and Governance on Polkassembly</a></li>
-      <li><a href="https://polkadot.subsquare.io/discussions">Polkadot Discussion and Governance on Subsquare</a></li>
+      <li>
+      <a href="https://forum.polkadot.network/">Polkadot Forum</a> - a place for thoughtful comments and discussions on the future of Polkadot, and the steps we can take to get there together.
+      </li>
+      <li>
+      <a href="https://github.com/paritytech/polkadot-sdk/tree/master/polkadot">Polkadot GitHub</a> - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
+      </li>
+      <li>
+      <a href="https://support.polkadot.network/support/home">Polkadot Support Knowledgebase</a> and <a href="https://support.polkadot.network">Polkadot Support Contact</a>
+      </li>
+      <li>
+      <a href="https://research.web3.foundation/news">Polkadot's Latest Research (news)</a>
+      </li>
+      <li>
+      <a href="https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be">Polkadot Meetup Hub</a> - Information on hosting meetups, applying for funding, and materials for running it.
+      </li>
+      <li>
+      <a href="https://polkadot.polkassembly.io/">Polkadot Discussion and Governance on Polkassembly.</a>
+      </li>
+      <li>
+      <a href="https://polkadot.subsquare.io/discussions">Polkadot Discussion and Governance on Subsquare.</a>
+      </li>
     </ul>
   </TabItem>
 
   <TabItem value="kusama">
     <ul>
-      <li><a href="https://kusama.polkassembly.io/">Kusama Discussion and Governance on Polkassembly</a></li>
-      <li><a href="https://kusama.subsquare.io/discussions">Kusama Discussion and Governance on Subsquare</a></li>
+      <li>
+      <a href="https://kusama.polkassembly.io/">Kusama Discussion and Governance on Polkassembly</a>
+      </li>
+      <li>
+      <a href="https://kusama.subsquare.io/discussions">Kusama Discussion and Governance on Subsquare</a>
+      </li>
     </ul>
   </TabItem>
 
@@ -80,12 +98,21 @@ community members. The application we use most often to interact with the Matrix
       you face any issues, join the rooms individually.
     </p>
     <ul>
-      <li><a href="https://matrix.to/#/#polkadot-watercooler:parity.io">Polkadot Watercooler</a> - General room for talk about Polkadot.</li>
-      <li><a href="https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation">Polkadot Validator Lounge</a> - Room for validators learning about setting up a node.</li>
-      <li><a href="https://matrix.to/#/#Polkadot-Direction:parity.io">Polkadot Direction</a> - Governance, and a place to discuss the future of Polkadot.</li>
-      <li><a href="https://matrix.to/#/#dailydigest:web3.foundation">Polkadot Digest</a> - News about what is happening in the Polkadot ecosystem, published every weekday except holidays.</li>
-      <li><a href="https://matrix.to/#/#polkadotwikipublic:web3.foundation">Polkadot Wiki</a> - The official matrix room about the Polkadot Wiki.
-  </li>
+      <li>
+      <a href="https://matrix.to/#/#polkadot-watercooler:parity.io">Polkadot Watercooler</a> - General room for talk about Polkadot. 
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#polkadotvalidatorlounge:web3.foundation">Polkadot Validator Lounge</a> - Room for validators learning about setting up a node.
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#Polkadot-Direction:parity.io">Polkadot Direction</a> - Governance, and a place to discuss the future of Polkadot.
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#dailydigest:web3.foundation">Polkadot Digest</a> - News about what is happening in the Polkadot ecosystem, published every weekday except holidays.
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#polkadotwikipublic:web3.foundation">Polkadot Wiki</a> - The official matrix room about the Polkadot Wiki.
+      </li>
     </ul>
   </TabItem>
 
@@ -96,18 +123,32 @@ community members. The application we use most often to interact with the Matrix
       you face any issues, join the rooms individually.
     </p>
     <ul>
-      <li><a href="https://matrix.to/#/#kusamawatercooler:web3.foundation">Kusama Watercooler</a> - General room for talk about Kusama.</li>
-      <li><a href="https://matrix.to/#/#KusamaValidatorLounge:parity.io">Kusama Validator Lounge</a> - Room for validators learning about setting up a node.</li>
-      <li><a href="https://matrix.to/#/#Kusama-Direction:parity.io">Kusama Direction</a> - Governance, and a place to discuss the future of Kusama.</li>
+      <li>
+      <a href="https://matrix.to/#/#kusamawatercooler:web3.foundation">Kusama Watercooler</a> - General room for talk about Kusama.
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#KusamaValidatorLounge:parity.io">Kusama Validator Lounge</a> - Room for validators learning about setting up a node.
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#Kusama-Direction:parity.io">Kusama Direction</a> - Governance, and a place to discuss the future of Kusama.
+      </li>
     </ul>
   </TabItem>
 
   <TabItem value="technical">
     <ul>
-      <li><a href="https://matrix.to/#/#substratedevs:matrix.org">Substrate Developers Chat</a> - A Matrix chat room for Substrate development.</li>
-      <li><a href="https://t.me/substratedevs">Substrate Developers Telegram Chat</a> - A Telegram chat room for Substrate development, bridged to Matrix Substrate Developers Chat linked above.</li>
-      <li><a href="https://substrate.stackexchange.com/">Substrate and Polkadot StackExchange</a> - More advanced room for technical questions on building with Substrate.</li>
-      <li><a href="https://matrix.to/#/#ink:parity.io">Smart Contracts & Parity Ink!</a> - A room to discuss developing Substrate smart contracts using Parity Ink!</li>
+      <li>
+      <a href="https://matrix.to/#/#substratedevs:matrix.org">Substrate Developers Chat</a> - A Matrix chat room for Substrate development.
+      </li>
+      <li>
+      <a href="https://t.me/substratedevs">Substrate Developers Telegram Chat</a> - A Telegram chat room for Substrate development, bridged to Matrix Substrate Developers Chat linked above.
+      </li>
+      <li>
+      <a href="https://substrate.stackexchange.com/">Substrate and Polkadot StackExchange</a> - More advanced room for technical questions on building with Substrate.
+      </li>
+      <li>
+      <a href="https://matrix.to/#/#ink:parity.io">Smart Contracts & Parity Ink!</a> - A room to discuss developing Substrate smart contracts using Parity Ink!
+      </li>
     </ul>
   </TabItem>
 
@@ -132,24 +173,40 @@ community members. The application we use most often to interact with the Matrix
 
 <TabItem value="w3f">
   <ul>
-    <li><a href="https://twitter.com/web3foundation">Web3 Foundation Twitter</a></li>
-    <li><a href="https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g">Web3 Foundation YouTube</a></li>
+    <li>
+    <a href="https://twitter.com/web3foundation">Web3 Foundation Twitter</a>
+    </li>
+    <li>
+    <a href="https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g">Web3 Foundation YouTube</a>
+    </li>
   </ul>
 </TabItem>
 
 <TabItem value="polkadot">
   <ul>
-    <li><a href="https://twitter.com/Polkadot">Polkadot Twitter</a></li>
-    <li><a href="https://www.reddit.com/r/polkadot">Polkadot Reddit</a></li>
-    <li><a href="https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw">Polkadot YouTube</a></li>
+    <li>
+    <a href="https://twitter.com/Polkadot">Polkadot Twitter</a>
+    </li>
+    <li>
+    <a href="https://www.reddit.com/r/polkadot">Polkadot Reddit</a>
+    </li>
+    <li>
+    <a href="https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw">Polkadot YouTube</a>
+    </li>
   </ul>
 </TabItem>
 
 <TabItem value="kusama">
   <ul>
-    <li><a href="https://twitter.com/kusamanetwork">Kusama Twitter</a></li>
-    <li><a href="https://www.reddit.com/r/Kusama">Kusama Reddit</a></li>
-    <li><a href="http://youtube.com/c/kusamanetwork">Kusama YouTube Channel</a></li>
+    <li>
+    <a href="https://twitter.com/kusamanetwork">Kusama Twitter</a>
+    </li>
+    <li>
+    <a href="https://www.reddit.com/r/Kusama">Kusama Reddit</a>
+    </li>
+    <li>
+    <a href="http://youtube.com/c/kusamanetwork">Kusama YouTube Channel</a>
+    </li>
   </ul>
 </TabItem>
 

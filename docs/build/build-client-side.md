@@ -39,34 +39,60 @@ Substrate node:
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Polkadot.js', value: 'pjs'}, { label: 'Polkadot-API', value: 'papi'}, {label: 'Reactive DOT', value: 'reactive-dot'}, {label: 'Subxt', value: 'subxt'}, {label: 'React Hooks for ink!', value: 'useink'}, {label: 'ink!athon Boilerplate', value: 'inkathon'}, { label: 'Polkadot Cloud', value: 'pcloud'} ]}>
 
-<TabItem value="pjs"> Promise and RxJS APIs around Polkadot, Kusama, and other Substrate-based
-chains via RPC calls. It is dynamically generated based on what the Substrate runtime provides
-regarding metadata. Full documentation & examples
-available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>. </TabItem>
+<TabItem value="pjs">
 
-<TabItem value="papi"> Polkadot-API will serve as a replacement for Polkadot JS. Full documentation
-& examples available&nbsp;<a href="https://papi.how/" target="_blank">here</a>. </TabItem>
+Promise and RxJS APIs around Polkadot, Kusama, and other Substrate-based chains via RPC calls. It is
+dynamically generated based on what the Substrate runtime provides regarding metadata. Full
+documentation & examples
+available&nbsp;<a href="https://polkadot.js.org/docs" target="_blank">here</a>.
 
-<TabItem value="reactive-dot"> A reactive library for building Substrate front-ends. Full
-documentation & examples available&nbsp;<a href="https://reactivedot.dev/" target="_blank">here</a>.
 </TabItem>
 
-<TabItem value="subxt"> Query and submit extrinsics (transactions) to a Substrate node via RPC using
-Rust. Also referred to as Rust Parity. Full documentation & examples
-available&nbsp;<a href="https://github.com/paritytech/subxt" target="_blank">here</a>. </TabItem>
+<TabItem value="papi">
 
-<TabItem value="useink"> React hooks library for ink! smart contracts that abstract the
-functionality of polkadot.js. Full documentation & examples
-available&nbsp;<a href="https://use.ink" target="_blank">here</a>. </TabItem>
+Polkadot-API will serve as a replacement for Polkadot JS. Full documentation & examples
+available&nbsp;<a href="https://papi.how/" target="_blank">here</a>.
 
-<TabItem value="inkathon">ink!athon is a starter kit for full-stack dApp development with ink! smart
-contracts and a React-based frontend in one place. With convenient helper scripts and a
-pre-configured project setup, you can quickly scaffold any dApp. Live example & full documentation
-available&nbsp;<a href="https://inkathon.xyz" target="_blank">here</a>. </TabItem>
+</TabItem>
 
-<TabItem value="pcloud">Polkadot Cloud hosts a library of assets, ranging from data sources,
-graphical elements, to fully functional components, for app developers to plug and play into their
-codebases. &nbsp;<a href="https://polkadot.cloud/" target="_blank">Learn more here</a>. </TabItem>
+<TabItem value="reactive-dot">
+
+A reactive library for building Substrate front-ends. Full documentation & examples
+available&nbsp;<a href="https://reactivedot.dev/" target="_blank">here</a>.
+
+</TabItem>
+
+<TabItem value="subxt">
+
+Query and submit extrinsics (transactions) to a Substrate node via RPC using Rust. Also referred to
+as Rust Parity. Full documentation & examples
+available&nbsp;<a href="https://github.com/paritytech/subxt" target="_blank">here</a>.
+
+</TabItem>
+
+<TabItem value="useink">
+
+React hooks library for ink! smart contracts that abstract the functionality of polkadot.js. Full
+documentation & examples available&nbsp;<a href="https://use.ink" target="_blank">here</a>.
+
+</TabItem>
+
+<TabItem value="inkathon">
+
+ink!athon is a starter kit for full-stack dApp development with ink! smart contracts and a
+React-based frontend in one place. With convenient helper scripts and a pre-configured project
+setup, you can quickly scaffold any dApp. Live example & full documentation
+available&nbsp;<a href="https://inkathon.xyz" target="_blank">here</a>.
+
+</TabItem>
+
+<TabItem value="pcloud">
+
+Polkadot Cloud hosts a library of assets, ranging from data sources, graphical elements, to fully
+functional components, for app developers to plug and play into their codebases.
+&nbsp;<a href="https://polkadot.cloud/" target="_blank">Learn more here</a>.
+
+</TabItem>
 
 </Tabs>
 
@@ -88,20 +114,23 @@ they don't submit the same data as everyone else.
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Chainlink', value: 'chainlink'}, {label: 'Acurast', value: 'acurast'} ]}>
 
-<TabItem value="chainlink"> Solutions such as
-<a href="https://polkadot.network/chainlink-reaches-milestone-with-polkadot/" target="_blank">
-Chainlink</a> fit somewhere in the middle, where the amount of trust you put into the reporting
-oracles can be adjusted based on your preferences. A Chainlink
-<a href="https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md" target="_blank">Feed
+<TabItem value="chainlink">
+
+Solutions such as
+<a href="https://polkadot.network/chainlink-reaches-milestone-with-polkadot/" target="_blank" rel="noopener noreferrer">Chainlink</a>
+fit somewhere in the middle, where the amount of trust you put into the reporting oracles can be
+adjusted based on your preferences. A Chainlink
+<a href="https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md" target="_blank" rel="noopener noreferrer">Feed
 Pallet</a> is available to allow smart contracts across smart contract-enabled parachains to access
-price reference data, and is available as a Substrate oracle pallet.&nbsp;
+price reference data and is available as a Substrate oracle pallet.
 
 </TabItem>
 
-<TabItem value="acurast"> Solutions such as
-<a href="https://acurast.com" target="_blank">Acurast</a> enables developers to delegate oracle
-requests to their network of phones, which provide off-chain data and computation to the
-<a href="https://docs.acurast.com/integrations/substrate" target="_blank">Acurast Pallet</a>.
+<TabItem value="acurast">
+
+Solutions such as <a href="https://acurast.com" target="_blank">Acurast</a> enables developers to
+delegate oracle requests to their network of phones, which provide off-chain data and computation to
+the <a href="https://docs.acurast.com/integrations/substrate" target="_blank">Acurast Pallet</a>.
 Acurast supports both Substrate (WASM) and EVM environments.
 
 </TabItem>
