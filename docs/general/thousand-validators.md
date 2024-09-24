@@ -50,8 +50,14 @@ Attaining a rank of 100 usually takes around two months. The leaderboard is avai
 fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the
 team shortly.
 
-{{ kusama: In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard, if accepted. :kusama }}
+:::info 1KV on Kusama
+
+In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below
+and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and
+addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard,
+if accepted.
+
+:::
 
 #### Requirements
 
@@ -108,7 +114,8 @@ Thousand Validators programme. They are formatted like "`stash` / `staking proxy
 
 A time delay proxy is used as the interaction method for some of these accounts.
 
-{{ kusama: Within the Kusama program, there are several other nominator accounts that can exhaustively be determined by parsing data found [here](https://kusama.w3f.community/nominators) :kusama }}
+Within the Kusama program, there are several other nominator accounts that can exhaustively be
+determined by parsing data found [here](https://kusama.w3f.community/nominators).
 
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This

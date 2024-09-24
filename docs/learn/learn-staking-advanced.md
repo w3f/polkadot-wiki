@@ -87,15 +87,14 @@ For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZ
 :::
 
 In Polkadot's NPoS nomination intents are placed in a semi-sorted list called
-[bags-list](https://github.com/paritytech/substrate/pull/9507).
-{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }} The
-Bags-List substrate pallet is designed to be self-maintaining, with minimal effort from the
-blockchain, making it extremely scalable. The bags list has two primary components, bags and nodes
-(or nominators' accounts), with bags containing the nodes with bonded balance within a specific
-range. In the figure below the 1st empty bag will contain nominators whose bonded balance is in the
-range of 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are
-the nominators' accounts with bonded tokens (in the example shown below, there are eight nomination
-intents) that will be put inside each of those three bags depending on their stake.
+[bags-list](https://github.com/paritytech/substrate/pull/9507). The Bags-List substrate pallet is
+designed to be self-maintaining, with minimal effort from the blockchain, making it extremely
+scalable. The bags list has two primary components, bags and nodes (or nominators' accounts), with
+bags containing the nodes with bonded balance within a specific range. In the figure below the 1st
+empty bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT, the 2nd bag
+11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are the nominators' accounts with
+bonded tokens (in the example shown below, there are eight nomination intents) that will be put
+inside each of those three bags depending on their stake.
 
 ![bags list example 0](../assets/bags-list-example-0.png)
 
