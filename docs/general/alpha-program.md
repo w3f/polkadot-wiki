@@ -9,7 +9,7 @@ slug: ../alpha-program
 Over 150 projects are using the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) to create
 the next generation of blockchain infrastructure and application-specific chains.
 
-The [Polkadot Alpha Program](https://polkadot.network/development/alpha/) is an initiative by Parity
+The [Polkadot Alpha Program](https://polkadot.com/alpha-program) is an initiative by Parity
 Technologies to take your Polkadot SDK-powered project to the next level.
 
 Take your project from idea to market with comprehensive resources and collaborative development
@@ -37,5 +37,5 @@ The term "Alpha" comes from alpha testing, a form of pre-production testing and 
 development. The program aims to enable your team to tap into Polkadot’s ecosystem of resources and
 bring your product into production while contributing to feedback for Polkadot’s ecosystem.
 
-Check out the official [Polkadot Alpha Program](https://polkadot.network/development/alpha/) site
+Check out the official [Polkadot Alpha Program](https://polkadot.com/alpha-program) site
 for more information and steps on how to apply.
