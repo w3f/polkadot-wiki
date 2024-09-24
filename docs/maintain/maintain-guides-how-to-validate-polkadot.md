@@ -58,8 +58,8 @@ transaction fees. The rest can come from nominators. To understand how validator
 the [NPoS Election algorithms](../learn/learn-phragmen.md) page.
 
 For further reference, you may look at the
-{{ polkadot: [statistics for current, active validators.](https://polkadot.subscan.io/validator_list?status=validator) :polkadot }}
-{{ kusama: [statistics for current, active validators.](https://kusama.subscan.io/validator_list?status=validator) :kusama }}
+[statistics for current, active validators](https://polkadot.subscan.io/validator_list?status=validator).
+For Kusama see [here](https://kusama.subscan.io/validator_list?status=validator).
 
 **Warning:** Any DOT that you stake for your validator is liable to be
 [slashed](../learn/learn-offenses.md), meaning that an insecure or improper setup may result in loss
@@ -536,13 +536,6 @@ a non-canonical chain.
 There is a [minimum bond](../general/chain-state-values.md#minimum-validator-bond) to start a
 validator instance, but to enter the active validator set and be eligible to earn rewards, your
 validator node should be nominated by a minimum number of DOT tokens.
-
-For example, the minimum stake backing a validator in era
-{{ polkadot: 1449 :polkadot }}{{ kusama: 6646 :kusama }} (May 21st 2024) is
-{{ polkadot: 2,377,756.492 DOT :polkadot }}{{ kusama: 7,078.811 KSM :kusama }}. For a live view at
-current validator stats, you may look to
-[Subscan](https://polkadot.subscan.io/validator_list?status=validator) or the
-[Staking Dashboard.](https://staking.polkadot.cloud/#/overview)
 
 If you are validator who intends to get DOT/KSM nominations from the community, you will need to
 show some skin in the game. For that, you need to bond some DOT/KSM as own stake. Make sure not to
