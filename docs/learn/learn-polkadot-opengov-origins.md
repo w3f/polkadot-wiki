@@ -283,26 +283,6 @@ The origin managing the registrar and permissioned HRMP channel operations.
 </TabItem>
 </Tabs>
 
-### Auction Admin
-
-The origin for starting auctions. This origin can execute calls from the Auctions pallet and the
-Scheduler Pallet.
-
-<!-- prettier-ignore -->
-<Tabs groupId="chart" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
-
-<TabItem value="polkadot">
-
-<Chart title="" type="line" dataId="AdminAuction" network="Polkadot" maxX="672" maxY="100" />
-
-</TabItem>
-<TabItem value="kusama">
-
-<Chart title="" type="line" dataId="AdminAuction" network="Kusama" maxX="336" maxY="100" />
-
-</TabItem>
-</Tabs>
-
 ### Referendum Canceller
 
 The origin can cancel referenda. This track has a low lead time and approval/support curves with

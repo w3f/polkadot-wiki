@@ -137,7 +137,7 @@ parallelizable objects.
 
 These could be in the form of:
 
-- System level chains (permanent chains): [leased slots](../learn/learn-auction.md)
+- System level chains (permanent chains): vie [agile coretime](../learn/learn-agile-coretime.md)
 - [Bridge](../learn/learn-bridges.md) Hubs
 - Nested relay chains
 
@@ -151,7 +151,7 @@ As a path for migration onto Polkadot, it may be more viable to migrate to one o
 of the reserved slots.
 
 For instance, there are currently options for [smart contract deployment](build-smart-contracts.md)
-on Kusama through the networks that have secured a slot in the latest slot auctions.
+on Kusama through the networks that have secured [coretime](../learn/learn-agile-coretime.md).
 
 ## Implement a Parachain
 
@@ -341,7 +341,7 @@ underneath "Development", following the
 ### Parachain Playground
 
 You can also take advantage of the account functions offered on Polkadot-JS Apps to test the entire
-Parachain onboarding process (e.g. crowdloans, auctions, registrations).
+Parachain onboarding process (e.g. registration and coretime purchase).
 
 Start a local node on [Westend](../maintain/maintain-networks.md###westend-test-network) by running:
 
@@ -363,14 +363,13 @@ are available.
 
 ### Parachain
 
-To include your parachain into the Polkadot network, you will need to acquire a parachain slot.
+To include your parachain into the Polkadot network, you will need to reserve some time on a relay
+chain core.
 
-Parachain slot leases are acuqired through open auctions, the mechanics of which can be found on the
-[parachain auction](../learn/learn-auction.md) page. With
-[Agile Coretime,](../learn/learn-agile-coretime.md) these parachain lease auctions will be
-deprecated and parachains can [purchase coretime](../learn/learn-guides-coretime-marketplaces.md) to
+Parachain slots are acquired through [coretime](../learn/learn-agile-coretime.md) purchase to
 produce blocks
-[continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
+[continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains). See
+[these guides](../learn/learn-guides-coretime-marketplaces.md) to learn how to purchase coretime.
 
 ## Resources
 
