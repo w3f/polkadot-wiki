@@ -15,14 +15,5 @@
   // 	],
   // 	"description": "Log output to console"
   // }
-  "Polkadot braces": {
-    "prefix": "pol",
-    "body": ["{{ polkadot: :polkadot }}"],
-    "description": "Polkadot wiki conditional rendering for Polkadot strings"
-  },
-  "Kusama braces": {
-    "prefix": "pol",
-    "body": ["{{ kusama: :kusama }}"],
-    "description": "Polkadot wiki conditional rendering for Kusama strings"
-  }
+ 
 }
