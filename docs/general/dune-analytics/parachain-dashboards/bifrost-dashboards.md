@@ -49,8 +49,8 @@ Some useful queries for Bifrost are provided:
 
 | Subject Area       | Query                                             | Description                                                                                      |
 | ------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Liquid Staking     | [query_3571958](https://dune.com/queries/3571958) | Provides amount of vTokens and therefore tokens staked (1=1) Used HydraDX oracle for USD values. |
-| Bifrost Stableswap | [query_3532234](https://dune.com/queries/3532234) | Provides price and volume for stableswap pairs, e.g. DOT <-> VDOT                                |
+| Liquid Staking     | [query 3571958](https://dune.com/queries/3571958) | Provides amount of vTokens and therefore tokens staked (1=1) Used HydraDX oracle for USD values. |
+| Bifrost Stableswap | [query 3532234](https://dune.com/queries/3532234) | Provides price and volume for stableswap pairs, e.g. DOT \<-\> VDOT                              |
 
 Dune users are encouraged to study the source code of the queries, including parts of a query that
 may have been commented out for future use.
