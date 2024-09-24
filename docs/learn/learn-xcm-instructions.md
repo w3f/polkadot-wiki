@@ -7,7 +7,7 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-instructions
 ---
 
-import Tabs from "@theme/Tabs";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 :::info XCM Documentation
 
