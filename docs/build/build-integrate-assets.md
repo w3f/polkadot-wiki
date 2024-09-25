@@ -210,7 +210,7 @@ account via XCM. However, in some cases, it may be interesting to identify the c
 that emitted the relevant `balances.minted` event. This can be done as follows:
 
 1. Query the relevant chain `at` the block the `balances.minted` event was emitted.
-2. Filter for a `messageQueue(Processed)` event, also emitted during block initialization. This
+2. Filter for `messageQueue(Processed)` events, that can be emitted durin any phase of the block. This
    event has a parameter `Id`. The value of `Id` identifies the cross-chain message received in the
    relay chain or in the Asset Hub. It can be used to track back the message in the origin parachain
    if needed. Note that a block may contain several `messageQueue(Processed)` events corresponding
