@@ -329,7 +329,6 @@ For a complete list of tools, please take a look here:
 
 ## Resources
 
-- [System (Common Good) Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [Agile Coretime Fellowship RFC](https://polkadot-fellows.github.io/RFCs/approved/0001-agile-coretime.html)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)

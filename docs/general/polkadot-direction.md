@@ -48,14 +48,14 @@ Polkadot can be directed towards the following main changes.
 A paradigm shift from:
 
 - being a chain-focused ecosystem where each parachain owned an execution core at all times
-  (acquired through fixed parachain slots), which allowed a simple and secure, sharded execution
+  (acquired through fixed parachain auction), which allowed a simple and secure, sharded execution
   environment
 - to being an application-focused ecosystem where we remove the assumption that each application
   owns a core, and instead that all cores are a resource to be consumed and used as needed by all
   applications.
 
-Previously, securing a parachain slot was a competitive process through an
-[auction mechanism](../learn/learn-auction.md). With coretime rental, there is no need for slot
+Previously, securing a core was a competitive process through an
+[auction mechanism](../learn/archive/learn-auction.md). With coretime rental, there is no need for
 auctions anymore. Teams can purchase on-demand coretime or reserve bulk coretime as required. This
 greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
 
@@ -76,8 +76,8 @@ access Polkadot's secure blockspace and interoperability for a finite period.
 Cores must be agile and general: they can change what job they run as easily as a modern CPU. It
 follows that the procurement of those cores must be agile as well.
 
-The slot auction mechanism is not agile, creates high entry barriers, and is designed for
-long-running single applications (i.e., the original Polkadot vision proposed in the whitepaper).
+The auction mechanism is not agile, creates high entry barriers, and is designed for long-running
+single applications (i.e., the original Polkadot vision proposed in the whitepaper).
 
 We depart from the classic lease auctions and propose an agile marketplace for coretime, where
 essentially **coretime becomes a commodity that can be tokenized, sold, and traded**. This setup

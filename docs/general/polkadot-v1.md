@@ -73,12 +73,12 @@ meaning that transactions can be made between different parachains.
 
 ### Polkadot's Additional Functionalities
 
-The Polkadot relay-chain also manges [crowdloans](../learn/learn-crowdloans.md),
-[auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
+The Polkadot relay-chain also manges [crowdloans](../learn/archive/learn-crowdloans.md),
+[auctions](../learn/archive/learn-auction.md), [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
-and [governance](../learn/learn-polkadot-opengov.md). Parachain slots or cores are leased in 6-month
-chunks for a maximum of two years, and crowdloans allow users to trustlessly loan funds to teams for
-lease deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
+and [governance](../learn/learn-polkadot-opengov.md). Relay chain cores are leased in 6-month chunks
+for a maximum of two years, and crowdloans allow users to trustlessly loan funds to teams for lease
+deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
 
 ### Polkadot's Resilience
 
@@ -142,7 +142,7 @@ further improved such that the tasks which are currently managed on the relay ch
 balances transfers, staking, and governance, can be delegated to
 [system parachains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
 the relay-chain to provide shared security and interoperability. Blockspace is only accessible
-through slot auctions, but an auction winner has access to a "freighter of blocks" regardless it is
+through auctions, but an auction winner has access to a "freighter of blocks" regardless it is
 needed or not. This creates high entry barriers and it can lead to waste of energy and resources.
 
 For more information about blockspace see [this interview](https://youtu.be/e1vISppPwe4) with Robert

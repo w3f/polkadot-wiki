@@ -20,11 +20,10 @@ the hub can be thought of as a trusted "home base" of assets in the network.
 
 The Asset Hub uses the relay chain's native token. The chain yields its governance to its parent
 relay chain and has no inflation or era-based rewards for collators (although collators receive a
-portion of transaction fees). As a
-[system parachain](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/),
-the Asset Hub has a trusted relationship with the relay chain, and as such, can teleport the relay
-chain's native token between itself and the relay chain. That is, the native token on the relay
-chain is just as good on Asset Hub.
+portion of transaction fees). As a [system parachain](./learn-system-chains.md), the Asset Hub has a
+trusted relationship with the relay chain, and as such, can teleport the relay chain's native token
+between itself and the relay chain. That is, the native token on the relay chain is just as good on
+Asset Hub.
 
 The Asset Hub does not support smart contracts. See the [Advanced](#advanced-techniques) section at
 the bottom for a discussion on using proxy and multisig accounts to replicate oft-used contract

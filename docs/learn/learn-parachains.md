@@ -106,7 +106,7 @@ Some examples of features you can have on a parachain or parathread:
 Shared security, sometimes referred as _pooled security_, is one of the unique value propositions
 for chains considering becoming a [parachain](learn-parachains.md) and joining the network. On a
 high level, shared security means that all parachains that are connected to the relay chain by
-leasing a parachain slot will benefit from the economic security provided by the relay chain
+leasing a core will benefit from the economic security provided by the relay chain
 [validators](learn-validator.md).
 
 The notion of shared security is different from inter-chain protocols that build on an architecture
@@ -204,12 +204,6 @@ the network's governance. These chains remove transactions from the relay chain,
 validators to allocate resources to validating parachains. System chains are Polkadot using its
 scaling technology to host itself.
 
-See this
-[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
-and this
-[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866)
-for more information.
-
 ## On-demand Parachains
 
 :::info On-demand parachains were previously named parathreads
@@ -220,13 +214,12 @@ On-demand parachains (previously called parathreads) are parachains that acquire
 :::
 
 On-demand parachains temporarily participate (on a block by block basis) in network security without
-needing to lease a dedicated parachain slot. This is done through economically sharing the scarce
-resource of a _parachain slot_ (or core) among several competing resources (parachains). Chains that
-otherwise would not be able to acquire a full parachain slot or do not find it economically sensible
-to do so, can participate in shared security as the
-[on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a graceful off-ramp to
-parachains that no longer require a dedicated parachain slot, but would like to continue using the
-relay chain.
+needing to lease a dedicated relay chain core. This is done through economically sharing the scarce
+resource of a core among several competing resources (parachains). Chains that otherwise would not
+be able to acquire a full core or do not find it economically sensible to do so, can participate in
+shared security as the [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a
+graceful off-ramp to parachains that no longer require a dedicated core, but would like to continue
+using the relay chain.
 
 ### Historical Context of On-demand parachains
 

@@ -45,11 +45,11 @@ described in the [Polkadot Whitepaper](https://polkadot.network/PolkaDotPaper.pd
 
 #### [Shared Security](../learn/learn-parachains.md) (Pooled Security)
 
-Parachains can lease the security of the Polkadot network by bonding [DOT](../learn/learn-DOT.md)
-for a parachain slot. This means that the social costs of building a community around your project
-and convincing validators to participate in your network security are reduced. Polkadot has strong
-security, and decentralised application projects wishing to benefit from this security would want to
-become a parachain to share in that pooled security.
+Parachains can lease the security and interoperability of the Polkadot network purchasing coretime
+with [DOT](../learn/learn-DOT.md). This means that the social costs of building a community around
+your project and convincing validators to participate in your network security are reduced. Polkadot
+has strong security, and decentralised application projects wishing to benefit from this security
+would want to become a parachain to share in that pooled security.
 
 #### [On-Chain Governance](../learn/learn-polkadot-opengov.md) (Thought-through Governance)
 
@@ -148,7 +148,7 @@ in migrating onto the relay chain as a para-object. While the parachain model ha
 may not be the go-to strategy for some projects.
 
 As a path for migration onto Polkadot, it may be more viable to migrate to one of the chains in one
-of the reserved slots.
+of the reserved cores.
 
 For instance, there are currently options for [smart contract deployment](build-smart-contracts.md)
 on Kusama through the networks that have secured [coretime](../learn/learn-agile-coretime.md).
@@ -366,20 +366,19 @@ are available.
 To include your parachain into the Polkadot network, you will need to reserve some time on a relay
 chain core.
 
-Parachain slots are acquired through [coretime](../learn/learn-agile-coretime.md) purchase to
-produce blocks
-[continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains). See
+Time on a core is acquired through [coretime](../learn/learn-agile-coretime.md) purchased with DOT
+to produce blocks
+[continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains) while
+benefiting from Polkadot's security. See
 [these guides](../learn/learn-guides-coretime-marketplaces.md) to learn how to purchase coretime.
 
 ## Resources
 
 - [Parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/)
-- [System (Common Good) Parachains](https://polkadot.network/blog/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 - [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
 - [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)
 - [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
 - [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
 - [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
-- [Polkadot Parachain Slots](https://polkadot.network/polkadot-parachain-slots/)
 - [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
 - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)

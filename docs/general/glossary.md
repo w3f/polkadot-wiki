@@ -94,8 +94,7 @@ makes BLS a preferred scheme for voting in consensus algorithms and threshold si
 ## Bonding
 
 A process by which tokens can be "frozen" in exchange for some other benefit. For example, staking
-is a form of bonding for which you receive rewards in exchange for securing the network. You can
-also bond tokens in exchange for a parachain slot.
+is a form of bonding for which you receive rewards in exchange for securing the network.
 
 ## [Bounty](../learn/learn-polkadot-opengov-treasury.md#bounties)
 
