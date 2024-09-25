@@ -121,19 +121,6 @@ The maximum number of validators that can be nominated by a nominator is can be 
 
 </Tabs>
 
-### Parachains
-
-| Crowdloans and Auctions | Time   | Slots   | Description                                                                      |
-| ----------------------- | ------ | ------- | -------------------------------------------------------------------------------- |
-| Auction duration        | 7 days | 100_800 | The total duration of the slot auction, subject to the candle auction mechanism. |
-| Opening period          | 2 days | 28_800  | The opening period of the slot auction.                                          |
-| Ending period           | 5 days | 72_000  | The ending period of the slot auction.                                           |
-
-| Parachain Slot      | Time     | Slots      | Description                                                                             |
-| ------------------- | -------- | ---------- | --------------------------------------------------------------------------------------- |
-| Lease period        | 12 weeks | 1_209_600  | The length of one lease period in a parachain slot.                                     |
-| Total slot duration | 2 years  | 10_512_000 | The maximum duration a parachain can lease by winning a slot auction (8 lease periods). |
-
 ### Treasury
 
 <!-- prettier-ignore -->

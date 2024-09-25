@@ -185,11 +185,6 @@ They will migrate when the runtime upgrade with Agile Coretime is performed on t
 parachains with existing lease periods will be automatically credited bulk coretime for the
 remainder of their lease period.
 
-#### When will the auction mechanism be deprecated?
-
-Auctions will stop directly with the runtime upgrade of Agile Coretime. Current leases will be
-migrated to bulk coretime automatically.
-
 ### Product
 
 #### Where will coretime be maintained?
@@ -410,9 +405,9 @@ the end of the region in which its slot would have expired.
 
 #### When does the last auction take place?
 
-Auctions take place until the launch of coretime. With the runtime upgrade, enabling Agile Coretime,
-any still ongoing auction will be canceled. Existing active leases of previous auctions will be
-migrated to Agile Coretime: In case you have a lease secured, you automatically get corresponding
+Auctions took place until the launch of agile coretime with Polkadot runtime upgrade on the 19th of
+September 2024. Ongoing auctions were canceled and existing active leases of previous auctions were
+migrated to Agile Coretime. In case you had a lease secured, you automatically got corresponding
 coretime, with renewal right.
 
 _Note: if your team secured a lease with a new paraID, please

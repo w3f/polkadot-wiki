@@ -31,7 +31,7 @@ Kusama is experimental. **Expect Chaos**.
 :::tip As a KSM holder
 
 You can interact with all the features of the Kusama network such as staking (i.e. validating or
-nominating), governance, parachain auctions, basic transfers and everything else.
+nominating), governance, basic transfers and everything else.
 
 :::
 

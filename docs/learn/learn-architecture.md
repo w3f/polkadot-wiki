@@ -17,11 +17,11 @@ Polkadot is a heterogeneous multichain with shared security and interoperability
 
 The relay chain is the central chain of Polkadot. All validators of are staked on the relay chain in
 DOT and validate for the relay chain. The relay chain is composed of a relatively small number of
-transaction types that include ways to interact with the governance mechanism, parachain auctions,
-and participating in NPoS. The relay chain has deliberately minimal functionality - for instance,
-smart contracts are not supported. The main responsibility is to coordinate the system as a whole,
-including parachains. Other specific work is delegated to the parachains, which have different
-implementations and features.
+transaction types that include ways to interact with the governance mechanism, and participating in
+NPoS. The relay chain has deliberately minimal functionality - for instance, smart contracts are not
+supported. The main responsibility is to coordinate the system as a whole, including parachains.
+Other specific work is delegated to the parachains, which have different implementations and
+features.
 
 ## [Parachain](learn-parachains.md) Slots
 

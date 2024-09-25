@@ -9,13 +9,13 @@ slug: ../learn-parachains
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="Parachain Slot Auctions will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+<MessageBox message="[Agile Coretime](./learn-agile-coretime.md) is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime.md#implementation). For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
 :::info Testing on Rococo
 
-For information on how to participate in the crowdloan and parachain auction testing on Rococo,
-please see the [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
-on the parachain development guide.
+For information on how to test coretime functionalities on Rococo, please see the
+[Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) on the
+parachain development guide.
 
 :::
 
@@ -170,28 +170,32 @@ validity.
 Parachains are not required to have their token. If they do, it is up to the parachain (and not the
 relay chain) to make the economic case for their token.
 
-## Parachain Slot Acquisition
+## Coretime
 
-There are two ways to allocate parachain slots:
+Parachains can access the relay chain via cores.
 
-- Governance granted parachains, or "system parachains"
-- Auction granted parachains
+There are two ways to allocate relay chain cores:
+
+- Via Governance only to [system chains](./learn-system-chains.md).
+- Via [coretime](./learn-agile-coretime.md) purchase with DOT (KSM on Kusama) for non-system chains.
+  Coretime is used to rent computation time on a relay chain core. This is the only way to access
+  Polkadot's shared security and interoperability.
 
 [System parachains](#system-parachains) are allocated by Polkadot's on-chain
 [governance](./learn-polkadot-opengov.md) and are part of the network's protocol, such as bridges to
 other networks or chains. These typically do not have an economic model and help remove transactions
 from the relay chain, allowing for more efficient parachain processing.
 
-[Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
-teams can either bid with their own DOT (or KSM on Kusama) tokens, or source them from the community
-using the [crowdloan functionality](learn-crowdloans.md).
+Non-system chains can access the relay chain's cores via bulk or on-demand coretime purchased with
+DOT (or KSM on Kusama).
 
-### Parachain Lease Expiration
+### Coretime Expiration
 
-When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
-balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
-are unreserved. Parachains without a new lease to extend their slot will be deprecated to the status
-of a parathread (i.e., a chain with a registered `ParaID` but has no access to a core).
+The DOT (or KSM on Kusama) used to purchase coretime are burned. At coretime expiration, parachains
+can choose to renew it at a fixed cost (only bulk coretime) or buy it on-demand (variable price
+depending on the demand and other market variables) when they need to access the relay chain.
+Parachains without coretime to extend time on a relay chain core will be deprecated to the status of
+a parathread (i.e., a chain with a registered `ParaID` but without access to a core).
 
 ## System Parachains
 

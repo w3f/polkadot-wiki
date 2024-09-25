@@ -52,12 +52,12 @@ missed blocks in the sessions directly following
 [block #516558](https://kusama.subscan.io/block/516558) was significantly higher. This is partly
 what contributes to the much higher ratio of missed blocks on Kusama versus Polkadot today.
 
-## Kusama's Current Adventure: Auctions
+## Auctions
 
 Kusama promised chaos, and it delivered on that promise. On June 15th, 2021, the roll out of the
-first public parachain slot auction commenced, marking the beginning of the end to deliver on the
-last piece of core functionality outlined in the Polkadot whitepaper: purpose-built, interoperable
-parachains.
+first public parachain slot [auction](../../learn/learn-auction.md) commenced, marking the beginning
+of the end to deliver on the last piece of core functionality outlined in the Polkadot whitepaper:
+purpose-built, interoperable parachains.
 
 Teams and projects looking to become an official parachain on the Kusama network have been working
 hard to bring their technologies to life, many of whom started a

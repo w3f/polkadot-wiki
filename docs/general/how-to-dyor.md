@@ -174,21 +174,13 @@ prominent members of the ecosystem.
 
 ### Clear Integration
 
-There are many ways for a project to build on Polkadot. Perhaps the most direct one is to aim to
-become a parachain. Some of the most notable Polkadot projects are already parachains on Kusama or
-gearing up to become one, and most of them may also bid for Polkadot parachain slots when live.
-
-Of course, getting a parachain slot on either of the two main networks is not guaranteed, and all
-projects will need to win an [auction](https://kusama.network/auctions/) for a parachain slot.
+There are many ways for a project to build on Polkadot. Some of the most notable Polkadot projects
+are parachains on Kusama or gearing up to become one. Parachains can purchase
+[coretime](../learn/learn-agile-coretime.md) and access a relay chain's core.
 
 Verifying which projects are currently parachains on Kusama can be quickly done by visiting the
 [parachains](https://polkadot.js.org/apps/#/parachains) page on
-[polkadot.js.org/apps](https://polkadot.js.org/apps). In the
-[parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) page you can see which projects
-are preparing to claim a parachain slot, the
-[auctions](https://polkadot.js.org/apps/#/parachains/auctions) page shows which projects are bidding
-for the next slot, and the [crowdloan](https://polkadot.js.org/apps/#/parachains/crowdloan) page
-shows which projects are gathering funds from their community to participate in auctions.
+[polkadot.js.org/apps](https://polkadot.js.org/apps).
 
 But not all projects that build a chain using [Substrate](https://substrate.io) aim to become a
 parachain. Some use it simply because of its infrastructure to build their customised chain, without
@@ -293,40 +285,6 @@ Furthermore, receiving emails from the project's domain makes it easy to verify 
 communication is authentic (but look out for spoofed emails!). On the other hand, communicating
 through personal emails or using a public email provider, like Google or Yahoo, might indicate a
 less serious team or one that is spread too thin.
-
-## Crowdloans
-
-With the recent launch of [parachains](../learn/learn-parachains.md) on Kusama, many projects that
-aim to become a parachain launched a [crowdloan](../learn/learn-crowdloans.md) to gather the
-necessary funds to participate in the [parachain auctions](../learn/learn-auction.md). But with all
-the buzz around the Kusama parachain launch and the imminent Polkadot launch, many scams will very
-likely also surface. So, crowdloans require their own section to ensure participant safety.
-
-First of all, only projects that aim to become a parachain should have a crowdloan. If a project is
-not a parachain candidate, there should not be a crowdloan associated with it.
-
-The optimal way to participate in a parachain crowdloan is through on-chain, via one of the
-available [wallets or extensions](./wallets-and-extensions.md). Many parachain candidates offer a
-way to participate through their site as well. However, you should ensure that they are using the
-crowdloan pallet in the background and that they are simply wrapping that in a nicer, more
-user-friendly interface. If their crowdloan interface _transfers_ funds to an account instead, these
-funds will be totally under their control, and this means you need to fully trust that the team will
-use the funds for the crowdloan, will return your share to you when the lease period ends or if they
-do not win a slot, and will secure the funds properly. If their crowdloan involves this kind of
-mechanism, it should be explicitly mentioned in their site and documentation.
-
-That being said, some teams have been doing token sales or swaps in an attempt to get a head start
-in raising funds for the auctions, but these are **not crowdloans** and still require full trust in
-the team. So, if you plan to participate in these token swaps, make sure the project is reputable
-and that you are getting the correct information through their official site and social media
-channels.
-
-Similarly, several centralized exchanges are creating ways to participate in crowdloans through
-their platforms, while some wallets are integrating crowdloan functionality into their apps. And
-more are sure to follow. Any legitimate effort should be using the native crowdloans module in the
-background and offering a more streamlined user experience. Confirming this is necessary before
-using these services, but in any case, it still involves trusting the exchange or the service
-provider.
 
 ### Additional material
 

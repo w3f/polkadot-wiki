@@ -31,10 +31,9 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   _continuation_ refers to a broad, long-running task that can do something, pause, continue (or do
   something else) later.
 - **A multicore computer** where chains that continuously operate in parallel on different cores are
-  called [parachains](../learn/learn-parachains.md). Currently, one core is reserved for one chain
-  through [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved
-  on-demand to multiple chains at different periods (see the
-  [Agile Coretime page](../learn/learn-agile-coretime.md)). At the time of writing (mid 2024), there
+  called [parachains](../learn/learn-parachains.md). One core can be reserved for one single chain
+  in-bulk or on-demand. On-demand cores can be accessed by multiple chains at different periods (see
+  the [Agile Coretime page](../learn/learn-agile-coretime.md)). At the time of writing (2024), there
   are around 50 cores independently operating in parallel on Polkadot.
 
 From now on _application_ will be used as a general term to describe anything that can use a
@@ -101,8 +100,7 @@ of those options. The topic is currently under discussion. For more information,
 Polkadot 1.0 was a chain-centric paradigm consisting of isolated chains able to exchange messages.
 This was not fundamentally different from having completely different chains connected to bridges,
 with the only difference of having the relay-chain securing the network, providing message-passing
-capability, and doing some extra tasks such as [crowdloans](../learn/learn-crowdloans.md),
-[auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
+capability, and doing some extra tasks such as [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately
 end in chain-centric application and UX.

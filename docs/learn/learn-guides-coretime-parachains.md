@@ -27,12 +27,13 @@ scenarios:
 - **Starting** with bulk coretime model from scratch
 - **Running** a parachain with on-demand coretime purchases ("pay as you go")
 
-The parachain lease auctions will stop on-chain with the enactment of the
-[runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0), and the
-existing leases will be migrated to bulk coretime automatically. Leases that are yet to be started
-will be canceled and the locked tokens will be refunded. The existing parachains benefit from
-[coretime renewals](https://docs.lastic.xyz/coretime/renewals.html) which allows for the continued
-assignment of bulk coretime for a core without going through the regular purchasing process.
+The parachain lease auctions stopped on-chain with the enactment of the
+[runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0) on the
+19th of September 2024, and the existing leases were migrated to bulk coretime automatically. Leases
+that had not started were canceled, and the locked tokens were refunded. The existing parachains
+benefit from [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html), allowing for the
+continued assignment of bulk coretime for a core without going through the regular purchasing
+process.
 
 :::info
 
