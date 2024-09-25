@@ -861,7 +861,7 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Build Archive",
+          label: "Archive",
           link: {
             type: 'generated-index',
             title: "Archived Build Resources",

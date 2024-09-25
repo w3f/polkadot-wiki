@@ -10,7 +10,7 @@ slug: ../learn-crowdloans
 import MessageBox from "../../../components/MessageBox"; import
 "../../../components/MessageBox.css";
 
-<MessageBox message="[Agile Coretime](./learn-agile-coretime.md) is activated on the network, and crowdloans have been deprecated. For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
+<MessageBox message="The content on this page is archived. [Agile Coretime](./learn-agile-coretime.md) is activated on the network, and crowdloans have been deprecated. For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
 Polkadot allows parachains to source tokens for their parachain bids in a decentralized crowdloan.
 

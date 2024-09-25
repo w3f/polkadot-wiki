@@ -10,7 +10,7 @@ slug: ../learn-auction
 import MessageBox from "../../../components/MessageBox"; import
 "../../../components/MessageBox.css";
 
-<MessageBox message="[Agile Coretime](./learn-agile-coretime.md) is activated on the network, and parachain slot auctions have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+<MessageBox message="The content on this page is archived. [Agile Coretime](./learn-agile-coretime.md) is activated on the network, and parachain slot auctions have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
 
 For a [parachain](../learn-parachains.md) to be added to the relay chain it must inhabit one of the
 available parachain slots. The number of parachain slots is not unbounded, as only a limited number
