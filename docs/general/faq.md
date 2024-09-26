@@ -294,7 +294,7 @@ can move between being a parachain, an
 chain at different points of its lifetime. Especially with on-demand parachains, parachains can
 produce blocks when their usage and throughput makes it necessary.
 
-When a parachain's time on a core expires, that parachain has a few options. In most cases, becoming
+When a parachain's coretime has not been renewed, that parachain has a few options. In most cases, becoming
 an on-demand parachain instead would be a suitable choice. On-demand parachains are still secured by
 the relay chain, but don't need to hold a core and can produce a block when its economically
 feasible for them. For more on parachains please see the
