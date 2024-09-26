@@ -330,9 +330,8 @@ For a complete list of tools, please take a look here:
 ## Resources
 
 - [Agile Coretime Fellowship RFC](https://polkadot-fellows.github.io/RFCs/approved/0001-agile-coretime.html)
-- [The Launch of Parachains](https://polkadot.network/blog/the-launch-of-parachains/)
-- [Polkadot Bridges](https://medium.com/polkadot-network/polkadot-bridges-connecting-the-polkadot-ecosystem-with-external-networks-1118916392e3)
+- [Polkadot Bridges](../learn/learn-bridges.md)
 - [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
-- [The Path of a Parachain Block (Video)](https://www.crowdcast.io/e/polkadot-path-of-a-parachain-block?utm_source=profile&utm_medium=profile_web&utm_campaign=profile)
+- [The Path of a Parachain Block (Parachain Protocol page)](../learn/learn-parachains-protocol.md)
 - [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
 - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)
