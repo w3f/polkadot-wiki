@@ -159,3 +159,5 @@ DOT will continue to be JAM’s native token. No other native token will be issu
 - Read
   [this blog post](https://grillapp.net/@filippoweb3/gavin-s-talk-about-jam-at-token2049-dubai-136004?ref=10124)
   about the original talk by Gavin Wood at Token2049 in Dubai.
+- Read [the "Demystifying JAM" blog post](https://blog.kianenigma.com/posts/tech/demystifying-jam/)
+  by Kian Paimani.
