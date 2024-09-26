@@ -286,7 +286,7 @@ Parachains need collators to continue to progress, so it wouldn't be unreasonabl
 incentivize collator nodes in some way, but the specific mechanism is completely up to parachain
 implementers.
 
-### Are parachains ephemeral? What happens when a parachain's time on a core expires?
+### Are parachains ephemeral? What happens when a parachain fails to renew its coretime?
 
 Parachains are not ephemeral. As long as someone is keeping the data for a parachain, the parachain
 can move between being a parachain, an
