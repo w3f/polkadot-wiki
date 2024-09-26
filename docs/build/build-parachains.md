@@ -137,7 +137,7 @@ parallelizable objects.
 
 These could be in the form of:
 
-- System level chains (permanent chains): via [agile coretime](../learn/learn-agile-coretime.md)
+- System level chains (permanent chains)
 - [Bridge](../learn/learn-bridges.md) Hubs
 - Nested relay chains
 
