@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import Packages from "./../package.json";
 
@@ -10,14 +9,14 @@ const PolkadotJSVersion = Packages.devDependencies["@polkadot/api"].substring(1)
 const Networks = [
   { name: "Polkadot", rpc: "wss://rpc.ibp.network/polkadot" },
   { name: "Polkadot Asset Hub", rpc: "wss://polkadot-asset-hub-rpc.polkadot.io" },
-  { name: "Polkadot People", rpc: "wss://polkadot-people-rpc.polkadot.io"},
-  { name: "Polkadot Bridge Hub", rpc: "wss://polkadot-bridge-hub-rpc.polkadot.io"},
-  { name: "Polkadot Collectives", rpc: "wss://polkadot-collectives-rpc.polkadot.io"},
+  { name: "Polkadot People", rpc: "wss://polkadot-people-rpc.polkadot.io" },
+  { name: "Polkadot Bridge Hub", rpc: "wss://polkadot-bridge-hub-rpc.polkadot.io" },
+  { name: "Polkadot Collectives", rpc: "wss://polkadot-collectives-rpc.polkadot.io" },
   { name: "Kusama", rpc: "wss://rpc.ibp.network/kusama" },
   { name: "Kusama Asset Hub", rpc: "wss://kusama-asset-hub-rpc.polkadot.io" },
-  { name: "Kusama People", rpc: "wss://kusama-people-rpc.polkadot.io"},
-  { name: "Kusama Bridge Hub", rpc: "wss://kusama-bridge-hub-rpc.polkadot.io"},
-  { name: "Kusama Coretime", rpc: "wss://kusama-coretime-rpc.polkadot.io"},
+  { name: "Kusama People", rpc: "wss://kusama-people-rpc.polkadot.io" },
+  { name: "Kusama Bridge Hub", rpc: "wss://kusama-bridge-hub-rpc.polkadot.io" },
+  { name: "Kusama Coretime", rpc: "wss://kusama-coretime-rpc.polkadot.io" },
   { name: "Westend", rpc: "wss://westend-rpc.polkadot.io" },
   { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
@@ -25,22 +24,23 @@ const Networks = [
 // Common pallets specific to Polkadot/Kusama.
 const CommonRuntimeModules = ["auctions", "claims", "crowdloan", "registrar", "slots"];
 const CommonParachainRuntimeModules = ["configuration", "hrmp", "initializer", "paras_inherent", "paras", "disputes", "disputes/slashing"];
+
 // Mappings from metadata to names compatible with searching in Rust docs
 const PalletNameMappings = {
-  "registrar": "paras_registrar",
-  "xcmpallet": "xcm",
-  "voterlist": "bags_list",
-  "fastunstake": "fast_unstake",
-  "childbounties": "child_bounties",
-  "nominationpools": "nomination_pools",
-  "convictionvoting": "conviction_voting",
-  "imonline": "im_online",
-  "parasdisputes": "disputes",
-  "parasslashing": "disputes/slashing",
-  "parainherent": "paras_inherent",
-  "messagequeue": "message_queue",
-  "electionprovidermultiphase": "election_provider_multi_phase",
-  "system": "frame_system",
+  registrar: "paras_registrar",
+  xcmpallet: "xcm",
+  voterlist: "bags_list",
+  fastunstake: "fast_unstake",
+  childbounties: "child_bounties",
+  nominationpools: "nomination_pools",
+  convictionvoting: "conviction_voting",
+  imonline: "im_online",
+  parasdisputes: "disputes",
+  parasslashing: "disputes/slashing",
+  parainherent: "paras_inherent",
+  messagequeue: "message_queue",
+  electionprovidermultiphase: "election_provider_multi_phase",
+  system: "frame_system",
 };
 
 // Track all top-level containers for expand/collapse all functionality
@@ -53,33 +53,47 @@ let SearchThrottle;
 export default function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
 
-  useEffect(async () => {
-    // Load default network
-    let defaultNetwork = "Polkadot";
-    if (document.title === "Metadata Explorer · Guide") { defaultNetwork = "Kusama"; }
-    const network = Networks.find(network => { return network.name === defaultNetwork });
-    const wsUrl = network.rpc;
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      let defaultNetwork = "Polkadot";
+      if (document.title === "Metadata Explorer · Guide") {
+        defaultNetwork = "Kusama";
+      }
+      const network = Networks.find((network) => network.name === defaultNetwork);
+      const wsUrl = network.rpc;
 
-    // Build selection dropdown
-    let options = [];
-    Networks.forEach(chain => {
-      const option = <option value={chain.rpc} key={chain.name}>{`${chain.name.charAt(0).toUpperCase() + chain.name.slice(1)}`}</option>
-      options.push(option);
-    });
-    const dropdown = (
-      <select defaultValue={network.rpc} style={DropDownStyle} onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}>
-        {options.map((option) => (option))}
-      </select>
-    )
+      // Build selection dropdown
+      let options = [];
+      Networks.forEach((chain) => {
+        const option = (
+          <option value={chain.rpc} key={chain.name}>
+            {`${chain.name.charAt(0).toUpperCase() + chain.name.slice(1)}`}
+          </option>
+        );
+        options.push(option);
+      });
 
-    // Set loading status
-    setReturnValue(<div style={PinkText}><b>Loading Metadata Explorer...</b></div>);
+      const dropdown = (
+        <select
+          defaultValue={network.rpc}
+          style={DropDownStyle}
+          onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}
+        >
+          {options.map((option) => option)}
+        </select>
+      );
 
-    // Fetch metadata from the chain
-    await GetMetadata(version, wsUrl, dropdown, setReturnValue);
-  }, []);
+      // Set loading status
+      setReturnValue(<div style={PinkText}><b>Loading Metadata Explorer...</b></div>);
 
-  return (returnValue);
+      // Fetch metadata from the chain
+      await GetMetadata(version, wsUrl, dropdown, setReturnValue);
+    };
+
+    fetchMetadata();
+  }, [version]);
+
+  return returnValue;
 }
 
 // Retrieve metadata from selected chain and render results
@@ -102,8 +116,9 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   // Pallets
   const pallets = meta.metadata[version].pallets;
   pallets.sort((a, b) => a.name.localeCompare(b.name));
+
   let palletData = [];
-  pallets.forEach(pallet => {
+  pallets.forEach((pallet) => {
     // Pallet extractions
     const constants = BuildPalletItems(pallet, api.consts[`${Camel(pallet.name)}`], "constants", types);
     const errors = BuildPalletItems(pallet, api.errors[`${Camel(pallet.name)}`], "errors", types);
@@ -121,7 +136,12 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
     // Compile all elements for the given pallet
     palletData.push(
       <div key={pallet.name} style={SecondLevel}>
-        <span><b id={`${pallet.name}-button`} style={TreeControl} onClick={() => { ToggleExpand(pallet.name) }}>+</b>&nbsp;<b>{pallet.name}</b></span>
+        <span>
+          <b id={`${pallet.name}-button`} style={TreeControl} onClick={() => ToggleExpand(pallet.name)}>
+            +
+          </b>
+          &nbsp;<b>{pallet.name}</b>
+        </span>
         <div id={pallet.name} style={TopLevelDiv}>
           {constantElements}
           {errorElements}
@@ -130,7 +150,7 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
           {storageElements}
         </div>
       </div>
-    )
+    );
     Expandable.push(pallet.name);
     Expandable.push(`${pallet.name}-constants`, `${pallet.name}-errors`, `${pallet.name}-events`, `${pallet.name}-extrinsics`, `${pallet.name}-storage`);
   });
@@ -145,28 +165,36 @@ async function GetMetadata(version, wsUrl, dropdown, setReturnValue) {
   setReturnValue(
     <div>
       <div style={ExplorerControls}>
-        <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onInput={() => Search()} /><br />
+        <input id="metaSearch" type="text" placeholder="Search Metadata" style={SearchStyle} onInput={() => Search()} />
+        <br />
         {dropdown}
         <div id="buttonControls">
-          <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}><span style={{ fontSize: "10px" }}>Expand All</span></button>
-          <button style={ExpandCollapseButton} onClick={() => ExpandAll(false)}><span style={{ fontSize: "10px" }}>Collapse All</span></button>
+          <button style={ExpandCollapseButton} onClick={() => ExpandAll(true)}>
+            <span style={{ fontSize: "10px" }}>Expand All</span>
+          </button>
+          <button style={ExpandCollapseButton} onClick={() => ExpandAll(false)}>
+            <span style={{ fontSize: "10px" }}>Collapse All</span>
+          </button>
         </div>
         <div style={{ fontSize: "10px" }}>
-          <b style={PinkText}>metadata</b><b>{` ${version}`}</b>&nbsp;
-          <b style={PinkText}>@polkadot/api</b><b>{` V${PolkadotJSVersion}`}</b>
+          <b style={PinkText}>metadata</b>
+          <b>{` ${version}`}</b>&nbsp;
+          <b style={PinkText}>@polkadot/api</b>
+          <b>{` V${PolkadotJSVersion}`}</b>
         </div>
-        <div id="metadataLoading" style={LoadingStatus}><b>{`Connecting to ${wsUrl}...`}</b></div>
-        <div id="searchLoading" style={LoadingStatus}><b>Searching...</b></div>
-        <div id="searchResults" style={LoadingStatus}><b>{`Matches: `}</b><b id="searchCount" style={PinkText}>0</b></div>
+        <div id="metadataLoading" style={LoadingStatus}>
+          <b>{`Connecting to ${wsUrl}...`}</b>
+        </div>
+        <div id="searchLoading" style={LoadingStatus}>
+          <b>Searching...</b>
+        </div>
+        <div id="searchResults" style={LoadingStatus}>
+          <b>No Results</b>
+        </div>
       </div>
-      <b style={TopLevel}>Pallets:</b>
-      {palletData}
-      <br />
-      <b style={TopLevel}>RPC:</b>
-      {rpcs}
-      <br />
-      <b style={TopLevel}>Runtime:</b>
-      {runtime}
+      <div>{palletData}</div>
+      <div>{rpcs}</div>
+      <div>{runtime}</div>
     </div>
   );
 }
