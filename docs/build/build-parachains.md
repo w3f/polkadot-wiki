@@ -366,7 +366,7 @@ are available.
 To include your parachain into the Polkadot network, you will need to reserve a core on the relay
 chain.
 
-Time on a core is acquired through [coretime](../learn/learn-agile-coretime.md) purchased with DOT
+[Coretime](../learn/learn-agile-coretime.md) can be purchased with DOT
 to produce blocks
 [continuously or on-demand](../learn/learn-parachains.md#parachains-vs-on-demand-parachains) while
 benefiting from Polkadot's security. See
