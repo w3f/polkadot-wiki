@@ -61,7 +61,7 @@ When you set a proxy, you must choose a type of proxy for the relationship with 
 - **Staking**: allow all staking-related transactions. The stash account is meant to stay in cold
   storage, while the staking proxy account makes day-to-day transactions like setting session keys
   or deciding which validators to nominate. Visit the
-  [Advanced Staking Concepts page](./learn-staking-advanced.md/#staking-proxies) for more detailed
+  [Advanced Staking Concepts page](./learn-staking-advanced.md#staking-proxies) for more detailed
   information about staking proxies.
 - **Identity Judgement**: allow registrars to make judgments on an account's identity. If you are
   unfamiliar with judgment and identities on chain, please refer to
