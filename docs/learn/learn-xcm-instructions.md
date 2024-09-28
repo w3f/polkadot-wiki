@@ -81,8 +81,7 @@ repository, where each instruction and register is explained in-depth.
 ## Instructions Application Example
 
 The following presents the practical mapping of instructions to some
-[core functionality in XCM](./learn-xcm.md/#core-functionality-of-xcm).
-
+[core functionality in XCM](./docs/learn-xcm#core-functionality-of-xcm).
 <Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'},
 {label: 'Functional Multichain Decomposition', value: 'fmd'} ]}>
 
