@@ -78,7 +78,7 @@ hash, etc.) will change on transaction construction.
 
 Users in the Asset Hub can pay the fees of their transactions with assets other than DOT. The only
 requirement is that a liquidity pool of the relevant asset against DOT should already exist as a
-storage entry of [the Asset Conversion pallet](../learn/learn-asset-conversion-assethub).
+storage entry of [the Asset Conversion pallet](../learn/learn-asset-conversion-assethub.md).
 
 Technically speaking, this is enabled by
 [the `ChargeAssetTxPayment` signed-extension](https://github.com/polkadot-fellows/runtimes/blob/bb52c327360d1098d3b3d36f4eafb40a74636e80/system-parachains/asset-hubs/asset-hub-polkadot/src/lib.rs#L1016)
