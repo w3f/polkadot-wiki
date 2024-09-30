@@ -346,6 +346,12 @@ module.exports = {
                   description: 'Community-maintained Support Pages about Polkadot OpenGov.',
                   href: 'https://ogtracker.io/',
                 },
+                {
+                  type: 'link',
+                  label: 'OpenGov Portal',
+                  description: 'Community-maintained Support Pages about Polkadot OpenGov.',
+                  href: 'https://opengovwatch.notion.site/Polkadot-OpenGov-Portal-f8baf91a46864144ae96c47173a10225',
+                },
               ],
             },
             {
