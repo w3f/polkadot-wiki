@@ -20,22 +20,19 @@ The Treasury is a pot of funds collected through a portion of block production r
 The Treasury funds are held in a [system account](../learn-account-advanced.md#system-accounts) not
 accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
 spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
-waiting period before distribution. This waiting period is known as the _spend period_, and its
-duration is subject to [governance](learn-governance.md), with the current default set to
-{{ polkadot: 28 :polkadot }} {{ kusama: 6 :kusama }} days. The Treasury attempts to spend as many
-proposals in the queue as it can without running out of funds.
+waiting period before distribution. This waiting period is known as the
+[_spend period_](../../general/chain-state-values.md#treasury-spending-period), and its duration is
+subject to [governance](learn-governance.md). The Treasury attempts to spend as many proposals in
+the queue as it can without running out of funds.
 
 Treasury payout is an automatic process:
 
 - If the Treasury funds run out with approved proposals left to fund, those proposals are kept in
   the approved queue, and will receive funding in the following spend period.
-- If the Treasury ends a spend period without spending all of its funds, it suffers a burn of a
-  percentage of its funds - thereby causing deflationary pressure. This encourages the spending of
-  the funds in the Treasury by Polkadot's governance system.
-  {{ polkadot: This percentage is currently at 1% on Polkadot. :polkadot }}
-  {{ kusama: This percentage is currently 0.2% on Kusama, with the amount currently
-  going to [Society](https://guide.kusama.network/docs/maintain-guides-society-kusama) rather than being
-  burned. :kusama }}
+- If the Treasury ends a spend period without spending all of its funds, it suffers a burn of
+  [a percentage of its funds](../../general/chain-state-values.md#treasury-burn-factor) - thereby
+  causing deflationary pressure. This encourages the spending of the funds in the Treasury by
+  Polkadot's governance system.
 
 When a stakeholder wishes to propose a spend from the Treasury, they must reserve a deposit of at
 least 5% of the proposed spend (see below for variations). This deposit will be slashed if the
@@ -84,9 +81,8 @@ be paid out.
 There are two types of tips:
 
 - public: A small bond is required to place them. This bond depends on the tip message length, and a
-  fixed bond constant defined on chain, currently {{ polkadot: 1 DOT. :polkadot }}
-  {{ kusama: 0.166 KSM. :kusama }} Public tips carry a finder's fee of
-  {{ polkadot: 20%, :polkadot }} {{ kusama: 20%, :kusama }} which is paid out from the total amount.
+  fixed bond constant defined on chain, currently 1 DOT (0.166 KSM on Kusama). Public tips carry a
+  finder's fee of 20% (same on Polkadot and Kusama) which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
 :::info
@@ -101,15 +97,13 @@ below.
 
 ### Example
 
-Bob has done something great for {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
-Alice has noticed this and decides to report Bob as deserving a tip from the Treasury. The Council
-is composed of three members Charlie, Dave, and Eve.
+Bob has done something great for Polkadot. Alice has noticed this and decides to report Bob as
+deserving a tip from the Treasury. The Council is composed of three members Charlie, Dave, and Eve.
 
 Alice begins the process by issuing the `report_awesome` extrinsic. This extrinsic requires two
 arguments, a reason and the beneficiary. Alice submits Bob's address with the reason being a UTF-8
-encoded URL to a post on {{ polkadot: [Polkassembly](https://polkadot.polkassembly.io) :polkadot }}
-{{ kusama: [Polkassembly](https://kusama.polkassembly.io) :kusama }} that explains her reasoning for
-why Bob deserves the tip.
+encoded URL to a post on [Polkassembly](https://polkadot.polkassembly.io) that explains her
+reasoning for why Bob deserves the tip.
 
 As mentioned above, Alice must also lock up a deposit for making this report. The deposit is the
 base deposit as set in the chain's parameter list, plus the additional deposit per byte contained in
@@ -120,20 +114,16 @@ the tip is approved by the tippers.
 Since the tipper group is the same as the Council, the Council must now collectively (but also
 independently) decide on the value of the tip that Bob deserves. Charlie, Dave, and Eve all review
 the report and make tips according to their personal valuation of the benefit Bob has provided to
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. Charlie tips
-{{ polkadot: 10 DOT :polkadot }}{{ kusama: 1 KSM :kusama }}, Dave tips
-{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }}, and Eve tips
-{{ polkadot: 100 DOT :polkadot }}{{ kusama: 10 KSM :kusama }}.
+the network. Charlie tips 10 DOT, Dave tips 30 DOT, and Eve tips 100 DOT.
 
 The tip could have been closed out with only two of the three tippers. Once more than half of the
 tippers group have issued tip valuations, the countdown to close the tip will begin. In this case,
 the third tipper issued their tip before the end of the closing period, so all three were able to
 make their tip valuations known.
 
-The actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out
-{{ polkadot: 30 DOT :polkadot }}{{ kusama: 3 KSM :kusama }} from the Treasury. In order for Bob to
-be paid his tip, some account must call the `close_tip` extrinsic at the end of the closing period
-for the tip. This extrinsic may be called by anyone.
+The actual tip that will be paid out to Bob is the median of these tips, so Bob will be paid out 30
+DOT from the Treasury. In order for Bob to be paid his tip, some account must call the `close_tip`
+extrinsic at the end of the closing period for the tip. This extrinsic may be called by anyone.
 
 ## Bounties Spending
 
@@ -145,8 +135,7 @@ highly unlikely that a majority of members are capable in such diverse topics.
 Bounties Spending proposals aim to delegate the curation activity of spending proposals to experts
 called Curators: They can be defined as addresses with agency over a portion of the Treasury with
 the goal of fixing a bug or vulnerability, developing a strategy, or monitoring a set of tasks
-related to a specific topic: all for the benefit of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem.
+related to a specific topic: all for the benefit of the Polkadot ecosystem.
 
 A proposer can submit a bounty proposal for the Council to pass, with a curator to be defined later,
 whose background and expertise is such that they are capable of determining when the task is
@@ -198,13 +187,9 @@ button '+ Add Bounty' on the upper-right side of the interface. Complete the bou
 requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
-motion. You can contact the Council by joining the
-{{ polkadot: Polkadot Direction [channel](https://matrix.to/#/#Polkadot-Direction:parity.io) :polkadot }}
-{{ kusama: Kusama Direction [channel](https://matrix.to/#/#Kusama-Direction:parity.io) :kusama }} in
-Element or joining our
-{{ polkadot: Polkadot Discord [server](https://parity.link/polkadot-discord) :polkadot }}
-{{ kusama: Kusama Discord [server](https://parity.link/kusama-discord) :kusama }} and publishing a
-short description of your bounty, with a link to one of the [forums](#announcing-the-proposal) for
+motion. You can contact the Council by joining the main
+[Direction Element Channel and Discord server](../../general/community.md) and publishing a short
+description of your bounty, with a link to one of the [forums](#announcing-the-proposal) for
 contextual information.
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the

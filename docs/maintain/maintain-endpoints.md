@@ -23,7 +23,7 @@ tables below list these endpoints.
 Endpoints for all production and test networks are listed on the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) which are accessed from
 [here](https://github.com/polkadot-js/apps/tree/master/packages/apps-config/src/endpoints).
-Endpoints for Polkadot Relay Chain and Kusama Relay Chain, parachains, and Paseo test network are
+Endpoints for Polkadot relay chain and Kusama relay chain, parachains, and Paseo test network are
 maintained by the community. System Chains as well as Westend and Rococo test network endpoints
 maintained by Parity Technologies are listed below:
 

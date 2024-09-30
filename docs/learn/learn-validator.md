@@ -11,15 +11,13 @@ import RPC from "./../../components/RPC-Connection";
 
 :::info
 
-This page provides a general overview of the role of validators in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
-can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
+This page provides a general overview of the role of validators in the Polkadot network. For more
+detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 :::
 
-Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, validating proofs from collators and
-participating in consensus with other validators.
+Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking native tokens,
+validating proofs from collators and participating in consensus with other validators.
 
 Validators play a crucial role in adding new blocks to the relay chain and, by extension, to all
 parachains. This allows parties to complete cross-chain transactions via the relay chain. They
@@ -30,9 +28,9 @@ trust-free environment.
 
 Parachain validators (i.e. para-validators) participate to the
 [Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md/#parachain-phase), and submit
-[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the Relay Chain
+[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the relay chain
 transaction queue so that a block author can include information on the parablock in a fork of of
-the Relay Chain.
+the relay chain.
 
 Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
 blocks for all parachains connected to the relay chain. The selected para-validators are part of the
@@ -47,15 +45,15 @@ _backable_.
 
 ## Block Authors
 
-There are validators on the Relay Chain who participate in the consensus mechanism to produce the
+There are validators on the relay chain who participate in the consensus mechanism to produce the
 relay chain blocks based on validity statements from other validators. These validators are called
 block authors, they are selected by [BABE](./learn-consensus.md/#block-production-babe) and can note
 up to one backable candidate for each parachain to include in the relay chain. A backable candidate
 included in the relay chain is considered _backed_ in that fork of the chain.
 
-In a Relay Chain block, block authors will only include
+In a relay chain block, block authors will only include
 [candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) that have a parent
-candidate receipt in an earlier Relay Chain block. This ensures the parachain follows a valid chain.
+candidate receipt in an earlier relay chain block. This ensures the parachain follows a valid chain.
 Also, the block authors will only include a receipt for which they have an erasure coding chunk,
 ensuring that the system can perform the next round of availability and validity checks.
 
@@ -79,15 +77,14 @@ system.
 
 Any instances of non-compliance with the consensus algorithms result in
 [**disputes**](./learn-parachains-protocol.md/#disputes) with the punishment of the validators on
-the wrong side by removing some or all their staked
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }}, thereby discouraging bad actors. Good
+the wrong side by removing some or all their staked tokens, thereby discouraging bad actors. Good
 performance, however, will be rewarded, with validators receiving block rewards (including
-transaction fees) in the form of {{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} in exchange
-for their activities.
+transaction fees) in the form of native tokens (DOT or KSM on Kusama) in exchange for their
+activities.
 
 Finally, validators participate in the
 [chain selection process within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring
-that only available and valid blocks end within the finalized Relay Chain.
+that only available and valid blocks end within the finalized relay chain.
 
 :::info Within an era roles can change
 

@@ -9,33 +9,31 @@ slug: ../learn-collator
 
 :::info
 
-This page provides a general overview of the role of collators' in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For more detailed information you
-can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
+This page provides a general overview of the role of collators' in the Polkadot ecosystem. For more
+detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 :::
 
 ## Collators' Role
 
 Collators maintain parachains by collecting parachain transactions from users and producing state
-transition proofs for Relay Chain validators. In other words, collators maintain parachains by
+transition proofs for relay chain validators. In other words, collators maintain parachains by
 aggregating parachain transactions into parachain block candidates and producing state transition
 proofs (Proof-of-Validity, PoV) for validators.
 
-Collators maintain a full node for the Relay Chain and a full node for their particular parachain;
+Collators maintain a full node for the relay chain and a full node for their particular parachain;
 meaning they retain all necessary information to be able to author new blocks and execute
 transactions in much the same way as miners do on PoW blockchains. Under normal circumstances, they
 will collate and execute transactions to create an unsealed block and provide it, together with a
 PoV, to one or more validators responsible for proposing a parachain block.
 
 Collators are similar to validators on any other blockchain but they do not need to provide security
-guarantees because {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides those. If
-a parachain block is invalid, it will get rejected by validators. The validators are required to
-check the validity of submitted candidates, followed by issuing and collecting statements about the
-validity of candidates to other validators. This process is known as **candidate backing**.
-Validators receive an arbitrary number of parachain candidates with associated PoV from untrusted
-collators. A candidate is considered _backable_ when at least 2/3 of all assigned validators have
-issued a valid statement about that candidate.
+guarantees because the relay chain provides those. If a parachain block is invalid, it will get
+rejected by validators. The validators are required to check the validity of submitted candidates,
+followed by issuing and collecting statements about the validity of candidates to other validators.
+This process is known as **candidate backing**. Validators receive an arbitrary number of parachain
+candidates with associated PoV from untrusted collators. A candidate is considered _backable_ when
+at least 2/3 of all assigned validators have issued a valid statement about that candidate.
 
 The validator must successfully verify the following conditions in the following order:
 
@@ -58,7 +56,7 @@ having just one honest collator.
 ## XCM
 
 Collators are a key element of the [XCM (Cross-Consensus Message Passing Format)](learn-xcm.md). By
-being full nodes of the Relay Chain, they are all aware of each other as peers. This makes it
+being full nodes of the relay chain, they are all aware of each other as peers. This makes it
 possible for them to send messages from parachain A to parachain B.
 
 ## Taking the Case for One Parachain
@@ -77,12 +75,12 @@ with the relay chain.
 The validators on the relay chain will try to reach a consensus on the block candidate. Upon
 reaching consensus, the now validated block candidate is shared with the validators and collators,
 and the process repeats for new transactions. A collator cannot continue building blocks on a
-parachain until the block candidate they proposed to the Relay Chain validators have been validated.
+parachain until the block candidate they proposed to the relay chain validators have been validated.
 A block is produced every 6 seconds.
 
 ## Collators in the Wild
 
-Blockchains that are built using Substrate are unable to hook onto the Relay Chain on their own. The
+Blockchains that are built using Substrate are unable to hook onto the relay chain on their own. The
 Parity team built the
 [Cumulus library](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) to address this.
 Collators are being used on the

@@ -43,7 +43,7 @@ been doing for the last five years, it is already a highly domain-specific roll-
 essentially makes it less opinionated and more generic.
 
 The JAM chain accepts outputs of roll-ups, in more general terms, bits of computation done
-elsewhere, and integrates the outputs into a shared state, similarly to how the Polkadot Relay Chain
+elsewhere, and integrates the outputs into a shared state, similarly to how the Polkadot relay chain
 functions.
 
 The job of the JAM chain is to provide the necessary apparatus to ensure that the output correctly
@@ -287,7 +287,7 @@ current setup.
 
 ## Architectural Differences: JAM vs. Relay Chain
 
-One of the architectural distinctions between JAM and the Relay Chain lies in the degree to which
+One of the architectural distinctions between JAM and the relay chain lies in the degree to which
 functionality is fixed. While the relay chain fixes certain elements, such as the language used to
 define the protocol (WASM), JAM goes further in this regard. For instance, it dictates the type used
 for encoding the block header and the hashing scheme, making alterations to these aspects
@@ -311,7 +311,7 @@ reasons support this decision:
 Despite these differences, JAM retains flexibility in application-level functionalities, such as
 coretime sales, staking, and governance, all managed within services. Additionally, JAM introduces a
 novel concept by associating a token balance with a service, providing opportunities for economic
-model adjustments that are not easily achievable in purely upgradable chains like the Relay Chain.
+model adjustments that are not easily achievable in purely upgradable chains like the relay chain.
 
 ## JAM Toaster
 
@@ -320,7 +320,7 @@ establishing a comprehensive test environment for the JAM chain. Unlike small-sc
 running on unreliable hardware to manage cloud computing costs, this initiative entails a
 substantial investment. Introducing the JAM toaster, essentially a test platform designed for
 conducting large-scale trials and performance assessments of JAM. This addresses a prior challenge
-encountered during the development of the Polkadot Relay Chain, where understanding the emergent
+encountered during the development of the Polkadot relay chain, where understanding the emergent
 effects and dynamics of operating a network at such scale proved difficult. Previous attempts were
 limited to a few dozen nodes on a test network and the Kusama network, which lacks comprehensive
 monitoring capabilities due to restrictions on accessing validator nodes. Conversely, the
@@ -352,7 +352,7 @@ within the relay chain, there's a provision for passing more data via a candidat
 be practical if all parachains transmitted all data all the time. JAM adheres strictly to rules,
 even for parachain services, including limitations on data transmission between the "refine" and
 "accumulate" phases. Currently, with
-[Horizontal Relay Chain Message Passing (HRMP)](./learn-xcm-transport.md#hrmp-xcmp-lites), all
+[Horizontal relay chain Message Passing (HRMP)](./learn-xcm-transport.md#hrmp-xcmp-lites), all
 messages traverse the relay chain, constraining the data payload to 4 kB or less, which might not be
 realistic. Thus, XCMP, where only message headers are relayed via the chain while the actual message
 data is transmitted off-chain, emerges as a necessary and overdue improvement.

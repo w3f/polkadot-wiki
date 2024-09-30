@@ -14,7 +14,7 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
 see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
-:::warning The identity pallet is no longer on the Kusama Relay Chain.
+:::warning The identity pallet is no longer on the Kusama relay chain.
 
 If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
 be called via the system parachain,

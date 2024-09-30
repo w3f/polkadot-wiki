@@ -22,10 +22,10 @@ their stake for validators to represent them.
 
 ## Nominated Proof of Stake
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses NPoS (Nominated Proof-of-Stake)
-as its mechanism for selecting the validator set. It is designed with the roles of
-[**validators**](./learn-validator.md) and [**nominators**](./learn-nominator.md), to maximize chain
-security. Actors who are interested in maintaining the network can run a validator node.
+Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
+is designed with the roles of [**validators**](./learn-validator.md) and
+[**nominators**](./learn-nominator.md), to maximize chain security. Actors who are interested in
+maintaining the network can run a validator node.
 
 Validators assume the role of producing new blocks, validating parachain blocks, and guaranteeing
 finality. Nominators can choose to backselect validators with their stake. Nominators can approve
@@ -33,19 +33,17 @@ candidates that they trust and back them with their tokens.
 
 ## Hybrid Consensus
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses what is known as _hybrid
-consensus_. Hybrid consensus splits up the finality gadget ([GRANDPA](#finality-gadget-grandpa))
-from the block production mechanism ([BABE](#block-production-babe)).
+Polkadot uses a _hybrid consensus_ composed by the finality gadget
+([GRANDPA](#finality-gadget-grandpa)) and the block production mechanism
+([BABE](#block-production-babe)).
 
 This is a way of getting the benefits of **probabilistic finality** (the ability always to produce
 new blocks) and **provable finality** (having a universal agreement on the canonical chain with no
-chance for reversion) in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. It also
-avoids the corresponding drawbacks of each mechanism (the chance of unknowingly following the wrong
-fork in probabilistic finality, and a chance for "stalling" - not being able to produce new blocks -
-in provable finality). By combining these two mechanisms,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} allows for blocks to be rapidly
-produced, and the slower finality mechanism to run in a separate process to finalize blocks without
-risking slower transaction processing or stalling.
+chance for reversion). It also avoids the corresponding drawbacks of each mechanism (the chance of
+unknowingly following the wrong fork in probabilistic finality, and a chance for "stalling" - not
+being able to produce new blocks - in provable finality). The combination of these two mechanisms
+allows for blocks to be rapidly produced, and the slower finality mechanism to run in a separate
+process to finalize blocks without risking slower transaction processing or stalling.
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in
 Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
@@ -57,7 +55,7 @@ BABE (Blind Assignment for Blockchain Extension) is the block production mechani
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
-according to stake and using the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
+according to stake and using the relay chain's
 [randomness cycle](./learn-cryptography.md#randomness). The chain’s runtime is required to provide
 the BABE authority list and randomness to the host via a consensus message in the header of the
 first block of each epoch.
@@ -97,12 +95,11 @@ For more details on BABE, please see the
 ## Finality Gadget: GRANDPA
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
-implemented for the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Relay Chain.
+implemented for the relay chain.
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host uses the GRANDPA Finality
-protocol to finalize blocks. Finality is obtained by consecutive rounds of voting by the validator
-nodes. Validators execute the GRANDPA finality process in parallel to Block Production as an
-independent service.
+The Polkadot Host uses the GRANDPA Finality protocol to finalize blocks. Finality is obtained by
+consecutive rounds of voting by the validator nodes. Validators execute the GRANDPA finality process
+in parallel to Block Production as an independent service.
 
 It works in a partially synchronous network model as long as 2/3 of nodes are honest and can cope
 with 1/5 Byzantine nodes in an asynchronous setting.
@@ -148,10 +145,9 @@ participants after some unspecified time.
 
 ## Fork Choice
 
-Bringing BABE and GRANDPA together, the fork choice of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} becomes clear. BABE must always build
-on the chain that GRANDPA has finalized. BABE provides probabilistic finality when there are forks
-after the finalized head by building on the chain with the most primary blocks.
+Bringing BABE and GRANDPA together, the fork choice of the relay chain becomes clear. BABE must
+always build on the chain that GRANDPA has finalized. BABE provides probabilistic finality when
+there are forks after the finalized head by building on the chain with the most primary blocks.
 
 ![Best chain choice](../assets/best_chain.png)
 

@@ -14,12 +14,11 @@ To follow the material on this page, it is recommended to be familiar with the c
 
 :::
 
-Interoperability is the core vision of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} technology. Through years of
-blockchain development, much effort has been put into making a secure interoperability solution
-between blockchains. {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} provides secure
-interoperability between parachains through its [Cross-Consensus Messaging (XCM)](./learn-xcm.md),
-and [Cross-Chain Message Passing (XCMP)](./learn-xcm-transport.md#xcmp-cross-chain-message-passing)
+Interoperability is the core vision of the Polkadot technology. Through years of blockchain
+development, much effort has been put into making a secure interoperability solution between
+blockchains. Polkadot provides secure interoperability between parachains through its
+[Cross-Consensus Messaging (XCM)](./learn-xcm.md), and
+[Cross-Chain Message Passing (XCMP)](./learn-xcm-transport.md#xcmp-cross-chain-message-passing)
 protocol. However, these solutions work when there is a shared security. In the case of interaction
 between chains that do not belong to the same Polkadot's shared security, bridges are needed.
 

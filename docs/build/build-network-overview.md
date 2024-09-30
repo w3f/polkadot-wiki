@@ -33,17 +33,15 @@ development or application-driven contexts.
   - **Contracts** - Wasm-based Smart Contract enabled parachain testnet on Rococo, primarily for
     [`ink!`](https://use.ink/) development.
 
-{{ polkadot: Polkadot mainnet has been running since May 2020 :polkadot }}{{ kusama: Kusama mainnet has been
-running since August 2019 :kusama }}
-and has [implementations in various programming languages](../learn/learn-implementations.md)
-ranging from Rust to JavaScript. The leading implementation is built in Rust and uses the Substrate
-framework.
+Polkadot mainnet has been running since May 2020 and has
+[implementations in various programming languages](../learn/learn-implementations.md) ranging from
+Rust to JavaScript. The leading implementation is built in Rust and uses the Substrate framework.
 
 Tooling is rapidly evolving to interact with the network; there are many ways to get started!
 
 But before you jump head-first into the code, you should consider the _kind_ of decentralized
 application you want to make and understand the different paradigms available to developers who want
-to build on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+to build on Polkadot.
 
 ## Interfacing - PolkadotJS
 

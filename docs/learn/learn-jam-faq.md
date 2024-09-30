@@ -80,17 +80,17 @@ the network's integrity and security.
 
 ## Is JAM related to Polkadot?
 
-Yes, JAM is a potential candidate for evolving the Polkadot Relay Chain. The key change is that
-parachains are no longer enshrined on the Relay Chain and will be running on top of a service that
+Yes, JAM is a potential candidate for evolving the Polkadot relay chain. The key change is that
+parachains are no longer enshrined on the relay chain and will be running on top of a service that
 is compatible with parachain protocol. One service will be, for example, the current parachains
 service. Anyone can permissionlessly add a service to the JAM Chain by specifying the entry points
 Refine, Accumulate and onTransfer.
 
 ## How would the Relay Chain change with JAM?
 
-JAM would be a successor to the Relay Chain, with a more straightforward and flexible architecture.
+JAM would be a successor to the relay chain, with a more straightforward and flexible architecture.
 Only the consensus functionality would be kept, while the rest, such as security, governance, etc.,
-would run on system-level services. The current Relay Chain will run on multiple cores in the new
+would run on system-level services. The current relay chain will run on multiple cores in the new
 JAM architecture, guaranteeing full compatibility.
 
 ## In the new architecture, what does the tech stack look like?
@@ -125,11 +125,11 @@ feedback and iterates on it.
 
 ## What about Polkadot? Will there be a hard fork?
 
-JAM isn’t a successor to Polkadot but a potential evolution of the Polkadot Relay Chain. It can only
+JAM isn’t a successor to Polkadot but a potential evolution of the Polkadot relay chain. It can only
 proceed if it passes through Polkadot’s decentralized governance system, winning approval from token
 holders. The current parachain-centered logic would continue as a service on top of the new JAM
 architecture. Part of the proposal will include tooling and hard-coded compatibility guarantees. The
-Relay Chain will upgrade, and parachains can then enjoy a much richer environment, synchronous
+relay chain will upgrade, and parachains can then enjoy a much richer environment, synchronous
 compatibility, and excellent scaling capabilities better than current L2s but built inside the L0/L1
 layer.
 
@@ -159,3 +159,5 @@ DOT will continue to be JAM’s native token. No other native token will be issu
 - Read
   [this blog post](https://grillapp.net/@filippoweb3/gavin-s-talk-about-jam-at-token2049-dubai-136004?ref=10124)
   about the original talk by Gavin Wood at Token2049 in Dubai.
+- Read [the "Demystifying JAM" blog post](https://blog.kianenigma.com/posts/tech/demystifying-jam/)
+  by Kian Paimani.

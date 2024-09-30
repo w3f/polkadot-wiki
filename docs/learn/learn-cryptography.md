@@ -41,8 +41,7 @@ curves like Curve25519.
 ## Keys
 
 Public and private keys are an important aspect of most crypto-systems and an essential component
-that enables blockchains like {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} to
-exist.
+that enables blockchains like Polkadot to exist.
 
 ### Account Keys
 
@@ -68,10 +67,10 @@ available option.
 
 The staking proxy key is a semi-online key that will be in the direct control of a user, and used to
 submit manual extrinsics. For validators or nominators, this means that the proxy key will be used
-to start or stop validating or nominating. Proxy keys should hold some
-{{ polkadot: DOT :polkadot }}{{ kusama: KSM :kusama }} to pay for fees, but they should not be used
-to hold huge amounts or life savings. Since they will be exposed to the internet with relative
-frequency, they should be treated carefully and occasionally replaced with new ones.
+to start or stop validating or nominating. Proxy keys should hold some native tokens to pay for
+fees, but they should not be used to hold huge amounts or life savings. Since they will be exposed
+to the internet with relative frequency, they should be treated carefully and occasionally replaced
+with new ones.
 
 The stash key is a key that will, in most cases, be a cold wallet, existing on a piece of paper in a
 safe or protected by layers of hardware security. It should rarely, if ever, be exposed to the
@@ -95,7 +94,7 @@ meant to control funds and should only be used for their intended purpose. They 
 regularly; your staking proxy only need to create a certificate by signing a session public key and
 broadcast this certificate via an extrinsic.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses six session keys:
+Polkadot uses six session keys:
 
 - Authority Discovery: sr25519
 - BABE: sr25519
@@ -114,17 +113,15 @@ aggregation.
 
 #### Why was `ed25519` selected over `secp256k1`?
 
-The original key derivation cryptography that was implemented for
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} and Substrate chains was `ed25519`,
-which is a Schnorr signature algorithm implemented over the Edward's Curve 25519 (so named due to
-the parameters of the curve equation).
+The original key derivation cryptography that was implemented for Polkadot and Substrate chains was
+`ed25519`, which is a Schnorr signature algorithm implemented over the Edward's Curve 25519 (so
+named due to the parameters of the curve equation).
 
 Most cryptocurrencies, including Bitcoin and Ethereum, currently use ECDSA signatures on the
 secp256k1 curve. This curve is considered much more secure than NIST curves, which
 [have possible backdoors from the NSA](#appendix-a-on-the-security-of-curves). The Curve25519 is
 considered possibly _even more_ secure than this one and allows for easier implementation of Schnorr
-signatures. A recent patent expiration on it has made it the preferred choice for use in
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
 
 The choice of using Schnorr signatures over using ECDSA is not so cut and dried. Jeff Burdges (a
 Web3 researcher) provides additional details on the decision in this
@@ -211,7 +208,7 @@ on which to build blocks, forks happen. Real-world entropy is not suitable for u
 blockchain randomness.
 
 There are two main approaches to blockchain randomness in production today: `RANDAO` and `VRF`.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses VRF.
+Polkadot uses VRF.
 
 ### VRF
 
@@ -220,19 +217,17 @@ random number along with a proof of authenticity that this random number was gen
 submitter. The proof can be verified by any challenger to ensure the random number generation is
 valid.
 
-The VRF used in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is roughly the same
-as the one used in Ouroboros Praos. Ouroboros randomness is secure for block production and works
-well for [BABE](learn-consensus.md#BABE). Where they differ is that Polkadot's VRF does not depend
-on a central clock (the problem becomes - whose central clock?), rather, it depends on its own past
-results to determine present and future results, and it uses slot numbers as a clock emulator,
-estimating time.
+The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos. Ouroboros
+randomness is secure for block production and works well for [BABE](learn-consensus.md#BABE). Where
+they differ is that Polkadot's VRF does not depend on a central clock (the problem becomes - whose
+central clock?), rather, it depends on its own past results to determine present and future results,
+and it uses slot numbers as a clock emulator, estimating time.
 
 #### Here's how it works in detail:
 
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
-Slots make up [epochs](../general/glossary.md##epoch) - on
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, 2400 slots make one epoch, which
-makes epochs four hours long.
+Slots make up [epochs](../general/glossary.md##epoch) - on Polkadot, 2400 slots make one epoch,
+which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
 the following:
@@ -248,18 +243,16 @@ The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof t
 was generated correctly).
 
 The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol
-(specifically, in the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} Host). If the
-value is less than the threshold, then the validator who rolled this number is a viable block
-production candidate for that slot. The validator then attempts to create a block and submits this
-block into the network along with the previously obtained `PROOF` and `RESULT`. Under VRF, every
-validator rolls a number for themselves, checks it against a threshold, and produces a block if the
-random roll is under that threshold.
+(specifically, in the Polkadot Host). If the value is less than the threshold, then the validator
+who rolled this number is a viable block production candidate for that slot. The validator then
+attempts to create a block and submits this block into the network along with the previously
+obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it
+against a threshold, and produces a block if the random roll is under that threshold.
 
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.
-We clarify how we resolve this issue and make sure that
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} block times remain near constant-time
-in the wiki page on [consensus](learn-consensus.md).
+We clarify how we resolve this issue and make sure that Polkadot block times remain near
+constant-time in the wiki page on [consensus](learn-consensus.md).
 
 ### RANDAO
 

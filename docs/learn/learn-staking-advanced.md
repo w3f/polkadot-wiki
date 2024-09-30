@@ -35,29 +35,27 @@ and earn staking rewards. For additional information, check out
 
 :::
 
-This page is meant to be an advanced guide to staking with
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}. For a more general introduction,
-checkout the [Introduction to Staking](./learn-staking.md) page.
+This page is meant to be an advanced guide to staking with the relay chain. For a more general
+introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
 
 ## Staking Proxies
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes it possible to create accounts
-having special permissions also called **proxy accounts**. For more details about proxy accounts
-visit the [dedicated page](./learn-proxies.md) on this wiki.
+Polkadot makes it possible to create accounts having special permissions also called **proxy
+accounts**. For more details about proxy accounts visit the [dedicated page](./learn-proxies.md) on
+this wiki.
 
 Proxy accounts are special accounts which can sign
 [**extrinsic calls**](./learn-transactions.md#pallets-and-extrinsics) made to specific **pallets**
 on behalf of the proxied account. There is thus the possibility to create staking proxy accounts
 that can be used to sign extrinsic calls specific to the staking, session and utility pallets.
 
-Staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget
-action, as a nominator you will need to monitor the performance of your validators and make changes
-if needed. There will be this transactions such as nominating that will be needed to regularly
-signed. Each time you sign with an account, in the case of hot accounts, you expose the private key
-of that account to the internet with consequent risk of attack. A hot stash will be exposed all the
-time a transaction is signed. Even in the case of a cold stash created with a Ledger device, signing
-with the stash will build a transaction history that might tell something about your habits and
-preferences, or even your location.
+Staking is not a set-and-forget action, as a nominator you will need to monitor the performance of
+your validators and make changes if needed. There will be this transactions such as nominating that
+will be needed to regularly signed. Each time you sign with an account, in the case of hot accounts,
+you expose the private key of that account to the internet with consequent risk of attack. A hot
+stash will be exposed all the time a transaction is signed. Even in the case of a cold stash created
+with a Ledger device, signing with the stash will build a transaction history that might tell
+something about your habits and preferences, or even your location.
 
 Ideally, accounts with high economic power like the stash must be and remain as isolated as
 possible. With a staking proxy, the stash account is fully isolated when signing for staking-related
@@ -88,16 +86,15 @@ For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZ
 
 :::
 
-In {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}'s NPoS nomination intents are
-placed in a semi-sorted list called [bags-list](https://github.com/paritytech/substrate/pull/9507).
-{{ kusama: The bags list example below uses DOT for explaining the concepts. :kusama }} The
-Bags-List substrate pallet is designed to be self-maintaining, with minimal effort from the
-blockchain, making it extremely scalable. The bags list has two primary components, bags and nodes
-(or nominators' accounts), with bags containing the nodes with bonded balance within a specific
-range. In the figure below the 1st empty bag will contain nominators whose bonded balance is in the
-range of 21 - 30 DOT, the 2nd bag 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are
-the nominators' accounts with bonded tokens (in the example shown below, there are eight nomination
-intents) that will be put inside each of those three bags depending on their stake.
+In Polkadot's NPoS nomination intents are placed in a semi-sorted list called
+[bags-list](https://github.com/paritytech/substrate/pull/9507). The Bags-List substrate pallet is
+designed to be self-maintaining, with minimal effort from the blockchain, making it extremely
+scalable. The bags list has two primary components, bags and nodes (or nominators' accounts), with
+bags containing the nodes with bonded balance within a specific range. In the figure below the 1st
+empty bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT, the 2nd bag
+11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are the nominators' accounts with
+bonded tokens (in the example shown below, there are eight nomination intents) that will be put
+inside each of those three bags depending on their stake.
 
 ![bags list example 0](../assets/bags-list-example-0.png)
 
@@ -134,8 +131,8 @@ rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) secti
 information.
 
 The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime
-storage. In the current staking system configuration, at most {{ polkadot: 22500 :polkadot }}
-{{ kusama: 12500 :kusama }} nominators in the bags-list come out as the electing nominators. See
+storage. In the current staking system configuration, at most 22500 nominators in the bags-list
+(12500 on Kusama) come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 This means that only a portion of the nomination intents is kept. Once the nomination period ends,
@@ -157,10 +154,10 @@ staking/election system.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
-Submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: 22500 :polkadot }} {{ kusama: 12500  :kusama }} nominators is applied to the validators
-in the active set. To avail of staking rewards, ensure that the number of tokens bonded is higher
-than the minimum active bond. For more information, see the [nominator guide](learn-nominator.md).
+Submitting a nomination intent does not guarantee staking rewards. The stake of the top 22500
+nominators (12500 on Kusama) is applied to the validators in the active set. To avail of staking
+rewards, ensure that the number of tokens bonded is higher than the minimum active bond. For more
+information, see the [nominator guide](learn-nominator.md).
 
 :::
 
@@ -269,10 +266,9 @@ reputation will be able to charge slightly higher commission fees (which is fair
 
 ## Simple Payouts
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} makes stakers claim their rewards for
-past eras by submitting a transaction. This naturally leads to spreading out reward distribution, as
-people make transactions at disparate times, rather than updating the accounts of all stakers in a
-single block.
+Polkadot makes stakers claim their rewards for past eras by submitting a transaction. This naturally
+leads to spreading out reward distribution, as people make transactions at disparate times, rather
+than updating the accounts of all stakers in a single block.
 
 Even if everyone submitted a reward claim at the same time, the fact that they are individual
 transactions would allow the block construction algorithm to process only a limited number per block
@@ -280,19 +276,17 @@ and ensure that the network maintains a constant block time. If all rewards were
 block, this could cause serious issues with the stability of the network.
 
 Simple payouts require one transaction per validator, per [era](../general/glossary.md##era), to
-claim rewards. The reason {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} requires
-this is to avoid an attack where someone has several thousand accounts nominating a single
-validator. The major cost in reward distribution is mutating the accounts in storage, and
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} cannot pay out several thousand
-accounts in a single transaction.
+claim rewards. The reason Polkadot requires this is to avoid an attack where someone has several
+thousand accounts nominating a single validator. The major cost in reward distribution is mutating
+the accounts in storage, and Polkadot cannot pay out several thousand accounts in a single
+transaction.
 
 ### Claiming Rewards
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} stores the last 84 eras of reward
-information (e.g. maps of era number to validator points, staking rewards, nomination exposure,
-etc.). Rewards will not be claimable more than 84 eras after they were earned. This means that all
-rewards must be claimed within a maximum of 84 eras, although under certain circumstances (described
-below) this may be as low as 28 eras.
+The relay chain stores the last 84 eras of reward information (e.g. maps of era number to validator
+points, staking rewards, nomination exposure, etc.). Rewards will not be claimable more than 84 eras
+after they were earned. This means that all rewards must be claimed within a maximum of 84 eras,
+although under certain circumstances (described below) this may be as low as 28 eras.
 
 If a validator kills their stash, any remaining rewards will no longer be claimable. Before doing
 this, however, they would need to first stop validating and then unbond the funds in their stash,

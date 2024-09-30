@@ -88,8 +88,8 @@ a block in the chain. Thus, the times given are *estimates*. See
 
 ### Staking, Validating, and Nominating
 
-The maximum number of validators that can be nominated by a nominator is
-{{ polkadot: 16. :polkadot }} {{ kusama: 24. :kusama }}
+The maximum number of validators that can be nominated by a nominator is can be see
+[here](../general/chain-state-values.md#maximum-votes-per-nominator).
 
 <!-- prettier-ignore -->
 <Tabs groupId="staking" values={[ 

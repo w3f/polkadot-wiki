@@ -46,7 +46,7 @@ Some useful queries for Polkadex are provided:
 | Title                          | Query                                             | Description                                                                                                                                                |
 | ------------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Polkadex MultiAssets Transfers | [query_3830615](https://dune.com/queries/3830615) | Daily count of 'TransferredMultiAssets' observed on Polkadex parachain                                                                                     |
-| Polkadex<->AssetHub Table      | [query_3824637](https://dune.com/queries/3824637) | This query provides a comprehensive overview of the assets transferred between Polkadex parachain and AssetHub, including the amount, symbol, and section. |
+| Polkadex \<-\> AssetHub Table  | [query_3824637](https://dune.com/queries/3824637) | This query provides a comprehensive overview of the assets transferred between Polkadex parachain and AssetHub, including the amount, symbol, and section. |
 
 ## Getting Started with Queries
 

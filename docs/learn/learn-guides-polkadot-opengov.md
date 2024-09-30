@@ -293,7 +293,7 @@ To refund your slashed deposit, you can start a new referendum and specifically 
 from the treasury. You need to make sure you have enough balance for a new submission and decision
 deposit, and you will need to select the right track to ask for a refund. For example, the
 [Small Tipper Track](./learn-polkadot-opengov-origins.md#small-tipper) would be fine for any kind of
-deposit refund up to {{ polkadot: 250 DOT :polkadot }}{{ kusama: 8.25 KSM KSM :kusama }}.
+deposit refund up to 250 DOT (8.25 KSM on Kusama).
 
 ## Cancel or Kill a Referendum
 
@@ -324,9 +324,8 @@ the `referenda.kill` extrinsic. This will cancel the referendum and slash the de
 
 A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
 to the amount of information stored within the preimage. The deposit amount required for a preimage
-with a treasury spend transaction is around
-{{ polkadot: 41 DOT :polkadot }}{{ kusama:  1.4 KSM  :kusama }}. Ensure you have enough account
-balance to pay for this submission deposit as well as the transaction fees.
+with a treasury spend transaction is around 41 DOT (1.4 KSM on Kusama). Ensure you have enough
+account balance to pay for this submission deposit as well as the transaction fees.
 
 :::
 

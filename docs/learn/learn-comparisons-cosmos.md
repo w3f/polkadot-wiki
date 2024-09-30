@@ -21,9 +21,9 @@ as long as the validators on Polkadot can execute it within a Wasm environment.
 The shards of Polkadot are called "[parachains](learn-parachains.md)". Every time a parachain wants
 to make a state transition, it submits a block (batch of state transitions) along with a state proof
 that Polkadot validators can independently verify. These blocks are finalized for the parachains
-when they are finalized by Polkadot's Relay Chain, the main chain of the system. As such, all
+when they are finalized by Polkadot's relay chain, the main chain of the system. As such, all
 parachains share state with the entire system, meaning that a chain re-organization of a single
-parachain would require a re-organization of all parachains and the Relay Chain.
+parachain would require a re-organization of all parachains and the relay chain.
 
 Cosmos employs horizontal scalability using
 [app-chains](https://www.alchemy.com/overviews/what-is-an-appchain). The Cosmos Network consists of
@@ -38,10 +38,10 @@ message is trust-bound by the recipient's trust in the security of the sender.
 
 ### Polkadot
 
-Polkadot has a Relay Chain acting as the main chain of the system. All validators in Polkadot are on
-the Relay Chain. Parachains have collators, who construct and propose parachain blocks to
+Polkadot has a relay chain acting as the main chain of the system. All validators in Polkadot are on
+the relay chain. Parachains have collators, who construct and propose parachain blocks to
 validators. Collators don't have any security responsibilities, and thus do not require a robust
-incentive system. Collators can submit a single parachain block for every Relay Chain block every 6
+incentive system. Collators can submit a single parachain block for every relay chain block every 6
 seconds. Once a parachain submits a block, validators perform a series of availability and validity
 checks before committing it to the final chain.
 
@@ -122,12 +122,12 @@ nominating a validator does not assign any governance voting rights to the valid
 Polkadot uses [Cross-Consensus Message Passing Format (XCM)](learn-xcm.md) for parachains to send
 arbitrary messages to each other. Parachains open connections with each other and can send messages
 via their established channels. [Collators](learn-collator.md) are full nodes of parachains and full
-nodes of the Relay Chain, so collator nodes are a key component of message passing. Messages do not
-pass through the Relay Chain, only proofs of post and channel operations (open, close, etc.) go into
-the Relay Chain. This enhances scalability by keeping data on the edges of the system.
+nodes of the relay chain, so collator nodes are a key component of message passing. Messages do not
+pass through the relay chain, only proofs of post and channel operations (open, close, etc.) go into
+the relay chain. This enhances scalability by keeping data on the edges of the system.
 
 In the case of a chain re-organization, messages can be rolled back to the point of the
-re-organization based on the proofs of post in the Relay Chain. The shared state amongst parachains
+re-organization based on the proofs of post in the relay chain. The shared state amongst parachains
 means that messages are free from trust bounds; they all operate in the same context.
 
 Polkadot has an additional protocol called [SPREE](learn-spree.md) that provides shared logic for

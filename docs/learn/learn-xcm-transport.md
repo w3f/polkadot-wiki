@@ -15,8 +15,8 @@ mind that XCM is under active development.
 :::
 
 With the XCM format established, common patterns for protocols of these messages are needed.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements two message passing
-protocols for acting on XCM messages between its constituent parachains.
+Polkadot implements two message passing protocols for acting on XCM messages between its constituent
+parachains.
 
 There are three primary methods for message passing, one of which is under development:
 
@@ -45,13 +45,12 @@ _Direct_ and _Relayed_.
   queue growth.
 
 Cross-chain transactions are resolved using a simple queuing mechanism based around a Merkle tree to
-ensure fidelity. It is the task of the Relay Chain validators to move transactions on the output
+ensure fidelity. It is the task of the relay chain validators to move transactions on the output
 queue of one parachain into the input queue of the destination parachain. However, only the
-associated metadata is stored as a hash in the Relay Chain storage.
+associated metadata is stored as a hash in the relay chain storage.
 
-The input and output queue are sometimes referred to in the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} codebase and associated documentation
-as `ingress` and `egress` messages, respectively.
+The input and output queue are sometimes referred to in the Polkadot codebase and associated
+documentation as `ingress` and `egress` messages, respectively.
 
 :::info
 
@@ -85,7 +84,7 @@ For detailed information about VMP see dedicated section in
 While XCMP is still being implemented, a stop-gap protocol (see definition below) known as
 **Horizontal Relay-routed Message Passing (HRMP)** exists in its place. HRMP has the same interface
 and functionality as XCMP but is much more demanding on resources since it stores all messages in
-the Relay Chain storage. When XCMP has been implemented, HRMP is planned to be deprecated and phased
+the relay chain storage. When XCMP has been implemented, HRMP is planned to be deprecated and phased
 out in favor of it.
 
 ![xcm](../assets/cross-consensus/hrmp-ex.png)
@@ -120,7 +119,7 @@ XCMP.
 
 :::
 
-- Cross-chain messages will _not_ be delivered to the Relay Chain.
+- Cross-chain messages will _not_ be delivered to the relay chain.
 - Cross-chain messages will be constrained to a maximum size specified in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching
   parachain would be aware of this block.
@@ -167,4 +166,4 @@ asset transfer as intended.
 
 The collator now hands this block to the validator, which itself will verify that this message was
 processed. If the message was processed and all other aspects of the block are valid, the validator
-will include this block for parachain `B` into the Relay Chain.
+will include this block for parachain `B` into the relay chain.

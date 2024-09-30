@@ -66,7 +66,7 @@ export default function Index() {
                 nominators are rewarded from the block production rewards that
                 their nominatations are entitled to.
               </p>
-              <a href={docUrl("maintain-guides-how-to-nominate-polkadot")}>
+              <a href="https://wiki.polkadot.network/docs/learn-nominator">
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Nominating
                 </button>
@@ -79,14 +79,14 @@ export default function Index() {
                 much lower than it is expected for Polkadot. There are also
                 programs in place such as{" "}
                 <a
-                  href="https://polkadot.network/join-kusamas-thousand-validators-programme/"
+                  href="https://wiki.polkadot.network/docs/thousand-validators"
                   target="_blank"
                 >
                   Thousand Validators
                 </a>{" "}
                 to help community validators rise the ranks.
               </p>
-              <a href={docUrl("maintain-guides-how-to-validate-kusama")}>
+              <a href="https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-kusama">
                 <br />
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Validators
@@ -103,7 +103,7 @@ export default function Index() {
                 paving the way to Polkadot's parachains as the technology
                 becomes proven.
               </p>
-              <a href={docUrl("learn-parachains")}>
+              <a href="https://wiki.polkadot.network/docs/learn-parachains-index">
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Parachains
                 </button>
@@ -115,7 +115,7 @@ export default function Index() {
                 Learn about Kusama's on-chain governance. Campaign as a
                 councillor or vote for new runtime proposals using Democracy.
               </p>
-              <a href={docUrl("learn-governance")}>
+              <a href="https://wiki.polkadot.network/docs/learn-polkadot-opengov">
                 <br />
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Read more on Governance
@@ -135,7 +135,7 @@ export default function Index() {
                 will become a scalable, interoperable & secure network protocol
                 for web 3.0.
               </p>
-              <a href={docUrl("getting-started")}>
+              <a href="https://wiki.polkadot.network/docs/kusama-getting-started">
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Learn more on Polkadot
                 </button>
@@ -148,7 +148,7 @@ export default function Index() {
                 It is an open-source project and aims to be the most extensive
                 resource of knowledge on Kusama and the Kusama ecosystem.
               </p>
-              <a href={docUrl("contributing")}>
+              <a href="https://wiki.polkadot.network/docs/contributing">
                 <br />
                 <button className="kusama-mainpage-build-btn homepage-font">
                   Learn more on Contributions

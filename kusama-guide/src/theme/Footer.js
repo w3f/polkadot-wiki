@@ -90,7 +90,7 @@ export default function Footer() {
               The Kappa Sigma Mu fraternity asks you to get a Kusama tattoo to
               join.
             </p>
-            <a href={docUrl("maintain-guides-society-kusama")}>
+            <a href="https://wiki.polkadot.network/docs/maintain-guides-society-kusama">
               <button className="kusama-mainpage-build-footer">
                 See Kappa Sigma Mu
               </button>

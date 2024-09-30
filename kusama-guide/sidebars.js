@@ -96,8 +96,22 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Programs",
+          label: "Funding",
           description: 'Programs for Grants, Bounties, Ambassadors and many more inititatives.',
+          link: {
+            type: 'doc',
+            id: 'general/funding',
+          },
+          items: [
+            "general/grants",
+            "general/decentralized-futures",
+            "learn/learn-polkadot-opengov-treasury",
+          ],
+        },
+        {
+          type: "category",
+          label: "Programs",
+          description: 'Learn about different programs and initiatives within the Polkadot and Kusama ecosystems.',
           link: {
             type: 'generated-index',
             title: 'Programs',
@@ -105,9 +119,7 @@ module.exports = {
             slug: '/programs-index',
           },
           items: [
-            "general/decentralized-futures",
             "general/decentralized-voices",
-            "general/grants",
             "general/bug-bounty",
             "general/ambassadors",
             "general/alpha-program",
@@ -250,7 +262,6 @@ module.exports = {
                 },
               ],
             },
-            "learn/learn-polkadot-opengov-treasury",
             {
               type: "category",
               label: "Tokens and Assets",

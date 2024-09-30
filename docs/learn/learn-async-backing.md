@@ -187,7 +187,7 @@ block or some later relay block. Note a core is occupied after backing and befor
 
 The 2-second execution time is thus a limiter, not a system limitation. If parablock generation
 takes >2 seconds, the unincluded segment will shrink (less unincluded parablocks), while if it takes
-<2 seconds, the segment will grow (more unincluded parablocks that will need to be backed and
+< 2 seconds, the segment will grow (more unincluded parablocks that will need to be backed and
 included). Such flexibility from the parachain side will be possible when, on the relay chain side,
 there will be elastic scaling (i.e.,
 [agile core usage](../general/polkadot-direction.md#agile-core-usage) and
@@ -213,11 +213,11 @@ executed before others are complete. Instructions may also be executed in parall
 multiple processor parts to work on potentially different instructions simultaneously.
 
 Bundles of state transitions represented as blocks may be processed similarly. In the context of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}, pipelining aims to increase the
-throughput of the entire network by completing the backing and inclusion steps for different blocks
-at the same time. Asynchronous backing does not just allow for pipelining within a single pipe (or
-core). It lays the foundation for a large number of pipes (or cores) to run for the same parachain
-at the same time. In that way, we have two distinct new forms of parallel computation.
+Polkadot, pipelining aims to increase the throughput of the entire network by completing the backing
+and inclusion steps for different blocks at the same time. Asynchronous backing does not just allow
+for pipelining within a single pipe (or core). It lays the foundation for a large number of pipes
+(or cores) to run for the same parachain at the same time. In that way, we have two distinct new
+forms of parallel computation.
 
 ### Unincluded Segments
 

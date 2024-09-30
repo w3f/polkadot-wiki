@@ -84,7 +84,6 @@ module.exports = {
     ],
   ],
   plugins: [
-    "remark-docusaurus-tabs",
     [
       "@docusaurus/plugin-client-redirects",
       {

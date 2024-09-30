@@ -61,7 +61,7 @@ The full definition can be found [here](../learn/learn-agile-coretime.md#task).
 
 Once you have your runtime and pallets developed, you will be able to deploy it on a
 [core](../learn/learn-agile-coretime.md#core), which is how one utilizes the shared security of the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} network. One does so by:
+Polkadot network. One does so by:
 
 ```mermaid
 %%{

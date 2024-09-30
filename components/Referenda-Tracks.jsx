@@ -5,27 +5,46 @@ import { ApiPromise, WsProvider } from "@polkadot/api";
 function Tracks({ network, defaultValue }) {
   const [returnValue, setReturnValue] = useState('');
 
-  useEffect(async () => {
+  useEffect(() => {
     let wsUrl = undefined;
-    if (network === "polkadot") { wsUrl = "wss://rpc.polkadot.io" }
-    else if (network === "kusama") { wsUrl = "wss://kusama-rpc.polkadot.io/" }
-    else { return (<div />) }
+    let api = null; // Track the API instance for cleanup
+
+    if (network === "polkadot") {
+      wsUrl = "wss://rpc.polkadot.io";
+    } else if (network === "kusama") {
+      wsUrl = "wss://kusama-rpc.polkadot.io/";
+    } else {
+      return;
+    }
+
     // Set default value to render on component
     setReturnValue(
       <div style={{ color: "#e6007a", textAlign: "center" }}>
         <b>{defaultValue}</b>
       </div>
     );
-    // Calculate a more accurate approximation using on-chain data
-    await GetTracks(network, wsUrl, setReturnValue);
-  }, []);
 
-  return (returnValue);
+    // Define an async function inside useEffect to avoid async directly
+    const fetchData = async () => {
+      api = await GetTracks(network, wsUrl, setReturnValue);
+    };
+
+    fetchData();
+
+    // Cleanup function to close the WebSocket when the component unmounts
+    return () => {
+      if (api && api.disconnect) {
+        api.disconnect(); // Cleanup the connection properly
+      }
+    };
+  }, [network, defaultValue]);
+
+  return returnValue;
 }
 
 async function GetTracks(network, wsUrl, setReturnValue) {
   const wsProvider = new WsProvider(wsUrl);
-  const api = await ApiPromise.create({ provider: wsProvider })
+  const api = await ApiPromise.create({ provider: wsProvider });
 
   // If unknown network is provided
   if (network !== "polkadot" && network !== "kusama") {
@@ -48,9 +67,9 @@ async function GetTracks(network, wsUrl, setReturnValue) {
     // Format origin names
     let origin = trackData[1].name.replace(/_/g, " "); // Use a regular expression with the "g" flag to replace all occurrences
     origin = origin.split(' ')
-    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-    .join(' ');
-    // Format minApproval and min Support (objects - contain nested values)
+      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+      .join(' ');
+    // Format minApproval and minSupport (objects - contain nested values)
     const minApproval = FormatObject(trackData[1].minApproval);
     const minSupport = FormatObject(trackData[1].minSupport);
     // Row
@@ -67,7 +86,7 @@ async function GetTracks(network, wsUrl, setReturnValue) {
         <td style={hover}>{minApproval}</td>
         <td style={hover}>{minSupport}</td>
       </tr>
-    )
+    );
   });
 
   // Render Table
@@ -96,13 +115,15 @@ async function GetTracks(network, wsUrl, setReturnValue) {
           </tbody>
         </table>
       </div>
-      <b style={{fontSize: "12px"}}>
+      <b style={{ fontSize: "12px" }}>
         **Hover&nbsp;
-        <span style={{color: "#e6007a", textDecoration: "underline"}}>underlined cell values</span>
+        <span style={{ color: "#e6007a", textDecoration: "underline" }}>underlined cell values</span>
         &nbsp;for additional info**
       </b>
     </div>
   );
+
+  return api; // Return the api instance for cleanup
 }
 
 // Format MinApproval and MinSupport Objects
@@ -132,23 +153,23 @@ function BlocksToTime(blockString) {
   // String to number
   value = parseInt(value);
   // Time in seconds
-  value = (value * 6)
+  value = (value * 6);
   if (value >= 86400) {
     // Convert to days
     value = value / 86400;
     if (value > 1) {
-      return `${value} Days`
+      return `${value} Days`;
     } else {
-      return `${value} Day`
+      return `${value} Day`;
     }
   } else if (value % 3600 === 0) {
     // Convert to hours
-    value = value / 3600
-    return `${value} Hours`
+    value = value / 3600;
+    return `${value} Hours`;
   } else {
     // Convert to minutes
-    value = value / 60
-    return `${value} Minutes`
+    value = value / 60;
+    return `${value} Minutes`;
   }
 }
 
@@ -162,7 +183,7 @@ function HumanReadable(value, network) {
       precision: 1e12,
       symbol: "KSM",
     }
-  }
+  };
   let decimals = undefined;
   if (network === "polkadot") {
     decimals = 3;

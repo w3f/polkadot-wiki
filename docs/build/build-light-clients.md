@@ -44,9 +44,8 @@ with their applications.
 
 A light client lets you utilize all basic features of the chain such as fetching data and
 transferring tokens, but it does not require you to run a full copy of the entire blockchain or
-having to trust remote peers. Light clients fetch the required data that they need from a
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} node with an associated proof to
-validate the data.
+having to trust remote peers. Light clients fetch the required data that they need from a Polkadot
+node with an associated proof to validate the data.
 
 | Substrate: Full node                                                                                        | Substrate connect: Light client                                                                               |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |

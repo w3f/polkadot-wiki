@@ -38,10 +38,9 @@ can access your account's private key.
 
 :::
 
-To realize the multichain vision of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }},
-it is important to have non-custodial wallets that make it convenient to interact with multiple
-blockchains in {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} ecosystem. Below there
-is a list of all non-custodial treasury-funded wallets developed by the community.
+To realize Polkadot's multichain vision, it is important to have non-custodial wallets that make it
+convenient to interact with multiple blockchains within the Polkadot ecosystem. Below there is a
+list of all non-custodial treasury-funded wallets developed by the community.
 
 ## Overview
 
@@ -130,7 +129,7 @@ Warnings help fearlessly navigate [web3](./web3-and-polkadot.md). Formerly funde
 Kusama Treasury [[1](https://kusama.polkassembly.io/treasury/23),
 [2](https://kusama.polkassembly.io/treasury/34), [3](https://kusama.polkassembly.io/treasury/74),
 [4](https://kusama.polkassembly.io/treasury/102), [5](https://kusama.polkassembly.io/treasury/178)],
-and the SORA community [[1](https://sora.subscan.io/referenda/193?tab=votes)], developed with <3 by
+and the SORA community [[1](https://sora.subscan.io/referenda/193?tab=votes)], developed by
 SORAMITSU. Stay Fearless!
 
 ## Nova Wallet

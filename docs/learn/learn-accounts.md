@@ -22,33 +22,28 @@ which lists the user friendly wallet projects funded by the Polkadot/Kusama Trea
 
 :::
 
-This document covers the basics of {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-accounts. See the [Advanced Account](./learn-account-advanced.md) page for more information about
-accounts such as [account derivation](./learn-account-advanced.md#derivation-paths) and
+This document covers the basics of accounts in the Polkadot ecosystem. See the
+[Advanced Account](./learn-account-advanced.md) page for more information about accounts such as
+[account derivation](./learn-account-advanced.md#derivation-paths) and
 [indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography
-behind {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, please see the
-[cryptography page](learn-cryptography.md).
+behind accounts, please see the [cryptography page](learn-cryptography.md).
 
 <DocCardList />
 
 ## Account Address
 
-An address is the public part of a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-account. The private part is the key used to access this address. The public and private parts
-together make up a {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. You can
-think of the public address of your account, like your mailbox and the private key like the key to
-open that mailbox. Anybody can send mail to your mailbox, but only you can access it as only you
-have access to its key. In the context of
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} accounts, anybody can send tokens to
-your public address, but only you can transact with them using your private key. That is why you
-should keep your private key secret.
+An address is the public part of an account. The private part is the key used to access this
+address. The public and private parts together make up an account. You can think of the public
+address of your account, like your mailbox and the private key like the key to open that mailbox.
+Anybody can send mail to your mailbox, but only you can access it as only you have access to its
+key. In the context of accounts, anybody can send tokens to your public address, but only you can
+transact with them using your private key. That is why you should keep your private key secret.
 
 ### Mnemonic Seed Phrase
 
 A user's account requires a private key that can sign on to one of the
 [supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
-private key, an account cannot sign anything. In
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} there are some exceptions of accounts
+private key, an account cannot sign anything. In Polkadot, there are some exceptions of accounts
 that do not have known private keys (i.e. keyless accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md),
 [pure proxies](./learn-proxies-pure.md#anonymous-proxy-pure-proxy), and

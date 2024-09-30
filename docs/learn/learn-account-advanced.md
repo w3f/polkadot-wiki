@@ -7,6 +7,8 @@ keywords: [account, polkadot account, polkadotjs, indices, identity, reaping, EN
 slug: ../learn-account-advanced
 ---
 
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
@@ -213,12 +215,12 @@ To use the exact mnemonic across multiple wallets, ensure they follow compatible
 generating keys and signing messages. If you are still looking for understandable documentation,
 contact the project maintainers.
 
-|                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
-| :---------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
-| Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
-| Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
-| Subkey                  |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
+|                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
+| :-------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
+| Polkadot-JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot-JS Apps      |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
+| Subkey                |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
 
 \* Ed25519 keys have [limited compatibility](https://github.com/paritytech/substrate-bip39) with
 BIP39.
@@ -247,10 +249,9 @@ with the second. These derivation methods have their use cases, given that the p
 the derived accounts are fully secure. Unless you have a specific need for a soft derivation, it is
 recommended to generate the account using a hard derivation path.
 
-Many {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} key generation tools support
-hard and soft derivation. For instance, if you intend to create an account to be used on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} chain, you can derive a **hard key**
-child account using **//** after the mnemonic phrase.
+Many Polkadot key generation tools support hard and soft derivation. For instance, if you intend to
+create an account to be used on the relay chain, you can derive a **hard key** child account using
+**//** after the mnemonic phrase.
 
 ```
 'caution juice atom organ advance problem want pledge someone senior holiday very//0'
@@ -326,7 +327,8 @@ derived accounts using the Ledger Live App, but it is possible to do so using Po
 [the accounts page](../learn/learn-accounts.md) for more information about derived accounts and
 derivation paths.
 
-{{ kusama: Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances, you must import your ledger account into a [**wallet**](./wallets). :kusama }}
+Note that you cannot import Kusama Ledger accounts in Ledger Live. To see Kusama account balances,
+you must import your ledger account into a [**wallet**](./wallets).
 
 ### Account Derivation on [Subkey](#creating-accounts-with-subkey) and [Polkadot Vault](../general/polkadot-vault.md)
 
@@ -376,15 +378,25 @@ private key being unknown (and unattainable). So, that means that only the palle
 interact with this account. These accounts can never issue a signed
 [extrinsic](./learn-transactions.md) since they do not have a private key.
 
-:::info Explore System Accounts
+Explore the main system accounts below.
 
-Treasury account address -
-{{ polkadot: `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB` :polkadot }}{{ kusama: `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29` :kusama }}
+<!-- prettier-ignore -->
+<Tabs groupId="system" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+
+<TabItem value="polkadot">
+
+Treasury account address - `13UVJyLnbVp9RBZYFwFGyDvVd1y27Tt8tkntv6Q7JVPhFsTB`
+
+</TabItem>
+<TabItem value="kusama">
+
+Treasury account address - `F3opxRbN5ZbjJNU511Kj2TLuzFcDq9BGduA9TgiECafpg29`
+
+</TabItem>
+</Tabs>
 
 You can view the existing system accounts on
 [Subscan](https://polkadot.subscan.io/account_list?role=module).
-
-:::
 
 Let us take a look at how system accounts are generated under the hood. For instance, to generate
 the treasury account, the raw bytes of the strings "modl" and "py/trsry" are combined to create the
@@ -396,10 +408,9 @@ nomination pool and parachain accounts as well.
 
 ## Indices
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} addresses can have indices. An index
-is like a short and easy-to-remember version of an address. Claiming an index requires
-[a deposit](../general/chain-state-values.md#index-deposit) released when the index is cleared. Any
-index can be claimed if it is not taken by someone else.
+Polkadot addresses can have indices. An index is like a short and easy-to-remember version of an
+address. Claiming an index requires [a deposit](../general/chain-state-values.md#index-deposit)
+released when the index is cleared. Any index can be claimed if it is not taken by someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other
 words, the slot frees up again, making it available for anyone to claim. It is possible to _freeze_

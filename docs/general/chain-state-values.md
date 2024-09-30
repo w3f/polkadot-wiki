@@ -79,17 +79,13 @@ The deposit to submit a bounty on Polkadot is <RPC network="polkadot" path="cons
 
 A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
 
-#### Child Bounty Payout Delay
-
-The waiting time before claiming a Polkadot child bounty reward is <RPC network="polkadot" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={115200} filter="blocksToDays"/> days.
-
 #### Conviction Voting Lock Period
 
 One conviction voting lock period on Polkadot equals <RPC network="polkadot" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
-The minimum number of tokens to keep an account alive on the Polkadot Relay Chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+The minimum number of tokens to keep an account alive on the Polkadot relay chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
 #### Inactive Issuance
 
@@ -192,6 +188,13 @@ The **signed reward base** on Polkadot is <RPC network="polkadot" path="consts.e
 
 The maximum number of submission for a staking miner on Polkadot is <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
 
+#### Staking Reward Retention
+
+Polkadot staking rewards are kept available for 84 eras. The following calculation can be used to
+approximate this length in days:
+
+`84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days`
+
 #### Total Issuance
 
 Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="14883815224560918110" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1553"/>.
@@ -206,7 +209,9 @@ The spending period on Polkadot is currently <RPC network="polkadot" path="const
 
 #### Unbonding Duration
 
-The unbonding duration on Polkadot is set to <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days.
+The unbonding duration on Polkadot is set to <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days. This is
+calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 24 ÷ 24 = 28 days.
 
 </TabItem>
 <TabItem value="kusama">
@@ -263,17 +268,13 @@ The deposit to submit a bounty on Kusama is <RPC network="kusama" path="consts.b
 
 A Kusama bounty has a predetermined duration of <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
 
-#### Child Bounty Payout Delay
-
-The waiting time before claiming a Kusama child bounty reward is <RPC network="kusama" path="consts.bounties.bountyDepositPayoutDelay" defaultValue={57600} filter="blocksToDays"/> days.
-
 #### Conviction Voting Lock Period
 
 One conviction voting lock period on Kusama equals <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
 
 #### Existential Deposit
 
-The minimum number of tokens to keep an account alive on the Kusama Relay Chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+The minimum number of tokens to keep an account alive on the Kusama relay chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
 
 #### Inactive Issuance
 
@@ -376,13 +377,20 @@ The **signed reward base** on Kusama is <RPC network="kusama" path="consts.elect
 
 The maximum number of submission for a staking miner on Kusama is <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
 
+#### Staking Reward Retention
+
+Kusama staking rewards are kept available for 84 eras. The following calculation can be used to
+approximate this length in days:
+
+`84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days`
+
 #### Total Issuance
 
 Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="15410382600026732448" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="7061"/>.
 
 #### Treasury Burn Factor
 
-At the end of every spending period on Kusama, <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/>% of the available funds are burned.
+At the end of every spending period on Kusama, <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/>% of the available funds are burned, with the amount currently going to [Society](../maintain/kusama/maintain-guides-society-kusama.md) rather than being burned.
 
 #### Treasury Spending Period
 
@@ -390,7 +398,9 @@ The spending period on Kusama is currently <RPC network="kusama" path="consts.tr
 
 #### Unbonding Duration
 
-The unbonding duration on Kusama is set to <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days.
+The unbonding duration on Kusama is set to <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days. This is
+calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 6 ÷ 24 = 7 days.
 
 </TabItem>
 <TabItem value="ahp">

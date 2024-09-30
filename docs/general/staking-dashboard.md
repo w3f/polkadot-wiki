@@ -23,17 +23,15 @@ extension or a wallet to use it; you just need your Ledger device.
 are thus not necessary, as you only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a
-[wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} account. Note that accounts on
-wallets or extensions can be imported from [Ledger](./ledger.md) or
+[wallet or extension](./wallets-and-extensions.md#browser-extensions) with a funded account. Note
+that accounts on wallets or extensions can be imported from [Ledger](./ledger.md) or
 [Polkadot Vault](./polkadot-vault.md).
 
 On top of the [existential deposit](../learn/learn-accounts.md#existential-deposit-and-reaping), you
 need some free balance to pay for
 [transaction fees](../learn/learn-transactions.md#transaction-fees) and
 [the minimum amount to place your nominations or join a nomination pool](./chain-state-values.md#minimum-bond-to-participate-in-staking).
-For more information about staking on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}
-visit the [staking page](../learn/learn-staking.md) and the
+For more information about staking visit the [staking page](../learn/learn-staking.md) and the
 [advanced staking page](../learn/learn-staking-advanced.md).
 
 ## Using the Polkadot Staking Dashboard
@@ -48,7 +46,7 @@ accounts, you can use [wallets and extension](./wallets-and-extensions.md). You 
 staking by being a [nominator](../learn/learn-nominator.md) or a member of a
 [nomination pool](../learn/learn-nomination-pools.md). Once you have a funded account, you need to
 connect it to the dashboard (connect button on the top-right corner), this will allow you to
-interact with {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} native staking.
+interact with native staking.
 
 :::info The dashboard is a Web3 dApp
 
@@ -60,7 +58,8 @@ to the world of [true Web3](./web3-and-polkadot.md)!
 
 :::
 
-{{ polkadot: Note the pictures on this page refer to Kusama, but the same applies to Polkadot and Westend. :polkadot }}
+Note the pictures on this page refer to Kusama, but the same applies to Polkadot and Westend.
+
 The structure of this page follows the sidebar of the staking dashboard. Here you will learn about
 the main features of the dashboard. If you need more information, see the
 [Walkthrough Tutorial](https://youtu.be/hvXLc4H7rA4).
@@ -68,14 +67,12 @@ the main features of the dashboard. If you need more information, see the
 :::info Walk-through Video Tutorials
 
 - [**Nominating**](https://youtu.be/F59N3YKYCRs): Stake your tokens, choose your best validators,
-  and start your staking journey on {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }}.
+  and start your staking journey.
 - [**Becoming a Pool Member**](https://youtu.be/dDIG7QAApig): Start becoming a part of the Polkadot
-  movement, keep {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} secure by staking
-  minimum 1 DOT and receiving staking rewards.
+  movement, keep the network secure by staking minimum 1 DOT and receiving staking rewards.
 - [**Dashboard Walkthrough**](https://youtu.be/hvXLc4H7rA4): Become a Pro using the Staking
   Dashboard.
-- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating on
-  {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} is not a set-and-forget action,
+- [**After Staking**](https://youtu.be/58pIe8tt2o4): Nominating is not a set-and-forget action,
   learn what you can do with the dashboard after you started staking.
 
 :::
@@ -165,9 +162,9 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
 - **Section B: The Balance Panel** shows the number of tokens bonded in pools and those that are
   free. In this case, we have 0.3 KSM bonded and 0.144 KSM free. In this panel, you can bond more
   funds (`+` button) or unbond some funds (`-` button). Unbonding will withdraw unclaimed rewards
-  and funds will be locked for 28 eras
-  ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed, you
-  can unlock the locked funds (button with a lock icon) that will be available as a free balance.
+  and funds will be locked for the [unbonding period](./chain-state-values.md#unbonding-duration).
+  Once the unbonding period has passed, you can unlock the locked funds (button with a lock icon)
+  that will be available as a free balance.
 
 :::info No fast unstake and pool swap for pool members
 
@@ -270,9 +267,10 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
 - **Section B: The Balance Panel** shows the number of tokens bonded in nominations and those that
   are free. In this case, we have 0.301 KSM bonded and 0.144 KSM free. In this panel, you can bond
   more funds (`+` button) or unbond some funds (`-` button). Unbonding will withdraw unclaimed
-  rewards and funds will be locked for 28 eras
-  ({{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}). Once the 28 eras have passed, you
-  can unlock the locked funds (button with a lock icon) that will be available as a free balance.
+  rewards and funds will be locked for the
+  [unbonding period](./chain-state-values.md#unbonding-duration). Once the unbonding period has
+  passed, you can unlock the locked funds (button with a lock icon) that will be available as a free
+  balance.
 
 :::info Fast unstake
 

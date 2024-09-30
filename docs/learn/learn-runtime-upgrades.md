@@ -7,9 +7,9 @@ keywords: [runtime, upgrades, releases, forkless]
 slug: ../learn-runtime-upgrades
 ---
 
-Runtime upgrades allow the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} relay
-chain, parachains, and solo blockchains built with the Polkadot SDK to change their core business
-logic (referred to as the **runtime**) without the need for a hard fork.
+Runtime upgrades allow the relay chain, parachains, and solo blockchains built with the Polkadot SDK
+to change their core business logic (referred to as the **runtime**) without the need for a hard
+fork.
 
 ## Forkless Upgrades
 
@@ -26,16 +26,13 @@ Kusama and their respective parachains), give the relay chain, its parachains, a
 standalone solo chains built with the Polkadot SDK the ability to upgrade their runtime (the chain's
 "business logic") without a hard fork of the respective network.
 
-Rather than encoding the runtime in the nodes,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} nodes contain a WebAssembly
+Rather than encoding the runtime in the nodes, Polkadot nodes contain a WebAssembly
 [execution host](learn-polkadot-host). They maintain consensus on a very low-level and
 well-established instruction set. Upgrades can be small, isolated, and very specific by deploying
 WebAssembly on-chain and having nodes auto-enact the new logic at a particular block height.
 
-The {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} runtime is stored on the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} blockchain itself.
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} can upgrade its runtime by upgrading
-the logic stored on-chain and removes the coordination challenge of requiring thousands of node
+The runtime is stored on the blockchain itself. Polkadot can upgrade its runtime by upgrading the
+logic stored on-chain and removes the coordination challenge of requiring thousands of node
 operators to upgrade in advance of a given block number. Polkadot stakeholders propose and approve
 upgrades through the [on-chain governance](./learn-polkadot-opengov.md) system, which also enacts
 them autonomously once the runtime upgrade referendum is approved through on-chain voting.
@@ -76,8 +73,8 @@ transaction constructed based on a runtime version will not be valid in later ru
 you can’t submit a transaction before the upgrade, it is better to wait and construct it afterward.
 
 Although upgrading your nodes is generally not necessary to follow an upgrade, we recommend
-following the {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading
-promptly, especially for high-priority or critical releases.
+following the Polkadot releases and upgrading promptly, especially for high-priority or critical
+releases.
 
 :::info New Client Releases
 
@@ -124,9 +121,8 @@ to upgrade their clients within a specific time frame, for example, if a release
 changes to networking. It is essential to check the release notes, starting with the upgrade
 priority and acting accordingly.
 
-General infrastructure providers, aside from following the
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} releases and upgrading in a timely
-manner, should monitor changes to runtime events and auxiliary tooling, such as the
+General infrastructure providers, aside from following the runtime releases and upgrading in a
+timely manner, should monitor changes to runtime events and auxiliary tooling, such as the
 [Substrate API Sidecar](https://github.com/paritytech/substrate-api-sidecar).
 
 Transactions constructed for runtime `n` will not work for any other runtime `>n`. If a runtime
@@ -148,7 +144,7 @@ Polkadot Fellowship's
 changes in the runtime logic.
 
 Runtime upgrades are voted on and executed via [Polkadot OpenGov](./learn-polkadot-opengov.md). You
-should monitor the Relay Chain as follows to know when the next runtime upgrade will be enacted:
+should monitor the relay chain as follows to know when the next runtime upgrade will be enacted:
 
 1. Check each block for `referenda (Submitted)` events and check if the `track` is `0` or `1`, which
    correspond to the `Root` and `whitelistedCaller` tracks, respectively. These are the only tracks

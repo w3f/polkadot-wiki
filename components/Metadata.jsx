@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import Packages from "./../package.json";
@@ -53,33 +52,57 @@ let SearchThrottle;
 export default function Metadata({ version }) {
   const [returnValue, setReturnValue] = useState("");
 
-  useEffect(async () => {
-    // Load default network
-    let defaultNetwork = "Polkadot";
-    if (document.title === "Metadata Explorer · Guide") { defaultNetwork = "Kusama"; }
-    const network = Networks.find(network => { return network.name === defaultNetwork });
-    const wsUrl = network.rpc;
+  useEffect(() => {
+    // Define async function inside useEffect
+    const fetchMetadata = async () => {
+      // Load default network
+      let defaultNetwork = "Polkadot";
+      if (document.title === "Metadata Explorer · Guide") {
+        defaultNetwork = "Kusama";
+      }
 
-    // Build selection dropdown
-    let options = [];
-    Networks.forEach(chain => {
-      const option = <option value={chain.rpc} key={chain.name}>{`${chain.name.charAt(0).toUpperCase() + chain.name.slice(1)}`}</option>
-      options.push(option);
-    });
-    const dropdown = (
-      <select defaultValue={network.rpc} style={DropDownStyle} onChange={(e) => GetMetadata(version, e.target.value, dropdown, setReturnValue)}>
-        {options.map((option) => (option))}
-      </select>
-    )
+      const network = Networks.find((network) => network.name === defaultNetwork);
+      const wsUrl = network.rpc;
 
-    // Set loading status
-    setReturnValue(<div style={PinkText}><b>Loading Metadata Explorer...</b></div>);
+      // Build selection dropdown
+      let options = [];
+      Networks.forEach((chain) => {
+        const option = (
+          <option value={chain.rpc} key={chain.name}>
+            {`${chain.name.charAt(0).toUpperCase() + chain.name.slice(1)}`}
+          </option>
+        );
+        options.push(option);
+      });
 
-    // Fetch metadata from the chain
-    await GetMetadata(version, wsUrl, dropdown, setReturnValue);
-  }, []);
+      const dropdown = (
+        <select
+          defaultValue={network.rpc}
+          style={DropDownStyle}
+          onChange={(e) =>
+            GetMetadata(version, e.target.value, dropdown, setReturnValue)
+          }
+        >
+          {options}
+        </select>
+      );
 
-  return (returnValue);
+      // Set loading status
+      setReturnValue(
+        <div style={PinkText}>
+          <b>Loading Metadata Explorer...</b>
+        </div>
+      );
+
+      // Fetch metadata from the chain
+      await GetMetadata(version, wsUrl, dropdown, setReturnValue);
+    };
+
+    // Call async function
+    fetchMetadata();
+  }, [version]); // Add dependencies if necessary
+
+  return returnValue;
 }
 
 // Retrieve metadata from selected chain and render results

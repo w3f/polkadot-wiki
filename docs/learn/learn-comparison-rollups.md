@@ -26,15 +26,13 @@ for "rolling up" transactions by batching them before publishing them to the L1 
 through a network of **sequencers**. This mechanism could include thousands of transactions in a
 single rollup.
 
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} implements this functionality at the
-native level (i.e. without using L2 scaling solutions), allowing for shared security and scalability
-of the relay chain and respective parachains. Shared security is a concept that has similar goals to
-EVM-based optimistic and zero-knowledge rollups. Still, instead of being implemented as a secondary
-layer, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} guarantees native security and
-scalability for each of its parachains through the
-[Parachains Protocol](./learn-parachains-protocol.md).
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles the coordination of data from
-parachains into an aggregated, representative state, somewhat similar to L2 rollups.
+Polkadot implements this functionality at the native level (i.e. without using L2 scaling
+solutions), allowing for shared security and scalability of the relay chain and respective
+parachains. Shared security is a concept that has similar goals to EVM-based optimistic and
+zero-knowledge rollups. Still, instead of being implemented as a secondary layer, Polkadot
+guarantees native security and scalability for each of its parachains through the
+[Parachains Protocol](./learn-parachains-protocol.md). Polkadot handles the coordination of data
+from parachains into an aggregated, representative state, somewhat similar to L2 rollups.
 
 ## Optimistic Rollups
 
@@ -107,19 +105,16 @@ scalability.
 
 ## Polkadot - Native Shared Security
 
-Whereas rollups are considered solutions for L2 protocols,
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} include this functionality natively
-through its [Parachains Protocol](./learn-parachains-protocol.md). The Parachains Protocol, which is
-how {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles network's **sharding** is
-meant to accomplish the combined goals of providing security, scalability, and availability.
+Whereas rollups are considered solutions for L2 protocols, Polkadot include this functionality
+natively through its [Parachains Protocol](./learn-parachains-protocol.md). The Parachains Protocol,
+which is how Polkadot handles network's **sharding** is meant to accomplish the combined goals of
+providing security, scalability, and availability.
 
 It enables parachains to verify their collective state and communicate with one another. Parachains
-have similarities to aspects of optimistic and ZK rollups, which are reflected in how
-{{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} handles the validity and availability
-of the parachain state. [Collators](./learn-collator.md), a key part of
-{{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} architecture, are in principle
-similar to sequencers, as collators pass data with a proof-of-validity (PoV) function for liveness
-and communication with the relay chain.
+have similarities to aspects of optimistic and ZK rollups, which are reflected in how Polkadot
+handles the validity and availability of the parachain state. [Collators](./learn-collator.md), a
+key part of Polkadot architecture, are in principle similar to sequencers, as collators pass data
+with a proof-of-validity (PoV) function for liveness and communication with the relay chain.
 
 Each shard, or parachain, is equipped with a unique state transition function (STF). This function
 ensures that communication to the relay chain remains valid. Each STF, called runtime, is written in
@@ -154,6 +149,5 @@ for that parablock are [slashed](./learn-offenses.md) if it is found to be bad.
   on the size and weights of the PoV (Proof of Validity) blocks which contain the parachain state
   transition data.
 
-Despite these drawbacks, {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} remains
-upgradable through forkless upgrades, which allows the protocol to be easily upgradable to stay in
-line with future technological advances.
+Despite these drawbacks, Polkadot remains upgradable through forkless upgrades, which allows the
+protocol to be easily upgradable to stay in line with future technological advances.
