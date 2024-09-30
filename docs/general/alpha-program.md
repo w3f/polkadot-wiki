@@ -37,5 +37,5 @@ The term "Alpha" comes from alpha testing, a form of pre-production testing and 
 development. The program aims to enable your team to tap into Polkadot’s ecosystem of resources and
 bring your product into production while contributing to feedback for Polkadot’s ecosystem.
 
-Check out the official [Polkadot Alpha Program](https://polkadot.com/alpha-program) site
-for more information and steps on how to apply.
+Check out the official [Polkadot Alpha Program](https://polkadot.com/alpha-program) site for more
+information and steps on how to apply.
