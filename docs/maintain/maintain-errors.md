@@ -16,7 +16,7 @@ If this page does not answer your question, try searching for your problem at th
 [Polkadot Knowledge Base](https://support.polkadot.network/) for more information on troubleshooting
 your issue.
 
-## PolkadotJS Apps Explorer
+## Polkadot-JS Apps Explorer
 
 Here's how to find out the detailed error description through Polkadot-JS Apps.
 
