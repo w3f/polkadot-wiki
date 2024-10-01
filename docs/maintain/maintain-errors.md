@@ -16,7 +16,7 @@ If this page does not answer your question, try searching for your problem at th
 [Polkadot Knowledge Base](https://support.polkadot.network/) for more information on troubleshooting
 your issue.
 
-## PolkadotJS Apps Explorer
+## Polkadot-JS Apps Explorer
 
 Here's how to find out the detailed error description through Polkadot-JS Apps.
 
@@ -91,8 +91,9 @@ some other error (ex. the validity period expires).\*
 The below table is a reference to the errors that exists in Polkadot. It is generated from the
 runtime's metadata.
 
+<!-- prettier-ignore-start -->
 | Pallet                  | Error                                  | Documentation                                                                                                                                    |
-| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | System (0)              |                                        |                                                                                                                                                  |
 |                         | InvalidSpecName (0)                    | The name of specification does not match between the current runtime and the new runtime.                                                        |
 |                         | SpecVersionNeedsToIncrease (1)         | The specification version is not allowed to decrease between the current runtime and the new runtime.                                            |
@@ -307,3 +308,4 @@ runtime's metadata.
 |                         | UnexpectedTimepoint (11)               | A timepoint was given, yet no multisig operation is underway.                                                                                    |
 |                         | WeightTooLow (12)                      | The maximum weight information provided was too low.                                                                                             |
 |                         | AlreadyStored (13)                     | The data to be stored is already stored.                                                                                                         |
+<!-- prettier-ignore-end -->
