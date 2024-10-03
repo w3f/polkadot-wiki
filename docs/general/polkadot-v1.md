@@ -77,7 +77,7 @@ The Polkadot relay-chain managed [crowdloans](../learn/archive/learn-crowdloans.
 [auctions](../learn/archive/learn-auction.md), [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md). Relay chain cores were leased in 3-month chunks
-for a maximum of two years, and crowdloans allow users to trustlessly loan funds to teams for lease
+for a maximum of two years, and crowdloans allowed users to trustlessly loan funds to teams for lease
 deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
 
 ### Polkadot's Resilience
