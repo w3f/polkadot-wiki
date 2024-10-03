@@ -300,11 +300,11 @@ that parablock.
 :::info Parablocks vs. relay chain Blocks
 
 It is important to understand that a relay chain block does not contain parablocks, but
-para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of
-relay-chain blocks as having been approved instead of parablocks that have been approved. A
-relay-chain block containing information about approved parablocks can be considered approved as
-long as its parent relay-chain block is also approved. Thus, the validity of a relay-chain block
-depends on the validity of its ancestry.
+para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of relay
+chain blocks as having been approved instead of parablocks that have been approved. A relay chain
+block containing information about approved parablocks can be considered approved as long as its
+parent relay chain block is also approved. Thus, the validity of a relay chain block depends on the
+validity of its ancestry.
 
 :::
 
