@@ -88,7 +88,7 @@ required to participate in the network will vary depending on the activity that 
 the duration the DOT will be staked for, and the total number of DOT staked. For more information
 about staking on Polkadot visit [the dedicated staking page](./learn-staking.md).
 
-### DOT to Access the Relay Chain
+### DOT to Access Cores on the Relay Chain
 
 DOT can be used to [purchase coretime in-bulk or on-demand](./learn-agile-coretime.md) and access
 the relay chain to benefit from Polkadot's security and interoperability.
