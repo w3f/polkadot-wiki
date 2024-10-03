@@ -106,7 +106,7 @@ Some examples of features you can have on a parachain or parathread:
 Shared security, sometimes referred as _pooled security_, is one of the unique value propositions
 for chains considering becoming a [parachain](learn-parachains.md) and joining the network. On a
 high level, shared security means that all parachains that are connected to the relay chain by
-leasing a core will benefit from the economic security provided by the relay chain
+accessing a core will benefit from the economic security provided by the relay chain
 [validators](learn-validator.md).
 
 The notion of shared security is different from inter-chain protocols that build on an architecture
