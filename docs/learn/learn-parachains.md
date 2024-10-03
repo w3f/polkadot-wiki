@@ -9,13 +9,13 @@ slug: ../learn-parachains
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="Parachain Slot Auctions will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+<MessageBox message="[Agile Coretime](./learn-agile-coretime.md) is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime.md#implementation). For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
 :::info Testing on Rococo
 
-For information on how to participate in the crowdloan and parachain auction testing on Rococo,
-please see the [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
-on the parachain development guide.
+For information on how to test coretime functionalities on Rococo, please see the
+[Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) on the
+parachain development guide.
 
 :::
 
@@ -106,7 +106,7 @@ Some examples of features you can have on a parachain or parathread:
 Shared security, sometimes referred as _pooled security_, is one of the unique value propositions
 for chains considering becoming a [parachain](learn-parachains.md) and joining the network. On a
 high level, shared security means that all parachains that are connected to the relay chain by
-leasing a parachain slot will benefit from the economic security provided by the relay chain
+accessing a core will benefit from the economic security provided by the relay chain
 [validators](learn-validator.md).
 
 The notion of shared security is different from inter-chain protocols that build on an architecture
@@ -170,28 +170,32 @@ validity.
 Parachains are not required to have their token. If they do, it is up to the parachain (and not the
 relay chain) to make the economic case for their token.
 
-## Parachain Slot Acquisition
+## Coretime
 
-There are two ways to allocate parachain slots:
+Parachains can access the relay chain via cores.
 
-- Governance granted parachains, or "system parachains"
-- Auction granted parachains
+There are two ways to allocate relay chain cores:
+
+- Via Governance only to [system chains](./learn-system-chains.md).
+- Via [coretime](./learn-agile-coretime.md) purchase with DOT (KSM on Kusama) for non-system chains.
+  Coretime is used to rent computation time on a relay chain core. This is the only way to access
+  Polkadot's shared security and interoperability.
 
 [System parachains](#system-parachains) are allocated by Polkadot's on-chain
 [governance](./learn-polkadot-opengov.md) and are part of the network's protocol, such as bridges to
 other networks or chains. These typically do not have an economic model and help remove transactions
 from the relay chain, allowing for more efficient parachain processing.
 
-[Auction granted parachains](learn-auction.md) are granted in a permissionless auction. Parachain
-teams can either bid with their own DOT (or KSM on Kusama) tokens, or source them from the community
-using the [crowdloan functionality](learn-crowdloans.md).
+Non-system chains can access the relay chain's cores via bulk or on-demand coretime purchased with
+DOT (or KSM on Kusama).
 
-### Parachain Lease Expiration
+### Coretime Expiration
 
-When a parachain wins an auction, the tokens it bids get reserved until the lease's end. Reserved
-balances are non-transferrable and cannot be used for staking. At the end of the lease, the tokens
-are unreserved. Parachains without a new lease to extend their slot will be deprecated to the status
-of a parathread (i.e., a chain with a registered `ParaID` but has no access to a core).
+The DOT (or KSM on Kusama) used to purchase coretime are burned. Before the coretime expires, parachains
+can renew it at a fixed cost through a bulk coretime purchase. If the parachain does not purchase bulk coretime, it has an option to purchase coretime on-demand (at a variable price per block,
+depending on the demand and other market conditions) when they need to access the relay chain.
+Parachains without coretime to extend time on a relay chain core will be deprecated to the status of
+a parathread (i.e., a chain with a registered `ParaID` but without access to a core).
 
 ## System Parachains
 
@@ -199,12 +203,6 @@ of a parathread (i.e., a chain with a registered `ParaID` but has no access to a
 the network's governance. These chains remove transactions from the relay chain, allowing network
 validators to allocate resources to validating parachains. System chains are Polkadot using its
 scaling technology to host itself.
-
-See this
-[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
-and this
-[Polkadot Forum thread](https://forum.polkadot.network/t/polkadot-protocol-and-common-good-parachains/866)
-for more information.
 
 ## On-demand Parachains
 
@@ -216,13 +214,12 @@ On-demand parachains (previously called parathreads) are parachains that acquire
 :::
 
 On-demand parachains temporarily participate (on a block by block basis) in network security without
-needing to lease a dedicated parachain slot. This is done through economically sharing the scarce
-resource of a _parachain slot_ (or core) among several competing resources (parachains). Chains that
-otherwise would not be able to acquire a full parachain slot or do not find it economically sensible
-to do so, can participate in shared security as the
-[on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a graceful off-ramp to
-parachains that no longer require a dedicated parachain slot, but would like to continue using the
-relay chain.
+needing to lease a dedicated relay chain core. This is done through economically sharing the scarce
+resource of a core among several competing resources (parachains). Chains that otherwise would not
+be able to acquire a full core or do not find it economically sensible to do so, can participate in
+shared security, as the [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a
+graceful off-ramp to parachains that no longer require a dedicated core, but would like to continue
+using the relay chain.
 
 ### Historical Context of On-demand parachains
 

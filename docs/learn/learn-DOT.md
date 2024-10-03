@@ -88,13 +88,10 @@ required to participate in the network will vary depending on the activity that 
 the duration the DOT will be staked for, and the total number of DOT staked. For more information
 about staking on Polkadot visit [the dedicated staking page](./learn-staking.md).
 
-### DOT for Parachain Slot Acquisition
+### DOT to Access Cores on the Relay Chain
 
-DOT will have the ability to be locked for a duration in order to secure a parachain slot in the
-network. The DOT will be reserved during the slot lease and will be released back to the account
-that reserved them after the duration of the lease has elapsed and the parachain is removed. You can
-learn more about this aspect by reading about the [auctions](learn-auction.md) that govern parachain
-slots.
+DOT can be used to [purchase coretime in-bulk or on-demand](./learn-agile-coretime.md) and access
+the relay chain to benefit from Polkadot's security and interoperability.
 
 ### Token Issuance
 

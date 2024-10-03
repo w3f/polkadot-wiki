@@ -69,12 +69,6 @@ When you set a proxy, you must choose a type of proxy for the relationship with 
   from the Identity pallet along with the calls from the Utility pallet.
 - **Cancel**: allow to reject and remove any time-delay proxy announcements. This proxy can only
   access `reject_announcement` call from the Proxy pallet.
-- **Auction**: allow transactions pertaining to parachain auctions and crowdloans. The Auction proxy
-  account can sign those transactions on behalf of an account in cold storage. If you already set up
-  a Non-transfer proxy account, it can do everything an Auction proxy can do. Before participating
-  in a crowdloan using an Auction proxy, it is recommended that you check with the respective
-  parachain team for any possible issues pertaining to the crowdloan rewards distribution. Auction
-  proxy can access Auctions, Crowdloan, Registrar and Slots pallets.
 
 ## Proxy Deposits
 

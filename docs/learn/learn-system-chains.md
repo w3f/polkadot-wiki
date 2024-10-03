@@ -20,8 +20,8 @@ provides.
 ## Overview
 
 System parachains are those that contain core Polkadot protocol features, but in parachains rather
-than the relay chain. Rather than leasing an execution core by economic means (e.g., auction),
-execution cores are allocated by network [governance](./learn-guides-polkadot-opengov.md).
+than the relay chain. Rather than purchasing coretime on a marketplace, execution cores for system chains are allocated
+through the network [governance](./learn-guides-polkadot-opengov.md).
 
 By hosting core protocol logic in parachains instead of the relay chain, Polkadot uses its own
 scaling technology -- namely, parallel execution -- to host _itself_. System parachains remove

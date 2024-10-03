@@ -31,8 +31,8 @@ and add your parachain app to this page.
 
 [Astar](https://astar.network/) is an interoperable smart contracts platform for Polkadot and
 Ethereum ecosystems supporting both Wasm and EVM smart contracts. Astar provides native access to
-Polkadot and Ethereum through its parachain slot and Layer 2 scaling solution, while also offering
-bridges into other major blockchain ecosystems.
+Polkadot and Ethereum through its Polkadot parachain and Layer 2 scaling solution, while also
+offering bridges into other major blockchain ecosystems.
 
 Through the [dApp staking](https://docs.astar.network/docs/build/dapp-staking/), Astar offers a
 basic income to dApp developers, which allows them to continue building and enhancing their dApps

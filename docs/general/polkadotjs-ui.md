@@ -104,9 +104,7 @@ In this section, we describe those functionalities that will less likely interes
 In addition to staking, in the Network section, you can also:
 
 - See the Explorer with the most recent blocks and events.
-- Inspect [**parachains**](../learn/learn-parachains.md), see parachain
-  [**auctions**](../learn/learn-auction.md) and participate to parachain
-  [**crowdloans**](../learn/learn-crowdloans.md).
+- Inspect [**parachains**](../learn/learn-parachains.md).
 
 ### Governance
 

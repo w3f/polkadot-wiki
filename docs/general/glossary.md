@@ -30,7 +30,8 @@ that says whether they think a parachain candidate block is valid or invalid.
 
 ## Auction (Parachain)
 
-Parachain auctions are how non-system parachains can access Polkadot.
+Parachain auctions were used by non-system parachains to access Polkadot. The current method is
+through purchase of [coretime](#agile-coretime).
 
 ## Aura
 
@@ -93,8 +94,7 @@ makes BLS a preferred scheme for voting in consensus algorithms and threshold si
 ## Bonding
 
 A process by which tokens can be "frozen" in exchange for some other benefit. For example, staking
-is a form of bonding for which you receive rewards in exchange for securing the network. You can
-also bond tokens in exchange for a parachain slot.
+is a form of bonding for which you receive rewards in exchange for securing the network.
 
 ## [Bounty](../learn/learn-polkadot-opengov-treasury.md#bounties)
 
@@ -169,11 +169,15 @@ The process of a group of entities to agree on a particular data value (such as 
 makeup of blocks on a blockchain). There are a variety of algorithms used for determining consensus.
 The consensus algorithm used by Polkadot is [GRANDPA](#grandpa-finality-gadget).
 
+## Coretime
+
+The time allocated for utilizing a core that can be purchased in bulk or on demand. It is measured in relay chain blocks.
+
 ## Crowdloan
 
-A mechanism for potential parachains to temporarily source tokens to win an auction for a parachain
-slot. Tokens gathered in this way are programmatically returned to the lender after the lease period
-is over or the crowdloan period ends.
+A mechanism used in the past for potential parachains to temporarily source tokens to win an auction
+for a relay chain core. Tokens gathered in this way were programmatically returned to the lender
+after the lease period was over or the crowdloan period ended.
 
 ## Curator
 
@@ -666,9 +670,10 @@ parachains. For developers, see the
 ## System Parachains
 
 Parachains that are part of the Polkadot core protocol. These are allocated a parachain execution
-core by governance rather than by auction. Examples of system parachains include
+core by governance rather than by coretime purchase. Examples of system parachains include
 [Asset Hub](../learn/learn-assets.md), [Bridge Hub](../learn/learn-system-chains.md#bridge-hub),
-[Collectives](../learn/learn-system-chains.md#collectives) and People Chain.
+[Collectives](../learn/learn-system-chains.md#collectives) and
+[People Chain](../learn/learn-system-chains.md#people-chain).
 
 ## Tabling
 

@@ -39,20 +39,20 @@ message is trust-bound by the recipient's trust in the security of the sender.
 ### Polkadot
 
 Polkadot has a relay chain acting as the main chain of the system. All validators in Polkadot are on
-the relay chain. Parachains have collators, who construct and propose parachain blocks to
-validators. Collators don't have any security responsibilities, and thus do not require a robust
-incentive system. Collators can submit a single parachain block for every relay chain block every 6
-seconds. Once a parachain submits a block, validators perform a series of availability and validity
-checks before committing it to the final chain.
+the relay chain. Parachains have collators who construct and propose parachain blocks to validators.
+Collators do not have any security responsibilities and, thus, do not require a robust incentive
+system. Collators can submit a single parachain block for every relay chain block every 6 seconds.
+Once a parachain submits a block, validators perform a series of
+[availability and validity checks](./learn-parachains-protocol.md#availability-and-validity-anv-protocol)
+before committing it to the final chain.
 
-Parachain slots are limited, and thus parachain candidates participate in an auction to reserve a
-slot for up to two years. For chains that do not have the funding for a parachain slot or the
-necessity to execute with a six-second block time, Polkadot also has
-[on-demand parachains](./learn-parachains.md#on-demand-parachains) that execute on a pay-as-you-go
-basis, only paying to execute a block when they need to.
+Parachains can access the relay chain through cores. Relay chain cores are limited, but parachain
+can decide to purchase coretime in-bulk (and reserve an entire core) or on-demand (and interlace a
+core with another chain) and executing on a pay-as-you-go basis, only paying to execute a block when
+they need to.
 
-In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](learn-bridges.md) that offer two-way compatibility.
+To interact with chains that want to use their finalization process (e.g., Bitcoin), Polkadot has
+[bridges](learn-bridges.md) that offer two-way compatibility.
 
 ### Cosmos
 

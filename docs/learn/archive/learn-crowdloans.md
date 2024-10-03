@@ -7,9 +7,10 @@ keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../../components/MessageBox"; import
+"../../../components/MessageBox.css";
 
-<MessageBox message="Crowdloans will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For fundraising in a decentralized, transparent, and regulatory compliant manner within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
+<MessageBox message="The content on this page is archived. [Agile Coretime](./learn-agile-coretime.md) is activated on the network, and crowdloans have been deprecated. For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
 Polkadot allows parachains to source tokens for their parachain bids in a decentralized crowdloan.
 
@@ -34,7 +35,8 @@ If you are here for guidance on how to contribute to a crowdloan, watch the vide
 :::note Testing on Rococo
 
 For information on how to participate in the crowdloan and parachain auction testing on Rococo,
-please see the [Rococo content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
+please see the
+[Rococo content](../../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
 
 :::
 
@@ -73,7 +75,7 @@ campaign. More details regarding creating and executing a crowdloan campaign are
 
 Anyone who has registered a parachain can create a new crowdloan campaign for a slot by depositing a
 specified number of tokens. A campaign is configured as a range of slots (i.e. the duration of the
-[parachain](learn-parachains.md) will bid for), a cap, and a duration. The duration can last over
+[parachain](../learn-parachains.md) will bid for), a cap, and a duration. The duration can last over
 several auctions as long as the range of slots matches those of the auction (i.e. the first lease
 period of the crowdloan is the same or bigger than that of the auction). This means a team will not
 need to restart the campaign just because they do not secure a slot on their first attempt.
@@ -89,7 +91,7 @@ When setting the parameters of a crowdloan campaign, consider the following:
 
 - A crowdloan campaign can start well before the auction slot is opened.
 - The campaign creation form requires setting a crowdloan cap &mdash; the maximum amount a campaign
-  can collect. A team can still win an [auction](learn-auction.md) if the cap is not reached.
+  can collect. A team can still win an [auction](./learn-auction.md) if the cap is not reached.
 - Set the desired end of the crowdloan in the "Ending block" field. This helps ensure that the
   crowdloan is live during the entire auction. For example, if an auction starts in three days and
   lasts five days, you should set your crowdloan to end in 10 days or a similar timescale.
@@ -118,7 +120,7 @@ upgrades (as determined through its local governance).
 :::info Minimum Crowdloan Contribution
 
 There is a
-[minimum balance for contributions for a crowdloan campaign](../general/chain-state-values.md#minimum-crowdloan-contribution).
+[minimum balance for contributions for a crowdloan campaign](../../general/chain-state-values.md#minimum-crowdloan-contribution).
 This is to make crowdloans as accessible as possible while maintaining a balance to justify using
 the network's resources.
 
@@ -128,7 +130,7 @@ Each created campaign will have an index. Once a crowdloan campaign is open, any
 by sending a transaction referencing the campaign's index. Tokens used to participate must be
 transferable &mdash; that is, not locked for any reason, including staking, vesting, and governance
 &mdash; because they will be moved into a module-controlled account that was generated uniquely for
-this campaign. See [system accounts](./learn-account-advanced.md#system-accounts) for more
+this campaign. See [system accounts](../learn-account-advanced.md#system-accounts) for more
 information.
 
 :::caution Do not send Crowdloan contributions directly to the Parachain address
@@ -172,7 +174,7 @@ Polkadot JS Apps > Developer > Extrinsics page, by specifying the parachain ID. 
 need to be issued multiple times if the list of contributors is too long. All contributions must be
 returned before the crowdloan is entirely deleted.
 
-![Crowdloan refund](../assets/crowdloan-refund.png)
+![Crowdloan refund](../../assets/crowdloan-refund.png)
 
 Many projects will have dashboards that allow users to participate in their crowdloans. PolkadotJS
 apps also offer a breakdown of ongoing crowdloans on the
@@ -180,7 +182,7 @@ apps also offer a breakdown of ongoing crowdloans on the
 
 Here is an example of the crowdloans in play during the very first Kusama auction.
 
-![crowdloan dashboard](../assets/kusama-crowdloans.png)
+![crowdloan dashboard](../../assets/kusama-crowdloans.png)
 
 Furthermore, check out this video on
 [How to Participate in Crowdloans](https://www.youtube.com/watch?v=YrTxDufrcQM) for steps on how to

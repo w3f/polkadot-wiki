@@ -537,8 +537,6 @@ module.exports = {
                     "learn/learn-parachains",
                     "learn/learn-parachains-protocol",
                     "learn/learn-system-chains",
-                    "learn/learn-auction",
-                    "learn/learn-crowdloans",
                     "learn/learn-parachains-faq",
                   ],
                 },
@@ -805,6 +803,8 @@ module.exports = {
             "learn/archive/learn-launch",
             "learn/archive/learn-redenomination",
             "learn/archive/learn-controller",
+            "learn/archive/learn-auction",
+            "learn/archive/learn-crowdloans",
           ],
         },
       ],
@@ -867,7 +867,7 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Build Archive",
+          label: "Archive",
           link: {
             type: 'generated-index',
             title: "Archived Build Resources",

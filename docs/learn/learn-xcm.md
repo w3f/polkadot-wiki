@@ -128,10 +128,10 @@ XCM introduces some key features and additions to cross-consensus messaging, inc
 
 A core part of the vision that XCM provides is improving communication between the chains to make
 **system parachains** a reality. For example, the Polkadot relay chain handles more than just
-parachain management and shared security - it handles user balances/assets, auctions, governance,
-and staking. Ideally, the relay chain should be for what it's intended to be - a place for shared
-security. System parachains can alleviate these core responsibilities from the relay chain but only
-by using a standard format like XCM.
+parachain management and shared security - it handles user balances/assets, governance, and staking.
+Ideally, the relay chain should be for what it's intended to be - a place for shared security.
+System parachains can alleviate these core responsibilities from the relay chain but only by using a
+standard format like XCM.
 
 This is where system parachains come in, where each of these core responsibilities can be delegated
 to a system parachain respectively.

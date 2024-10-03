@@ -14,7 +14,7 @@ and leveraging each other strengths.
 
 ## Polkadot 1.0
 
-Polkadot 1.0 reflects the status of Polkadot in 2023 at time of the release of the
+Polkadot 1.0 reflected the status of Polkadot in 2023 at time of the release of the
 [Polkadot runtime v1.0.0](https://github.com/paritytech/polkadot/releases/tag/v1.0.0). This sections
 focuses on Polkadot 1.0 and some philosophical digressions about network resilience and blockspace.
 
@@ -28,14 +28,16 @@ initiatives:
   value proposition.
 - **Shared security and financial scalability of L1 chains**. Any L1 chain attached to a Polkadot
   core can benefit from Polkadot shared security model. This means the Polkadot
-  Nominated-Proof-of-Stake (NPoS) mechanism along with its consensus mechanism, will secure L1
-  chains out-of-the-box without having to bootstrap security on their own.
+  [Nominated-Proof-of-Stake (NPoS)](../learn/learn-staking.md#nominated-proof-of-stake-npos)
+  mechanism along with its consensus mechanism, secures L1 chains out-of-the-box without having to
+  bootstrap security on their own.
 - **Secure interoperability.** Any L1 chain attached to Polkadot (as well as L2 chains built on top
   of them) can benefit from Polkadot's native interoperability and will thus be able to communicate
   and exchange value and information with other parachains.
 - **Truly resilient infrastructure.** This is achieved by keeping the network decentralized without
-  compromising scalability and throughput and through on-chain treasury funds that can be accessed
-  through governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
+  compromising scalability and throughput and through on-chain
+  [treasury](../learn/learn-polkadot-opengov-treasury.md) funds that can be accessed through
+  governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
   educational material, education, software development, etc.
 - **Fast development and deployment of L1 chains.** This is achieved through the modular and
   flexible [Polkadot SDK Substrate](./glossary.md#substrate).
@@ -49,7 +51,7 @@ initiatives:
 
 ### Polkadot's Representation
 
-Polkadot has a relay chain acting as the main chain of the system. The Polkadot relay chain has been
+Polkadot has a relay chain acting as the main chain of the system. The Polkadot relay chain is
 represented as a ring surrounded by multiple parachains attached to it. Based on Polkadot's design,
 as long as a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
 connect to the Polkadot network as a parachain.
@@ -59,7 +61,7 @@ connect to the Polkadot network as a parachain.
 Parachains construct and propose blocks to validators on the relay chain, where the blocks undergo
 rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
 added to the finalized chain. As the relay chain provides the security guarantees,
-[collators](../learn/learn-collator.md) - full nodes of these parachains - don't have any security
+[collators](../learn/learn-collator.md) - full nodes of these parachains - do not have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
 stays up to date with the many transactions that take place.
 
@@ -68,17 +70,20 @@ messages of any type to each other. The shared security and validation logic of 
 provide the environment for trust-free message passing that opens up true interoperability.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridge parachains](../learn/learn-bridges.md) that offer two-way compatibility,
-meaning that transactions can be made between different parachains.
+Polkadot has [bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
+transactions can be made between different parachains.
 
 ### Polkadot's Additional Functionalities
 
-The Polkadot relay-chain also manges [crowdloans](../learn/learn-crowdloans.md),
-[auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
+The Polkadot relay chain managed [crowdloans](../learn/archive/learn-crowdloans.md) and
+[auctions](../learn/archive/learn-auction.md). Relay chain cores were leased via auctions in 3-month
+chunks for a maximum of two years, and crowdloans allowed users to trustlessly loan funds to teams
+for lease deposits in exchange for pre-sale tokens. There was no other way you could access cores on
+Polkadot 1.0.
+
+The relay chain currently manages other tasks such as [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
-and [governance](../learn/learn-polkadot-opengov.md). Parachain slots or cores are leased in 6-month
-chunks for a maximum of two years, and crowdloans allow users to trustlessly loan funds to teams for
-lease deposits in exchange for pre-sale tokens. There is no other way you could use Polkadot 1.0.
+and [governance](../learn/learn-polkadot-opengov.md).
 
 ### Polkadot's Resilience
 
@@ -99,11 +104,11 @@ Currently, Polkadot 1.0 achieve resilience through the following strategies:
 
 - Nominated Proof of Staking (NPoS) where the stake per validator is maximized and evenly
   distributed across validators.
-- The [1KV programe](./thousand-validators.md) aims to incentivize new operators to become network
+- The [1KV program](./thousand-validators.md) aims to incentivize new operators to become network
   participants and further increase physical (how many validator nodes per service provider) and
   social decentralization (how many validator nodes per operator). Those can be explored with the
   [Polkawatch App](https://polkadot.polkawatch.app/).
-- An on-chain treasury and governance (see: [OpenGov](../learn/learn-polkadot-opengov.md) where
+- An on-chain treasury and governance (see: [OpenGov](../learn/learn-polkadot-opengov.md)) where
   every decision goes through public referenda and any token holder can cast a vote.
 
 ### Polkadot's Blockspace
@@ -142,7 +147,7 @@ further improved such that the tasks which are currently managed on the relay ch
 balances transfers, staking, and governance, can be delegated to
 [system parachains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
 the relay-chain to provide shared security and interoperability. Blockspace is only accessible
-through slot auctions, but an auction winner has access to a "freighter of blocks" regardless it is
+through auctions, but an auction winner has access to a "freighter of blocks" regardless it is
 needed or not. This creates high entry barriers and it can lead to waste of energy and resources.
 
 For more information about blockspace see [this interview](https://youtu.be/e1vISppPwe4) with Robert

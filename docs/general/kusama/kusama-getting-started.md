@@ -31,7 +31,7 @@ Kusama is experimental. **Expect Chaos**.
 :::tip As a KSM holder
 
 You can interact with all the features of the Kusama network such as staking (i.e. validating or
-nominating), governance, parachain auctions, basic transfers and everything else.
+nominating), governance, basic transfers and everything else.
 
 :::
 
@@ -40,8 +40,8 @@ nominating), governance, parachain auctions, basic transfers and everything else
 ### What can I do with my KSM?
 
 KSM is the native token of the Kusama Network. KSM can be used for transaction fees, staking,
-governance, acquisition of a parachain slot and for enabling several key functionalities on Kusama.
-See more information on [the Chain State Values page](../chain-state-values.md).
+governance, purchase of coretime, and for enabling several key functionalities on Kusama. See more
+information on [the Chain State Values page](../chain-state-values.md).
 
 KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) where you can
 [vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum),

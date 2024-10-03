@@ -12,9 +12,9 @@ flexibility for builders, generalizing Polkadot beyond what was initially propos
 its [whitepaper](https://polkadot.network/whitepaper/).
 
 In Polkadot 1.0, the only way for a parachain to be secured by Polkadot was to rent a lease through
-an [auction](./learn-auction.md), which guaranteed parachain block validation for up-to two years.
-This involved locking significant amount of DOT, leading to a high barrier of entry for small and
-medium scale blockchain projects. The parachains produced blocks at a regular interval of 12
+an [auction](./archive/learn-auction.md), which guaranteed parachain block validation for up-to two
+years. This involved locking significant amount of DOT, leading to a high barrier of entry for small
+and medium scale blockchain projects. The parachains produced blocks at a regular interval of 12
 seconds, irrespective of the network activity. This led to inefficient resource allocation and
 misplaced economic incentives while producing almost empty blocks under lighter traffic and being
 unable to accommodate heavier traffic when it exceeded block limits. Agile Coretime resolves all of
@@ -184,11 +184,6 @@ the [contributor's guide](../general/contributing.md).
 They will migrate when the runtime upgrade with Agile Coretime is performed on the relay chain. Any
 parachains with existing lease periods will be automatically credited bulk coretime for the
 remainder of their lease period.
-
-#### When will the auction mechanism be deprecated?
-
-Auctions will stop directly with the runtime upgrade of Agile Coretime. Current leases will be
-migrated to bulk coretime automatically.
 
 ### Product
 
@@ -410,9 +405,9 @@ the end of the region in which its slot would have expired.
 
 #### When does the last auction take place?
 
-Auctions take place until the launch of coretime. With the runtime upgrade, enabling Agile Coretime,
-any still ongoing auction will be canceled. Existing active leases of previous auctions will be
-migrated to Agile Coretime: In case you have a lease secured, you automatically get corresponding
+Auctions took place until the launch of Agile Coretime with Polkadot runtime upgrade on the 19th of
+September 2024. Ongoing auctions were canceled and existing active leases of previous auctions were
+migrated to Agile Coretime. In case you had a lease secured, you automatically got corresponding
 coretime, with renewal right.
 
 _Note: if your team secured a lease with a new paraID, please

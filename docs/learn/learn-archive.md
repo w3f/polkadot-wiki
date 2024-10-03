@@ -1,6 +1,6 @@
 ---
 id: learn-archive
-title: Learn Archive
+title: Archived Learn Resources
 sidebar_label: Archive
 description: Archive for the Learn Section.
 keywords: [Gov1, Gov1 Treasury, Launch, Redenomination, Controller]
