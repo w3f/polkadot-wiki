@@ -405,7 +405,7 @@ the end of the region in which its slot would have expired.
 
 #### When does the last auction take place?
 
-Auctions took place until the launch of agile coretime with Polkadot runtime upgrade on the 19th of
+Auctions took place until the launch of Agile Coretime with Polkadot runtime upgrade on the 19th of
 September 2024. Ongoing auctions were canceled and existing active leases of previous auctions were
 migrated to Agile Coretime. In case you had a lease secured, you automatically got corresponding
 coretime, with renewal right.
