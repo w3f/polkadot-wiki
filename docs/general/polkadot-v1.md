@@ -73,7 +73,7 @@ meaning that transactions can be made between different parachains.
 
 ### Polkadot's Additional Functionalities
 
-The Polkadot relay-chain also manges [crowdloans](../learn/archive/learn-crowdloans.md),
+The Polkadot relay-chain managed [crowdloans](../learn/archive/learn-crowdloans.md),
 [auctions](../learn/archive/learn-auction.md), [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md). Relay chain cores are leased in 6-month chunks
