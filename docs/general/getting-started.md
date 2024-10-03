@@ -120,8 +120,7 @@ OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md).
 
 The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov,
-[staking](../learn/learn-staking.md), and
-[parachains' crowdloans](../learn/archive/learn-crowdloans.md).
+and [staking](../learn/learn-staking.md).
 
 The level of abstraction and generalization of Polkadot allows to build applications that are
 specific to their use cases, and for those applications to communicate securely leveraging each
