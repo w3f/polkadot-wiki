@@ -191,9 +191,9 @@ DOT (or KSM on Kusama).
 
 ### Coretime Expiration
 
-The DOT (or KSM on Kusama) used to purchase coretime are burned. At coretime expiration, parachains
-can choose to renew it at a fixed cost (only bulk coretime) or buy it on-demand (variable price
-depending on the demand and other market variables) when they need to access the relay chain.
+The DOT (or KSM on Kusama) used to purchase coretime are burned. Before the coretime expires, parachains
+can renew it at a fixed cost through a bulk coretime purchase. If the parachain does not purchase bulk coretime, it has an option to purchase coretime on-demand (at a variable price per block,
+depending on the demand and other market conditions) when they need to access the relay chain.
 Parachains without coretime to extend time on a relay chain core will be deprecated to the status of
 a parathread (i.e., a chain with a registered `ParaID` but without access to a core).
 
