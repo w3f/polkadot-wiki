@@ -17,10 +17,10 @@ If you aren't sure what Agile Coretime is, be sure to read the
 :::
 
 The landscape for parachains changes with the rollout of
-[Agile Coretime](./learn-agile-coretime.md). With [parachain auctions](./learn-auction.md) being
-phased out in favor of direct [coretime](./learn-agile-coretime.md#coretime) sales, the existing
-parachains on the relaychain and the prospective parachains are presented with the following
-scenarios:
+[Agile Coretime](./learn-agile-coretime.md). With [parachain auctions](./archive/learn-auction.md)
+being phased out in favor of direct [coretime](./learn-agile-coretime.md#coretime) sales, the
+existing parachains on the relaychain and the prospective parachains are presented with the
+following scenarios:
 
 - **Migrating** from a legacy parachain lease into a
   [bulk coretime](./learn-agile-coretime.md#bulk-coretime) model
