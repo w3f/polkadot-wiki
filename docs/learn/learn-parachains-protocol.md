@@ -94,7 +94,7 @@ the [Inclusion Pipeline](#inclusion-pipeline) and two within the
 
 - **Inclusion Pipeline**
   1.  [Parachain phase](#parachain-phase)
-  2.  [Relay Chain submission phase](#relay-chain-submission-phase)
+  2.  [Relay chain submission phase](#relay-chain-submission-phase)
   3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
 - **Approval Process**
   1.  [Assignments and secondary (validity) checks](#assignments--secondary-checks)

@@ -18,7 +18,7 @@ The Asset Hub is a generic assets system parachain which provides functionality 
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
 hub is the same as the relay chain's native asset (DOT or KSM). The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations are about
-[1/10th of the values on the Relay chains](../general/chain-state-values.md#existential-deposit-2).
+[1/10th of the values on the relay chains](../general/chain-state-values.md#existential-deposit-2).
 Apart from the native token, the assets held on the Asset Hub can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility

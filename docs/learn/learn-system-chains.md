@@ -10,7 +10,7 @@ slug: ../learn-system-chains
 import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
 from "@theme/TabItem";
 
-The primary functionality of the Relay chain is to secure the parachains and facilitate secure
+The primary functionality of the relay chain is to secure the parachains and facilitate secure
 communication between them. All other functionalities like asset transfers, governance, identities
 and bridging (a potentially resource intensive task) can benefit from operating separately on system
 chains. System chains are responsible for delegating functionality away from the relay chain for
@@ -20,8 +20,8 @@ provides.
 ## Overview
 
 System parachains are those that contain core Polkadot protocol features, but in parachains rather
-than the relay chain. Rather than purchasing coretime on a marketplace, execution cores for system chains are allocated
-through the network [governance](./learn-guides-polkadot-opengov.md).
+than the relay chain. Rather than purchasing coretime on a marketplace, execution cores for system
+chains are allocated through the network [governance](./learn-guides-polkadot-opengov.md).
 
 By hosting core protocol logic in parachains instead of the relay chain, Polkadot uses its own
 scaling technology -- namely, parallel execution -- to host _itself_. System parachains remove

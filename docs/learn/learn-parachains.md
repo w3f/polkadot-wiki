@@ -36,7 +36,7 @@ Parachains are maintained by a network maintainer known as a [collator](learn-co
 of the collator node is to maintain a full node of the parachain, retain all necessary information
 about the parachain, and produce new block candidates to pass to the relay chain validators for
 verification and inclusion in the shared state. The incentivization of a collator node is an
-implementation detail of the parachain. They are not required to be staked on the Relay Chain or own
+implementation detail of the parachain. They are not required to be staked on the relay chain or own
 the native token unless stipulated by the parachain implementation.
 
 ### State Transitions
@@ -191,11 +191,12 @@ DOT (or KSM on Kusama).
 
 ### Coretime Expiration
 
-The DOT (or KSM on Kusama) used to purchase coretime are burned. Before the coretime expires, parachains
-can renew it at a fixed cost through a bulk coretime purchase. If the parachain does not purchase bulk coretime, it has an option to purchase coretime on-demand (at a variable price per block,
-depending on the demand and other market conditions) when they need to access the relay chain.
-Parachains without coretime to extend time on a relay chain core will be deprecated to the status of
-a parathread (i.e., a chain with a registered `ParaID` but without access to a core).
+The DOT (or KSM on Kusama) used to purchase coretime are burned. Before the coretime expires,
+parachains can renew it at a fixed cost through a bulk coretime purchase. If the parachain does not
+purchase bulk coretime, it has an option to purchase coretime on-demand (at a variable price per
+block, depending on the demand and other market conditions) when they need to access the relay
+chain. Parachains without coretime to extend time on a relay chain core will be deprecated to the
+status of a parathread (i.e., a chain with a registered `ParaID` but without access to a core).
 
 ## System Parachains
 
