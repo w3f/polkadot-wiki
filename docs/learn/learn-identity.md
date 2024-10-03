@@ -78,6 +78,8 @@ any new judgment requests. The registrar fee is set to a substantial amount to d
 judgement requests. Identities judged by the registrar before that date will not be affected. For
 new identity judgment, please use the other registrars.
 
+:::
+
 <!-- prettier-ignore -->
 <Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
 
