@@ -217,7 +217,7 @@ On-demand parachains temporarily participate (on a block by block basis) in netw
 needing to lease a dedicated relay chain core. This is done through economically sharing the scarce
 resource of a core among several competing resources (parachains). Chains that otherwise would not
 be able to acquire a full core or do not find it economically sensible to do so, can participate in
-shared security as the [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a
+shared security, as the [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime) offers a
 graceful off-ramp to parachains that no longer require a dedicated core, but would like to continue
 using the relay chain.
 
