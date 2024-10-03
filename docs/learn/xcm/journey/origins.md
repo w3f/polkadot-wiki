@@ -88,5 +88,5 @@ The AliasOrigin instruction is similar to the UniversalOrigin instruction, but i
 for account IDs. When executed, it switches out the current origin for the given MultiLocation. THe
 AliasOrigin instruction would allow to remove certain prefix patterns such as Parent/Parachain(X)/
 for certain values of X (thereby allowing sibling chains to use the same account IDs) or
-Parachain(X)/ (allowing a Relay-chain to use the account IDs native to its child parachains) or just
-Parent/ (allowing parachains to use AccountIds of the Relay-chain).
+Parachain(X)/ (allowing a relay chain to use the account IDs native to its child parachains) or just
+Parent/ (allowing parachains to use AccountIds of the relay chain).

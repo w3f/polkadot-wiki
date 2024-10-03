@@ -99,7 +99,7 @@ of those options. The topic is currently under discussion. For more information,
 
 Polkadot 1.0 was a chain-centric paradigm consisting of isolated chains able to exchange messages.
 This was not fundamentally different from having completely different chains connected to bridges,
-with the only difference of having the relay-chain securing the network, providing message-passing
+with the only difference of having the relay chain securing the network, providing message-passing
 capability, and doing some extra tasks such as [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately
@@ -109,9 +109,9 @@ The true innovation of Polkadot is about leveraging the unique value proposition
 different chains and using those chains’ collaborative potential to build inter-chain applications
 to solve real-world problems. Those applications will thus need to span across chains.
 
-**Increasingly fewer tasks will be handled by the relay-chain** that will focus efforts only on
+**Increasingly fewer tasks will be handled by the relay chain** that will focus efforts only on
 primary tasks: securing the network and providing secure message-passing capability.
-[System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay-chain
+[System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay chain
 tasks such as staking, governance, etc.
 
 ### XCM and Accords

@@ -146,7 +146,7 @@ Polkadot has been designed around those core blockspace principles. However, its
 further improved such that the tasks which are currently managed on the relay chain, such as
 balances transfers, staking, and governance, can be delegated to
 [system parachains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
-the relay-chain to provide shared security and interoperability. Blockspace is only accessible
+the relay chain to provide shared security and interoperability. Blockspace is only accessible
 through auctions, but an auction winner has access to a "freighter of blocks" regardless it is
 needed or not. This creates high entry barriers and it can lead to waste of energy and resources.
 

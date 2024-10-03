@@ -224,21 +224,21 @@ then tracing back the origin of these deposits. However, the process of tracking
 (hence the events to look for) may vary based on the direction of the XCM message. Here are some
 examples to showcase the slight differences:
 
-1. For an XCM transfer from a Parachain to a Relay chain
+1. For an XCM transfer from a Parachain to a relay chain
    _([example](https://polkadot.subscan.io/xcm_message/polkadot-3effaf637dd2a3ac5a644ccc693cbf58a6957d84))_:
 
    - The [event](https://hydradx.subscan.io/extrinsic/5136464-2?event=5136464-7) to look for in the
      Parachain side is called `parachainsystem (UpwardMessageSent)`, and the parameter
      `message_hash` in this event identifies the XCM transfer.
    - The [event](https://polkadot.subscan.io/block/20810935?tab=event&&event=20810935-4) to track in
-     the Relay chain side is called `messagequeue (Processed)`, and the parameter `id` of the event
+     the relay chain side is called `messagequeue (Processed)`, and the parameter `id` of the event
      should be the same as the `message_hash` found in the Parachain event.
 
-2. For an XCM transfer from a Relay chain to a Parachain
+2. For an XCM transfer from a relay chain to a parachain
    _([example](https://polkadot.subscan.io/xcm_message/polkadot-b2f455ed6ca1b4fdea746dfe8d150c10ec74440e))_:
 
    - The [event](https://polkadot.subscan.io/extrinsic/20810793-2?event=20810793-53) to look for in
-     the Relay chain side is called `xcmPallet (sent)`, and the parameter `message_id` in this event
+     the relay chain side is called `xcmPallet (sent)`, and the parameter `message_id` in this event
      identifies the XCM transfer.
    - The [event](https://moonbeam.subscan.io/extrinsic/6174523-0?event=6174523-5) to look for in the
      Parachain side is called `dmpqueue (ExecutedDownward)`, and the parameter that identifies the
@@ -259,7 +259,7 @@ examples to showcase the slight differences:
 In case that an XCM transfer fails to complete successfully, then we will notice some different
 parameters in the events emitted or different events. Below are some examples:
 
-1. From a Relay chain to a System Parachain
+1. From a relay chain to a System Parachain
    _([example](https://polkadot.subscan.io/xcm_message/polkadot-c8d7186edb43a592d65b3b5a87c4ecaac38c5aa2))_:
 
    - We will see the

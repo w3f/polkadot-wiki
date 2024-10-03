@@ -17,9 +17,9 @@ To keep the content on this page factually correct and up-to-date,
 :::
 
 Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to
-be designed and connected to a primary network. In Polkadot, the primary network is the Relay-chain
+be designed and connected to a primary network. In Polkadot, the primary network is the relay chain
 and Avalanche does this with 3 main chains - the P-chain, X-chain, and C-chain. Similar to how
-Polkadot has its Parachains that connect to the Relay-chain, Avalanche has what’s called
+Polkadot has its Parachains that connect to the relay chain, Avalanche has what’s called
 [subnets](https://docs.avax.network/subnets). Similar to Polkadot, Avalanche also uses a PoS
 mechanism for achieving consensus. The validators stake their AVAX tokens in order to participate in
 the PoS system and secure the network.
@@ -185,7 +185,7 @@ environment in which protocol engineers can have the freedom to create their own
 include them in the Avalanche ecosystem via subnets. The trade-offs are that the autonomy of design
 is limited and blockchains have to buy into the design decisions of Avalanche's main chains. Unlike
 parachains on Polkadot, Subnets are not able to share the security of the main chains. In addition
-to utilizing block finality and security of the Relay-chain, parachains on Polkadot use
+to utilizing block finality and security of the relay chain, parachains on Polkadot use
 [XCM](learn-xcm) to pass native trustless messages, instead of having to rely on multiple bridging
 solutions. However, Subnets are easy to launch when compared to parachains, given that they only
 need a recommended minimum of 5 validators, which make the costs of launch predictable. Avalanche
