@@ -171,7 +171,7 @@ The consensus algorithm used by Polkadot is [GRANDPA](#grandpa-finality-gadget).
 
 ## Coretime
 
-Time on a relay chain core than can be purchased via Coretime system chain.
+The time allocated for utilizing a core that can be purchased in bulk or on demand. It is measured in relay chain blocks.
 
 ## Crowdloan
 
