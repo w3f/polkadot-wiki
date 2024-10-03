@@ -90,14 +90,14 @@ core (this excludes the system parachains), based on the implementation
 
 Briefly, the ideal staking rate can be calculated as follows:
 
-`0.75 - cores_proportion`
+`0.75 - auction_proportion`
 
-where `cores_proportion` is obtained by computing `min(occupied_cores, 60) / 300`. The
-`occupied_cores` are all the relay chain cores without the ones dedicated to system parachains.
+where `auction_proportion` is obtained by computing `min(auctioned_slots, 60) / 300`. The
+`auctioned_slots` are all the auctioned slots without the slots for system parachains.
 
-Assuming there are 50 occupied cores, of which five are dedicated to
-[system parachains](./learn-system-chains.md), there are 45 occupied cores. The `cores_proportion`
-is thus `46 / 300 = 0.15`. The ideal staking rate is `0.75 - 0.15 = 0.6`.
+Assuming there are 50 filled slots, of which five are dedicated to
+[system parachains](./learn-system-chains.md), there are 45 auctioned slots. The
+`auction_proportion` is thus `45 / 300 = 0.15`. The ideal staking rate is `0.75 - 0.15 = 0.6`.
 
 If the amount of tokens staked goes below 60%, then staking rewards for nominators increase,
 incentivizing them to stake more tokens on the network. On the contrary, staking rewards drop if
