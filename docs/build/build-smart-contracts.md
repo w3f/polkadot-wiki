@@ -51,7 +51,7 @@ Leaving certain logic, such as complex loops that could run indefinitely, to a n
 layer, or even trying to eliminate it, will often be a wiser choice. Parachains try to be proactive,
 while smart contract platforms are event-driven.
 
-relay chain and parachians typically use the _weight-fee model_ and not a _gas-metering model_.
+Relay chain and parachains typically use the _weight-fee model_ and not a _gas-metering model_.
 
 ## Building a Smart Contract
 
