@@ -294,7 +294,12 @@ can move between being a parachain, an
 chain at different points of its lifetime. Especially with on-demand parachains, parachains can
 produce blocks when their usage and throughput makes it necessary.
 
-When a parachain could not renew its bulk coretime and needs to keep its chain live, there are a couple of options to consider. One option is to explore secondary coretime marketplaces on [Lastic](https://www.lastic.xyz/) or [RegionX](https://app.regionx.tech/?network=polkadot). The other option is run as an on-demand parachain, and purchase coretime to produce one block at a time. On-demand parachains are still secured by the relay chain but don't need to hold a core and can produce a block when it's economically feasible for them. For more information, please refer to the
+When a parachain could not renew its bulk coretime and needs to keep its chain live, there are a
+couple of options to consider. One option is to explore secondary coretime marketplaces on
+[Lastic](https://www.lastic.xyz/) or [RegionX](https://app.regionx.tech/?network=polkadot). The
+other option is run as an on-demand parachain, and purchase coretime to produce one block at a time.
+On-demand parachains are still secured by the relay chain but don't need to hold a core and can
+produce a block when it's economically feasible for them. For more information, please refer to the
 [parachains page](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
 
 ## Networking
