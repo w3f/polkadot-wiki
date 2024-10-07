@@ -86,25 +86,15 @@ to Westend Asset Hub.
 
 ### Rococo Test Network
 
-[Rococo](https://substrate.io/developers/rococo-network/) is a test network built for parachains.
-The native token of this network (ROC) holds no economic value.
+Rococo used to be a Polkadot test network for parachains. The network was shut down following its replacement by Paseo.
 
-Run the Polkadot binary and specify `rococo` as the chain:
+### Paseo Test Network
+[Paseo](https://github.com/paseo-network/) is a test network built for parachains.
+The native token of this network (PAS) holds no economic value.
 
-```bash
-polkadot --chain=rococo
-```
+#### Paseo Faucet
 
-and you will connect and start syncing to Rococo.
-
-Check that your node is connected by viewing it on
-[Rococo Telemetry](https://telemetry.polkadot.io/#list/0x6408de7737c59c238890533af25896a2c20608d8b380bb01029acb392781063e)
-(you can set a custom node name by specifying `--name "my-custom-node-name"`).
-
-#### Rococo Faucet
-
-Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
-ROCs tokens.
+Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-paseo-testnet) to get PAS tokens.
 
 ### Wococo Test Network (inactive)
 
