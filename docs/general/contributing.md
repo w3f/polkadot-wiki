@@ -84,7 +84,8 @@ There are a few basic ground rules for contributors:
 
 The style guide from the
 [Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style)
-provides general guidelines about how to write your Wiki contribution.
+provides general guidelines about how to write your Wiki contribution. See also
+[the Wiki readme file](https://github.com/w3f/polkadot-wiki?tab=readme-ov-file#contributing-to-documentation).
 
 :::
 
