@@ -119,8 +119,8 @@ Polkadot has an on-chain [open governance](../learn/learn-polkadot-opengov.md) (
 OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md).
 
-The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov,
-and [staking](../learn/learn-staking.md).
+The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov, and
+[staking](../learn/learn-staking.md).
 
 The level of abstraction and generalization of Polkadot allows to build applications that are
 specific to their use cases, and for those applications to communicate securely leveraging each
