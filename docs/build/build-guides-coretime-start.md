@@ -11,13 +11,6 @@ slug: ../build-guides-coretime-start
 
 :::
 
-:::warning Not a production ready guide.
-
-Agile coretime is only for the Kusama and testnet networks at the moment, and is not yet deployed on
-Polkadot. These guides are **not** production ready due to the moving nature of these features.
-
-:::
-
 ## Using the Polkadot SDK
 
 The Polkadot SDK is comprised of **three** important repositories:
