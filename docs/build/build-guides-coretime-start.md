@@ -7,7 +7,7 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../build-guides-coretime-start
 ---
 
-:::warning This section is under construction and moving! (Expect Chaos)
+:::warning This section is under construction.
 
 :::
 
