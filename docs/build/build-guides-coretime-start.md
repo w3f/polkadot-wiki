@@ -7,9 +7,13 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../build-guides-coretime-start
 ---
 
+import Tabs from "@theme/Tabs"; import DocCardList from '@theme/DocCardList';
+
 :::warning This section is under construction.
 
 :::
+
+<DocCardList />
 
 ## Using the Polkadot SDK
 
@@ -20,7 +24,7 @@ The Polkadot SDK is comprised of **three** important repositories:
   to the Polkadot Fellows organization.
 - [**Substrate**](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/index.html#substrate) -
   The underlying, core primitives and libraries for building blockchains (any blockchain, not just
-  one for Polkadot). Much of Polkadot is built with Substrate!
+  one for Polkadot). Much of Polkadot is built with Substrate.
 - [**Cumulus**](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/index.html#cumulus) -
   A set of libraries and tools which pertain specifically with connecting blockchains to Polkadot,
   known as parachains.
@@ -98,7 +102,7 @@ PC-->DEP
 ### Install dependencies
 
 Make sure you have everything you need for your target system
-[here.](./build-guides-install-deps.md).
+[here](./build-guides-install-deps.md).
 
 Be sure you also install the `polkadot-parachain` and `chain-spec-builder` binaries, as they needed
 to start and run your chain!
@@ -106,7 +110,7 @@ to start and run your chain!
 ### Deployment Example - Adder Collator
 
 Try out the above by deploying the
-[adder collator, a very simple "counter" parachain implementation.](../learn/learn-guides-coretime-parachains.md).
+[adder collator, a very simple "counter" parachain implementation](../learn/learn-guides-coretime-parachains.md).
 
 ## OpenZeppelin Templates & Guides
 
