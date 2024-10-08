@@ -212,7 +212,7 @@ After a competitive process, Autonomous was selected for their previous experien
 Polkadot ecosystem, their emphasis on sound financial & back office management, and their
 flexibility to adapt as the Foundation’s operations evolve.
 
-## How can I utilize the Polkadot Community Foundation
+## How to use the PCF
 
 To execute a proposal, the PCF needs clear, detailed instructions to ensure it acts in the
 community's best interest. Because not all OpenGov proposals involve the PCF, the PCF requires that
@@ -244,7 +244,7 @@ Examples of Foundation Funding Proposals:
 Ensure that the track selected aligns with the funding requested, according to the DOT amount
 allocated per track.
 
-#### Wallet addresses
+#### Wallet Addresses
 
 DOT requested on the relay chain
 
@@ -282,7 +282,7 @@ Examples of Foundation Resolution Proposals (Wish for Change)
 - Propose the PCF transfer all or some of its assets to a charitable entity
 - Propose to wind up the foundation
 
-## How do I write a good funding proposal
+## How to Write a Funding Proposal to PCF
 
 When determining the amount of funding to request for the PCF to execute a proposal, the author must
 consider the PCF’s costs to execute. If the instructions are unambiguous and actionable, require no
@@ -501,7 +501,7 @@ community governance process, or any applicable laws or regulations, cause harm 
 existing contracts. The foundation will not enact proposals that are too broad and require
 discretion/opinion from the PCF.
 
-## PCF Supporting Documents and Material
+## PCF Supporting Material
 
 - [Kusamarian AAG Video Discussion](https://twitter.com/TheKusamarian/status/1838956632610669006)
 - [Polkadot Community Foundation Constitution](https://docs.google.com/document/d/1tvWEuSU4JzrShNE_HR9p0cBiiQSGQ4dJ/edit)
