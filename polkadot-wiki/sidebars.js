@@ -557,17 +557,14 @@ module.exports = {
                     "learn/learn-guides-coretime-parachains",
                     {
                       type: "category",
-                      label: "Advanced Coretime Guides",
-                      description: "More Advanced and Technical Coretime Guides",
+                      label: "Coretime Guides",
+                      description: "Technical Coretime Guides",
                       link: {
-                        type: 'generated-index',
-                        title: "Advanced Coretime Guides",
-                        description: "Concepts, Implementation and Tutorials on Agile Coretime.",
-                        slug: '/learn-agile-coretime-getting-started',
+                        type: 'doc',
+                        id: 'build/build-guides-coretime-start',
                       },
                       items: [
                         "build/build-guides-install-deps",
-                        "build/build-guides-coretime-start",
                         "build/build-guides-template-basic",
                         "build/build-guides-coretime-troubleshoot"
                       ]
