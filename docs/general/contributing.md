@@ -94,9 +94,11 @@ version upgrade that caused [MDX errors](https://docusaurus.io/docs/3.2.1/migrat
 general rule, avoid using curly brackets and special characters. If you must use them, for example,
 to get the \<-\> symbol, you can escape the error with a `\`.
 
-Following the Docusaurus 3 upgrade, conditional rendering has been disabled for Kusama
-and system chains. If you need to display text for different chains, use `Tabs` and `TabItem`
-formatting.
+Following the Docusaurus 3 upgrade, conditional rendering has been disabled for Kusama and system
+chains. The previously-used code for conditional rendering can be accessed
+[here](https://github.com/w3f/polkadot-wiki/blob/master/scripts/injectPlugin.js). Although
+Docusaurus 3 can support conditional rendering, due to practicality we encourage using `Tabs` and
+`TabItem` formatting if you need to display text for different chains.
 
 Avoid using exclamation marks `!` and informal sentences, which are usually more appropriate for
 blog posts. Running a grammar check before submitting your pull request for review can save
@@ -108,9 +110,9 @@ To ensure consistency across pages, note the following general terms:
 - `parachain` in text and `Parachain` at the beginning of a sentence.
 
 The Polkadot Wiki has multiple moving parts. To ensure your contribution does not introduce
-compilation errors and that your page is properly rendered in production, we encourage you to build and render
-the Wiki on your local machine before submitting a pull request for review. Rendering the Wiki locally also adds the
-benefit of checking for broken links.
+compilation errors and that your page is properly rendered in production, we encourage you to build
+and render the Wiki on your local machine before submitting a pull request for review. Rendering the
+Wiki locally also adds the benefit of checking for broken links.
 
 ### Render the Wiki Locally
 
