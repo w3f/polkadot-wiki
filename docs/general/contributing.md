@@ -95,9 +95,9 @@ general rule, avoid using curly brackets and special characters. If you must use
 to get the \<-\> symbol, you can escape the error with a `\`.
 
 Following the Docusaurus 3 upgrade, conditional rendering has been disabled for Kusama and system
-chains. The previously-used code for conditional rendering can be accessed
+chains. The previously used code for conditional rendering can be accessed
 [here](https://github.com/w3f/polkadot-wiki/blob/master/scripts/injectPlugin.js). Although
-Docusaurus 3 can support conditional rendering, due to practicality we encourage using `Tabs` and
+Docusaurus 3 can support conditional rendering, due to practicality, we encourage using `Tabs` and
 `TabItem` formatting if you need to display text for different chains.
 
 Avoid using exclamation marks `!` and informal sentences, which are usually more appropriate for
