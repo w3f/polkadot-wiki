@@ -108,8 +108,8 @@ To ensure consistency across pages, note the following general terms:
 - `parachain` in text and `Parachain` at the beginning of a sentence.
 
 The Polkadot Wiki has multiple moving parts. To ensure your contribution does not introduce
-compilation errors and that your page is properly rendered in production, we encourage you to load
-the Wiki locally before submitting a pull request for review. Loading the Wiki locally also adds the
+compilation errors and that your page is properly rendered in production, we encourage you to build and render
+the Wiki on your local machine before submitting a pull request for review. Rendering the Wiki locally also adds the
 benefit of checking for broken links.
 
 ### Render the Wiki Locally
