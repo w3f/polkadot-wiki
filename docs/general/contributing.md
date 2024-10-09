@@ -94,7 +94,7 @@ version upgrade that caused [MDX errors](https://docusaurus.io/docs/3.2.1/migrat
 general rule, avoid using curly brackets and special characters. If you must use them, for example,
 to get the \<-\> symbol, you can escape the error with a `\`.
 
-A consequence of the Docusaurus 3 upgrade is the removal of the conditional rendering with Kusama
+Following the Docusaurus 3 upgrade, conditional rendering has been disabled for Kusama
 and system chains. If you need to display text for different chains, use `Tabs` and `TabItem`
 formatting.
 
