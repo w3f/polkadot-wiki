@@ -19,7 +19,7 @@ Please do not try to pull request any marketing material as this will be rejecte
 :::
 
 Nonetheless, pull requests, discussions, and contributions from the community are encouraged. Active
-community members who demonstrate a record of good contributions may be given written access to the
+community members who demonstrate a record of good contributions may be given `write` access to the
 repository.
 
 Otherwise, the Web3 Foundation holds the administrative position and has the final say on the
