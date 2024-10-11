@@ -59,13 +59,13 @@ HIC Fund II will pursue the main deployment strategies below.
 
 ### Liquid Strategy
 
-Validators and Staking:\*\* As early VC investors in many Polkadot-based projects, HIC can help
-launch validators or collators for projects using our seed tokens. The fund won’t operate the
-physical hardware itself but delegate it to trusted operators with whom it shares revenue.
+- **Validators and Staking:** As early VC investors in many Polkadot-based projects, HIC can help
+  launch validators or collators for projects using our seed tokens. The fund won’t operate the
+  physical hardware itself but delegate it to trusted operators with whom it shares revenue.
 
-Liquidity Pools:\*\* Holding both project tokens and DOT, HIC is in a good position to act as
-liquidity providers at Automated Market Makers (AMM). Resulting LP tokens will also be used in DeFi
-to maximize returns while actively monitoring leverage and risk levels.
+- **Liquidity Pools:** Holding both project tokens and DOT, HIC is in a good position to act as
+  liquidity providers at Automated Market Makers (AMM). Resulting LP tokens will also be used in
+  DeFi to maximize returns while actively monitoring leverage and risk levels.
 
 - **[Coretime](../learn/learn-agile-coretime.md) Brokerage:** HIC has been at the forefront of
   parachain auctions with Fund I. As the model of blockspace allocation transitions to core time,
