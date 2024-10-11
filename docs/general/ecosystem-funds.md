@@ -17,6 +17,17 @@ The main funds include:
 
 ## Scytale Digital
 
+The Polkadot Ecosystem Fund by Scytale and the Web3 Foundation is a venture initiative focused on
+strategically investing in and supporting projects within the Polkadot and Kusama ecosystems. With
+over USD 75 million in assets under management, Scytale has built a strong portfolio of over 20
+projects spanning three continents. The fund provides early-stage ventures with mentorship,
+liquidity, and access to a network of strategic partners. Through its rigorous due diligence
+process, it selects only the most promising projects. The fund’s value proposition includes offering
+technical advisory, KPI, and OKR oversight, and fostering active ecosystem participation, ensuring
+sustainable growth for its portfolio companies. With Scytale’s deep experience and expertise in the
+Polkadot ecosystem, the fund is well-positioned to drive impactful and lasting success across its
+investments.
+
 ## Harbour Industrial Capital
 
 Harbour Industrial Capital (HIC) is a Polkadot-focused VC fund managed by
