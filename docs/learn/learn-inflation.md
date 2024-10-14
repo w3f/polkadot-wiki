@@ -84,8 +84,8 @@ network, please see [here](https://research.web3.foundation/Polkadot/overview/to
 
 ## Ideal Staking Rate
 
-The ideal staking rate can vary between 45% to 75% based on the number of parachains that acquired a
-lease through an auction (this excludes the System parachains), based on the implementation
+The ideal staking rate can vary between 45% to 75% based on the number of parachains that occupied a
+core (this excludes the system parachains), based on the implementation
 [here](https://github.com/paritytech/polkadot-sdk/blob/cd901764a52edc04a6d22bea3a526def593ab2a7/polkadot/runtime/common/src/impls.rs#L80).
 
 Briefly, the ideal staking rate can be calculated as follows:
@@ -93,13 +93,13 @@ Briefly, the ideal staking rate can be calculated as follows:
 `0.75 - auction_proportion`
 
 where `auction_proportion` is obtained by computing `min(auctioned_slots, 60) / 300`. The
-`auctioned_slots` are all the auctioned slots without the slots for system parachains.
+`auctioned_slots` are all the auctioned slots (or cores) without the cores for system parachains.
 
-Assuming there are 50 filled slots, of which three are dedicated to system parachains (Asset Hub,
-Bridge Hub and Collectives), there are 47 auctioned slots. The `auction_proportion` is thus
-`47 / 300 = 0.157`. The ideal staking rate is `0.75 - 0.157 = 0.593`.
+Assuming there are 50 filled cores, of which five are dedicated to
+[system parachains](./learn-system-chains.md), there are 45 auctioned cores. The
+`auction_proportion` is thus `45 / 300 = 0.15`. The ideal staking rate is `0.75 - 0.15 = 0.6`.
 
-If the amount of tokens staked goes below 59.3%, then staking rewards for nominators increase,
+If the amount of tokens staked goes below 60%, then staking rewards for nominators increase,
 incentivizing them to stake more tokens on the network. On the contrary, staking rewards drop if
 staked tokens exceed the ideal staking rate. This results from the change in the percentage of
 staking rewards that go to the Treasury.

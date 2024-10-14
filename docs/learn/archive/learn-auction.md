@@ -7,11 +7,12 @@ keywords: [auction, slot auctions, parachain, bidding]
 slug: ../learn-auction
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+import MessageBox from "../../../components/MessageBox"; import
+"../../../components/MessageBox.css";
 
-<MessageBox message="Parachain Slot Auctions will be deprecated right after [Agile Coretime](./learn-agile-coretime.md) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime.md#implementation)." />
+<MessageBox message="The content on this page is archived. [Agile Coretime](../learn-agile-coretime.md) is activated on the network, and parachain slot auctions have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](../learn-agile-coretime.md#implementation)." />
 
-For a [parachain](learn-parachains.md) to be added to the relay chain it must inhabit one of the
+For a [parachain](../learn-parachains.md) to be added to the relay chain it must inhabit one of the
 available parachain slots. The number of parachain slots is not unbounded, as only a limited number
 are available. A limited number of slots are unlocked every few months through on-chain governance.
 If a parachain wants to have guaranteed block inclusion at every relay chain block, it must acquire
@@ -63,7 +64,7 @@ The candle auction is split into two parts:
    subject to end based on the candle auction mechanism.
 
 The auction’s ending time can occur any time within the ending period. This time is automatically
-and randomly chosen by the [Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The
+and randomly chosen by the [Verifiable Random Function (VRF)](../learn-cryptography.md#vrf). The
 probability of winning the auction is equal to the number of blocks that contain a winning bid,
 divided by the total number of blocks in the ending period. The random ending is managed by
 propagating through the entire ending period, where a snapshot is taken at each block within the
@@ -76,19 +77,19 @@ Random Function wins the slot auction.
 :::
 
 A parachain auction lasts exactly one week from the starting period (1 day and 18 hours) to
-[ending period](../general/chain-state-values.md#auction-ending-period) (candle auction phase) and
-finally 6 hours for determining the auction winner.
+[ending period](../../general/chain-state-values.md#auction-ending-period) (candle auction phase)
+and finally 6 hours for determining the auction winner.
 
 :::info
 
-[Crowdloan contributions](learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made
+[Crowdloan contributions](./learn-crowdloans.md##supporting-a-crowdloan-campaign) cannot be made
 during these six hours when the winning block for the auction is being determined on-chain.
 
 :::
 
 More details on this are available in the [Network Implementation](#network-implementation) section.
 
-### [Randomness](./learn-cryptography.md#randomness) in action
+### [Randomness](../learn-cryptography.md#randomness) in action
 
 The following example will showcase the randomness mechanics of the candle auction for the ninth
 auction on Kusama. Keep in mind that the candle phase has a uniform termination profile and has an
@@ -119,7 +120,7 @@ or during the auction.
   :::note Inspecting the block state
 
   You can inspect the state at the end of `block 9434277` to see the sample indices with an
-  [archive node](../maintain/maintain-sync.md####types-of-nodes). The digest in the `Logs` of
+  [archive node](../../maintain/maintain-sync.md####types-of-nodes). The digest in the `Logs` of
   `9434277` is decodable and contains the random value as well as the BABE authorities.
 
   :::
@@ -151,9 +152,9 @@ to _grief_ honest bidders by sniping auctions.
 For this reason, [Vickrey auctions](https://en.wikipedia.org/wiki/Vickrey_auction), a type of
 sealed-bid auction where bids are hidden and only revealed at a later phase, have emerged as a
 well-regarded mechanic. For example, this mechanism is leveraged to auction human readable names on
-the [ENS](./learn-account-advanced.md). The Candle auction is another solution that does not require
-a two-step commit and reveal schemes (a main component of Vickrey auctions), which allows smart
-contracts to participate.
+the [ENS](../learn-account-advanced.md). The Candle auction is another solution that does not
+require a two-step commit and reveal schemes (a main component of Vickrey auctions), which allows
+smart contracts to participate.
 
 Candle auctions allow everyone to always know the states of the bid, but they do not reveal when the
 auction has officially ended. This helps to ensure that bidders are willing to make their true bids
@@ -163,7 +164,7 @@ ended before having an opportunity to bid.
 ## Network Implementation
 
 The relay chain will use a _random beacon_ based on the
-[Verifiable Random Function (VRF)](./learn-cryptography.md#vrf). The VRF will provide the base of
+[Verifiable Random Function (VRF)](../learn-cryptography.md#vrf). The VRF will provide the base of
 the randomness, which will retroactively determine the end-time of the auction.
 
 Polkadot's slot durations are capped to 2 years and are divided into 3-month periods (1 year divided
@@ -182,9 +183,9 @@ maintain a slot to remain a parachain.
 
 Parachains or parachain teams, bid in the auction by specifying the slot range that they want to
 lease and the number of tokens they are willing to reserve. Bidders can be either ordinary accounts,
-or use the [crowdloan functionality](learn-crowdloans.md) to source tokens from the community. For a
-more in-depth comparison between both of these options for gaining a parachain slot, check out this
-section on
+or use the [crowdloan functionality](./learn-crowdloans.md) to source tokens from the community. For
+a more in-depth comparison between both of these options for gaining a parachain slot, check out
+this section on
 [Crowdloan Campaigns vs Parachain Auctions](./learn-crowdloans.md#crowdloan-campaigns-vs-parachain-auctions).
 
 ```
@@ -207,7 +208,7 @@ _Each period of the range 1 - 4 represents a 3-month duration for a total of 2 y
 
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
-[periods available for a slot](../general/chain-state-values.md#period-per-slot-auction).
+[periods available for a slot](../../general/chain-state-values.md#period-per-slot-auction).
 
 :::note If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way,
 you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.
@@ -242,7 +243,7 @@ amount of tokens held over the entire lease duration of the parachain slot. This
 highest bidder for any given slot lease period might not always win (see the
 [example below](#examples)).
 
-A random number, which is based on the [VRF](./learn-cryptography.md#vrf) used by the relay chain,
+A random number, which is based on the [VRF](../learn-cryptography.md#vrf) used by the relay chain,
 is determined at each block. Additionally, each auction will have a threshold that starts at 0 and
 increases to 1. The random number produced by the VRF is examined next to the threshold to determine
 if that block is the end of the auction within the so-called _ending period_. Additionally, the VRF
@@ -299,7 +300,7 @@ parachain can [swap](https://github.com/paritytech/polkadot/pull/4772) the slots
 via [on-chain governance](https://kusama.polkassembly.io/post/1491). The `swap` call is available in
 the `registrar` pallet.
 
-![Parachain Slot Swap](../assets/para-swap.png)
+![Parachain Slot Swap](../../assets/para-swap.png)
 
 :::note Any two parachains can swap their slots via XCM
 
@@ -318,6 +319,55 @@ extended without the need of swapping. This method has the advantage of not havi
 on different slots owned by the same team, however it has the disadvantage of losing flexibility on
 when to win a new slot: if the team does not win the exact slot, then it will suffer some downtime
 until it wins a new slot.
+
+## Slot Auctions FAQ
+
+### Why doesn't everyone bid for the max length?
+
+For the duration of the slot, the tokens used for bidding in the auction are locked up. This
+suggests there is an opportunity cost associated with bidding, as the tokens could have been
+leveraged for something else.
+
+### How does this mechanism help ensure parachain diversity?
+
+The method for dividing the parachain slots into intervals was partly inspired by the desire to
+allow for a greater amount of parachain diversity, while preventing particularly large and
+well-funded parachains from hoarding slots. By making each period a three-month duration but the
+overall slot a 2-year duration (and 6-week duration but the overall slot a 1-year duration on
+Kusama), the mechanism can cope with well-funded parachains, ensuring they secure a slot at the end
+of their lease, while gradually allowing other parachains to enter the ecosystem to occupy the
+durations that are not filled. For example, if a large, well-funded parachain has already acquired a
+slot for range 1 - 8, they would be very interested in getting the next slot that would open for
+2 - 9. Under this mechanism, that parachain could acquire just period 9 (since that is the only one
+required) and allow the 2 - 8 range of the second parachain slot to be occupied by another party.
+
+### Why is randomness difficult on blockchains?
+
+Generating a random number trustlessly on a transparent and open network opens up the possibility
+for bad actors to attempt to alter or manipulate the randomness. There have been a few solutions
+that have been proposed, including hash-onions like [RANDAO](https://github.com/randao/randao) and
+[verifiable random functions](https://en.wikipedia.org/wiki/Verifiable_random_function) (VRFs). The
+latter is what the relay chain uses as a base for its randomness.
+
+### Are there other ways of acquiring a slot besides the candle auction?
+
+Aa parachain slot can also be acquired through a secondary market where a 3rd party has already won
+a parachain slot and has the ability to resell the slot along with the associated deposit of tokens
+that are locked up to another buyer. This would allow the seller to get liquid tokens in exchange
+for the parachain slot and the buyer to acquire the slot as well as the deposited tokens.
+
+A number of system or common-good parachains may be granted slots by the
+[governance](../learn-polkadot-opengov.md) of the relay chain. System parachains can be recognized
+by a parachain ID lower than 1_000, and common-good parachains by a parachain ID between 1_000 and
+1_999. Other parachains will have IDs 2_000 or higher. Such parachains would not have to bid for or
+renew their slots as they would be considered essential to the ecosystem's future.
+
+### How are auctions scheduled?
+
+The parachain slot auctions are scheduled through the governance. At least 2/3 of the Council can
+initiate an auction, however, Root origin (via referendum) is needed to cancel an auction. Here is a
+proposal that gives a glimpse of what goes into planning auctions schedule -
+[Proposed Polkadot Auction Schedule 2022](https://polkadot.polkassembly.io/post/863).
 
 ## Resources
 

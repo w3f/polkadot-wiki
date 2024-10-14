@@ -28,7 +28,7 @@ For example, following are some of topics you might be interested in:
 
 - For **stablecoins**, visit
   [Asset Hub Dashboards](dune-analytics/parachain-dashboards/assethub-dashboards)
-- For Polkadot relay-chain **treasury**, visit
+- For Polkadot relay chain **treasury**, visit
   [Polkadot Dashboards Governance](dune-analytics/polkadot-dashboards/polkadot-dashboards-governance)
 - For Polkadot **staking**, visit
   [Polkadot Dashboards Staking](dune-analytics/polkadot-dashboards/polkadot-dashboards-staking)

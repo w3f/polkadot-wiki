@@ -17,22 +17,23 @@ If you aren't sure what Agile Coretime is, be sure to read the
 :::
 
 The landscape for parachains changes with the rollout of
-[Agile Coretime](./learn-agile-coretime.md). With [parachain auctions](./learn-auction.md) being
-phased out in favor of direct [coretime](./learn-agile-coretime.md#coretime) sales, the existing
-parachains on the relaychain and the prospective parachains are presented with the following
-scenarios:
+[Agile Coretime](./learn-agile-coretime.md). With [parachain auctions](./archive/learn-auction.md)
+being phased out in favor of direct [coretime](./learn-agile-coretime.md#coretime) sales, the
+existing parachains on the relaychain and the prospective parachains are presented with the
+following scenarios:
 
 - **Migrating** from a legacy parachain lease into a
   [bulk coretime](./learn-agile-coretime.md#bulk-coretime) model
 - **Starting** with bulk coretime model from scratch
 - **Running** a parachain with on-demand coretime purchases ("pay as you go")
 
-The parachain lease auctions will stop on-chain with the enactment of the
-[runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0), and the
-existing leases will be migrated to bulk coretime automatically. Leases that are yet to be started
-will be canceled and the locked tokens will be refunded. The existing parachains benefit from
-[coretime renewals](https://docs.lastic.xyz/coretime/renewals.html) which allows for the continued
-assignment of bulk coretime for a core without going through the regular purchasing process.
+The parachain lease auctions stopped on-chain with the enactment of the
+[runtime upgrade 1.2.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.2.0) on the
+19th of September 2024, and the existing leases were migrated to bulk coretime automatically. Leases
+that had not started were canceled, and the locked tokens were refunded. The existing parachains
+benefit from [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html), allowing for the
+continued assignment of bulk coretime for a core without going through the regular purchasing
+process.
 
 :::info
 

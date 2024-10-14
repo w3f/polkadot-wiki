@@ -88,13 +88,10 @@ required to participate in the network will vary depending on the activity that 
 the duration the DOT will be staked for, and the total number of DOT staked. For more information
 about staking on Polkadot visit [the dedicated staking page](./learn-staking.md).
 
-### DOT for Parachain Slot Acquisition
+### DOT to Access Cores on the Relay Chain
 
-DOT will have the ability to be locked for a duration in order to secure a parachain slot in the
-network. The DOT will be reserved during the slot lease and will be released back to the account
-that reserved them after the duration of the lease has elapsed and the parachain is removed. You can
-learn more about this aspect by reading about the [auctions](learn-auction.md) that govern parachain
-slots.
+DOT can be used to [purchase coretime in-bulk or on-demand](./learn-agile-coretime.md) and access
+the relay chain to benefit from Polkadot's security and interoperability.
 
 ### Token Issuance
 
@@ -136,6 +133,10 @@ Polkadot's native token DOT.
 | Dot (PAS)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 PAS  |
 | Million (MPAS)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 PAS  |
 
+Users can also obtain PAS by posting
+`!drip <PASEO_ADDRESS>` in the Matrix chatroom
+[#paseo_faucet:matrix.org](https://matrix.to/#/#paseo_faucet:matrix.org).
+
 ### Getting Tokens on the Westend Testnet
 
 Polkadot's testnet is called [Westend](../maintain/maintain-networks.md#westend-test-network).
@@ -166,16 +167,6 @@ On the Westend network, you can also earn WNDs as rewards by
 | MicroWND (uWND) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 WND |
 | MilliWND (mWND) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 WND |
 | WND             | 12             | 10<sup>12</sup> Planck | 1.000000000000 WND |
-
-### Getting Tokens on the Rococo Testnet
-
-Rococo is a parachain testnet. ROC tokens are given directly to teams working on parachains or
-exploring the [cross consensus](learn-xcm.md) message-passing aspects of this testnet. Besides the
-[official faucet](https://faucet.polkadot.io/rococo), users can obtain ROC by posting
-`!drip <ROCOCO_ADDRESS>` in the Matrix chatroom
-[#rococo-faucet:matrix.org](https://matrix.to/#/#rococo-faucet:matrix.org) or through the web-based
-[Rococo faucet](https://faucet.polkadot.io/rococo). Learn more about Rococo on its
-[dedicated wiki section](../build/build-parachains.md##testing-a-parachains:-rococo-testnet).
 
 ### Faucets support
 

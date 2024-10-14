@@ -38,9 +38,9 @@ XCM is related to XCMP in the same way that REST is related to RESTful.
 _Cross-Consensus Message Passing_ secure message passing between parachains. There are two variants:
 _Direct_ and _Relayed_.
 
-- With _Direct_, message data goes direct between parachains and is O(1) on the side of the
-  Relay-chain and is very scalable.
-- With _Relayed_, message data is passed via the Relay-chain, and piggy-backs over VMP. It is much
+- With _Direct_, message data goes direct between parachains and is O(1) on the side of the relay
+  chain and is very scalable.
+- With _Relayed_, message data is passed via the relay chain, and piggy-backs over VMP. It is much
   less scalable, and on-demand parachains in particular may not receive messages due to excessive
   queue growth.
 
@@ -61,16 +61,16 @@ For detailed information about VMP see dedicated section in
 
 ### VMP (Vertical Message Passing)
 
-_Vertical Message Passing_ message passing between the Relay-chain itself and a parachain. Message
-data in both cases exists on the Relay-chain and are interpreted by the relay chain according to
+_Vertical Message Passing_ message passing between the relay chain itself and a parachain. Message
+data in both cases exists on the relay chain and are interpreted by the relay chain according to
 [XCM](./learn-xcm.md/#cross-consensus-message-format-xcm) standards. This includes:
 
 - #### UMP (Upward Message Passing)
 
-  _Upward Message Passing_ message passing from a parachain to the Relay-chain.
+  _Upward Message Passing_ message passing from a parachain to the relay chain.
 
 - #### DMP (Downward Message Passing)
-  _Downward Message Passing_ message passing from the Relay-chain to a parachain.
+  _Downward Message Passing_ message passing from the relay chain to a parachain.
 
 :::info
 

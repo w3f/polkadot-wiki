@@ -187,6 +187,7 @@ module.exports = {
             "general/decentralized-futures",
             "learn/learn-polkadot-opengov-treasury",
             "general/polkadot-community-foundation",
+            "general/ecosystem-funds",
           ],
         },
         {
@@ -538,8 +539,6 @@ module.exports = {
                     "learn/learn-parachains",
                     "learn/learn-parachains-protocol",
                     "learn/learn-system-chains",
-                    "learn/learn-auction",
-                    "learn/learn-crowdloans",
                     "learn/learn-parachains-faq",
                   ],
                 },
@@ -558,6 +557,20 @@ module.exports = {
                     "learn/learn-agile-coretime",
                     "learn/learn-guides-coretime-marketplaces",
                     "learn/learn-guides-coretime-parachains",
+                    {
+                      type: "category",
+                      label: "Coretime Guides",
+                      description: "Technical Coretime Guides",
+                      link: {
+                        type: 'doc',
+                        id: 'build/build-guides-coretime-start',
+                      },
+                      items: [
+                        "build/build-guides-install-deps",
+                        "build/build-guides-template-basic",
+                        "build/build-guides-coretime-troubleshoot"
+                      ]
+                    }
                   ],
                 },
                 {
@@ -806,6 +819,8 @@ module.exports = {
             "learn/archive/learn-launch",
             "learn/archive/learn-redenomination",
             "learn/archive/learn-controller",
+            "learn/archive/learn-auction",
+            "learn/archive/learn-crowdloans",
           ],
         },
       ],
@@ -868,7 +883,7 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Build Archive",
+          label: "Archive",
           link: {
             type: 'generated-index',
             title: "Archived Build Resources",

@@ -30,10 +30,6 @@ from "@theme/TabItem";
   and earn staking rewards for contributing to the security of the network. Learn more about
   [nomination pools](../learn/learn-nomination-pools.md).
 
-- __<RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>:__
-  the minimum contribution required to participate in [crowdloans](../learn/learn-crowdloans.md) for
-  [parachain slot auctions](../learn/learn-auction.md).
-
 - __<RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/>:__
     register an [on-chain identity](../learn/learn-identity.md)
 
@@ -58,10 +54,6 @@ from "@theme/TabItem";
 #### Active Validator Count
 
 The number of Polkadot validators in the active set is <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>.
-
-#### Auction Ending Period
-
-The auction ending period on Polkadot is <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
 #### Block Hash Count
 
@@ -168,10 +160,6 @@ Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" p
 
 Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={10000000} filter="humanReadable"/> per byte.
 
-#### Period per Slot Auction
-
-The number of periods per slot auction on Polkadot is <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
-
 #### Proxy Deposits
 
 The creation of proxies on Polkadot requires a **proxy deposit base** of <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
@@ -247,10 +235,6 @@ era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 24
 #### Active Validator Count
 
 The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
-
-#### Auction Ending Period
-
-The auction ending period on Kusama is <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> days long.
 
 #### Block Hash Count
 
@@ -356,10 +340,6 @@ Reserving a `ParaID` on Kusama requires a deposit of <RPC network="kusama" path=
 #### Parachain Genesis State Registration Deposit
 
 Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={333333333} filter="humanReadable"/> per byte.
-
-#### Period per Slot Auction
-
-The number of periods per slot auction on Kusama is <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/>.
 
 #### Proxy Deposits
 

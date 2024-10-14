@@ -1,6 +1,6 @@
 ---
 id: maintain-archive
-title: Maintain Archive
+title: Archived Maintain Resources
 sidebar_label: Archive
 description: Archive for the Maintain Section.
 keywords: [Democracy, Council, Gov1, Councillor]

@@ -1,7 +1,6 @@
 // POLKADOT 
 const openGovPolkadotRoot = require('./charts_data/polkadot/opengov_root.json');
 
-const openGovPolkadotAdminAuction = require('./charts_data/polkadot/opengov_admin_auction.json');
 const openGovPolkadotAdminFellowship = require('./charts_data/polkadot/opengov_admin_fellowship.json');
 const openGovPolkadotAdminGeneral = require('./charts_data/polkadot/opengov_admin_general.json');
 const openGovPolkadotAdminLease = require('./charts_data/polkadot/opengov_admin_lease.json');
@@ -23,7 +22,6 @@ const openGovPolkadotWhitelist = require('./charts_data/polkadot/opengov_whiteli
 // KUSAMA
 const openGovKusamaRoot = require('./charts_data/kusama/opengov_root.json');
 
-const openGovKusamaAdminAuction = require('./charts_data/kusama/opengov_admin_auction.json');
 const openGovKusamaAdminFellowship = require('./charts_data/kusama/opengov_admin_fellowship.json');
 const openGovKusamaAdminGeneral = require('./charts_data/kusama/opengov_admin_general.json');
 const openGovKusamaAdminLease = require('./charts_data/kusama/opengov_admin_lease.json');
@@ -53,7 +51,6 @@ module.exports = {
     KusamaBigSpender: openGovKusamaBigSpender,
     KusamaMediumSpender: openGovKusamaMediumSpender,
     KusamaSmallSpender: openGovKusamaSmallSpender,
-    KusamaAdminAuction: openGovKusamaAdminAuction,
     KusamaAdminFellowship: openGovKusamaAdminFellowship,
     KusamaAdminGeneral: openGovKusamaAdminGeneral,
     KusamaAdminLease: openGovKusamaAdminLease,
@@ -69,7 +66,6 @@ module.exports = {
     PolkadotBigSpender: openGovPolkadotBigSpender,
     PolkadotMediumSpender: openGovPolkadotMediumSpender,
     PolkadotSmallSpender: openGovPolkadotSmallSpender,
-    PolkadotAdminAuction: openGovPolkadotAdminAuction,
     PolkadotAdminFellowship: openGovPolkadotAdminFellowship,
     PolkadotAdminGeneral: openGovPolkadotAdminGeneral,
     PolkadotAdminLease: openGovPolkadotAdminLease,

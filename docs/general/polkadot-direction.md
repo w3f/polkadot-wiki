@@ -31,10 +31,9 @@ the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
   _continuation_ refers to a broad, long-running task that can do something, pause, continue (or do
   something else) later.
 - **A multicore computer** where chains that continuously operate in parallel on different cores are
-  called [parachains](../learn/learn-parachains.md). Currently, one core is reserved for one chain
-  through [slot auction mechanism](../learn/learn-auction.md), although one core can be reserved
-  on-demand to multiple chains at different periods (see the
-  [Agile Coretime page](../learn/learn-agile-coretime.md)). At the time of writing (mid 2024), there
+  called [parachains](../learn/learn-parachains.md). One core can be reserved for one single chain
+  in-bulk or on-demand. On-demand cores can be accessed by multiple chains at different periods (see
+  the [Agile Coretime page](../learn/learn-agile-coretime.md)). At the time of writing (2024), there
   are around 50 cores independently operating in parallel on Polkadot.
 
 From now on _application_ will be used as a general term to describe anything that can use a
@@ -49,14 +48,14 @@ Polkadot can be directed towards the following main changes.
 A paradigm shift from:
 
 - being a chain-focused ecosystem where each parachain owned an execution core at all times
-  (acquired through fixed parachain slots), which allowed a simple and secure, sharded execution
+  (acquired through fixed parachain auction), which allowed a simple and secure, sharded execution
   environment
 - to being an application-focused ecosystem where we remove the assumption that each application
   owns a core, and instead that all cores are a resource to be consumed and used as needed by all
   applications.
 
-Previously, securing a parachain slot was a competitive process through an
-[auction mechanism](../learn/learn-auction.md). With coretime rental, there is no need for slot
+Previously, securing a core was a competitive process through an
+[auction mechanism](../learn/archive/learn-auction.md). With Agile Coretime, there is no need for
 auctions anymore. Teams can purchase on-demand coretime or reserve bulk coretime as required. This
 greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
 
@@ -77,8 +76,8 @@ access Polkadot's secure blockspace and interoperability for a finite period.
 Cores must be agile and general: they can change what job they run as easily as a modern CPU. It
 follows that the procurement of those cores must be agile as well.
 
-The slot auction mechanism is not agile, creates high entry barriers, and is designed for
-long-running single applications (i.e., the original Polkadot vision proposed in the whitepaper).
+The auction mechanism is not agile, creates high entry barriers, and is designed for long-running
+single applications (i.e., the original Polkadot vision proposed in the whitepaper).
 
 We depart from the classic lease auctions and propose an agile marketplace for coretime, where
 essentially **coretime becomes a commodity that can be tokenized, sold, and traded**. This setup
@@ -100,9 +99,8 @@ of those options. The topic is currently under discussion. For more information,
 
 Polkadot 1.0 was a chain-centric paradigm consisting of isolated chains able to exchange messages.
 This was not fundamentally different from having completely different chains connected to bridges,
-with the only difference of having the relay-chain securing the network, providing message-passing
-capability, and doing some extra tasks such as [crowdloans](../learn/learn-crowdloans.md),
-[auctions](../learn/learn-auction.md), [staking](../learn/learn-staking.md),
+with the only difference of having the relay chain securing the network, providing message-passing
+capability, and doing some extra tasks such as [staking](../learn/learn-staking.md),
 [accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately
 end in chain-centric application and UX.
@@ -111,9 +109,9 @@ The true innovation of Polkadot is about leveraging the unique value proposition
 different chains and using those chains’ collaborative potential to build inter-chain applications
 to solve real-world problems. Those applications will thus need to span across chains.
 
-**Increasingly fewer tasks will be handled by the relay-chain** that will focus efforts only on
+**Increasingly fewer tasks will be handled by the relay chain** that will focus efforts only on
 primary tasks: securing the network and providing secure message-passing capability.
-[System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay-chain
+[System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay chain
 tasks such as staking, governance, etc.
 
 ### XCM and Accords

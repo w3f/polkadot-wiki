@@ -286,7 +286,7 @@ Parachains need collators to continue to progress, so it wouldn't be unreasonabl
 incentivize collator nodes in some way, but the specific mechanism is completely up to parachain
 implementers.
 
-### Are parachains ephemeral? What happens when a parachain loses the next auction?
+### Are parachains ephemeral? What happens when a parachain fails to renew its coretime?
 
 Parachains are not ephemeral. As long as someone is keeping the data for a parachain, the parachain
 can move between being a parachain, an
@@ -294,10 +294,12 @@ can move between being a parachain, an
 chain at different points of its lifetime. Especially with on-demand parachains, parachains can
 produce blocks when their usage and throughput makes it necessary.
 
-When a parachain loses an auction for renewal, that parachain has a few options. In most cases,
-becoming an on-demand parachain instead would be a suitable choice. On-demand parachains are still
-secured by the relay chain, but don't need to hold a parachain slot and can produce a block when its
-economically feasible for them. For more on parachains please see the
+When a parachain could not renew its bulk coretime and needs to keep its chain live, there are a
+couple of options to consider. One option is to explore secondary coretime marketplaces on
+[Lastic](https://www.lastic.xyz/) or [RegionX](https://app.regionx.tech/?network=polkadot). The
+other option is run as an on-demand parachain, and purchase coretime to produce one block at a time.
+On-demand parachains are still secured by the relay chain but don't need to hold a core and can
+produce a block when it's economically feasible for them. For more information, please refer to the
 [parachains page](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
 
 ## Networking

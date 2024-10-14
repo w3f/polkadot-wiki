@@ -119,8 +119,8 @@ Polkadot has an on-chain [open governance](../learn/learn-polkadot-opengov.md) (
 OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md).
 
-The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov,
-[staking](../learn/learn-staking.md), and [parachains' crowdloans](../learn/learn-crowdloans.md).
+The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov, and
+[staking](../learn/learn-staking.md).
 
 The level of abstraction and generalization of Polkadot allows to build applications that are
 specific to their use cases, and for those applications to communicate securely leveraging each
@@ -149,7 +149,7 @@ ideal ecosystem to build a [web3 future](./web3-and-polkadot.md).
 ## What can I do with my DOT?
 
 [DOT](../learn/learn-DOT.md) is the native token of the Polkadot Network. DOT can be used for
-transaction fees, staking, governance, acquisition of a parachain slot and for enabling several key
+transaction fees, staking, governance, acquisition of coretime and for enabling several key
 functionalities on Polkadot. See more information on
 [the Chain State Values page](./chain-state-values.md).
 

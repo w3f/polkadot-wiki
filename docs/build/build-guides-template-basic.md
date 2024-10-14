@@ -40,7 +40,7 @@ to upload our parachain's code:
    [or visit this link to get to Rococo directly](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer)
 4. Head to
    [Network > Parachains > Parathreads (the tab)](https://polkadot.js.org/apps/#/parachains/parathreads)
-5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains#reserve-paraid)
+5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains.md#reserve-paraid)
 
 Visit the [Accounts](https://polkadot.js.org/apps/#/accounts) tab to view all registered accounts
 and associated balances within the Polkadot.js Extension. Once finished, you should see your new
