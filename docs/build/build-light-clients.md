@@ -69,8 +69,8 @@ blockchain network without relying on specific third parties.
 
 Application developers can now run a Substrate light client in any NodeJS environment
 ([@substrate/connect](https://www.npmjs.com/package/@substrate/connect)). Currently, Substrate
-connect supports Polkadot, Kusama, Westend, and Rococo; because light clients are part of the
-overall Substrate framework, they are available for Substrate-based blockchains.
+connect supports Polkadot, Kusama, and Westend; because light clients are part of the overall
+Substrate framework, they are available for Substrate-based blockchains.
 
 ### As a browser extension
 

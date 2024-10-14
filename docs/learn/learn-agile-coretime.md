@@ -215,7 +215,7 @@ better use of the existing cores).
 #### Is there a UI for the Coretime Chain?
 
 Teams in the ecosystem are working on a UI. RegionX has released an app for testing on
-Rococo: https://app.regionx.tech/. Without the UI, this would be automated from the parachains’
+Paseo: https://app.regionx.tech/. Without the UI, this would be automated from the parachains’
 runtimes or manually with Coretime Chain extrinsics via polkadot.js.
 
 ### Coretime Pricing and Purchasing

@@ -11,11 +11,11 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 
 <MessageBox message="[Agile Coretime](./learn-agile-coretime.md) is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime.md#implementation). For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
-:::info Testing on Rococo
+:::info Testing on Paseo
 
-For information on how to test coretime functionalities on Rococo, please see the
-[Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) on the
-parachain development guide.
+For information on how to test coretime functionalities on Paseo, please see the
+[Paseo Content](../build/build-parachains.md#testing-a-parachain) on the parachain development
+guide.
 
 :::
 

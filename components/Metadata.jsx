@@ -19,7 +19,6 @@ const Networks = [
   { name: "Kusama Bridge Hub", rpc: "wss://kusama-bridge-hub-rpc.polkadot.io"},
   { name: "Kusama Coretime", rpc: "wss://kusama-coretime-rpc.polkadot.io"},
   { name: "Westend", rpc: "wss://westend-rpc.polkadot.io" },
-  { name: "Rococo", rpc: "wss://rococo-rpc.polkadot.io" },
 ];
 
 // Common pallets specific to Polkadot/Kusama.
