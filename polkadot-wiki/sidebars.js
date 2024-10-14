@@ -186,6 +186,7 @@ module.exports = {
             "general/grants",
             "general/decentralized-futures",
             "learn/learn-polkadot-opengov-treasury",
+            "general/polkadot-community-foundation",
             "general/ecosystem-funds",
           ],
         },
