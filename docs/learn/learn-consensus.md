@@ -83,11 +83,12 @@ build in some capacity until finalization kicks in and amputates a fork. See
 ### No Validators in Slot
 
 When no validators have rolled low enough in the randomness lottery to qualify for block production,
-a slot can remain seemingly blockless. Polkadot protocol runs a [secondary validator selection algorithm](https://spec.polkadot.network/sect-block-production#defn-babe-secondary-slots) in the 
-background. The validators selected through this predictable algorithm always produce 
-blocks. These _secondary_ blocks are ignored if the same slot
-has a primary block produced from a [VRF-selected](./learn-cryptography.md#randomness) validator.
-Thus, a slot can have either a _primary_ or a _secondary_ block, and no slots are ever skipped.
+a slot can remain seemingly blockless. Polkadot protocol runs a
+[secondary validator selection algorithm](https://spec.polkadot.network/sect-block-production#defn-babe-secondary-slots)
+in the background. The validators selected through this predictable algorithm always produce blocks.
+These _secondary_ blocks are ignored if the same slot has a primary block produced from a
+[VRF-selected](./learn-cryptography.md#randomness) validator. Thus, a slot can have either a
+_primary_ or a _secondary_ block, and no slots are ever skipped.
 
 For more details on BABE, please see the
 [BABE paper](https://research.web3.foundation/Polkadot/protocols/block-production/Babe).
