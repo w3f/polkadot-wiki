@@ -30,7 +30,7 @@ investments.
 
 ## Harbour Industrial Capital
 
-Harbour Industrial Capital (HIC) is a Polkadot-focused VC fund managed by
+[Harbour Industrial Capital (HIC)](https://www.harbourindustrial.com/) is a Polkadot-focused VC fund managed by
 [Max Rebol](https://www.linkedin.com/in/maxrebol/) and
 [Mario Altenburger](https://www.linkedin.com/in/marioaltenburger/). The fund launched in early 2022,
 held its final closing at the end of 2023, and, as of 2024, reached an AUM of ~US$10m. LPs are
