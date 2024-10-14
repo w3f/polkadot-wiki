@@ -17,7 +17,7 @@ The main funds include:
 
 ## Scytale Digital
 
-The Polkadot Ecosystem Fund by Scytale and the Web3 Foundation is a venture initiative focused on
+[The Polkadot Ecosystem Fund](https://www.scytale.digital/blog-posts/scytale-polkadot-ecosystem-fund) by Scytale and the Web3 Foundation is a venture initiative focused on
 strategically investing in and supporting projects within the Polkadot and Kusama ecosystems. With
 over USD 75 million in assets under management, Scytale has built a strong portfolio of over 20
 projects spanning three continents. The fund provides early-stage ventures with mentorship,
