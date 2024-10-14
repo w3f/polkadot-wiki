@@ -503,6 +503,12 @@ discretion/opinion from the PCF.
 
 ## PCF Supporting Material
 
+:::info Work in Progress
+
+The supporting material listed below is temporary. Final versions will be uploaded in due time.
+
+:::
+
 - [Kusamarian AAG Video Discussion](https://twitter.com/TheKusamarian/status/1838956632610669006)
 - [Polkadot Community Foundation Constitution](https://docs.google.com/document/d/1tvWEuSU4JzrShNE_HR9p0cBiiQSGQ4dJ/edit)
 - [Polkadot Community Foundation Bylaws](https://docs.google.com/document/d/1Yrq5mAquY2pPW5ZBnl07Xt7Woj-HwGJd/edit?usp=sharing&ouid=109408449182956936927&rtpof=true&sd=true)
