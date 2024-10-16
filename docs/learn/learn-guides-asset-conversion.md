@@ -112,7 +112,7 @@ target amount of the second asset, providing a way to control the cost of the tr
 achieving the desired outcome.
 
 For example, the snapshot below shows how to swap `EDU` tokens with the asset ID `149` on Paseo
-Asset Hub to `ROC` Tokens. The intention is to swap for obtaining 0.1 `ROC` tokens (`u128` value of
+Asset Hub to `PAS` Tokens. The intention is to swap for obtaining 0.1 `PAS` tokens (`u128` value of
 `100000000000` as it has 12 decimals) for a maximum of 10 `EDU` tokens (`u128` value of
 `100000000000` as it has 10 decimals).
 
