@@ -35,7 +35,7 @@ The `create_pool` function is used to create an empty liquidity pool along with 
 asset. This asset's ID is announced in the `Event::PoolCreated` event. After creating a pool,
 liquidity can be added to it via the `Pallet::add_liquidity` function.
 
-For example, the snapshot below shows how to create liquidity pool with `ROC` tokens and `EDU`
+For example, the snapshot below shows how to create liquidity pool with `PAS` tokens and `EDU`
 tokens with the asset ID `149` on Paseo Asset Hub. Creating this extrinsic requires knowledge of
 [XCM Multilocations](xcm/fundamentals/multilocation/summary.md). From the perspective of AssetHub,
 an Asset Hub, the asset with an `AssetId` of `149` has a MultiLocation of
