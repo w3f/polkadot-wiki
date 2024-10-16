@@ -66,7 +66,7 @@ calculates an optimal contribution of assets, which may differ from the desired 
 be less than the specified minimums. Liquidity providers receive liquidity tokens representing their
 share of the pool.
 
-For example, the snapshot below shows how to provide liquidity to the pool with `ROC` tokens and
+For example, the snapshot below shows how to provide liquidity to the pool with `PAS` tokens and
 `EDU` tokens with the asset ID `149` on Paseo Asset Hub. The intention is to provide liquidity of 1
 `ROC` token (`u128` value of `1000000000000` as it has 12 decimals) and 100 `EDU` tokens (`u128`
 value of `1000000000000` as it has 10 decimals).
