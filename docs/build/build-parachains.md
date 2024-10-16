@@ -312,7 +312,7 @@ parachains.
 You can see the list of included parachains
 [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/parachains).
 
-### Obtaining ROC
+### Obtaining PAS
 
 Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
 ROCs tokens.
