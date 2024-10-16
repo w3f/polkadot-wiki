@@ -71,7 +71,7 @@
     "@apollo/client": "^3.11.8",
     "@docusaurus/theme-mermaid": "^3.5.2",
     "bufferutil": "^4.0.8",
-    "chart.js": "^4.4.4",
+    "chart.js": "^4.4.5",
     "crowdin-cli": "^0.3.0",
     "graphql": "^16.9.0",
     "graphql-ws": "^5.16.0",
