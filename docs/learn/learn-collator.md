@@ -85,7 +85,7 @@ Parity team built the
 [Cumulus library](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) to address this.
 Collators are being used on the [Paseo](../build/build-parachains.md#testing-a-parachain) testnet,
 and you can learn more about how they are used with Cumulus via the
-[Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) repository. More
+[Cumulus](hhttps://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html) Rust documentation. More
 information can be found under the [Cumulus section](../build/build-parachains.md###cumulus) on the
 build parachain page.
 
