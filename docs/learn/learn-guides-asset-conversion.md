@@ -90,7 +90,7 @@ outcomes, allowing users to manage their asset exchanges with confidence regardi
 return.
 
 For example, the snapshot below shows how to swap `ROC` tokens to `EDU` tokens with the asset ID
-`149` on Paseo Asset Hub. The intention is to swap 0.1 `ROC` tokens (`u128` value of `100000000000`
+`149` on Paseo Asset Hub. The intention is to swap 0.1 `PAS` tokens (`u128` value of `100000000000`
 as it has 12 decimals) to at least 9 `EDU` tokens (`u128` value of `90000000000` as it has 10
 decimals).
 
