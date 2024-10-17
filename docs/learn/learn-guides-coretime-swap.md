@@ -87,7 +87,8 @@ Assumptions
 - You have access to the manager account on the relay chain for the new paraID
 - You have your collators running on your old paraID and you can execute upward XCM messages from
   that parachain.
-- The sovereign account for both paraIDs on the relay chain has enough available funds to execute
+- The sovereign account for the locked paraID has enough available funds to execute transactions on the relay chain.
+- The account that owns the unlocked paraID has enough available funds to execute transactions on the relay chain.
   transactions on the relay chain.
 
 Steps
