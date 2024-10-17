@@ -568,7 +568,8 @@ module.exports = {
                       items: [
                         "build/build-guides-install-deps",
                         "build/build-guides-template-basic",
-                        "build/build-guides-coretime-troubleshoot"
+                        "build/build-guides-coretime-troubleshoot",
+                        "learn/learn-guides-coretime-swap"
                       ]
                     }
                   ],
