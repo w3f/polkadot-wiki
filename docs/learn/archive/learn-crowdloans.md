@@ -32,14 +32,6 @@ If you are here for guidance on how to contribute to a crowdloan, watch the vide
   </div>
 </div>
 
-:::note Testing on Rococo
-
-For information on how to participate in the crowdloan and parachain auction testing on Rococo,
-please see the
-[Rococo content](../../build/build-parachains.md##testing-a-parachains:-rococo-testnet)
-
-:::
-
 ## Crowdloan Campaigns vs Parachain Auctions
 
 It is important to recognize that starting a crowdloan campaign is **optional** for participating in

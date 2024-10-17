@@ -298,30 +298,21 @@ available for this type of work.
 
 ## Testing a Parachain
 
-### Rococo Testnet
+### Paseo Testnet
 
-[Rococo](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#rococo-) is a testnet built
-for testing parachains. Rococo utilizes Cumulus and
-[HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite) (Horizontal Relay-routed Message Passing) in
-order to send transfers and messages between parachains.
+[Paseo](https://github.com/paseo-network) is a testnet built for testing parachains. Paseo utilizes
+Cumulus and [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite) (Horizontal Relay-routed Message
+Passing) in order to send transfers and messages between parachains.
 
-Rococo runs a few test system parachains, like
-[Asset Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-asset-hub-rpc.polkadot.io#/explorer),
-[Contracts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/explorer),
-[Coretime](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-coretime-rpc.polkadot.io#/explorer),
-[Encointer Lietaer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo.api.encointer.org#/explorer),
-and
-[Bridge Hub](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-bridge-hub-rpc.polkadot.io#/explorer).
-It also runs several externally developed parachains.
+Paseo runs a few test [system parachains](../learn/learn-system-chains.md) and externally developed
+parachains.
 
-### What Parachains are on Rococo Now?
+### What Parachains are on Paseo Now?
 
 You can see the list of included parachains
-[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains). A list of
-proposed parachains is available
-[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
+[here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo-rpc.dwellir.com#/parachains).
 
-### Obtaining ROC
+### Obtaining PAS
 
 Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
 ROCs tokens.
@@ -332,9 +323,9 @@ If you would like to connect to a parachain via [Polkadot-JS Apps](https://polka
 you may do so by clicking on the network selection at the top left-hand corner of the navigation and
 selecting any parachain of choice.
 
-![rococo parachains](../assets/polkadotjs_network_parachains.png)
+![rococo parachains](../assets/paseo-chains.png)
 
-For the purpose of these following examples, we will be using the Rococo testnet "Custom Node"
+For the purpose of these following examples, we will be using the Paseo testnet "Custom Node"
 underneath "Development", following the
 [parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/).
 

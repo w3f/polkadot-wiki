@@ -572,7 +572,8 @@ the information is not stored in the chain's trie, but along blocks.
 
 ## Rococo
 
-The [testnet](#testnet) set aside for testing parachains, cumulus, and related technology.
+Rococo was a [testnet](#testnet) set aside for testing parachains, cumulus, and related technology.
+Please refer to Paseo test network.
 
 ## Root Origin
 

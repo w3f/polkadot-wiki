@@ -28,10 +28,6 @@ development or application-driven contexts.
     (is not reset back to genesis block).
   - **Paseo** - A community-run testnet which mirrors the Polkadot runtime. It is maintained by the
     community.
-  - **Rococo** - Parachains and XCM testnet. Occasionally reset (started over again with a new
-    genesis block).
-  - **Contracts** - Wasm-based Smart Contract enabled parachain testnet on Rococo, primarily for
-    [`ink!`](https://use.ink/) development.
 
 Polkadot mainnet has been running since May 2020 and has
 [implementations in various programming languages](../learn/learn-implementations.md) ranging from

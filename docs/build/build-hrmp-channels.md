@@ -70,8 +70,8 @@ between a parachain and the Asset Hub with `ParaID` 1000 is `0x3c0ae8030000`
 
 ![asset-hub-hrmp-channel](../assets/asset-hub/establish-channel-asset-hub.png)
 
-Here is an example call with an XCM program sent from the parachain to Rococo relay chain to
-establish channel a bi-directional channel with Rococo Asset Hub -
+Here is an example call with an XCM program sent from the parachain to Paseo relay chain to
+establish channel a bi-directional channel with Paseo Asset Hub -
 `0x0f001f000301000314000400000000070010a5d4e81300000000070010a5d4e80006000300c16678419c183c0ae8030000140d01000001003145`
 
 ![asset-hub-hrmp-channel-xcm](../assets/asset-hub/asset-hub-establish-channel-xcm.png)
