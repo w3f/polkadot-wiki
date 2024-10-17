@@ -34,9 +34,12 @@ operating under SUDO.
 As for weights (size and time), there's an overestimation from what can be queried from the polkadot
 relay chain.
 
-The extrinsic being sent in the `send` instruction in the XCM message is:
-
+To check the exact weights, you can navigate to Polkadot JS UI > Developer > Runtime Calls and then
+select `transactionPaymentCallInfo` and `queryCallInfo` and include the extrinsic being sent in the
+`send` instruction of the XCM message:
 [0x4603e3070000320d0000](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpolkadot#/extrinsics/decode/0x4603e3070000320d0000)
+
+![TX-payment-API-Lease-Swap](../assets/coretime/tx-payment-api-weights-lease-swap.png)
 
 ## Perform Swap on the Relay chain for an unlocked Parachain
 
@@ -48,7 +51,7 @@ manager account `13B8Tdhi4EuruwzVt3gdcTopXpqbUzmncutiQKKNbd8cpU91` is:
 
 [0x4603320d0000e3070000](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpolkadot#/extrinsics/decode/0x4603320d0000e3070000)
 
-## Coretime Swap Prerequisite
+## Coretime Swap Prerequisites
 
 We need to ensure the parachains have a valid cores to execute the swap instruction. This can be
 achieved either by getting a core in bulk from the coretime system chain, or by leveraging the
@@ -61,6 +64,8 @@ the stalled parachain.
 This functionality exists on the relay chain and allows users to request for 1 block of validation
 of their parachain. In order to place an order for on demand, any account must call the
 `onDemand.placeOrderAllowDeath` extrinsic.
+
+![onDemand-block-production](../assets/coretime/onDemand-block-production.png)
 
 This extrinsic takes two parameters:
 
