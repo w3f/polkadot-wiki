@@ -31,7 +31,8 @@ operating under SUDO.
 
 [0x0200290003010003140004000000000700e876481713000000000700e87648170006000700e40b540282380100284603e3070000320d0000140d01000001008d1f](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcomposable-rpc.dwellir.com#/extrinsics/decode/0x0200290003010003140004000000000700e876481713000000000700e87648170006000700e40b540282380100284603e3070000320d0000140d01000001008d1f)
 
-As for weights (size and time), we use an overestimate compared with those returned by the Polkadot Relay Runtime API.
+As for weights (size and time), we use an overestimate compared with those returned by the Polkadot
+Relay Runtime API.
 
 To check the exact weights, you can navigate to Polkadot JS UI > Developer > Runtime Calls and then
 select `transactionPaymentCallInfo` and `queryCallInfo` and include the extrinsic being sent in the
@@ -68,9 +69,9 @@ of their parachain. In order to place an order for on demand, any account must c
 
 This extrinsic takes two parameters:
 
-- Amount: This refers to the amount the user wants to pay for the parachain block to be validated by
-  a core. There's a minimum amount which depends on the queue, but the minimum amount the system
-  allows is 250,000,000 planckDOT (0.025 DOT)
+- Amount: the amount the user is willing to pay for the parachain block to be validated by a core.
+  The minimum amount the system allows is 250,000,000 planckDOT (0.025 DOT) and the actual amount is
+  dynamic as it depends on the on-demand block production requests queued.
 
 - paraID: This refers to the `paraID` of the on-demand Parachain whose block must be  
   validated by a core.
@@ -87,9 +88,10 @@ Assumptions
 - You have access to the manager account on the relay chain for the new paraID
 - You have your collators running on your old paraID and you can execute upward XCM messages from
   that parachain.
-- The sovereign account for the locked paraID has enough available funds to execute transactions on the relay chain.
-- The account that owns the unlocked paraID has enough available funds to execute transactions on the relay chain.
-  transactions on the relay chain.
+- The sovereign account for the locked paraID has enough available funds to execute transactions on
+  the relay chain.
+- The account that owns the unlocked paraID has enough available funds to execute transactions on
+  the relay chain. transactions on the relay chain.
 
 Steps
 
