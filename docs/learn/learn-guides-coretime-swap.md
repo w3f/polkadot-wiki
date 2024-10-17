@@ -31,8 +31,7 @@ operating under SUDO.
 
 [0x0200290003010003140004000000000700e876481713000000000700e87648170006000700e40b540282380100284603e3070000320d0000140d01000001008d1f](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcomposable-rpc.dwellir.com#/extrinsics/decode/0x0200290003010003140004000000000700e876481713000000000700e87648170006000700e40b540282380100284603e3070000320d0000140d01000001008d1f)
 
-As for weights (size and time), there's an overestimation from what can be queried from the polkadot
-relay chain.
+As for weights (size and time), we use an overestimate compared with those returned by the Polkadot Relay Runtime API.
 
 To check the exact weights, you can navigate to Polkadot JS UI > Developer > Runtime Calls and then
 select `transactionPaymentCallInfo` and `queryCallInfo` and include the extrinsic being sent in the
