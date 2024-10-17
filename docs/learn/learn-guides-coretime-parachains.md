@@ -127,7 +127,7 @@ While the parachain is onboarding, start syncing the [collator](./learn-collator
 following command to rapidly sync with the specified relay chain.
 
 ```
-./target/release/adder-collator --parachain-id= $ParaID --chain=rococo --sync fast-unsafe
+./target/release/adder-collator --parachain-id= $ParaID --chain=paseo --sync warp
 ```
 
 ## Run a Parachain with Bulk Coretime

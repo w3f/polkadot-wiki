@@ -9,7 +9,7 @@ slug: ../build-guides-template-basic
 
 :::warning Not a production ready guide.
 
-This guide is considered a moving document and currently uses the **Rococo** testnet. This guide is
+This guide is considered a moving document and currently uses the **Paseo** testnet. This guide is
 also applicable to the parachains on the Kusama relay chain, as coretime is also enabled there.
 Polkadot will enable agile coretime after it has been thoroughly tested on Kusama.
 
@@ -36,8 +36,8 @@ to upload our parachain's code:
 2. Create a wallet, and get some [ROC via the faucet.](https://faucet.polkadot.io/) with your new
    address.
 3. Go to the [Polkadot.js Web App](https://polkadot.js.org/apps/#), and make sure you select
-   **Rococo** as your network via the tabs on the side
-   [or visit this link to get to Rococo directly](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer)
+   **Paseo** as your network via the tabs on the side
+   [or visit this link to get to Paseo directly](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.dotters.network#/explorer)
 4. Head to
    [Network > Parachains > Parathreads (the tab)](https://polkadot.js.org/apps/#/parachains/parathreads)
 5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains.md#reserve-paraid)
@@ -111,7 +111,7 @@ cargo build --release
 ```
 
 For the sake of this example, we won't go into adding or modifying any pallets. However, this is
-definitely a next step after you get used to deploying your parachain on Rococo!
+definitely a next step after you get used to deploying your parachain.
 
 ### Customizing our chain specification's patch file
 
@@ -222,7 +222,7 @@ to make it parachain-ready. Once again, make sure you set `para_id` to the one y
    "tokenSymbol": "UNIT"
 },
 "para_id": PARA_ID_HERE,
-"relay_chain": "rococo",
+"relay_chain": "paseo",
 ```
 
 Once you finish modifying the file, it should look like this:
@@ -241,7 +241,7 @@ Once you finish modifying the file, it should look like this:
     "tokenSymbol": "UNIT"
   },
   "para_id": YOUR_PARA_ID_HERE,
-  "relay_chain": "rococo",
+  "relay_chain": "paseo",
   "codeSubstitutes": {},
   "genesis": { ... }
 }
@@ -253,7 +253,7 @@ other fields.
 Now you should open your `chain_spec.json`, and use this checklist to ensure all the necessary
 fields are in place:
 
-1. **Make** sure that `relay_chain` is set to the target relay chain (`rococo`, in our case)
+1. **Make** sure that `relay_chain` is set to the target relay chain (`paseo`, in our case)
 2. **Make** sure that `para_id` (right below `relay_chain`) is set to your reserved ParaId
 3. **Make** sure that our `chain_type` is set to `Live`
 4. **Optionally**, change the name, id, and token symbol of your chain.
@@ -315,8 +315,8 @@ polkadot-parachain --collator \
 --force-authoring \
 --base-path <your-base-path-here> \
 -- \
---chain=rococo \
---sync fast-unsafe \
+--chain=paseo \
+--sync warp \
 --blocks-pruning 256 \
 --state-pruning 256
 ```
@@ -360,12 +360,12 @@ them, and purchase a core!
 We have two options:
 
 1. [**Bulk**](../learn/learn-agile-coretime.md#bulk-coretime) - obtain a set amount of coretime in
-   bulk (for Rococo, 7 days).
+   bulk.
 2. [**On-demand**](../learn/learn-agile-coretime.md#on-demand-coretime) - pay as we go for our block
    production.
 
 With bulk coretime, we assign a core to our ParaId, and as long as that core is valid, our parachain
-will produce blocks and finalize them via Rococo until we have to renew the core.
+will produce blocks and finalize them via the relay chain until we have to renew the core.
 
 It's worth noting that you can easily experiment using on-demand extrinsics, then later switch to a
 bulk coretime model. For now, let's start with on-demand coretime to get our first blocks going.
@@ -388,7 +388,7 @@ Provided your collator is synced, you can create a block using an on-demand extr
 
 If everything is working as intended, you can now choose to assign bulk coretime to your parachain
 for persistent block generation. For this assignment,
-[RegionX's CoreHub](https://app.regionx.tech/regions?network=rococo) will be used to purchase and
+[RegionX's CoreHub](https://app.regionx.tech/regions?network=paseo) will be used to purchase and
 assign cores.
 
 :::info Getting Coretime ROC
@@ -408,7 +408,7 @@ for doing so:
 
 :::
 
-1. Connect your wallet and make sure you select **Rococo** as your network:
+1. Connect your wallet and make sure you select **Paseo** as your network:
 
 ![Connect your wallet to RegionX](../assets/coretime/coretime-regionx-connect-wallet.png)
 
