@@ -70,7 +70,7 @@ This extrinsic takes two parameters:
 
 - Amount: This refers to the amount the user wants to pay for the parachain block to be validated by
   a core. There's a minimum amount which depends on the queue, but the minimum amount the system
-  allows is 250,000,000 planckDOT (0.25 DOT)
+  allows is 250,000,000 planckDOT (0.025 DOT)
 
 - paraID: This refers to the `paraID` of the on-demand Parachain whose block must be  
   validated by a core.
