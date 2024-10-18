@@ -27,8 +27,8 @@ If you are trying to run a validator, refer to this tutorial
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`,
-`rococo`, or a custom chain spec. By default, the client will start Polkadot. Watch
+Use the `--chain <chainspec>` option to select the chain. Can be `polkadot`, `kusama`, `westend`, or
+a custom chain spec. By default, the client will start Polkadot. Watch
 [How a single codebase can power four different blockchains](https://www.youtube.com/watch?v=i9vNCHz6wO4)
 to learn more about how the chain selection works internally.
 
