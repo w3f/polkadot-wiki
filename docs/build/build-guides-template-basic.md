@@ -11,7 +11,6 @@ slug: ../build-guides-template-basic
 
 This guide is considered a moving document and currently uses the **Paseo** testnet. This guide is
 also applicable to the parachains on the Kusama relay chain, as coretime is also enabled there.
-Polkadot will enable agile coretime after it has been thoroughly tested on Kusama.
 
 **This instructions on this guide are applicable for the Polkadot SDK repository with tag
 `polkadot-v1.15.1`**
