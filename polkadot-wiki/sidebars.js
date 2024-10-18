@@ -557,21 +557,6 @@ module.exports = {
                     "learn/learn-agile-coretime",
                     "learn/learn-guides-coretime-marketplaces",
                     "learn/learn-guides-coretime-parachains",
-                    {
-                      type: "category",
-                      label: "Coretime Guides",
-                      description: "Technical Coretime Guides",
-                      link: {
-                        type: 'doc',
-                        id: 'build/build-guides-coretime-start',
-                      },
-                      items: [
-                        "build/build-guides-install-deps",
-                        "build/build-guides-template-basic",
-                        "build/build-guides-coretime-troubleshoot",
-                        "learn/learn-guides-coretime-swap"
-                      ]
-                    }
                   ],
                 },
                 {
@@ -861,6 +846,21 @@ module.exports = {
             slug: '/build-protocol-index',
           },
           items: [
+            {
+              type: "category",
+              label: "Coretime Guides",
+              description: "Technical Coretime Guides",
+              link: {
+                type: 'doc',
+                id: 'build/build-guides-coretime-start',
+              },
+              items: [
+                "build/build-guides-install-deps",
+                "build/build-guides-template-basic",
+                "build/build-guides-coretime-troubleshoot",
+                "learn/learn-guides-coretime-swap",
+              ]
+            },
             "build/build-protocol-info",
             "build/build-integrate-assets",
             "build/build-hrmp-channels"

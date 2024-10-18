@@ -191,21 +191,14 @@ chain. For more on collator nodes, see the [collator page](../learn/learn-collat
 #### What PDKs Exist?
 
 Currently, the only PDK is
-[Parity Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) and
+[the Polkadot SDK](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) and
 [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus).
+
 **[Substrate](https://substrate.io/)** is a blockchain framework that provides the basic building
 blocks of a blockchain (things like the networking layer, consensus, a Wasm interpreter) while
 providing an intuitive way to construct your runtime. Substrate is made to ease the process of
 creating a new chain, but it does not provide support for relay chain compatibility directly. For
 this reason, `Cumulus`, an added _library_ contains all of the Polkadot compatibility glue code.
-
-:::note Get started with Substrate
-
-The best way to get started with Substrate is to explore the
-[Substrate Documentation](https://docs.substrate.io/) maintained by
-[Parity Technologies](https://parity.io).
-
-:::
 
 #### Cumulus
 
@@ -307,6 +300,9 @@ Passing) in order to send transfers and messages between parachains.
 Paseo runs a few test [system parachains](../learn/learn-system-chains.md) and externally developed
 parachains.
 
+If you would like to start deploying a parachain and trying out Coretime on Paseo, refer to the
+[Coretime Guides](../build/build-guides-coretime-start.md).
+
 ### What Parachains are on Paseo Now?
 
 You can see the list of included parachains
@@ -314,8 +310,8 @@ You can see the list of included parachains
 
 ### Obtaining PAS
 
-Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-rococo-testnet) to get
-ROCs tokens.
+Follow the instructions [here](../learn/learn-DOT.md#getting-tokens-on-the-paseo-testnet) to get PAS
+tokens.
 
 ### How to Connect to a Parachain
 
@@ -323,11 +319,11 @@ If you would like to connect to a parachain via [Polkadot-JS Apps](https://polka
 you may do so by clicking on the network selection at the top left-hand corner of the navigation and
 selecting any parachain of choice.
 
-![rococo parachains](../assets/paseo-chains.png)
+![paseo parachains](../assets/paseo-chains.png)
 
 For the purpose of these following examples, we will be using the Paseo testnet "Custom Node"
 underneath "Development", following the
-[parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/).
+[parachain and coretime tutorials](../build/build-guides-coretime-start.md).
 
 ### Parachain Playground
 
@@ -364,7 +360,7 @@ benefiting from Polkadot's security. See
 
 ## Resources
 
-- [Parachain tutorials](https://docs.substrate.io/reference/how-to-guides/parachains/)
+- [Getting started with the Polkadot SDK for parachain development](../build/build-guides-coretime-start.md)
 - [Polkadot Bridges](../learn/learn-bridges.md)
 - [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
 - [The Path of a Parachain Block (Parachain Protocol page)](../learn/learn-parachains-protocol.md)
