@@ -4,7 +4,7 @@ title: Coretime Lease Swap
 sidebar_label: Coretime Swap
 description: A guide to leverage the swap lease functionality for different parachains
 keywords: [coretime, blockspace, parachain, cores, lease]
-slug: ../learn-guides-coretime-parachains
+slug: ../learn-guides-coretime-swap
 ---
 
 The following is a guide to leverage the swap functionality to change leases between different
