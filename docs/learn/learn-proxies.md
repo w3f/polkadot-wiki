@@ -69,6 +69,10 @@ When you set a proxy, you must choose a type of proxy for the relationship with 
   from the Identity pallet along with the calls from the Utility pallet.
 - **Cancel**: allow to reject and remove any time-delay proxy announcements. This proxy can only
   access `reject_announcement` call from the Proxy pallet.
+- **Spokesperson**: Kusama-specific proxy type that only allows `remark` or `remark_with_event`
+  calls.
+- **Society**: Kusama-specific proxy type that only allows
+  [society-related](../maintain/kusama/maintain-guides-society-kusama.md) calls.
 
 ## Proxy Deposits
 
