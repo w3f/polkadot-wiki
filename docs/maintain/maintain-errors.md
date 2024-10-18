@@ -91,6 +91,8 @@ some other error (ex. the validity period expires).\*
 The below table is a reference to the errors that exists in Polkadot. It is generated from the
 runtime's metadata.
 
+### Errors from Current Modules
+
 <!-- prettier-ignore-start -->
 | Pallet                  | Error                                  | Documentation                                                                                                                                    |
 | ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -167,42 +169,6 @@ runtime's metadata.
 |                         | InvalidKeyOwnershipProof (4)           | A key ownership proof provided as part of an equivocation report is invalid.                                                                     |
 |                         | InvalidEquivocationProof (5)           | An equivocation proof provided as part of an equivocation report is invalid.                                                                     |
 |                         | DuplicateOffenceReport (6)             | A given equivocation report is valid but already previously reported.                                                                            |     |
-| Democracy (14)          |                                        |                                                                                                                                                  |
-|                         | ValueLow (0)                           | Value too low                                                                                                                                    |
-|                         | ProposalMissing (1)                    | Proposal does not exist                                                                                                                          |
-|                         | BadIndex (2)                           | Unknown index                                                                                                                                    |
-|                         | AlreadyCanceled (3)                    | Cannot cancel the same proposal twice                                                                                                            |
-|                         | DuplicateProposal (4)                  | Proposal already made                                                                                                                            |
-|                         | ProposalBlacklisted (5)                | Proposal still blacklisted                                                                                                                       |
-|                         | NotSimpleMajority (6)                  | Next external proposal not simple majority                                                                                                       |
-|                         | InvalidHash (7)                        | Invalid hash                                                                                                                                     |
-|                         | NoProposal (8)                         | No external proposal                                                                                                                             |
-|                         | AlreadyVetoed (9)                      | Identity may not veto a proposal twice                                                                                                           |
-|                         | NotDelegated (10)                      | Not delegated                                                                                                                                    |
-|                         | DuplicatePreimage (11)                 | Preimage already noted                                                                                                                           |
-|                         | NotImminent (12)                       | Not imminent                                                                                                                                     |
-|                         | TooEarly (13)                          | Too early                                                                                                                                        |
-|                         | Imminent (14)                          | Imminent                                                                                                                                         |
-|                         | PreimageMissing (15)                   | Preimage not found                                                                                                                               |
-|                         | ReferendumInvalid (16)                 | Vote given for invalid referendum                                                                                                                |
-|                         | PreimageInvalid (17)                   | Invalid preimage                                                                                                                                 |
-|                         | NoneWaiting (18)                       | No proposals waiting                                                                                                                             |
-|                         | NotLocked (19)                         | The target account does not have a lock.                                                                                                         |
-|                         | NotExpired (20)                        | The lock on the account to be unlocked has not yet expired.                                                                                      |
-|                         | NotVoter (21)                          | The given account did not vote on the referendum.                                                                                                |
-|                         | NoPermission (22)                      | The actor has no permission to conduct the action.                                                                                               |
-|                         | AlreadyDelegating (23)                 | The account is already delegating.                                                                                                               |
-|                         | Overflow (24)                          | An unexpected integer overflow occurred.                                                                                                         |
-|                         | Underflow (25)                         | An unexpected integer underflow occurred.                                                                                                        |
-|                         | InsufficientFunds (26)                 | Too high a balance was provided that the account cannot afford.                                                                                  |
-|                         | NotDelegating (27)                     | The account is not currently delegating.                                                                                                         |
-|                         | VotesExist (28)                        | The account currently has votes attached to it and the operation cannot succeed until these are removed, either through `unvote` or `reap_vote`. |
-|                         | InstantNotAllowed (29)                 | The instant referendum origin is currently disallowed.                                                                                           |
-|                         | Nonsense (30)                          | Delegation to oneself makes no sense.                                                                                                            |
-|                         | WrongUpperBound (31)                   | Invalid upper bound.                                                                                                                             |
-|                         | MaxVotesReached (32)                   | Maximum number of votes reached.                                                                                                                 |
-|                         | InvalidWitness (33)                    | The provided witness data is wrong.                                                                                                              |
-|                         | TooManyProposals (34)                  | Maximum number of proposals reached.                                                                                                             |
 | ElectionsPhragmen (17)  |                                        |                                                                                                                                                  |
 |                         | UnableToVote (0)                       | Cannot vote when no candidates or members exist.                                                                                                 |
 |                         | NoVotes (1)                            | Must vote for at least one candidate.                                                                                                            |
@@ -286,4 +252,68 @@ runtime's metadata.
 |                         | UnexpectedTimepoint (11)               | A timepoint was given, yet no multisig operation is underway.                                                                                    |
 |                         | WeightTooLow (12)                      | The maximum weight information provided was too low.                                                                                             |
 |                         | AlreadyStored (13)                     | The data to be stored is already stored.                                                                                                         |
+
+### Errors from Archived Modules
+
+| Pallet                  | Error                                  | Documentation                                                                                                                                    |
+| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Council (15)            |                                        |                                                                                                                                                  |
+|                         | NotMember (0)                          | Account is not a member                                                                                                                          |
+|                         | DuplicateProposal (1)                  | Duplicate proposals not allowed                                                                                                                  |
+|                         | ProposalMissing (2)                    | Proposal must exist                                                                                                                              |
+|                         | WrongIndex (3)                         | Mismatched index                                                                                                                                 |
+|                         | DuplicateVote (4)                      | Duplicate vote ignored                                                                                                                           |
+|                         | AlreadyInitialized (5)                 | Members are already initialized!                                                                                                                 |
+|                         | TooEarly (6)                           | The close call was made too early, before the end of the voting.                                                                                 |
+|                         | TooManyProposals (7)                   | There can only be a maximum of `MaxProposals` active proposals.                                                                                  |
+|                         | WrongProposalWeight (8)                | The given weight bound for the proposal was too low.                                                                                             |
+|                         | WrongProposalLength (9)                | The given length bound for the proposal was too low.                                                                                             |
+| TechnicalCommittee (16) |                                        |                                                                                                                                                  |
+|                         | NotMember (0)                          | Account is not a member                                                                                                                          |
+|                         | DuplicateProposal (1)                  | Duplicate proposals not allowed                                                                                                                  |
+|                         | ProposalMissing (2)                    | Proposal must exist                                                                                                                              |
+|                         | WrongIndex (3)                         | Mismatched index                                                                                                                                 |
+|                         | DuplicateVote (4)                      | Duplicate vote ignored                                                                                                                           |
+|                         | AlreadyInitialized (5)                 | Members are already initialized!                                                                                                                 |
+|                         | TooEarly (6)                           | The close call was made too early, before the end of the voting.                                                                                 |
+|                         | TooManyProposals (7)                   | There can only be a maximum of `MaxProposals` active proposals.                                                                                  |
+|                         | WrongProposalWeight (8)                | The given weight bound for the proposal was too low.                                                                                             |
+|                         | WrongProposalLength (9)                | The given length bound for the proposal was too low.                                                                                             |
+| Democracy (14)          |                                        |                                                                                                                                                  |
+|                         | ValueLow (0)                           | Value too low                                                                                                                                    |
+|                         | ProposalMissing (1)                    | Proposal does not exist                                                                                                                          |
+|                         | BadIndex (2)                           | Unknown index                                                                                                                                    |
+|                         | AlreadyCanceled (3)                    | Cannot cancel the same proposal twice                                                                                                            |
+|                         | DuplicateProposal (4)                  | Proposal already made                                                                                                                            |
+|                         | ProposalBlacklisted (5)                | Proposal still blacklisted                                                                                                                       |
+|                         | NotSimpleMajority (6)                  | Next external proposal not simple majority                                                                                                       |
+|                         | InvalidHash (7)                        | Invalid hash                                                                                                                                     |
+|                         | NoProposal (8)                         | No external proposal                                                                                                                             |
+|                         | AlreadyVetoed (9)                      | Identity may not veto a proposal twice                                                                                                           |
+|                         | NotDelegated (10)                      | Not delegated                                                                                                                                    |
+|                         | DuplicatePreimage (11)                 | Preimage already noted                                                                                                                           |
+|                         | NotImminent (12)                       | Not imminent                                                                                                                                     |
+|                         | TooEarly (13)                          | Too early                                                                                                                                        |
+|                         | Imminent (14)                          | Imminent                                                                                                                                         |
+|                         | PreimageMissing (15)                   | Preimage not found                                                                                                                               |
+|                         | ReferendumInvalid (16)                 | Vote given for invalid referendum                                                                                                                |
+|                         | PreimageInvalid (17)                   | Invalid preimage                                                                                                                                 |
+|                         | NoneWaiting (18)                       | No proposals waiting                                                                                                                             |
+|                         | NotLocked (19)                         | The target account does not have a lock.                                                                                                         |
+|                         | NotExpired (20)                        | The lock on the account to be unlocked has not yet expired.                                                                                      |
+|                         | NotVoter (21)                          | The given account did not vote on the referendum.                                                                                                |
+|                         | NoPermission (22)                      | The actor has no permission to conduct the action.                                                                                               |
+|                         | AlreadyDelegating (23)                 | The account is already delegating.                                                                                                               |
+|                         | Overflow (24)                          | An unexpected integer overflow occurred.                                                                                                         |
+|                         | Underflow (25)                         | An unexpected integer underflow occurred.                                                                                                        |
+|                         | InsufficientFunds (26)                 | Too high a balance was provided that the account cannot afford.                                                                                  |
+|                         | NotDelegating (27)                     | The account is not currently delegating.                                                                                                         |
+|                         | VotesExist (28)                        | The account currently has votes attached to it and the operation cannot succeed until these are removed, either through `unvote` or `reap_vote`. |
+|                         | InstantNotAllowed (29)                 | The instant referendum origin is currently disallowed.                                                                                           |
+|                         | Nonsense (30)                          | Delegation to oneself makes no sense.                                                                                                            |
+|                         | WrongUpperBound (31)                   | Invalid upper bound.                                                                                                                             |
+|                         | MaxVotesReached (32)                   | Maximum number of votes reached.                                                                                                                 |
+|                         | InvalidWitness (33)                    | The provided witness data is wrong.                                                                                                              |
+|                         | TooManyProposals (34)                  | Maximum number of proposals reached.                                                                                                             |
+
 <!-- prettier-ignore-end -->
