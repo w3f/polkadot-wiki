@@ -93,9 +93,6 @@ Assumptions
 - The account that owns the unlocked paraID has enough available funds to execute transactions on
   the relay chain. transactions on the relay chain.
 
-### Time for effect
-The swap of leases is effective immediately, however the coretime chain communicates the changes of these leases to the relay chain with every new coretime cycle. Thus, the change will come into effect in the following coretime cycle.
-
 Steps
 
 - Have the collator running for your original paraID.
@@ -105,3 +102,6 @@ Steps
 - Use the manager account on your new paraID to send the
   [swap instruction](#perform-swap-on-the-relay-chain-for-an-unlocked-parachain) directly on the
   relay chain.
+
+### Time for effect
+The swap of leases is effective immediately, however the coretime chain communicates the changes of these leases to the relay chain with every new coretime cycle. Thus, the change will come into effect in the following coretime cycle.
