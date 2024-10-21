@@ -165,7 +165,8 @@ or, worse, empty.
 ## Agile Coretime Allocation
 
 In Polkadot 1.0, coretime is a fixed two-year period on one specific core. Here, we remove this
-limitation and generalize coretime usage to meet different application needs.
+limitation and generalize coretime usage to meet different application needs. For more information,
+see the [agile coretime documentation](../learn/learn-agile-coretime.md).
 
 ### Split Coretime
 
@@ -186,7 +187,8 @@ production rate, for example.
 
 An application can be assigned to multiple cores simultaneously. Some applications can have a
 permanent core assignment and an intermittent one, for example, in a period of high demand to send
-multiple blocks to multiple cores at the same time slot to reduce latency.
+multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime in this manner is
+achieved through [elastic scaling](../learn/learn-elastic-scaling.md).
 
 ![core-usage-agile-combined](../assets/core-usage-agile-combined.png)
 
@@ -213,7 +215,9 @@ bandwidth for the fixed price of opening and closing a block.
 
 Sharing cores with other applications to share costs but with no reduction in latency. Note that
 this is different from the [split coretime](#split-coretime) where one core is used by multiple
-application at different times to share costs at the expense of higher latency.
+application at different times to share costs at the expense of higher latency. Shared cores will be
+enabled with [JAM](../learn/learn-jam-chain.md), a semi-coherent system in which data from
+different shards can be scheduled within the same core.
 
 ![core-usage-agile-shared](../assets/core-usage-agile-shared.png)
 
