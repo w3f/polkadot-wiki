@@ -91,7 +91,7 @@ some other error (ex. the validity period expires).\*
 The below table is a reference to the errors that exists in Polkadot. It is generated from the
 runtime's metadata.
 
-### Errors from Current Modules
+### Errors from Current Pallets on Polkadot
 
 <!-- prettier-ignore-start -->
 | Pallet                  | Error                                  | Documentation                                                                                                                                    |
