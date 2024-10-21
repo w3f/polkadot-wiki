@@ -253,7 +253,7 @@ runtime's metadata.
 |                         | WeightTooLow (12)                      | The maximum weight information provided was too low.                                                                                             |
 |                         | AlreadyStored (13)                     | The data to be stored is already stored.                                                                                                         |
 
-### Errors from Archived Modules
+### Errors from Deprecated Pallets on Polkadot
 
 | Pallet                  | Error                                  | Documentation                                                                                                                                    |
 | ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
