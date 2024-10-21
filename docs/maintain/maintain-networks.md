@@ -86,15 +86,18 @@ to Westend Asset Hub.
 
 ### Rococo Test Network
 
-Rococo used to be a Polkadot test network for parachains. The network was shut down following its replacement by Paseo.
+Rococo used to be a Polkadot test network for parachains. The network was shut down following its
+replacement by Paseo.
 
 ### Paseo Test Network
-[Paseo](https://github.com/paseo-network/) is a test network built for parachains.
-The native token of this network (PAS) holds no economic value.
+
+[Paseo](https://github.com/paseo-network/) is a test network built for parachains. The native token
+of this network (PAS) holds no economic value.
 
 #### Paseo Faucet
 
-Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-paseo-testnet) to get PAS tokens.
+Follow the instruction [here](../learn/learn-DOT.md#getting-tokens-on-the-paseo-testnet) to get PAS
+tokens.
 
 ### Wococo Test Network (inactive)
 
