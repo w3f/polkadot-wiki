@@ -187,7 +187,7 @@ production rate, for example.
 
 An application can be assigned to multiple cores simultaneously. Some applications can have a
 permanent core assignment and an intermittent one, for example, in a period of high demand to send
-multiple blocks to multiple cores at the same time slot to reduce latency. Combined coretime is
+multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime in this manner is
 achieved through [elastic scaling](../learn/learn-elastic-scaling.md).
 
 ![core-usage-agile-combined](../assets/core-usage-agile-combined.png)
