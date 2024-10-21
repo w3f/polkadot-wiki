@@ -103,5 +103,5 @@ Steps
   [swap instruction](#perform-swap-on-the-relay-chain-for-an-unlocked-parachain) directly on the
   relay chain.
 
-### Time for effect
+### Coretime Swap - Time for Effect
 The swap of leases is effective immediately, however the coretime chain communicates the changes of these leases to the relay chain with every new coretime cycle. Thus, the change will come into effect in the following coretime cycle.
