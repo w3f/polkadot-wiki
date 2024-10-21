@@ -133,8 +133,7 @@ Polkadot's native token DOT.
 | Dot (PAS)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 PAS  |
 | Million (MPAS)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 PAS  |
 
-Users can also obtain PAS by posting
-`!drip <PASEO_ADDRESS>` in the Matrix chatroom
+Users can also obtain PAS by posting `!drip <PASEO_ADDRESS>` in the Matrix chatroom
 [#paseo_faucet:matrix.org](https://matrix.to/#/#paseo_faucet:matrix.org).
 
 ### Getting Tokens on the Westend Testnet
