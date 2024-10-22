@@ -255,7 +255,7 @@ module.exports = {
     },
     navbar: {
       logo: {
-        src: "img/wiki-logo-2.svg",
+        src: "img/wiki-logo-3.svg",
       },
       items: [
         {
