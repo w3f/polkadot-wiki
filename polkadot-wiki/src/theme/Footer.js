@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import Logo from "@site/static/img/Polkadot_Logo_Horizontal_White.svg";
+import Logo from "@site/static/img/Polkadot_Logo_White.svg";
 
 function FooterSocialColumn() {
   const SocialItem = ({ href, className }) => {
