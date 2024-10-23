@@ -16,7 +16,7 @@ function HomeSplash() {
         <button className="kusama-mainpage-build-btn-main homepage-font">
           <a
             className="homepage-font-start"
-            href={useDocUrl("kusama-getting-started")}
+            href="https://wiki.polkadot.network/docs/kusama-getting-started"
           >
             GET STARTED WITH KUSAMA
           </a>
