@@ -311,6 +311,6 @@ module.exports = {
     //   textColor: 'white',
     //   isCloseable: true,
     // },
-    image: 'img/og-polkadot-wiki.png'
+    image: 'img/wiki-share-image.png'
   },
 };
