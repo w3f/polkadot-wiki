@@ -417,6 +417,32 @@ same):
 If not, make sure that you installed all the binaries, all the binaries are somewhere in your
 `$PATH` and they are all in the same folder.
 
+### Setting the Node (aka Network) Key
+
+Validators must use a static network key to maintain a stable node identity across restarts.
+Starting with Polkadot version 1.11, a check is performed on startup, and the following error will
+be printed if a static node key is not set:
+
+```
+Error:
+0: Starting an authority without network key
+This is not a safe operation because other authorities in the network may depend on your node having a stable identity.
+Otherwise these other authorities may not being able to reach you.
+
+If it is the first time running your node you could use one of the following methods:
+1. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --base-path <YOUR_BASE_PATH>
+2. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --file <YOUR_PATH_TO_NODE_KEY>
+3. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --default-base-path
+4. [Unsafe] Pass --unsafe-force-node-key-generation and make sure you remove it for subsequent node restarts"
+```
+
+The recommended solution is to generate a node key and save it to a file using
+`polkadot key generate-node-key --file <PATH_TO_NODE_KEY>`, then attach it to your node with
+`--node-key-file <PATH_TO_NODE_KEY>`.
+
+Please see [polkadot-sdk#3852](https://github.com/paritytech/polkadot-sdk/pull/3852) for the
+rationale behind this change.
+
 ### Synchronize Chain Data
 
 You can begin syncing your node by running the following command if you do not want to start in
@@ -654,7 +680,7 @@ If you are on a remote server, it is easier to run this command on the same mach
 is running with the default WS RPC port configured):
 
 ```sh
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9944
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://127.0.0.1:9944
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
@@ -675,32 +701,6 @@ in the field and click "Set Session Key".
 ![staking-session-result](../assets/guides/how-to-validate/set-session-key-2.png)
 
 Submit this extrinsic and you are now ready to start validating.
-
-### Setting the Node (aka Network) Key
-
-Validators must use a static network key to maintain a stable node identity across restarts.
-Starting with Polkadot version 1.11, a check is performed on startup, and the following error will
-be printed if a static node key is not set:
-
-```
-Error:
-0: Starting an authority without network key
-This is not a safe operation because other authorities in the network may depend on your node having a stable identity.
-Otherwise these other authorities may not being able to reach you.
-
-If it is the first time running your node you could use one of the following methods:
-1. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --base-path <YOUR_BASE_PATH>
-2. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --file <YOUR_PATH_TO_NODE_KEY>
-3. [Preferred] Separately generate the key with: <NODE_BINARY> key generate-node-key --default-base-path
-4. [Unsafe] Pass --unsafe-force-node-key-generation and make sure you remove it for subsequent node restarts"
-```
-
-The recommended solution is to generate a node key and save it to a file using
-`polkadot key generate-node-key --file <PATH_TO_NODE_KEY>`, then attach it to your node with
-`--node-key-file <PATH_TO_NODE_KEY>`.
-
-Please see [polkadot-sdk#3852](https://github.com/paritytech/polkadot-sdk/pull/3852) for the
-rationale behind this change.
 
 ## Validate
 
