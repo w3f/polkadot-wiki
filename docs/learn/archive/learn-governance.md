@@ -11,7 +11,7 @@ import MessageBox from "../../../components/MessageBox"; import
 "../../../components/MessageBox.css";
 
 <MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../../learn/learn-polkadot-opengov.md)." />
+[Polkadot OpenGov page](../learn-polkadot-opengov)." />
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
 the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of
