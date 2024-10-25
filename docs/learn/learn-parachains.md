@@ -9,7 +9,7 @@ slug: ../learn-parachains
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="[Agile Coretime](./learn-agile-coretime.md) is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime.md#implementation). For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
+<MessageBox message="[Agile Coretime](./learn-agile-coretime) is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime#implementation). For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
 
 :::info Testing on Paseo
 
