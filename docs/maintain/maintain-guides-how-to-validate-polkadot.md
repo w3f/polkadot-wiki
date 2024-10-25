@@ -760,7 +760,7 @@ validator set, you are now running a Polkadot validator! If you need help, reach
 
 The Thousand Validators Programme is a joint initiative by Web3 Foundation and Parity Technologies
 to provide support for community validators. If you are interested in applying for the program, you
-can find more information [on the wiki page](../general/thousand-validators.md).
+can find more information [on the wiki page](../learn/archive/thousand-validators.md).
 
 ## Running a validator on a testnet
 

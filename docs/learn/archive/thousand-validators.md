@@ -1,5 +1,5 @@
 ---
-id: doc-thousand-validators
+id: thousand-validators
 title: Thousand Validators Programme
 sidebar_label: Thousand Validators
 description: The Thousand Validators Program and How it can Support your Validator Endeavors.
@@ -7,7 +7,11 @@ keywords: [thousand validators program, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import MessageBox from
+"../../../components/MessageBox"; import "../../../components/MessageBox.css";
+
+<MessageBox message="The content on this page is archived. For up-to-date information, see the
+[Decentralized Nodes web page](https://nodes.web3.foundation/)." />
 
 The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use
 the funds held by both organizations to nominate validators in the community.
@@ -44,11 +48,10 @@ information on how to [secure a validator](../maintain/maintain-guides-secure-va
 ## How to Apply
 
 **Entrance to the Polkadot program requires a rank of 100 or higher in the Kusama program.**
-Attaining a rank of 100 usually takes around two months. The leaderboard is available
-[here](https://thousand-validators.kusama.network/#/leaderboard). In order to apply to the Polkadot
-1KV programme, set up your Polkadot node to adhere to the [requirements](#requirements) below and
-fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the
-team shortly.
+Attaining a rank of 100 usually takes around two months. In order to apply to the Polkadot 1KV
+programme, set up your Polkadot node to adhere to the [requirements](#requirements) below and fill
+in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the team
+shortly.
 
 :::info 1KV on Kusama
 

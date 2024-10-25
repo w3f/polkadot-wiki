@@ -59,8 +59,8 @@ nominators. To understand how validators are elected, check the
 
 :::tip Join the Thousand Validator Programme
 
-[The Thousand Validator Programme](../../general/thousand-validators.md) is an initiative by Web3
-Foundation and Parity Technologies to use the funds held by both organizations to nominate
+[The Thousand Validator Programme](../../learn/archive/thousand-validators.md) is an initiative by
+Web3 Foundation and Parity Technologies to use the funds held by both organizations to nominate
 validators in the community.
 
 :::

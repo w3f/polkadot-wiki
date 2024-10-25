@@ -15,7 +15,7 @@ of voting power.
 ## Decentralized Votes
 
 Building on the success of previous initiatives like
-[the Thousand Validators Programme](./thousand-validators.md) and
+[the Thousand Validators Programme](../learn/archive/thousand-validators.md) and
 [the Decentralized Futures Program](./decentralized-futures.md), Web3 Foundation is working on
 decentralizing governance within the Polkadot ecosystem to ensure a fair decision-making process. In
 line with the Foundation's ethos, this program seeks to amplify the voices of passionate and
