@@ -42,8 +42,9 @@ an opportunity to be elected into the active set.
 ## Setting up a Validator
 
 Please see the guide on how to
-[set up a validator](../maintain/maintain-guides-how-to-validate-polkadot.md) as well as additional
-information on how to [secure a validator](../maintain/maintain-guides-secure-validator.md).
+[set up a validator](../../maintain/maintain-guides-how-to-validate-polkadot.md) as well as
+additional information on how to
+[secure a validator](../../maintain/maintain-guides-secure-validator.md).
 
 ## How to Apply
 
@@ -64,7 +65,7 @@ if accepted.
 
 #### Requirements
 
-- Verified identity (see [here](../learn/learn-identity.md#setting-an-identity) for instructions)
+- Verified identity (see [here](../learn-identity.md#setting-an-identity) for instructions)
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Minimum of 5_000 DOTs self stake on Polkadot and 10 KSM on Kusama
@@ -123,7 +124,7 @@ determined by parsing data found [here](https://kusama.w3f.community/nominators)
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
 can be anywhere from a few validators receiving nomination from a single nominator, to the
-[max of nominators](./chain-state-values.md#maximum-votes-per-nominator).
+[max of nominators](../../general/chain-state-values.md#maximum-votes-per-nominator).
 
 ## Selection
 
