@@ -47,7 +47,7 @@ KSM has utility in [Kusama's OpenGov](../../learn/learn-polkadot-opengov.md) whe
 [vote](../../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
 [delegate your voting power](../../learn/learn-polkadot-opengov.md#multirole-delegation), and place
 deposits for your referenda or referenda proposed by others. KSM can also enable you to participate
-in programs like the [Thousand Validators Programme](../../learn/archive/thousand-validators.md).
+in programs like the [Decentralized Nodes program](https://nodes.web3.foundation/).
 
 ### Kusama Gifts
 

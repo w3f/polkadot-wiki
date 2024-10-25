@@ -79,10 +79,10 @@ export default function Index() {
                 much lower than it is expected for Polkadot. There are also
                 programs in place such as{" "}
                 <a
-                  href="https://wiki.polkadot.network/docs/thousand-validators"
+                  href="https://nodes.web3.foundation/"
                   target="_blank"
                 >
-                  Thousand Validators
+                  Decentralized Nodes
                 </a>{" "}
                 to help community validators rise the ranks.
               </p>

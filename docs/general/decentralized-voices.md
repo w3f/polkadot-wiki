@@ -15,13 +15,12 @@ of voting power.
 ## Decentralized Votes
 
 Building on the success of previous initiatives like
-[the Thousand Validators Programme](../learn/archive/thousand-validators.md) and
+[the Decentralized Nodes Program](https://nodes.web3.foundation/) and
 [the Decentralized Futures Program](./decentralized-futures.md), Web3 Foundation is working on
 decentralizing governance within the Polkadot ecosystem to ensure a fair decision-making process. In
 line with the Foundation's ethos, this program seeks to amplify the voices of passionate and
 knowledgeable participants who may lack significant holdings, aiming to mitigate potential
-marginalization. This initiative does not impact existing programs like the Thousand Validators
-Program, as
+marginalization. This initiative does not impact existing programs like Decentralize Nodes, as
 [the tokens allocated can be used for both staking and governance](../learn/learn-polkadot-opengov.md#voluntary-locking-conviction-voting).
 
 ## How to Apply

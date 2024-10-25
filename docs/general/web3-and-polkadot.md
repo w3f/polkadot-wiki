@@ -138,8 +138,8 @@ the same provider in the same geographic region. A legislation change or a natur
 impact a considerable fraction of the nodes and potentially stop the network. Polkadot's level of
 decentralization can be explored through the [Polkawatch app](https://polkawatch.app/).
 
-The [One Thousand Validator Programme](../learn/archive/thousand-validators.md) aims to incentivize
-the creation of new validator nodes to increase the level of node decentralization.
+The [Decentralized Nodes program](https://nodes.web3.foundation/) aims to incentivize the creation
+of new validator nodes to increase the level of node decentralization.
 
 ### Decentralized Storage
 
