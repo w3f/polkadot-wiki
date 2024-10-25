@@ -702,7 +702,6 @@ The recommended solution is to generate a node key and save it to a file using
 Please see [polkadot-sdk#3852](https://github.com/paritytech/polkadot-sdk/pull/3852) for the
 rationale behind this change.
 
-
 ## Validate
 
 To verify that your node is live and synchronized, head to
