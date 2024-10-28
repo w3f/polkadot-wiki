@@ -104,4 +104,8 @@ Steps
   relay chain.
 
 ### Coretime Swap - Time for Effect
-The swap of leases is effective immediately, however the Coretime chain communicates the changes of these leases to the relay chain with every new coretime cycle. Thus, the change will come into effect in the following coretime cycle. For information on when the new coretime cycle, you can view the [coretime sales](https://coretime-polkadot.subscan.io/coretime_dashboard) page.
+
+The swap of leases is effective immediately, however the Coretime chain communicates the changes of
+these leases to the relay chain with every new coretime cycle. Thus, the change will come into
+effect in the following coretime cycle. For information on when the new coretime cycle, you can view
+the [coretime sales](https://coretime-polkadot.subscan.io/coretime_dashboard) page.
