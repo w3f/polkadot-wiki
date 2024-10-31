@@ -431,8 +431,9 @@ for doing so:
 
 ![Assign the core](../assets/coretime/regionx-assign-region.png)
 
-7. Once the transaction is confirmed, provided everything is synced and your collator is running,
-   you should see blocks being persistently created as they were with the on-demand extrinsic:
+7. Once the transaction is confirmed, provided everything is synced, your collator is running, and
+   the region has begun, you should see blocks being persistently created as they were with the
+   on-demand extrinsic:
 
 ![GMcdatDW8AEC8kh](https://hackmd.io/_uploads/r12b0mxMC.jpg)
 
