@@ -140,12 +140,7 @@ availability distribution or the approval process. Those roles can change betwee
 
 ### Validator Stats
 
-- [HashQuark Staking Strategy](https://polkacube.hashquark.io/#/polkadot/strategy) - The HashQuark
-  staking strategy dashboard helps you choose the optimal set-up to maximize rewards, and provides
-  other useful network monitoring tools.
 - [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator
   statistics.
-- [YieldScan](https://yieldscan.app/) - Staking yield maximization platform, designed to minimize
-  effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.
