@@ -145,7 +145,5 @@ availability distribution or the approval process. Those roles can change betwee
   other useful network monitoring tools.
 - [Polkastats](https://polkastats.io/) - Polkastats is a cleanly designed dashboard for validator
   statistics.
-- [YieldScan](https://yieldscan.app/) - Staking yield maximization platform, designed to minimize
-  effort.
 - [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
   current validators - not as tailored for validators as the other sites.
