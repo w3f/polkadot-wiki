@@ -17,7 +17,7 @@ sub-categories using the provided search field. The information is categorized b
 
 :::info Subxt Explorer
 
-You can enter custom RPC endpoints for Polkadot SDK based chains and explore their metadata using 
+You can enter custom RPC endpoints for Polkadot SDK based chains and explore their metadata using
 [Parity Tech Subxt Explorer](https://paritytech.github.io/subxt-explorer/#/).
 
 :::
