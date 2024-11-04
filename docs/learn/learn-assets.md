@@ -64,7 +64,7 @@ This pallet enables fees to be paid in any asset that has corresponding liquidit
 AssetHub. Learn more about asset conversion on AssetHub,
 [including guides on how to use it here.](./learn-asset-conversion-assethub.md)
 
-## Creation and Management
+## Create and Manage Assets
 
 :::info Walk-through video tutorial about creating assets
 
