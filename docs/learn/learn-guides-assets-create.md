@@ -34,7 +34,7 @@ For additional background on the Asset Hub check out
 Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westend Asset
 Hub, which is a system parachain on Westend test network. The WND tokens (Westies) can be teleported
 from Westend to Westend Asset Hub, are available for free through a
-[faucet](./learn-DOT.md#getting-tokens-on-the-westend-testnet).
+[faucet](https://faucet.polkadot.io/).
 
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**
 
@@ -52,6 +52,11 @@ Assuming you have the required balance on your Asset Hub account, the following 
 let you successfully create an asset on the Asset Hub
 
 - Access the Asset Hub through [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
+- Check the next available Asset ID. This can be queried on-chain by navigating to Developer > Chain
+  State > Storage and then `assets.nextAssetId()`.
+
+![Query AssetId](../assets/asset-hub/hub-asset-4.png)
+
 - Navigate to Network > Assets.
 
 ![Navigate to Assets page](../assets/asset-hub/hub-asset-0.png)
@@ -59,8 +64,9 @@ let you successfully create an asset on the Asset Hub
 - Click on the create button and you will be presented with a pop-up window. Choose the creator
   account, name of the asset to be displayed on the Asset Hub, the asset's symbol, number of
   decimals for the asset, the minimum balance required to hold this asset on an Asset Hub account
-  and the most important field of your asset - the unique asset ID. The UI would not let you enter
-  an ID that has already been taken. After all the details are entered, click on the next button.
+  and the most important field of your asset - the unique asset ID. This has to be the value
+  returned by the `assets.nextAssetId()` query shown earlier. After all the details are entered,
+  click on the next button.
 
 ![Add Asset Metadata](../assets/asset-hub/hub-asset-1.png)
 
