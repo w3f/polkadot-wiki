@@ -69,7 +69,7 @@
   "dependencies": {
     "@algolia/client-search": "^5.12.0",
     "@apollo/client": "^3.11.8",
-    "@docusaurus/theme-mermaid": "^3.5.2",
+    "@docusaurus/theme-mermaid": "^3.6.0",
     "bufferutil": "^4.0.8",
     "chart.js": "^4.4.6",
     "crowdin-cli": "^0.3.0",
