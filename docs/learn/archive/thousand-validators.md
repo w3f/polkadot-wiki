@@ -50,16 +50,13 @@ additional information on how to
 
 **Entrance to the Polkadot program requires a rank of 100 or higher in the Kusama program.**
 Attaining a rank of 100 usually takes around two months. In order to apply to the Polkadot 1KV
-programme, set up your Polkadot node to adhere to the [requirements](#requirements) below and fill
-in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the team
-shortly.
+programme, set up your Polkadot node to adhere to the [requirements](#requirements) below.
 
 :::info 1KV on Kusama
 
-In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and
-addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard,
-if accepted.
+In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below.
+The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and
+added to the leaderboard, if accepted.
 
 :::
 
