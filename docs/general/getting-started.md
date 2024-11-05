@@ -164,7 +164,7 @@ DOT has utility in Polkadot's OpenGov where you can
 [vote](../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
 [delegate your voting power](../learn/learn-polkadot-opengov.md#multirole-delegation), and place
 deposits for your referenda or referenda proposed by others. DOT can also enable you to participate
-in programs like the [Thousand Validators Programme](../general/thousand-validators.md#polkadot).
+in programs like the [Decentralized Nodes program](https://nodes.web3.foundation/).
 
 ## Polkadot Gifts
 

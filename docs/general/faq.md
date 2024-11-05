@@ -95,8 +95,8 @@ stake-weighted votes and 2) equalize the stake backing each validator as much as
 You will likely want to campaign your validator to the community in order to get more backing. You
 are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
 For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint programme called [Thousand Validators](thousand-validators.md) that will nominate
-validators if they apply and fit the requirements.
+also run a joint programme called [Decentralized Nodes](https://nodes.web3.foundation/) that will
+nominate validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
@@ -137,10 +137,6 @@ critical consensus work to maintain the security of the chain including all of i
 modest number of validators is estimated to start. Upon later improvements, such as implementing
 signature aggregation for finalization messages, the number of validators could reasonably scale up.
 However, increasing validators above one thousand remains a goal for later iterations of Polkadot.
-
-It is also worth mentioning that one thousand validators is more than the number of validators of
-similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders
-are operating with around 150 validators.
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates
 more closely to remote signing keys without the full operation of a validating node. On Polkadot,

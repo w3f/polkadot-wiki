@@ -1,5 +1,5 @@
 ---
-id: doc-thousand-validators
+id: thousand-validators
 title: Thousand Validators Programme
 sidebar_label: Thousand Validators
 description: The Thousand Validators Program and How it can Support your Validator Endeavors.
@@ -7,7 +7,11 @@ keywords: [thousand validators program, validator, validate, maintain, TVP]
 slug: ../thousand-validators
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import MessageBox from
+"../../../components/MessageBox"; import "../../../components/MessageBox.css";
+
+<MessageBox message="The content on this page is archived. For up-to-date information, see the
+[Decentralized Nodes web page](https://nodes.web3.foundation/)." />
 
 The Thousand Validators Programme is an initiative by Web3 Foundation and Parity Technologies to use
 the funds held by both organizations to nominate validators in the community.
@@ -38,30 +42,27 @@ an opportunity to be elected into the active set.
 ## Setting up a Validator
 
 Please see the guide on how to
-[set up a validator](../maintain/maintain-guides-how-to-validate-polkadot.md) as well as additional
-information on how to [secure a validator](../maintain/maintain-guides-secure-validator.md).
+[set up a validator](../../maintain/maintain-guides-how-to-validate-polkadot.md) as well as
+additional information on how to
+[secure a validator](../../maintain/maintain-guides-secure-validator.md).
 
 ## How to Apply
 
 **Entrance to the Polkadot program requires a rank of 100 or higher in the Kusama program.**
-Attaining a rank of 100 usually takes around two months. The leaderboard is available
-[here](https://thousand-validators.kusama.network/#/leaderboard). In order to apply to the Polkadot
-1KV programme, set up your Polkadot node to adhere to the [requirements](#requirements) below and
-fill in the [application form](https://forms.gle/LTCze7fJvqQinPqx6). You will hear back from the
-team shortly.
+Attaining a rank of 100 usually takes around two months. In order to apply to the Polkadot 1KV
+programme, set up your Polkadot node to adhere to the [requirements](#requirements) below.
 
 :::info 1KV on Kusama
 
-In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below
-and fill in the [application form](https://forms.gle/dZkWrGWCNG3ENVCfA). The process of review and
-addition is a manual one; you'll be invited to the 1KV Kusama channel and added to the leaderboard,
-if accepted.
+In order to apply to the Kusama 1KV programme, set up your node to adhere to the requirements below.
+The process of review and addition is a manual one; you'll be invited to the 1KV Kusama channel and
+added to the leaderboard, if accepted.
 
 :::
 
 #### Requirements
 
-- Verified identity (see [here](../learn/learn-identity.md#setting-an-identity) for instructions)
+- Verified identity (see [here](../learn-identity.md#setting-an-identity) for instructions)
 - Connect to dedicated telemetry (use
   `--telemetry-url 'wss://telemetry-backend.w3f.community/submit 1'` when starting the node)
 - Minimum of 5_000 DOTs self stake on Polkadot and 10 KSM on Kusama
@@ -120,7 +121,7 @@ determined by parsing data found [here](https://kusama.w3f.community/nominators)
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
 can be anywhere from a few validators receiving nomination from a single nominator, to the
-[max of nominators](./chain-state-values.md#maximum-votes-per-nominator).
+[max of nominators](../../general/chain-state-values.md#maximum-votes-per-nominator).
 
 ## Selection
 

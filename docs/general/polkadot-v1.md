@@ -104,10 +104,10 @@ Currently, Polkadot 1.0 achieve resilience through the following strategies:
 
 - Nominated Proof of Staking (NPoS) where the stake per validator is maximized and evenly
   distributed across validators.
-- The [1KV program](./thousand-validators.md) aims to incentivize new operators to become network
-  participants and further increase physical (how many validator nodes per service provider) and
-  social decentralization (how many validator nodes per operator). Those can be explored with the
-  [Polkawatch App](https://polkadot.polkawatch.app/).
+- The [1KV program](../learn/archive/thousand-validators.md) aims to incentivize new operators to
+  become network participants and further increase physical (how many validator nodes per service
+  provider) and social decentralization (how many validator nodes per operator). Those can be
+  explored with the [Polkawatch App](https://polkadot.polkawatch.app/).
 - An on-chain treasury and governance (see: [OpenGov](../learn/learn-polkadot-opengov.md)) where
   every decision goes through public referenda and any token holder can cast a vote.
 
