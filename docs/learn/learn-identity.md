@@ -9,6 +9,13 @@ slug: ../learn-identity
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
+:::info Setting your identity on Polkassembly
+
+You can set your identity on the Polkassembly dApp. Follow
+[these support guides](https://support.polkadot.network/support/solutions/articles/65000187627-how-to-set-your-on-chain-identity-on-polkassembly).
+
+:::
+
 Polkadot provides a naming system that allows participants to add personal information to their
 on-chain account and subsequently ask for verification of this information by
 [registrars](#registrars).
@@ -136,5 +143,8 @@ See [this page](./learn-guides-identity.md#registrars) to learn how to become a 
 
 If you are an advanced user, see the
 [Polkadot-JS guides about account identity](./learn-guides-identity.md).
+
+See also
+[these Polkadot-JS support guides](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity).
 
 :::
