@@ -117,6 +117,11 @@ machine and run the command below:
 
 This should start the Polkadot and the Collectives instances available at ports 8001 and 8000
 respectively. Connect to both these instances using Polkadot JS UI on two separate browser windows.
+To connect to these local machine instances at the designated ports, edit the custom endpoint for
+Polkadot JS UI as shown in the picture below and click on Switch button at the top.
+
+![polkadot-js-local](../assets/governance/polkadot-js-local-node.png)
+
 Navigate to the Polkadot instance and open Javascript console to run the code below.
 
 ```
