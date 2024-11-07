@@ -446,23 +446,7 @@ module.exports = {
               },
               items: [
                 "learn/learn-consensus",
-                {
-                  type: "category",
-                  label: "Parachains",
-                  description: "Parachains' Protocol, Auctions, Crowdloans, and more.",
-                  link: {
-                    type: 'generated-index',
-                    title: "Polkadot's Parachains",
-                    description: "Everything about Polkadot's Parachains.",
-                    slug: '/learn-parachains-index',
-                  },
-                  items: [
-                    "learn/learn-parachains",
-                    "learn/learn-parachains-protocol",
-                    "learn/learn-system-chains",
-                    "learn/learn-parachains-faq",
-                  ],
-                },
+                "learn/learn-parachains-protocol",
                 "learn/learn-async-backing",
                 {
                   type: "category",
@@ -475,6 +459,22 @@ module.exports = {
                   items: [
                     "learn/learn-guides-coretime-marketplaces",
                     "learn/learn-guides-coretime-parachains",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Parachains",
+                  description: "Parachains' Protocol, Auctions, Crowdloans, and more.",
+                  link: {
+                    type: 'generated-index',
+                    title: "Polkadot's Parachains",
+                    description: "Everything about Polkadot's Parachains.",
+                    slug: '/learn-parachains-index',
+                  },
+                  items: [
+                    "learn/learn-parachains",
+                    "learn/learn-system-chains",
+                    "learn/learn-parachains-faq",
                   ],
                 },
                 {
