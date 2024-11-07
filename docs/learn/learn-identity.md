@@ -11,7 +11,7 @@ import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 :::info Setting your identity on Polkassembly
 
-You can set your identity on the Polkassembly dApp. Follow
+You can set your identity using the Polkassembly dApp. Follow
 [these support guides](https://support.polkadot.network/support/solutions/articles/65000187627-how-to-set-your-on-chain-identity-on-polkassembly).
 
 :::
