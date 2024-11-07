@@ -466,16 +466,13 @@ module.exports = {
                 "learn/learn-async-backing",
                 {
                   type: "category",
-                  label: "Agile Coretime",
+                  label: "Multi-Threading",
                   description: "Concepts, Implementation and Tutorials on Agile Coretime.",
                   link: {
-                    type: 'generated-index',
-                    title: "Agile Coretime",
-                    description: "Concepts, Implementation and Tutorials on Agile Coretime.",
-                    slug: '/learn-agile-coretime-index',
+                    type: 'doc',
+                    id: "learn/learn-agile-coretime",
                   },
                   items: [
-                    "learn/learn-agile-coretime",
                     "learn/learn-guides-coretime-marketplaces",
                     "learn/learn-guides-coretime-parachains",
                   ],

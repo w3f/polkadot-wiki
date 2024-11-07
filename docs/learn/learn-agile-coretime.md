@@ -1,15 +1,30 @@
 ---
 id: learn-agile-coretime
-title: Introduction to Agile Coretime
-sidebar_label: Agile Coretime Intro
-description: Introduction to Agile Coretime and its terminology
-keywords: [coretime, blockspace, parachain, on-demand, cores]
+title: Multi-Threading
+sidebar_label: Multi-Threading
+description: How the Polkadot Cloud achieves multi-threading to improve efficiency.
+keywords: [coretime, blockspace, parachain, on-demand, cores, multi-threading]
 slug: ../learn-agile-coretime
 ---
 
-Agile Coretime enables efficient utilization of Polkadot network resources and provides economic
-flexibility for builders, generalizing Polkadot beyond what was initially proposed and envisioned in
-its [whitepaper](https://polkadot.network/whitepaper/).
+import DocCardList from '@theme/DocCardList';
+
+[Multi-threading](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>) is a
+programming model where multiple threads (smaller sequences of programmed instructions) are created
+within a single process to perform multiple tasks at once. Multi-threading is commonly used to
+improve the performance of applications by executing different parts of a program concurrently.
+[Concurrency](<https://en.wikipedia.org/wiki/Concurrency_(computer_science)>) does not imply
+parallel execution; rather, it enables a system to manage multiple processes by quickly switching
+among them.
+
+Polkadot introduces multi-threading with **Agile Coretime**, enabling efficient utilization of
+Polkadot network resources and provides economic flexibility for builders, generalizing Polkadot
+beyond what was initially proposed and envisioned in its
+[whitepaper](https://polkadot.com/papers/Polkadot-whitepaper.pdf).
+
+<DocCardList />
+
+## Introduction to Agile Coretime
 
 In Polkadot 1.0, the only way for a parachain to be secured by Polkadot was to rent a lease through
 an [auction](./archive/learn-auction.md), which guaranteed parachain block validation for up-to two
@@ -38,13 +53,6 @@ Furthermore, Agile Coretime offers [on-demand coretime](#on-demand-coretime) fun
 enables the authoring of a parachain block on-demand.
 
 ![core-usage-agile-rangeSplit](../assets/core-usage-agile-rangeSplit.png)
-
-:::info Agile Coretime is under active development
-
-The progress of Agile Coretime development can be tracked
-[here.](https://github.com/orgs/paritytech/projects/119/views/20)
-
-:::
 
 ## Agile Coretime Terminology
 
