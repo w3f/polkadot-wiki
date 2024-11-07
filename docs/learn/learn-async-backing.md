@@ -1,13 +1,29 @@
 ---
 id: learn-async-backing
-title: Asynchronous Backing
-sidebar_label: Asynchronous Backing
-description: A brief overview of asynchronous backing, and how it affects Polkadot's scalability.
-keywords: [parachains, backing, parablock, perspective parachains, unincluded segments]
+title: Pipelining
+sidebar_label: Pipelining
+description: How the Polkadot Cloud achieves pipelining to improve scalability.
+keywords: [parachains, backing, parablock, perspective parachains, unincluded segments, pipelining]
 slug: ../learn-async-backing
 ---
 
 import RPC from "./../../components/RPC-Connection";
+
+[Pipelining](<https://en.wikipedia.org/wiki/Pipeline_(computing)>) is a technique for processing
+multiple stages of a task simultaneously by breaking it into smaller steps. This allows the next
+step to start before the previous one is completely finished. This is often used in processors and
+computer architectures to increase throughput.
+
+Polkadot introduces pipelining to the parachain block
+[generation, backing, and inclusion](./learn-parachains-protocol.md) via **asynchronous backing**.
+It is analogous to the logical pipelining of processor instruction in "traditional" architectures,
+where some instructions may be executed before others are complete.
+
+Bundles of state transitions represented as blocks may be processed similarly. In the context of
+Polkadot, pipelining aims to increase the throughput of the entire network by completing the backing
+and inclusion steps for different blocks simultaneously. Asynchronous backing does not just allow
+for pipelining within a single pipe (or core). It lays the foundation for a large number of pipes
+(or cores) to run for the same parachain at the same time.
 
 :::tip Asynchronous Backing Guide for Parachains
 
@@ -57,11 +73,11 @@ relay chain's progression:
 
 Because of (1) parablocks can be generated every other relay chain block (i.e., every 12 seconds).
 Because of (2) generation of parablock `P` can only start when `P - 1` is included (there is no
-[pipelining](#pipelining)). Because of (3) execution time can take maximum 0.5 seconds as parablock
-`P` is rushing to be backed in the next 5.5 seconds (2 seconds needed for backing and the rest for
-gossiping). Every parablock is backed in 6 seconds (one relay chain block) and included in the next
-6 seconds (next relay chain block). The time from generation to inclusion is 12 seconds. This limits
-the amount of data a collator can add to each parablock.
+pipelining). Because of (3) execution time can take maximum 0.5 seconds as parablock `P` is rushing
+to be backed in the next 5.5 seconds (2 seconds needed for backing and the rest for gossiping).
+Every parablock is backed in 6 seconds (one relay chain block) and included in the next 6 seconds
+(next relay chain block). The time from generation to inclusion is 12 seconds. This limits the
+amount of data a collator can add to each parablock.
 
 Parablock generation will choose the most recently received relay block as a relay parent, although
 with an imperfect network that may differ from the true most recent relay block. So, in general, if
@@ -124,9 +140,8 @@ In synchronous backing, collators generate parablocks using context entirely pul
 chain. While in asynchronous backing, collators use additional context from the
 [unincluded segment](#unincluded-segments). Parablocks are included every 6 seconds because backing
 of parablock `N + 1` and inclusion of parablock `N` can happen on the same relay chain bock
-([pipelining](#pipelining)). However, as for synchronous backing, a parablock takes 12 seconds to
-get backed and included, and from inclusion to finality there is an additional 30-second time
-window.
+(pipelining). However, as for synchronous backing, a parablock takes 12 seconds to get backed and
+included, and from inclusion to finality there is an additional 30-second time window.
 
 Because the throughput is increased by 2x and parachains have 4x more execution time, asynchronous
 backing is expected to deliver 8x more blockspace to parachains.
@@ -168,13 +183,13 @@ for execution. And so on, P3 can be generated while backing groups check P2, and
 while P3 undergoing backing. In 24 seconds, P1 to P3 are included in the relay chain.
 
 Note how there are always three unincluded parablocks at all times, i.e. compared to synchronous
-backing there can be multiple unincluded parablocks (i.e. [pipelining](#pipelining)). For example,
-when P1 is undergoing inclusion, P2 and P3 are undergoing backing. Collators were able to generate
-multiple unincluded parablocks because on their end they have the
-[unincluded segment](#unincluded-segments), a local storage of not-included parablock ancestors that
-they can use to fetch information to build new parablocks. On the relay chain side,
-[perspective parachains](#prospective-parachains) repeats the work each unincluded segment does in
-tracking candidates (as validators cannot trust the record kept on parachains).
+backing there can be multiple unincluded parablocks (i.e. pipelining). For example, when P1 is
+undergoing inclusion, P2 and P3 are undergoing backing. Collators were able to generate multiple
+unincluded parablocks because on their end they have the [unincluded segment](#unincluded-segments),
+a local storage of not-included parablock ancestors that they can use to fetch information to build
+new parablocks. On the relay chain side, [perspective parachains](#prospective-parachains) repeats
+the work each unincluded segment does in tracking candidates (as validators cannot trust the record
+kept on parachains).
 
 The 6-second relay chain block delay includes a backing execution timeout (2 seconds) and some time
 for network latency (the time it takes to gossip messages across the entire network). The limit
@@ -202,22 +217,6 @@ is in the relay chain block. Instead, **candidate receipt** consisting of the ha
 state roots, and ID info is placed on the parent block on the relay chain. The relay chain does not
 access the entire state of a parachain but only the values that changed during that block and the
 merkelized hashes of the unchanged values.
-
-### Pipelining
-
-Asynchronous backing is a feature that introduces
-[pipelining](https://www.techtarget.com/whatis/definition/pipelining) to the parachain block
-[generation, backing and inclusion](./learn-parachains-protocol.md). It is analogous to the logical
-pipelining of processor instruction in "traditional" architectures, where some instructions may be
-executed before others are complete. Instructions may also be executed in parallel, enabling
-multiple processor parts to work on potentially different instructions simultaneously.
-
-Bundles of state transitions represented as blocks may be processed similarly. In the context of
-Polkadot, pipelining aims to increase the throughput of the entire network by completing the backing
-and inclusion steps for different blocks at the same time. Asynchronous backing does not just allow
-for pipelining within a single pipe (or core). It lays the foundation for a large number of pipes
-(or cores) to run for the same parachain at the same time. In that way, we have two distinct new
-forms of parallel computation.
 
 ### Unincluded Segments
 

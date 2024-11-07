@@ -438,90 +438,6 @@ module.exports = {
           items: [
             {
               type: "category",
-              label: "Polkadot-JS",
-              description: 'Overview of Polkadot-JS.',
-              link: {
-                type: 'doc',
-                id: "learn/learn-polkadotjs",
-              },
-              items: [
-                "general/polkadotjs",
-                "general/polkadotjs-ui",
-                {
-                  type: "category",
-                  label: "Polkadot-JS Guides",
-                  description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
-                  link: {
-                    type: 'doc',
-                    id: "learn/learn-polkadot-js-guides",
-                  },
-                  items: [
-                    {
-                      type: "category",
-                      label: "Account Guides",
-                      description: 'Polkadot-JS Guides about Accounts.',
-                      link: {
-                        type: 'doc',
-                        id: "learn/learn-guides-accounts",
-                      },
-                      items: [
-                        "learn/learn-guides-accounts-multisig",
-                        "learn/learn-guides-accounts-proxy",
-                        "learn/learn-guides-accounts-proxy-pure",
-                      ],
-                    },
-                    "learn/learn-guides-transfers",
-                    {
-                      type: "category",
-                      label: "Staking Guides",
-                      description: 'Polkadot-JS Guides about Staking.',
-                      link: {
-                        type: 'doc',
-                        id: 'learn/learn-guides-staking',
-                      },
-                      items: [
-                        "learn/learn-guides-nominator",
-                        "learn/learn-guides-staking-pools",
-                      ],
-                    },
-                    "learn/learn-guides-polkadot-opengov",
-                    "learn/learn-guides-treasury",
-                    "learn/learn-guides-bounties",
-                    "learn/learn-guides-identity",
-                    "learn/learn-guides-ledger",
-                    "learn/learn-guides-vault",
-                    {
-                      type: "category",
-                      label: "Asset Hub Guides",
-                      description: 'Polkadot-JS Guides about Asset Hub.',
-                      link: {
-                        type: 'doc',
-                        id: 'learn/learn-guides-assets',
-                      },
-                      items: [
-                        "learn/learn-guides-assets-create",
-                        "learn/learn-guides-asset-conversion",
-                      ],
-                    },
-                    {
-                      type: "category",
-                      label: "Bridge Hub Guides",
-                      description: 'Polkadot-JS Guides for Bridge Hub.',
-                      link: {
-                        type: 'doc',
-                        id: 'learn/learn-guides-bridges',
-                      },
-                      items: [
-                        "learn/learn-guides-dot-ksm-bridge",
-                      ],
-                    },
-                    "learn/learn-guides-claims",
-                  ],
-                },
-              ],
-            },
-            {
-              type: "category",
               label: "Architecture",
               description: "Nominators, Validators, Collators, Parachains, and more.",
               link: {
@@ -604,6 +520,90 @@ module.exports = {
             "learn/learn-nft-pallets",
             "learn/learn-cryptography",
             'learn/learn-phragmen',
+            {
+              type: "category",
+              label: "Polkadot-JS",
+              description: 'Overview of Polkadot-JS.',
+              link: {
+                type: 'doc',
+                id: "learn/learn-polkadotjs",
+              },
+              items: [
+                "general/polkadotjs",
+                "general/polkadotjs-ui",
+                {
+                  type: "category",
+                  label: "Polkadot-JS Guides",
+                  description: 'Polkadot-JS Guides about Staking, Asset Hub, Vault App, and more.',
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-polkadot-js-guides",
+                  },
+                  items: [
+                    {
+                      type: "category",
+                      label: "Account Guides",
+                      description: 'Polkadot-JS Guides about Accounts.',
+                      link: {
+                        type: 'doc',
+                        id: "learn/learn-guides-accounts",
+                      },
+                      items: [
+                        "learn/learn-guides-accounts-multisig",
+                        "learn/learn-guides-accounts-proxy",
+                        "learn/learn-guides-accounts-proxy-pure",
+                      ],
+                    },
+                    "learn/learn-guides-transfers",
+                    {
+                      type: "category",
+                      label: "Staking Guides",
+                      description: 'Polkadot-JS Guides about Staking.',
+                      link: {
+                        type: 'doc',
+                        id: 'learn/learn-guides-staking',
+                      },
+                      items: [
+                        "learn/learn-guides-nominator",
+                        "learn/learn-guides-staking-pools",
+                      ],
+                    },
+                    "learn/learn-guides-polkadot-opengov",
+                    "learn/learn-guides-treasury",
+                    "learn/learn-guides-bounties",
+                    "learn/learn-guides-identity",
+                    "learn/learn-guides-ledger",
+                    "learn/learn-guides-vault",
+                    {
+                      type: "category",
+                      label: "Asset Hub Guides",
+                      description: 'Polkadot-JS Guides about Asset Hub.',
+                      link: {
+                        type: 'doc',
+                        id: 'learn/learn-guides-assets',
+                      },
+                      items: [
+                        "learn/learn-guides-assets-create",
+                        "learn/learn-guides-asset-conversion",
+                      ],
+                    },
+                    {
+                      type: "category",
+                      label: "Bridge Hub Guides",
+                      description: 'Polkadot-JS Guides for Bridge Hub.',
+                      link: {
+                        type: 'doc',
+                        id: 'learn/learn-guides-bridges',
+                      },
+                      items: [
+                        "learn/learn-guides-dot-ksm-bridge",
+                      ],
+                    },
+                    "learn/learn-guides-claims",
+                  ],
+                },
+              ],
+            },
           ],
         },
         {
