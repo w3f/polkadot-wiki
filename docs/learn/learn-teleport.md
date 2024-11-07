@@ -7,8 +7,6 @@ keywords: [teleport, assets, transfer]
 slug: ../learn-teleport
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 One of the main properties that Polkadot brings to the blockchain industry is secure
 interoperability. This interoperability allows for **asset teleportation**, i.e., the process of
 moving assets (such as fungible and non-fungible tokens) between chains (parachains) to use them as

@@ -7,8 +7,6 @@ keywords: [parachains, backing, parablock, perspective parachains, unincluded se
 slug: ../learn-async-backing
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::tip Asynchronous Backing Guide for Parachains
 
 For upgrading a parachain for Asynchronous Backing compatibility, follow the instructions on

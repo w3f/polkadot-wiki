@@ -7,8 +7,6 @@ keywords: [governance, referenda, proposal, voting, whitelist, fellowship, openg
 slug: ../learn-polkadot-technical-fellowship
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 The Technical Fellowship is a self-governing body of experts and developers of Polkadot and Kusama
 networks protocols. It operates on-chain through the Polkadot
 [Collectives](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-collectives-rpc.polkadot.io#/fellowship/referenda)

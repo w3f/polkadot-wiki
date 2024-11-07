@@ -7,9 +7,9 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-polkadot-opengov
 ---
 
-import RPC from "./../../components/RPC-Connection"; import VLTable from
-"./../../components/Voluntary-Locking"; import Fellowship from "./../../components/Fellowship";
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+import VLTable from "./../../components/Voluntary-Locking"; import Fellowship from
+"./../../components/Fellowship"; import MessageBox from "../../components/MessageBox"; import
+"../../components/MessageBox.css";
 
 <MessageBox message="Before voting or delegating in Polkadot OpenGov, get familiar with [balances and locks](./learn-account-balances#locks)." />
 

@@ -7,8 +7,6 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::tip
 
 If you are a beginner, it is recommended that you start your validator journey on Kusama network.

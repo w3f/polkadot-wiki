@@ -7,8 +7,6 @@ keywords: [validator payout, payments, rewards, era points]
 slug: ../maintain-guides-validator-payout
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 ## Era Points
 
 For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in
