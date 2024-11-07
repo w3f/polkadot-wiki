@@ -461,6 +461,7 @@ module.exports = {
                     "learn/learn-guides-coretime-parachains",
                   ],
                 },
+                "learn/learn-elastic-scaling",
                 {
                   type: "category",
                   label: "Parachains",
@@ -774,7 +775,6 @@ module.exports = {
           },
           items: [
             'learn/learn-spree',
-            "learn/learn-elastic-scaling",
             "learn/learn-safrole",
             {
               type: "category",
