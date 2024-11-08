@@ -7,8 +7,6 @@ keywords: [glossary, questions, definitions]
 slug: ../glossary
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 ## Active Nomination
 
 A validator (or validators) that a nominator has selected to nominate and is actively validating

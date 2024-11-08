@@ -7,8 +7,6 @@ keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on

@@ -7,8 +7,6 @@ keywords: [introduction, getting started, what is polkadot, why polkadot]
 slug: ../getting-started
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::info Welcome to the Polkadot Wiki
 
 The Polkadot Wiki serves as the central source of truth for Polkadot. It is a community-focused
