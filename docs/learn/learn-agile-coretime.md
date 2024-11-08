@@ -1,13 +1,24 @@
 ---
 id: learn-agile-coretime
-title: Multi-Threading
-sidebar_label: Multi-Threading
+title: Scheduling
+sidebar_label: Scheduling
 description: How the Polkadot Cloud achieves multi-threading to improve efficiency.
-keywords: [coretime, blockspace, parachain, on-demand, cores, multi-threading]
+keywords: [coretime, blockspace, parachain, on-demand, cores, multi-threading, scheduling]
 slug: ../learn-agile-coretime
 ---
 
 import DocCardList from '@theme/DocCardList';
+
+[Scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>) is the process of assigning
+tasks or jobs to resources (like CPU cores) at specific times or under certain conditions. Effective
+scheduling ensures that resources are used efficiently and that tasks are completed in a timely
+manner.
+
+Polkadot introduces scheduling with **Agile Coretime**, enabling efficient utilization of Polkadot
+network resources and provides economic flexibility for builders, generalizing Polkadot beyond what
+was initially proposed and envisioned in its
+[whitepaper](https://polkadot.com/papers/Polkadot-whitepaper.pdf). The introduction of coretime
+enables multi-threading.
 
 [Multi-threading](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>) is a
 programming model where multiple threads (smaller sequences of programmed instructions) are created
@@ -17,10 +28,8 @@ improve the performance of applications by executing different parts of a progra
 parallel execution; rather, it enables a system to manage multiple processes by quickly switching
 among them.
 
-Polkadot introduces multi-threading with **Agile Coretime**, enabling efficient utilization of
-Polkadot network resources and provides economic flexibility for builders, generalizing Polkadot
-beyond what was initially proposed and envisioned in its
-[whitepaper](https://polkadot.com/papers/Polkadot-whitepaper.pdf).
+Polkadot achieves multi-threading by [splitting and interlacing](#splitting-and-interlacing)
+Coretime.
 
 <DocCardList />
 

@@ -450,7 +450,7 @@ module.exports = {
                 "learn/learn-async-backing",
                 {
                   type: "category",
-                  label: "Multi-Threading",
+                  label: "Scheduling",
                   description: "Concepts, Implementation and Tutorials on Agile Coretime.",
                   link: {
                     type: 'doc',
