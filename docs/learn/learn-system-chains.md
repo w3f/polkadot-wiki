@@ -7,8 +7,7 @@ keywords: [common good, system, parachains, system level, public utility]
 slug: ../learn-system-chains
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
-from "@theme/TabItem";
+import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
 
 The primary functionality of the relay chain is to secure the parachains and facilitate secure
 communication between them. All other functionalities like asset transfers, governance, identities

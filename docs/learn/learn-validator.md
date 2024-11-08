@@ -7,8 +7,6 @@ keywords: [validate, validator, maintain, NPoS, stake]
 slug: ../learn-validator
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::info
 
 This page provides a general overview of the role of validators in the Polkadot network. For more

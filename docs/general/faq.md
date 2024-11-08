@@ -7,8 +7,6 @@ keywords: [FAQ, questions]
 slug: ../faq
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 :::info
 
 This FAQ focuses on technical questions for users interested in developing applications for

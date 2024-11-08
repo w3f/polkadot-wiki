@@ -8,8 +8,6 @@ keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---
 
-import RPC from "./../../components/RPC-Connection";
-
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
 specific to Polkadot, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.
