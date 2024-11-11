@@ -567,6 +567,7 @@ module.exports = {
                       ],
                     },
                     "learn/learn-guides-polkadot-opengov",
+                    "learn/learn-guides-test-opengov-proposals",
                     "learn/learn-guides-treasury",
                     "learn/learn-guides-bounties",
                     "learn/learn-guides-identity",
