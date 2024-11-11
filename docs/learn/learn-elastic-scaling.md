@@ -1,27 +1,27 @@
 ---
 id: learn-elastic-scaling
-title: Polkadot's Elastic Scaling
-sidebar_label: Elastic Scaling
-description: Enabling parachains to scale on-demand through instantaneous coretime.
-keywords: [elastic scaling, parachains, coretime, blockspace]
+title: Parallel Computing
+sidebar_label: Parallel Computing
+description: How the Polkadot Cloud achieves parallel computation to boost throughput.
+keywords: [elastic scaling, parachains, coretime, blockspace, parallel computing]
 slug: ../learn-elastic-scaling
 ---
 
-The path of parablocks from their creation to their inclusion into the relay chain (discussed in the
-[Parachain Protocol Page](./learn-parachains-protocol.md)) spans two domains: the parachain's and
-relay chain's. Scaling the Polkadot protocol involves consideration of how parablocks are produced
-by the parachain and then validated, processed, secured, made available for additional checks, and
-finally included on the relay chain.
+import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-[Asynchronous backing](./learn-async-backing.md) is the optimization implemented on the relay chain
-that allows parachains to produce blocks faster and allows relay chain to process them seamlessly.
-Asynchronous backing also improves the parachain side with unincluded segments and augmented info
-that allows collators to produce multiple parablocks even if the previous blocks are not yet
-included. This upgrade allows parachains to utilize up to 2 seconds execution time per parablock,
-and the relay chain will be able to include a parablock every 6 seconds.
+<MessageBox message="To fully follow the material on this page, it is recommended to be familiar with the primary stages
+of the [Parachain Protocol](./learn-parachains-protocol)." />
 
-With elastic scaling, parachains can use multiple cores to include multiple parablocks within the
-same relay chain block.
+[Parallel computing](https://en.wikipedia.org/wiki/Parallel_computing) involves performing many
+calculations or processes simultaneously by dividing tasks into sub-tasks that run on multiple
+processors or cores. This is essential for high-performance computing tasks, where many operations
+are executed in parallel to speed up processing.
+
+Polkadot uses [pipelining](./learn-async-backing.md) and
+[multi-threading](./learn-agile-coretime.md) to increase throughput and achieve concurrency,
+respectively. Polkadot also provides throughput boost via parallel computation for a single task
+with **elastic scaling**: parachains can use multiple cores to include multiple parablocks within
+the same relay chain block.
 
 The relay chain receives a sequence of parachain blocks on multiple cores, which are validated and
 checked if all their state roots line up during their inclusion, but assume they’re unrelated

@@ -438,6 +438,88 @@ module.exports = {
           items: [
             {
               type: "category",
+              label: "Architecture",
+              description: "Nominators, Validators, Collators, Parachains, and more.",
+              link: {
+                type: 'doc',
+                id: 'learn/learn-architecture',
+              },
+              items: [
+                "learn/learn-consensus",
+                "learn/learn-parachains-protocol",
+                "learn/learn-async-backing",
+                {
+                  type: "category",
+                  label: "Scheduling",
+                  description: "Concepts, Implementation and Tutorials on Agile Coretime.",
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-agile-coretime",
+                  },
+                  items: [
+                    "learn/learn-guides-coretime-marketplaces",
+                    "learn/learn-guides-coretime-parachains",
+                  ],
+                },
+                "learn/learn-elastic-scaling",
+                {
+                  type: "category",
+                  label: "Parachains",
+                  description: "Parachains' Protocol, Auctions, Crowdloans, and more.",
+                  link: {
+                    type: 'generated-index',
+                    title: "Polkadot's Parachains",
+                    description: "Everything about Polkadot's Parachains.",
+                    slug: '/learn-parachains-index',
+                  },
+                  items: [
+                    "learn/learn-parachains",
+                    "learn/learn-system-chains",
+                    "learn/learn-parachains-faq",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Bridges",
+                  description: "Bridging Polkadot to other Blockchain Protocols.",
+                  link: {
+                    type: 'doc',
+                    id: "learn/learn-bridges",
+                  },
+                  items: [
+                    "learn/learn-snowbridge",
+                    "learn/learn-hyperbridge",
+                    "learn/learn-dot-ksm-bridge",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Cross Consensus Messaging (XCM)",
+                  description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
+                  link: {
+                    type: 'generated-index',
+                    title: "Polkadot's XCM",
+                    description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
+                    slug: '/learn-xcm-index',
+                  },
+                  items: [
+                    'learn/learn-xcm',
+                    'learn/learn-xcm-pallet',
+                    'learn/learn-xcm-usecases',
+                    'learn/learn-xcm-transport',
+                    'learn/learn-xcvm',
+                    'learn/learn-xcm-instructions',
+                  ],
+                },
+              ],
+            },
+            'learn/learn-account-advanced',
+            "learn/learn-staking-advanced",
+            "learn/learn-nft-pallets",
+            "learn/learn-cryptography",
+            'learn/learn-phragmen',
+            {
+              type: "category",
               label: "Polkadot-JS",
               description: 'Overview of Polkadot-JS.',
               link: {
@@ -520,90 +602,6 @@ module.exports = {
                 },
               ],
             },
-            {
-              type: "category",
-              label: "Architecture",
-              description: "Nominators, Validators, Collators, Parachains, and more.",
-              link: {
-                type: 'doc',
-                id: 'learn/learn-architecture',
-              },
-              items: [
-                "learn/learn-consensus",
-                {
-                  type: "category",
-                  label: "Parachains",
-                  description: "Parachains' Protocol, Auctions, Crowdloans, and more.",
-                  link: {
-                    type: 'generated-index',
-                    title: "Polkadot's Parachains",
-                    description: "Everything about Polkadot's Parachains.",
-                    slug: '/learn-parachains-index',
-                  },
-                  items: [
-                    "learn/learn-parachains",
-                    "learn/learn-parachains-protocol",
-                    "learn/learn-system-chains",
-                    "learn/learn-parachains-faq",
-                  ],
-                },
-                "learn/learn-async-backing",
-                {
-                  type: "category",
-                  label: "Agile Coretime",
-                  description: "Concepts, Implementation and Tutorials on Agile Coretime.",
-                  link: {
-                    type: 'generated-index',
-                    title: "Agile Coretime",
-                    description: "Concepts, Implementation and Tutorials on Agile Coretime.",
-                    slug: '/learn-agile-coretime-index',
-                  },
-                  items: [
-                    "learn/learn-agile-coretime",
-                    "learn/learn-guides-coretime-marketplaces",
-                    "learn/learn-guides-coretime-parachains",
-                  ],
-                },
-                {
-                  type: "category",
-                  label: "Bridges",
-                  description: "Bridging Polkadot to other Blockchain Protocols.",
-                  link: {
-                    type: 'doc',
-                    id: "learn/learn-bridges",
-                  },
-                  items: [
-                    "learn/learn-snowbridge",
-                    "learn/learn-hyperbridge",
-                    "learn/learn-dot-ksm-bridge",
-                  ],
-                },
-                {
-                  type: "category",
-                  label: "Cross Consensus Messaging (XCM)",
-                  description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
-                  link: {
-                    type: 'generated-index',
-                    title: "Polkadot's XCM",
-                    description: "Polkadot's Cross-Consensus Messaging Format (XCM).",
-                    slug: '/learn-xcm-index',
-                  },
-                  items: [
-                    'learn/learn-xcm',
-                    'learn/learn-xcm-pallet',
-                    'learn/learn-xcm-usecases',
-                    'learn/learn-xcm-transport',
-                    'learn/learn-xcvm',
-                    'learn/learn-xcm-instructions',
-                  ],
-                },
-              ],
-            },
-            'learn/learn-account-advanced',
-            "learn/learn-staking-advanced",
-            "learn/learn-nft-pallets",
-            "learn/learn-cryptography",
-            'learn/learn-phragmen',
           ],
         },
         {
@@ -777,7 +775,6 @@ module.exports = {
           },
           items: [
             'learn/learn-spree',
-            "learn/learn-elastic-scaling",
             "learn/learn-safrole",
             {
               type: "category",

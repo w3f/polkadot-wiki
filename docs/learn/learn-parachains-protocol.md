@@ -1,7 +1,7 @@
 ---
 id: learn-parachains-protocol
-title: Parachains' Protocol Overview
-sidebar_label: Protocol Overview
+title: Security Protocol Overview
+sidebar_label: Security Protocol
 description: Actors and Protocols involved in Polkadot and its Parachains' Block Finality.
 keywords:
   [
