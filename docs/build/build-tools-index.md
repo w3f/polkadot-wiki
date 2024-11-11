@@ -121,8 +121,8 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
   ReactJS-based starter UI for custom user interfaces for Substrate chains.
 - [Polkadot JS Browser Extension](https://github.com/polkadot-js/extension) - Key management in a
   Chrome extension.
-- [Polkadot UI](https://polkadot-ui.info/) - A library and platform for developing and publishing
-  assets for Polkadot dapps.
+- [PAPI Developer Console](https://dev.papi.how/explorer)
+- [Polkadot Developer Console](https://console.polkadot.cloud/)
 
 ## Libraries
 
