@@ -1789,7 +1789,7 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@6.0.0"
 
-"@docusaurus/module-type-aliases@3.6.1":
+"@docusaurus/module-type-aliases@3.6.1", "@docusaurus/module-type-aliases@^3.6.1":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.6.1.tgz#2780e19411d0c8b16d46a032eae9e60e742ae681"
   integrity sha512-J+q1jgm7TnEfVIUZImSFeLA1rghb6nwtoB9siHdcgKpDqFJ9/S7xhQL2aEKE7iZMZYzpu+2F390E9A7GkdEJNA==
@@ -1802,16 +1802,16 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@6.0.0"
 
-"@docusaurus/plugin-client-redirects@^3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-3.6.0.tgz#54155826e9e5da625e296eb93e346c11c1541a78"
-  integrity sha512-LIqRT6dtgxdENQH8XYwOOyxfKuzFD1ayJmIDCp9Yi/rbdcPE4vvTcESLGXOKvcyWZSfyCu+JA8Tyk4qpp+2J0w==
+"@docusaurus/plugin-client-redirects@^3.6.1":
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-3.6.1.tgz#a035708ff13234a30dbaa84526ab12a102e00d07"
+  integrity sha512-gY1LEQw4zSLSPNVxZk9mDj5ct+sJNux0SiY1PbMiI9sK8xXqkTC7QuRyrxRPelSZX9K4nyhK8PjYbVXAN+GUWQ==
   dependencies:
-    "@docusaurus/core" "3.6.0"
-    "@docusaurus/logger" "3.6.0"
-    "@docusaurus/utils" "3.6.0"
-    "@docusaurus/utils-common" "3.6.0"
-    "@docusaurus/utils-validation" "3.6.0"
+    "@docusaurus/core" "3.6.1"
+    "@docusaurus/logger" "3.6.1"
+    "@docusaurus/utils" "3.6.1"
+    "@docusaurus/utils-common" "3.6.1"
+    "@docusaurus/utils-validation" "3.6.1"
     eta "^2.2.0"
     fs-extra "^11.1.1"
     lodash "^4.17.21"
