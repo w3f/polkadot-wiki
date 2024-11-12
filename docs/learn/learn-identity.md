@@ -105,6 +105,10 @@ Registrar 3: <br /> **Account**: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HF
 0.5 DOT <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
 [website](https://polkadot.polkassembly.io/).
 
+Registrar 4: <br /> **URL**: https://polkaidentity.com/ <br /> **Account**: 16LYBUcQKWZjAYE4oAPWx9XFaEYnCAffwpPuPWrUvU1mqBZT <br /> **Fee**:
+0.5 DOT <br /> PolkaIdentity (Registrar 4) provides setting on-chain ID as a service on their
+[website](https://polkaidentity.com/).
+
 </TabItem>
 <TabItem value="kusama">
 
@@ -128,7 +132,7 @@ Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ
 0.04 KSM <br /> Polkassembly (Registrar 5) provides setting on-chain ID as a service on their
 [website](https://kusama.polkassembly.io/).
 
-Registrar 6: <br /> **Account**: HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**:
+Registrar 6: <br /> **URL**: https://polkaidentity.com/ <br /> **Account**: HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**:
 0.04 KSM <br /> PolkaIdentity (Registrar 6) provides setting on-chain ID as a service on their
 [website](https://polkaidentity.com/).
 
