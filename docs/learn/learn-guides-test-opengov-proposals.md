@@ -203,3 +203,17 @@ await api.rpc('dev_setStorage', {
 })
 await api.rpc('dev_newBlock')
 ```
+
+If there are referenda that are to be submitted on Root track and you like to test it, you can use the same template as above and replace 
+```
+           origin: {
+             origins: 'FellowshipAdmin'
+           }
+```
+with
+
+```
+           system: {
+             origin: 'Root'
+           }
+```
