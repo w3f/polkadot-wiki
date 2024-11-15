@@ -36,8 +36,8 @@ mechanisms:
 The outflow is determined by the following mechanisms:
 
 - **Burned tokens:** at the end of each spend period,
-  [a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
-  burned.
+  **[a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
+  burned**.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
   community and need to be approved by governance. Then, payouts occur at the end of a
   [spend period](../general/glossary.md#spend-period).

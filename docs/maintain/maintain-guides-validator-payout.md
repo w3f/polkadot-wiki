@@ -184,12 +184,10 @@ This includes the stake of the validator itself plus any stake bonded by nominat
 :::info
 
 Validators set their preference as a percentage of the block reward, _not_ an absolute number of
-DOT. Polkadot's block reward is
-[based on the _total_ amount at stake](../learn/learn-inflation.md#ideal-staking-rate). The
-commission is set as the amount taken by the validator; that is, 0% commission means that the
-validator does not receive any proportion of the rewards besides that owed to it from self-stake,
-and 100% commission means that the validator operator gets all rewards and gives none to its
-nominators.
+DOT. Polkadot's block reward is based on the _total_ amount at stake. The commission is set as the
+amount taken by the validator; that is, 0% commission means that the validator does not receive any
+proportion of the rewards besides that owed to it from self-stake, and 100% commission means that
+the validator operator gets all rewards and gives none to its nominators.
 
 :::
 

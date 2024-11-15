@@ -170,8 +170,7 @@ and work together to improve it.
 
 But from where are those incentives coming from? Polkadot's native token
 [DOT is inflationary](../learn/learn-inflation.md). Inflation is used to pay validators for running
-nodes and reward nominators for providing the necessary stake to secure the network. Depending on
-the staking rate, part of the inflation is diverted to the treasury.
+nodes and reward nominators for providing the necessary stake to secure the network.
 
 ### Governance and Treasury
 
