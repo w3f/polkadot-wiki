@@ -19,13 +19,16 @@ of which 15% goes to the [treasury](./learn-polkadot-opengov-treasury.md) and 85
 It is essential to understand that the primary objective of inflation is to incentivize network
 participants through
 [Nominated Proof of Stake (NPoS)](./learn-consensus.md#nominated-proof-of-stake) and to grow the
-network through funding the on-chain treasury. Token inflation rate can be updated in the future
-through [on-chain governance](./learn-polkadot-opengov.md) based on thorough tokenomics research.
+network through funding the on-chain treasury. The token inflation rate can be updated through
+[on-chain governance](./learn-polkadot-opengov.md) based on thorough tokenomics research.
 
-Below is a 25-year prediction of DOT gross annual inflation assuming current fixed inflation rate.
+Below is a 25-year prediction of DOT gross annual inflation (red line) and DOT total issuance (blue
+line), assuming the current fixed inflation rate.
+
+![inflation](../assets/dot-inflation.png)
 
 Net DOT inflation depends on [treasury expenditures](./learn-polkadot-opengov-treasury.md) and
-[coretime sales](./learn-agile-coretime.md#agile-coretime-implementation), and thus cannot be
+[coretime sales](./learn-agile-coretime.md#agile-coretime-implementation) and thus cannot be
 predicted. Net inflation can be defined as follows:
 
 ```
