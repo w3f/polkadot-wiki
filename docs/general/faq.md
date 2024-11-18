@@ -212,12 +212,11 @@ ten billion) Plancks, meaning that the new DOT was valued at ten decimal places.
 
 ### What is the inflation rate of the DOT?
 
-The inflation rate is approximately 10% per year.
+The inflation rate is approximately 120,000,000 DOT per year.
 
-A portion of the inflation is rewarded to validators for performing their duties, while another
-portion may go directly to the treasury. The exact percentage that goes into both varies and is
-based on the amount of DOT that are staked. Please see the article on
-[inflation](../learn/learn-staking.md/#inflation) for more information.
+The 85% of inflation is rewarded to validators for performing their duties, while the 15% goes to
+the treasury. Please see the article on [inflation](../learn/learn-staking.md/#inflation) for more
+information.
 
 ### Why can't crowdloaned DOT be staked?
 

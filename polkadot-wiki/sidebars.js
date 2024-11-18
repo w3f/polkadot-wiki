@@ -1001,6 +1001,7 @@ module.exports = {
         "general/kusama/kusama-adversarial-cheatsheet",
         "maintain/kusama/maintain-guides-society-kusama",
         "maintain/kusama/maintain-guides-how-to-validate-kusama",
+        "learn/learn-kusama-inflation",
       ],
     },
   ],

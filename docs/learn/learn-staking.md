@@ -452,21 +452,8 @@ automatically check if you qualify. For more information, visit the
 - Can choose [multiple validators](../general/chain-state-values.md#maximum-votes-per-nominator)
   which can help to decentralize the network through the sophisticated
   [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
-- 10% inflation/year of the tokens is primarily intended for staking rewards.
-
-When the system staking rate matches with the ideal staking rate, the entire inflation of the
-network is given away as the staking rewards.
-
-The ideal staking rate is a dynamic value - as the number of active parachains influences the
-available liquidity that is available to secure the network.
-
-Any divergence from the ideal staking rate will result in the distribution of a proportion of the
-newly minted tokens through inflation to go to the treasury. Keep in mind that when the system's
-staking rate is lower than the ideal staking rate, the annual nominal return rate will be higher,
-encouraging more users to use their tokens for staking. On the contrary, when the system staking
-rate is higher than the ideal staking rate, the annual nominal return will be less, encouraging some
-users to withdraw. For in-depth understanding, check the
-[inflation](learn-staking-advanced.md#inflation) section on the Wiki.
+- 85% of inflation/year of the tokens is primarily intended for staking rewards. Check the
+  [inflation](learn-staking-advanced.md#inflation) section on the Wiki for more information.
 
 ### Cons of Staking
 

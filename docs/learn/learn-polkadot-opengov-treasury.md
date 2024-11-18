@@ -27,12 +27,7 @@ mechanisms:
 
 - **Transaction fees:** 80% of the transaction fees of every submitted extrinsic is diverted to the
   Treasury, while 20% is given to the block producers.
-- **Staking inefficiencies:** the network knows an exogenously determined parameter called ideal
-  staking rate. The APY for stakers (nominators & validators) decreases whenever the actual staking
-  rate is not equal to the ideal staking rate. To keep inflation constant at 10%, the system does
-  not creates less tokens, rather some share of the overall reward for stakers is diverted to the
-  Treasury (more information
-  [here](https://research.web3.foundation/Polkadot/overview/token-economics)).
+- **Inflation:** 15% of DOT annual inflation is directed to the Treasury.
 - **Slashes:** whenever validators and nominators are [slashed](./learn-offenses.md), a share of the
   slashed tokens are diverted to Treasury. They are typically rare and unpredictable events.
 - **Transfers:** everyone can send funds to the Treasury directly. This is a rare event and
@@ -41,8 +36,8 @@ mechanisms:
 The outflow is determined by the following mechanisms:
 
 - **Burned tokens:** at the end of each spend period,
-  [a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
-  burned.
+  **[a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
+  burned**.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
   community and need to be approved by governance. Then, payouts occur at the end of a
   [spend period](../general/glossary.md#spend-period).

@@ -127,6 +127,7 @@ Coretime is managed through the
 which is deployed on the Coretime Chain. In theory, the Polkadot relay chain can support around a
 hundred cores seamlessly and can support over a few hundred cores through optimizations. Preliminary
 tests ran successfully with 80 cores with 12-second block times.
+[**Coretime revenue sales are burned**](https://app.regionx.tech/?network=polkadot).
 
 ### Coretime Sales
 
