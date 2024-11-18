@@ -356,9 +356,9 @@ found [here](../learn/learn-accounts.md/#derivation-paths).
 For Ledger users staking directly on Ledger Live, currently, there is no option to use separate
 stash and staking proxy accounts.
 
-Ledger devices are now supported in [SubWallet](https://www.subwallet.app/download.html) and
+Ledger devices are now supported in [PolkaGate](https://polkagate.xyz/), [SubWallet](https://www.subwallet.app/download.html) and
 [Talisman](https://talisman.xyz/) extension. Users can import their Ledger accounts in the extension
-and use them as a stash in staking. You can find more information about SubWallet, Talisman and
+and use them as a stash in staking. You can find more information about, PolkaGate, SubWallet, Talisman and
 other wallets that officially secured funding from the treasury
 [here](../general/wallets-and-extensions.md).
 
