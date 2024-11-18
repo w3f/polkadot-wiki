@@ -126,7 +126,7 @@ The Polkadot Ledger Generic app brings the following benefits:
   app.
 
 The Polkadot Ledger Generic app will be supported by Ledger Live,
-[Nova Wallet](https://novawallet.io/), [Talisman](https://www.talisman.xyz/), and
+[Nova Wallet](https://novawallet.io/), [PolkaGate](https://polkagate.xyz/), [Talisman](https://www.talisman.xyz/), and
 [Subwallet](https://www.subwallet.app/).
 
 For more information about the Polkadot Generic App, see the

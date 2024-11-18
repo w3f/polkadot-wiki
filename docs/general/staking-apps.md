@@ -30,7 +30,7 @@ pools. The dashboard supports [Ledger](../general/ledger.md),
 [Polkadot Vault](../general/polkadot-vault.md),
 [SubWallet](../general/wallets-and-extensions.md#subwallet),
 [Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
-PolkaGate, and Enkrypt. The dashboard also supports
+[PolkaGate](../general/wallets-and-extensions.md#polkagate), and Enkrypt. The dashboard also supports
 [staking proxies](../learn/learn-proxies.md#staking-proxy).
 
 You can find more information about the Polkadot staking dashboard on the dedicated
