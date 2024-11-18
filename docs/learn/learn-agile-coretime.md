@@ -233,7 +233,7 @@ better use of the existing cores).
 
 Teams in the ecosystem are working on a UI. RegionX has released an app for testing on
 Paseo: https://app.regionx.tech/. Without the UI, this would be automated from the parachains’
-runtimes or manually with Coretime Chain extrinsics via polkadot.js.
+runtimes or manually with Coretime Chain extrinsics via Polkadot-JS.
 
 ### Coretime Pricing and Purchasing
 

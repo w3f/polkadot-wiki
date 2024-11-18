@@ -71,7 +71,7 @@ available&nbsp;<a href="https://github.com/paritytech/subxt" target="_blank">her
 
 <TabItem value="useink">
 
-React hooks library for ink! smart contracts that abstract the functionality of polkadot.js. Full
+React hooks library for ink! smart contracts that abstract the functionality of Polkadot-JS. Full
 documentation & examples available&nbsp;<a href="https://use.ink" target="_blank">here</a>.
 
 </TabItem>

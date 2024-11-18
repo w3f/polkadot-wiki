@@ -28,13 +28,13 @@ This guide aims to get you up and running with the basics of:
 Before starting to work with coretime, you'll need some ROC tokens to pay fees, reserve a
 [ParaId](../general/glossary.md#paraid), and more.
 
-Head over to Polkadot.js to reserve a [ParaId](../general/glossary.md#paraid). We'll need a ParaId
+Head over to Polkadot-JS to reserve a [ParaId](../general/glossary.md#paraid). We'll need a ParaId
 to upload our parachain's code:
 
-1. Get the [Polkadot.js Web Extension.](https://polkadot.js.org/extension/)
+1. Get the [Polkadot-JS Web Extension.](https://polkadot.js.org/extension/)
 2. Create a wallet, and get some [ROC via the faucet.](https://faucet.polkadot.io/) with your new
    address.
-3. Go to the [Polkadot.js Web App](https://polkadot.js.org/apps/#), and make sure you select
+3. Go to the [Polkadot-JS Web App](https://polkadot.js.org/apps/#), and make sure you select
    **Paseo** as your network via the tabs on the side
    [or visit this link to get to Paseo directly](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpaseo.dotters.network#/explorer)
 4. Head to
@@ -42,7 +42,7 @@ to upload our parachain's code:
 5. [Follow these instructions to reserve a ParaId.](../learn/learn-guides-coretime-parachains.md#reserve-paraid)
 
 Visit the [Accounts](https://polkadot.js.org/apps/#/accounts) tab to view all registered accounts
-and associated balances within the Polkadot.js Extension. Once finished, you should see your new
+and associated balances within the Polkadot-JS Extension. Once finished, you should see your new
 ParaId at the bottom of the list within
 [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) with the
 option to "Deregister" to the right:
@@ -400,7 +400,7 @@ for doing so:
 
 ![Region X cross chain transfer](../assets/coretime/regionx-cross-chain-roc.png)
 
-2. Sign the transaction with Polkadot.js. If all goes well, you should see the balance update in the
+2. Sign the transaction with Polkadot-JS. If all goes well, you should see the balance update in the
    upper right:
 
 ![Region X cross chain transfer](../assets/coretime/regionx-balance-change.png)
