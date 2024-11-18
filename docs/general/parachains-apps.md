@@ -52,7 +52,7 @@ Astar/Shiden tokens on specific dApps they wish to support and get a portion of 
 distributed at every block. Portal also allows unbonding, rewards compounding and nomination
 transfer.
 
-Astar Portal supports Polkadot native accounts (Polkadot.js, Talisman, SubWallet, Clover, Math
+Astar Portal supports Polkadot native accounts (Polkadot-JS, Talisman, SubWallet, Clover, Math
 Wallet, Hana Wallet, OneKey), Multisig accounts (PolkaSafe) and EVM accounts (MetaMask, Talisman,
 SubWallet, Hana Wallet, OneKey).
 

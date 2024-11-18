@@ -34,8 +34,8 @@ Polkassembly ensures that the community remains at the heart of the decision-mak
 - Authentication: To provide maximum security, Polkassembly enables a two-factor authentication
   process.
 - Linking Your Polkadot or Kusama Account:
-  1. Connect your Polkadot or Kusama account from Subwallet, Talisman, Nova, PolkaGate, Polkadot.JS for
-     seamless proposal tracking and voting.
+  1. Connect your Polkadot or Kusama account from Subwallet, Talisman, Nova, PolkaGate, Polkadot-JS
+     for seamless proposal tracking and voting.
   2. Polkasafe (for multisigs) - vote and create proposals with Multisigs by logging in with
      [Polkasafe](https://polkasafe.xyz/)
 

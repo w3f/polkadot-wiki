@@ -34,7 +34,7 @@ Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
 - **Transaction Tracking**: Offers real-time synchronization of transactions across different
   account levels.
 - **Third-Party Application Integration**: Users can access third-party applications with their
-  multisig identities. Mimir currently supports integration with applications like Polkadot.js and
+  multisig identities. Mimir currently supports integration with applications like Polkadot-JS and
   is planning to expand to others.
 - **User-Friendly Interface**: Designed for ease of use, making complex multisig operations more
   accessible.

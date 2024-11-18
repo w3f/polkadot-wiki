@@ -102,11 +102,11 @@ a pool with no or low liquidity.
 - [This repository](https://github.com/bee344/asset-conversion-example/tree/main) contains the
   complete workflow on how to create a liquidity pool for a given asset, add liquidity to it and
   then build a transaction to pays fees with this asset (including fees estimation). It is done with
-  several libraries: Polkadot.js API and Subxt.
+  several libraries: Polkadot-JS API and Subxt.
 - [Example using Asset Transfer API](https://github.com/paritytech/asset-transfer-api/blob/main/examples/polkadot/assetHub/paysWithFeeOriginTransfers/dotToHydrationPaysWithGLMR.ts)
   to do a cross-chain transfer in Polkadot Asset Hub paying fees with GLMR.
 - [A simple script](https://github.com/bee344/asset-hub-examples/blob/main/polkadot-js-example/src/foreignAssetTransferWithFee.ts)
-  using Polkadot.js API to do a local transfer of bridged KSM in Polkadot Asset Hub paying fees with
+  using Polkadot-JS API to do a local transfer of bridged KSM in Polkadot Asset Hub paying fees with
   USDT.
 
 ### Foreign Assets
