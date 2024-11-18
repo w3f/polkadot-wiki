@@ -27,9 +27,12 @@ line), assuming the current fixed inflation rate.
 
 ![inflation](../assets/dot-inflation.png)
 
+The total issuance takes into account the gross DOT inflation and thus does not consider tokens that
+are burned.
+
 Net DOT inflation depends on [treasury burns](./learn-polkadot-opengov-treasury.md) and
-[coretime sales](./learn-agile-coretime.md#agile-coretime-implementation) and thus cannot be
-predicted. Net inflation can be defined as follows:
+[coretime sales](./learn-agile-coretime.md#agile-coretime-implementation) that are variables and
+thus cannot be predicted. Net inflation can be defined as follows:
 
 ```
 
