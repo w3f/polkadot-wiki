@@ -11,11 +11,9 @@ import MessageBox from "../../components/MessageBox"; import "../../components/M
 
 <MessageBox message="[Learn about Polkadot's native token DOT inflation](./learn-inflation)." />
 
-KSM is an inflationary token. Inflation is
-[set to be 10% annually](https://github.com/paritytech/polkadot-sdk/blob/756ccc35e93d1a78e3c71a0e67ae4da5f1d09f69/runtime/kusama/src/lib.rs#L535).
-Depending on the supply staked and the ideal staking rate (more about this below), part of the
-inflation is distributed to the stakers and part to the
-[treasury](./learn-polkadot-opengov-treasury.md).
+KSM is an inflationary token. Inflation is set to be 10% annually. Depending on the supply staked
+and the ideal staking rate (more about this below), part of the inflation is distributed to the
+stakers and part to the [treasury](./learn-polkadot-opengov-treasury.md).
 
 :::info
 

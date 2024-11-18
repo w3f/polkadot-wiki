@@ -9,10 +9,10 @@ slug: ../learn-inflation
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="[Polkadot transitioned from an exponential inflation model to a linear inflation model in November 2024.](https://forum.polkadot.network/t/proposal-for-adjusting-polkadots-inflation-system-reducing-issuance-and-complexity/9157) The exponential inflation model is still in use for [Kusama](./learn-kusama-inflation)." />
+<MessageBox message="[In November 2024, Polkadot transitioned from a model that led to exponential growth in the token supply (but with a constant inflation rate) to one with linear growth (with a decreasing inflation rate).](https://forum.polkadot.network/t/proposal-for-adjusting-polkadots-inflation-system-reducing-issuance-and-complexity/9157) The constant inflation rate model is still in use for [Kusama](./learn-kusama-inflation)." />
 
 DOT is an inflationary token, with
-[**fixed annual inflation of 120,000,000 DOT**](https://github.com/polkadot-fellows/runtimes/pull/471),
+[**fixed annual expansion of the token supply of 120,000,000 DOT**](https://github.com/polkadot-fellows/runtimes/pull/471),
 of which 15% goes to the [treasury](./learn-polkadot-opengov-treasury.md) and 85% to
 [stakers](./learn-staking.md).
 
@@ -27,7 +27,7 @@ line), assuming the current fixed inflation rate.
 
 ![inflation](../assets/dot-inflation.png)
 
-Net DOT inflation depends on [treasury expenditures](./learn-polkadot-opengov-treasury.md) and
+Net DOT inflation depends on [treasury burns](./learn-polkadot-opengov-treasury.md) and
 [coretime sales](./learn-agile-coretime.md#agile-coretime-implementation) and thus cannot be
 predicted. Net inflation can be defined as follows:
 
