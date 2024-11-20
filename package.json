@@ -41,7 +41,7 @@
     "@actions/github": "^6.0.0",
     "@crowdin/cli": "^4.3.0",
     "@docusaurus/core": "^3.6.1",
-    "@docusaurus/module-type-aliases": "^3.6.1",
+    "@docusaurus/module-type-aliases": "^3.6.2",
     "@docusaurus/plugin-client-redirects": "^3.6.2",
     "@docusaurus/preset-classic": "^3.6.2",
     "@octokit/rest": "^21.0.2",
@@ -67,7 +67,7 @@
     "yargs": "^17.7.2"
   },
   "dependencies": {
-    "@algolia/client-search": "^5.14.2",
+    "@algolia/client-search": "^5.15.0",
     "@apollo/client": "^3.11.10",
     "@docusaurus/theme-mermaid": "^3.6.2",
     "bufferutil": "^4.0.8",
