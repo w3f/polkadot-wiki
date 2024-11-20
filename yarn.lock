@@ -2093,7 +2093,7 @@
     vfile "^6.0.1"
     webpack "^5.88.1"
 
-"@docusaurus/module-type-aliases@3.6.1", "@docusaurus/module-type-aliases@^3.6.1":
+"@docusaurus/module-type-aliases@3.6.1":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.6.1.tgz#2780e19411d0c8b16d46a032eae9e60e742ae681"
   integrity sha512-J+q1jgm7TnEfVIUZImSFeLA1rghb6nwtoB9siHdcgKpDqFJ9/S7xhQL2aEKE7iZMZYzpu+2F390E9A7GkdEJNA==
@@ -2106,7 +2106,7 @@
     react-helmet-async "*"
     react-loadable "npm:@docusaurus/react-loadable@6.0.0"
 
-"@docusaurus/module-type-aliases@3.6.2":
+"@docusaurus/module-type-aliases@3.6.2", "@docusaurus/module-type-aliases@^3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.6.2.tgz#7432618696668acc9a7cfb47de66c6987cd57680"
   integrity sha512-NrJkL2rLTCjHtWOqUvWzwqvJrsKLj0gVJeV6q5yeKdKKgItietcTf2fTRkM9LHKSUN8CBDXxwHABeQvTahvmXQ==
