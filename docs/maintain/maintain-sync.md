@@ -171,7 +171,7 @@ value: 'linux-package'} ]}>
   ```bash
   git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
   cd polkadot-sdk
-  ./scripts/init.sh
+  ./scripts/getting-started.sh
   cargo build --release
   ```
 - Start your node:
