@@ -79,10 +79,10 @@ distributed state machines where increments of data are stored within blocks tha
 other using hash functions. For example, the hash of block `N + 1` contains data of that block
 together with the hash of the previous block `N`. This creates the situation where if you modify the
 content of block `N` you will change the hash of block `N + 1`, `N + 2`, etc. essentially breaking
-the chain. If a blockchain network is not sufficiently decentralized, it can be possible to add an 
-invalid block (a block with invalid transactions) or to censor certain transactions. In decentralized
-proof-of-stake blockchains like Polkadot however, such attacks are financially expensive and 
-attempting them can get you [slashed](../learn/learn-offenses.md).
+the chain. If a blockchain network is not sufficiently decentralized, it can be possible to add an
+invalid block (a block with invalid transactions) or to censor certain transactions. In
+decentralized proof-of-stake blockchains like Polkadot however, such attacks are financially
+expensive and attempting them can get you [slashed](../learn/learn-offenses.md).
 
 So, with blockchain as a means of storing data and transactions permanently without an option to
 modify them, we can ensure what we cryptographically sign with our digital identity is set in stone
