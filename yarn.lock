@@ -2057,7 +2057,7 @@
     vfile "^6.0.1"
     webpack "^5.88.1"
 
-"@docusaurus/module-type-aliases@3.6.2", "@docusaurus/module-type-aliases@^3.6.2":
+"@docusaurus/module-type-aliases@3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.6.2.tgz#7432618696668acc9a7cfb47de66c6987cd57680"
   integrity sha512-NrJkL2rLTCjHtWOqUvWzwqvJrsKLj0gVJeV6q5yeKdKKgItietcTf2fTRkM9LHKSUN8CBDXxwHABeQvTahvmXQ==
@@ -2309,11 +2309,29 @@
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-mermaid/-/theme-mermaid-3.6.2.tgz#f7ad64ae5b9510ddbf77bc4264ada059c8e815b1"
   integrity sha512-Ui+rBtqMPKj3RCOxNlY04i1tEjNg+fZg4URTvkHmYR07hcKaJw+vkw+wlaYjd0HFZk+3Er9vUAcwsCWuea4cVQ==
   dependencies:
-    "@docusaurus/core" "3.6.2"
-    "@docusaurus/module-type-aliases" "3.6.2"
-    "@docusaurus/theme-common" "3.6.2"
-    "@docusaurus/types" "3.6.2"
-    "@docusaurus/utils-validation" "3.6.2"
+    "@docusaurus/mdx-loader" "3.6.3"
+    "@docusaurus/module-type-aliases" "3.6.3"
+    "@docusaurus/utils" "3.6.3"
+    "@docusaurus/utils-common" "3.6.3"
+    "@types/history" "^4.7.11"
+    "@types/react" "*"
+    "@types/react-router-config" "*"
+    clsx "^2.0.0"
+    parse-numeric-range "^1.3.0"
+    prism-react-renderer "^2.3.0"
+    tslib "^2.6.0"
+    utility-types "^3.10.0"
+
+"@docusaurus/theme-mermaid@^3.6.3":
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-mermaid/-/theme-mermaid-3.6.3.tgz#4bb0b4940b39cc855626a23190aa45928aa168b4"
+  integrity sha512-kIqpjNCP/9R2GGf8UmiDxD3CkOAEJuJIEFlaKMgQtjVxa/vH+9PLI1+DFbArGoG4+0ENTYUq8phHPW7SeL36uQ==
+  dependencies:
+    "@docusaurus/core" "3.6.3"
+    "@docusaurus/module-type-aliases" "3.6.3"
+    "@docusaurus/theme-common" "3.6.3"
+    "@docusaurus/types" "3.6.3"
+    "@docusaurus/utils-validation" "3.6.3"
     mermaid ">=10.4"
     tslib "^2.6.0"
 
