@@ -62,7 +62,7 @@ This workflow crafts an XCM transfer as shown below.
             "X1": {
               "AccountId32": {
                 "network": null,
-                "id": "0x9e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818"
+                "id": "this has to be the intended address"
               }
             }
           }
@@ -113,6 +113,9 @@ DOT which is registered as a foreign asset on Kusama Asset Hub can be transferre
 Hub through an extrinsic like the one below, whose call data is
 [`0x1f0b040202090200a10f04000101009e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818040402010902000700e40b54020000000000`](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics/decode/0x1f0b040202090200a10f04000101009e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818040402010902000700e40b54020000000000).
 
+***If you plan on reusing this extrinsic, ensure that you change the Account ID and the transfer amount
+below.***
+
 ![DOT transferred out from Kusama Asset Hub](../assets/bridge-hub/KAH-DOT-transfer-PAH.png)
 
 For reference, this [extrinsic](https://assethub-kusama.subscan.io/extrinsic/7015118-2) is signed
@@ -127,8 +130,9 @@ Kusama Asset Hub.
 
 The XCM transfer extrinsic shown below can be accessed
 [here.](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-asset-hub-rpc.polkadot.io#/extrinsics/decode/0x1f08030202090200a10f03000101008479c8ea5480acca5a847133cd97a87801b6e698a98f2eab0e8e9d5c51b14a33030400010000070088526a740000000000)
-If you plan on reusing this extrinsic, ensure that you change the Account ID and the transfer amount
-highlighted in the snapshot below.
+
+***If you plan on reusing this extrinsic, ensure that you change the Account ID and the transfer amount
+highlighted in the snapshot below.***
 
 ![PJS Snapshot KSM Transfer](../assets/bridge-hub/KAH-PAH-KSM-Transfer-PJS-Extrinsic.png)
 
