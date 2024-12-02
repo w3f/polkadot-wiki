@@ -124,7 +124,7 @@ guidelines about clearing identities.
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.
 
-**Killing:** It is is possible to kill an identity that deems erroneous. This results in a slash of
+**Killing:** It is possible to kill an identity that deems erroneous. This results in a slash of
 the deposit.
 
 ## Setting Sub-Identities

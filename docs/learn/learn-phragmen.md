@@ -9,7 +9,7 @@ slug: ../learn-phragmen
 
 ## NPoS Election Algorithms
 
-Since validators are paid almost equally in in each era, it is important that the stake behind each
+Since validators are paid almost equally in each era, it is important that the stake behind each
 validator is uniformly spread out. An election algorithm for Nominated Proof of Staking (NPoS) will
 try to optimize three metrics when computing a solution graph of nominators and validators:
 
