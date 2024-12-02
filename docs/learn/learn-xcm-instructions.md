@@ -83,8 +83,8 @@ repository, where each instruction and register is explained in-depth.
 The following presents the practical mapping of instructions to some
 [core functionality in XCM](./learn-xcm.md#core-functionality-of-xcm).
 
-<Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'},
-{label: 'Functional Multichain Decomposition', value: 'fmd'} ]}>
+<Tabs groupId="operating-systems" values={[ {label: 'Programmability', value: 'program'}, {label:
+'Functional Multichain Decomposition', value: 'fmd'} ]}>
 
 <TabItem value="program">
 
