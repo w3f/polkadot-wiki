@@ -32,8 +32,8 @@ Both protocols have fundamentally different goals:
 - Ethereum is a general-purpose blockchain based on the Ethereum Virtual Machine (EVM). Ethereum is
   not specialized nor optimized for any particular application. Instead, its primary focus is the
   Ethereum Virtual Machine for executing smart contracts. Ethereum achieves scalability via
-  [**rollups**](./learn-comparisons-rollups) are secondary protocols that utilize Ethereum as a
-  settlement layer.
+  [**rollups**](./learn-comparisons#rollup-comparison) are secondary protocols that utilize Ethereum
+  as a settlement layer.
 
 - Polkadot is a multi-chain protocol that provides shared security and secure interoperability for
   each of its **parachains**. Each parachain (also called an "appchain" in this context) is
@@ -82,7 +82,7 @@ validation to occur on the protocol level without needing a layer two solution.
 :::info Rollup vs. Parachain Comparison
 
 For a more in-depth comparison of parachains versus rollups, take a look at the
-[rollup comparison page](./learn-comparison-rollups.md)
+[rollup comparison page](./learn-comparisons.md#rollup-comparison).
 
 :::
 

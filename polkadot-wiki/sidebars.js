@@ -757,7 +757,6 @@ module.exports = {
             'learn/learn-comparisons-ethereum-2',
             'learn/learn-comparisons-cosmos',
             'learn/learn-comparisons-avalanche',
-            'learn/learn-comparisons-rollups'
           ],
         },
         "learn/learn-video-tutorials",
