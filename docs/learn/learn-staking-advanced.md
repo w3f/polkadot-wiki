@@ -102,8 +102,8 @@ The bags list is semi-sorted, meaning that sorting is only partially done. When 
 intents are submitted to the network, they are automatically put into each bag based on the number
 of bonded tokens, but within each bag, those nodes are arranged based on the time they are inserted
 and not based on their stake (see figure below). When the nomination intent of 19 DOT is submitted,
-it gets placed at the last spot in the 2nd bag (shown in the yellow circle). The same scenario
-applies for the node with 8 DOT (green circle) in the 3rd bag. Placing the node above all nodes with
+it gets placed at the last spot in the 2nd bag (shown in the green circle). The same scenario
+applies for the node with 8 DOT (yellow circle) in the 3rd bag. Placing the node above all nodes with
 a lesser stake requires an additional step (more on this later).
 
 ![bags list example 1](../assets/bags-list-example-1.png)
