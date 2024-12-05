@@ -322,7 +322,7 @@ Two different accounts can be used to securely manage your funds while staking.
   This will allow you:
 
   - to avoid carrying around your Ledger device just to sign staking-related transactions, and
-  - to and to keep the transaction history of your stash clean
+  - to keep the transaction history of your stash clean
 
 - **Staking Proxy:** This account acts on behalf of the stash account, signalling decisions about
   nominating and validating. It can set preferences like commission (for validators) and the staking
