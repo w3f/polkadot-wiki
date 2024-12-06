@@ -303,14 +303,14 @@ module.exports = {
     },
     docsSideNavCollapsible: true,
     /* Banner / Announcement bar */
-    // announcementBar: {
-    //   id: "banner",
-    //   content:
-    //     'The Web3 Summit is coming to Berlin this August! <a href="https://ti.to/web3-summit/web3-summit-2024" target="_blank" rel="noopener noreferrer">Get your ticket 👉</a>',
-    //   backgroundColor: '#e6007a',
-    //   textColor: 'white',
-    //   isCloseable: true,
-    // },
+     announcementBar: {
+       id: "banner",
+       content:
+         'The Polkadot Blockchain Academy is coming to Switzerland in 2025! <a href="https://polkadot.academy/campus-application-form/" target="_blank" rel="noopener noreferrer">Apply Here 👉</a>',
+       backgroundColor: '#e6007a',
+       textColor: 'white',
+       isCloseable: true,
+     },
     image: 'img/wiki-share-image.png'
   },
 };
