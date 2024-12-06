@@ -9,7 +9,7 @@ slug: ../ledger
 
 import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 
-<MessageBox message="If you need help using Ledger, see [this support article](https://support.ledger.com/hc/en-us/articles/360016289919-Polkadot-DOT?docs=true). If the problem persists, you can contact the
+<MessageBox message="If you need help using Ledger, see [this support article](https://support.ledger.com/article/Migrate-Assets-to-Polkadot-Generic-App-Accounts-Using-the-Polkadot-Generic-App). If the problem persists, you can contact the
 [Polkadot Support Team](https://support.polkadot.network/support/home)." />
 
 The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S,
@@ -106,6 +106,12 @@ identities, etc., from old Ledger accounts to a new one or an existing one creat
 Ledger app.
 
 ### Polkadot (Generic) App
+
+:::info Ledger Generic Support
+
+See [this page](https://data.parity.io/metadata) to see which chains support the Ledger Generic App.
+
+:::
 
 The Polkadot Ledger Generic App will allow you to use your Ledger device on the relay chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
