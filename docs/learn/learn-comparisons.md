@@ -33,8 +33,8 @@ single rollup.
 Layer two (L2) networks are popular as being the way forward for blockchain scalability by
 off-loading the majority of computation from layer one (L1) networks. L2 solutions utilize the L1
 network's security and functionality to build an additional layer that is often faster, reduces
-fees, and solves other platform-specific issues. In many cases, L2 solutions focus on utilizing
-block space on a particular blockchain efficiently and cost-effectively.
+fees, and solves other platform-specific issues. In many cases, L2 solutions focus on utilizing L1
+blockspace efficiently and cost-effectively.
 
 :::
 
@@ -43,6 +43,31 @@ In this section we explore the main differences in rollup technology between:
 - Polkadot rollups (i.e. parachains),
 - Optimistic rollups, and
 - Zero-knowledge rollups.
+
+**Security**: ZK Rollups offer the highest cryptographic security, while Optimistic Rollups depend
+on challenge mechanisms. Polkadot's shared security model provides robust guarantees with lower
+reliance on external mechanisms.
+
+**Centralization Risk**: ZK Rollups and Optimistic Rollups may face centralization risks in their
+sequencers or validators, whereas Polkadot parachains benefit from decentralized validator
+consensus.
+
+**Interoperability**: Polkadot excels in interoperability through its native XCM and XCMP protocols,
+allowing parachains to interact seamlessly. Rollups are generally ecosystem-bound.
+
+| **Feature**                | **ZK Rollups**                                                                                                 | **Optimistic Rollups**                                                                                      | **Polkadot Parachains/Rollups**                                                                                                            |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Finality**               | Near-instant finality. Because the proof is immediately available, finality is also instantaneous.             | Delayed finality (a week) due to fraud-proof mechanisms.                                                    | Fast finality (under 1 minute) via the relay chain's consensus mechanism.                                                                  |
+| **Security Model**         | Relies on cryptographic validity proofs, ensuring high security and no reliance on game-theoretic assumptions. | Relies on economic incentives and a challenge period to catch fraud, making it less secure than ZK Rollups. | Shared security is native, leveraging Polkadot's validator set and erasure coding for data availability. Strong Byzantine fault tolerance. |
+| **Scalability**            | High, but limited by computational expense and challenges in building generalized ZK circuits.                 | High, with better parallelization, but constrained by gas limitations in parent chains like Ethereum.       | Inherently scalable through native sharding and parachains operating in parallel.                                                          |
+| **Decentralization**       | Risk of centralization in sequencer roles and ZK proof computation.                                            | Sequencer centralization concerns, as validators are known and fewer in number.                             | Less prone to centralization, as relay-chain validators secure all parachains.                                                             |
+| **Interoperability**       | Limited to networks with compatible smart contract support.                                                    | Limited interoperability, often confined to the parent blockchain ecosystem.                                | Native interoperability through XCM and XCMP protocols, allowing seamless communication between parachains.                                |
+| **Development Complexity** | Difficult to implement and optimize due to the complexity of ZK proof systems.                                 | Simpler to implement but requires careful fraud-proof logic.                                                | Moderate; any runtime compiled to Wasm is valid, simplifying parachain development.                                                        |
+| **Data Availability**      | Requires posting minimal data proofs to L1. Often, the proof is enough to ensure validity.                     | Posts complete data on-chain during challenge periods, increasing cost.                                     | Built-in data availability with validators ensuring distributed state storage and reconstruction.                                          |
+| **Cost Efficiency**        | High efficiency but expensive prover computation.                                                              | More cost-effective but susceptible to congestion during high usage.                                        | Cost-effective as parachains are independently scalable and not tied to L1 gas fees.                                                       |
+| **Governance Upgrades**    | Subject to parent chain governance (e.g., Ethereum).                                                           | Governed by the parent chain.                                                                               | Protocol upgrades through forkless changes, enhancing adaptability.                                                                        |
+| **Fraud/Validity Proofs**  | Non-interactive validity proofs.                                                                               | Fraud proofs requiring active challenges during the dispute window.                                         | Interactive approval protocols to resolve parachain block disputes.                                                                        |
+| **Applications**           | Ideal for high-security use cases like financial transactions and identity.                                    | Best for general-purpose decentralized apps with moderate security requirements.                            | Supports diverse applications, including DeFi, gaming, and governance, thanks to Turing-complete parachains.                               |
 
 ### Optimistic Rollups
 
@@ -54,18 +79,6 @@ _challenge period_ during which participants may challenge a suspect rollup. A f
 can be in place to allow for several _fraud proofs_ to be submitted. Those proofs could make the
 rollup valid or invalid. During the challenge period, state changes may be disputed, resolved, or
 included if no challenge is presented (and the required proofs are in place).
-
-|                                                                                                                           **Pros of Optimistic Rollups**                                                                                                                            |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                      They are not limited by the type of state change - any state change can be included, meaning existing apps do not have to account for it.                                                                      |
-|                                                                                                                      They can be parallelized for scalability.                                                                                                                      |
-| A substantial amount of data can fit within a single rollup ([in the case of Ethereum, for example](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/#scaling-ethereum-with-optimistic-rollups), tens of thousands of transactions in a single state transition). |
-
-|                                                                               **Cons of Optimistic Rollups**                                                                                |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                           Transaction censorship and centralization are of concern, where sequencers/L2 nodes can be compromised.                                           |
-|                             Challenge periods could take a substantial amount of time to pass, increasing time for the rollup to finalize onto the L1 network.                              |
-| Due to their generalist nature of including any state change for their parent network, optimistic rollups can run into gas limitations or cause network congestion in the case of Ethereum. |
 
 Optimistic rollups are often used in the Ethereum ecosystem. [Optimism](https://www.optimism.io/)
 and [Arbitrium](https://bridge.arbitrum.io/) are optimistic EVM-based rollup.
@@ -85,21 +98,7 @@ overhead, their ability to be generalized (in terms of blockspace) is reduced. H
 promising future in solving some of the problems of optimistic rollups and addressing secure
 scalability.
 
-**Benefits:**
-
-- They only require a small amount of data availability. Often, the proof is enough to ensure
-  validity.
-- They can be proven trustlessly.
-- Because the proof is immediately available, finality is also instantaneous.
-
-**Drawbacks:**
-
-- They suffer from the same problems that other L2 solutions have regarding the centralization of L2
-  operators.
-- They are computationally expensive, and ZK circuits are difficult to implement.
-- The potential for congestion is still a factor, as the amount of data could still be problematic.
-
-### Polkadot - Native Shared Security
+### Polkadot Rollups
 
 Polkadot implements this functionality at the native level (i.e. without using L2 scaling
 solutions), allowing for shared security and scalability of the relay chain and respective
@@ -132,29 +131,6 @@ full-fledged state machine (usually in the form of a blockchain). Similarly to o
 the Parachain Protocol also has cases where disputes and resolutions of potentially harmful para
 blocks (blocks representing the parachain) can take place, in which case the validators that vouched
 for that parablock are [slashed](./learn-offenses.md) if it is found to be bad.
-
-**Benefits:**
-
-- Protocol level sharding, shared security, and interoperability.
-- Each shard has a low barrier of entry in terms of development, as anything that compiles to Wasm
-  is a valid target.
-- Fast Finality (usually under a minute on Polkadot).
-- Data availability is built-in through validators and mechanisms like
-  [erasure coding](./learn-parachains-protocol.md#erasure-codes).
-- No L2 implies less of a risk of incurring centralization issues for sequencers or other L2
-  operators.
-
-**Drawbacks:**
-
-- Execution of code in Wasm could be a performance bottleneck, as it is slower than making native
-  calls.
-- The relay chain sets a
-  [hard limit](https://paritytech.github.io/polkadot/book/protocol-overview.html?highlight=10#protocol-overview)
-  on the size and weights of the PoV (Proof of Validity) blocks which contain the parachain state
-  transition data.
-
-Despite these drawbacks, Polkadot remains upgradable through forkless upgrades, which allows the
-protocol to be easily upgradable to stay in line with future technological advances.
 
 ## Interoperability Comparison
 
