@@ -77,14 +77,6 @@ perform under those upgrades.
 
 Ultimately, Kusama and Polkadot will live on as independent, standalone networks with their own
 communities, their own governance, and their own complementary use cases, though they will continue
-to maintain a close relationship, with many teams likely deploying applications to both networks. In
-the future, we’re also likely to see Kusama bridged to Polkadot for cross-network interoperability.
+to maintain a close relationship, with many teams likely deploying applications to both networks.
 Web3 Foundation remains committed to both networks going forward, providing crucial support and
 guidance to teams building for the ecosystem.
-
-## Explore more
-
-- [About Kusama](https://kusama.network)
-- [The Kusama Wiki](https://guide.kusama.network)
-- [Kusama on Polkadot-JS Apps](https://kusama.dotapps.io)
-- [Polkadot and Kusama: What's the difference?](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-)
