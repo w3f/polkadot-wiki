@@ -220,6 +220,10 @@ module.exports = {
             to: '/docs/learn-system-chains',
             from: ['/docs/learn-bridge-hub']
           },
+          {
+            to: '/docs/learn-comparisons',
+            from: ['/docs/learn-comparison-rollup']
+          },
         ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith("/docs/")) {
