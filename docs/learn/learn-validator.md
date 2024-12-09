@@ -27,8 +27,8 @@ trust-free environment.
 Parachain validators (i.e. para-validators) participate to the
 [Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md/#parachain-phase), and submit
 [candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the relay chain
-transaction queue so that a block author can include information on the parablock in a fork of
-the relay chain.
+transaction queue so that a block author can include information on the parablock in a fork of the
+relay chain.
 
 Para-validators work in groups and are selected by the runtime in every epoch to validate parachain
 blocks for all parachains connected to the relay chain. The selected para-validators are part of the
