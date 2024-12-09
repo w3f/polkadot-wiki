@@ -103,8 +103,8 @@ intents are submitted to the network, they are automatically put into each bag b
 of bonded tokens, but within each bag, those nodes are arranged based on the time they are inserted
 and not based on their stake (see figure below). When the nomination intent of 19 DOT is submitted,
 it gets placed at the last spot in the 2nd bag (shown in the green circle). The same scenario
-applies for the node with 8 DOT (yellow circle) in the 3rd bag. Placing the node above all nodes with
-a lesser stake requires an additional step (more on this later).
+applies for the node with 8 DOT (yellow circle) in the 3rd bag. Placing the node above all nodes
+with a lesser stake requires an additional step (more on this later).
 
 ![bags list example 1](../assets/bags-list-example-1.png)
 
