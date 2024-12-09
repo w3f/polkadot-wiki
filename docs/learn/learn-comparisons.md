@@ -28,7 +28,7 @@ for "rolling up" transactions by batching them before publishing them to the L1 
 through a network of **sequencers**. This mechanism could include thousands of transactions in a
 single rollup.
 
-:::info Layer Two
+:::info Layer Two Definition
 
 Layer two (L2) networks are popular as being the way forward for blockchain scalability by
 off-loading the majority of computation from layer one (L1) networks. L2 solutions utilize the L1
@@ -40,34 +40,58 @@ blockspace efficiently and cost-effectively.
 
 In this section we explore the main differences in rollup technology between:
 
-- Polkadot rollups (i.e. parachains),
+- Zero-knowledge rollups,
 - Optimistic rollups, and
-- Zero-knowledge rollups.
+- Polkadot rollups (i.e. parachains).
 
-**Security**: ZK Rollups offer the highest cryptographic security, while Optimistic Rollups depend
-on challenge mechanisms. Polkadot's shared security model provides robust guarantees with lower
-reliance on external mechanisms.
+Before diving into the differences between these rollup technologies, it is important to understand
+the difference between non-interactive and interactive methods.
 
-**Centralization Risk**: ZK Rollups and Optimistic Rollups may face centralization risks in their
-sequencers or validators, whereas Polkadot parachains benefit from decentralized validator
-consensus.
+### Non-interactive vs. Interactive Rollup Methods
 
-**Interoperability**: Polkadot excels in interoperability through its native XCM and XCMP protocols,
-allowing parachains to interact seamlessly. Rollups are generally ecosystem-bound.
+In the context of rollups, **interactive** and **non-interactive** methods refer to how the validity
+of transactions or state changes is established between the rollup layer and the main blockchain
+(L1).
 
-| **Feature**                | **ZK Rollups**                                                                                                 | **Optimistic Rollups**                                                                                      | **Polkadot Parachains/Rollups**                                                                                                            |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Finality**               | Near-instant finality. Because the proof is immediately available, finality is also instantaneous.             | Delayed finality (a week) due to fraud-proof mechanisms.                                                    | Fast finality (under 1 minute) via the relay chain's consensus mechanism.                                                                  |
-| **Security Model**         | Relies on cryptographic validity proofs, ensuring high security and no reliance on game-theoretic assumptions. | Relies on economic incentives and a challenge period to catch fraud, making it less secure than ZK Rollups. | Shared security is native, leveraging Polkadot's validator set and erasure coding for data availability. Strong Byzantine fault tolerance. |
-| **Scalability**            | High, but limited by computational expense and challenges in building generalized ZK circuits.                 | High, with better parallelization, but constrained by gas limitations in parent chains like Ethereum.       | Inherently scalable through native sharding and parachains operating in parallel.                                                          |
-| **Decentralization**       | Risk of centralization in sequencer roles and ZK proof computation.                                            | Sequencer centralization concerns, as validators are known and fewer in number.                             | Less prone to centralization, as relay-chain validators secure all parachains.                                                             |
-| **Interoperability**       | Limited to networks with compatible smart contract support.                                                    | Limited interoperability, often confined to the parent blockchain ecosystem.                                | Native interoperability through XCM and XCMP protocols, allowing seamless communication between parachains.                                |
-| **Development Complexity** | Difficult to implement and optimize due to the complexity of ZK proof systems.                                 | Simpler to implement but requires careful fraud-proof logic.                                                | Moderate; any runtime compiled to Wasm is valid, simplifying parachain development.                                                        |
-| **Data Availability**      | Requires posting minimal data proofs to L1. Often, the proof is enough to ensure validity.                     | Posts complete data on-chain during challenge periods, increasing cost.                                     | Built-in data availability with validators ensuring distributed state storage and reconstruction.                                          |
-| **Cost Efficiency**        | High efficiency but expensive prover computation.                                                              | More cost-effective but susceptible to congestion during high usage.                                        | Cost-effective as parachains are independently scalable and not tied to L1 gas fees.                                                       |
-| **Governance Upgrades**    | Subject to parent chain governance (e.g., Ethereum).                                                           | Governed by the parent chain.                                                                               | Protocol upgrades through forkless changes, enhancing adaptability.                                                                        |
-| **Fraud/Validity Proofs**  | Non-interactive validity proofs.                                                                               | Fraud proofs requiring active challenges during the dispute window.                                         | Interactive approval protocols to resolve parachain block disputes.                                                                        |
-| **Applications**           | Ideal for high-security use cases like financial transactions and identity.                                    | Best for general-purpose decentralized apps with moderate security requirements.                            | Supports diverse applications, including DeFi, gaming, and governance, thanks to Turing-complete parachains.                               |
+A non-interactive method relies on cryptographic proofs to validate transactions or state changes
+without requiring dispute resolution or interactive challenges. A prominent example are
+zero-knowledge proofs such as a zk-SNARK or zk-STARK is generated off-chain, proving that the
+transactions in a batch satisfy the rules of the protocol. This proofs are submitted to the L1 chain
+and verified without needing further interaction.
+
+An interactive method involves a back-and-forth process between parties to validate transactions. A
+prominent example is fraud proofs, as used in optimistic rollups. If a dispute arises, a challenge
+mechanism is triggered, where a "prover" submits evidence (fraud proof) to demonstrate that a
+transaction is invalid. This can require multiple steps, with both the challenger and defender
+submitting data to the L1 chain.
+
+Here below, the key differences between interactive and non-interactive methods.
+
+| **Aspect**         | **Interactive**                                 | **Non-Interactive**                                                     |
+| ------------------ | ----------------------------------------------- | ----------------------------------------------------------------------- |
+| **Mechanism**      | Back-and-forth dispute resolution.              | One-time proof submission and verification.                             |
+| **Latency**        | Long finality due to challenge periods.         | Near-instant finality.                                                  |
+| **Security Basis** | Economic incentives and monitoring.             | Cryptographic guarantees.                                               |
+| **Complexity**     | Simpler to implement but requires monitoring.   | Computationally intensive and harder to build.                          |
+| **Use Cases**      | Broad compatibility with existing applications. | Best for high-security applications where instant finality is critical. |
+
+Both approaches serve different needs and trade-offs, depending on the balance between scalability,
+security, latency, and flexibility required.
+
+### Zero-knowledge Rollups
+
+Zero-knowledge rollups (often called ZK rollups) are a _non-interactive_ method that utilizes
+zero-knowledge proofs to compute the validity of a particular set of state changes. Whereas
+optimistic rollups relied on fraud proofs, ZK rollups rely on cryptographic validation in the form
+of ZK proofs.
+
+Zero-knowledge rollups are significantly faster in finalization, as the cryptographic validity proof
+handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from
+performance due to their complexity and difficult implementation into resource-constrained
+environments. Because Turing completeness is also challenging to achieve due to this computational
+overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have a
+promising future in solving some of the problems of optimistic rollups and addressing secure
+scalability.
 
 ### Optimistic Rollups
 
@@ -82,21 +106,6 @@ included if no challenge is presented (and the required proofs are in place).
 
 Optimistic rollups are often used in the Ethereum ecosystem. [Optimism](https://www.optimism.io/)
 and [Arbitrium](https://bridge.arbitrum.io/) are optimistic EVM-based rollup.
-
-### Zero-knowledge Rollups
-
-Zero-knowledge rollups (often called ZK rollups) are a non-interactive method that utilizes
-zero-knowledge proofs to compute the validity of a particular set of state changes. Whereas
-optimistic rollups relied on fraud proofs, ZK rollups rely on cryptographic validation in the form
-of ZK proofs.
-
-Zero-knowledge rollups are significantly faster in finalization, as the cryptographic validity proof
-handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from
-performance due to their complexity and difficult implementation into resource-constrained
-environments. Because Turing completeness is also challenging to achieve due to this computational
-overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have a
-promising future in solving some of the problems of optimistic rollups and addressing secure
-scalability.
 
 ### Polkadot Rollups
 
@@ -131,6 +140,27 @@ full-fledged state machine (usually in the form of a blockchain). Similarly to o
 the Parachain Protocol also has cases where disputes and resolutions of potentially harmful para
 blocks (blocks representing the parachain) can take place, in which case the validators that vouched
 for that parablock are [slashed](./learn-offenses.md) if it is found to be bad.
+
+### Rollup Comparison Table
+
+| **Feature**                | **ZK Rollups**                                                                                                 | **Optimistic Rollups**                                                                                                           | **Polkadot Parachains/Rollups**                                                                                                                                                                                                                                                                                                            |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Finality**               | Near-instant finality. Because the proof is immediately available, finality is also instantaneous.             | Delayed finality (a week) due to fraud-proof mechanisms.                                                                         | Fast finality (under 1 minute) via the relay chain's consensus mechanism.                                                                                                                                                                                                                                                                  |
+| **Security Model**         | Relies on cryptographic validity proofs, ensuring high security and no reliance on game-theoretic assumptions. | Relies on economic incentives and a challenge period to catch fraud. Optimistic assumption makes it less secure than ZK Rollups. | Shared security is native, leveraging Polkadot's validator set and erasure coding for data availability. Strong Byzantine fault tolerance. No optimistic assumption, rollup data are checked all the time. Secondary checks and an escalation process give strong security guarantees and minimize chance of malicious block finalization. |
+| **Scalability**            | High, but limited by computational expense and challenges in building generalized ZK circuits.                 | High, with better parallelization, but constrained by gas limitations in parent chains like Ethereum.                            | Inherently scalable through native sharding and parachains operating in parallel. Pipelining and scheduling increase throughput and scalability for the single rollup.                                                                                                                                                                     |
+| **Decentralization**       | Risk of centralization in sequencer roles and ZK proof computation.                                            | Sequencer centralization concerns, as validators are known and fewer in number.                                                  | Collator set decentralization is critical; fully centralized collators reduce the benefits, making parachains similar to other rollup technologies.                                                                                                                                                                                        |
+| **Interoperability**       | Limited to networks with compatible smart contract support.                                                    | Limited interoperability, often confined to the parent blockchain ecosystem.                                                     | Native interoperability through XCM and XCMP protocols, allowing seamless communication between parachains.                                                                                                                                                                                                                                |
+| **Development Complexity** | Difficult to implement and optimize due to the complexity of ZK proof systems.                                 | Simpler to implement but requires careful fraud-proof logic.                                                                     | Moderate; any runtime compiled to Wasm is valid, simplifying parachain development.                                                                                                                                                                                                                                                        |
+| **Data Availability**      | Requires posting minimal data proofs to L1.                                                                    | Posts complete data on-chain during challenge periods, increasing cost.                                                          | Built-in data availability with validators ensuring distributed state storage and reconstruction.                                                                                                                                                                                                                                          |
+| **Cost Efficiency**        | High efficiency but expensive prover computation.                                                              | More cost-effective but susceptible to congestion during high usage.                                                             | Cost-effective as parachains are independently scalable and not tied to L1 gas fees.                                                                                                                                                                                                                                                       |
+| **Governance Upgrades**    | Subject to parent chain governance (e.g., Ethereum).                                                           | Governed by the parent chain.                                                                                                    | Protocol upgrades through forkless changes, enhancing adaptability.                                                                                                                                                                                                                                                                        |
+| **Fraud/Validity Proofs**  | Non-interactive validity proofs.                                                                               | Fraud proofs requiring active challenges during the dispute window.                                                              | Interactive approval protocols to resolve parachain block disputes.                                                                                                                                                                                                                                                                        |
+| **Applications**           | Ideal for high-security use cases like financial transactions and identity.                                    | Best for general-purpose decentralized apps with moderate security requirements.                                                 | Supports diverse applications, including DeFi, gaming, and governance, thanks to Turing-complete parachains.                                                                                                                                                                                                                               |
+| **Escape Hatch**           | No native escape hatch—requires zk circuits to correctly release funds.                                        | Can include an escape hatch to withdraw funds during sequencer failure or network issues.                                        | Funds can become trapped if parachain collator or communication fails; no native escape mechanism exists at the protocol level.                                                                                                                                                                                                            |
+| **Permissioning**          | Sequencers are usually permissioned but can become permissionless with careful setup.                          | Sequencers are usually permissioned but can include mechanisms for broader validator inclusion.                                  | Parachains can have permissioned or permissionless collator sets, providing flexibility in design.                                                                                                                                                                                                                                         |
+
+An escape hatch is method by which users of a rollup can recover digital assets or program state
+from a rollup when the operators (sequencers) are offline.
 
 ## Interoperability Comparison
 
