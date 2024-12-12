@@ -50,6 +50,14 @@ decentralized web, who announced an integration plan to bring
 The Graph allows developers to build and publish open APIs, called subgraphs. Applications can query
 subgraphs using [GraphQL](https://graphql.org/).
 
+### Traceye
+
+[Traceye](https://www.traceye.io) is a data indexing solution for Web3. Diverse range L1/L2
+blockchains, rollups, appchains, and Dapps can leverage Traceye to build and deploy their custom
+data indexers optimized for fast indexing, 50% reduced data lag, 99.99% uptime, automated sync, and
+24/7 monitoring. Traceye also offers value-added features like webhooks, BI analytics tools, custom
+entities, community subgraphs, and more to suit developers’ needs.
+
 ## Analytics platform
 
 ### DIN
