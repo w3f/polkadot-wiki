@@ -52,10 +52,11 @@ subgraphs using [GraphQL](https://graphql.org/).
 
 ### Traceye
 
-[Traceye](https://www.traceye.io) is a next-gen, powerful data indexing solution for Web3 and blockchain. Diverse range L1/L2 blockchains, rollups, appchains, Dapps and Crypto Apps can leverage Traceye to build and deploy their custom data indexers optimized for ultrafast indexing, 50% reduced data lag,99.99% uptime, automated sync, and 24/7 monitoring. 
-Apart from supporting multiple indexing protocols like 'The Graph' and 'Subquery Network', Traceye also offers value-added features like webhooks, BI analytics tool, custom entities, community subgraphs, and more suit the needs of developers.
-
-For more updates, folllow us on [X(Twitter)](https://www.x.com/traceye_io)
+[Traceye](https://www.traceye.io) is a data indexing solution for Web3. Diverse range L1/L2
+blockchains, rollups, appchains, and Dapps can leverage Traceye to build and deploy their custom
+data indexers optimized for fast indexing, 50% reduced data lag, 99.99% uptime, automated sync, and
+24/7 monitoring. Traceye also offers value-added features like webhooks, BI analytics tools, custom
+entities, community subgraphs, and more to suit developers’ needs.
 
 ## Analytics platform
 
