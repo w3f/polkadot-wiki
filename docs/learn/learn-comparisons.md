@@ -166,7 +166,7 @@ program state from a rollup when the operators (sequencers) are offline.<br/><br
 
 In this section we explore the main differences in interoperability between Polkadot,
 [Optimism Superchain Ecosystem](https://docs.optimism.io/stack/explainer) and
-[Chainlink CCIP](https://chain.link/cross-chain).
+[Chainlink CCIP (Cross-chain Interoperability Protocol)](https://chain.link/cross-chain).
 
 | Feature                     | Polkadot XCM                                                                                       | Optimism Superchain Interoperability                                                    | Chainlink CCIP                                                                           |
 | --------------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
