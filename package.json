@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^5.17.1",
-    "@apollo/client": "^3.12.2",
+    "@apollo/client": "^3.12.3",
     "@docusaurus/theme-mermaid": "^3.6.3",
     "bufferutil": "^4.0.8",
     "chart.js": "^4.4.7",
