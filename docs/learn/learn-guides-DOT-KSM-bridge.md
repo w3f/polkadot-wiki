@@ -27,7 +27,7 @@ Polkadot Asset Hub.
 [BagPipes (formerly called xcmsend)](https://xcmsend.com/#/builder) is an opensource application
 that lets you create workflows in a drag and drop style interface in order to build execution flows
 of cross chain assets transfers using XCM. Check
-[Bagpipes docs](https://xcmsend.github.io/workflows/dotksm.html) for more information on how to
+[Bagpipes docs](https://docs.bagpipes.io/) for more information on how to
 create workflows for crafting XCM transfers. The snapshot below shows a workflow on BagPipes that is
 designed to send 3 DOT from an account Polkadot Asset Hub to Kusama Asset Hub.
 
