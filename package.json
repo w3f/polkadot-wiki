@@ -60,7 +60,7 @@
     "mr-pdf": "^1.1.0",
     "prettier": "^3.4.2",
     "react": "^18.3.1",
-    "react-bootstrap": "^2.10.6",
+    "react-bootstrap": "^2.10.7",
     "react-dom": "^18.3.1",
     "shx": "^0.3.4",
     "unist-util-visit": "2.0.1",
