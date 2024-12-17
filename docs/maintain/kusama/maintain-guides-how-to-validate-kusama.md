@@ -49,7 +49,7 @@ Controller accounts are deprecated. For more information, see
 :::
 
 You can have a rough estimate on that by using the methods listed
-[here](../../general/faq.md/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
+[here](../../general/faq/#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
 To be elected into the set, you need a minimum stake behind your validator. This stake can come from
 yourself or from [nominators](../../learn/learn-nominator.md). This means that as a minimum, you
 will need enough KSM to set up Stash and staking proxy [accounts](../../learn/learn-cryptography.md)
