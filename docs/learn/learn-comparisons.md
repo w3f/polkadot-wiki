@@ -56,7 +56,7 @@ of transactions or state changes is established between the rollup layer and the
 A non-interactive method relies on cryptographic proofs to validate transactions or state changes without requiring dispute resolution or interactive challenges. A prominent example is zero-knowledge proving mechanisms that operate off-chain, such as a zk-SNARK or zk-STARK. These protocols prove that the transactions in a batch satisfy the rules of the protocol. These proofs are submitted to the L1 chain
 and verified without needing further interaction.
 An interactive method involves a back-and-forth process between parties to validate transactions. A
-prominent example is fraud proofs, as used in optimistic rollups. If a dispute arises, a challenge
+prominent example is the usage of fraud proofs, as used in optimistic rollups. If a dispute arises, a challenge
 mechanism is triggered, where a "prover" submits evidence (fraud proof) to demonstrate that a
 transaction is invalid. This can require multiple steps, with both the challenger and defender
 submitting data to the L1 chain.
