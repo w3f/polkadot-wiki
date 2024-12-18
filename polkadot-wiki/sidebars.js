@@ -754,7 +754,7 @@ module.exports = {
           },
           items: [
             'learn/learn-comparisons-kusama',
-            'learn/learn-comparisons-ethereum-2',
+            'learn/learn-comparisons-ethereum',
             'learn/learn-comparisons-cosmos',
             'learn/learn-comparisons-avalanche',
           ],
