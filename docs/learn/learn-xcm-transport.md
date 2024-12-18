@@ -63,7 +63,7 @@ For detailed information about VMP see dedicated section in
 
 _Vertical Message Passing_ message passing between the relay chain itself and a parachain. Message
 data in both cases exists on the relay chain and are interpreted by the relay chain according to
-[XCM](./learn-xcm.md/#cross-consensus-message-format-xcm) standards. This includes:
+[XCM](./learn-xcm.md#cross-consensus-message-format-xcm-format) standards. This includes:
 
 - #### UMP (Upward Message Passing)
 
