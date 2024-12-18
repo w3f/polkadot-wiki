@@ -143,8 +143,8 @@ comparison table below.
 
 ### Rollup Comparison Table
 
-Here's the refined and expanded comparison table, integrating the additional details about Polkadot
-rollups and the specifics of their protocol.
+Here below there is a comparison table summarizing the main differences between Polkadot, ZK, and
+Optimistic rollups.
 
 | **Feature**                  | **ZK Rollups**                                                                                                 | **Optimistic Rollups**                                                                                                                                                       | **Polkadot Parachains/Rollups**                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
