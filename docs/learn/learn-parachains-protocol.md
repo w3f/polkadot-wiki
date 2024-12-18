@@ -212,7 +212,7 @@ which the validators distributed their erasure-coded chunks, but it does not gua
 validity. Because the number of para-validators on each parachain is so low, collusion is a
 reasonable concern. By separating block production
 ([BABE](./learn-consensus.md#block-production-babe)) from finality
-([GRANDPA](./learn-consensus.md/#finality-gadget-grandpa)), validators can perform extra validity
+([GRANDPA](./learn-consensus.md#finality-gadget-grandpa)), validators can perform extra validity
 checks after a block is produced but before it is finalized.
 
 Thus, once the parablock is considered available and part of the parachain, it is still "pending
@@ -285,7 +285,7 @@ secondary check). Approved para-blocks are shown as yellow squares.
 
 Having a bad parablock on a fork of the relay chain is not catastrophic as long as the block is not
 approved and finalized by the finality gadget
-[GRANDPA](./learn-consensus.md/#finality-gadget-grandpa). If the block is not finalized, the fork on
+[GRANDPA](./learn-consensus.md#finality-gadget-grandpa). If the block is not finalized, the fork on
 the chain containing that block can be ignored in favor of another fork containing good blocks.
 Dealing with a bad parablock includes the following stages:
 
@@ -343,7 +343,7 @@ b) in another relay chain block notes are fed into the approval code.
 
 The gossiped messages are of two types, assignment notices, and approval votes, and are signed with
 [approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
-Such keys are part of the [session keys](./learn-cryptography.md/#session-keys) used by validators.
+Such keys are part of the [session keys](./learn-cryptography.md#session-keys) used by validators.
 Briefly, approval keys are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria

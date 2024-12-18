@@ -41,7 +41,7 @@ DOT.
 ## Polkadot Roadmap
 
 For more information on the Polkadot roadmap please visit the
-[official Polkadot website](https://polkadot.network/technology/#roadmap).
+[official Polkadot website](https://www.opengov.watch/polkadot-roadmap).
 
 ## Consensus
 
@@ -215,7 +215,7 @@ ten billion) Plancks, meaning that the new DOT was valued at ten decimal places.
 The inflation rate is approximately 120,000,000 DOT per year.
 
 The 85% of inflation is rewarded to validators for performing their duties, while the 15% goes to
-the treasury. Please see the article on [inflation](../learn/learn-staking.md/#inflation) for more
+the treasury. Please see the article on [inflation](../learn/learn-inflation.md) for more
 information.
 
 ### Why can't crowdloaned DOT be staked?

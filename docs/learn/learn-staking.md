@@ -51,7 +51,7 @@ actions:
 
 - **Block production**, i.e. the way multiple blocks candidates are produced, and
 - **Block finality**, i.e. the way only one block out of many candidates is selected and added to
-  the canonical chain (see [this](learn-consensus.md/#probabilistic-vs-provable-finality) article
+  the canonical chain (see [this](./learn-consensus.md#probabilistic-vs-provable-finality) article
   for more information about finality).
 
 Proof-of-Work (PoW) and Proof-of-Stake (PoS) are well-known mechanisms used to reach consensus in a
@@ -84,10 +84,11 @@ to get rewarded, and the PoS network rewards good behavior and punishes bad beha
 
 ## Nominated Proof-of-Stake (NPoS)
 
-Polkadot implements [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake),
-a relatively novel and sophisticated mechanism to select the validators who are allowed to
-participate in its [consensus](learn-consensus.md) protocol. NPoS encourages token holders to
-participate as **nominators**.
+Polkadot implements
+[Nominated Proof-of-Stake (NPoS)](./learn-consensus.md#nominated-proof-of-stake), a relatively novel
+and sophisticated mechanism to select the validators who are allowed to participate in its
+[consensus](learn-consensus.md) protocol. NPoS encourages token holders to participate as
+**nominators**.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator, in turn, submits a
@@ -192,8 +193,8 @@ contribute to the economic security of the network will be nominators, thus here
 role of nominators. However, it is worth mentioning that validators do most of the heavy lifting:
 they run the validator nodes and manage
 [session keys](https://research.web3.foundation/Polkadot/security/keys/session), produce new block
-candidates in [BABE](learn-consensus.md/#block-production-babe), vote and come to consensus in
-[GRANDPA](learn-consensus.md/#finality-gadget-grandpa), validate the state transition function of
+candidates in [BABE](./learn-consensus.md#block-production-babe), vote and come to consensus in
+[GRANDPA](./learn-consensus.md#finality-gadget-grandpa), validate the state transition function of
 parachains, and possibly some other responsibilities regarding data availability and
 [XCM](learn-xcm.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
@@ -349,7 +350,7 @@ the higher its vulnerability for hacks or scams. So, if one uses a key for multi
 blockchain network, it is likely that the account can get compromised. Note that the damage linked
 to stolen private keys is different depending on the type of account derivation. In the case of soft
 derivation, all derived accounts are compromised. More information about account derivation can be
-found [here](../learn/learn-accounts.md/#derivation-paths).
+found [here](./learn-account-advanced.md#derivation-paths).
 
 :::info
 
@@ -451,7 +452,7 @@ automatically check if you qualify. For more information, visit the
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
 - Can choose [multiple validators](../general/chain-state-values.md#maximum-votes-per-nominator)
   which can help to decentralize the network through the sophisticated
-  [NPoS system](learn-consensus.md/#nominated-proof-of-stake)
+  [NPoS system](./learn-consensus.md#nominated-proof-of-stake)
 - 85% of inflation/year of the tokens is primarily intended for staking rewards. Check the
   [inflation](learn-staking-advanced.md#inflation) section on the Wiki for more information.
 
