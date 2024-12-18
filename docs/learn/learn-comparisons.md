@@ -82,9 +82,8 @@ optimistic rollups relied on fraud proofs, ZK rollups rely on cryptographic vali
 of ZK proofs.
 
 Zero-knowledge rollups are significantly faster in finalization, as the cryptographic validity proof
-handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from
-performance due to their complexity and difficult implementation into resource-constrained
-environments. Because Turing completeness is also challenging to achieve due to this computational
+handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from a
+performance perspective due to the complexity involved in proof generation and difficult implementation into resource-constrained environments. Because Turing completeness is also challenging to achieve due to this computational
 overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have a
 promising future in solving some of the problems of optimistic rollups and addressing secure
 scalability.
