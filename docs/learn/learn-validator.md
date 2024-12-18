@@ -25,8 +25,8 @@ trust-free environment.
 ## Para-validators
 
 Parachain validators (i.e. para-validators) participate to the
-[Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md/#parachain-phase), and submit
-[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) to the relay chain
+[Parachain Phase of the AnV Protocol](./learn-parachains-protocol.md#parachain-phase), and submit
+[candidate receipts](./learn-parachains-protocol.md#candidate-receipts) to the relay chain
 transaction queue so that a block author can include information on the parablock in a fork of the
 relay chain.
 
@@ -45,15 +45,15 @@ _backable_.
 
 There are validators on the relay chain who participate in the consensus mechanism to produce the
 relay chain blocks based on validity statements from other validators. These validators are called
-block authors, they are selected by [BABE](./learn-consensus.md/#block-production-babe) and can note
+block authors, they are selected by [BABE](./learn-consensus.md#block-production-babe) and can note
 up to one backable candidate for each parachain to include in the relay chain. A backable candidate
 included in the relay chain is considered _backed_ in that fork of the chain.
 
 In a relay chain block, block authors will only include
-[candidate receipts](./learn-parachains-protocol.md/#candidate-receipts) that have a parent
-candidate receipt in an earlier relay chain block. This ensures the parachain follows a valid chain.
-Also, the block authors will only include a receipt for which they have an erasure coding chunk,
-ensuring that the system can perform the next round of availability and validity checks.
+[candidate receipts](./learn-parachains-protocol.md#candidate-receipts) that have a parent candidate
+receipt in an earlier relay chain block. This ensures the parachain follows a valid chain. Also, the
+block authors will only include a receipt for which they have an erasure coding chunk, ensuring that
+the system can perform the next round of availability and validity checks.
 
 ## Other Validators
 
@@ -65,7 +65,7 @@ the following relay chain blocks. Only when there is enough information, the can
 a full parachain block or _parablock_.
 
 Validators also participate in the so-called
-[**approval process**](./learn-parachains-protocol.md/#approval-process). Once the parablock is
+[**approval process**](./learn-parachains-protocol.md#approval-process). Once the parablock is
 considered available and part of the parachain, it is still _pending approval_. Because
 para-validators are a small subset of all validators, there is a risk that by chance the majority of
 para-validators assigned to a parachain might be dishonest. It is thus necessary to run a secondary
@@ -74,14 +74,14 @@ step avoids the allocation of more para-validators that will ultimately reduce t
 system.
 
 Any instances of non-compliance with the consensus algorithms result in
-[**disputes**](./learn-parachains-protocol.md/#disputes) with the punishment of the validators on
-the wrong side by removing some or all their staked tokens, thereby discouraging bad actors. Good
+[**disputes**](./learn-parachains-protocol.md#disputes) with the punishment of the validators on the
+wrong side by removing some or all their staked tokens, thereby discouraging bad actors. Good
 performance, however, will be rewarded, with validators receiving block rewards (including
 transaction fees) in the form of native tokens (DOT or KSM on Kusama) in exchange for their
 activities.
 
 Finally, validators participate in the
-[chain selection process within GRANDPA](./learn-parachains-protocol.md/#chain-selection), ensuring
+[chain selection process within GRANDPA](./learn-parachains-protocol.md#chain-selection), ensuring
 that only available and valid blocks end within the finalized relay chain.
 
 :::info Within an era roles can change
