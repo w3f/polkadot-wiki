@@ -53,13 +53,17 @@ In the context of rollups, **interactive** and **non-interactive** methods refer
 of transactions or state changes is established between the rollup layer and the main blockchain
 (L1).
 
-A non-interactive method relies on cryptographic proofs to validate transactions or state changes without requiring dispute resolution or interactive challenges. A prominent example is zero-knowledge proving mechanisms that operate off-chain, such as a zk-SNARK or zk-STARK. These protocols prove that the transactions in a batch satisfy the rules of the protocol. These proofs are submitted to the L1 chain
-and verified without needing further interaction.
+A non-interactive method relies on cryptographic proofs to validate transactions or state changes
+without requiring dispute resolution or interactive challenges. A prominent example is
+zero-knowledge proving mechanisms that operate off-chain, such as a zk-SNARK or zk-STARK. These
+protocols prove that the transactions in a batch satisfy the rules of the protocol. These proofs are
+submitted to the L1 chain and verified without needing further interaction.
+
 An interactive method involves a back-and-forth process between parties to validate transactions. A
-prominent example is the usage of fraud proofs, as used in optimistic rollups. If a dispute arises, a challenge
-mechanism is triggered, where a "prover" submits evidence (fraud proof) to demonstrate that a
-transaction is invalid. This can require multiple steps, with both the challenger and defender
-submitting data to the L1 chain.
+prominent example is the usage of fraud proofs, as used in optimistic rollups. If a dispute arises,
+a challenge mechanism is triggered, where a "prover" submits evidence (fraud proof) to demonstrate
+that a transaction is invalid. This can require multiple steps, with both the challenger and
+defender submitting data to the L1 chain.
 
 Here below, the key differences between interactive and non-interactive methods.
 
@@ -78,15 +82,18 @@ security, latency, and flexibility required.
 
 Zero-knowledge rollups (often called ZK rollups) are a _non-interactive_ method that utilizes
 zero-knowledge proofs to compute the validity of a particular set of state changes. Whereas
-optimistic rollups relied on fraud proofs, ZK rollups rely on cryptographic validation in the form
-of ZK proofs.
+[optimistic rollups](#optimistic-rollups) rely on fraud proofs, ZK rollups rely on cryptographic
+validation in the form of ZK proofs.
 
 Zero-knowledge rollups are significantly faster in finalization, as the cryptographic validity proof
 handles the nuance of ensuring a rollup is valid. However, the ZK rollups often suffer from a
-performance perspective due to the complexity involved in proof generation and difficult implementation into resource-constrained environments. Because Turing completeness is also challenging to achieve due to this computational
-overhead, their ability to be generalized (in terms of blockspace) is reduced. However, they have a
-promising future in solving some of the problems of optimistic rollups and addressing secure
-scalability.
+performance perspective due to the complexity involved in proof generation and difficult
+implementation into resource-constrained environments. Because Turing completeness is also
+challenging to achieve due to this computational overhead, their ability to be generalized (in terms
+of blockspace) is reduced. However, the generation of zk proofs is becoming useful in niche
+applications. For example, [Hyperbridge](./learn-bridges.md#bridge-comparison) is a ZK rollup on
+Polkadot that serves as a scalable trustless bridge producing a single zk proof for multiple
+blockchains that can be instantly verified on Polkadot.
 
 ### Optimistic Rollups
 
@@ -100,15 +107,28 @@ rollup valid or invalid. During the challenge period, state changes may be dispu
 included if no challenge is presented (and the required proofs are in place).
 
 Optimistic rollups are often used in the Ethereum ecosystem. [Optimism](https://www.optimism.io/)
-and [Arbitrium](https://bridge.arbitrum.io/) are an example of an optimistic, EVM-based rollup.
+and [Arbitrium](https://bridge.arbitrum.io/) are an example of optimistic EVM-based rollups.
 
 ### Polkadot Rollups
 
-Polkadot implements this functionality at the native level (i.e. without using L2 scaling
-solutions), allowing for shared security and scalability of the relay chain and respective
-parachains. Shared security is a concept that has similar goals to EVM-based optimistic and
-zero-knowledge rollups. Still, instead of being implemented as a secondary layer, Polkadot
-guarantees native security and scalability for each of its parachains through the
+Polkadot Rollups work similarly to optimistic rollups. They are an interactive method with fraud
+proof mechanism, but Polkadot rollups can be fully-fledged blockchains with own governance
+mechanism. If optimistc rollups are based on the assumption that all transactions a valid, Polkadot
+rollups are more "cynical" and always check the validity of the transaction using a subset of the
+validators. In case of disputes an escalation effect is triggered and dispute resolution will end
+with the malicious actor slashed.
+
+Very much like optimistic rollups and zk rollups are secured by Ethereum, Polkadot rollups are
+secured by the Polkadot Relay Chain. The checking and fraud proof mechanics are implemented on
+Polkadot, natively.
+
+Because Polkadot rollups can be fully-fledged blockchains, Polkadot implements rollup functionality
+at the native level (i.e. without using L2 scaling solutions), allowing for shared security and
+scalability of the relay chain and respective parachains.
+
+Shared security is a concept that has similar goals to EVM-based optimistic and zero-knowledge
+rollups. Still, instead of being implemented as a secondary layer, Polkadot guarantees native
+security and scalability for each of its parachains through the
 [Parachains Protocol](./learn-parachains-protocol.md). Polkadot handles the coordination of data
 from parachains into an aggregated, representative state, somewhat similar to L2 rollups.
 
@@ -124,9 +144,9 @@ key part of Polkadot architecture, are in principle similar to sequencers, as co
 with a proof-of-validity (PoV) function for liveness and communication with the relay chain.
 
 Each shard, or parachain, is equipped with a unique state transition function (STF). This function
-ensures that communication to the relay chain remains valid. Each STF, called runtime, is compiled to
-[Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition function is valid if it
-compiles to Wasm and abides by the Parachains Protocol.
+ensures that communication to the relay chain remains valid. Each STF, called runtime, is compiled
+to [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition function is valid if
+it compiles to Wasm and abides by the Parachains Protocol.
 
 Each STF runs a validity proof. The proof ([the Approval Protocol](./learn-parachains-protocol.md))
 is interactive, unlike ZK rollups, which are non-interactive. Additionally, unlike ZK rollups, there
