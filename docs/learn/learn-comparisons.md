@@ -124,7 +124,7 @@ key part of Polkadot architecture, are in principle similar to sequencers, as co
 with a proof-of-validity (PoV) function for liveness and communication with the relay chain.
 
 Each shard, or parachain, is equipped with a unique state transition function (STF). This function
-ensures that communication to the relay chain remains valid. Each STF, called runtime, is written in
+ensures that communication to the relay chain remains valid. Each STF, called runtime, is compiled to
 [Wasm](https://wiki.polkadot.network/docs/learn-wasm). Any state transition function is valid if it
 compiles to Wasm and abides by the Parachains Protocol.
 
