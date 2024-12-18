@@ -193,7 +193,7 @@ read [the non-technical docs](https://docs.rmrk.app).
 
 The Asset Hub is a generic assets parachain which provides functionality for deploying and
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently hosts
-[Uniques pallet](./learn-nft-pallets.mduniques-pallet) and the
+[Uniques pallet](./learn-nft-pallets.md#uniques-pallet) and the
 [NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities.
 
 ## Unique Network
