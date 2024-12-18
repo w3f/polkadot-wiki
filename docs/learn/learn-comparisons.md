@@ -100,7 +100,7 @@ rollup valid or invalid. During the challenge period, state changes may be dispu
 included if no challenge is presented (and the required proofs are in place).
 
 Optimistic rollups are often used in the Ethereum ecosystem. [Optimism](https://www.optimism.io/)
-and [Arbitrium](https://bridge.arbitrum.io/) are optimistic EVM-based rollup.
+and [Arbitrium](https://bridge.arbitrum.io/) are an example of an optimistic, EVM-based rollup.
 
 ### Polkadot Rollups
 
