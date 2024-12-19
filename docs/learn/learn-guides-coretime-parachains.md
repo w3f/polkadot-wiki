@@ -35,58 +35,60 @@ benefit from [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html)
 continued assignment of bulk coretime for a core without going through the regular purchasing
 process.
 
-:::info
+## Reserve Your ParaID
 
-The tutorials below assume that you have already developed the parachain runtime and a fully
-configured parachain [collator](./learn-collator.md) for the target relay chain using the Polkadot
-SDK.
+The first thing we need to do to get started is reserve a [`ParaID`](../general/glossary.md#paraid) for our parachain.
 
-:::
+This can be done through Polkadot-JS UI by navigating to [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) and clicking on ParaID button.
 
-For the tutorials below,
-[the adder test parachain](https://github.com/paritytech/polkadot-sdk/tree/6f3d890ed35bfdee3e3f7d59018345635a62d1cd/polkadot/parachain/test-parachains/adder)
-on the Polkadot SDK has been used. To compile the `adder-collator`, run the command below in the
-_root_ of the Polkadot SDK repository. You must have [Rust](https://www.rust-lang.org/tools/install)
-and its associated tooling installed before following along.
-
-Ensure the Polkadot SDK is cloned, and you are within the root directory (`cd polkadot-sdk`)
-
-```sh
-cargo build -r -p test-parachain-adder-collator
-```
-
-After the test parachain collator node is successfully compiled, export its genesis state and the
-code using the following commands. If the export succeeds, these two files should appear in the
-Polkadot-SDK repository.
-
-```sh
-./target/release/adder-collator export-genesis-state genesis
-```
-
-```sh
-./target/release/adder-collator export-genesis-wasm genesis-wasm
-```
-
-## Reserve ParaID
-
-Reserving a `ParaID` requires a
-[deposit](../general/chain-state-values.md#parachain-id-registration-deposit). The first step is to
-register a [`ParaID`](../general/glossary.md#paraid) for the parachain. This can be done through
-Polkadot-JS UI by navigating to
-[Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) and
-clicking on ParaID button. Ensure that you have sufficient tokens to reserve the displayed `ParaID`
+Reserving a `ParaID` requires a [deposit](../general/chain-state-values.md#parachain-id-registration-deposit), so make sure that you have sufficient tokens to reserve the displayed `ParaID`
 successfully.
 
 ![coretime-reserve-paraID](../assets/coretime/coretime-reserve-paraID.png)
 
-## Register Parachain State and Code
+Keep track of the `ParaID` you registered, as you will need it throughout the tutorial.
+
+## Use the Parachain Template
+
+In this tutorial, we use the [`polkadot-sdk-parachain-template`] to represent our parachain.
+
+Clone this project in a working directory:
+
+```sh
+git clone https://github.com/paritytech/polkadot-sdk-parachain-template.git
+cd polkadot-sdk-parachain-template
+```
+
+We need to update the `para_id` of this template to match the `ParaID` we registered.
+
+If you search in the code for `para_id:`, you will find the spots you need to update:
+
+![update-paraID](../assets/coretime/update-paraID.png)
+
+Save your changes, and then compile the parachain collator:
+
+```sh
+cargo build --release
+```
+
+After the test parachain collator node is successfully compiled, export its genesis state and the
+code for the `--dev` chain using the following commands. If the export succeeds, these two files (`genesis-state` and `genesis-code`) should appear in your working directory.
+
+```sh
+./target/release/adder-collator export-genesis-state genesis-state --dev
+```
+
+```sh
+./target/release/adder-collator export-genesis-wasm genesis-code --dev
+```
+
+## Register Your Parachain State and Code
+
+Next we will register this `genesis-state` and `genesis-code` on the relay chain.
+
+For this we have two test networks, Paseo and Westend, and two production networks, Kusama and Polkadot.
 
 :::info Deposit requirements for registering a parachain
-
-Due to the reasons [discussed here](https://github.com/paritytech/polkadot-sdk/pull/2372), instead
-of the usual per-byte method of charging for storing validation and genesis code upon registration,
-the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual
-size.
 
 On **Kusama**, the deposit required to register a parachain is **~1100 KSM** and an estimated fee of
 **~5 KSM**.
@@ -100,57 +102,59 @@ through the relay chain's governance.
 
 :::
 
-The next step is to register the parachain's genesis wasm and state, which you should have generated
-earlier. Note that for this example, we are using `adder-collator`, but in theory a custom runtime
-compiled from a
-[template](https://github.com/paritytech/polkadot-sdk/tree/88a2f360238787bf5256cfdd14b40c08f519b38e/templates/parachain)
-would work as well.
+Back in the [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) section of the Polkadot-JS UI, click on the ParaThread button.
 
-<!-- prettier-ignore -->
-<!-- :::info
+You should see fields for:
 
-Registering the genesis state and WASM code of the parachain requires a [deposit](../general/chain-state-values.md#genesis-state-registration-deposit) that is computed based on the size (a deposit is paid per byte uploaded).
-
-<!-- The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
-requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama
-and 116 DOT on Polkadot.
-
-::: -->
+- Your Parachain ID
+- Your Genesis Code
+- Your Genesis State
 
 ![coretime-register-parathread](../assets/coretime/Register-Parachain.png)
 
 After successful registration, the parachain starts onboarding as a parathread.
 
-## Run Parachain Collator
+Depending on the network you are registering the parachain, this could take a few minutes to a few hours. This ensures that all validators have the required information about your parachain, and that the relay chain is ready to produce blocks for your parachain.
 
-While the parachain is onboarding, start syncing the [collator](./learn-collator.md) using the
-following command to rapidly sync with the specified relay chain.
+## Run Your Parachain Collator
 
+In order for your parachain to start producing blocks, you need to have access to a fully synchronized node for the relay chain you want to access.
+
+You can synchronize the chain locally using the following command:
+
+```sh
+# You may need to update the `--chain` flag based on which relay chain you are targeting.
+./target/release/parachain-template-node --dev -- --chain=westend --sync warp
 ```
-./target/release/adder-collator --parachain-id= $ParaID --chain=paseo --sync warp
+
+If synchronizing the relay chain is too slow for you, you can use a public RPC of an already synchronized node:
+
+```sh
+# You may need to update the `--relay-chain-rpc-urls` flag based on which relay chain you are targeting.
+./target/release/parachain-template-node --dev --relay-chain-rpc-urls=wss://westend-rpc.polkadot.io
 ```
 
-## Run a Parachain with Bulk Coretime
+In either case, you should eventually see that your relay chain is fully synced, and your parachain has not built any blocks yet.
 
-:::info
+```sh
+2024-12-03 16:16:00 [Relaychain] Received imported block via RPC: #23720021 (0x944b…b392 -> 0xe8cb…291f)
+2024-12-03 16:16:03 [Parachain] 💤 Idle (0 peers), best: #0 (0x8fa4…8c34), finalized #0 (0x8fa4…8c34), ⬇ 0 ⬆ 0
+2024-12-03 16:16:04 [Relaychain] Received finalized block via RPC: #23720019 (0xa46f…51cb -> 0x9133…d918)
+2024-12-03 16:16:06 [Relaychain] Received imported block via RPC: #23720022 (0xe8cb…291f -> 0xb457…a74a)
+2024-12-03 16:16:08 [Parachain] 💤 Idle (0 peers), best: #0 (0x8fa4…8c34), finalized #0 (0x8fa4…8c34), ⬇ 0 ⬆ 0
+2024-12-03 16:16:08 [Relaychain] Received finalized block via RPC: #23720020 (0x9133…d918 -> 0x944b…b392)
+2024-12-03 16:16:11 [Relaychain] Received imported block via RPC: #23720023 (0xb457…a74a -> 0xe299…a05a)
+2024-12-03 16:16:13 [Parachain] 💤 Idle (0 peers), best: #0 (0x8fa4…8c34), finalized #0 (0x8fa4…8c34), ⬇ 0 ⬆ 0
+```
 
-Note that we have two options: **bulk coretime** and **on-demand coretime**. Bulk coretime is
-purchased via the `broker` pallet, which is on the respective Coretime system parachain. On-demand
-coretime is ordered via the `OnDemandAssignment` pallet/module, which is located on the respective
+## Purchase Coretime
+
+We have two options for purchasing coretime for our parachain: **on-demand coretime** and **bulk coretime**.
+
+On-demand coretime is ordered via the `OnDemandAssignment` pallet/module, which is located on the respective
 relay chain.
 
-:::
-
-You can purchase bulk coretime on [Coretime chain](./learn-guides-coretime-marketplaces.md) and
-assign the purchased core to the registered `ParaID`. The snapshot below is from
-[Lastic](https://test.lastic.xyz/) interface.
-
-![coretime-bulk-assign-lastic](../assets/coretime/lastic-assign-core.png)
-
-After successful assignment of the core, the `adder-collator` logs show new collations at regular
-intervals, gradually incrementing the state by `2`.
-
-![coretime-collation-bulk](../assets/coretime/coretime-collation-bulk.png)
+Bulk coretime is purchased via the `broker` pallet, which is on the respective Coretime system parachain.
 
 ## Run a Parachain with On-demand Coretime
 
@@ -183,3 +187,16 @@ The successful collation can also be verified in the parachain collator logs. It
 with each parachain block, the state of `adder-collator` is incremented by `2`.
 
 ![coretime-new-collation](../assets/coretime/coretime-create-new-collation.png)
+
+## Run a Parachain with Bulk Coretime
+
+You can purchase bulk coretime on [Coretime chain](./learn-guides-coretime-marketplaces.md) and
+assign the purchased core to the registered `ParaID`. The snapshot below is from
+[Lastic](https://test.lastic.xyz/) interface.
+
+![coretime-bulk-assign-lastic](../assets/coretime/lastic-assign-core.png)
+
+After successful assignment of the core, the `adder-collator` logs show new collations at regular
+intervals, gradually incrementing the state by `2`.
+
+![coretime-collation-bulk](../assets/coretime/coretime-collation-bulk.png)
