@@ -70,7 +70,7 @@
     "@algolia/client-search": "^5.18.0",
     "@apollo/client": "^3.12.3",
     "@docusaurus/theme-mermaid": "^3.6.3",
-    "bufferutil": "^4.0.8",
+    "bufferutil": "^4.0.9",
     "chart.js": "^4.4.7",
     "crowdin-cli": "^0.3.0",
     "graphql": "^16.10.0",
