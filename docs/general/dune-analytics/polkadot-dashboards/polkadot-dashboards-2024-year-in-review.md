@@ -1,10 +1,10 @@
 ---
-id: polkadot-2024-recap
-title: Polkadot's 2024 Recap
-sidebar_label: 2024 Recap
-description: Major Polkadot's Highlights in 2024
+id: polkadot-2024-review
+title: Polkadot's 2024 Review
+sidebar_label: 2024 Review
+description: Major Polkadot's Highlights in 2024.
 keywords: [polkadot, dashboard, dune, governance, staking, NFT]
-slug: ../polkadot-2024-recap
+slug: ../polkadot-2024-review
 ---
 
 Below are excerpts from the [Polkadot 2024: Year In Review](https://dune.com/substrate/2024) on

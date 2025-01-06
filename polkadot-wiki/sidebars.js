@@ -90,6 +90,20 @@ module.exports = {
                     "general/dune-analytics/onboarding-status-and-key-dashboards",
                     {
                       type: "category",
+                      label: "Annual Reviews",
+                      description: "Polkadot's Annual Reviews.",
+                      link: {
+                        type: 'generated-index',
+                        title: 'Polkadot Annual Reviews',
+                        description: "Polkadot's Annual Reviews using Dune Analytics.",
+                        slug: 'general/dune-analytics/polkadot-annual-reviews',
+                      },
+                      items: [
+                        "general/dune-analytics/polkadot-dashboards/polkadot-2024-review",
+                      ],
+                    },
+                    {
+                      type: "category",
                       label: "Polkadot Dashboards",
                       description: "Polkadot dashboards, including overview, governance, staking, and network analysis.",
                       link: {
