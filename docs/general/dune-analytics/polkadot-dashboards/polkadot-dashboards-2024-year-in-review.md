@@ -1,15 +1,14 @@
 ---
-id: polkadot-2024-year-in-review
-title: 2024 Year In Review
-sidebar_label: 2024 Year In Review
-description: Major highlights of Polkadot
+id: polkadot-2024-recap
+title: Polkadot's 2024 Recap
+sidebar_label: 2024 Recap
+description: Major Polkadot's Highlights in 2024
 keywords: [polkadot, dashboard, dune, governance, staking, NFT]
-slug: ../polkadot-2024-year-in-review
+slug: ../polkadot-2024-recap
 ---
 
-# Polkadot 2024 Year In Review
-
-Below are excerpts from the [Polkadot 2024 Year In Review](https://dune.com/substrate/2024) built by [CMosh](https://x.com/CryptMosh) with assistance from [Matías Funkmeister](https://x.com/funkmeister380).
+Below are excerpts from the [Polkadot 2024: Year In Review](https://dune.com/substrate/2024) on
+Dune.
 
 ## Number of Validators
 
@@ -29,7 +28,7 @@ There are over 50 parachains secured by Polkadot, here we show the top 15 by 3 m
 
 <iframe src="https://dune.com/embeds/4451111/7448693" height="350" width="100%"></iframe>
 
-### By Transfer Count 
+### By Transfer Count
 
 <iframe src="https://dune.com/embeds/4467799/7482819" height="350" width="100%"></iframe>
 
@@ -47,14 +46,15 @@ Bifrost and Acala lead Liquid Staking:
 
 <iframe src="https://dune.com/embeds/4490110/7506390" height="350" width="100%"></iframe>
 
-
-
 ## Inflation
 
-At the beginning of 2024, Polkadot's annual inflation rate was 10%.  In November 2024, it was adjusted to the rate of 8%, with plans for a gradual decrease over time. This change was proposed, voted on, and executed on-chain by OpenGov Ref 1139.
+At the beginning of 2024, Polkadot's annual inflation rate was 10%. In November 2024, it was
+adjusted to the rate of 8%, with plans for a gradual decrease over time. This change was proposed,
+voted on, and executed on-chain by OpenGov Ref 1139.
 
-Upon implementation, 8% of the total issuance equated to approximately 120M DOT per year (roughly 10M DOT per month) in inflation, with 15% allocated to the Polkadot treasury and 85% distributed to stakers. 
-
+Upon implementation, 8% of the total issuance equated to approximately 120M DOT per year (roughly
+10M DOT per month) in inflation, with 15% allocated to the Polkadot treasury and 85% distributed to
+stakers.
 
 <iframe src="https://dune.com/embeds/4468137/7482808" height="350" width="100%"></iframe>
 
@@ -62,10 +62,7 @@ Upon implementation, 8% of the total issuance equated to approximately 120M DOT 
 
 <iframe src="https://dune.com/embeds/4468137/7473123" height="350" width="100%"></iframe>
 
-
-
-## OpenGov Voting and Expenditures 
-
+## OpenGov Voting and Expenditures
 
 ### Monthly Proposals by Outcome
 
@@ -73,12 +70,11 @@ Upon implementation, 8% of the total issuance equated to approximately 120M DOT 
 
 <iframe src="https://dune.com/embeds/4475957/7492713" height="350" width="100%"></iframe>
 
-### Referendum With Most Voting Power 
+### Referendum With Most Voting Power
 
 These proposals brought out the most voting power:
 
 <iframe src="https://dune.com/embeds/4484993/7498160" height="350" width="100%"></iframe>
-
 
 ### Top 20 Voters
 
@@ -86,13 +82,11 @@ Here are the top 20 voters of 2024:
 
 <iframe src="https://dune.com/embeds/4475853/7495290" height="350" width="100%"></iframe>
 
-
-## Treasury Expenditures 
+## Treasury Expenditures
 
 Expenditures were higher in the first half of the year than the second half of the year:
 
 <iframe src="https://dune.com/embeds/4486262/7502591" height="350" width="100%"></iframe>
-
 
 Starting in Summer 2024, expenditures started in USDT+USDC from Polkadot Asset Hub:
 
@@ -100,7 +94,10 @@ Starting in Summer 2024, expenditures started in USDT+USDC from Polkadot Asset H
 
 ## Decentralized Voice (DV) Program Cohorts
 
-The Web3 Foundation introduced the Decentralized Voice program in February 2024 to enable active voters be significantly involved in the OpenGov.Each cohort is delegated 42M DOT of voting power which is shared equally among each cohort's members.  So far, there have been three Cohorts. The current cohort 3 began in Novemeber and will run through into 2025.
+The Web3 Foundation introduced the Decentralized Voice program in February 2024 to enable active
+voters be significantly involved in the OpenGov.Each cohort is delegated 42M DOT of voting power
+which is shared equally among each cohort's members. So far, there have been three Cohorts. The
+current cohort 3 began in Novemeber and will run through into 2025.
 
 <iframe src="https://dune.com/embeds/4498888/7518458" height="350" width="100%"></iframe>
 
@@ -112,29 +109,31 @@ The Web3 Foundation introduced the Decentralized Voice program in February 2024 
 
 <iframe src="https://dune.com/embeds/4490348/7505890" height="350" width="100%"></iframe>
 
-
-## Polkadot Gaming+Defi - Year In Review 
+## Polkadot Gaming+Defi - Year In Review
 
 Here we summarize some key chains that led Polkadot Defi in 2024:
 
 ### Mythos
 
-After completing migration to Polkadot in Summer from Ethereum, Mythos saw robust MAUs in Fall 2024 with 100K+ MAUs:
+After completing migration to Polkadot in Summer from Ethereum, Mythos saw robust MAUs in Fall 2024
+with 100K+ MAUs:
 
 <iframe src="https://dune.com/embeds/4517634/7545444" height="350" width="100%"></iframe>
 
-Over 450K DOT holders received Mythos in an airdrop via OpenGov Ref 643, see [Mythos](https://dune.com/substrate/mythos).
+Over 450K DOT holders received Mythos in an airdrop via OpenGov Ref 643, see
+[Mythos](https://dune.com/substrate/mythos).
 
 ### Hydration
 
 <iframe src="https://dune.com/embeds/3523775/5925828/" height="350" width="100%"></iframe>
 
-Helped by incentives from Polkadot, liquidity in the Omnipool started to grow massively in Summer 2024.
+Helped by incentives from Polkadot, liquidity in the Omnipool started to grow massively in
+Summer 2024.
 
 <iframe src="https://dune.com/embeds/3696950/6219927/" height="350" width="100%"></iframe>
 
-The account analysis shows steady growth and good retention, with predictable bouts of churn after bursts of enthusiasm where prices jumped.
-
+The account analysis shows steady growth and good retention, with predictable bouts of churn after
+bursts of enthusiasm where prices jumped.
 
 See also [Hydration](https://dune.com/substrate/hydration)
 
@@ -142,11 +141,14 @@ See also [Hydration](https://dune.com/substrate/hydration)
 
 <iframe src="https://dune.com/embeds/3696915/6219857/" height="350" width="100%"></iframe>
 
-Bifrost's account analysis shows a peak of new customers in Spring 2024, with many not becoming regular active users. If people stake and forget, this may not be an issue. 
+Bifrost's account analysis shows a peak of new customers in Spring 2024, with many not becoming
+regular active users. If people stake and forget, this may not be an issue.
 
 <iframe src="https://dune.com/embeds/3571958/6012569/" height="350" width="100%"></iframe>
 
-Value staked peaked in March 2024, lost all of its gain for the year in 2024, only to rebound strongly again in the last 6 weeks and again reach a peak of 90m at the height of the 100k BTC frenzy.
+Value staked peaked in March 2024, lost all of its gain for the year in 2024, only to rebound
+strongly again in the last 6 weeks and again reach a peak of 90m at the height of the 100k BTC
+frenzy.
 
 GLMR staking moved elsewhere and MANTA was clearly #2 for 2024.
 
@@ -166,17 +168,20 @@ See also [Centrifuge](https://dune.com/substrate/centrifuge)
 
 <iframe src="https://dune.com/embeds/4093802/6892805/" height="350" width="100%"></iframe>
 
-Liquidity in the top pools on Stellaswap surged massively starting in September 2024, thanks to a large grant of DOT to incentivize liquidity providers (LPs)
+Liquidity in the top pools on Stellaswap surged massively starting in September 2024, thanks to a
+large grant of DOT to incentivize liquidity providers (LPs)
 
 <iframe src="https://dune.com/embeds/3665704/6164782/" height="350" width="100%"></iframe>
 
-Volume surged in March 2024 and November 2024 in line with heightened activity everywhere. Just a handful of pairs dominate the volume.
+Volume surged in March 2024 and November 2024 in line with heightened activity everywhere. Just a
+handful of pairs dominate the volume.
 
 See also [Stellaswap](https://dune.com/substrate/stellaswap)
 
-
 ## Supported by OpenGov
 
-The Polkadot-Dune integration has been led by Colorful Notion and supported by OpenGov throughout 2024.  [Colorful Notion](https://x.com/colorfulnotion) thanks everyone for supporting our work in 2024.
+The Polkadot-Dune integration has been led by Colorful Notion and supported by OpenGov
+throughout 2024. [Colorful Notion](https://x.com/colorfulnotion) thanks everyone for supporting our
+work in 2024.
 
-See something in 2024 that belongs here?  Edit this page and share your Dune dashboard!
+See something in 2024 that belongs here? Edit this page and share your Dune dashboard!
