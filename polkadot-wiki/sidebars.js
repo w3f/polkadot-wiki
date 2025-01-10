@@ -760,21 +760,17 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Polkadot Comparisons",
+          label: "Comparisons",
           description: "Comparison between Polkadot and other Networks. ",
           link: {
-            type: 'generated-index',
-            title: "Polkadot Comparisons",
-            description: "Comparison between Polkadot and other Networks. ",
-            slug: '/learn-comparisons-index',
+            type: 'doc',
+            id: "learn/learn-comparisons",
           },
           items: [
             'learn/learn-comparisons-kusama',
-            'learn/learn-comparisons-ethereum-2',
+            'learn/learn-comparisons-ethereum',
             'learn/learn-comparisons-cosmos',
             'learn/learn-comparisons-avalanche',
-            'learn/learn-comparisons',
-            'learn/learn-comparisons-rollups'
           ],
         },
         "learn/learn-video-tutorials",
