@@ -656,6 +656,21 @@ module.exports = {
             },
           ],
         },
+        {
+          type: "category",
+          label: "Comparisons",
+          description: "Comparison between Polkadot and other Networks. ",
+          link: {
+            type: 'doc',
+            id: "learn/learn-comparisons",
+          },
+          items: [
+            'learn/learn-comparisons-kusama',
+            'learn/learn-comparisons-ethereum',
+            'learn/learn-comparisons-cosmos',
+            'learn/learn-comparisons-avalanche',
+          ],
+        },
         "learn/learn-video-tutorials",
         {
           type: "category",
