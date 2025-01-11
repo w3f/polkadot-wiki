@@ -140,7 +140,7 @@ periods: the Renewal period and the Sale period.
   renewed.
 - Sale periods are as well divided into two periods: a Price Discovery period and a Fixed Price
   period. After the Renewal period, a new `start_price` will be set by the Coretime Chain and a
-  dutch auction of `leading_length` blocks will start, putting downward pressure on price to find
+  dutch auction of `leadin_length` blocks will start, putting downward pressure on price to find
   the right equilibrium. This process will set the `regular_price` which will be the one offered at
   the Fixed Price period.
 
