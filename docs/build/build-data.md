@@ -41,15 +41,6 @@ fully-featured indexer, so you don’t have to, with:
 To start building, head to the [SubQuery documentation](https://academy.subquery.network/) where
 you'll find quick start guides and walkthrough developer tutorials.
 
-### The Graph
-
-[The Graph](https://thegraph.com/en/) is a layer-1 indexing tool and querying layer for the
-decentralized web, who announced an integration plan to bring
-[indexing and querying to Polkadot](https://medium.com/polkadot-network/the-graph-bringing-indexing-and-querying-to-polkadot-6b433e381fe8).
-
-The Graph allows developers to build and publish open APIs, called subgraphs. Applications can query
-subgraphs using [GraphQL](https://graphql.org/).
-
 ### Traceye
 
 [Traceye](https://www.traceye.io) is a data indexing solution for Web3. Diverse range L1/L2
@@ -59,12 +50,6 @@ data indexers optimized for fast indexing, 50% reduced data lag, 99.99% uptime, 
 entities, community subgraphs, and more to suit developers’ needs.
 
 ## Analytics platform
-
-### DIN
-
-[DIN](https://din.lol/)(formally named Web3Go) is a Polkadot-based open data analytics platform that
-provides infrastructure and tooling to help users visualize, curate, share, and analyze on-chain
-data.
 
 ### Covalent
 
