@@ -101,6 +101,11 @@ Rather than have many referenda through OpenGov, the treasury can allocate funds
 sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
 can spend funds (depending on their specific rule set).
 
+An example of a sub-treasury is the
+[Polkadot Technical Fellowship's](./learn-polkadot-technical-fellowship.md#fellowship-sub-treasury)
+treasury, which operates a treasury which utilizes tracks within the Fellowship to fund proposals.
+Spends may be requested by any asset that the sub-treasury owns, for example, DOT or a stablecoin.
+
 New treasuries could be added to respective
 [system chains](./learn-system-chains#existing-system-chains) through governance by adding more
 instances of this pallet.
