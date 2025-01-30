@@ -37,8 +37,8 @@ when using an archive node. However, an archive node takes up a lot of disk spac
 
 :::tip
 
-On the [Paranodes](https://paranodes.io/DBSize) or [Stakeworld](https://stakeworld.io/docs/dbsize)
-websites, you can find lists of the database sizes of Polkadot and Kusama nodes.
+On the [Stakeworld](https://stakeworld.io/docs/dbsize) website, you can find lists of the database
+sizes of Polkadot and Kusama nodes.
 
 :::
 
