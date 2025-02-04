@@ -202,7 +202,7 @@ module.exports = {
      announcementBar: {
        id: "banner",
        content:
-         'The Polkadot Blockchain Academy is coming to Switzerland in 2025! <a href="https://polkadot.academy/campus-application-form/" target="_blank" rel="noopener noreferrer">Apply Here 👉</a>',
+         'The Polkadot Wiki is migrating to MkDocs! <a href="https://github.com/w3f/polkadot-wiki-mkdocs" target="_blank" rel="noopener noreferrer">New Issues and PRs here please 👉</a>',
        backgroundColor: '#e6007a',
        textColor: 'white',
        isCloseable: true,
