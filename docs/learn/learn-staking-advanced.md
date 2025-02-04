@@ -167,7 +167,7 @@ nominate validators and distributing the stake backing validators as evenly as p
 objectives of this election mechanism are to maximize the security of the network, and achieve fair
 representation of the nominators. If you want to know more about how NPoS works (e.g. election,
 running time complexity, etc.), please read
-[here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
+[here](https://research.web3.foundation/en/latest/polkadot/NPoS.html).
 
 ## Rewards Distribution
 
