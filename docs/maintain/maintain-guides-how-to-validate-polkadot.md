@@ -653,7 +653,7 @@ If you are on a remote server, it is easier to run this command on the same mach
 is running with the default WS RPC port configured):
 
 ```sh
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9944
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' https://localhost:9944
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
@@ -873,7 +873,7 @@ true for the workloads running on both bare-metal and VMs. But the penalty remai
 containerized workloads in some cases.
 
 As demonstrated in
-[Yusuke Endoh's article](http://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html),
+[Yusuke Endoh's article](https://mamememo.blogspot.com/2020/05/cpu-intensive-rubypython-code-runs.html),
 a performance penalty for containerized workloads can be as high as 100%. This is due to SECCOMP
 profile being overprotective about applying Spectre/Meltdown mitigations without providing real
 security. A longer explanation is available in the

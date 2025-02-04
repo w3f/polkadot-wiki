@@ -205,7 +205,7 @@ community members. The application we use most often to interact with the Matrix
     <a href="https://www.reddit.com/r/Kusama">Kusama Reddit</a>
     </li>
     <li>
-    <a href="http://youtube.com/c/kusamanetwork">Kusama YouTube Channel</a>
+    <a href="https://youtube.com/c/kusamanetwork">Kusama YouTube Channel</a>
     </li>
   </ul>
 </TabItem>

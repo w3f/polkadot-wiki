@@ -189,7 +189,7 @@ level=info ts=2021-04-16T19:02:20.234Z caller=main.go:767 msg="Server is ready t
 
 ```
 
-Go to `http://SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus
+Go to `https://SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus
 interface or not. If it is working, exit the process by pressing on `CTRL + C`.
 
 Next, we would like to automatically start the server during the boot process, so we have to create
@@ -249,7 +249,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-You can now access it by going to the `http://SERVER_IP_ADDRESS:3000/login`. The default user and
+You can now access it by going to the `https://SERVER_IP_ADDRESS:3000/login`. The default user and
 password is admin/admin.
 
 :::note
@@ -388,7 +388,7 @@ After=network-online.target
 User=root
 Group=root
 Type=simple
-ExecStart=/usr/local/bin/alertmanager --config.file /etc/alertmanager/alertmanager.yml --web.external-url=http://SERVER_IP:9093 --cluster.advertise-address='0.0.0.0:9093'
+ExecStart=/usr/local/bin/alertmanager --config.file /etc/alertmanager/alertmanager.yml --web.external-url=https://SERVER_IP:9093 --cluster.advertise-address='0.0.0.0:9093'
 
 
 [Install]

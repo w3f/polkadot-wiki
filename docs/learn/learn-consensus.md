@@ -46,8 +46,8 @@ allows for blocks to be rapidly produced, and the slower finality mechanism to r
 process to finalize blocks without risking slower transaction processing or stalling.
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in
-Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
-specified [Casper FFG](#casper-ffg).
+Ethereum's transition to proof of stake in [EIP 1011](https://eips.ethereum.org/EIPS/eip-1011),
+which specified [Casper FFG](#casper-ffg).
 
 ## Block Production: BABE
 

@@ -75,7 +75,7 @@ staking rewards for an address, submit transactions to a node's transaction queu
 [much more](https://paritytech.github.io/substrate-api-sidecar/dist/).
 
 The client runs on an HTTP host. The following examples use python3, but you can query any way you
-prefer at `http://HOST:PORT/`. The default is `http://127.0.0.1:8080`.
+prefer at `https://HOST:PORT/`. The default is `https://127.0.0.1:8080`.
 
 ### Fetching a Block
 
@@ -85,7 +85,7 @@ Fetch a block using the `block/number` endpoint. To get the chain tip, omit the 
 import requests
 import json
 
-url = 'http://127.0.0.1:8080/blocks/7409038'
+url = 'https://127.0.0.1:8080/blocks/7409038'
 response = requests.get(url)
 if response.ok:
 	block_info = json.loads(response.text)
@@ -406,7 +406,7 @@ Submit a serialized transaction using the `transaction` endpoint with an HTTP PO
 import requests
 import json
 
-url = 'http://127.0.0.1:8080/transaction/'
+url = 'https://127.0.0.1:8080/transaction/'
 tx_headers = {'Content-type' : 'application/json', 'Accept' : 'text/plain'}
 response = requests.post(
 	url,
