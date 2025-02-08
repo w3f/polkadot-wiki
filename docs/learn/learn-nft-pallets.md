@@ -10,6 +10,19 @@ slug: ../learn-nft-pallets
 NFT [pallets](./learn-transactions.md#pallets-and-extrinsics) allow developers to easily implement
 NFT-related actions within their dApp.
 
+Polkadot as a decentralized ecosystem currently has 5 NFT Pallets for developers to choose from:
+
+1. Uniques \- it is the most used pallet in the ecosystem by the number of parachains. It covers the basic NFT functionality. It is compact, simple and therefore a good candidate for parachains that want native NFT functionality for a  limited number of use cases.  
+2. NFTs \- utilized among others by AssetHub and Mythical. Has the largest number of NFTs and transactions. It is fairly rich in functionality and is the pallet of choice for use in a wide range of use cases by dApps that deploy to AssetHub.  
+3. Unique Network \- the first NFT pallet created for Polkadot. Currently has the most advanced functionality. Most notable features include Nested NFTs, Dynamic NFTs, Re-Fungibile (fractionalised) NFTs, transaction fee sponsoring as well as full interoperability between it's EVM and Substrate. See [https://unique.network/developer/\#why-unique](https://unique.network/developer/#why-unique) for a more comprehensive overview.  
+4. ORML was created initially to serve as a simple pallet for NFTs, but was overtaken by the Uniques pallet in adoption and is currently only used by the Acala parachain.  
+5. NFT Manager is another simple NFT pallet used only by its creator \- Aventus team.  
+     
+For detailed comparison of pallets see [NFT Pallets in the Polkadot ecosystem](https://docs.google.com/presentation/d/1J6kJ5lQSAnHTre3j7-J6fH34kk8TQ4apif-CCHjQo3o/edit?usp=sharing)  
+   
+
+Below are the introductory technical descriptions of the two main pallets \- NFTs pallet, used on AssetHub, and Uniques pallet. These two pallets are used by many parachains to date and are a well recommended NFT solution for new parachains and dApps that may wish to implement NFTs. For further information on Unique Network see [NFT Pallets in the Polkadot Ecosystem](https://unique.network/learn/). ORML and NFT Managers are examples of custom-built NFT pallets and are not recommended for general implementation but do have a role in special, parachain-specific use cases.
+
 ## NFTs Pallet
 
 :::info For Developers Only
