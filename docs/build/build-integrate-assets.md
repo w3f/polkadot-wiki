@@ -194,7 +194,7 @@ Thanks to XCM and a growing number of parachains, the relay chain native token c
 several blockchains, which means the providers need to monitor cross-chain transfers on top of local
 transfers and corresponding `balances.transfer` events.
 
-Currently, DOT can be sent and received in the relay chain and in the Asset Hub either with a
+Usually, DOT is sent and received in the relay chain and in the Asset Hub either with a
 [Teleport](https://wiki.polkadot.network/docs/learn-teleport) from
 [system parachains](https://wiki.polkadot.network/docs/learn-system-chains) or with a
 [Reserve Backed Transfer](https://wiki.polkadot.network/docs/learn-xcm-pallet#transfer-reserve-vs-teleport)
@@ -202,6 +202,11 @@ from any other parachain. In both cases, the event emitted when processing the t
 `balances.minted` event. Hence, providers should listen to these events, pointing to an address in
 their system. For this, the service provider must query every new block created, loop through the
 events array, filter for any `balances.minted` event, and apply the appropriate business logic.
+
+In some special cases, DOT may be sent to the relay chain or the Asset Hub using other XCM instructions, 
+like [`Transact`](https://wiki.polkadot.network/docs/learn/xcm/journey-transact). 
+In these cases, the event emitted when processing the transact instruction in the destination chain is 
+`balances.transfer`, which is usually emitted during the finalization of the block execution process.
 
 #### Tracking back XCM information
 
