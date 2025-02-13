@@ -33,7 +33,7 @@ and add your NFT app to this page.
 - [Nodle](#nodle)
 - [Unique Network](#unique-network)
 
-## [Asset Hub](https://wiki.polkadot.network/docs/learn-nft-projects#asset-hub)
+## Asset Hub
 
 The Asset Hub is a generic assets parachain which provides functionality for deploying and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently hosts [Uniques pallet](https://wiki.polkadot.network/docs/learn-nft-pallets#uniques-pallet) (its use on AssetHub is not encouraged) and the [NFTs pallet](https://wiki.polkadot.network/docs/learn-nft-pallets#nfts-pallet).
 
