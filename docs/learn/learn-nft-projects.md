@@ -63,9 +63,7 @@ These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.x
 
 ## Crust
 
-Crust is primarily a storage solution. It has a separate section on dedicated NFT storage solutions.
-
-[Storing NFTs](https://wiki.crust.network/docs/en/buildIntegrationNFTDataStorage)
+Crust is primarily a storage solution. A [separate section](https://wiki.crust.network/docs/en/buildIntegrationNFTDataStorage) is dedicated to NFT storage solutions.
 
 ## Darwinia Network
 
