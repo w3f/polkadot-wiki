@@ -41,7 +41,7 @@ A more in-depth overview of the Asset Hub pallets and developer resources availa
 
 ## Astar
 
-[Astar Network](https://astar.network/) and its sister network [Shiden Network](https://shiden.astar.network/) are the smart contract infrastructure in the Polkadot Ecosystem. Astar Ecosystem ("Astar") supports NFTs developed with EVM smart contracts and Wasm smart contracts.
+[Astar Network](https://astar.network/) and its sister network [Shiden Network](https://shiden.astar.network/) are smart contract infrastructure in the Polkadot Ecosystem, i.e. they are rollups that support EVM smart contracts. Astar supports NFTs developed with EVM smart contracts and Wasm smart contracts.
 
 Astar has all the toolings available that every EVM NFT developer knows. The availability of those toolings makes the onboarding to Astar networks very attractive to any developer looking to explore the Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides supporting all EVM toolings, Astar also bootstrapped the Wasm smart contract environment for NFT developers writing smart contracts with [ink!](https://use.ink/) based on [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals).
 
