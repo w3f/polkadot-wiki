@@ -178,7 +178,7 @@ Unique Network provides a fully featured EVM with a few perks:
 - Unique network EVM utilities contain interfaces to the blockchain’s core Substrate pallet functions which allows Solidity contracts to directly invoke them.
 - This interoperability is fully supported by the JS/TS SDK allowing rapid development even in the mix-and-match scenario.
 
-The recommended and most efficient way to build on Unique Network is via the JS/TS SDK version 2.0 at the moment of this writing. The SDK interacts with the blockchain via an RPC mechanism eliminating the need to build and maintain a complex development environment. It fully implements the [Unique Metadata Schema 2.0](https://docs.unique.network/reference/schemas/). The Unique SDK has recently incorporated the ability to create NFT assets on the Asset Hub as well which makes it a very versatile tool for NFT management and creation on the Polkadot ecosystem.
+The recommended and most efficient way to build on Unique Network is via the JS/TS SDK version 2.0. The SDK interacts with the blockchain via an RPC eliminating the need to build and maintain a complex development environment. It fully implements the [Unique Metadata Schema 2.0](https://docs.unique.network/reference/schemas/). The Unique SDK allows the creation of NFT assets on the Asset Hub as well which makes it a very versatile tool for NFT management and creation on the Polkadot ecosystem.
 
 Developer tools and documentation links:
 
