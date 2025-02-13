@@ -79,7 +79,7 @@ NFT marketplace available at https://nft.io/collection/darwinia/assets
 
 KodaDot's strength lies in its commitment to open-source collaboration. It has transformed into a collaborative hub where creators, developers, and community members work collectively for decision making, amassing an extensive network of over [90 open-source contributors](https://hello.kodadot.xyz/about-us/who-are-we/achievements). This robust collaboration has earned KodaDot the [number one rank as a dApp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
 
-See below a video tutorial about how to mint your NFT on [the Polkadot Asset Hub](https://wiki.polkadot.network/docs/learn-nft-projects#asset-hub) using KodaDot.
+See below a video tutorial about how to mint your NFT on [the Polkadot Asset Hub](#asset-hub) using KodaDot.
 
 <div className="row">
   <div className="col text--center">
