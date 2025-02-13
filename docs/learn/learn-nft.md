@@ -67,13 +67,13 @@ For the sake of reference, we can refer to these as static NFTs that are almost 
 
 ## NFTs in Polkadot & Kusama
 
-As mentioned, the use of standardized pallets provide a decentralised processing mechanism through Wasm contracts which are specifically optimized for speed and advanced functionality of an NFT implementation. Two examples of this are the Polkadot NFTs pallet and the Unique Network’s collection of NFT utility pallets. This approach allows any parachain in the ecosystem to gain access to advanced NFT features without needing to build a contract framework from scratch.
+As mentioned, standardized pallets provide a decentralized processing mechanism through Wasm contracts, specifically optimized for an NFT implementation’s advanced functionality. Two examples are the Polkadot NFTs pallet and the Unique Network’s collection of NFT utility pallets. This approach allows any parachain in the ecosystem to access advanced NFT features without building a contract framework from scratch.
 
-With the introduction of NFT capabilities to the cross-chain messaging format (XCM) a direct inter-chain NFT transfer solution is becoming a reality. This topic is explored in more detail in the next chapter.
+With the introduction of NFT capabilities to the cross-chain messaging format (XCM), a direct inter-chain NFT transfer solution is becoming a reality.
 
-One important aspect of NFT interoperability hinges on the ability of differing networks to have a common agreement on metadata format. This greatly simplifies interoperability and removes the need for metadata conversion steps. In this regard, an effort is underway to make this a reality in this proposal [RFC-0125: XCM Asset Metadata](https://polkadot-fellows.github.io/RFCs/approved/0125-xcm-asset-metadata.html#rfc-0125-xcm-asset-metadata).
+A critical aspect of NFT interoperability hinges on the ability of differing networks to agree on a common metadata format. This greatly simplifies interoperability and removes the need for metadata conversion steps. In this regard, an effort is underway to make this a reality in this proposal [RFC-0125: XCM Asset Metadata](https://polkadot-fellows.github.io/RFCs/approved/0125-xcm-asset-metadata.html#rfc-0125-xcm-asset-metadata).
 
-The other option of building a framework of Solidity contracts as the scaffolding for the advanced features within an EVM is also a viable option but is somewhat hampered by the necessity of using bridging mechanisms for cross-chain transfers and a lack of a derivative NFT solution. This approach has the limitations described in the previous chapter and It currently also exhibits much less efficient transaction processing than the native substrate solutions.
+The other option of building a framework of Solidity contracts as the scaffolding for advanced features within an EVM is also viable. Still, it is hampered by the necessity of using bridging mechanisms for cross-chain transfers and a lack of a derivative NFT solution. This approach exhibits much less efficient transaction processing than the native substrate solutions.
 
 :::info
 
