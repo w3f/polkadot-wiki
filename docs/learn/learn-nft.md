@@ -11,7 +11,7 @@ A fungible item may be unique. In the currency note example, each issued note ha
 
 A case where a fungible item is not unique is a simple plastic betting chip. Each chip in its pristine state is indistinguishable from any other chip and each is interchangeable within its own group.
 
-Each NFT is a unique item attributed with an identity.
+On the other hand, an NFT is unique and has features that allow for its uniqueness.
 
 ## NFT Anatomy
 
