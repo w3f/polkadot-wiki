@@ -98,7 +98,7 @@ For more information about minting using KodaDot see [this step-by-step tutorial
 
 ## MNet Continuum
 
-MNet Continuum (ex BitCountry) specializes in providing Metaverse as a Service (MaaS) to all networks. The first decentralized application (dApp) offers users the tools to create and customize a metaverse, run and reward a community through immersive quests, and mint and trade NFTs. Users can enjoy metaverse gaming, learning and networking.
+MNet Continuum (ex BitCountry) specializes in providing Metaverse as a Service (MaaS) to all networks. Their decentralized application (dApp) offers users the tools to create and customize a metaverse, run and reward a community through immersive quests, and mint and trade NFTs. Users can enjoy metaverse gaming, learning and networking.
 
 [Minting And NFT Generators](https://metaversenw.gitbook.io/user-manual/nfts/what-is-an-nft)
 
