@@ -12,7 +12,7 @@ NFT-related actions within their dApp.
 
 Polkadot as a decentralized ecosystem currently has 5 NFT Pallets for developers to choose from:
 
-1. Uniques \- it is the most used pallet in the ecosystem by the number of parachains. It covers the basic NFT functionality. It is compact, simple and therefore a good candidate for parachains that want native NFT functionality for a  limited number of use cases.  
+1. **Uniques**: It is compact, simple and therefore a good candidate for parachains that want native NFT functionality for a  limited number of use cases.  
 2. NFTs \- utilized among others by AssetHub and Mythical. Has the largest number of NFTs and transactions. It is fairly rich in functionality and is the pallet of choice for use in a wide range of use cases by dApps that deploy to AssetHub.  
 3. Unique Network \- the first NFT pallet created for Polkadot. Currently has the most advanced functionality. Most notable features include Nested NFTs, Dynamic NFTs, Re-Fungibile (fractionalised) NFTs, transaction fee sponsoring as well as full interoperability between it's EVM and Substrate. See [https://unique.network/developer/\#why-unique](https://unique.network/developer/#why-unique) for a more comprehensive overview.  
 4. ORML was created initially to serve as a simple pallet for NFTs, but was overtaken by the Uniques pallet in adoption and is currently only used by the Acala parachain.  
