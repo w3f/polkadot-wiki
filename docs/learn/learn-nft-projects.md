@@ -37,7 +37,7 @@ and add your NFT app to this page.
 
 The Asset Hub is a [system chain](./learn-system-chains) which provides functionality for deploying and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently hosts [Uniques pallet](./learn-nft-pallets#uniques-pallet) (its use on AssetHub is not encouraged) and the [NFTs pallet](./learn-nft-pallets#nfts-pallet).
 
-A more in-depth overview of the Asset Hub pallets and developer resources available to the developers can be found in the dedicated [wiki pallets section](https://wiki.polkadot.network/docs/learn-nft-pallets).
+A more in-depth overview of the Asset Hub pallets and developer resources available to the developers can be found in the dedicated [section about NFT pallets](./learn-nft-pallets).
 
 ## Astar
 
