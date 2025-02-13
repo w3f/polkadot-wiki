@@ -55,7 +55,7 @@ For example, Ethereum is a general-purpose blockchain that does not have the con
 
 The core NFT EVM standard is defined in [ERC721](https://eips.ethereum.org/EIPS/eip-721), but there are extended implementations that introduce some aspects of advanced NFT features like [ERC1155](https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/).
 
-The inability to combine standards implicitly is a significant shortcoming to this approach and introduces a necessity to create custom implementations of contracts for specialized use cases where one might desire combined features. Each ERC which provides an advanced NFT feature is an isolated subset. As will be shown later this is not the case for Polkadiot native NFTs.
+This approach’s significant shortcoming is its inability to combine standards implicitly. This introduces the necessity of creating custom contract implementations for specialized use cases where one might desire combined features. Each ERC that provides an advanced NFT feature is an isolated subset. As will be shown later, this is not the case for Polkadot native NFTs.
 
 To facilitate the creation of advanced NFT tokens, a blockchain must provide a mechanism for overcoming these limitations as we’ll see in the upcoming section.
 
