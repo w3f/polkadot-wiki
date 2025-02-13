@@ -75,7 +75,7 @@ NFT marketplace available at https://nft.io/collection/darwinia/assets
 
 ## KodaDot
 
-[KodaDot](https://kodadot.xyz/) is an open-source NFT marketplace that operates on the Dotsama (Kusama/Polkadot) network, striving to aggregate various NFT standards (Kusama, Asset Hub, Basilisk, etc.) in the Dotsama ecosystem, enhancing user experience by abstracting these standards. Its marketplace is currently the main NFT dApp on AssetHub.
+[KodaDot](https://kodadot.xyz/) is an open-source NFT marketplace that operates on the Polkadot Ecosystem and beyond (Polkadot and Kusama Asset Hubs, Mantle, Base, and Immutable zkEVM), striving to aggregate various NFT standards and enhancing user experience.
 
 KodaDot's strength lies in its commitment to open-source collaboration. It has transformed into a collaborative hub where creators, developers, and community members work collectively for decision making, amassing an extensive network of over [90 open-source contributors](https://hello.kodadot.xyz/about-us/who-are-we/achievements). This robust collaboration has earned KodaDot the [number one rank as a dApp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
 
