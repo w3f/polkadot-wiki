@@ -45,7 +45,7 @@ A more in-depth overview of the Asset Hub pallets and developer resources availa
 
 Astar has all the toolings available that every EVM NFT developer knows. The availability of those toolings makes the onboarding to Astar networks desirable to any developer looking to explore the Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides supporting all EVM toolings, Astar also bootstrapped the Wasm smart contract environment for NFT developers writing smart contracts with [ink!](https://use.ink/) based on [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals).
 
-The main advantage of having a multi-virtual machine environment for NFT developers is that it will give more possibilities to the builders for the use case they are developing. With the support of Wasm smart contracts, developers can develop solutions like [RMRK](https://wiki.polkadot.network/docs/learn-nft#rmrk) with smart contracts.
+The main advantage of having a multi-virtual machine environment for NFT developers is that it gives builders more possibilities for the use cases they are developing. With the support of Wasm smart contracts, developers can create solutions like [RMRK](./learn-nft#rmrk) with smart contracts.
 
 Developer tools and documentation links:
 
