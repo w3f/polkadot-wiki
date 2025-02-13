@@ -121,7 +121,7 @@ Developer tools and documentation links:
 
 ## Mythical
 
-[Mythical Games](https://mythicalgames.com/) is an online gaming platform that implements a fungible $MYTH token as well as NFTs in its gaming ecosystem. They are a parachain in the Polkadot ecosystem and implement the Polkadot NFTs pallet to provide advanced NFT tokens.
+[Mythical Games](https://mythicalgames.com/) is an online gaming platform that implements NFTs in its gaming ecosystem. Mythical Games has Mythos Chain, an L1 rollup in the Polkadot ecosystem that implements the Polkadot NFTs pallet to provide advanced NFT functionalities.
 
 Mythical offers a platform for game developers with comprehensive documentation and onboarding guides, to ensure anyone can get up and running in time. The primary integration path is REST APIs, but SDKs are also available upon request.
 
