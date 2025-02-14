@@ -44,11 +44,11 @@ that make it unique.
 What purpose does a unique digital asset provide? The answer to this question lies in the two
 distinct ways an NFT is utilized.
 
-The first is use of NFTs as a speculative store of value derived from its uniqueness (rarity,
-implied or intrinsic worth). This is the initial novelty aspect of NFTs that initiated an era of
-collectibles, tradeables and instantiated the appearance of the mass markets where NFTs were traded
-as a commodity. This is also recognised as the era of the simple NFT or otherwise known as static
-NFT. The Uniques pallet was created to facilitate this implementation of the NFT.
+The first is the use of NFTs as a speculative store of value derived from their uniqueness (rarity,
+implied, or intrinsic worth). This initial novelty aspect of NFTs initiated an era of collectibles
+and tradeables and instantiated the appearance of the mass markets where NFTs were traded as a
+commodity. This is also recognized as the era of the simple NFT, otherwise known as static NFT. The
+Uniques pallet was created to facilitate this implementation of the NFT.
 
 The second implementation is as a utility. As mentioned, when we define an NFT, it can store data
 on-chain. By convention, we call this NFT component the NFT’s _metadata_. Generally, an NFT is an
@@ -56,7 +56,7 @@ independent, sovereign data record. This is where the utility aspect of an NFT l
 digital key, a collection of documents, an atomic data fragment, or a unique personal set of related
 assets and information that can be owned. An example of NFT utility is the
 [OG WUD Burn NFT Collection](https://kodadot.xyz/ahp/collection/244) where each NFT grants some
-benefits within the flappywud.lol game.
+benefits within the [FlappyWUD game](https://flappywud.lol/).
 
 These two roles are not mutually exclusive. An NFT can be a store of value only, a value-less
 utility token exclusively, or both at the same time if it has worth on the market as a utility token
@@ -147,9 +147,9 @@ and Kusama.
 
 ## Cross-Chain Transfers
 
-Transfer of NFTs across chains is one of the most engaging issues in all of blockchain space. In
-terms of the mechanism through which a transfer of the NFT can occur on the Polkadot network, two
-distinct approaches exist:
+Transfer of NFTs across chains is one of the most engaging issues in blockchain. In terms of the
+mechanism through which a transfer of the NFT can occur on the Polkadot network, two distinct
+approaches exist:
 
 - Asset teleportation
 - Asset reservation via sovereign account mechanism - derivative NFTs
@@ -157,8 +157,8 @@ distinct approaches exist:
 Cross-chain transfers within the Polkadot Substrate ecosystem are exclusively executed through the
 XCM (Cross-Consensus Messaging) system. This system provides native, trustless security at the
 protocol level, eliminating the need for external bridge solutions. The XCM implementation
-significantly enhances security by removing the trustful aspect of the transactions which are
-typically required by bridge architectures and represent potential points of failure and a security
+significantly enhances security by removing the trustful aspect of the transactions, which is
+typically required by bridge architectures and represents potential points of failure and security
 risk in cross-chain communication.
 
 NFT transfers can be decomposed into two independently transferable components:
@@ -174,9 +174,8 @@ Network. The derivative implementation required only core asset properties, as m
 nonessential for staking and collateral use cases where only identity and ownership verification are
 required.
 
-On the other hand, teleportation, i.e. a full transfer of identity ownership and metadata may be the
-optimal solution in the case of a full asset migration and the only available option for bridging
-mechanisms.
+Teleportation, i.e., a complete transfer of identity ownership and metadata, may be the optimal
+solution for a complete asset migration and the only available option for bridging mechanisms.
 
 Bridging to and from Substrate chains and EVM chains takes much effort but is a highly desired
 feature in the NFT industry. Merging the collector and customer base has significant implications,
@@ -186,7 +185,7 @@ so multiple projects focus on making this possible.
 
 Utility NFTs are at a very early adoption stage.
 
-If you consider an NFT as an ownable, universal, digital encapsulation of data, NFTs have a role as
+If you consider an NFT an ownable, universal digital encapsulation of data, it has a role as
 significant as that of a smart contract. Real-world asset tokenization, tradable digital coupons,
-virtual digital keys and badges, bundles of utility, resource and accomplishment tokens, data
+virtual digital keys and badges, bundles of utility, resource, and accomplishment tokens, data
 wrappers… a likely advent of the era of discovery lays ahead.
