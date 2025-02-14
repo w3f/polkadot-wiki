@@ -33,16 +33,11 @@ On the other hand, an NFT is unique and has features that allow for its uniquene
 Every NFT has three common components irrespective of the chain it belongs to or originates from
 that make it unique.
 
-- Identity
-- Ownership
-- Metadata
-
-Ownership is determined via a contract or a wallet address.
-
-Identity can be defined via a property, address or a contract.
-
-Metadata can be a single reference to an off-chain object (digital asset or contract) or, in case of
-advanced NFTs, an elaborate data structure containing both on-chain data and off-chain references.
+- **Identity**: Defined via a property, address or a contract.
+- **Ownership**: Determined via a contract or a wallet address.
+- **Metadata**: Can be a single reference to an off-chain object (digital asset or contract) or, in
+  case of advanced NFTs, an elaborate data structure containing both on-chain data and off-chain
+  references.
 
 ## NFT Purpose
 
