@@ -35,7 +35,7 @@ The first is use of NFTs as a speculative store of value derived from its unique
 
 The second implementation is as a utility. As mentioned, when we define an NFT, it can store data on-chain. By convention, we call this NFT component the NFT’s _metadata_. Generally, an NFT is an independent, sovereign data record. This is where the utility aspect of an NFT lies. An NFT can be a digital key, a collection of documents, an atomic data fragment, or a unique personal set of related assets and information that can be owned. An example of NFT utility is the [OG WUD Burn NFT Collection](https://kodadot.xyz/ahp/collection/244) where each NFT grants some benefits within the flappywud.lol game.
 
-These two roles are not mutually exclusive. An NFT can be a store of value only, a value-less utility token exclusively or both at the same time if it has a worth on a market as a utility token, or inversely if it is primarily a token of worth with additional utility.
+These two roles are not mutually exclusive. An NFT can be a store of value only, a value-less utility token exclusively, or both at the same time if it has worth on the market as a utility token or, inversely, if it is primarily a token of worth with additional utility.
 
 It is the utility aspect of the NFTs that has been the driving force behind the development of and transition to the advanced NFT concept central to Polkadot’s NFTs pallet development.
 
