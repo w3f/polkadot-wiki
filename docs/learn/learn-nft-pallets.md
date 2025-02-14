@@ -21,7 +21,7 @@ Polkadot as a decentralized ecosystem currently has 5 NFT Pallets for developers
 For detailed comparison of pallets see [NFT Pallets in the Polkadot ecosystem](https://docs.google.com/presentation/d/1J6kJ5lQSAnHTre3j7-J6fH34kk8TQ4apif-CCHjQo3o/edit?usp=sharing)  
    
 
-Below are the introductory technical descriptions of the two main pallets \- NFTs pallet, used on AssetHub, and Uniques pallet. These two pallets are used by many parachains to date and are a well recommended NFT solution for new parachains and dApps that may wish to implement NFTs. For further information on Unique Network see [NFT Pallets in the Polkadot Ecosystem](https://unique.network/learn/). ORML and NFT Managers are examples of custom-built NFT pallets and are not recommended for general implementation but do have a role in special, parachain-specific use cases.
+Below are the introductory technical descriptions of the two main pallets \- NFTs pallet, used on AssetHub, and Uniques pallet. These two pallets are used by many parachains to date that may wish to implement NFTs. For further information on Unique Network see [NFT Pallets in the Polkadot Ecosystem](https://unique.network/learn/). **ORML** and **NFT Managers** are examples of custom-built NFT pallets for parachain-specific use cases.
 
 ## NFTs Pallet
 
