@@ -47,7 +47,7 @@ Polkadot’s Ink! language for writing contracts in Substrate provides a separat
 
 The availability of Ethereum Virtual Machines (EVM) in the Polkadot ecosystem provides yet another way to create and manage NFTs using Solidity contracts just like on the Ethereum network. Such NFTs are built in adherence to the corresponding ERC standards adopted from the Ethereum network.
 
-## Birth of NFTs - the EVM Domain
+## Birth of NFTs - The EVM Domain
 
 A general-purpose blockchain is not built to natively support the concept of NFTs. It is only natively aware and optimized for its own native fungible tokens, and implementations built on such a chain are essentially "special case smart contracts".
 
