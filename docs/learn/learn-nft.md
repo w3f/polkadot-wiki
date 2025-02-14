@@ -57,7 +57,7 @@ The core NFT EVM standard is defined in [ERC721](https://eips.ethereum.org/EIPS/
 
 This approach’s significant shortcoming is its inability to combine standards implicitly. This introduces the necessity of creating custom contract implementations for specialized use cases where one might desire combined features. Each ERC that provides an advanced NFT feature is an isolated subset. As will be shown later, this is not the case for Polkadot native NFTs.
 
-To facilitate the creation of advanced NFT tokens, a blockchain must provide a mechanism for overcoming these limitations as we’ll see in the upcoming section.
+A blockchain must provide a mechanism for overcoming these limitations to facilitate the creation of advanced NFT tokens, as we will see in the upcoming section.
 
 A typical [NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)[​](https://wiki.polkadot.network/docs/learn-nft#a-typical-nft-on-ethereum)\*\*
 
