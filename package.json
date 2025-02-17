@@ -44,7 +44,7 @@
     "@docusaurus/module-type-aliases": "^3.7.0",
     "@docusaurus/plugin-client-redirects": "^3.7.0",
     "@docusaurus/preset-classic": "^3.7.0",
-    "@octokit/rest": "^21.1.0",
+    "@octokit/rest": "^21.1.1",
     "@polkadot/api": "^15.5.2",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^15.0.5",
@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.1",
-    "@algolia/client-search": "^5.20.2",
+    "@algolia/client-search": "^5.20.3",
     "@docusaurus/theme-mermaid": "^3.7.0",
     "bufferutil": "^4.0.9",
     "chart.js": "^4.4.7",
