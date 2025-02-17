@@ -250,10 +250,10 @@
   resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.7.10.tgz#ae829f170158e297a9b6a28f161a8e487d00814d"
   integrity sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==
 
-"@apollo/client@^3.12.11":
-  version "3.12.11"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.12.11.tgz#250301155a86c59e2915637fd19c9a2c42f878a8"
-  integrity sha512-1RppV9U3E6Uusl/33yGkZa+rXpkGU5iCstcYltwWjdTjoA/YBD2Yyu0aHy8J4uKfIExUgnMW1HJWn4A0E0rRsw==
+"@apollo/client@^3.13.0":
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.13.0.tgz#a9c310a77a0460512daef03a47b6b92e85f1a631"
+  integrity sha512-sCrdGw6Jv+0csdy5YwnAJ231CJWvJOBsHB3mZWdI+jA62lsJcV2TYWSaIYd7Cno3Apk8JBDbEGrMEKALeQUmOQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "@wry/caches" "^1.0.0"
