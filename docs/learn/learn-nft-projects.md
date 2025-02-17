@@ -125,6 +125,37 @@ KodaDot.
 For more information about minting using KodaDot see
 [this step-by-step tutorial](https://hello.kodadot.xyz/tutorial/minting/how-to-mint-nfts-on-polkadot-asset-hub-using-kodadot).
 
+### History of KodaDot
+
+KodaDot began as the first
+[unofficial explorer for RMRKv0.0.1](https://kusama.polkassembly.io/motion/256)
+[contributing to RMRK protocol](https://github.com/rmrk-team/rmrk-spec/issues/10). It later
+[received Kusama Treasury funding](https://kusama.polkassembly.io/motion/349), which propelled the
+team to create
+[great end-user experience on the Asset hub](https://kusama.polkassembly.io/motion/349).
+
+In the summer of 2022, KodaDot won the first prize at the
+[Polkadot North American event](https://devpost.com/software/kodadot-moonsama) for implementing
+MoonBeam and MoonRiver NFT EVM smart contracts and enabling read-only access to existing components
+for seamless end-user interaction.
+
+The team successfully
+[launched with Basilisk NFT Marketplace pallet in Fall 2022](https://github.com/kodadot/nft-gallery/issues/660),
+where an increasing number of artist collections are emerging, providing artists the opportunity to
+receive offers on unlisted NFTs and earn on-chain royalties.
+
+KodaDot's upcoming integrations are based on
+[PSP-34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md), leveraging
+[smart contracts written with ink!](https://use.ink/).
+
+### Ecosystem Tools by KodaDot
+
+KodaDot has enriched the Polkadot ecosystem by
+[offering a comprehensive API interface for builders](https://github.com/kodadot/uniquery), based on
+the SubSquid indexer. This platform also presents searchable items and collections, translating
+on-chain transactions into deep insights about collection ownership dynamics for end-users. For more
+info about KodaDot check out [link](https://hello.kodadot.xyz/).
+
 ## MNet Continuum
 
 MNet Continuum (ex BitCountry) specializes in providing Metaverse as a Service (MaaS) to all
