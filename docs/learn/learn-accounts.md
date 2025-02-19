@@ -110,7 +110,7 @@ backup file (and password) stored securely, you can restore your account.
 
 Polkadot's address format allows it to
 [map your Polkadot address into multiple ones of different parachains](./learn-account-advanced.md#address-format).
-This has been a major UX problem in onboard new users. A unified address format across parachains
+This has been a major UX problem in onboarding new users. A unified address format across parachains
 within the Polkadot ecosystem aims to deliver a **simpler, more consistent user experience** while
 reducing errors.
 
@@ -120,8 +120,8 @@ Below is an example of the Hydration parachain.
 
 - New format: `13m1rnJf9MPFKwef2Vc2pXYffcZhoGEGXxXFew8X4Dj96FcA`
 
-From the UI perspective, your Polkadot address will be the same on any parachain. The main benefits
-of the unified address format include the following:
+From a UI perspective, your Polkadot address will be the same on any parachain. The main benefits of
+the unified address format include the following:
 
 - Simplified User Experience: A single address format reduces complexity, making Polkadot more
   accessible.
