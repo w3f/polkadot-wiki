@@ -7,13 +7,10 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../build-guides-coretime-start
 ---
 
-import Tabs from "@theme/Tabs"; import DocCardList from '@theme/DocCardList';
+!!!warning
+    This section is under construction.
 
-:::warning This section is under construction.
-
-:::
-
-<DocCardList />
+<!-- TODO: INDEX CARDS -->
 
 ## Using the Polkadot SDK
 
@@ -32,15 +29,12 @@ The Polkadot SDK is comprised of **three** important repositories:
 > For an in-depth dive into the monorepo, it is highly recommended that you look into the
 > [Polkadot SDK Docs, which explains everything.](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/index.html)
 
-:::info What is a task?
+!!!info "What is a task?"
+    You might see the term "task" referenced often in place of "parachain". In most cases, it refers to
+    a process utilizing the relay chain's compute. This could be a parachain or any other computational
+    process, provided that it adheres to the Polkadot protocol interface.
 
-You might see the term "task" referenced often in place of "parachain". In most cases, it refers to
-a process utilizing the relay chain's compute. This could be a parachain or any other computational
-process, provided that it adheres to the Polkadot protocol interface.
-
-The full definition can be found [here](../learn/learn-agile-coretime.md#task).
-
-:::
+    The full definition can be found [here](../learn/learn-agile-coretime.md#task).
 
 1. **Reserving** a [`ParaId`](../general/glossary.md#paraid), where you will upload your runtime and
    genesis state.
@@ -102,7 +96,7 @@ PC-->DEP
 ### Install dependencies
 
 Make sure you have everything you need for your target system
-[here](./build-guides-install-deps.md).
+[here](build-guides-install-deps.md).
 
 Be sure you also install the `polkadot-parachain` and `chain-spec-builder` binaries, as they needed
 to start and run your chain!
@@ -131,4 +125,4 @@ For more information, check their
 
 If you wish to the
 [Polkadot SDK's Parachain template](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain),
-please follow the [Template to Core guide.](./build-guides-template-basic.md)
+please follow the [Template to Core guide.](build-guides-template-basic.md)

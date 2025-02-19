@@ -7,19 +7,19 @@ keywords: [Assets, DEX, Exchange, Pools, Tokens]
 slug: ../learn-guides-asset-conversion
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
-
-:::info Wallet and UI Developers
-
-The [DOT ACP UI](https://github.com/MVPWorkshop/dot-acp-ui) project is part of Polkadot initiative
-for building front-end and UI for Asset Conversion Pallet on Polkadot's Asset Hub. Currently, the
-app is deployed on Westend and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
-
-:::
+!!!info "Wallet and UI Developers"
+    The [DOT ACP UI](https://github.com/MVPWorkshop/dot-acp-ui) project is part of Polkadot initiative for building front-end and UI for Asset Conversion Pallet on Polkadot's Asset Hub. Currently, the app is deployed on Westend and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
 
 The tutorial below demonstrates the complete journey from creating a liquidity pool on Paseo test
 net and exploring all of the key functionalities of Asset Conversion pallet.

@@ -1,0 +1,415 @@
+# Project information
+site_name: ""
+site_url: https://w3f.github.io/polkadot-wiki-mkdocs
+site_author: Web3 Foundation Technologies
+site_description: >-
+  High-level documentation for the Polkadot Ecosystem.
+
+# Repository
+repo_name: w3f/polkadot-wiki-mkdocs
+repo_url: https://github.com/w3f/polkadot-wiki-mkdocs
+
+# Copyright
+copyright: Copyright &copy; 2017 - 2025 Web3 Foundation Technologies
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material-overrides
+  features:
+    - content.code.annotate
+    - content.tooltips
+    - navigation.footer
+    - navigation.tabs 
+    - navigation.indexes 
+    - navigation.top 
+    - navigation.path
+    - content.action.edit
+  palette: 
+    scheme: default
+    primary: white
+    accent: pink
+  icon:
+    fontawesome: true
+  favicon: assets/Polkadot_Favicon.png
+  logo: assets/wiki-logo.svg
+
+# Plugins
+plugins:
+  - search
+  - open-in-new-tab
+  - macros
+
+# Additional configuration
+extra:
+  footer_logo: assets/Polkadot_Logo_White.png
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/Polkadot
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/r/polkadot
+    - icon: fontawesome/brands/github
+      link: https://github.com/paritytech/polkadot-sdk
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw
+    - icon: fontawesome/brands/discord
+      link: https://polkadot-discord.w3f.tools/
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/MessageBox.css
+  - stylesheets/announcement-bar.css
+extra_javascript:
+  - javascript/MessageBox.js
+  - javascript/init_kapa_widget.js
+  - javascript/announcement-bar.js
+  - javascript/simple-analytics.js
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - codehilite
+  - tables
+  - sane_lists
+  - pymdownx.critic
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Sidebar
+nav:
+  - Explore:
+      - general/index.md
+      - Getting Started: general/getting-started.md
+      - Wallets:
+          - general/wallets/index.md 
+          - Polkadot Ecosystem Wallets: https://polkadot.network/ecosystem/wallets/
+          - Wallets and Extensions: general/wallets-and-extensions.md
+          - Ledger: general/ledger.md
+          - Polkadot Vault: general/polkadot-vault.md
+      - Apps:
+          - general/apps/index.md
+          - Polkadot Ecosystem Apps: https://polkadot.network/ecosystem/dapps/
+          - DotAppStore: https://dotappstore.com/
+          - Staking Apps: general/staking-apps.md
+          - Governance Apps: general/governance-apps.md
+          - Multisig Apps: general/multisig-apps.md
+          - NFT Projects: learn/learn-nft-projects.md
+          - Parachains Apps: general/parachains-apps.md
+      - Dashboards:
+              - general/dashboards/index.md
+              - Dune Analytics:
+                  - general/dashboards/dune-analytics/index.md
+                  - Polkadot Ecosystem Overview: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview.md
+                  - Onboarding Status and Key Dashboards: general/dashboards/dune-analytics/onboarding-status-and-key-dashboards.md
+                  - Annual Reviews:
+                      - Polkadot 2024 Review: general/dashboards/dune-analytics/annual-reviews/polkadot-dashboards-2024-year-in-review.md
+                  - Polkadot Dashboards:
+                      - Overview: general/dashboards/dune-analytics/polkadot-dashboards/polkadot-dashboards-overview.md
+                      - Governance: general/dashboards/dune-analytics/polkadot-dashboards/polkadot-dashboards-governance.md
+                      - Staking: general/dashboards/dune-analytics/polkadot-dashboards/polkadot-dashboards-staking.md
+                      - Network: general/dashboards/dune-analytics/polkadot-dashboards/polkadot-dashboards-network.md
+                      - Legacy:
+                          - Polkadot DOT Ordinals: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-dot-ordinals.md
+                          - Polkadot Governance Dashboard: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-governance-dashboard.md
+                          - Polkadot OpenGov Referenda Home: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-opengov-referenda-home.md
+                          - Polkadot OpenGov Referendum Voting Analysis: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-opengov-referendum-voting-analysis.md
+                          - Polkadot Staking Dashboard Nomination Pool: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-staking-dashboard-nomination-pool.md
+                          - Polkadot Staking Dashboard Nominators: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-staking-dashboard-nominators.md
+                          - Polkadot Staking Dashboard Pool Member: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-staking-dashboard-pool-member.md
+                          - Polkadot Staking Dashboard Validators: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-staking-dashboard-validators.md
+                          - Polkadot Staking Dashboard: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-staking-dashboard.md
+                  - Parachain Dashboards:
+                      - Acala: general/dashboards/dune-analytics/parachain-dashboards/acala-dashboards.md
+                      - AssetHub: general/dashboards/dune-analytics/parachain-dashboards/assethub-dashboards.md
+                      - Astar: general/dashboards/dune-analytics/parachain-dashboards/astar-dashboards.md
+                      - Bifrost: general/dashboards/dune-analytics/parachain-dashboards/bifrost-dashboards.md
+                      - BridgeHub: general/dashboards/dune-analytics/parachain-dashboards/bridgehub-dashboards.md
+                      - Centrifuge: general/dashboards/dune-analytics/parachain-dashboards/centrifuge-dashboards.md
+                      - Collectives: general/dashboards/dune-analytics/parachain-dashboards/collectives-dashboards.md
+                      - Coretime: general/dashboards/dune-analytics/parachain-dashboards/coretime-dashboards.md
+                      - EnergyWebX: general/dashboards/dune-analytics/parachain-dashboards/energywebx-dashboards.md
+                      - Frequency: general/dashboards/dune-analytics/parachain-dashboards/frequency-dashboards.md
+                      - Hydration: general/dashboards/dune-analytics/parachain-dashboards/hydration-dashboards.md
+                      - Interlay: general/dashboards/dune-analytics/parachain-dashboards/interlay-dashboards.md
+                      - InvArch: general/dashboards/dune-analytics/parachain-dashboards/invarch-dashboards.md
+                      - Litentry: general/dashboards/dune-analytics/parachain-dashboards/litentry-dashboards.md
+                      - Manta: general/dashboards/dune-analytics/parachain-dashboards/manta-dashboards.md
+                      - Moonbeam: general/dashboards/dune-analytics/parachain-dashboards/moonbeam-dashboards.md
+                      - Neuroweb: general/dashboards/dune-analytics/parachain-dashboards/neuroweb-dashboards.md
+                      - Nodle: general/dashboards/dune-analytics/parachain-dashboards/nodle-dashboards.md
+                      - People: general/dashboards/dune-analytics/parachain-dashboards/people-dashboards.md
+                      - Pendulum: general/dashboards/dune-analytics/parachain-dashboards/pendulum-dashboards.md
+                      - Phala: general/dashboards/dune-analytics/parachain-dashboards/phala-dashboards.md
+                      - Polkadex: general/dashboards/dune-analytics/parachain-dashboards/polkadex-dashboards.md
+                      - Polimec: general/dashboards/dune-analytics/parachain-dashboards/polimec-dashboards.md
+                      - Snowbridge: general/dashboards/dune-analytics/parachain-dashboards/snowbridge-dashboards.md
+                      - Stellaswap: general/dashboards/dune-analytics/parachain-dashboards/stellaswap-dashboards.md
+                      - Unique: general/dashboards/dune-analytics/parachain-dashboards/unique-dashboards.md
+                  - Project Dashboards: general/dashboards/dune-analytics/project-dashboards.md
+                  - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
+              - Parity Data Dashboards: general/dashboards/parity-data-dashboards.md
+              - Staking Dashboard: general/dashboards/staking-dashboard.md
+              - Fellowship Dashboard: https://polkadot-fellows.xyz  
+      - Community & Contributors:
+          - general/community/index.md
+          - Community: general/community.md
+          - Contributing: general/contributing.md
+          - Contributors: general/contributors.md
+      - Funding:
+          - general/funding/index.md
+          - Grants: general/grants.md
+          - Decentralized Futures: general/decentralized-futures.md
+          - Polkadot OpenGov Treasury: learn/learn-polkadot-opengov-treasury.md
+          - Polkadot Community Foundation: general/pcf.md
+          - Ecosystem Funds: general/ecosystem-funds.md
+      - Programs:
+          - general/programs/index.md   
+          - Decentralized Voices: general/decentralized-voices.md
+          - Bug Bounty: general/bug-bounty.md
+          - Ambassadors: general/ambassadors.md
+          - Alpha Program: general/alpha-program.md
+          - Decentralized Nodes: https://nodes.web3.foundation/
+          - Thousand Contributors: general/thousand-contributors.md
+          - Dev Heroes: general/dev-heroes.md
+      - Metadata: https://paritytech.github.io/subxt-explorer/#/
+      - Chain State Values: general/chain-state-values.md
+  - Learn:
+      - learn/index.md
+      - General:
+          - learn/general/index.md
+          - Web3 and Polkadot: general/web3-and-polkadot.md
+          - Polkadot Vision:
+              - general/polkadot-vision/index.md
+              - Polkadot V1: general/polkadot-v1.md
+              - Polkadot Direction: general/polkadot-direction.md
+          - Stay Safe:
+              - general/stay-safe/index.md
+              - How to DYOR: general/how-to-dyor.md
+              - Scams: general/scams.md
+              - Transaction Attacks: general/transaction-attacks.md
+          - Web3 Foundation Research: https://research.web3.foundation/
+          - Start Building: general/start-building.md
+          - FAQ: general/faq.md
+          - Glossary: general/glossary.md
+          - NFT Projects: general/nft-projects.md
+      - Basics:
+          - learn/basics/index.md
+          - Accounts:
+              - Account Balances: learn/learn-account-balances.md
+              - Account Abstraction: learn/learn-account-abstraction.md
+              - Identity: learn/learn-identity.md
+              - Account Multisig: learn/learn-account-multisig.md
+              - Proxies: learn/learn-proxies.md
+              - Proxies Pure: learn/learn-proxies-pure.md
+          - Transactions: learn/learn-transactions.md
+          - Staking:
+              - learn/staking/index.md
+              - Staking: learn/learn-staking.md
+              - Nomination Pools: learn/learn-nomination-pools.md
+          - Polkadot OpenGov:
+              - learn/polkadot-opengov/index.md
+              - Polkadot OpenGov: learn/learn-polkadot-opengov.md
+              - Polkadot OpenGov Origins: learn/learn-polkadot-opengov-origins.md
+              - Polkadot Technical Fellowship: learn/learn-polkadot-technical-fellowship.md
+              - OpenGov.Watch: https://www.opengov.watch/
+              - OpenGov Tracker: https://ogtracker.io/
+              - OpenGov Portal: https://opengovwatch.notion.site/Polkadot-OpenGov-Portal-f8baf91a46864144ae96c47173a10225
+          - Tokens and Assets:
+              - learn/assets/index.md
+              - DOT: learn/learn-DOT.md
+              - Inflation: learn/learn-inflation.md
+              - Asset Hub:
+                  - Asset Conversion (Asset Hub): learn/learn-asset-conversion-assethub.md
+              - Teleport: learn/learn-teleport.md
+              - Introduction to NFTs: learn/learn-nft.md
+          - Network Participants:
+              - learn/participants/index.md
+              - Collator: learn/learn-collator.md
+              - Nominator: learn/learn-nominator.md
+              - Validator: learn/learn-validator.md
+          - Offenses: learn/learn-offenses.md
+          - Components:
+              - learn/components/index.md
+              - Polkadot Host: learn/learn-polkadot-host.md
+              - WASM: learn/learn-wasm.md
+              - Runtime Upgrades: learn/learn-runtime-upgrades.md
+      - Advanced:
+          - learn/advanced/index.md
+          - Architecture:
+              - Consensus: learn/learn-consensus.md
+              - Parachains Protocol: learn/learn-parachains-protocol.md
+              - Async Backing: learn/learn-async-backing.md
+              - Scheduling:
+                  - Coretime Marketplaces: learn/learn-guides-coretime-marketplaces.md
+                  - Coretime Parachains: learn/learn-guides-coretime-parachains.md
+              - Elastic Scaling: learn/learn-elastic-scaling.md
+              - Parachains:
+                  - Parachains: learn/learn-parachains.md
+                  - System Chains: learn/learn-system-chains.md
+                  - Parachains FAQ: learn/learn-parachains-faq.md
+              - Bridges:
+                  - Snowbridge: learn/learn-snowbridge.md
+                  - Hyperbridge: learn/learn-hyperbridge.md
+                  - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
+          - Account (Advanced): learn/learn-account-advanced.md
+          - Staking (Advanced): learn/learn-staking-advanced.md
+          - NFT Pallets: learn/learn-nft-pallets.md
+          - Cryptography: learn/learn-cryptography.md
+          - Phragmen: learn/learn-phragmen.md
+          - Polkadot-JS:
+              - PolkadotJS: general/polkadotjs.md
+              - PolkadotJS UI: general/polkadotjs-ui.md
+              - Polkadot-JS Guides:
+                  - Account Guides:
+                      - Accounts Multisig: learn/learn-guides-accounts-multisig.md
+                      - Accounts Proxy: learn/learn-guides-accounts-proxy.md
+                      - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
+                  - Transfers: learn/learn-guides-transfers.md
+                  - Staking Guides:
+                      - Nominator: learn/learn-guides-nominator.md
+                      - Staking Pools: learn/learn-guides-staking-pools.md
+                  - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
+                  - Test OpenGov Proposals: learn/learn-guides-test-opengov-proposals.md
+                  - Treasury: learn/learn-guides-treasury.md
+                  - Bounties: learn/learn-guides-bounties.md
+                  - Identity: learn/learn-guides-identity.md
+                  - Ledger: learn/learn-guides-ledger.md
+                  - Vault: learn/learn-guides-vault.md
+                  - Asset Hub Guides:
+                      - Assets Create: learn/learn-guides-assets-create.md
+                      - Asset Conversion: learn/learn-guides-asset-conversion.md
+                  - Bridge Hub Guides:
+                      - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
+                  - Claims: learn/learn-guides-claims.md
+      - Comparisons:
+          - learn/comparisons/index.md
+          - Kusama: learn/learn-comparisons-kusama.md
+          - Ethereum: learn/learn-comparison-ethereum.md
+          - Cosmos: learn/learn-comparisons-cosmos.md
+          - Avalanche: learn/learn-comparisons-avalanche.md
+      - Video Tutorials: https://www.youtube.com/@PolkadotNetwork/playlists
+      - Future Implementations:
+          - Spree: learn/learn-spree.md
+          - Safrole: learn/learn-safrole.md
+          - JAM:
+              - JAM Chain: learn/learn-jam-chain.md
+              - JAM FAQ: learn/learn-jam-faq.md
+      - Archive:
+          - learn/archive/index.md
+          - Governance: learn/archive/learn-governance.md
+          - Treasury: learn/archive/learn-treasury.md
+          - Launch: learn/archive/learn-launch.md
+          - Redenomination: learn/archive/learn-redenomination.md
+          - Controller: learn/archive/learn-controller.md
+          - Auction: learn/archive/learn-auction.md
+          - Crowdloans: learn/archive/learn-crowdloans.md
+          - Thousand Validators: learn/archive/thousand-validators.md
+  - Build:
+        - build/index.md
+        - Build Guide: build/build-guide.md
+        - Network Overview: build/build-network-overview.md
+        - Client-side Development:
+            - build/client/index.md
+            - Client-side Development: build/build-client-side.md
+            - Light Clients: build/build-light-clients.md
+            - Node Interaction: build/build-node-interaction.md
+        - Smart Contracts: build/build-smart-contracts.md
+        - Protocol Development Resources:
+            - build/protocol/index.md
+            - Coretime Guides:
+                - Coretime Overview: build/build-guides-coretime-start.md
+                - Install Dependencies: build/build-guides-install-deps.md
+                - Basic Template: build/build-guides-template-basic.md
+                - Coretime Troubleshooting: build/build-guides-coretime-troubleshoot.md
+                - Coretime Swap: learn/learn-guides-coretime-swap.md
+            - Protocol Information: build/build-protocol-info.md
+            - Integrate Assets: build/build-integrate-assets.md
+            - HRMP Channels: build/build-hrmp-channels.md
+        - Tooling:
+            - build/tooling/index.md
+            - Data: build/build-data.md
+            - Open Source: build/build-open-source.md
+            - Tools Index: build/build-tools-index.md
+        - Hackathon: build/build-hackathon.md
+        - Archive:
+            - build/archive/index.md
+            - Transaction Construction: build/build-transaction-construction.md
+            - Integration: build/build-integration.md
+            - Node Management: build/build-node-management.md
+            - Parachains: build/build-parachains.md
+            - Build Dapp: build/build-dapp.md
+            - Build Oracle: build/build-oracle.md
+            - Storage:  build/build-storage.md
+  - Maintain:
+      - maintain/index.md
+      - Polkadot Parameters: maintain/maintain-polkadot-parameters.md
+      - Nodes and Dapps:
+          - maintain/node/index.md
+          - Endpoints: maintain/maintain-endpoints.md
+          - Sync: maintain/maintain-sync.md
+          - Bootnode: maintain/maintain-bootnode.md
+          - RPC: maintain/maintain-rpc.md
+          - WSS: maintain/maintain-wss.md
+          - Networks: maintain/maintain-networks.md
+          - Errors: maintain/maintain-errors.md
+      - Collator Guides:
+          - maintain/collator/index.md
+          - Async Backing: maintain/maintain-guides-async-backing.md
+      - Validator Guides:
+          - maintain/validator/index.md
+          - How to Validate Polkadot: maintain/maintain-guides-how-to-validate-polkadot.md
+          - Validator Payout: maintain/maintain-guides-validator-payout.md
+          - How to Systemd: maintain/maintain-guides-how-to-systemd.md
+          - Secure Validator: maintain/maintain-guides-secure-validator.md
+          - How to Upgrade: maintain/maintain-guides-how-to-upgrade.md
+          - How to Monitor Your Node: maintain/maintain-guides-how-to-monitor-your-node.md
+          - How to Chill: maintain/maintain-guides-how-to-chill.md
+          - How to Stop Validating: maintain/maintain-guides-how-to-stop-validating.md
+          - Community Validator Guide: maintain/maintain-guides-validator-community.md
+      - Archive:
+          - Democracy Guide: maintain/archive/maintain-guides-democracy.md
+          - How to Join Council: maintain/archive/maintain-guides-how-to-join-council.md
+          - How to Vote Councillor: maintain/archive/maintain-guides-how-to-vote-councillor.md
+          - maintain/maintain-archive.md
+  - Kusama:
+      - Getting Started: kusama/kusama-getting-started.md
+      - Timeline: kusama/kusama-timeline.md
+      - Code of Conduct: kusama/kusama-coc.md
+      - Bug Bounty: kusama/kusama-bug-bounty.md
+      - Social Recovery: kusama/kusama-social-recovery.md
+      - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
+      - Society Guide: maintain/kusama/maintain-guides-society-kusama.md
+      - How to Validate Kusama: maintain/kusama/maintain-guides-how-to-validate-kusama.md
+      - Kusama Inflation: kusama/kusama-inflation.md
+      - Kusama Society: kusama/kusama-society.md
+
+

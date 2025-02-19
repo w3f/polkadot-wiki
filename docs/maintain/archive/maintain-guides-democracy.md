@@ -7,11 +7,16 @@ keywords: [democracy, council, action, proposal]
 slug: ../maintain-guides-democracy
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../learn-polkadot-opengov)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived. For up-to-date information about governance, see the
+    <a href="../../learn-polkadot-opengov" target="_blank" rel="noopener noreferrer">
+      Polkadot OpenGov page.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The public referenda chamber is one of the three bodies of on-chain governance as it's instantiated
 in Polkadot and Kusama. The other two bodies are the
@@ -67,12 +72,12 @@ bond back before it has become a referendum. Since it is essentially impossible 
 definitely when a proposal may become a referendum (if ever), this means that any tokens bonded will
 be locked for an indeterminate amount of time.
 
-:::info Proposals cannot be revoked by the proposer, even if they never turn into a referendum
+!!!info "Proposals cannot be revoked by the proposer, even if they never turn into a referendum"
+    It is important to realize that there is no guarantee that DOT you use for proposing or endorsing a
+    proposal will be returned to that account in any given timeframe.
 
-It is important to realize that there is no guarantee that DOT you use for proposing or endorsing a
-proposal will be returned to that account in any given timeframe.
 
-::: On Polkadot Apps, you can navigate to the Governance -> Democracy tab to make a new proposal. In
+On Polkadot Apps, you can navigate to the Governance -> Democracy tab to make a new proposal. In
 order to submit a proposal, you will need to submit what's called the preimage hash. The preimage
 hash is simply the hash of the proposal to be enacted. The easiest way to get the preimage hash is
 by clicking on the "Submit preimage" button and configuring the action that you are proposing.
@@ -189,10 +194,7 @@ your transaction and wait for it to be included in a block.
 
 ## Unlocking Locked Tokens
 
-Like [vesting](../../learn/learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are
-unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make
-your funds available again after the lock expires. Unbonding is another term you hear a lot in
-Polkadot, it means withdrawing your DOT that was used in staking. To know more about it, please see
+The tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires. Unbonding is another term you hear a lot in Polkadot, it means withdrawing your DOT that was used in staking. To know more about it, please see
 [here](../../learn/learn-nominator.md).
 
 You can do this from the "Accounts" page in
@@ -265,41 +267,35 @@ details and click on the delegate button and then sign and submit the transactio
 Your delegation will count toward whatever account you delegated for votes on until you explicitly
 undelegate your vote.
 
-:::tip Query the chain state for an account's delegation preferences
+!!!tip "Query the chain state for an account's delegation preferences"
+    It is possible to query the delegation preferences of any actively delegating account on the network
+    through `democracy.votingOf` extrinsic.
 
-It is possible to query the delegation preferences of any actively delegating account on the network
-through `democracy.votingOf` extrinsic.
-
-![query delegation](../../assets/democracy/query-delegation.png)
-
-:::
+    ![query delegation](../../assets/democracy/query-delegation.png)
 
 ## Undelegate a Vote
 
-:::caution
+!!!caution
+    If there is an existing lock due to a previous delegation change or undelegation, any new change or
+    undelegation will restart the lock period for the larger DOT amount and the longest conviction
+    period between the existing and the new lock.
 
-If there is an existing lock due to a previous delegation change or undelegation, any new change or
-undelegation will restart the lock period for the larger DOT amount and the longest conviction
-period between the existing and the new lock.
+    This will only matter to accounts with conviction, as the accounts with no conviction don't have any
+    lock period.
 
-This will only matter to accounts with conviction, as the accounts with no conviction don't have any
-lock period.
+    Examples:
 
-Examples:
+    1. Delegate 500 DOT with 1x conviction, then change delegation to 1000 DOT with 1x conviction, the
+      lock period will reset for 1000 DOT with 1x conviction.
 
-1. Delegate 500 DOT with 1x conviction, then change delegation to 1000 DOT with 1x conviction, the
-   lock period will reset for 1000 DOT with 1x conviction.
+    2. Delegate 500 DOT with 3x conviction, then change the delegation to 1000 DOT with 1x conviction,
+      the lock period will reset for 1000 DOT with 3x conviction.
 
-2. Delegate 500 DOT with 3x conviction, then change the delegation to 1000 DOT with 1x conviction,
-   the lock period will reset for 1000 DOT with 3x conviction.
+    3. Delegate 500 DOT with 1x conviction, then change the delegation to 200 DOT with 1x conviction,
+      the lock period will reset for 500 DOT with 1x conviction.
 
-3. Delegate 500 DOT with 1x conviction, then change the delegation to 200 DOT with 1x conviction,
-   the lock period will reset for 500 DOT with 1x conviction.
-
-To understand this in further detail checkout
-[this stackexchange post.](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
-
-:::
+    To understand this in further detail checkout
+    [this stackexchange post.](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
 
 You may decide at some point in the future to remove your delegation to a target account. In this
 case, your tokens will be locked for the maximum amount of time in accordance with the conviction

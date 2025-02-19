@@ -19,14 +19,8 @@ keywords:
 slug: ../learn-parachains-protocol
 ---
 
-:::info
-
-This page is a summary of the
-[Protocol Overview chapter in **The Polkadot Parachain Host Implementer's Guide**](https://paritytech.github.io/polkadot/book/protocol-overview.html)
-and the
-[Availability and Validity (AnV) chapter in **The Polkadot Protocol Specification**](https://spec.polkadot.network/chapter-anv).
-
-:::
+!!!info
+    This page is a summary of the [Protocol Overview chapter in **The Polkadot Parachain Host Implementer's Guide**](https://paritytech.github.io/polkadot/book/protocol-overview.html) and the [Availability and Validity (AnV) chapter in **The Polkadot Protocol Specification**](https://spec.polkadot.network/chapter-anv).
 
 The Parachains' Protocol aims to carry a parachain's block from authoring to inclusion through a
 process that can be carried out repeatedly and in parallel for each parachain connected to the Relay
@@ -135,14 +129,8 @@ changes its status through this path as follows:
 - Included: The block is backed and considered available (we have a parablock). Included parablocks
   are shown as square with white background and yellow border enclosing an "I".
 
-:::info Asynchronous Backing
-
-Parablocks' backing and inclusion take 12 seconds to be recorded on the relay chain, i.e. backing
-happens in one relay chain block (6 seconds) and inclusion in another relay chain block (additional
-6 seconds, see Figure above). With [**asynchronous backing**](./learn-async-backing.md), backing and
-inclusion can be recorded in just one relay chain block.
-
-:::
+!!!info "Asynchronous Backing"
+    Parablocks' backing and inclusion take 12 seconds to be recorded on the relay chain, i.e. backing happens in one relay chain block (6 seconds) and inclusion in another relay chain block (additional 6 seconds, see Figure above). With [**asynchronous backing**](./learn-async-backing.md), backing and inclusion can be recorded in just one relay chain block.
 
 ### Parachain Phase
 
@@ -171,12 +159,8 @@ their backing is the set of signed statements. The para-validators can then star
 [**erasure coding**](#erasure-codes) (this is what will make the parablock available, more on this
 later on) that will be sent to all validators in the network.
 
-:::info Polkadot guarantees valid state transitions, not valid states
-
-Validators do not inspect every value in a parachain's state, only those that are modified. This
-insures that the modification is valid.
-
-:::
+!!!info "Polkadot guarantees valid state transitions, not valid states"
+    Validators do not inspect every value in a parachain's state, only those that are modified. This insures that the modification is valid.
 
 Previously, we said that backable blocks _seem_ to represent valid state transitions because
 para-validators are a small subset of all validators. Thus, it is possible to have the majority of
@@ -220,16 +204,8 @@ approval". The Inclusion Pipeline must conclude for a specific parachain before 
 accepted on that parachain. After inclusion, the [Approval Process](#approval-process) starts and it
 makes sure the block is valid, and it can run for many parachain blocks at once.
 
-:::info Data Availability - Erasure Codes of Parachain Blocks and PoVs
-
-The erasure code chunks necessary for reconstructing parachain blocks and their respective
-Proofs-of-Validity (PoV) are stored on the relay chain validator’s hardware (disk) and made
-available to the relay chain network for up to 24 hours. It is important to note that this data is
-neither stored within the relay chain blocks nor in the chain state. Only the root of those chunks
-is embedded within the [candidate receipt](#candidate-receipts) and is stored in the relay chain
-blocks.
-
-:::
+!!!info "Data Availability - Erasure Codes of Parachain Blocks and PoVs"
+    The erasure code chunks necessary for reconstructing parachain blocks and their respective Proofs-of-Validity (PoV) are stored on the relay chain validator’s hardware (disk) and made available to the relay chain network for up to 24 hours. It is important to note that this data is neither stored within the relay chain blocks nor in the chain state. Only the root of those chunks is embedded within the [candidate receipt](#candidate-receipts) and is stored in the relay chain blocks.
 
 ### Failure to Inclusion
 
@@ -262,7 +238,7 @@ The approval pipeline can be divided into the following steps:
 1. Parablocks included by the Inclusion Pipeline are pending approval for a time window known as the
    **secondary checking window**.
 2. During the secondary checking window, validators (secondary checkers) randomly self-select based
-   on a [VRF](./learn-cryptography#vrf) lottery to perform secondary checks on each of the
+   on a [VRF](./learn-cryptography.md#vrf) lottery to perform secondary checks on each of the
    parablock.
 3. Secondary checkers acquire the parablock with PoV (erasure codings are necessary to reconstruct
    PoV) and re-run the validation function.
@@ -297,16 +273,8 @@ The result of the dispute must be transplantable to all other forks so that mali
 slashed in all possible histories and so that honest validators will ignore any forks containing
 that parablock.
 
-:::info Parablocks vs. relay chain Blocks
-
-It is important to understand that a relay chain block does not contain parablocks, but
-para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of relay
-chain blocks as having been approved instead of parablocks that have been approved. A relay chain
-block containing information about approved parablocks can be considered approved as long as its
-parent relay chain block is also approved. Thus, the validity of a relay chain block depends on the
-validity of its ancestry.
-
-:::
+!!!info "Parablocks vs. relay chain Blocks"
+    It is important to understand that a relay chain block does not contain parablocks, but para-headers. Parachain blocks are within the parachain. Thus, it makes more sense to think of relay chain blocks as having been approved instead of parablocks that have been approved. A relay chain block containing information about approved parablocks can be considered approved as long as its parent relay chain block is also approved. Thus, the validity of a relay chain block depends on the validity of its ancestry.
 
 Validators perform two main actions in the Approval Process:
 
@@ -350,12 +318,8 @@ Briefly, approval keys are:
   [VRF](./learn-cryptography.md#vrf).
 - **Approval vote keys** that are ed25519 and would only sign off on a candidate parablock validity.
 
-:::info
-
-For detailed information about the approval process, see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
-
-:::
+!!!info
+    For detailed information about the approval process, see dedicated section in [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-approval.html).
 
 Accepting a parablock is the result of having passed through the detection stage without dispute, or
 having passed through and escalation/dispute stage with a positive outcome.
@@ -373,12 +337,8 @@ _[leaf-selection rule](https://paritytech.github.io/polkadot/book/protocol-chain
 and a set of
 _[finality constraints](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html#the-best-chain-containing-rule)_.
 
-:::info
-
-For detailed information about chain selection, see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html).
-
-:::
+!!!info
+    For detailed information about chain selection, see dedicated section in [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-chain-selection.html).
 
 ## Candidate Receipts
 
@@ -426,12 +386,7 @@ requiring all validators to keep tabs on all the parachains. Instead, validators
 pieces of the data and can later reconstruct the entire data under the assumption that 1/3+1 of the
 validators can provide their pieces of the data.
 
-:::note
-
-The 1/3+1 threshold of validators that must be responsive to construct the full parachain state data
-corresponds to Polkadot's security assumption about Byzantine nodes.
-
-:::
+!!!note The 1/3+1 threshold of validators that must be responsive to construct the full parachain state data corresponds to Polkadot's security assumption about Byzantine nodes.
 
 ## Disputes
 
@@ -492,14 +447,8 @@ also waits for a 2/3 supermajority on either side. The component also tracks whi
 already been disputed so that the same parablock can be disputed only once on any branch of the
 relay chain. Inclusion is halted for the parachain until the dispute resolves.
 
-:::info
-
-For detailed information about disputes, see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html).
-In the Guide, there are also more details about
-[disputes' flows](https://paritytech.github.io/polkadot/book/disputes-flow.html).
-
-:::
+!!!info
+    For detailed information about disputes, see dedicated section in [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/protocol-disputes.html). In the Guide, there are also more details about [disputes' flows](https://paritytech.github.io/polkadot/book/disputes-flow.html).
 
 ## Network Asynchrony
 

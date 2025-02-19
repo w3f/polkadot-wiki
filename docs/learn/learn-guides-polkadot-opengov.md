@@ -7,11 +7,16 @@ keywords: [opengov, polkadot opengov, referenda, cancel, polkadot-js]
 slug: ../learn-guides-polkadot-opengov
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 See [this page](./learn-polkadot-opengov.md) to learn about Polkadot OpenGov.
 
@@ -59,11 +64,7 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 6. The `beneficiary: MultiAddress (AccountIdLookupOf)` drop-down field will have `Id` selected by
    default. Select the beneficiary from the `Id: AccountId` drop-down field.
 
-:::info
-
-Copy the `preimage hash` value before clicking the "Submit preimage" button.
-
-:::
+!!!info Copy the `preimage hash` value before clicking the "Submit preimage" button.
 
 7. Click the "Submit preimage" button.
 
@@ -146,12 +147,8 @@ that your vote only counts for 10% of the tokens that you hold.
 For detailed instructions on how to vote on Polkadot OpenGov referenda, check
 [this support guide.](https://support.polkadot.network/support/solutions/articles/65000184120-polkadot-opengov-how-to-vote)
 
-:::caution Polkadot OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)
-
-Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead of `democracy.vote`
-(which only works for the old version of governance).
-
-:::
+!!!caution "Polkadot OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)"
+    Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead of `democracy.vote` (which only works for the old version of governance).
 
 ### Removing Votes
 
@@ -181,12 +178,8 @@ For additional instructions, check
 
 ## Delegations
 
-:::info Video Tutorial about Delegations using the Polkadot-JS UI
-
-See [this video tutorial](https://youtu.be/PNGs11EvCB0) to learn about how to delegate, modify
-delegations and remove delegations using the Polkadot-JS UI.
-
-:::
+!!!info "Video Tutorial about Delegations using the Polkadot-JS UI"
+    See [this video tutorial](https://youtu.be/PNGs11EvCB0) to learn about how to delegate, modify delegations and remove delegations using the Polkadot-JS UI.
 
 For an overview of how delegation works in Polkadot OpenGov, check out the
 [Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
@@ -204,7 +197,7 @@ You can start delegating your votes by clicking the "Delegate" button on
 
 If it is the first time you delegate or vote, there will be a banner message. You can delegate on a
 single track or all the tracks. You have an option to specify the number of votes (i.e., the number
-of tokens) and the [conviction multiplier](./learn-polkadot-opengov.md#voluntary-locking). After
+of tokens) and the [conviction multiplier](./learn-polkadot-opengov.md#voluntary-locking-conviction-voting). After
 clicking "Next", you will need to specify the account to delegate your votes to, and after clicking
 "Delegate" and "Sign and Submit" your delegations will appear for each track (see below).
 
@@ -251,12 +244,8 @@ the track and [delegate](#delegate-votes) again with updated information.
 
 ## Claiming OpenGov Deposits
 
-:::info Video Tutorial about OpenGov deposits using the Polkadot-JS UI
-
-See [this video tutorial](https://youtu.be/kkEq5cqW2Pk) to learn about how to claim OpenGov deposits
-using the Polkadot-JS UI.
-
-:::
+!!!info "Video Tutorial about OpenGov deposits using the Polkadot-JS UI"
+    See [this video tutorial](https://youtu.be/kkEq5cqW2Pk) to learn about how to claim OpenGov deposits using the Polkadot-JS UI.
 
 ### Claiming the Preimage and Decision Deposits
 
@@ -296,17 +285,12 @@ deposit refund up to 250 DOT (8.25 KSM on Kusama).
 
 ## Cancel or Kill a Referendum
 
-:::info
-
-Anybody can cancel an ongoing referendum (i.e., a referendum within the Lead-in or
-voting/confirmation period). For more information about the referenda timeline in Polkadot OpenGov,
-see the [dedicated page](../learn/learn-polkadot-opengov.md#referenda-timeline).
+!!!info
+    Anybody can cancel an ongoing referendum (i.e., a referendum within the Lead-in or voting/confirmation period). For more information about the referenda timeline in Polkadot OpenGov, see the [dedicated page](../learn/learn-polkadot-opengov.md#referenda-timeline).
 
 To successfully cancel a referendum through the track `20 / Referendum Canceller`, you will need to
 attain
 [specific approval and support levels](./learn-polkadot-opengov-origins.md#referendum-canceller).
-
-:::
 
 To cancel a referendum, you need first to submit a preimage with the `referenda.cancel` extrinsic.
 Go to the [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and
@@ -319,14 +303,8 @@ cancelled is 249.
 This call will cancel the referendum and return the deposit. You can also kill a referendum using
 the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit.
 
-:::info Preimage Submission Deposit
-
-A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
-to the amount of information stored within the preimage. The deposit amount required for a preimage
-with a treasury spend transaction is around 41 DOT (1.4 KSM on Kusama). Ensure you have enough
-account balance to pay for this submission deposit as well as the transaction fees.
-
-:::
+!!!info "Preimage Submission Deposit"
+    A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional to the amount of information stored within the preimage. The deposit amount required for a preimage with a treasury spend transaction is around 41 DOT (1.4 KSM on Kusama). Ensure you have enough account balance to pay for this submission deposit as well as the transaction fees.
 
 Once a preimage is submitted, it can be checked under
 [Governance > Preimages](https://polkadot.js.org/apps/#/preimages).

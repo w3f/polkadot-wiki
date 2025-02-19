@@ -7,12 +7,8 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-transport
 ---
 
-:::info XCM Documentation
-
-For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
-mind that XCM is under active development.
-
-:::
+!!!info "XCM Documentation"
+    For a more practical approach to utilizing XCM, refer to the [XCM Docs](./xcm/overview/intro.md). Please keep in mind that XCM is under active development.
 
 With the XCM format established, common patterns for protocols of these messages are needed.
 Polkadot implements two message passing protocols for acting on XCM messages between its constituent
@@ -26,12 +22,8 @@ There are three primary methods for message passing, one of which is under devel
 
 ### XCMP (Cross-Chain Message Passing)
 
-:::caution
-
-XCMP is currently under development, and most of the cross-chain messages pass through HRMP channels
-for the time being.
-
-:::
+!!!caution
+    XCMP is currently under development, and most of the cross-chain messages pass through HRMP channels for the time being.
 
 XCM is related to XCMP in the same way that REST is related to RESTful.
 
@@ -52,12 +44,8 @@ associated metadata is stored as a hash in the relay chain storage.
 The input and output queue are sometimes referred to in the Polkadot codebase and associated
 documentation as `ingress` and `egress` messages, respectively.
 
-:::info
-
-For detailed information about VMP see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#horizontal-message-passing).
-
-:::
+!!!info
+    For detailed information about VMP see dedicated section in [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#horizontal-message-passing).
 
 ### VMP (Vertical Message Passing)
 
@@ -72,12 +60,8 @@ data in both cases exists on the relay chain and are interpreted by the relay ch
 - #### DMP (Downward Message Passing)
   _Downward Message Passing_ message passing from the relay chain to a parachain.
 
-:::info
-
-For detailed information about VMP see dedicated section in
-[The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#vertical-message-passing).
-
-:::
+!!!info
+    For detailed information about VMP see dedicated section in [The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/messaging.html#vertical-message-passing).
 
 ### HRMP (XCMP-Lite)
 
@@ -89,12 +73,8 @@ out in favor of it.
 
 ![xcm](../assets/cross-consensus/hrmp-ex.png)
 
-:::note
-
-A stop-gap protocol is a temporary substitute for the functionality that is not fully complete.
-While XCMP proper is still in development, HRMP is a working replacement.
-
-:::
+!!!note
+    A stop-gap protocol is a temporary substitute for the functionality that is not fully complete. While XCMP proper is still in development, HRMP is a working replacement.
 
 A tutorial on how to open an HRMP channel on a parachain can be found
 [here](../build/build-hrmp-channels.md).
@@ -104,7 +84,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=tOnzk4AROUY">
-      <img src="https://img.youtube.com/vi/tOnzk4AROUY/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/tOnzk4AROUY/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=tOnzk4AROUY">XCMP Explained</a>
@@ -112,13 +92,9 @@ A tutorial on how to open an HRMP channel on a parachain can be found
   </div>
 </div>
 
-:::note
-
-XCMP is not yet implemented. The following illustrates the overall design goals and expectations for
-XCMP.
-
-:::
-
+!!!note
+    XCMP is not yet implemented. The following illustrates the overall design goals and expectations for XCMP.
+    
 - Cross-chain messages will _not_ be delivered to the relay chain.
 - Cross-chain messages will be constrained to a maximum size specified in bytes.
 - Parachains are allowed to block messages from other parachains, in which case the dispatching

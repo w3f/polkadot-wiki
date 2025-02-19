@@ -7,12 +7,8 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-usecases
 ---
 
-:::info XCM Documentation
-
-For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
-mind that XCM is under active development.
-
-:::
+!!!info "XCM Documentation"
+    For a more practical approach to utilizing XCM, refer to the [XCM Docs](./xcm/overview/intro.md). Please keep in mind that XCM is under active development.
 
 XCM has a multitude of use cases. While the wiki covers some of the key commonplace interactions,
 the XCM format can be used to construct many more combinations to suit the use case at hand.

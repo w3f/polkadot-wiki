@@ -27,7 +27,7 @@ standalone solo chains built with the Polkadot SDK the ability to upgrade their 
 "business logic") without a hard fork of the respective network.
 
 Rather than encoding the runtime in the nodes, Polkadot nodes contain a WebAssembly
-[execution host](learn-polkadot-host). They maintain consensus on a very low-level and
+[execution host](learn-polkadot-host.md). They maintain consensus on a very low-level and
 well-established instruction set. Upgrades can be small, isolated, and very specific by deploying
 WebAssembly on-chain and having nodes auto-enact the new logic at a particular block height.
 
@@ -76,14 +76,8 @@ Although upgrading your nodes is generally not necessary to follow an upgrade, w
 following the Polkadot releases and upgrading promptly, especially for high-priority or critical
 releases.
 
-:::info New Client Releases
-
-The details about the latest client releases can be found in the
-[releases section on the Polkadot repository](https://github.com/paritytech/polkadot-sdk/releases).
-A detailed analysis for client releases can be viewed on the
-[Polkadot Forum](https://forum.polkadot.network/tag/release-analysis).
-
-:::
+!!!info "New Client Releases"
+    The details about the latest client releases can be found in the [releases section on the Polkadot repository](https://github.com/paritytech/polkadot-sdk/releases). A detailed analysis for client releases can be viewed on the [Polkadot Forum](https://forum.polkadot.network/tag/release-analysis).
 
 ### Runtime vs Client versions
 
@@ -94,15 +88,10 @@ version shown on the top left section of Polkadot-JS UI below is `kusama-9370`, 
 
 ![Runtime vs Client versioning](./../assets/runtime-node-version.png)
 
-:::info Querying runtime and client versions
-
-The runtime version can be queried on-chain through Polkadot-JS UI by navigating to the Developer
-tab > Chain State > Storage > system and query `lastRuntimeUpgrade()`.
-
-The node version can be queried by navigating to the Developer tab > RPC calls > system and query
-`version()`.
-
-:::
+!!!info "Querying runtime and client versions"
+    The runtime version can be queried on-chain through Polkadot-JS UI by navigating to the Developer tab > Chain State > Storage > system and query `lastRuntimeUpgrade()`.
+    
+    The node version can be queried by navigating to the Developer tab > RPC calls > system and query `version()`.
 
 ## Runtime Upgrades for Various Users
 
@@ -114,7 +103,7 @@ Infrastructure services include but are not limited to the following:
 - API services
 - Node-as-a-Service (NaaS)
 - General infrastructure management (e.g. block explorers, custodians)
-- [Wallets](./wallets)
+- [Wallets](../general/wallets-and-extensions.md)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
 to upgrade their clients within a specific time frame, for example, if a release includes breaking

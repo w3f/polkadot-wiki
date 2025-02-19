@@ -7,11 +7,11 @@ keywords: [polkadot, components, architecture]
 slug: ../learn-architecture
 ---
 
-import DocCardList from '@theme/DocCardList';
+
 
 Polkadot is a heterogeneous multichain with shared security and interoperability.
 
-<DocCardList />
+<!-- TODO: INDEX CARDS -->
 
 ## Relay Chain
 
@@ -59,7 +59,7 @@ secure with a large amount of stake put up to back it, parachains should benefit
 
 ## Interoperability
 
-### [XCM](learn-xcm)
+### [XCM](learn-xcm.md)
 
 XCM, short for cross-consensus message, is a format and not a protocol. The format does not assume
 anything about the receiver or senders consensus mechanism, it only cares about the format in which

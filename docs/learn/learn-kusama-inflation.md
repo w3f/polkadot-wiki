@@ -7,19 +7,22 @@ keywords: [token, KSM, inflation]
 slug: ../learn-kusama-inflation
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="[Learn about Polkadot's native token DOT inflation](./learn-inflation)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    <a href="(./learn-inflation" target="_blank" rel="noopener noreferrer">
+      Learn about Polkadot's native token DOT inflation.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 KSM is an inflationary token. Inflation is set to be 10% annually. Depending on the supply staked
 and the ideal staking rate (more about this below), part of the inflation is distributed to the
 stakers and part to the [treasury](./learn-polkadot-opengov-treasury.md).
 
-:::info
-
-The current KSM token supply can be seen [here](./../general/chain-state-values.md#total-issuance).
-
-:::
+!!!info
+    The current KSM token supply can be seen [here](./../general/chain-state-values.md#total-issuance).
 
 It is essential to understand that the primary objective of inflation is to incentivize network
 participants through
@@ -50,7 +53,7 @@ possible compromise of security while keeping the native token liquid.
 
 ![staking](./../assets/rewards-inflation.png)
 
-<p style={{textAlign:"center"}}>Source: <a href="https://research.web3.foundation/Polkadot/overview/token-economics">Research - Web3 Foundation</a></p>
+<p style="textAlign: 'center'">Source: <a href="https://research.web3.foundation/Polkadot/overview/token-economics">Research - Web3 Foundation</a></p>
 
 - **x-axis**: Proportion of staked tokens
 - **y-axis**: Annualized percentage (inflation and staking rewards, see below)

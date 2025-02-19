@@ -13,12 +13,8 @@ is listed as a precaution - if one of these people ever contacts you directly, f
 contact information to see that it matches the origin of the message, and then feel free to get in
 touch with someone else on this list to verify the legitimacy of the original inquiry.
 
-:::warning Employee impersonation is a common type of scam
-
-For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](scams.md)
-guide.
-
-:::
+!!!warning "Employee impersonation is a common type of scam"
+    For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](scams.md) guide.
 
 ## Technical Education
 
@@ -66,7 +62,7 @@ educating professionals and the general public about Web3 and blockchain technol
 learning about Polkadot and regularly contributes to Wiki articles. He got
 [certified as a blockchain analyst](https://www.credential.net/bad85935-7e6e-4b4a-9ed2-e96128bdb5e5)
 and is currently learning about [Rust](https://www.rust-lang.org/) and
-[Substrate](https://substrate.io/).
+[Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate).
 
 ### Bader Youssef
 

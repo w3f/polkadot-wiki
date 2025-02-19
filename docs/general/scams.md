@@ -18,24 +18,22 @@ One of the most attractive targets for malicious actors are your wallet secret s
 optionally exported backup JSON file. Keep them offline in a secure and private location. If you
 share these with anyone, they can access your account and execute any transaction.
 
-<div className="row">
-  <div className="col text--center">
-    <a href="https://www.youtube.com/watch?v=ARsdXZycJAg">
-      <img src="https://img.youtube.com/vi/ARsdXZycJAg/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://www.youtube.com/watch?v=ARsdXZycJAg">Stay Safe in Polkadot</a>
-    </p>
-  </div>
+<div class="row" style="display: flex; gap: 20px; justify-content: center;">
+  <!-- Card 1 -->
+  <a 
+    href="https://www.youtube.com/watch?v=ARsdXZycJA" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/ARsdXZycJAg/0.jpg" class="card-image"/>
+    <p class="card-title">Stay Safe in Polkadot</p>
+  </a>
 </div>
 
-:::info
-
-Visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely)
-for more information about key security.
-
-:::
+!!!info
+    Visit [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely) for more information about key security.
 
 ## Essential Rules
 
@@ -98,7 +96,7 @@ pages can be found [here](./community.md).
 
 You should _never_ share your seed phrase, passwords, private keys, or any other personal data with
 anyone. If you are concerned a wallet could be fake, please check out our list of well-known
-[wallets](./wallets).
+[wallets](./wallets-and-extensions.md).
 
 Some simple things that you can do to keep your assets and information secure from hackers:
 
@@ -144,12 +142,11 @@ You can use the following list of our official domains to make sure that you're 
 site:
 
 - https://polkadot.com
-- https://polkadot.network
 - https://polkadot.io
 - https://kusama.network
 - https://web3.foundation
 - https://parity.io
-- https://substrate.io
+- https://docs.polkadot.com/
 
 Of course, many projects building on Polkadot and Kusama use similar names. If, however, a site
 poses as Polkadot, Kusama, Web3 Foundation, or Parity on a domain not listed above, then it's most

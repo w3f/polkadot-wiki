@@ -7,12 +7,8 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm
 ---
 
-:::info XCM Documentation
-
-For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
-mind that XCM is under active development.
-
-:::
+!!!info "XCM Documentation"
+    For a more practical approach to utilizing XCM, refer to the [XCM Docs](./xcm/overview/intro.md). Please keep in mind that XCM is under active development.
 
 The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
 communicate between consensus systems.
@@ -22,14 +18,8 @@ participating consensus-driven systems. XCM is the language through which comple
 interactions can occur. Two blockchains can "speak" XCM to seamlessly interact with each other using
 a standard messaging format.
 
-:::info
-
-We typically discuss XCM in the context of parachains, but please bear this in mind that it expands
-to the domain of all consensus systems! Remember, a consensus system here means any system or
-protocol that achieves finality to agree on the latest and correct state, whether it's a Polkadot
-parachain, an EVM smart contract, or other bridged consensus systems.
-
-:::
+!!!info
+    We typically discuss XCM in the context of parachains, but please bear this in mind that it expands to the domain of all consensus systems! Remember, a consensus system here means any system or protocol that achieves finality to agree on the latest and correct state, whether it's a Polkadot parachain, an EVM smart contract, or other bridged consensus systems.
 
 XCM is not meant to be only specific to Polkadot, but rather its primary intention is to define a
 **generic** and **common** format amongst different consensus systems to communicate.
@@ -38,7 +28,7 @@ It's important to note that XCM does not define how messages are delivered but r
 they should look, act, and contain relative instructions to the on-chain actions the message intends
 to perform.
 
-[**XCMP**](./learn-xcm-transport.md#xcmp-design), or Cross Chain Message Passing, is the actual
+[**XCMP**](./learn-xcm-transport.md#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
 network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
 are other ways to define transport layer protocols for delivering XCM messages(see:
 [HRMP](./learn-xcm-transport.md#hrmp-xcmp-lite) and
@@ -62,14 +52,8 @@ These four crucial design decisions allow for XCM messages to be a reliable yet 
 properly convey the intentions from one consensus system to another without any compatibility
 issues.
 
-:::note
-
-XCM is constantly in development - meaning the format is expected to change over time. XCM v3 is the
-latest version, and is deployed on Polkadot. To view updates on the XCM format, visit the
-[xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been
-submitted that would contribute to the next release.
-
-:::
+!!!note
+    XCM is constantly in development - meaning the format is expected to change over time. XCM v3 is the latest version, and is deployed on Polkadot. To view updates on the XCM format, visit the [xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been submitted that would contribute to the next release.
 
 ## A Format, Not a Protocol
 
@@ -86,13 +70,8 @@ Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is
 message designed to be a response message which can be sent from the recipient to the sender. All
 error handling should also be done on the recipient side.
 
-:::info
-
-XCM is not designed in a way where every system supporting the format is expected to be able to
-interpret any possible XCM message. Practically speaking, one can imagine that some messages will
-not have reasonable interpretations under some systems or will be intentionally unsupported.
-
-:::
+!!!info
+    XCM is not designed in a way where every system supporting the format is expected to be able to interpret any possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable interpretations under some systems or will be intentionally unsupported.
 
 Furthermore, it's essential to realize that XCM messages by themselves are _not_ considered
 transactions. XCM describes how to change the state of the target network, but the message by itself
@@ -136,12 +115,8 @@ standard format like XCM.
 This is where system parachains come in, where each of these core responsibilities can be delegated
 to a system parachain respectively.
 
-:::info
-
-XCM bridging, functional multichain decomposition, and programmability upgrades are crucial to
-bringing ecosystems together using a common communication abstraction.
-
-:::
+!!!info
+    XCM bridging, functional multichain decomposition, and programmability upgrades are crucial to bringing ecosystems together using a common communication abstraction.
 
 For more information on the specific instructions used for these key features, head over to the
 [instructions and registers page](./learn-xcm-instructions.md).

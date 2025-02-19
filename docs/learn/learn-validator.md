@@ -7,12 +7,8 @@ keywords: [validate, validator, maintain, NPoS, stake]
 slug: ../learn-validator
 ---
 
-:::info
-
-This page provides a general overview of the role of validators in the Polkadot network. For more
-detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
-
-:::
+!!!info
+    This page provides a general overview of the role of validators in the Polkadot network. For more detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking native tokens,
 validating proofs from collators and participating in consensus with other validators.
@@ -84,12 +80,8 @@ Finally, validators participate in the
 [chain selection process within GRANDPA](./learn-parachains-protocol.md#chain-selection), ensuring
 that only available and valid blocks end within the finalized relay chain.
 
-:::info Within an era roles can change
-
-Within the same era, a Validator can be a para-validator, block author, and participate in the
-availability distribution or the approval process. Those roles can change between sessions.
-
-:::
+!!!info "Within an era roles can change"
+    Within the same era, a Validator can be a para-validator, block author, and participate in the availability distribution or the approval process. Those roles can change between sessions.
 
 ## Further Readings
 
@@ -113,7 +105,7 @@ availability distribution or the approval process. Those roles can change betwee
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) -
   Blog that details how to create a robust failover solution for running validators.
-- [VPS list](../maintain/kusama/maintain-guides-how-to-validate-kusama.md##vps-list)
+- [VPS list](../maintain/kusama/maintain-guides-how-to-validate-kusama.md)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A place to chat about being a validator.
 - [Slashing Consequences](./learn-offenses.md) - Learn more about slashing consequences for running

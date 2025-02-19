@@ -13,7 +13,7 @@ XCM is a [format](https://github.com/paritytech/xcm-format). Anyone can create a
 the XCVM to interpret said format.
 
 Parity Technologies maintains a Rust implementation, primarily for
-[Substrate](https://substrate.io/)-based chains in the [Polkadot](https://polkadot.network/)
+[Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate)-based chains in the [Polkadot](https://polkadot.network/)
 ecosystem. It is this implementation that we use throughout this documentation.
 
 All the code lives in the
@@ -50,7 +50,7 @@ configuration when needed, using these as examples.
 
 ## Pallet
 
-The XCM pallet is a [FRAME](https://docs.substrate.io/quick-start/substrate-at-a-glance/) pallet
+The XCM pallet is a [FRAME](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#frame) pallet
 that can be used to execute XCMs locally or send them to a different system. It also has extrinsics
 for specific use cases such as teleporting assets or doing reserve asset transfers, which we'll talk
 about later. It's the glue between XCM and FRAME, which is highly used in the Polkadot ecosystem.

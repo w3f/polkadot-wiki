@@ -1,7 +1,7 @@
 ---
 id: build-integrate-assets
 title: Using AssetHub
-sidebar_label: Using Asset Hub
+sidebar_label: Using AssetHub
 description: Tools that you can use for integrating assets.
 keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
@@ -70,7 +70,7 @@ Asset transfers will result in an `assets.transferred` event. The same instructi
 transfers.
 
 Note that you can use the same addresses (except
-[pure proxies](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy)!) on the Asset Hub that
+[pure proxies](../learn/learn-proxies-pure.md)) on the Asset Hub that
 you use on the relay chain. The SS58 encodings are the same; only the chain information (genesis
 hash, etc.) will change on transaction construction.
 
@@ -86,7 +86,7 @@ implemented in the Asset Hub runtime. This signed-extension extends transactions
 optional `AssetId` that specifies the asset to be used for payment of both the execution fees and
 the optional tip. It defaults to the native token when it is set to `None`. In case it is given,
 this `AssetId` has to be an
-[XCM `Multilocation`](../learn/learn/xcm/fundamentals/multilocation-summary). Once the transaction
+[XCM `Multilocation`](../learn/xcm/fundamentals/multilocation/summary.md). Once the transaction
 is executed in the block, it will emit an `AssetTxFeePaid` event, informing of the account paying
 the fees, the amount in the asset paid as fee, the tip (if any), and the asset ID of the asset
 paying the fees.
@@ -171,12 +171,9 @@ Here are the available public instances:
 The purpose of these instances is to allow anyone to check and get a quick overview of the info that
 the asset-related endpoints provide.
 
-:::caution
-
-These instances should only be used for ad-hoc checks or tests and not for production, heavy testing
-or any other critical purpose.
-
-:::
+!!!caution
+    These instances should only be used for ad-hoc checks or tests and not for production, heavy testing
+    or any other critical purpose.
 
 ### Tx Wrapper Polkadot
 
@@ -204,7 +201,7 @@ their system. For this, the service provider must query every new block created,
 events array, filter for any `balances.minted` event, and apply the appropriate business logic.
 
 In some special cases, DOT may be sent to the relay chain or the Asset Hub using other XCM instructions, 
-like [`Transact`](https://wiki.polkadot.network/docs/learn/xcm/journey-transact). 
+like [`Transact`](../learn/xcm/journey/transact.md).
 In these cases, the event emitted when processing the transact instruction in the destination chain is 
 `balances.transfer`, which is usually emitted during the finalization of the block execution process.
 

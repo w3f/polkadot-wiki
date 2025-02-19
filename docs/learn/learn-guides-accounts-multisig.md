@@ -7,11 +7,16 @@ keyword: [guides, polkadot-js, accounts, multisig, multi-signature]
 slug: ../learn-guides-accounts-multisig
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 ## Creating a Multisig Account
 
@@ -22,13 +27,8 @@ We recommend trying out the tutorial on
 
 ## Multisig Transactions with Accounts Tab
 
-:::info Walkthrough Video Tutorial
-
-See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with
-a multisig account using the Accounts Tab in the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
-
-:::
+!!!info "Walkthrough Video Tutorial"
+    See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with a multisig account using the Accounts Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
 
 You can create a multisig account directly on the Accounts Tab of the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts), and use this account to send funds. See
@@ -43,7 +43,7 @@ them using the Polkadot-JS UI.
 <div className="row">
 <div className="col text--center">
     <a href="https://youtu.be/Qv_nJVcvQr8?t=2109">
-      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://youtu.be/Qv_nJVcvQr8?t=2109">Transact with Multi-signature Accounts</a>
@@ -55,15 +55,11 @@ There are three types of actions you can take with a multisig account:
 
 - Executing a call `asMulti`. This is used to begin or end a multisig transaction.
 - Approving a call `approveAsMulti`. This is used to approve an extrinsic and pass-on to the next
-  signatory (see [example below](#example-using-multi-signature-accounts) for more information).
+  signatory (see [example below](#example-using-multisig-accounts) for more information).
 - Cancelling a call `cancelAsMulti`.
 
-:::info
-
-Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig) for more
-information about the actions you can take with a multi-signature account.
-
-:::
+!!!info
+    Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig) for more information about the actions you can take with a multi-signature account.
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
 should be used. This function takes only the other signatories and the raw call as arguments. Note
@@ -102,13 +98,8 @@ released on the account that initiated the call.
 
 ### Example using Multisig Accounts
 
-:::info Walk-through video tutorial
-
-See [this video tutorial](https://www.youtube.com/watch?v=T0vIuJcTJeQ) to learn how to transact with
-a multisig account using the Extrinsic Tab in the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
-
-:::
+!!!info "Walk-through video tutorial"
+    See [this video tutorial](https://www.youtube.com/watch?v=T0vIuJcTJeQ) to learn how to transact with a multisig account using the Extrinsic Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
 
 ![multisig diagram](../assets/multisig-diagram.png)
 
@@ -136,16 +127,8 @@ the addresses of signers and the threshold of the multisig wallet. No matter the
 signatories' accounts, the multisig will always have the same address because accounts' addresses
 are sorted in ascending order.
 
-:::note Addresses that are provided to the multisig wallet are sorted
-
-Public keys of signers' wallets are compared byte-for-byte and sorted ascending before being used to
-generate the multisig address. For example, consider the scenario with three addresses, A, B, and C,
-starting with `5FUGT`, `5HMfS`, and `5GhKJ`. If we build the ABC multisig with the accounts in that
-specific order (i.e. first A, then B, and C), the real order of the accounts in the multisig will be
-ACB. If, in the Extrinsic tab, we initiate a multisig call with C, the order of the other
-signatories will be first A, then B. If we put first B, then A, the transaction will fail.
-
-:::
+!!!note "Addresses that are provided to the multisig wallet are sorted"
+    Public keys of signers' wallets are compared byte-for-byte and sorted ascending before being used to generate the multisig address. For example, consider the scenario with three addresses, A, B, and C, starting with `5FUGT`, `5HMfS`, and `5GhKJ`. If we build the ABC multisig with the accounts in that specific order (i.e. first A, then B, and C), the real order of the accounts in the multisig will be ACB. If, in the Extrinsic tab, we initiate a multisig call with C, the order of the other signatories will be first A, then B. If we put first B, then A, the transaction will fail.
 
 This has some implications when using the Extrinsics tab on the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the
@@ -158,11 +141,5 @@ with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMsl
 
 ## Decoding Multisig Call Data
 
-:::info
-
-Before signing a transaction, it is important to know the exact specifics of what is being signed.
-Check the
-["How to use a multisig account"](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account)
-in the support docs on how to decode the multisig call data.
-
-:::
+!!!info
+    Before signing a transaction, it is important to know the exact specifics of what is being signed. Check the ["How to use a multisig account"](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account) in the support docs on how to decode the multisig call data.

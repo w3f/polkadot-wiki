@@ -7,14 +7,11 @@ keywords: [grants program, grants, funding]
 slug: ../grants
 ---
 
-:::info Decentralized Futures Program
-
-In addition to the listed grants programs, the Web3 Foundation has launched the **Decentralized
-Futures** program to support individuals and teams as they launch new initiatives aimed at growing
-the Polkadot ecosystem. For details on the status of the program, see the
-[Decentralized Futures Program](./decentralized-futures.md).
-
-:::
+!!!info "Decentralized Futures Program"
+    In addition to the listed grants programs, the Web3 Foundation has launched the **Decentralized
+    Futures** program to support individuals and teams as they launch new initiatives aimed at growing
+    the Polkadot ecosystem. For details on the status of the program, see the
+    [Decentralized Futures Program](decentralized-futures.md).
 
 ## Web3 Foundation Grants
 
@@ -27,12 +24,9 @@ Information regarding requirements, the application process, deliveries, etc. ca
 
 ## Alternative Funding Sources
 
-:::info
-
-Check the [alternative funding sources](https://grants.web3.foundation/docs/funding) section on the
-Web3 Foundation Grants website for comprehensive information.
-
-:::
+!!!info
+    Check the [alternative funding sources](https://grants.web3.foundation/docs/funding) section on the
+    Web3 Foundation Grants website for comprehensive information.
 
 ### Polkadot Treasury
 
@@ -41,21 +35,14 @@ The Polkadot Treasury is a pot of on-chain funds collected through transaction f
 can be spent on spending proposals. Both Polkadot and Kusama offer everyone the opportunity to apply
 for funding via the treasury. See:
 
-- [Treasury Wiki](../learn/learn-polkadot-opengov-treasury.md)
+- [Treasury Wiki](learn-polkadot-opengov-treasury.md)
 - [Polkadot Treasury Guide](https://docs.google.com/document/d/1IZykdp2cyQavcRyZd_dgNj5DcgxgZR6kAqGdcNARu1w)
 - [Kusama Treasury Guide](https://docs.google.com/document/d/1p3UQUjph5t8TVaWnTkfrI5mE-BABnM9Xvtuhdlhl6JE)
 
-:::info Kusama Faucet
-
-Due to high demand and spamming issues, the Kusama faucet is no longer in operation. The Web3
-Foundation has considered new ways to distribute KSM for people who need KSM to build.
-
-If you are interested in obtaining KSM for building or research, you can apply through the
-[Treasury](../learn/learn-polkadot-opengov-treasury.md) or receive a
-[tip](../learn/learn-polkadot-opengov-treasury.md#treasury-tracks) for doing something cool in the
-community.
-
-:::
+!!!info "Kusama Faucet"
+    Due to high demand and spamming issues, the Kusama faucet is no longer in operation. The Web3 Foundation has considered new ways to distribute KSM for people who need KSM to build.
+    
+    If you are interested in obtaining KSM for building or research, you can apply through the [Treasury](learn-polkadot-opengov-treasury.md) or receive a [tip](learn-polkadot-opengov-treasury.md#treasury-tracks) for doing something cool in the community.
 
 ### Other Grant Programs
 

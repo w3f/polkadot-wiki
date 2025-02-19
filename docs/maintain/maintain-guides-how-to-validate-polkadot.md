@@ -7,13 +7,10 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
-:::tip
-
-If you are a beginner, it is recommended that you start your validator journey on Kusama network.
-Check the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) for details on how to get
-started.
-
-:::
+!!!tip
+    If you are a beginner, it is recommended that you start your validator journey on Kusama network.
+    Check the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) for details on how to get
+    started.
 
 ## Preliminaries
 
@@ -23,15 +20,12 @@ only your own stake, but also the stake of your current nominators. If you make 
 running a validator can also be very rewarding, knowing that you contribute to the security of a
 decentralized network while growing your stash.
 
-:::warning
+!!!warning
+    It is highly recommended that you have significant system administration experience before
+    attempting to run your own validator.
 
-It is highly recommended that you have significant system administration experience before
-attempting to run your own validator.
-
-You must be able to handle technical issues and anomalies with your node which you must be able to
-tackle yourself. Being a validator involves more than just executing the Polkadot binary.
-
-:::
+    You must be able to handle technical issues and anomalies with your node which you must be able to
+    tackle yourself. Being a validator involves more than just executing the Polkadot binary.
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](maintain-guides-secure-validator.md) information to make sure you understand the
@@ -138,13 +132,10 @@ verify that everything is working:
 sudo ntpq -p
 ```
 
-:::warning
-
-Skipping this can result in the validator node missing block authorship opportunities. If the clock
-is out of sync (even by a small amount), the blocks the validator produces may not get accepted by
-the network.
-
-:::
+!!!warning
+    Skipping this can result in the validator node missing block authorship opportunities. If the clock
+    is out of sync (even by a small amount), the blocks the validator produces may not get accepted by
+    the network.
 
 ### Make Sure Landlock is Enabled
 
@@ -167,14 +158,11 @@ if you would like to build Linux with landlock enabled.
 
 ### Installing the Polkadot binaries
 
-:::info Multiple Validator Binaries
-
-In addition to the `polkadot` binary, recent changes have separated out functionality into two
-additional needed binaries, `polkadot-prepare-worker`, and `polkadot-execute-worker`. All three
-binaries are needed to properly run a validator node. More context on these changes can be found
-[here](https://github.com/paritytech/polkadot/pull/7337)
-
-:::
+!!!info "Multiple Validator Binaries"
+    In addition to the `polkadot` binary, recent changes have separated out functionality into two
+    additional needed binaries, `polkadot-prepare-worker`, and `polkadot-execute-worker`. All three
+    binaries are needed to properly run a validator node. More context on these changes can be found
+    [here](https://github.com/paritytech/polkadot/pull/7337)
 
 #### Installation from official releases
 
@@ -229,15 +217,12 @@ dnf install polkadot
 
 Make sure you verify the installation (see the "Verify the installation" section).
 
-:::note By default, the Polkadot systemd service is disabled
+!!!note "By default, the Polkadot systemd service is disabled"
+    To start the service, run:
 
-To start the service, run:
-
-```bash
-sudo systemctl start polkadot.service
-```
-
-:::
+    ```bash
+    sudo systemctl start polkadot.service
+    ```
 
 #### Optional: Installation with Ansible
 
@@ -273,19 +258,16 @@ If not, this command will fetch the latest version of Rust and install it.
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 ```
 
-:::note
+!!!note
+    If you do not have "curl" installed, run:
 
-If you do not have "curl" installed, run:
+    ```bash
+    sudo apt install curl
+    ```
 
-```bash
-sudo apt install curl
-```
-
-It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
-RPC interactions. Installation instructions for various operating systems can be found
-[here](https://github.com/vi/websocat#installation).
-
-:::
+    It will also be valuable to have "websocat" (Netcat, curl and socat for WebSockets) installed for
+    RPC interactions. Installation instructions for various operating systems can be found
+    [here](https://github.com/vi/websocat#installation).
 
 To configure your shell, run the following command.
 
@@ -306,16 +288,13 @@ Polkadot node software.
 sudo apt install make clang pkg-config libssl-dev build-essential
 ```
 
-:::note
+!!!note
+    If you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the following
+    equivalent command INSTEAD of the previous one:
 
-If you are using OSX and you have [Homebrew](https://brew.sh) installed, you can issue the following
-equivalent command INSTEAD of the previous one:
-
-```sh
-brew install cmake pkg-config openssl git llvm
-```
-
-:::
+    ```sh
+    brew install cmake pkg-config openssl git llvm
+    ```
 
 #### Building the binaries
 
@@ -327,15 +306,12 @@ tag" command or view the [Polkadot SDK Github tags](https://github.com/paritytec
 to see a list of all the available release versions. You should replace `VERSION` below with the
 latest build (i.e., the highest number).
 
-:::note
+!!!note
+    If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
 
-If you prefer to use SSH rather than HTTPS, you can replace the first line of the below with
-
-```sh
-git clone git@github.com:paritytech/polkadot-sdk.git
-```
-
-:::
+    ```sh
+    git clone git@github.com:paritytech/polkadot-sdk.git
+    ```
 
 ```sh
 git clone https://github.com/paritytech/polkadot-sdk.git
@@ -363,27 +339,24 @@ cargo install --force --path . --profile production
 
 **_This step will take a while (generally 10 - 40 minutes, depending on your hardware)._**
 
-:::note Compilation Errors
+!!!note "Compilation Errors"
+    If you run into compile errors, you may have to pin the version of Rust compiler to the one that was
+    used to build the release. Check out `Rust compiler versions` section in the release notes. This can
+    be done by running:
 
-If you run into compile errors, you may have to pin the version of Rust compiler to the one that was
-used to build the release. Check out `Rust compiler versions` section in the release notes. This can
-be done by running:
+    ```sh
+    rustup install nightly-2022-05-18
+    rustup target add wasm32-unknown-unknown --toolchain nightly-2022-05-18
+    cargo +nightly-2022-05-18 build --release
+    ```
 
-```sh
-rustup install nightly-2022-05-18
-rustup target add wasm32-unknown-unknown --toolchain nightly-2022-05-18
-cargo +nightly-2022-05-18 build --release
-```
+    You may also need to run the build more than once.
 
-You may also need to run the build more than once.
+    If you would like to execute the tests, run the following command:
 
-If you would like to execute the tests, run the following command:
-
-```sh
-cargo test --all
-```
-
-:::
+    ```sh
+    cargo test --all
+    ```
 
 If you are interested in generating keys locally, you can also install `subkey` from the same
 directory. You may then take the generated `subkey` executable and transfer it to an air-gapped
@@ -424,16 +397,13 @@ validator mode right away:
 polkadot
 ```
 
-:::info
+!!!info
+    If you want to run a validator on Kusama, you have an option to specify the chain. With no
+    specification, this would default to Polkadot.
 
-If you want to run a validator on Kusama, you have an option to specify the chain. With no
-specification, this would default to Polkadot.
-
-```sh
-polkadot --chain=kusama
-```
-
-:::
+    ```sh
+    polkadot --chain=kusama
+    ```
 
 ```
 2021-06-17 03:07:07 Parity Polkadot
@@ -450,54 +420,45 @@ polkadot --chain=kusama
 2021-06-17 03:07:10 Listening for new connections on 127.0.0.1:9944.
 ```
 
-:::info Example of node sync
+!!!info "Example of node sync"
+    ```
+    2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u
+    2021-06-17 03:07:40 ⚙️  Syncing 218.8 bps, target=#5553764 (17 peers), best: #24034 (0x08af…dcf5), finalized #23552 (0xd4f0…2642), ⬇ 173.5kiB/s ⬆ 12.7kiB/s
+    2021-06-17 03:07:45 ⚙️  Syncing 214.8 bps, target=#5553765 (20 peers), best: #25108 (0xb272…e800), finalized #25088 (0x94e6…8a9f), ⬇ 134.3kiB/s ⬆ 7.4kiB/s
+    2021-06-17 03:07:50 ⚙️  Syncing 214.8 bps, target=#5553766 (21 peers), best: #26182 (0xe7a5…01a2), finalized #26112 (0xcc29…b1a9), ⬇ 5.0kiB/s ⬆ 1.1kiB/s
+    2021-06-17 03:07:55 ⚙️  Syncing 138.4 bps, target=#5553767 (21 peers), best: #26874 (0xcf4b…6553), finalized #26624 (0x9dd9…27f8), ⬇ 18.9kiB/s ⬆ 2.0kiB/s
+    2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s
+    ```
 
-```
-2021-06-17 03:07:39 🔍 Discovered new external address for our node: /ip4/10.26.16.1/tcp/30333/ws/p2p/12D3KooWLtXFWf1oGrnxMGmPKPW54xWCHAXHbFh4Eap6KXmxoi9u
-2021-06-17 03:07:40 ⚙️  Syncing 218.8 bps, target=#5553764 (17 peers), best: #24034 (0x08af…dcf5), finalized #23552 (0xd4f0…2642), ⬇ 173.5kiB/s ⬆ 12.7kiB/s
-2021-06-17 03:07:45 ⚙️  Syncing 214.8 bps, target=#5553765 (20 peers), best: #25108 (0xb272…e800), finalized #25088 (0x94e6…8a9f), ⬇ 134.3kiB/s ⬆ 7.4kiB/s
-2021-06-17 03:07:50 ⚙️  Syncing 214.8 bps, target=#5553766 (21 peers), best: #26182 (0xe7a5…01a2), finalized #26112 (0xcc29…b1a9), ⬇ 5.0kiB/s ⬆ 1.1kiB/s
-2021-06-17 03:07:55 ⚙️  Syncing 138.4 bps, target=#5553767 (21 peers), best: #26874 (0xcf4b…6553), finalized #26624 (0x9dd9…27f8), ⬇ 18.9kiB/s ⬆ 2.0kiB/s
-2021-06-17 03:08:00 ⚙️  Syncing 37.0 bps, target=#5553768 (22 peers), best: #27059 (0x5b73…6fc9), finalized #26624 (0x9dd9…27f8), ⬇ 14.3kiB/s ⬆ 4.4kiB/s
-```
+!!!tip "Use Warp sync for faster syncing"
+    By default, the node performs `full` sync, which downloads and validates the full blockchain
+    history. Full sync works by listening to announced blocks and requesting the blocks from the
+    announcing peers, or just the block headers in case of light clients.
 
-:::
+    `Fast` sync is another option that works by downloading the block header history and validating the
+    authority set changes in order to arrive at a specific (usually the most recent) header. After the
+    desired header has been reached and verified, the state can be downloaded and imported. Once this
+    process has been completed, the node can proceed with a full sync.
 
-:::tip Use Warp sync for faster syncing
+    ```sh
+    polkadot --sync warp
+    ```
 
-By default, the node performs `full` sync, which downloads and validates the full blockchain
-history. Full sync works by listening to announced blocks and requesting the blocks from the
-announcing peers, or just the block headers in case of light clients.
+    `Warp sync` initially downloads and validates the finality proofs from
+    [GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa) and then downloads the state of the
+    latest finalized block. After the warp sync, the node is ready to import the latest blocks from the
+    network and can be used as a Validator. The blocks from genesis will be downloaded in the
+    background. Check
+    [this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
+    for more information about the different sync options available.
 
-`Fast` sync is another option that works by downloading the block header history and validating the
-authority set changes in order to arrive at a specific (usually the most recent) header. After the
-desired header has been reached and verified, the state can be downloaded and imported. Once this
-process has been completed, the node can proceed with a full sync.
+!!!note "Validators should sync using the RocksDb backend"
+    This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
 
-```sh
-polkadot --sync warp
-```
-
-`Warp sync` initially downloads and validates the finality proofs from
-[GRANDPA](../learn/learn-consensus.md#finality-gadget-grandpa) and then downloads the state of the
-latest finalized block. After the warp sync, the node is ready to import the latest blocks from the
-network and can be used as a Validator. The blocks from genesis will be downloaded in the
-background. Check
-[this discussion](https://substrate.stackexchange.com/questions/334/what-kinds-of-sync-mechanisms-does-substrate-implement/)
-for more information about the different sync options available.
-
-:::
-
-:::note Validators should sync using the RocksDb backend
-
-This is implicit by default, but can be explicit by passing the `--database RocksDb` flag.
-
-In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note
-that **ParityDB is still experimental and should not be used in production.** If you want to test
-out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will
-require a resync.
-
-:::
+    In the future, it is recommended to switch to the faster and more efficient ParityDB option. Note
+    that **ParityDB is still experimental and should not be used in production.** If you want to test
+    out ParityDB, you can add the flag `--database paritydb`. Switching between database backends will
+    require a resync.
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes
 to a few hours.
@@ -520,14 +481,11 @@ below are a few public snapshot providers for Polkadot and Kusama.
 - [Polkachu](https://polkachu.com/snapshots)
 - [Polkashots](https://polkashots.io/)
 
-:::caution
-
-For the security of the network, it is recommended that you sync from scratch, even if you are
-running your node in pruning mode for validation. The reason is that if these snapshots get
-corrupted and a majority of nodes run based on these snapshots, the network could end up running on
-a non-canonical chain.
-
-:::
+!!!caution
+    For the security of the network, it is recommended that you sync from scratch, even if you are
+    running your node in pruning mode for validation. The reason is that if these snapshots get
+    corrupted and a majority of nodes run based on these snapshots, the network could end up running on
+    a non-canonical chain.
 
 ## Bond DOT
 
@@ -539,15 +497,12 @@ If you are validator who intends to get DOT/KSM nominations from the community, 
 show some skin in the game. For that, you need to bond some DOT/KSM as own stake. Make sure not to
 bond all your DOT balance since you will be unable to pay transaction fees from your bonded balance.
 
-:::info Controller accounts are deprecated. Use Staking Proxy.
-
-Controller accounts are deprecated. For more information, see
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
-It is highly recommended that you setup an account with a staking proxy, which can be used for
-issuing start and stop validating calls. Read more about [proxy accounts](../learn/learn-proxies.md)
-here.
-
-:::
+!!!info "Controller accounts are deprecated. Use Staking Proxy."
+    Controller accounts are deprecated. For more information, see
+    [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+    It is highly recommended that you setup an account with a staking proxy, which can be used for
+    issuing start and stop validating calls. Read more about [proxy accounts](../learn/learn-proxies.md)
+    here.
 
 First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on
 "Account Actions", and then the "+ Stash" button.
@@ -580,16 +535,13 @@ the funds bonded by the Stash account.
 
 ## Set Session Keys
 
-:::caution Session keys are consensus critical
-
-If you are not sure if your node has the current session keys that you made the `setKeys`
-transaction then you can use one of the two available RPC methods to query your node:
-[hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
-check for a specific key or
-[hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
-to check the full session key public key string.
-
-:::
+!!!caution "Session keys are consensus critical"
+    If you are not sure if your node has the current session keys that you made the `setKeys`
+    transaction then you can use one of the two available RPC methods to query your node:
+    [hasKey](https://polkadot.js.org/docs/substrate/rpc/#haskeypublickey-bytes-keytype-text-bool) to
+    check for a specific key or
+    [hasSessionKeys](https://polkadot.js.org/docs/substrate/rpc/#hassessionkeyssessionkeys-bytes-bool)
+    to check the full session key public key string.
 
 Once your node is fully synced, stop the process by pressing Ctrl-C. At your terminal prompt, you
 will now start running the node.
@@ -653,7 +605,7 @@ If you are on a remote server, it is easier to run this command on the same mach
 is running with the default WS RPC port configured):
 
 ```sh
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' https://localhost:9944
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9944
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four
@@ -724,10 +676,9 @@ validator's rewards. This is the rate that your validator will be commissioned w
 - **Payment preferences** - You can specify the percentage of the rewards that will get paid to you.
   The remaining will be split among your nominators.
 
-:::caution Setting a commission rate of 100% suggests that you do not want your validator to receive
-nominations
+!!!caution
+    Setting a commission rate of 100% suggests that you do not want your validator to receive nominations.
 
-:::
 
 You can also determine if you would like to receive nominations with the "allows new nominations"
 option.
@@ -791,24 +742,20 @@ other peers over the network.
 polkadot purge-chain
 ```
 
-:::info
-
-Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to quickly get the
-answers you need.
-
-:::
+!!!info
+    Check out the [Substrate StackExchange](https://substrate.stackexchange.com/) to quickly get the
+    answers you need.
 
 ## Note about VPS
 
 VPS providers are very popular for running servers of any kind. Extensive benchmarking was conducted
 to ensure that VPS servers are able to keep up with the work load in general.
 
-:::note
+!!!note
+    Before you run a live Validator, please verify if the advertised performance is actually delivered
+    consistently by the VPS provider.
 
-Before you run a live Validator, please verify if the advertised performance is actually delivered
-consistently by the VPS provider.
-
-::: The following server types showed acceptable performance during the benchmark tests. Please note
+The following server types showed acceptable performance during the benchmark tests. Please note
 that this is not an endorsement in any way:
 
 - GCP's _c2_ and _c2d_ machine families
@@ -921,12 +868,8 @@ trusted code on the host.
 - [Scaleway](https://www.scaleway.com/)
 - [OnFinality](https://onfinality.io/)
 
-:::caution Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS
-provider
-
-You may be locked out of your account and your server shut down if you come in violation. For
-instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their
-[Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
-explicit permission to do so. This may extend to other cryptocurrency activity.
-
-:::
+!!!caution "Beware of the **Terms and Conditions** and **Acceptable Use Policies** for each VPS provider"
+    You may be locked out of your account and your server shut down if you come in violation. For
+    instance, Digital Ocean lists "Mining of Cryptocurrencies" under the Network Abuse section of their
+    [Acceptable Use Policy](https://www.digitalocean.com/legal/acceptable-use-policy/) and requires
+    explicit permission to do so. This may extend to other cryptocurrency activity.

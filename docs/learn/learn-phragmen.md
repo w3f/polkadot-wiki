@@ -17,13 +17,9 @@ try to optimize three metrics when computing a solution graph of nominators and 
 1. Maximize the stake behind the minimally staked validator.
 1. Minimize the variance of the stake in the set.
 
-:::note
-
-[Sequential Phragmén](#understanding-phragmén), [Phragmms](#phragmms-fka-balphragmms) and
+!!!note [Sequential Phragmén](#basic-phragmén), [Phragmms](#phragmms-aka-balphragmms) and
 [Star balancing](https://crates.parity.io/sp_npos_elections/balancing/fn.balance.html) are a few
 notable algorithms used for computing the NPoS solutions in Polkadot and Kusama.
-
-:::
 
 ## What is the sequential Phragmén method?
 
@@ -31,15 +27,7 @@ The sequential Phragmén method is a multi-winner election method introduced by 
 the 1890s. The quote below taken from the reference [Phragmén paper](#external-resources) sums up
 the purpose of the sequential Phragmén method:
 
-:::note
-
-The problem that Phragmén’s methods try to solve is that of electing a set of a given numbers of
-persons from a larger set of candidates. Phragmén discussed this in the context of a parliamentary
-election in a multi-member constituency; the same problem can, of course, also occur in local
-elections, but also in many other situations such as electing a board or a committee in an
-organization.
-
-:::
+!!!note The problem that Phragmén’s methods try to solve is that of electing a set of a given numbers of persons from a larger set of candidates. Phragmén discussed this in the context of a parliamentary election in a multi-member constituency; the same problem can, of course, also occur in local elections, but also in many other situations such as electing a board or a committee in an organization.
 
 ### Validator Elections
 
@@ -55,20 +43,13 @@ propose the set of winners. The reason for performing this computation off-chain
 constant block time of six seconds and prevent long block times at the end of each era, when the
 validator election takes place.
 
-:::info Staking Miners
-
-The process of computing the optimal solution for NPoS election can be delegated to
-[Staking Miners](learn-staking-miner).
-
-:::
+!!!info "Staking Miners"
+    The process of computing the optimal solution for NPoS election can be delegated to [Staking Miners](./learn-staking-advanced.md#staking-miner).
 
 ### Council Elections
 
-:::info Deprecated in Polkadot OpenGov
-
-Phragmen was used for Council elections in [Governance v1](./archive/learn-governance.md).
-
-:::
+!!!info "Deprecated in Polkadot OpenGov"
+    Phragmen was used for Council elections in [Governance v1](./archive/learn-governance.md).
 
 The Phragmén method was also used in the council election mechanism. When you voted for council
 members, you could select up to 16 different candidates and then place a reserved bond as the weight
@@ -558,7 +539,7 @@ possible. It then runs an edge-reducing algorithm to minimize the number of vali
 nominator, ideally giving every nominator a single validator to nominate per era.
 
 To minimize block computation time, the staking process is run as an
-[off-chain worker](https://docs.substrate.io/reference/how-to-guides/offchain-workers/). In order to
+[off-chain worker](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/frame_offchain_workers/index.html). In order to
 give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed
 in the last quarter of each era.
 

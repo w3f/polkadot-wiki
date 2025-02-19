@@ -81,15 +81,12 @@ You can find an existing member to place a bid on your behalf if you do not have
 willing to give them a tip. An existing member can submit a `vouch` transaction through the
 Extrinsics page.
 
-:::info vouch(who,value,tip)
+!!!info "vouch(who,value,tip)"
+    - who: The user you are vouching for
+    - value: The value that the user would like to get when joining the society
+    - tip: Fees you get
 
-- who: The user you are vouching for
-- value: The value that the user would like to get when joining the society
-- tip: Fees you get
-
-The final value that the candidate will get = (value - tip)
-
-:::
+    The final value that the candidate will get = (value - tip)
 
 ![vouch](../../assets/society/vouch.jpg)
 
@@ -99,12 +96,9 @@ Bids selected in this phase will be voted on by the existing members to decide w
 will be approved to join the society. Members will vote for all the candidates and the final outcome
 will be randomly selected by one of the votes. Let's take a look the example shown below:
 
-:::note
-
-If the randomly selected member does not vote, it will be treated as a rejection. For each rotation
-period, the maximum number of members that can be accepted is set as 10.
-
-:::
+!!!note
+    If the randomly selected member does not vote, it will be treated as a rejection. For each rotation
+    period, the maximum number of members that can be accepted is set as 10.
 
 A - Accept, R - Reject, S - Skeptic
 
@@ -124,9 +118,8 @@ and their unclaimed payouts will be slashed. Moreover, each member who voted opp
 randomly selected vote will have their unclaimed payouts slashed and strikes increased. In this
 case, member 4 will be punished.
 
-:::info The maximum number of strikes you can have is on Kusama is 10
-
-:::
+!!!info
+     The maximum number of strikes you can have is on Kusama is 10
 
 The slashed funds (2 KSM currently) will be given to a random member who voted the same as the
 selected vote as a reward for participating in the vote. The reward is escrowed for some period of
@@ -180,12 +173,9 @@ and search for "Existing Members (Challenges)". Besides that, you can earn extra
 user apply for the membership and requesting a tip. This is useful when a user does not have enough
 balance to reserve a deposit. The tip will be given when a user successfully joins the society.
 
-:::info
-
-Each member can only vouch for one user at a time. A member is not required to reserve the deposit
-when vouching for a user.
-
-:::
+!!!info
+    Each member can only vouch for one user at a time. A member is not required to reserve the deposit
+    when vouching for a user.
 
 If a member accumulates too many strikes or fails their membership challenge, they will become
 suspended. While a member is suspended, they are unable to claim matured payouts. It is up to the

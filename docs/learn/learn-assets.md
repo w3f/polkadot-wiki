@@ -45,13 +45,8 @@ without the need for the native token (DOT or KSM). An example would be USDT on 
 Hub. If an account holds 0.7 USDT, it would exist on the Polkadot Asset Hub system parachain without
 the need to hold DOT.
 
-:::warning Transfers of Non-sufficient assets
-
-Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover
-the existential deposit and transaction fees for future transfers. Please do so to ensure the asset
-transfer is successful.
-
-:::
+!!!warning "Transfers of Non-sufficient assets"
+    Before transferring a non-sufficient asset, ensure the receiver account has enough funds to cover the existential deposit and transaction fees for future transfers. Please do so to ensure the asset transfer is successful.
 
 ## Asset Conversion
 
@@ -66,13 +61,8 @@ AssetHub. Learn more about asset conversion on AssetHub,
 
 ## Create and Manage Assets
 
-:::info Walk-through video tutorial about creating assets
-
-See
-[this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=63)
-to learn how to create fungible assets on the Asset Hub.
-
-:::
+!!!info "Walk-through video tutorial about creating assets"
+    See [this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=63) to learn how to create fungible assets on the Asset Hub.
 
 Anyone on the network can create assets on the Asset Hub as long as they can reserve the
 [required deposits](../general/chain-state-values.md#asset-deposit). The network reserves the
@@ -81,12 +71,8 @@ identify the asset. The `AssetId` should be the canonical identifier for an asse
 not enforce the uniqueness of metadata like "name" and "symbol". The creator must also specify a
 minimum balance, preventing accounts from having dust balances.
 
-:::info Advanced How-to Guides
-
-See [this page](./learn-guides-assets-create.md) to learn more about creating assets using the Asset
-Hub.
-
-:::
+!!!info "Advanced How-to Guides"
+    See [this page](./learn-guides-assets-create.md) to learn more about creating assets using the Asset Hub.
 
 Asset classes and instances can have associated metadata. The metadata is an array of data that the
 class owner can add on-chain, for example, a link to an IPFS hash or other off-chain hosting
@@ -108,13 +94,8 @@ for certainty on privileged roles.
 An asset's details contain one field not accessible to its owner or admin team,
 [asset sufficiency](#sufficient-assets).
 
-:::info Transaction Fees on Polkadot-JS UI
-
-Polkadot-JS UI
-[doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812).
-When using Polkadot-JS UI, transaction fee needs to be paid using the native asset (DOT or KSM).
-
-:::
+!!!info "Transaction Fees on Polkadot-JS UI"
+    Polkadot-JS UI [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI, transaction fee needs to be paid using the native asset (DOT or KSM).
 
 ## Fungible Assets
 
@@ -126,16 +107,11 @@ release, leading to efficient execution and stable transaction fees.
 
 ### Transferring Asset Balances
 
-:::info Walk-through video tutorial about transferring assets
-
-See
-[this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=326)
-to learn how to transfer assets on the Asset Hub.
+!!!info "Walk-through video tutorial about transferring assets"
+    See [this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=326) to learn how to transfer assets on the Asset Hub.
 
 For Ledger users see [this video tutorial](https://youtu.be/j0O-KziV9iw) to learn how to use the
 Statemine Ledger app and what its current limitations are.
-
-:::
 
 Users have a simple interface, namely the ability to transfer asset balances to other accounts
 on-chain. As mentioned before, if the asset is not _sufficient_, then the destination account must
@@ -148,23 +124,13 @@ The Asset Hub also sweeps dust balances into transfers. For example, if an asset
 balance of 10 and an account has a balance of 25, then an attempt to transfer 20 units would
 transfer all 25.
 
-:::info
-
-See
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine)
-to learn more about transferring assets using the Asset Hub.
-
-:::
+!!!info
+    See [this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine) to learn more about transferring assets using the Asset Hub.
 
 ### Destroying an Asset
 
-:::info Walk-through video tutorial about destroying assets
-
-See
-[this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=422)
-to learn how to destroy assets on the Asset Hub.
-
-:::
+!!!info "Walk-through video tutorial about destroying assets"
+    See [this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=422) to learn how to destroy assets on the Asset Hub.
 
 To destroy an asset, go to the Polkadot-JS UI on the Asset Hub > Developer > Extrinsics. If you
 created an asset without minting any unit, you could call `assets.startDestroy` and then the
@@ -230,5 +196,5 @@ management needs.
 
 For example, if a team wants sign-off from two groups to perform a privileged operation, it could
 create a 2-of-2 [**multisig**](./learn-account-multisig.md) from two
-[**pure proxies**](./learn-proxies-pure.md#anonymous-proxy-pure-proxy), and then set members from
+[**pure proxies**](./learn-proxies-pure.md), and then set members from
 each group as proxies to those two accounts.

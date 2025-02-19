@@ -7,11 +7,16 @@ keywords: [nominated proof of stake, staking, controller]
 slug: ../learn-controller
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived. Controller accounts are deprecated. For more information, see
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived. Controller accounts are deprecated. For more information, see
+    <a href="https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748" target="_blank" rel="noopener noreferrer">
+      this discussion.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 Controller accounts were used for staking and were a "less-powerful" version of staking proxies.
 Controllers could only sign for unbonding and rebonding funds, nominating and changing the reward

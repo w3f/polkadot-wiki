@@ -7,29 +7,24 @@ keywords: [gides, advanced, polkadot-js, transfers]
 slug: ../learn-guides-transfers
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import MessageBox from
-"../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 ## Metadata Updates with the Polkadot-JS Browser Extension
 
 Before signing extrinsics with the Polkadot-JS Browser Extension, always check for metadata updates.
 [**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to do it.
 
-:::info Polkadot Vault vs Polkadot-JS Browser Extension
-
-The Polkadot Vault app updates the full metadata through the QR fountain while the extension updates
-the metadata index (the metadata is not loaded into it). As a consequence the process of updating
-metadata is different in this two cases (you will notice that on the Vault app the update takes
-longer for example). Having outdated metadata on the Vault app will prevent you from signing, while
-on the extension you will be able to click the sign button but the extrinsic will likely fail
-(similarly of having an outdated Ledger app). In general, failing to update metadata will most
-likely result in you not being able to sign extrinsics.
-
-:::
+!!!info "Polkadot Vault vs Polkadot-JS Browser Extension"
+    The Polkadot Vault app updates the full metadata through the QR fountain while the extension updates the metadata index (the metadata is not loaded into it). As a consequence the process of updating metadata is different in this two cases (you will notice that on the Vault app the update takes longer for example). Having outdated metadata on the Vault app will prevent you from signing, while on the extension you will be able to click the sign button but the extrinsic will likely fail (similarly of having an outdated Ledger app). In general, failing to update metadata will most likely result in you not being able to sign extrinsics.
 
 ## Transfers using the Polkadot-JS UI and Browser Extension
 
@@ -58,13 +53,8 @@ to you while signing for transactions.
 
 ### Keep-Alive Checks with the Polkadot-JS UI
 
-:::info
-
-See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
-to learn about keep-alive checks and existential deposit.
-
-:::
+!!!info
+    See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) to learn about keep-alive checks and existential deposit.
 
 In Polkadot there are two main ways to transfer funds from one account to another:
 
@@ -77,16 +67,11 @@ In Polkadot there are two main ways to transfer funds from one account to anothe
   address). To switch the keep-alive check off visit
   [this support article](https://support.polkadot.network/support/solutions/articles/65000169248).
 
-:::info
-
-Attempting to send less than the
-[existential deposit](../general/chain-state-values.md#existential-deposit) to an account with zero
-balance will always fail, no matter if the keep-alive check is on or not.
+!!!info
+    Attempting to send less than the [existential deposit](../general/chain-state-values.md#existential-deposit) to an account with zero balance will always fail, no matter if the keep-alive check is on or not.
 
 Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the
 sending account if you attempt to transfer.
-
-:::
 
 ### Vested Transfers with the Polkadot-JS UI
 
@@ -108,7 +93,7 @@ There are two ways that vesting schedules can be created.
 Vesting schedules have three parameters:
 
 - **locked**, the amount of tokens to be transferred in
-  [Planck units](../learn/learn-DOT#the-planck-unit))
+  [Planck units](../learn/learn-DOT.md#the-planck-unit)
 - **per block**, the number of tokens that are released per block
 - **starting block**, the block number after which the vesting schedule starts
 
@@ -161,13 +146,8 @@ construct a batch transfer you need to:
   [balances pallet](https://paritytech.github.io/substrate/master/pallet_balances/index.html). You
   can specify as many receivers as you desire.
 
-:::info
-
-You can watch [**this video tutorial**](https://youtu.be/uoUC2K8muvw) to learn how to do batch
-transfers. Note the tutorial uses the Westend Testnet, but the same applies to both Polkadot and
-Kusama.
-
-:::
+!!!info
+    You can watch [**this video tutorial**](https://youtu.be/uoUC2K8muvw) to learn how to do batch transfers. Note the tutorial uses the Westend Testnet, but the same applies to both Polkadot and Kusama.
 
 ### Teleporting Tokens using the Polkadot-JS UI
 
@@ -175,12 +155,8 @@ See [this video tutorial](https://youtu.be/3tE9ouub5Tg) and
 [this additional support article](https://support.polkadot.network/support/solutions/articles/65000181119-how-to-teleport-dot-or-ksm-between-statemint-or-statemine)
 to learn more about how to teleport tokens.
 
-:::info
-
-If you do not see "Accounts > Teleport" in the Polkadot-JS UI, the source chain that you have
-selected does not support teleportation yet.
-
-:::
+!!!info
+    If you do not see "Accounts > Teleport" in the Polkadot-JS UI, the source chain that you have selected does not support teleportation yet.
 
 ## Calculating Fees with Polkadot-JS
 
@@ -235,13 +211,8 @@ to check if you have bonded tokens, stop nominating (if necessary) and unbond yo
 
 ### Checking for Locks
 
-:::info
-
-See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and
-[this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-)
-to learn how to check for locks and remove them.
-
-:::
+!!!info
+    See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and [this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-) to learn how to check for locks and remove them.
 
 You can also check for locks by querying `system.account(AccountId)` in
 [`Chain state` tab under the `Developer` drop-down menu in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate).

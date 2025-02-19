@@ -7,16 +7,15 @@ keywords: [transaction, transfer, DOT, extrinsics]
 slug: ../learn-transactions
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from
-'@theme/DocCardList';
+
 
 ## Pallets and Extrinsics
 
-Polkadot is built using [Substrate](https://substrate.io/), a modular framework to efficiently build
+Polkadot is built using [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate), a modular framework to efficiently build
 blockchains. Substrate's FRAME development environment provides modules called pallets and support
 libraries that you can use, modify, and extend to build the runtime logic to suit the needs of your
 blockchain. You can explore Substrate's FRAME pallets on
-[this dedicated page](https://docs.substrate.io/reference/frame-pallets/).
+[this dedicated page](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#frame).
 
 Within each functional **pallet** on the blockchain, one can **call** its functions and execute them
 successfully, provided they have the permission to do so. Because these calls originate outside of
@@ -84,8 +83,7 @@ not to do so and most wallet software will not allow you to make an immortal ext
 
 ### Balance Transfers
 
-Balance transfers are transfers of token balances between accounts. This is the most well-known type
-of transfer.
+Balance transfers are transfers of token balances between accounts. This is the most well-known type of transfer.
 
 ### Vested Transfers
 
@@ -100,12 +98,8 @@ vesting cases, the lock decreases over time until all the funds are transferable
 
 ## Verifying Extrinsics
 
-:::danger
-
-Do not sign a transaction if you can't verify what you are signing or you suspect you might be
-signing a different extrinsic than the one intended.
-
-:::
+!!!danger
+    Do not sign a transaction if you can't verify what you are signing or you suspect you might be signing a different extrinsic than the one intended.
 
 Verifying the extrinsic you are signing can take some more time before signing for a transaction but
 it allows you to add an extra security step. There are
@@ -149,7 +143,7 @@ unsigned 128-bit integer.
 
 See
 [the Polkadot specification](https://spec.polkadot.network/id-weights#id-definitions-in-polkadot)
-and [the Substrate documentation](https://docs.substrate.io/build/tx-weights-fees/) for more
+and [the Substrate documentation](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#transactions-weights-and-fees) for more
 details.
 
 ### Fee Multiplier
@@ -221,9 +215,5 @@ to maximize their reward.
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the
-[Polkadot-JS guides about transfers](./learn-guides-transfers.md).
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about transfers](./learn-guides-transfers.md).

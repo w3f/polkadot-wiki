@@ -1,0 +1,16 @@
+[build]
+  publish = "site"
+  command = "sh scripts/deploy.sh"
+
+[context.production.environment]
+  ENABLE_RPC = "true"
+
+[context.deploy-preview]
+  command = "sh scripts/deploy.sh"
+  publish = "site"
+  environment = { ENABLE_RPC = "true" }
+
+[context.dev]
+  command = "sh scripts/deploy.sh"
+  publish = "site"
+  environment = { ENABLE_RPC = "false" }

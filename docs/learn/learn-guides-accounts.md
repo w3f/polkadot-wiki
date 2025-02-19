@@ -8,14 +8,20 @@ slug: ../learn-guides-accounts
 ---
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from
-'@theme/DocCardList'; import MessageBox from "../../components/MessageBox"; import
-"../../components/MessageBox.css";
+'@theme/DocCardList';
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<DocCardList />
+<!-- TODO: INDEX CARDS -->
 
 ## Account Address Format
 
@@ -29,9 +35,8 @@ on different chains, you can follow the guidelines in
 [Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert your
 address between the different chain formats.
 
-:::info Using the same account on multiple chains - Pros and Cons
-
-The address format differs from chain to chain, but that difference is only visual. The same private
+!!!info "Using the same account on multiple chains - Pros and Cons"
+    The address format differs from chain to chain, but that difference is only visual. The same private
 key can be used to sign transactions on behalf of the respective accounts on multiple chains. Using
 a single account on multiple chains is convenient, as you do not have to deal with multiple mnemonic
 phrases or private keys. But, if your account gets compromised on one chain, the attacker can gain
@@ -43,8 +48,6 @@ Account you are using on multiple chains and recommends using different Accounts
 
 ![warning multiple chains](../assets/warning-multichain-account.png)
 
-:::
-
 On Polkadot-JS Extension, you can copy your address by clicking the account's icon while the desired
 chain format is active. E.g. selecting "Substrate" as the format will change your address, and
 clicking the colorful icon of your account will copy it in that format.
@@ -54,7 +57,7 @@ clicking the colorful icon of your account will copy it in that format.
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=DNU0p5G0Gqc">
-      <img src="https://img.youtube.com/vi/DNU0p5G0Gqc/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/DNU0p5G0Gqc/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=DNU0p5G0Gqc">Polkadot-JS Browser Extension Tutorial</a>
@@ -62,13 +65,10 @@ clicking the colorful icon of your account will copy it in that format.
   </div>
 </div>
 
-:::info
-
-For guidelines about how to create an account using the Polkadot Extension, see
+!!!info
+    For guidelines about how to create an account using the Polkadot Extension, see
 [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
 [**this support article**](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
-
-:::
 
 The Polkadot-JS Browser Extension (the Polkadot Extension) provides a reasonable balance of security
 and usability. It provides a separate local mechanism to generate your address and interact with
@@ -89,20 +89,11 @@ to know how to back up your account.
 
 ### Reset Password using the Polkadot-JS Browser Extension
 
-:::info
+!!!info
+    See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc&t=280s) to learn how to change the password for an account that has been created on the Polkadot-JS browser extension (i.e. an injected account).
 
-See [**this video tutorial**](https://www.youtube.com/watch?v=DNU0p5G0Gqc&t=280s) to learn how to
-change the password for an account that has been created on the Polkadot-JS browser extension (i.e.
-an injected account).
-
-:::
-
-:::warning
-
-Before following the instructions below, make sure you have your mnemonic phrase stored in a safe
-place accessible to you.
-
-:::
+!!!warning
+    Before following the instructions below, make sure you have your mnemonic phrase stored in a safe place accessible to you.
 
 Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the password of your
 `ACCOUNT 1` using the browser extension, you must follow the following steps:
@@ -113,54 +104,24 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
   "Import account from pre-existing seed". After entering the mnemonic phrase, you can choose a new
   password, `PSW 2`.
 
-:::info JSON files do not allow changing account passwords
+!!!info "JSON files do not allow changing account passwords"
+    If you add the account to the extension using the option "Restore account from backup JSON file", this will allow you to restore access to your account using a JSON file protected by the password `PSW 1`, but does not let you set a new password. Thus, `PSW 1` will become the account password by default.
 
-If you add the account to the extension using the option "Restore account from backup JSON file",
-this will allow you to restore access to your account using a JSON file protected by the password
-`PSW 1`, but does not let you set a new password. Thus, `PSW 1` will become the account password by
-default.
-
-:::
-
-:::info Accounts on Cold wallets do not need passwords
-
-For hardware wallets such as [Ledger](https://www.ledger.com/), you may have to set a PIN for
-accessing the accounts on the device, but you do not need to set a password for every individual
-account. When you need to make transactions with your account, you are required to sign using your
-Ledger device. Also, Ledger wallets let you generate multiple accounts for multiple blockchain
-networks without setting different passwords to access such accounts.
-
-:::
+!!!info "Accounts on Cold wallets do not need passwords"
+    For hardware wallets such as [Ledger](https://www.ledger.com/), you may have to set a PIN for accessing the accounts on the device, but you do not need to set a password for every individual account. When you need to make transactions with your account, you are required to sign using your Ledger device. Also, Ledger wallets let you generate multiple accounts for multiple blockchain networks without setting different passwords to access such accounts.
 
 ### Restore Account on the Polkadot-JS Browser Extension
 
-:::info
-
-See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension)
-to learn how to restore your account on the Polkadot-JS UI.
-
-:::
+!!!info
+    See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension) to learn how to restore your account on the Polkadot-JS UI.
 
 ## Polkadot-JS UI
 
-:::info
+!!!info
+    For guidelines about how to create an account using Polkadot-JS UI, see [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180529).
 
-For guidelines about how to create an account using Polkadot-JS UI, see
-[**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180529).
-
-:::
-
-:::caution
-
-If you use this method to create your account and clear your cookies in your browser, your account
-will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure
-you store your seed phrase in a safe place or download the account's JSON file if using the
-Polkadot-JS browser extension. Learn more about account backup and restoration
-[here](#restore-account-on-the-polkadot-js-ui).
-
-:::
+!!!caution
+    If you use this method to create your account and clear your cookies in your browser, your account will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure you store your seed phrase in a safe place or download the account's JSON file if using the Polkadot-JS browser extension. Learn more about account backup and restoration [here](#restore-account-on-the-polkadot-js-ui).
 
 Local in-browser account storage is disabled by default on the Polkadot-JS UI. To create an account
 using the Polkadot-JS UI, navigate to settings > account options and click on allow local in-browser
@@ -170,13 +131,8 @@ only be used if all other methods are not feasible.
 
 ### Account Backup using the Polkadot-JS UI
 
-:::info
-
-See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
-to know how to back up your account.
-
-:::
+!!!info
+    See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file) to know how to back up your account.
 
 ### Reset password using the Polkadot-JS UI
 
@@ -187,14 +143,8 @@ account's password".
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc?t=261) to learn how to change the
 password for an account created on the Polkadot-JS UI (i.e. a non-injected account).
 
-:::note
-
-If you create an account first using Polkadot-JS Apps UI and then add it to the browser extension,
-you need to follow the
-[guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
-password of such an account.
-
-:::
+!!!note
+    If you create an account first using Polkadot-JS Apps UI and then add it to the browser extension, you need to follow the [guidelines for the browser extension](#restore-account-on-the-polkadot-js-browser-extension) to change the password of such an account.
 
 ### Restore Account on the Polkadot-JS UI
 
@@ -204,13 +154,8 @@ to learn how to restore your account on the Polkadot-JS UI.
 
 ### Unlocking Locks
 
-:::info Locks do not stack!
-
-The biggest lock decides the total amount of locked funds. See
-[**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the
-process of unlocking funds in the example above.
-
-:::
+!!!info "Locks do not stack!"
+    The biggest lock decides the total amount of locked funds. See [**this walk-through video tutorial**](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process of unlocking funds in the example above.
 
 In the example, the locked balance is 0.55 KSM because the biggest lock is on democracy and is 0.55
 KSM. As soon as the democracy lock is removed the next biggest lock is on staking 0.5 KSM (bonded

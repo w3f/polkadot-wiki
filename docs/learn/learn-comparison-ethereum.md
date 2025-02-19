@@ -17,13 +17,8 @@ utilized:
   multiple layer one blockchains and allows them to partake in shared security. Polkadot acts as a
   **meta-protocol** allowing multiple protocols to coexist and work together.
 
-:::note Sharding
-
-In the context of blockchains, the term "shards" or "sharded protocol" is typically used to refer to
-sub-protocols or as a general term to refer to a form of
-[**horizontal scaling**](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out).
-
-:::
+!!!note "Sharding"
+    In the context of blockchains, the term "shards" or "sharded protocol" is typically used to refer to sub-protocols or as a general term to refer to a form of [**horizontal scaling**](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out).
 
 ## High-Level Comparison
 
@@ -32,7 +27,7 @@ Both protocols have fundamentally different goals:
 - Ethereum is a general-purpose blockchain based on the Ethereum Virtual Machine (EVM). Ethereum is
   not specialized nor optimized for any particular application. Instead, its primary focus is the
   Ethereum Virtual Machine for executing smart contracts. Ethereum achieves scalability via
-  [**rollups**](./learn-comparisons#rollup-comparison) are secondary protocols that utilize Ethereum
+  [**rollups**](./learn-comparisons.md#rollup-comparison) are secondary protocols that utilize Ethereum
   as a settlement layer.
 
 - Polkadot is a multi-chain protocol that provides shared security and secure interoperability for
@@ -69,7 +64,7 @@ flourish more readily.
 In contrast, the relay chain requires parachains to register themselves in accordance with the
 [Parachains Protocol](./learn-parachains-protocol.md). Once registered, the relay chain validates
 the state transitions of each parachain as per their parachain validation function (PVF).
-[Data availability](./learn-parachains-protocol#availability-and-unavailability-phase) is an
+[Data availability](./learn-parachains-protocol.md#availability-and-unavailability-phase) is an
 integral part of validating the parachain state. This approach enables parallelized interactions
 between parachains. They can trust that each sub-protocol's respective state is valid, as Polkadot
 collectively validated them.
@@ -79,17 +74,13 @@ collectively validated them.
 Ethereum primarily focuses on optimizing itself for rollups; Polkadot's parachains protocol allows
 validation to occur on the protocol level without needing a layer two solution.
 
-:::info Rollup vs. Parachain Comparison
-
-For a more in-depth comparison of parachains versus rollups, take a look at the
-[rollup comparison page](./learn-comparisons.md#rollup-comparison).
-
-:::
+!!!info "Rollup vs. Parachain Comparison"
+    For a more in-depth comparison of parachains versus rollups, take a look at the [rollup comparison page](./learn-comparisons.md#rollup-comparison).
 
 Each parachain hosts its own core logic, called a **runtime** (sometimes called a **state transition
 function**). Polkadot uses WebAssembly ([Wasm](./learn-wasm.md)) as a "meta-protocol".
 
-Parachains have the option of using [cross-consensus messaging (XCM)](learn-xcm.md) to communicate
+Parachains have the option of using [cross-consensus messaging (XCM)](./learn-xcm.md) to communicate
 with one another and facilitate inter-chain reactions. It is also possible to utilize XCM on
 Ethereum as it is merely a format for describing state transitions on a particular network.
 

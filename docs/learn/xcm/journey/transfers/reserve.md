@@ -201,4 +201,4 @@ derivatives anyway, the sender/reserve controls the real assets and issuance.
 ## Next steps
 
 Next, we'll talk about a very important topic we mentioned before but skipped in this chapter,
-[paying fees](../fees/index.html) for the effects our XCMs have.
+[paying fees](../fees.md) for the effects our XCMs have.

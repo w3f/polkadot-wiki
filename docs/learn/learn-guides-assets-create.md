@@ -7,17 +7,22 @@ keywords: [asset hub, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets-create
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The Asset Hub is a generic assets system parachain which provides functionality for deploying and
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
 hub is the same as the relay chain's native asset (DOT or KSM). The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations are about
-[1/10th of the values on the relay chains](../general/chain-state-values.md#existential-deposit-2).
+[1/10th of the values on the relay chains](../general/chain-state-values.md).
 Apart from the native token, the assets held on the Asset Hub can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility
@@ -29,16 +34,10 @@ For additional background on the Asset Hub check out
 
 ## Creating Assets on the Asset Hub with Polkadot-JS
 
-:::info
-
-Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westend Asset
-Hub, which is a system parachain on Westend test network. The WND tokens (Westies) can be teleported
-from Westend to Westend Asset Hub, are available for free through a
-[faucet](https://faucet.polkadot.io/).
+!!!info
+    Before minting assets on the Asset Hub, we recommend that you try out this tutorial on Westend Asset Hub, which is a system parachain on Westend test network. The WND tokens (Westies) can be teleported from Westend to Westend Asset Hub, are available for free through a [faucet](https://faucet.polkadot.io/).
 
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**
-
-:::
 
 To create an asset on the Asset Hub, you would need to
 [deposit some funds](../general/chain-state-values.md#asset-deposit). Before you create an asset on

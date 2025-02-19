@@ -16,7 +16,7 @@ of voting power.
 
 Building on the success of previous initiatives like
 [the Decentralized Nodes Program](https://nodes.web3.foundation/) and
-[the Decentralized Futures Program](./decentralized-futures.md), Web3 Foundation is working on
+[the Decentralized Futures Program](decentralized-futures.md), Web3 Foundation is working on
 decentralizing governance within the Polkadot ecosystem to ensure a fair decision-making process. In
 line with the Foundation's ethos, this program seeks to amplify the voices of passionate and
 knowledgeable participants who may lack significant holdings, aiming to mitigate potential
@@ -49,7 +49,7 @@ showcase their governance contributions and political philosophy through public 
 active engagement (optionally) on other social media platforms such as:
 
 - [Reddit](https://www.reddit.com/r/Polkadot/)
-- [Discord](https://discord.gg/polkadot)
+- [Discord](https://polkadot-discord.w3f.tools/)
 - [PolkaVerse](https://polkaverse.com/)
 
 Delegations are subject to review, and non-compliance may result in revocation.

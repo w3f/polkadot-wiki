@@ -7,24 +7,23 @@ keyword: [stake, staking, pools, create, destroy, claim, rewards, polkadot-js]
 slug: ../learn-guides-staking-pools
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 See [this page](./learn-nomination-pools.md) to learn about nomination pools.
 
 ## Pool Creation with Polkadot-JS
 
-:::info
-
-You easily create a pool using the
-[Polkadot Staking Dashboard](../general/staking-dashboard.md#pools). See
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool)
-for more information.
-
-:::
+!!!info
+    You easily create a pool using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool) for more information.
 
 The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
 funds to the pool to add themselves as the first member. As stated above, the depositor must always
@@ -68,14 +67,8 @@ members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggl
 
 ## Pool Destruction with Polkadot-JS
 
-:::info
-
-As a pool admin, you can easily destroy a pool and permissionlessly remove all members using the
-[Polkadot Staking Dashboard](../general/staking-dashboard.md#pools). See
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
-for more information.
-
-:::
+!!!info
+    As a pool admin, you can easily destroy a pool and permissionlessly remove all members using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool) for more information.
 
 A pool can be pushed into the “destroying” state via one of:
 

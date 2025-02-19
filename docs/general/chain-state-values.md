@@ -9,425 +9,358 @@ keywords: [polkadot, kusama, constants, storage, values]
 slug: ../chain-state-values
 ---
 
-import RPC from "./../../components/RPC-Connection"; import Tabs from "@theme/Tabs"; import TabItem
-from "@theme/TabItem";
-
 <!-- prettier-ignore-start -->
-<Tabs groupId="chains" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'}, {label: 'Polkadot Asset Hub', value: 'ahp'}, {label: 'Kusama Asset Hub', value: 'ahk'}, {label: 'Polkadot People', value: 'pp'}, {label: 'Kusama People', value: 'kp'} ]}>
 
-<TabItem value="polkadot">
+=== "Polkadot"
 
-:::info What to do with DOT
+    !!!info "What to do with DOT"
+        - __{{ rpc("polkadot", "Balances", "ExistentialDeposit", 0, is_constant=true, readable="human_readable") }} :__ the minimum balance required to have an active account on Polkadot Network. If your account balance drops below the minimum, your account will be reaped. Learn more about [Accounts](../learn/learn-accounts.md) and the [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
+        - __{{ rpc("polkadot", "NominationPools", "MinJoinBond", 0, is_constant=false, readable="human_readable") }} :__ the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md) and earn staking rewards for contributing to the security of the network. Learn more about [nomination pools](../learn/learn-nomination-pools.md).
+        - __{{ rpc("polkadot-people", "Identity", "BasicDeposit", 0, is_constant=true, readable="human_readable") }} :__ register an [on-chain identity](../learn/learn-identity.md)
+        - __{{ rpc("polkadot", "Proxy", "ProxyDepositBase", 0, is_constant=true, readable="human_readable") }} :__ create a [proxy account](../learn/learn-proxies.md).
+        - __{{ rpc("polkadot", "Staking", "MinNominatorBond", 0, is_constant=false, readable="human_readable") }} :__ the minimum stake required to submit your intent to directly nominate validators.
+        - __{{ rpc("polkadot", "Staking", "MinimumActiveStake", 0, is_constant=false, readable="human_readable") }} :__ the minimum amount of DOT required to become an active nominator and earn rewards, i.e. the minimum active bond. To increase the chance of earning staking rewards, your stake should not be less than the minimum stake among the active nominators, which is a dynamic threshold. If you have lesser DOT than the minimum active nomination, please consider contributing to [nomination pools](../learn/learn-nomination-pools.md). Learn more about [becoming a nominator](../learn/learn-nominator.md).
+        - __{{ rpc("polkadot", "NominationPools", "MinCreateBond", 0, is_constant=false, readable="human_readable") }} :__ you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
-- __<RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>:__
-  the minimum balance required to have an active account on Polkadot Network. If your account
-  balance drops below the minimum, your account will be reaped. Learn more about
-  [Accounts](../learn/learn-accounts.md) and the
-  [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
+    #### Active Validator Count
 
-- __<RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>:__
-  the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md)
-  and earn staking rewards for contributing to the security of the network. Learn more about
-  [nomination pools](../learn/learn-nomination-pools.md).
+    The number of Polkadot validators in the active set is {{ rpc("polkadot", "Staking", "ValidatorCount", 297, false, false) }}.
 
-- __<RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/>:__
-    register an [on-chain identity](../learn/learn-identity.md)
+    #### Block Hash Count
 
-- __<RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/>:__
-    create a [proxy account](../learn/learn-proxies.md).
+    On Polkadot, the maximum number of block hashes retained on-chain at any given time is {{ rpc("polkadot", "System", "BlockHashCount", 4096, true, false) }} (which maps to seven hours given 6-second block times).
 
-- __<RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/>:__
-  the minimum stake required to submit your intent to directly nominate validators.
-- __<RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>:__
-  the minimum amount of DOT required to become an active nominator and earn rewards, i.e. the
-  minimum active bond. To increase the chance of earning staking rewards, your stake should not be
-  less than the minimum stake among the active nominators, which is a dynamic threshold. If you have
-  lesser DOT than the minimum active nomination, please consider contributing to
-  [nomination pools](../learn/learn-nomination-pools.md). Learn more about
-  [becoming a nominator](../learn/learn-nominator.md).
+    #### Bounty Curator Deposit
 
-- __<RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable"/>:__
-  you can create your own [nomination pool](../learn/learn-nomination-pools.md).
+    On Polkadot, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to {{ rpc("polkadot", "Bounties", "CuratorDepositMultiplier", 500000, true, readable="percentage") }}. The deposit can range between a minimum of {{ rpc("polkadot", "Bounties", "CuratorDepositMin", 100000000000, true, readable="human_readable") }}  and a maximum of {{ rpc("polkadot", "Bounties", "CuratorDepositMax", 2000000000000, true, readable="human_readable") }}
 
-:::
+    #### Bounty Deposit
 
-#### Active Validator Count
+    The deposit to submit a bounty on Polkadot is {{ rpc("polkadot", "Bounties", "BountyDepositBase", 10000000000, true, readable="human_readable") }}
 
-The number of Polkadot validators in the active set is <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/>.
+    #### Bounty Duration
 
-#### Block Hash Count
+    A Polkadot bounty has a predetermined duration of {{ rpc("polkadot", "Bounties", "BountyUpdatePeriod", 1296000, true, readable="blocks_to_days") }} days.
 
-On Polkadot, the maximum number of block hashes retained on-chain at any given time is <RPC network="polkadot" path="consts.system.blockHashCount" defaultValue={4096}/> (which maps to seven hours given 6-second block times).
+    #### Conviction Voting Lock Period
 
-#### Bounty Curator Deposit
+    One conviction voting lock period on Polkadot equals {{ rpc("polkadot", "ConvictionVoting", "VoteLockingPeriod", 100800, true, readable="blocks_to_days") }} days.
 
-On Polkadot, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to <RPC network="polkadot" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/>%. The deposit can range between a minimum of <RPC network="polkadot" path="consts.bounties.curatorDepositMin" defaultValue={100000000000} filter="humanReadable"/> and a maximum of <RPC network="polkadot" path="consts.bounties.curatorDepositMax" defaultValue={2000000000000} filter="humanReadable"/>.
+    #### Existential Deposit
 
-#### Bounty Deposit
+    The minimum number of tokens to keep an account alive on the Polkadot relay chain is {{ rpc("polkadot", "Balances", "ExistentialDeposit", 333000000, true, readable="human_readable") }}
 
-The deposit to submit a bounty on Polkadot is <RPC network="polkadot" path="consts.bounties.bountyDepositBase" defaultValue={10000000000} filter="humanReadable"/>.
+    #### Inactive Issuance
 
-#### Bounty Duration
+    Polkadot's inactive issuance is {{ rpc("polkadot", "Balances", "InactiveIssuance", 20115636146084858300, is_constant=false, readable="precise_dot") }} in the era {{ rpc("polkadot", "Staking", "CurrentEra", 1553, is_constant=false) }}.
 
-A Polkadot bounty has a predetermined duration of <RPC network="polkadot" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
+    #### Index Deposit
 
-#### Conviction Voting Lock Period
+    The deposit to reserve an index on Polkadot is {{ rpc("polkadot", "Indices", "Deposit", 100000000000, is_constant=true, readable="human_readable") }}
 
-One conviction voting lock period on Polkadot equals <RPC network="polkadot" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
+    #### Maximum Number of Nominators
 
-#### Existential Deposit
+    The maximum number of nominators on Polkadot is uncapped and the current value is {{ rpc("polkadot", "Staking", "CounterForNominators", 36793, is_constant=false) }}.
 
-The minimum number of tokens to keep an account alive on the Polkadot relay chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+    #### Maximum Number of Proxies per Account
 
-#### Inactive Issuance
+    The maximum number of proxies per Polkadot account is {{ rpc("polkadot", "Proxy", "MaxProxies", 32, is_constant=true) }}. You can have the same proxy for multiple accounts.
 
-Polkadot's inactive issuance is <RPC network="polkadot" path="query.balances.inactiveIssuance" defaultValue="20115636146084858300" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1553"/>.
+    #### Maximum Votes per Nominator
 
-#### Index Deposit
+    A nominator on Polkadot can select up to {{ rpc("polkadot", "ElectionProviderMultiPhase", "MinerMaxVotesPerVoter", 16, is_constant=true) }} validators.
 
-The deposit to reserve an index on Polkadot is <RPC network="polkadot" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
+    #### Minimum Active Bond
 
-#### Maximum Number of Nominators
+    The minimum amount of tokens to nominate on Polkadot is {{ rpc("polkadot", "Staking", "MinimumActiveStake", 5521439075539, is_constant=false, readable="human_readable") }} 
 
-The maximum number of nominators on Polkadot is uncapped and the current value is <RPC network="polkadot" path="query.staking.counterForNominators" defaultValue={36793}/>.
+    #### Minimum Bond to Create a Nomination Pool
 
-#### Maximum Number of Proxies per Account
+    The minimum bond to create a Polkadot nomination pool is {{ rpc("polkadot", "NominationPools", "MinCreateBond", 5000000000000, is_constant=false,readable="human_readable") }}.
 
-The maximum number of proxies per Polkadot account is <RPC network="polkadot" path="consts.proxy.maxProxies" defaultValue={32}/>. You can have the same proxy for multiple accounts.
+    #### Minimum Bond to Join a Nomination Pool
 
-#### Maximum Votes per Nominator
+    The minimum bond to join a Polkadot nomination pool is {{ rpc("polkadot", "NominationPools", "MinJoinBond", 10000000000, is_constant=false, readable="human_readable") }}
 
-A nominator on Polkadot can select up to <RPC network="polkadot" path="consts.electionProviderMultiPhase.minerMaxVotesPerVoter" defaultValue={16} /> validators.
+    #### Minimum Bond to Participate in Staking
 
-#### Minimum Active Bond
+    The minimum bond to nominate on Polkadot is {{ rpc("polkadot", "Staking", "MinNominatorBond", 2500000000000, is_constant=false, readable="human_readable") }}  while the minimum amount to join a pool is {{ rpc("polkadot", "NominationPools", "MinJoinBond", 10000000000, is_constant=false, readable="human_readable") }}
 
-The minimum amount of tokens to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minimumActiveStake" defaultValue={5521439075539} filter="humanReadable"/>.
+    #### Minimum Validator Bond
 
-#### Minimum Bond to Create a Nomination Pool
+    To start a validator instance on Polkadot, the minimum bond required is {{ rpc("polkadot", "Staking", "MinValidatorBond", 0, is_constant=false, readable="human_readable") }}
 
-The minimum bond to create a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.minCreateBond" defaultValue={5000000000000} filter="humanReadable" />.
+    #### Minimum Validator Commission
 
-#### Minimum Bond to Join a Nomination Pool
+    The minimum commission a Polkadot Validator can set is {{ rpc("polkadot", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
 
-The minimum bond to join a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.
+    #### Multisig Deposit Base
 
-#### Minimum Bond to Participate in Staking
+    The multisig deposit base on Polkadot is {{ rpc("polkadot", "Multisig", "DepositBase", 200880000000, is_constant=true, readable="human_readable") }}
 
-The minimum bond to nominate on Polkadot is <RPC network="polkadot" path="query.staking.minNominatorBond" defaultValue={2500000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="polkadot" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable"/>.
+    #### Multisig Deposit Factor
 
-#### Minimum Crowdloan contribution
+    The multisig deposit factor on Polkadot is {{ rpc("polkadot", "Multisig", "DepositFactor", 320000000, is_constant=true, readable="human_readable") }}
 
-The minimum amount to participate to a Polkadot crowdloan is <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/>.
+    #### Nomination Pool Max Commission
 
-#### Minimum Validator Bond
+    The maximum commission that can be set for a Polkadot nomination pool is {{ rpc("polkadot", "NominationPools", "GlobalMaxCommission", 100000000, is_constant=false, readable="percentage") }}.
 
-To start a validator instance on Polkadot, the
-minimum bond required is <RPC network="polkadot" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>.
+    #### Nomination Pool Members
 
-#### Minimum Validator Commission
+    There are currently {{ rpc("polkadot", "NominationPools", "CounterForPoolMembers", 0, is_constant=false) }} members in {{ rpc("polkadot", "NominationPools", "LastPoolId", 0, is_constant=false) }} Polkadot nomination pools. There is no limit to the number of pools or pool members per pool.
 
-The minimum commission a Polkadot Validator can set is <RPC network="polkadot" path="query.staking.minCommission" filter = "percentage" defaultValue="0"/>%. [This does not guarantee entry into the active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
+    #### OpenGov Referendum Timeout
 
-#### Multisig Deposit Base
+    A Polkadot referendum is timeout for not submitting the Decision Deposit within {{ rpc("polkadot", "Referenda", "UndecidingTimeout", 0, is_constant=true, readable="blocks_to_days") }} days since its creation.
 
-The multisig deposit base on Polkadot is <RPC network="polkadot" path="consts.multisig.depositBase" defaultValue={200880000000} filter="humanReadable"/>.
+    #### OpenGov Submission Deposit
 
-#### Multisig Deposit Factor
+    A deposit of {{ rpc("polkadot", "Referenda", "SubmissionDeposit", 0, is_constant=true, readable="human_readable") }} is needed to submit a referendum on Polkadot.
 
-The multisig deposit factor on Polkadot is <RPC network="polkadot" path="consts.multisig.depositFactor" defaultValue={320000000} filter="humanReadable"/>.
+    #### Parachain ID Registration Deposit
 
-#### Nomination Pool Max Commission
+    Reserving a `ParaID` on Polkadot requires a deposit of {{ rpc("polkadot", "Registrar", "ParaDeposit", 0, is_constant=true, readable="human_readable") }}
 
-The maximum commission that can be set for a Polkadot nomination pool is <RPC network="polkadot" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/>%.
+    #### Parachain Genesis State Registration Deposit
 
-#### Nomination Pool Members
+    Registering the genesis state and WASM code of a Polkadot parachain requires a deposit {{ rpc("polkadot", "Registrar", "DataDepositPerByte", 0, is_constant=true,  readable="human_readable") }} per byte.
 
-There are currently <RPC network="polkadot" path="query.nominationPools.counterForPoolMembers" defaultValue={46378} /> members in <RPC network="polkadot" path="query.nominationPools.lastPoolId" defaultValue={285} /> Polkadot nomination pools. There is no limit to the number of pools or pool members per pool.
+    #### Proxy Deposits
 
-#### OpenGov Referendum Timeout
+    The creation of proxies on Polkadot requires a **proxy deposit base** of {{ rpc("polkadot", "Proxy", "ProxyDepositBase", 0, is_constant=true,  readable="human_readable") }} and a **proxy deposit factor** of {{ rpc("polkadot", "Proxy", "ProxyDepositFactor", 0, is_constant=true,  readable="human_readable") }} that is multiplied by the number of proxies under the same proxied account.
 
-A Polkadot referendum is timeout for not submitting the Decision Deposit within <RPC network="polkadot" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> days since its creation.
+    In case of time-delayed proxies, there is an **announcement deposit base** of {{ rpc("polkadot", "Proxy", "AnnouncementDepositBase", 0, is_constant=true,  readable="human_readable") }} for announcing a call and an **announcement deposit factor** of {{ rpc("polkadot", "Proxy", "AnnouncementDepositFactor", 0, is_constant=true, readable="human_readable") }} for each proxy call.
 
-#### OpenGov Submission Deposit
+    #### Staking Miner Deposit and Reward
 
-A deposit of <RPC network="polkadot" path="consts.referenda.submissionDeposit" defaultValue={10000000000} filter="humanReadable"/> is needed to submit a referendum on Polkadot.
+    Staking miners on Polkadot are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedDepositBase", 0, is_constant=true, readable="human_readable") }}, a **signed deposit per byte** of {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedDepositByte", 0, is_constant=true, readable="human_readable") }} (a solution weighing 200KB would yield 200 x 0.0000097656 = 0.00195312 DOT), and a **signed deposit weight** set to 0.
 
-#### Parachain ID Registration Deposit
+    The **signed reward base** on Polkadot is {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedRewardBase", 0, is_constant=true, readable="human_readable") }} which is a fixed amount.
 
-Reserving a `ParaID` on Polkadot requires a deposit of <RPC network="polkadot" path="consts.registrar.paraDeposit" defaultValue={1000000000000} filter="humanReadable"/>.
+    #### Staking Miner Max Submissions
 
-#### Parachain Genesis State Registration Deposit
+    The maximum number of submissions for a staking miner on Polkadot is {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedMaxSubmissions", 0, is_constant=true) }}.
 
-Registering the genesis state and WASM code of a Polkadot parachain requires a deposit <RPC network="polkadot" path="consts.registrar.dataDepositPerByte" defaultValue={10000000} filter="humanReadable"/> per byte.
+    #### Staking Reward Retention
 
-#### Proxy Deposits
+    Polkadot staking rewards are kept available for 84 eras. The following calculation can be used to
+    approximate this length in days:
 
-The creation of proxies on Polkadot requires a **proxy deposit base** of <RPC network="polkadot" path="consts.proxy.proxyDepositBase" defaultValue={200080000000} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="polkadot" path="consts.proxy.proxyDepositFactor" defaultValue={330000000} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
+    `84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days`
 
-In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="polkadot" path="consts.proxy.announcementDepositBase" defaultValue={200080000000} filter="humanReadable"/> for announcing a call and an **announcement deposit factor** of <RPC network="polkadot" path="consts.proxy.announcementDepositFactor" defaultValue={660000000} filter="humanReadable"/> for each proxy call.
+    #### Total Issuance
 
-#### Staking Miner Deposit and Reward
+    Polkadot's total issuance is {{ rpc("polkadot", "Balances", "TotalIssuance", 0, is_constant=false, readable="precise_dot") }} in the era {{ rpc("polkadot", "Staking", "CurrentEra", 0, is_constant=false) }}.
 
-Staking miners on Polkadot are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/>, a **signed deposit per byte** of  <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={97656} filter="precise"/> (a solution weighing 200KB would yield 200 x 0.0000097656 = 0.00195312 DOT), and a **signed deposit weight** set to 0.
+    #### Treasury Burn Factor
 
-The **signed reward base** on Polkadot is <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> which is a fixed amount.
+    At the end of every spending period on Polkadot, {{ rpc("polkadot", "Treasury", "Burn", 0, is_constant=true, readable="percentage") }} of the available funds are burned.
 
-#### Staking Miner Max Submissions
+    #### Treasury Spending Period
 
-The maximum number of submission for a staking miner on Polkadot is <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
+    The spending period on Polkadot is currently {{ rpc("polkadot", "Treasury", "SpendPeriod", 0, is_constant=true, readable="blocks_to_days") }} days.
 
-#### Staking Reward Retention
+    #### Unbonding Duration
 
-Polkadot staking rewards are kept available for 84 eras. The following calculation can be used to
-approximate this length in days:
+    The unbonding duration on Polkadot is set to {{ rpc("polkadot", "Staking", "BondingDuration", 0, is_constant=true) }} days. This is
+    calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+    era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 24 ÷ 24 = 28 days.
 
-`84 eras` × `24 hours in a single era` ÷ `24 hours in a day` = `84 days`
+=== "Kusama"
 
-#### Total Issuance
+    !!!info "What to do with KSM"
+        - __{{ rpc("kusama", "Balances", "ExistentialDeposit", 0, is_constant=true, readable="precise_ksm") }} :__ the minimum balance required to have an active account on Kusama Network. If your account balance drops below the minimum, your account will be reaped. Learn more about [Accounts](../learn/learn-accounts.md) and the [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
+        - __{{ rpc("kusama", "NominationPools", "MinJoinBond", 0, is_constant=false, readable="precise_ksm") }} :__ the minimum contribution required to join a [nomination pool](../learn/learn-nomination-pools.md) and earn staking rewards for contributing to the security of the network. Learn more about [nomination pools](../learn/learn-nomination-pools.md).
+        - __{{ rpc("kusama-people", "Identity", "BasicDeposit", 0, is_constant=true, readable="precise_ksm") }} :__ register an [on-chain identity](../learn/learn-identity.md)
+        - __{{ rpc("kusama", "Proxy", "ProxyDepositBase", 0, is_constant=true, readable="human_readable_kusama") }} :__ create a [proxy account](../learn/learn-proxies.md).
+        - __{{ rpc("kusama", "Staking", "MinNominatorBond", 0, is_constant=false, readable="human_readable_kusama") }} :__ the minimum stake required to submit your intent to directly nominate validators.
+        - __{{ rpc("kusama", "Staking", "MinimumActiveStake", 0, is_constant=false, readable="human_readable_kusama") }} :__ the minimum amount required to become an active nominator and earn rewards, i.e. the minimum active bond. To increase the chance of earning staking rewards, your stake should not be less than the minimum stake among the active nominators, which is a dynamic threshold. If you have lesser KSM than the minimum active nomination, please consider contributing to [nomination pools](../learn/learn-nomination-pools.md). Learn more about [becoming a nominator](../learn/learn-nominator.md).
+        - __{{ rpc("kusama", "NominationPools", "MinCreateBond", 0, is_constant=false, readable="human_readable_kusama") }} :__ you can create your own [nomination pool](../learn/learn-nomination-pools.md).
 
-Polkadot's total issuance is  <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue="14883815224560918110" filter= "humanReadable"/> in the era <RPC network="polkadot" path="query.staking.currentEra" defaultValue="1553"/>.
+    #### Active Validator Count
 
-#### Treasury Burn Factor
+    The number of Kusama validators in the active set is {{ rpc("kusama", "Staking", "ValidatorCount", 297, false, false) }}.
 
-At the end of every spending period on Polkadot, <RPC network="polkadot" path="consts.treasury.burn" defaultValue={10000} filter="permillToPercent"/>% of the available funds are burned.
+    #### Block Hash Count
 
-#### Treasury Spending Period
+    On Kusama, the maximum number of block hashes retained on-chain at any given time is {{ rpc("kusama", "System", "BlockHashCount", 4096, true, false) }}(which maps to seven hours given 6-second block times).
 
-The spending period on Polkadot is currently <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> days.
+    #### Bounty Curator Deposit
 
-#### Unbonding Duration
+    On Kusama, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to {{ rpc("kusama", "Bounties", "CuratorDepositMultiplier", 500000, true, readable="percentage") }}. The deposit can range between a minimum of {{ rpc("kusama", "Bounties", "CuratorDepositMin", 100000000000, true, readable="human_readable_kusama") }}  and a maximum of {{ rpc("kusama", "Bounties", "CuratorDepositMax", 2000000000000, true, readable="human_readable_kusama") }}
 
-The unbonding duration on Polkadot is set to <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days. This is
-calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
-era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 24 ÷ 24 = 28 days.
+    #### Bounty Deposit
 
-</TabItem>
-<TabItem value="kusama">
+    The deposit to submit a bounty on Kusama is {{ rpc("kusama", "Bounties", "BountyDepositBase", 10000000000, true, readable="human_readable_kusama") }} .
 
-:::info What to do with KSM
+    #### Bounty Duration
 
-- __<RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333333333} filter="humanReadable"/>:__
-  the minimum balance required to have an active account on Kusama Network. If your account balance
-  drops below the minimum, your account will be reaped. Learn more about
-  [Accounts](../learn/learn-accounts.md) and the
-  [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) requirement.
+    A Kusama bounty has a predetermined duration of {{ rpc("kusama", "Bounties", "BountyUpdatePeriod", 1296000, true, readable="blocks_to_days") }} days.
 
-- __<RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1666666650} filter="humanReadable"/>:__
-  the minimum contribution required to join a
-  [nomination pool](../learn/learn-nomination-pools.md) and earn staking rewards for contributing
-  to the security of the network. Learn more about
-  [nomination pools](../learn/learn-nomination-pools.md).
+    #### Conviction Voting Lock Period
 
-- __<RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/>:__
-  register an [on-chain identity](../learn/learn-identity.md)
+    One conviction voting lock period on Kusama equals {{ rpc("kusama", "ConvictionVoting", "VoteLockingPeriod", 100800, true, readable="blocks_to_days") }} days.
 
-- __<RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/>:__
-  create a [proxy account](../learn/learn-proxies.md).
+    #### Existential Deposit
 
-- __<RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable"/>:__
-  you can create your own [nomination pool](../learn/learn-nomination-pools.md).
+    The minimum number of tokens to keep an account alive on the Kusama relay chain is {{ rpc("kusama", "Balances", "ExistentialDeposit", 333000000, true, readable="human_readable_kusama") }}.
 
-- __<RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={0} filter="humanReadable"/>:__
-  the minimum amount of KSM required to become an active nominator and earn rewards.
+    #### Inactive Issuance
 
-:::
+    Kusama's inactive issuance is {{ rpc("kusama", "Balances", "InactiveIssuance", 20115636146084858300, is_constant=false, readable="precise_ksm") }} in the era {{ rpc("kusama", "Staking", "CurrentEra", 1553, is_constant=false) }}.
 
-#### Active Validator Count
+    #### Index Deposit
 
-The number of Kusama validators in the active set is <RPC network="kusama" path="query.staking.validatorCount" defaultValue={297}/>.
+    The deposit to reserve an index on Kusama is {{ rpc("kusama", "Indices", "Deposit", 100000000000, is_constant=true, readable="human_readable_kusama") }}
 
-#### Block Hash Count
+    #### Maximum Number of Nominators
 
-On Kusama, the maximum block number to block hash mappings to keep is <RPC network="kusama" path="consts.system.blockHashCount" defaultValue={4096}/> (which maps to seven hours given 6-second block times).
+    The maximum number of nominators on Kusama is uncapped and the current value is {{ rpc("kusama", "Staking", "CounterForNominators", 36793, is_constant=false) }}.
 
-#### Bounty Curator Deposit
+    #### Maximum Number of Proxies per Account
 
-On Kusama, the bounty curator deposit is calculated by multiplying the curator fee by the bounty curator deposit multiplier set to <RPC network="kusama" path="consts.bounties.curatorDepositMultiplier" defaultValue={500000} filter="permillToPercent"/>%. The deposit can range between a minimum of <RPC network="kusama" path="consts.bounties.curatorDepositMin" defaultValue={3333333330} filter="humanReadable"/> and a maximum of <RPC network="kusama" path="consts.bounties.curatorDepositMax" defaultValue={166666666500} filter="humanReadable"/>.
+    The maximum number of proxies per Kusama account is {{ rpc("kusama", "Proxy", "MaxProxies", 32, is_constant=true) }}. You can have the same proxy for multiple accounts.
 
-#### Bounty Deposit
+    #### Maximum Votes per Nominator
 
-The deposit to submit a bounty on Kusama is <RPC network="kusama" path="consts.bounties.bountyDepositBase" defaultValue={33333333300} filter="humanReadable"/>.
+    A nominator on Kusama can select up to {{ rpc("kusama", "ElectionProviderMultiPhase", "MinerMaxVotesPerVoter", 16, is_constant=true) }} validators.
 
-#### Bounty Duration
+    #### Minimum Active Bond
 
-A Kusama bounty has a predetermined duration of <RPC network="kusama" path="consts.bounties.bountyUpdatePeriod" defaultValue={1296000} filter="blocksToDays"/> days.
+    The minimum amount of tokens to nominate on Kusama is {{ rpc("kusama", "Staking", "MinimumActiveStake", 5521439075539, is_constant=false, readable="human_readable_kusama") }} 
 
-#### Conviction Voting Lock Period
+    #### Minimum Bond to Create a Nomination Pool
 
-One conviction voting lock period on Kusama equals <RPC network="kusama" path="consts.convictionVoting.voteLockingPeriod" defaultValue={100800} filter="blocksToDays"/> days.
+    The minimum bond to create a Kusama nomination pool is {{ rpc("kusama", "NominationPools", "MinCreateBond", 5000000000000, is_constant=false, readable="human_readable_kusama") }}.
 
-#### Existential Deposit
+    #### Minimum Bond to Join a Nomination Pool
 
-The minimum number of tokens to keep an account alive on the Kusama relay chain is <RPC network="kusama" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+    The minimum bond to join a Kusama nomination pool is {{ rpc("kusama", "NominationPools", "MinJoinBond", 10000000000, is_constant=false, readable="human_readable_kusama") }}.
 
-#### Inactive Issuance
+    #### Minimum Bond to Participate in Staking
 
-Kusama's inactive issuance is <RPC network="kusama" path="query.balances.inactiveIssuance" defaultValue="288091772937830827" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="7061"/>.
+    The minimum bond to nominate on Kusama is {{ rpc("kusama", "Staking", "MinNominatorBond", 2500000000000, is_constant=false, readable="human_readable_kusama") }} while the minimum amount to join a pool is {{ rpc("kusama", "NominationPools", "MinJoinBond", 10000000000, is_constant=false, readable="human_readable_kusama") }}
 
-#### Index Deposit
+    #### Minimum Validator Bond
 
-The deposit to reserve an index on Kusama is <RPC network="kusama" path="consts.indices.deposit" defaultValue={100000000000} filter="humanReadable"/>.
+    To start a validator instance on Kusama, the minimum bond required is {{ rpc("kusama", "Staking", "MinValidatorBond", 0, is_constant=false, readable="human_readable_kusama") }}
 
-#### Maximum Number of Nominators
+    #### Minimum Validator Commission
 
-The maximum number of nominators on Kusama is capped at <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> and currently sits at <RPC network="kusama" path="query.staking.counterForNominators" defaultValue={15560}/>.
+    The minimum commission a Kusama Validator can set is {{ rpc("kusama", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
 
-#### Maximum Number of Proxies per Account
+    #### Multisig Deposit Base
 
-The maximum number of proxies per Kusama account is <RPC network="kusama" path="consts.proxy.maxProxies" defaultValue={32}/>. You can have the same proxy for multiple accounts.
+    The multisig deposit base on Kusama is {{ rpc("kusama", "Multisig", "DepositBase", 200880000000, is_constant=true, readable="human_readable_kusama") }}.
 
-#### Maximum Votes per Nominator
+    #### Multisig Deposit Factor
 
-A nominator on Kusama can select up to <RPC network="kusama" path="consts.electionProviderMultiPhase.minerMaxVotesPerVoter" defaultValue={24} /> validators.
+    The multisig deposit factor on Kusama is {{ rpc("kusama", "Multisig", "DepositFactor", 320000000, is_constant=true, readable="human_readable_kusama") }}.
 
-#### Minimum Active Bond
+    #### Nomination Pool Max Commission
 
-The minimum amount of tokens to nominate on Kusama is <RPC network="kusama" path="query.staking.minimumActiveStake" defaultValue={2937000000000} filter="humanReadable"/>.
+    The maximum commission that can be set for a Kusama nomination pool is {{ rpc("kusama", "NominationPools", "GlobalMaxCommission", 100000000, is_constant=false, readable="percentage") }}.
 
-#### Minimum Bond to Create a Nomination Pool
+    #### Nomination Pool Members
 
-The minimum bond to create a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.
+    There are currently {{ rpc("kusama", "NominationPools", "CounterForPoolMembers", 0, is_constant=false) }} members in {{ rpc("kusama", "NominationPools", "LastPoolId", 0, is_constant=false) }} Kusama nomination pools. There is no limit to the number of pools or pool members per pool.
 
-#### Minimum Bond to Join a Nomination Pool
+    #### OpenGov Referendum Timeout
 
-The minimum bond to join a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={10000000000} filter="humanReadable" />.
+    A Kusama referendum is timeout for not submitting the Decision Deposit within {{ rpc("kusama", "Referenda", "UndecidingTimeout", 0, is_constant=true, readable="blocks_to_days") }} days since its creation.
 
-#### Minimum Bond to Participate in Staking
+    #### OpenGov Submission Deposit
 
-The minimum bond to nominate on Kusama is <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> while the minimum amount to join a pool is <RPC network="kusama" path="query.nominationPools.minJoinBond" defaultValue={1667000000} filter="humanReadable"/>.
+    A deposit of {{ rpc("kusama", "Referenda", "SubmissionDeposit", 0, is_constant=true, readable="human_readable_kusama") }}is needed to submit a referendum on Kusama.
 
-#### Minimum Crowdloan contribution
+    #### Parachain ID Registration Deposit
 
-The minimum amount to participate to a Kusama crowdloan is <RPC network="kusama" path="consts.crowdloan.minContribution" defaultValue={100000000000} filter="humanReadable"/>.
+    Reserving a `ParaID` on Kusama requires a deposit of {{ rpc("kusama", "Registrar", "ParaDeposit", 0, is_constant=true, readable="human_readable_kusama") }}.
 
-#### Minimum Validator Bond
+    #### Parachain Genesis State Registration Deposit
 
-To start a validator instance on Kusama, the
-minimum bond required is <RPC network="kusama" path="query.staking.minValidatorBond" defaultValue="0" filter= "humanReadable"/>.
+    Registering the genesis state and WASM code of a Kusama parachain requires a deposit {{ rpc("kusama", "Registrar", "DataDepositPerByte", 0, is_constant=true, readable="human_readable_kusama") }} per byte.
 
-#### Minimum Validator Commission
+    #### Proxy Deposits
 
-The minimum commission a Kusama Validator can set is <RPC network="kusama" path="query.staking.minCommission" filter = "percentage" defaultValue="10"/>%.
+    The creation of proxies on Kusama requires a **proxy deposit base** of {{ rpc("kusama", "Proxy", "ProxyDepositBase", 0, is_constant=true, readable="human_readable_kusama") }} and a **proxy deposit factor** of {{ rpc("kusama", "Proxy", "ProxyDepositFactor", 0, is_constant=true, readable="human_readable_kusama") }} that is multiplied by the number of proxies under the same proxied account.
 
-#### Multisig Deposit Base
+    In case of time-delayed proxies, there is an **announcement deposit base** of {{ rpc("kusama", "Proxy", "AnnouncementDepositBase", 0, is_constant=true, readable="human_readable_kusama") }} for announcing a call and an **announcement deposit factor** of {{ rpc("kusama", "Proxy", "AnnouncementDepositFactor", 0, is_constant=true, readable="human_readable_kusama") }} for each proxy call.
 
-The multisig deposit base on Kusama is <RPC network="kusama" path="consts.multisig.depositBase" defaultValue={669599996400} filter="humanReadable"/>.
+    #### Staking Miner Deposit and Reward
 
-#### Multisig Deposit Factor
+    Staking miners on Kusama are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedDepositBase", 0, is_constant=true, readable="human_readable_kusama") }}, a **signed deposit per byte** of {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedDepositByte", 0, is_constant=true, readable="human_readable_kusama") }} (a solution weighing 200KB would yield 200 x 0.00000032551 = 0.000065102), and a **signed deposit weight** set to 0 and has no effect.
 
-The multisig deposit factor on Kusama is <RPC network="kusama" path="consts.multisig.depositFactor" defaultValue={1066665600} filter="humanReadable"/>.
+    The **signed reward base** on Kusama is {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedRewardBase", 0, is_constant=true, readable="human_readable_kusama") }} which is a fixed amount.
 
-#### Nomination Pool Max Commission
+    #### Staking Miner Max Submissions
 
-The maximum commission that can be set for a Kusama nomination pool is <RPC network="kusama" path="query.nominationPools.globalMaxCommission" defaultValue={100000000} filter="percentage"/>%.
+    The maximum number of submission for a staking miner on Kusama is {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedMaxSubmissions", 0, is_constant=true) }}.
 
-#### Nomination Pool Members
+    #### Staking Reward Retention
 
-There are currently <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={3442} /> members in <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={202} /> Kusama nomination pools. There is no limit to the number of pools or pool members per pool.
+    Kusama staking rewards are kept available for 84 eras. The following calculation can be used to
+    approximate this length in days:
 
-#### OpenGov Referendum Timeout
+    `84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days`
 
-A Kusama referendum is timeout for not submitting the Decision Deposit within <RPC network="kusama" path="const.referenda.undecidingTimeout" defaultValue={201600} filter="blocksToDays"/> days since its creation.
+    #### Total Issuance
 
-#### OpenGov Submission Deposit
+    Kusama's total issuance is {{ rpc("kusama", "Balances", "TotalIssuance", 0, is_constant=false, readable="human_readable_kusama") }} in the era {{ rpc("kusama", "Staking", "CurrentEra", 0, is_constant=false) }}.
 
-A deposit of <RPC network="kusama" path="consts.referenda.submissionDeposit" defaultValue={33333333333} filter="humanReadable"/> is needed to submit a referendum on Kusama.
+    #### Treasury Burn Factor
 
-#### Parachain ID Registration Deposit
+    At the end of every spending period on Kusama, {{ rpc("kusama", "Treasury", "Burn", 0, is_constant=true, readable="percentage") }} of the available funds are burned.
 
-Reserving a `ParaID` on Kusama requires a deposit of <RPC network="kusama" path="consts.registrar.paraDeposit" defaultValue={40000000000000} filter="humanReadable"/>.
+    #### Treasury Spending Period
 
-#### Parachain Genesis State Registration Deposit
+    The spending period on Kusama is currently {{ rpc("kusama", "Treasury", "SpendPeriod", 0, is_constant=true, readable="blocks_to_days") }} days.
 
-Registering the genesis state and WASM code of a Kusama parachain requires a deposit <RPC network="kusama" path="consts.registrar.dataDepositPerByte" defaultValue={333333333} filter="humanReadable"/> per byte.
+    #### Unbonding Duration
 
-#### Proxy Deposits
+    The unbonding duration on Kusama is set to {{ rpc("kusama", "Staking", "BondingDuration", 0, is_constant=true, readable="blocks_to_days") }} days. This is
+    calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
+    era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 6 ÷ 24 = 7 days.
 
-The creation of proxies on Kusama requires a **proxy deposit base** of <RPC network="kusama" path="consts.proxy.proxyDepositBase" defaultValue={666933332400} filter="humanReadable"/> and a **proxy deposit factor** of <RPC network="kusama" path="consts.proxy.proxyDepositFactor" defaultValue={1099998900} filter="humanReadable"/> that is multiplied by the number of proxies under the same proxied account.
+=== "Polkadot Asset Hub"
 
-In case of time-delayed proxies, there is an **announcement deposit base** of <RPC network="kusama" path="consts.proxy.announcementDepositBase" defaultValue={666933332400} filter="humanReadable"/> for announcing a call and an **announcement deposit factor** of <RPC network="kusama" path="consts.proxy.announcementDepositFactor" defaultValue={2199997800} filter="humanReadable"/> for each proxy call.
+    #### Asset Deposit
 
-#### Staking Miner Deposit and Reward
+    To reserve an asset on the Polkadot Asset Hub you need a deposit of {{ rpc("polkadot-assethub", "Assets", "AssetDeposit", 100000000000, true, readable="precise_dot") }} and {{ rpc("polkadot-assethub", "Assets", "MetadataDepositBase", 668933304, true, readable="precise_dot") }} for the asset metadata.
 
-Staking miners on Kusama are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/>, a **signed deposit per byte** of  <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositByte" defaultValue={32551} filter="precise"/> (a solution weighing 200KB would yield 200 x 0.00000032551 = 0.000065102 KSM), and a **signed deposit weight** set to 0 and has no effect.
+    #### Existential Deposit
 
-The **signed reward base** on Kusama is <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> which is a fixed amount.
+    The minimum number of tokens to keep an account alive on the Polkadot Asset Hub is {{ rpc("polkadot-assethub", "Balances", "ExistentialDeposit", 100000000, true, readable="precise_dot") }}.
 
-#### Staking Miner Max Submissions
+=== "Kusama Asset Hub"
 
-The maximum number of submission for a staking miner on Kusama is <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/>.
+    #### Asset Deposit
 
-#### Staking Reward Retention
+    To reserve an asset on the Kusama Asset Hub you need a deposit of {{ rpc("kusama-assethub", "Assets", "AssetDeposit", 100000000000, true, readable="precise_ksm") }} and {{ rpc("kusama-assethub", "Assets", "MetadataDepositBase", 668933304, true, readable="precise_ksm") }} for the asset metadata.
 
-Kusama staking rewards are kept available for 84 eras. The following calculation can be used to
-approximate this length in days:
+    #### Existential Deposit
 
-`84 eras` × `6 hours in a single era` ÷ `24 hours in a day` = `21 days`
+    The minimum number of tokens to keep an account alive on the Kusama Asset Hub is {{ rpc("kusama-assethub", "Balances", "ExistentialDeposit", 100000000, true, readable="precise_ksm") }}.
 
-#### Total Issuance
+=== "Polkadot People"
 
-Kusama's total issuance is  <RPC network="kusama" path="query.balances.totalIssuance" defaultValue="15410382600026732448" filter= "humanReadable"/> in the era <RPC network="kusama" path="query.staking.currentEra" defaultValue="7061"/>.
+    #### Identity Deposit
 
-#### Treasury Burn Factor
+    The creation of a Polkadot identity required a deposit of {{ rpc("polkadot-people", "Identity", "BasicDeposit", 2001700000, true, readable="precise_dot") }} and {{ rpc("polkadot-people", "Identity", "ByteDeposit", 100000, true, readable="precise_dot") }} (per byte) per each field beyond the legal name.
 
-At the end of every spending period on Kusama, <RPC network="kusama" path="consts.treasury.burn" defaultValue={2000} filter="permillToPercent"/>% of the available funds are burned, with the amount currently going to [Society](../maintain/kusama/maintain-guides-society-kusama.md) rather than being burned.
+    #### Sub-identity Deposit
 
-#### Treasury Spending Period
+    The creation of a Polkadot sub-identity required a deposit of {{ rpc("polkadot-people", "Identity", "SubAccountDeposit", 2005300000, true, readable="precise_dot") }}.
 
-The spending period on Kusama is currently <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> days.
+=== "Kusama People"
 
-#### Unbonding Duration
+    #### Identity Deposit
 
-The unbonding duration on Kusama is set to <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28} filter="erasToDays"/> days. This is
-calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
-era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 6 ÷ 24 = 7 days.
+    The creation of a Kusama identity required a deposit of {{ rpc("kusama-people", "Identity", "BasicDeposit", 6672333321, true, readable="precise_ksm") }} and {{ rpc("kusama-people", "Identity", "ByteDeposit", 333333, true, readable="precise_ksm") }} (per byte) per each field beyond the legal name.
 
-</TabItem>
-<TabItem value="ahp">
+    #### Sub-identity Deposit
 
-#### Asset Deposit
-
-To reserve an asset on the Polkadot Asset Hub you need a deposit of <RPC network="statemint" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemint" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
-
-#### Existential Deposit
-
-The minimum number of tokens to keep an account alive on the Polkadot Asset Hub is <RPC network="statemint" path="consts.balances.existentialDeposit" defaultValue={100000000} filter="humanReadable"/>.
-
-</TabItem>
-<TabItem value="ahk">
-
-#### Asset Deposit
-
-To reserve an asset on the Kusama Asset Hub you need a deposit of <RPC network="statemine" path="consts.assets.assetDeposit" defaultValue={100000000000} filter="humanReadable"/> and <RPC network="statemine" path="consts.assets.metadataDepositBase" defaultValue={668933304} filter="humanReadable"/> for the asset metadata.
-
-#### Existential Deposit
-
-The minimum number of tokens to keep an account alive on the Kusama Asset Hub is <RPC network="statemine" path="consts.balances.existentialDeposit" defaultValue={1000000000} filter="humanReadable"/>.
-
-</TabItem>
-<TabItem value="pp">
-
-#### Identity Deposit
-
-The creation of a Polkadot identity required a deposit of <RPC network="polkadotpeople" path="consts.identity.basicDeposit" defaultValue={2001700000} filter="humanReadable"/> and <RPC network="polkadotpeople" path="consts.identity.byteDeposit" defaultValue={100000} filter="humanReadable"/> (per byte) per each field beyond the legal name.
-
-#### Sub-identity Deposit
-
-The creation of a Polkadot sub-identity required a deposit of <RPC network="polkadotpeople" path="consts.identity.subAccountDeposit" defaultValue={2005300000} filter="humanReadable"/>.
-
-</TabItem>
-<TabItem value="kp">
-
-#### Identity Deposit
-
-The creation of a Kusama identity required a deposit of <RPC network="kusamapeople" path="consts.identity.basicDeposit" defaultValue={6672333321} filter="humanReadable"/> and <RPC network="kusamapeople" path="consts.identity.byteDeposit" defaultValue={333333} filter="humanReadable"/> (per byte) per each field beyond the legal name.
-
-#### Sub-identity Deposit
-
-The creation of a Kusama sub-identity required a deposit of <RPC network="kusamapeople" path="consts.identity.subAccountDeposit" defaultValue={6684333309} filter="humanReadable"/>.
-
-</TabItem>
-
-</Tabs>
+    The creation of a Kusama sub-identity required a deposit of {{ rpc("kusama-people", "Identity", "SubAccountDeposit", 6684333309, true, readable="precise_ksm") }}.
 
 <!-- prettier-ignore-end -->

@@ -7,45 +7,30 @@ keyword: [nominate, nominator, stake, staking, pools]
 slug: ../learn-nomination-pools
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Nomination Pools are evolving! Soon you'll be able to participate in a pool and in OpenGov with your pooled funds! You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check
+    <a href="https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation" target="_blank" rel="noopener noreferrer">
+      this article
+    </a>
+    on the actions you need to take as soon as possible. 
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="<b>Nomination Pools are evolving!</b>
-Soon you'll be able to participate in a pool and in OpenGov with your pooled funds!
-You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check [<b>this article</b>](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) on the actions you need to take as soon as possible." />
+!!!info "Nomination Pools are live on Polkadot!"
+    Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their tokens together on-chain to nominate validators and receive rewards, significantly improving the system’s scalability. Now, anyone with as little as [1 DOT can receive rewards for staking natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Note that rewards are not guaranteed for those pools that do not have enough bonded funds to be included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active pools will receive rewards.**
 
-:::info Nomination Pools are live on Polkadot!
+!!!note
+    Learn the key differences between [**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool).
+    
+    **For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
+    
+    **If you become a nomination pool member or a pool admin, you cannot participate in Governance with the bonded tokens in the pool, as they are held in a [system account](./learn-account-advanced.md#system-accounts).**
 
-Nomination pools are a new feature for Polkadot’s staking system that allows users to pool their
-tokens together on-chain to nominate validators and receive rewards, significantly improving the
-system’s scalability. Now, anyone with as little as
-[1 DOT can receive rewards for staking natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-Note that rewards are not guaranteed for those pools that do not have enough bonded funds to be
-included within the [bags list](./learn-staking-advanced.md#bags-list). **Only members of active
-pools will receive rewards.**
-
-:::
-
-:::note
-
-Learn the key differences between
-[**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool).
-
-**For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot
-Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
-
-**If you become a nomination pool member or a pool admin, you cannot participate in Governance with
-the bonded tokens in the pool, as they are held in a
-[system account](./learn-account-advanced.md#system-accounts).**
-
-:::
-
-:::tip Have questions on Nomination Pools?
-
-Please join the [Polkadot Discord](https://dot.li/discord) for asking general questions about
-Nomination Pools. If you are a developer, please join our
-[nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
-
-:::
+!!!tip "Have questions on Nomination Pools?"
+    Please join the [Polkadot Discord](https://polkadot-discord.w3f.tools/) for asking general questions about Nomination Pools. If you are a developer, please join our [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
 
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
@@ -68,14 +53,8 @@ system can handle and thus scaling the number of accounts that can participate a
 the staking system. In summary, each nomination pool is viewed as a single nominator from the NPoS
 system point of view.
 
-:::info Why aren't the members in the nomination pools called delegators?
-
-The term `delegator` is associated too much with Delegated Proof of Staking (DPoS), and since the
-network implements Nominated Proof of Staking (NPoS), naming them delegators would be misleading.
-The term `member` is our generic replacement for `delegator`. In action, members are quite similar
-to delegators and delegate their nomination power to the pool.
-
-:::
+!!!info "Why aren't the members in the nomination pools called delegators?"
+    The term `delegator` is associated too much with Delegated Proof of Staking (DPoS), and since the network implements Nominated Proof of Staking (NPoS), naming them delegators would be misleading. The term `member` is our generic replacement for `delegator`. In action, members are quite similar to delegators and delegate their nomination power to the pool.
 
 The pool’s earnings are split pro rata to a member's stake in the bonded pool (and thus, the staking
 rewards for members will be the same as if they were a nominator). Importantly, slashes are also
@@ -104,23 +83,11 @@ Note that a member may only belong to one pool at a time.
 The current minimum bond to join a pool can be seen
 [here](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool).
 
-:::info
+!!!info
+    The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS Apps UI. This is because the member funds are transferred from their account to the pool's [system account](./learn-account-advanced.md#system-accounts). This pool account is not accessible by anyone (including the pool root or depositor) and only the pool's internal logic can access the account.
 
-The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS
-Apps UI. This is because the member funds are transferred from their account to the pool's
-[system account](./learn-account-advanced.md#system-accounts). This pool account is not accessible
-by anyone (including the pool root or depositor) and only the pool's internal logic can access the
-account.
-
-:::
-
-:::tip Use Proxy Accounts to join Nomination Pools
-
-Depending on how much control you want to give your proxy, you might choose between any >
-non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions
-related to the `NominationPool` pallet.
-
-:::
+!!!tip "Use Proxy Accounts to join Nomination Pools"
+    Depending on how much control you want to give your proxy, you might choose between any > non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions related to the `NominationPool` pallet.
 
 Check the "How to join a pool" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
@@ -148,10 +115,10 @@ your behalf. There are four permission options:
 - `PermissionlessAll`: you grant permission to any other account to compound or withdraw your
   rewards on your behalf.
 
-See the [Staking Dashboard page](../general/staking-dashboard.md#pools) for more information about
+See the [Staking Dashboard page](../general/dashboards/staking-dashboard.md#pools) for more information about
 how to set your claim permissions.
 
-See the [advanced guides](./learn-guides-staking-pools.md#claim-rewards-for-other-pool-members) to
+See the [advanced guides](./learn-guides-staking-pools.md#claim-rewards-for-other-pool-members-with-polkadot-js) to
 learn how to claim rewards for another pool member.
 
 ### Unbond and withdraw funds
@@ -165,13 +132,8 @@ funds" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
 
-:::info Unbonding transaction automatically triggers withdrawal of rewards
-
-When there is a change in the bonded balance, the accumulated rewards in the pool thus far are
-automatically withdrawn to the account. The rewards are then accrued based on the updated bonded
-balance.
-
-:::
+!!!info "Unbonding transaction automatically triggers withdrawal of rewards"
+    When there is a change in the bonded balance, the accumulated rewards in the pool thus far are automatically withdrawn to the account. The rewards are then accrued based on the updated bonded balance.
 
 ### Limitations of Nomination Pools
 
@@ -207,7 +169,7 @@ balance.
 
 As the pool root role, you can set pool commissions that will be applied to the staking rewards paid
 out to the pool's system account before rewards are allocated for the pool members. You can set pool
-commissions through the [Polkadot Staking Dashboard](../general/staking-dashboard.md#pools).
+commissions through the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools).
 
 Three methods can be used when setting the pool commission:
 
@@ -232,14 +194,8 @@ Max Commission and Change Rate must not be necessarily set. It is the choice of 
 set those parameters and provide transparency to the pool members about the pool's commission
 policy.
 
-:::warning Max Commission and Change Rate are currently permanent
-
-Once the Max Commission and the Change Rate are set, the pool admin currently can only decrease
-those values. The minimum delay between commission updates can only be increased. The situation can
-change in the future and a `forceSetCommissionMax` method can be proposed through governance
-referendum.
-
-:::
+!!!warning "Max Commission and Change Rate are currently permanent"
+    Once the Max Commission and the Change Rate are set, the pool admin currently can only decrease those values. The minimum delay between commission updates can only be increased. The situation can change in the future and a `forceSetCommissionMax` method can be proposed through governance referendum.
 
 Let's take, for example, Pool A, which sets the Commission Rate to 10%, the Max Commission to 100%,
 and the Change Rate to 1% every 300 blocks (which equates to approximately 30 minutes). The
@@ -257,12 +213,8 @@ following statements are true:
 
 ## Pool Lifecycle
 
-:::info Advanced How-to Guides
-
-See [this page](./learn-guides-staking-pools#pool-creation) for more information about the lifecycle
-of nomination pools. The cycle includes creation, upkeep and destruction.
-
-:::
+!!!info "Advanced How-to Guides"
+    See [this page](./learn-guides-staking-pools.md#pool-creation-with-polkadot-js) for more information about the lifecycle of nomination pools. The cycle includes creation, upkeep and destruction.
 
 ## Nomination Pools - Slashing
 
@@ -309,18 +261,8 @@ the list of validators nominated by the pool, and so, in a way, you are trusting
 to act in your best interests. However, it is advised to check the validators nominated by the pool
 from time to time and change the pool if necessary.
 
-:::info Minimum Active Nomination Value is Dynamic
-
-The minimum amount required to become an active nominator and earn rewards can be seen
-[here](../general/chain-state-values.md#minimum-active-bond). If you have less tokens than the
-minimum active nomination and still want to participate in staking, you can join the nomination
-pools with a
-[smaller bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking). For
-additional information, see
-[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
-
-:::
+!!!info "Minimum Active Nomination Value is Dynamic"
+    The minimum amount required to become an active nominator and earn rewards can be seen [here](../general/chain-state-values.md#minimum-active-bond). If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [smaller bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking). For additional information, see [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 |                                                                                                                                 Nominating                                                                                                                                  |                                                                                                              Joining a Pool                                                                                                               |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |

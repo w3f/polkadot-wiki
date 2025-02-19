@@ -127,15 +127,8 @@ The choice of using Schnorr signatures over using ECDSA is not so cut and dried.
 Web3 researcher) provides additional details on the decision in this
 [research post](https://research.web3.foundation/Polkadot/security/keys) on the topic:
 
-:::info Choosing Schnorr signatures over ECDSA signatures
-
-There is one sacrifice we make by choosing Schnorr signatures over ECDSA signatures for account
-keys: Both require 64 bytes, but only ECDSA signatures communicate their public key. There are
-obsolete Schnorr variants that support recovering the public key from a signature, but they break
-important functionality like hierarchical deterministic key derivation. In consequence, Schnorr
-signatures often take an extra 32 bytes for the public key.
-
-:::
+!!!info "Choosing Schnorr signatures over ECDSA signatures"
+    There is one sacrifice we make by choosing Schnorr signatures over ECDSA signatures for account keys: Both require 64 bytes, but only ECDSA signatures communicate their public key. There are obsolete Schnorr variants that support recovering the public key from a signature, but they break important functionality like hierarchical deterministic key derivation. In consequence, Schnorr signatures often take an extra 32 bytes for the public key.
 
 But ultimately the benefits of using Schnorr signatures outweigh the tradeoffs, and future
 optimizations may resolve the inefficiencies pointed out in the quote above.
@@ -177,14 +170,8 @@ Not yet, but they will be. BLS signatures allow more efficient signature aggrega
 GRANDPA validators are usually signing the same thing (e.g. a block), it makes sense to aggregate
 them, which can allow for other protocol optimizations.
 
-:::info From the BLS library's README
-
-Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much
-less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a
-diverse array of signature aggregation options far beyond any other known signature scheme, which
-makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
-
-:::
+!!!info "From the BLS library's README"
+    Boneh-Lynn-Shacham (BLS) signatures have slow signing, very slow verification, require slow and much less secure pairing friendly curves, and tend towards dangerous malleability. Yet, BLS permits a diverse array of signature aggregation options far beyond any other known signature scheme, which makes BLS a preferred scheme for voting in consensus algorithms and for threshold signatures.
 
 Even though Schnorr signatures allow for signature aggregation, BLS signatures are much more
 efficient in some fashions. For this reason it will be one of the session keys that will be used by
@@ -218,7 +205,7 @@ submitter. The proof can be verified by any challenger to ensure the random numb
 valid.
 
 The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos. Ouroboros
-randomness is secure for block production and works well for [BABE](learn-consensus.md#BABE). Where
+randomness is secure for block production and works well for [BABE](learn-consensus.md#block-production-babe). Where
 they differ is that Polkadot's VRF does not depend on a central clock (the problem becomes - whose
 central clock?), rather, it depends on its own past results to determine present and future results,
 and it uses slot numbers as a clock emulator, estimating time.
@@ -226,7 +213,7 @@ and it uses slot numbers as a clock emulator, estimating time.
 #### Here's how it works in detail:
 
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
-Slots make up [epochs](../general/glossary.md##epoch) - on Polkadot, 2400 slots make one epoch,
+Slots make up [epochs](../general/glossary.md#epoch) - on Polkadot, 2400 slots make one epoch,
 which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
@@ -291,24 +278,8 @@ unnecessary friction for users of the blockchains opting for this method.
 
 ## Appendix A: On the security of curves
 
-:::note From the
-[Introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10)
-into `libssl`
-
-The reason is the following: During summer of 2013, revelations from ex- consultant at [the] NSA
-Edward Snowden gave proof that [the] NSA willingly inserts backdoors into software, hardware
-components and published standards. While it is still believed that the mathematics behind ECC
-(Elliptic-curve cryptography) are still sound and solid, some people (including Bruce Schneier
-[SCHNEIER]), showed their lack of confidence in NIST-published curves such as nistp256, nistp384,
-nistp521, for which constant parameters (including the generator point) are defined without
-explanation. It is also believed that [the] NSA had a word to say in their definition. These curves
-are not the most secure or fastest possible for their key sizes [DJB], and researchers think it is
-possible that NSA have ways of cracking NIST curves. It is also interesting to note that SSH belongs
-to the list of protocols the NSA claims to be able to eavesdrop. Having a secure replacement would
-make passive attacks much harder if such a backdoor exists.
-
-However an alternative exists in the form of Curve25519. This algorithm has been proposed in 2006 by
-DJB [Curve25519]. Its main strengths are its speed, its constant-time run time (and resistance
-against side-channel attacks), and its lack of nebulous hard-coded constants.
-
-:::
+!!!note "From the [Introduction of Curve25519](https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt#n10) into `libssl`"
+    The reason is the following: During summer of 2013, revelations from ex- consultant at [the] NSA Edward Snowden gave proof that [the] NSA willingly inserts backdoors into software, hardware components and published standards. While it is still believed that the mathematics behind ECC (Elliptic-curve cryptography) are still sound and solid, some people (including Bruce Schneier [SCHNEIER]), showed their lack of confidence in NIST-published curves such as nistp256, nistp384, nistp521, for which constant parameters (including the generator point) are defined without explanation. It is also believed that [the] NSA had a word to say in their definition. These curves are not the most secure or fastest possible for their key sizes [DJB], and researchers think it is possible that NSA have ways of cracking NIST curves. It is also interesting to note that SSH belongs to the list of protocols the NSA claims to be able to eavesdrop. Having a secure replacement would make passive attacks much harder if such a backdoor exists.
+    
+    However an alternative exists in the form of Curve25519. This algorithm has been proposed in 2006 by
+    DJB [Curve25519]. Its main strengths are its speed, its constant-time run time (and resistance against side-channel attacks), and its lack of nebulous hard-coded constants.

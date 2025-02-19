@@ -14,7 +14,7 @@ on-chain use them. Not managing how resources are used can open an attack vector
 (Denial of Service), where an attacker floods the chain with operations in order to get it to stop
 producing blocks. In order to manage how resources are used and to protect against DoS attacks, XCM
 uses a concept of _weight_. This concept, which has the purpose of quantifying usage of blockchain
-resources, comes from the [Substrate](https://docs.substrate.io/build/tx-weights-fees/) world.
+resources, comes from the [Substrate](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/) world.
 
 Weight is two-dimensional, it tracks both time (execution time) and space (state accesses). Weight
 determines how much fees need to be paid in order to perform some operation. The logic for turning
@@ -30,7 +30,7 @@ local system, usually by the origin of the message, because we are using the mes
 mechanism maintained by the origin. Similarly, the execution fees are paid on the destination
 system, via the `BuyExecution` instruction. In other words, XCMs are paid for via their own
 instructions. We'll talk more about `BuyExecution` in the
-[fee handling chapter](../journey-fees/index.html).
+[fee handling chapter](../journey/fees.md).
 
 XCM is agnostic, which means it doesn't assume fees need to be paid. It's entirely possible to not
 pay for the effects of an XCM on the destination system. Even in systems where fees have to be paid,

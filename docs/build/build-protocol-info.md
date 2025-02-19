@@ -49,17 +49,14 @@ Base58Check format such as a version prefix, a hash-based checksum suffix, and b
 <!-- todo: link to dev hub once up -->
 
 See the
-[SS58 page](https://docs.substrate.io/main-docs/fundamentals/accounts-addresses-keys/#address-encoding-and-chain-specific-addresses)
+[SS58 page](https://docs.polkadot.com/polkadot-protocol/basics/accounts/#address-formats)
 in the Substrate documentation for encoding information and a more comprehensive list of network
 prefixes.
 
-:::warning Do not use regular expressions (regex) to validate addresses
-
-Always verify using the prefix and checksum of the address. Substrate API Sidecar provides an
-`accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
-address.
-
-:::
+!!!warning "Do not use regular expressions (regex) to validate addresses"
+    Always verify using the prefix and checksum of the address. Substrate API Sidecar provides an
+    `accounts/{accountId}/validate` path that returns a boolean `isValid` response for a provided
+    address.
 
 Relevant SS58 prefixes for this guide:
 
@@ -123,7 +120,7 @@ Extrinsics constitute information from the outside world and take on three forms
 
 As an infrastructure provider, you will deal almost exclusively with signed transactions. You will,
 however, see other extrinsics within the blocks that you decode. Find more information in the
-[Substrate documentation](https://docs.substrate.io/main-docs/build/tx-weights-fees/).
+[Substrate documentation](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#transactions-weights-and-fees).
 
 Inherent extrinsics are unsigned and contain information that is not provably true, but validators
 agree on based on some measure of reasonability. For example, a timestamp cannot be proved, but
@@ -165,13 +162,10 @@ immortal transaction. Always default to using a mortal extrinsic.
 
 ### Unique Identifiers for Extrinsics
 
-:::caution Transaction Hash is not a unique identifier
-
-The assumption that a transaction's hash is a unique identifier is the number one mistake that
-indexing services and custodians make. This error will cause major issues for your users. Make sure
-that you read this section carefully.
-
-:::
+!!!caution "Transaction Hash is not a unique identifier"
+    The assumption that a transaction's hash is a unique identifier is the number one mistake that
+    indexing services and custodians make. This error will cause major issues for your users. Make sure
+    that you read this section carefully.
 
 Many infrastructure providers on existing blockchains, e.g. Ethereum, consider a transaction's hash
 as a unique identifier. In Substrate-based chains like Polkadot, a transaction's hash only serves as
@@ -180,7 +174,7 @@ with the same hash are both valid. In the case that one is invalid, the network 
 transaction and does not charge a transaction fee to the sender nor consider the transaction in the
 block's fullness.
 
-Imagine this contrived example with a [reaped account](#existential-deposit). The first and last
+Imagine this contrived example with a [reaped account](../learn/learn-accounts.md#existential-deposit-and-reaping). The first and last
 transactions are identical, and both valid.
 
 | Index | Hash | Origin    | Nonce | Call                | Results                       |
@@ -254,7 +248,7 @@ interface is broken/not compatible.
 ## Smart Contracts
 
 The Polkadot relay chain does not support smart contracts, but a number of its parachains do,
-[see here for more.](./build-smart-contracts.md)
+[see here for more.](build-smart-contracts.md)
 
 ## Other F.A.Q.
 

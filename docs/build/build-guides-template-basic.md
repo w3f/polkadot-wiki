@@ -7,15 +7,12 @@ keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
 slug: ../build-guides-template-basic
 ---
 
-:::warning Not a production ready guide.
+!!!warning "Not a production ready guide."
+    This guide is considered a moving document and currently uses the **Paseo** testnet. This guide is
+    also applicable to the parachains on the Kusama relay chain, as coretime is also enabled there.
 
-This guide is considered a moving document and currently uses the **Paseo** testnet. This guide is
-also applicable to the parachains on the Kusama relay chain, as coretime is also enabled there.
-
-**This instructions on this guide are applicable for the Polkadot SDK repository with tag
-`polkadot-v1.15.1`**
-
-:::
+    **This instructions on this guide are applicable for the Polkadot SDK repository with tag
+    `polkadot-v1.15.1`**
 
 This guide aims to get you up and running with the basics of:
 
@@ -57,11 +54,8 @@ We can now move on to working with the template. Essential prerequisites are:
 2. **Rust**, its associated tooling, the nightly toolchain, and the `wasm32-unknown-unknown`
    compilation target.
 
-:::info Install dependencies
-
-Visit [the dependencies' installation](./build-guides-install-deps.md) page before starting.
-
-:::
+!!!info "Install dependencies"
+    Visit [the dependencies' installation](build-guides-install-deps.md) page before starting.
 
 This guide uses release
 [`polkadot-v1.15.1`](https://github.com/paritytech/polkadot-sdk/releases/tag/polkadot-v1.15.1), for
@@ -135,11 +129,8 @@ The patch JSON states that:
   collator with `--alice` later on.
 - `Alice` is the sudo key of our network.
 
-:::info Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId!
-
-This should be the same as the ID you reserved.
-
-:::
+!!!info "Make sure you replace `YOUR_PARA_ID_HERE` with your reserved ParaId!"
+    This should be the same as the ID you reserved.
 
 ```json
 {
@@ -180,7 +171,7 @@ This should be the same as the ID you reserved.
 ### Generating the chain specification
 
 > Ensure you have
-> the[ `chain-spec-builder`](./build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder)
+> the[ `chain-spec-builder`](build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder)
 > installed before following along!
 
 By now, you should have `patch.json` created and populated, and your `./target` folder should look
@@ -288,24 +279,21 @@ Within your project folder, you should now have two files:
 ## Running Your Collator
 
 > Make sure you have the
-> [`polkadot-parachain`](./build-guides-install-deps.md#installing-the-omninode) binary installed!
+> [`polkadot-parachain`](build-guides-install-deps.md#install-polkadot-parachain-and-chain-spec-builder) binary installed!
 
 Before you are able to connect your collator, you must sync the relay chain. Depending on your
 download speed, the time to sync may vary. In order to avoid storing the full state of the relay
 chain, be sure to run with the appropriate pruning flags (`blocks-pruning` and `state-pruning`):
 
-:::info Explaining `blocks-pruning` and `state-pruning`
+!!!info "Explaining `blocks-pruning` and `state-pruning`"
+    A Polkadot SDK-based node has two pruning modes:
 
-A Polkadot SDK-based node has two pruning modes:
+    - `blocks-pruning` - Prunes block bodies (the list of extrinsics in the block) from a specified
+      height (default: `256`)
+    - `state-pruning` - Prunes the overall state from a specified height
 
-- `blocks-pruning` - Prunes block bodies (the list of extrinsics in the block) from a specified
-  height (default: `256`)
-- `state-pruning` - Prunes the overall state from a specified height
-
-Both of these flags aid in reducing the amount of disk space taken up by the relay chain. Note that
-`state-pruning` is only used for the first initial sync for the database.
-
-:::
+    Both of these flags aid in reducing the amount of disk space taken up by the relay chain. Note that
+    `state-pruning` is only used for the first initial sync for the database.
 
 ```shell
 polkadot-parachain --collator \
@@ -390,22 +378,19 @@ for persistent block generation. For this assignment,
 [RegionX's CoreHub](https://app.regionx.tech/regions?network=paseo) will be used to purchase and
 assign cores.
 
-:::info Getting Coretime ROC
+!!!info "Getting Coretime ROC"
+    In the upper right, you will see two balances: one for the relay chain, and one for the coretime
+    chain. Before you can purchase a core, you need ROC on the coretime chain. RegionX includes a tool
+    for doing so:
 
-In the upper right, you will see two balances: one for the relay chain, and one for the coretime
-chain. Before you can purchase a core, you need ROC on the coretime chain. RegionX includes a tool
-for doing so:
+    1. Head to General > Cross Chain Transfer on the right, and transfer 10 ROC:
 
-1. Head to General > Cross Chain Transfer on the right, and transfer 10 ROC:
+    ![Region X cross chain transfer](../assets/coretime/regionx-cross-chain-roc.png)
 
-![Region X cross chain transfer](../assets/coretime/regionx-cross-chain-roc.png)
+    2. Sign the transaction with Polkadot-JS. If all goes well, you should see the balance update in the
+      upper right:
 
-2. Sign the transaction with Polkadot-JS. If all goes well, you should see the balance update in the
-   upper right:
-
-![Region X cross chain transfer](../assets/coretime/regionx-balance-change.png)
-
-:::
+    ![Region X cross chain transfer](../assets/coretime/regionx-balance-change.png)
 
 1. Connect your wallet and make sure you select **Paseo** as your network:
 
@@ -443,5 +428,5 @@ Now that you can launch a layer one blockchain, the possibilities are endless:
 
 - Setup a local development environment for your parachain
 - Create a pallet
-- [Take a look at the OpenZepplin template - which has a lot more pallets configured.](build-guides-coretime-start.md#openzepplin-templates--guides)
+- [Take a look at the OpenZepplin template - which has a lot more pallets configured.](build-guides-coretime-start.md#openzeppelin-templates--guides)
 - Upgrade your network

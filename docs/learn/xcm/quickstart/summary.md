@@ -15,7 +15,7 @@ The XCM code can be found in
 ## Rust & Cargo
 
 A pre-requisite for using XCM is to have a stable Rust version and Cargo installed. Here's an
-[installation guide](https://docs.substrate.io/install/).
+[installation guide](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/).
 
 ## Running the Examples
 

@@ -7,15 +7,21 @@ keywords: [council, vote, councillors]
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../learn-polkadot-opengov)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived. For up-to-date information about governance, see the
+    <a href="../learn-polkadot-opengov" target="_blank" rel="noopener noreferrer">
+      Polkadot OpenGov page.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
+[governance page](../../learn/archive/learn-governance.md#council). This guide will walk you through
 [governance page](../../learn/archive/learn-governance.md#council). This guide will walk you through
 voting for councillors in the elections.
 
@@ -26,23 +32,17 @@ an amount of 0.032 DOT (0.0001 KSM on Kusama) per vote. You can then bond whatev
 to put behind your vote. See the [democracy guide](./maintain-guides-democracy.md) for more
 information.
 
-:::warning
-
-If your balance is vesting, you cannot use unvested tokens for this lock. You will have to wait
-until you have at least that many **free** tokens to vote.
-
-:::
+!!!warning
+    If your balance is vesting, you cannot use unvested tokens for this lock. You will have to wait
+    until you have at least that many **free** tokens to vote.
 
 Like the validator elections, you can approve up to 16 different councillors and your vote will be
 equalized among the chosen group. Unlike validator elections, there is no unbonding period for your
 reserved tokens. Once you remove your vote, your tokens will be liquid again.
 
-:::warning
-
-It is your responsibility not to put your entire balance into the reserved value when you make a
-vote for councillors. It's best to keep _at least_ enough DOT/KSM to pay for transaction fees.
-
-:::
+!!!warning
+    It is your responsibility not to put your entire balance into the reserved value when you make a
+    vote for councillors. It's best to keep _at least_ enough DOT/KSM to pay for transaction fees.
 
 Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab.
 On the right side of the window there are two blue buttons, click on the one that says "Vote."

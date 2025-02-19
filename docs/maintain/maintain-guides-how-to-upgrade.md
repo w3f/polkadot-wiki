@@ -24,11 +24,8 @@ to allow for maintenance operations.
 The process can take several hours, so make sure you understand the instructions first and plan
 accordingly.
 
-:::tip Keep an eye out on new releases from the community
-
-Upgrade or downgrade accordingly.
-
-:::
+!!!tip "Keep an eye out on new releases from the community"
+   Upgrade or downgrade accordingly.
 
 ## Key Components
 

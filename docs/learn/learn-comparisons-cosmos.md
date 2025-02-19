@@ -175,18 +175,14 @@ Cosmos chains can be developed using the Cosmos SDK, written in Go. The Cosmos S
 modules (e.g. staking, governance, etc.) that can be included in a chain's STF. The SDK builds on
 top of Tendermint.
 
-The primary development framework for parachains is [Substrate](https://substrate.io), written in
+The primary development framework for parachains is [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate), written in
 Rust. Substrate comes with FRAME, a set of about 40 modules (called "pallets") to use in a chain's
 STF. Beyond simply using the pallets, Substrate adds a further layer of abstraction that allows
 developers to compose FRAME's pallets by adding custom modules and configuring the parameters and
 initial storage values for the chain.
 
-:::note Polkadot can support an STF written in any language
-
-So long as it compiles to its meta-protocol Wasm. Likewise, it could still use the Substrate client
-(database, RPC, networking, etc.); it only needs to implement the primitives at the interface.
-
-:::
+!!!note "Polkadot can support an STF written in any language"
+        So long as it compiles to its meta-protocol Wasm. Likewise, it could still use the Substrate client (database, RPC, networking, etc.); it only needs to implement the primitives at the interface.
 
 ## Conclusion
 

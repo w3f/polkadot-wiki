@@ -7,14 +7,8 @@ keywords: [coretime, blockspace, on-demand, parachain, parathread, cores]
 slug: ../learn-guides-coretime-marketplaces
 ---
 
-:::info
-
-If you aren't sure what Agile Coretime is, be sure to read the
-[introduction](./learn-agile-coretime.md),
-[terminology](./learn-agile-coretime.md#agile-coretime-terminology), and
-[FAQ](./learn-agile-coretime.md#agile-coretime-faq).
-
-:::
+!!!info
+    If you aren't sure what Agile Coretime is, be sure to read the [introduction](./learn-agile-coretime.md), [terminology](./learn-agile-coretime.md#agile-coretime-terminology), and [FAQ](./learn-agile-coretime.md#agile-coretime-faq).
 
 The tutorials in this document utilize:
 
@@ -23,11 +17,7 @@ The tutorials in this document utilize:
 
 - [Lastic](https://www.lastic.xyz/), a Coretime marketplace user interface.
 
-:::caution
-
-Both RegionX and Lastic are under active development and are released only for testing purposes.
-
-:::
+!!!caution Both RegionX and Lastic are under active development and are released only for testing purposes.
 
 ## RegionX
 

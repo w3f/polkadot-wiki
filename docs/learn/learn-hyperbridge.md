@@ -7,12 +7,8 @@ keywords: [bridge, polkadot, ethereum]
 slug: ../learn-hyperbridge
 ---
 
-:::info Learn about Parachain and Bridges
-
-To follow the material on this page, it is recommended to be familiar with the concepts of
-[Parachains](./learn-parachains) and [Bridges](./learn-bridges.md).
-
-:::
+!!!info "Learn about Parachain and Bridges"
+    To follow the material on this page, it is recommended to be familiar with the concepts of [Parachains](./learn-parachains.md) and [Bridges](./learn-bridges.md).
 
 Interoperability is the core vision of the Polkadot technology. Through years of blockchain
 development, much effort has been put into making a secure interoperability solution between

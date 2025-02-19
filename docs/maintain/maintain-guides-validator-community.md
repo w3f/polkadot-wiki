@@ -9,7 +9,7 @@ slug: ../maintain-guides-validator-community
 
 ## Building a Community and Attracting Nominations
 
-After [setting up a validator](maintain-guides-how-to-validate-Polkadot), nominations will only come
+After [setting up a validator](./maintain-guides-how-to-validate-polkadot.md), nominations will only come
 in with extra work. The community of nominators will need to know about the validator to trust
 staking with them, and thus the validator must distinguish themselves to attract nominations. The
 following gives some general guidance on different approaches to building a community and attracting
@@ -40,24 +40,24 @@ channels.
 
 ### Setting Identity
 
-All validators should set an on-chain [identity](../learn/learn-identity.md#setting-an-identity) and
+All validators should set an on-chain [identity](../learn/learn-guides-identity.md#setting-an-identity) and
 get a judgement on the identity so that nominators can find nodes when browsing through various
 dashboards and UIs. When someone interacts with the chain, it ensures that an address they may come
 across belongs to the validator, and actions of that identity throughout various parts of the
 ecosystem (staking, governance, block explorers, etc.) form a cohesive representation of their
 participation.
 
-:::note When running multiple validator nodes, the best way to scale an identity is to use multiple
-sub-identities from a single verified identity
-
-:::
+!!!note
+    When running multiple validator nodes, the best way to scale an identity is to use multiple
+    sub-identities from a single verified identity
 
 It's recommended to fill out as many fields in the identity as possible so Nominators have ample
 means of reaching out. Nominators may wish to know more about the Validator, the particular setup,
 future staking plans, tooling used, or several additional topics. Having a dedicated website
 additionally to provide this sort of information is ideal.
 
-:::note Ledger app on **Nano S** doesn't support the extrinsic for setting identity yet
+!!!note
+    Ledger app on **Nano S** doesn't support the extrinsic for setting identity yet.
 
 ### Website
 

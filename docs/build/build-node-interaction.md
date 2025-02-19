@@ -49,9 +49,9 @@ echo '{"id":1,"jsonrpc":"2.0","method":"chain_getBlock","params":["0x7d4ef171d48
 ```
 
 Some return values may not appear meaningful at first glance. Polkadot uses
-[SCALE encoding](https://docs.substrate.io/reference/scale-codec/) as a format that is suitable for
+[SCALE encoding](https://docs.polkadot.com/polkadot-protocol/basics/data-encoding/#scale-codec) as a format that is suitable for
 resource-constrained execution environments. You will need to decode the information and use the
-chain [metadata](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata)
+chain [metadata](https://docs.polkadot.com/polkadot-protocol/basics/chain-data/#metadata-format)
 (`state_getMetadata`) to obtain human-readable information.
 
 ### Tracking the Chain Head
@@ -75,7 +75,7 @@ staking rewards for an address, submit transactions to a node's transaction queu
 [much more](https://paritytech.github.io/substrate-api-sidecar/dist/).
 
 The client runs on an HTTP host. The following examples use python3, but you can query any way you
-prefer at `https://HOST:PORT/`. The default is `https://127.0.0.1:8080`.
+prefer at `http://HOST:PORT/`. The default is `http://127.0.0.1:8080`.
 
 ### Fetching a Block
 
@@ -85,7 +85,7 @@ Fetch a block using the `block/number` endpoint. To get the chain tip, omit the 
 import requests
 import json
 
-url = 'https://127.0.0.1:8080/blocks/7409038'
+url = 'http://127.0.0.1:8080/blocks/7409038'
 response = requests.get(url)
 if response.ok:
 	block_info = json.loads(response.text)
@@ -99,15 +99,12 @@ In the `balances.transfer` extrinsic, the `partialFee` item is the transaction f
 Notice that some extrinsics do not have a signature. These are
 [inherents](build-protocol-info.md#extrinsics).
 
-:::info Tracking transaction fees
-
-When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining if
-the extrinsic had a fee. This field only means that it would require a fee if submitted as a
-transaction. In order to charge a fee, a transaction also needs to be signed. So in the following
-example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the
-block by the block author.
-
-:::
+!!!info "Tracking transaction fees"
+   When tracking transaction fees, the `extrinsics.paysFee` value is not sufficient for determining if
+   the extrinsic had a fee. This field only means that it would require a fee if submitted as a
+   transaction. In order to charge a fee, a transaction also needs to be signed. So in the following
+   example, the `timestamp.set` extrinsic does not pay a fee because it is an _inherent,_ put in the
+   block by the block author.
 
 ```python
 {
@@ -391,12 +388,9 @@ block by the block author.
 }
 ```
 
-:::info The JS number type is a 53 bit precision float
-
-There is no guarantee that the numerical values in the response will have a numerical type. Any
-numbers larger than `2**53-1` will have a string type.
-
-:::
+!!!info "The JS number type is a 53 bit precision float"
+   There is no guarantee that the numerical values in the response will have a numerical type. Any
+   numbers larger than `2**53-1` will have a string type.
 
 ### Submitting a Transaction
 
@@ -406,7 +400,7 @@ Submit a serialized transaction using the `transaction` endpoint with an HTTP PO
 import requests
 import json
 
-url = 'https://127.0.0.1:8080/transaction/'
+url = 'http://127.0.0.1:8080/transaction/'
 tx_headers = {'Content-type' : 'application/json', 'Accept' : 'text/plain'}
 response = requests.post(
 	url,

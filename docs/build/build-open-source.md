@@ -9,11 +9,8 @@ slug: ../build-open-source
 
 # Open Source Polkadot Stack <!-- omit in toc -->
 
-:::caution Do your research before using open-source tools
-
-The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
-
-:::
+!!!caution "Do your research before using open-source tools"
+    The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
 
 This page aims to provide an overview of the open-source Polkadot Tech Stack.
 
@@ -22,21 +19,6 @@ it. [**Please feel free to make edits and additions via pull requests**](#contri
 apologize if we missed your project!
 
 ---
-
-- [About](#about)
-- [Layers of Polkadot Stack](#layers-of-polkadot-stack)
-  - [Wallets](#wallets)  
-  - [User Interface](#user-interface)
-  - [Tools, APIs, and Languages](#tools-apis-and-languages)
-  - [ink! Smart Contracts](#ink-smart-contracts)
-  - [Chains and Pallets](#chains-and-pallets)
-  - [Host](#host)
-  - [Network Maintenance Tools](#network-maintenance-tools)
-  - [Signatures](#signatures)
-  - [Consensus](#consensus)
-  - [Networking](#networking)
-  - [Primitives](#primitives)
-- [Contributing](#contributing)
 
 ## About
 
@@ -140,7 +122,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Local Nodes         | [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) 🟡, [Swanky](https://github.com/swankyhub/swanky-cli) ⚪|                                    |
 | Smart Contract Development | [DRink!](https://github.com/Cardinal-Cryptography/drink) 🟡, [contracts-ui](https://github.com/paritytech/contracts-ui) ⚪, [SmartBeaver](https://github.com/Smart-Beaver), [OpenBrush](https://github.com/h4nsu/openbrush-contracts) :grey_question:, [Sol2Ink](https://github.com/727-Ventures/sol2ink) ⚪, [Polkadot Contract Wizard](https://github.com/protofire/polkadot-contract-wizard) ⚪, [ink-wrapper](https://github.com/Cardinal-Cryptography/ink-wrapper) ⚪, [ink-playground](https://github.com/paritytech/ink-playground) ⚪, [ink! Remix Plugin](https://github.com/blockchain-it-hr/ink-remix-plugin) ⚪, [Signac](https://github.com/standardweb3/signac/) ⚪, [ink!-boxes](https://github.com/avirajkhare00/ink-boxes/) ⚪, [ink!-smart-contract-wizard](https://github.com/avirajkhare00/ink-wizard) ⚪|
 | Security & Testing         | [ink! Waterfall](https://github.com/paritytech/ink-waterfall) ⚪, [Verifier Image for ink!](https://github.com/web3labs/ink-verifier-image) ⚪, [Patron](https://github.com/Brushfam/patron-backend/) ⚪, [Inkscope Fuzzer](https://github.com/inkscopexyz/inkscope-fuzzer) ⚪|                                    |
-| Frontend Development         | [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) 🟡, [useink](https://github.com/paritytech/useink) ⚪, [useInkathon](https://github.com/scio-labs/use-inkathon) 🟡, [ink-typegen](https://github.com/subsquid/squid-sdk/tree/master/substrate/ink-typegen) 🟢, [Typechain Polkadot](https://github.com/Brushfam/typechain-polkadot) ⚪|                                    |
+| Frontend Development         | [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) 🟡, [useink](https://github.com/paritytech/useink) ⚪, [useInkathon](https://github.com/scio-labs/use-inkathon) 🟡, [ink-typegen](https://github.com/subsquid/squid-sdk/tree/master/substrate/ink-typegen) 🟢, [Typechain Polkadot](https://github.com/Brushfam/typechain-polkadot) ⚪, [Typink!](https://github.com/dedotdev/typink) 🟢|                                    |
 | IDE Plugins         | [ink! Analyzer](https://github.com/ink-analyzer/ink-analyzer) 🟢|                                    |
 | Bridges         | [Dante Protocol](https://github.com/dantenetwork/protocol-stack-for-ink) ⚪|                                    |
 | DeFi            | [Pendulum-Ink-Wrapper](https://github.com/pendulum-chain/pendulum-ink-wrapper) ⚪, [Panorama Swap](https://github.com/RottenKiwi/Panorama-Swap-INK-SC) ⚪, [ink_bank](https://github.com/Juminstock/ink_bank) ⚪, [Polkadot AMM](https://github.com/realnimish/polkadot-amm) ⚪, [Vera](https://github.com/veradefi/defi) ⚪, [Nsure Insurance](https://github.com/nsure-tech/dot-contract) :grey_question:, [Everlasting Cash](https://github.com/CycanTech/ELC) ⚪, [Coinversation](https://github.com/Coinversation/coinpro) ⚪, [zenlink-dex-contract](https://github.com/zenlinkpro/zenlink-dex-contract) ⚪, [AlgoCash](https://github.com/ReserveLabs/AlgoCash) ⚪| New seigniorage-style stable coins |
@@ -180,8 +162,8 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | File Storage, Cloud             | [Subsocial-Offchain](https://github.com/dappforce/subsocial-offchain) ⚪, [DatDot](https://github.com/playproject-io/datdot) ⚪, [Crust Network](https://github.com/crustio/crust) 🟢, [offchain::ipfs](https://github.com/rs-ipfs/offchain-ipfs-manual) ⚪, [Canyon Network](https://github.com/canyon-network/canyon) ⚪, [CESS](https://github.com/Cumulus2021/cess) 🟢, [CESS Proving Subsystem](https://github.com/CESSProject/cess-proving-system) :grey_question:, [Iris](https://github.com/ideal-lab5/iris) ⚪, [fmd-cess](https://github.com/CESSProject/fmd-cess) ⚪, [IPFS Frame V3](https://github.com/DanHenton/pocket-substrate/tree/ipfs-ocw) ⚪, [Threefold Chain](https://github.com/threefoldtech/tfchain) 🟡, [Apron](https://github.com/Apron-Network/apron-node) ⚪, [IPFS Utilities](https://github.com/TDSoftware/substrate-ipfs) ⚪, [DINFRA](https://gitlab.com/dinfra/dinfra) 🟢|
 | Name Service                    | [Substrate Names](https://github.com/xaya/substrate-names) ⚪, [ENS on Substrate](https://github.com/hskang9/substrate-name-service) ⚪, [PNS-Pallets](https://github.com/pnsproject/pns-pallets) ⚪, [Faceless](https://github.com/HeisenbergLin22/Faceless_milestone2_delivery) ⚪, [Anchor](https://github.com/ff13dfly/Anchor) ⚪|
 | Gaming                          | [Bit.country](https://github.com/bit-country/Bit-Country-Blockchain) 🟢, [SubGame](https://github.com/SubGame-Network/subgame-network) ⚪, [subzero](https://github.com/playzero/subzero) ⚪, [Web3Games](https://github.com/web3gamesofficial/web3games-blockchain) ⚪, [Ajuna Pallets](https://github.com/ajuna-network/ajuna-pallets) 🟢, [Gafi Network](https://github.com/cryptoviet/gafi) ⚪, [Asylum](https://gitlab.com/asylum-space/asylum-item-nft) 🟢, [3DPass](https://github.com/3Dpass/3DP) 🟡, [Polket](https://github.com/polketio/toearnfun_flutter_app) ⚪|
-| Computation/AI                  | [Deitos Network](https://github.com/Deitos-Network/deitos-ip) ⚪, [DeepBrain Chain](https://github.com/DeepBrainChain/DeepBrainChain-MainChain) 🟢, [AI Infrastructure on Blockchain](https://github.com/anudit/cerebrum) ⚪, [NeuroWeb](https://github.com/OriginTrail/neuroweb) ⚪, [Infimum](https://github.com/w3f/Grant-Milestone-Delivery/blob/master/evaluations/infimum_2_keeganquigley.md) 🟢|
-| Enable specific use-cases       | [pallet-hookpoints](https://github.com/deep-ink-ventures/pallet_hookpoints) ⚪, [Robonomics](https://github.com/airalab/substrate-node-robonomics) 🟢, [UniversalDOT](https://github.com/UniversalDot/pallets) ⚪, [Evercity Sustainable Finance Protocol](https://github.com/EvercityEcosystem/evercity-chain) ⚪, [logion](https://github.com/logion-network/logion-node) ⚪, [Me Protocol](https://github.com/Me-Protocol/rusty-protocol-v0.1/) ⚪, [QSTN](https://github.com/QSTN-US/Polkadot-QSTN-v1/) ⚪, [Subcoin](https://github.com/subcoin-project/subcoin) 🟢, [Aventus](https://github.com/AventusProtocolFoundation/avn-parachain) 🟢|
+| Computation/AI                  | [Deitos Network](https://github.com/Deitos-Network/deitos-ip) ⚪, [DeepBrain Chain](https://github.com/DeepBrainChain/DeepBrainChain-MainChain) 🟢, [AI Infrastructure on Blockchain](https://github.com/anudit/cerebrum) ⚪, [NeuroWeb](https://github.com/OriginTrail/neuroweb) ⚪, [Infimum](https://github.com/rhysbalevicius/infimum) 🟡|
+| Enable specific use-cases       | [pallet-hookpoints](https://github.com/deep-ink-ventures/pallet_hookpoints) ⚪, [Robonomics](https://github.com/airalab/substrate-node-robonomics) 🟢, [UniversalDOT](https://github.com/UniversalDot/pallets) ⚪, [Evercity Sustainable Finance Protocol](https://github.com/EvercityEcosystem/evercity-chain) ⚪, [logion](https://github.com/logion-network/logion-node) ⚪, [Me Protocol](https://github.com/Me-Protocol/rusty-protocol-v0.1/) ⚪, [QSTN](https://github.com/QSTN-US/Polkadot-QSTN-v1/) ⚪, [Subcoin](https://github.com/subcoin-project/subcoin) 🟢, [Aventus](https://github.com/AventusProtocolFoundation/avn-parachain) 🟢, [Frontier POS template](https://github.com/ChainSupport/frontier-pos-template) 🟢|
 | NFT                             | [ternoa](https://github.com/capsule-corp-ternoa/chain) ⚪, [FRAME Pallet: NFTs for Substrate](https://github.com/danforbes/pallet-nft) ⚪, [Unique NFT Parachain](https://github.com/UniqueNetwork/unique-chain) ⚪, [DNFT](https://github.com/DNFT-Team/dnft-substrate-node/tree/master/pallets) ⚪, [RMRK-Substrate](https://github.com/rmrk-team/rmrk-substrate) ⚪, [NT-NFTs](https://github.com/Popular-Coding/nt-nft) ⚪, [Green Lemon](https://github.com/GreenLemonProtocol/dksap-polkadot) ⚪, [Basilisk](https://github.com/galacticcouncil/Basilisk-node) 🟢, [LAOS](https://github.com/freeverseio/laos) 🟢|
 | Randomness                      | [DKG and Randomness Beacon](https://github.com/Cardinal-Cryptography/substrate/tree/randomness-beacon) ⚪, [drand-substrate-client](https://github.com/random-meat/drand-substrate-client) ⚪|
 | Licensing                       | [Anagolay Network](https://github.com/anagolay/anagolay-chain) :grey_question:|

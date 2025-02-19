@@ -7,12 +7,8 @@ keywords: [collator, maintain, full node, block candidate]
 slug: ../learn-collator
 ---
 
-:::info
-
-This page provides a general overview of the role of collators' in the Polkadot ecosystem. For more
-detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
-
-:::
+!!!info
+    This page provides a general overview of the role of collators' in the Polkadot ecosystem. For more detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 ## Collators' Role
 
@@ -85,13 +81,13 @@ Parity team built the
 [Cumulus library](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) to address this.
 Collators are being used on the [Paseo](../build/build-parachains.md#testing-a-parachain) testnet,
 and you can learn more about how they are used with Cumulus via the
-[Cumulus](hhttps://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html)
+[Cumulus](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/polkadot_sdk/cumulus/index.html)
 Rust documentation. More information can be found under the
-[Cumulus section](../build/build-parachains.md###cumulus) on the build parachain page.
+[Cumulus section](../build/build-parachains.md#cumulus) on the build parachain page.
 
 ## Guides and Tools
 
-- [Tutorial covering Cumulus and Collators](https://docs.substrate.io/reference/how-to-guides/parachains/connect-to-a-relay-chain/)
+- [Tutorial covering Cumulus and Collators](https://docs.polkadot.com/develop/toolkit/parachains/spawn-chains/zombienet/get-started/)
 - [Paseo testnet guide](../build/build-parachains.md#testing-a-parachain)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a
   local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.

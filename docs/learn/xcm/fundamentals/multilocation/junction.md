@@ -9,7 +9,7 @@ slug: ../multilocation-junctions
 
 # Junction(s)
 
-In the section on [MultiLocations](index.html), we looked at the MultiLocation struct. We talked
+In the section on [MultiLocations](../multilocation/summary.md), we looked at the MultiLocation struct. We talked
 about the Multilocation being a way to describe moving from one place in the system hierarchy to
 another. The `parents` parameter expresses the number of steps up in the hierarchy. In this section,
 we dive further into the MultiLocation struct and explain how we can use the Junctions type to

@@ -7,17 +7,13 @@ keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
 slug: ../learn-xcm-pallet
 ---
 
-:::info XCM Documentation
-
-For a more practical approach to utilizing XCM, refer to the [XCM Docs](./learn/xcm). Please keep in
-mind that XCM is under active development.
-
-:::
+!!!info "XCM Documentation"
+    For a more practical approach to utilizing XCM, refer to the [XCM Docs](./xcm/overview/intro.md). Please keep in mind that XCM is under active development.
 
 The XCM pallet
 ([`pallet-xcm`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs))
 provides a set of pre-defined, commonly used XCVM programs in the form of a set of extrinsics using
-[FRAME](https://docs.substrate.io/reference/frame-pallets/).
+[FRAME](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#frame).
 
 This pallet provides some default implementations for traits required by `XcmConfig`. The XCM
 executor is also included as an associated type within the pallet's configuration.
@@ -26,13 +22,8 @@ Where the XCM format defines a set of instructions used to construct XCVM progra
 defines a set of extrinsics that can be utilized to build XCVM programs, either to target the local
 or external chains. `pallet-xcm`'s functionality is separated into three categories:
 
-:::note
-
-Remember, all XCMs are XCVM programs that follow
-[the XCM format](https://github.com/paritytech/xcm-format). It is the job of the XCM executor is to
-handle and execute these programs.
-
-:::
+!!!note
+      Remember, all XCMs are XCVM programs that follow [the XCM format](https://github.com/paritytech/xcm-format). It is the job of the XCM executor is to handle and execute these programs.
 
 1. Primitive, dispatchable functions to locally execute an XCM.
 2. High-level, dispatchable functions for asset transfers.
@@ -56,16 +47,10 @@ programs as dispatchable functions within the pallet.
    `execute`, the executor is not called locally, as the execution will occur on the destination
    chain.
 
-:::info
-
-The XCM pallet needs the `XcmRouter` to send XCMs. It is used to dictate where XCMs are allowed to
-be sent, and which XCM transport protocol to use. For example, Kusama, the canary network, uses the
-`ChildParachainRouter` which only allows for Downward Message Passing from the relay to parachains
-to occur.
+!!!info
+    The XCM pallet needs the `XcmRouter` to send XCMs. It is used to dictate where XCMs are allowed to be sent, and which XCM transport protocol to use. For example, Kusama, the canary network, uses the `ChildParachainRouter` which only allows for Downward Message Passing from the relay to parachains to occur.
 
 You can read more about [XCM transport protocols here](./learn-xcm-transport.md).
-
-:::
 
 ## Asset Transfer Extrinsics
 
@@ -104,13 +89,8 @@ While both extrinsics deal with transferring assets, they exhibit fundamentally 
   It's worth noting that this means that some other mechanism is needed to ensure that the balance
   on the destination does not exceed the amount being held in reserve chain.
 
-:::info
-
-A sovereign account refers to an account within a particular consensus system. Even though accounts
-may be different in terms of factors such as an address format, XCM agnostic nature enables
-communication between these sovereign accounts that are in other consensus systems.
-
-:::
+!!!info
+    A sovereign account refers to an account within a particular consensus system. Even though accounts may be different in terms of factors such as an address format, XCM agnostic nature enables communication between these sovereign accounts that are in other consensus systems.
 
 ## Version Negotiation Extrinsics
 

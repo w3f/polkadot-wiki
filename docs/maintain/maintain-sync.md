@@ -7,17 +7,13 @@ keywords: [node, full node, sync, setup node]
 slug: ../maintain-sync
 ---
 
-import Tabs from "@theme/Tabs";
-
-import TabItem from "@theme/TabItem";
-
 If you're building dApps or products on a Substrate-based chain like Polkadot, Kusama, or a custom
 Substrate implementation, you want the ability to run a node-as-a-back-end. After all, relying on
 your infrastructure is always better than a third-party-hosted one in this brave new decentralized
 world.
 
 This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
-same process applies to any other [Substrate](https://substrate.io)-based chain. First, let's
+same process applies to any other [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate)-based chain. First, let's
 clarify the term _full node_.
 
 ### Types of Nodes
@@ -35,12 +31,9 @@ a particular block was or which extrinsics resulted in a specific state change a
 when using an archive node. However, an archive node takes up a lot of disk space - around Kusama's
 12 millionth block, this was around 660 GB.
 
-:::tip
-
-On the [Paranodes](https://paranodes.io/DBSize) or [Stakeworld](https://stakeworld.io/docs/dbsize)
-websites, you can find lists of the database sizes of Polkadot and Kusama nodes.
-
-:::
+!!!tip
+    On the [Paranodes](https://paranodes.io/DBSize) or [Stakeworld](https://stakeworld.io/docs/dbsize)
+    websites, you can find lists of the database sizes of Polkadot and Kusama nodes.
 
 Archive nodes are used by utilities that need past information - like block explorers, council
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
@@ -67,16 +60,13 @@ light nodes is a browser extension, which is a node in its own right, running th
 format, as well as a full or light node that is completely encapsulated in WASM and can be
 integrated into web apps: https://github.com/smol-dot/smoldot.
 
-:::note Substrate Connect
-
-[Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with
-substrate-based blockchains in the browser without using an RPC server. It is a light node that runs
-entirely in Javascript. Substrate Connect uses a
-[smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the
-blockchain network without relying on specific 3rd parties. Substrate Connect is available on Chrome
-and Firefox as a [browser extension](https://substrate.io/developers/substrate-connect/).
-
-:::
+!!!note "Substrate Connect"
+    [Substrate Connect](https://github.com/paritytech/substrate-connect) provides a way to interact with
+    substrate-based blockchains in the browser without using an RPC server. It is a light node that runs
+    entirely in Javascript. Substrate Connect uses a
+    [smoldot WASM light client](https://github.com/paritytech/smoldot) to securely connect to the
+    blockchain network without relying on specific 3rd parties. Substrate Connect is available on Chrome
+    and Firefox as a [browser extension](https://chromewebstore.google.com/detail/substrate-connect-extensi/khccbhhbocaaklceanjginbdheafklai).
 
 <!--separates content from instructions-->
 
@@ -89,247 +79,227 @@ and Firefox as a [browser extension](https://substrate.io/developers/substrate-c
 This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
-:::note The bash commands that are provided to run against **your node** use `Polkadot` as the
-default chain
+!!!note "The bash commands that are provided to run against **your node** use `Polkadot` as the
+default chain"
+    Use the `--chain` flag if you follow the setup instructions to setup a `Kusama` node. For example:
 
-Use the `--chain` flag if you follow the setup instructions to setup a `Kusama` node. For example:
+    ```bash
+    ./target/release/polkadot --name "Your Node's Name" --chain kusama
+    ```
 
-```bash
-./target/release/polkadot --name "Your Node's Name" --chain kusama
-```
+=== "macOS"
 
-:::
+    - Install Homebrew within the terminal by running:
+      ```bash
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+      ```
+    - Then, run:
 
-<Tabs groupId="operating-systems" values={[ {label: 'macOS', value: 'mac'}, {label: 'Windows',
-value: 'win'}, {label: 'Linux (standalone)', value: 'linux-standalone'}, {label: 'Linux (package)',
-value: 'linux-package'} ]}>
+      ```bash
+      brew install openssl cmake llvm protobuf
+      ```
 
-<TabItem value="mac">
+    - Install Rust by running:
+      ```bash
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      ```
+    - After Rust is installed, update and add the nightly version:
 
-- Install Homebrew within the terminal by running:
-  ```bash
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  ```
-- Then, run:
+      ```bash
+      # Ensure the current shell has cargo
+      source ~/.cargo/env
 
-  ```bash
-  brew install openssl cmake llvm protobuf
-  ```
+      # Update the Rust toolchain
+      rustup default stable
+      rustup update
 
-- Install Rust by running:
-  ```bash
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  ```
-- After Rust is installed, update and add the nightly version:
+      # Add the nightly and WebAssembly targets:
+      rustup update nightly
+      rustup target add wasm32-unknown-unknown --toolchain nightly
+      ```
 
-  ```bash
-  # Ensure the current shell has cargo
-  source ~/.cargo/env
+    - Verify your installation by running the following:
 
-  # Update the Rust toolchain
-  rustup default stable
-  rustup update
+      ```bash
+      rustup show
 
-  # Add the nightly and WebAssembly targets:
-  rustup update nightly
-  rustup target add wasm32-unknown-unknown --toolchain nightly
-  ```
+      # You should see output similar to:
 
-- Verify your installation by running the following:
+      active toolchain
+      ----------------
 
-  ```bash
-  rustup show
+      stable-aarch64-apple-darwin (default)
+      rustc 1.68.1 (8460ca823 2023-03-20)
+      ```
 
-  # You should see output similar to:
+      ```bash
+      rustup +nightly show
 
-  active toolchain
-  ----------------
+      # You should see output similar to:
 
-  stable-aarch64-apple-darwin (default)
-  rustc 1.68.1 (8460ca823 2023-03-20)
-  ```
+      installed targets for active toolchain
+      --------------------------------------
 
-  ```bash
-  rustup +nightly show
+      aarch64-apple-darwin
+      wasm32-unknown-unknown
 
-  # You should see output similar to:
+      active toolchain
+      ----------------
 
-  installed targets for active toolchain
-  --------------------------------------
+      nightly-aarch64-apple-darwin (overridden by +toolchain on the command line)
+      rustc 1.71.0-nightly (9ecda8de8 2023-04-30)
+      ```
 
-  aarch64-apple-darwin
-  wasm32-unknown-unknown
+    - Once Rust is configured, run the following command to clone and build the Polkadot code:
+      ```bash
+      git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
+      cd polkadot-sdk
+      ./scripts/getting-started.sh
+      cargo build --release
+      ```
+    - Start your node:
 
-  active toolchain
-  ----------------
+      ```bash
+      ./target/release/polkadot --name "Your Node's Name"
+      ```
 
-  nightly-aarch64-apple-darwin (overridden by +toolchain on the command line)
-  rustc 1.71.0-nightly (9ecda8de8 2023-04-30)
-  ```
+    - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
 
-- Once Rust is configured, run the following command to clone and build the Polkadot code:
-  ```bash
-  git clone https://github.com/paritytech/polkadot-sdk polkadot-sdk
-  cd polkadot-sdk
-  ./scripts/getting-started.sh
-  cargo build --release
-  ```
-- Start your node:
+=== "Windows"
+    - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+    - Install [Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (same webpage).
 
-  ```bash
-  ./target/release/polkadot --name "Your Node's Name"
-  ```
+    - Determine the latest version of the
+      [Polkadot binary](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/releases).
+    - Download the correct Polkadot binary within Ubuntu by running the following command. Replace
+      `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
-- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+      ```bash
+      curl -sL https://github.com/paritytech/polkadot-sdk/releases/download/*VERSION*/polkadot -o polkadot
+      ```
 
-</TabItem>
-<TabItem value="win">
+    - Then, run the following:
+      ```bash
+      sudo chmod +x polkadot
+      ```
+    - Start your node:
 
-- Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-- Install [Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (same webpage).
+      ```bash
+      ./polkadot --name "Your Node's Name"
+      ```
 
-- Determine the latest version of the
-  [Polkadot binary](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot/releases).
-- Download the correct Polkadot binary within Ubuntu by running the following command. Replace
-  `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
+    - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
 
-  ```bash
-  curl -sL https://github.com/paritytech/polkadot-sdk/releases/download/*VERSION*/polkadot -o polkadot
-  ```
 
-- Then, run the following:
-  ```bash
-  sudo chmod +x polkadot
-  ```
-- Start your node:
+=== "Linux (standalone)"
+    - Determine the latest version of the
+      [Polkadot binary](https://github.com/paritytech/polkadot-sdk/releases).
 
-  ```bash
-  ./polkadot --name "Your Node's Name"
-  ```
+    !!!info
+        The nature of pre-built binaries means that they may not work on your particular architecture or
+        Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it
+        likely means the binary is not compatible with your system. You will either need to compile the
+        [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
 
-- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+    - Download the correct Polkadot binary within Ubuntu by running the following command. Replace
+      `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
-</TabItem>
-<TabItem value="linux-standalone">
+      ```bash
+      curl -sL https://github.com/paritytech/polkadot-sdk/releases/download/*VERSION*/polkadot -o polkadot
+      ```
 
-- Determine the latest version of the
-  [Polkadot binary](https://github.com/paritytech/polkadot-sdk/releases).
+    - Run the following: `sudo chmod +x polkadot`
+    - Run the following:
 
-  :::info
+      ```bash
+      ./target/release/polkadot --name "Your Node's Name"
+      ```
 
-  The nature of pre-built binaries means that they may not work on your particular architecture or
-  Linux distribution. If you see an error like `cannot execute binary file: Exec format error` it
-  likely means the binary is not compatible with your system. You will either need to compile the
-  [**source code**](#clone-and-build) or use [**Docker**](#using-docker).
+    - Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
 
-  :::
+=== "Linux (package)"
 
-- Download the correct Polkadot binary within Ubuntu by running the following command. Replace
-  `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
+    You can also install Polkadot from one of our package repositories.
 
-  ```bash
-  curl -sL https://github.com/paritytech/polkadot-sdk/releases/download/*VERSION*/polkadot -o polkadot
-  ```
+    Installation from the Debian or rpm repositories will create a `systemd` service that can be used to
+    run a Polkadot node. The service is disabled by default, and can be started by running
+    `systemctl start polkadot` on demand (use `systemctl enable polkadot` to make it auto-start after
+    reboot). By default, it will run as the `polkadot` user. Command-line flags passed to the binary can
+    be customized by editing `/etc/default/polkadot`. This file will not be overwritten on updating
+    polkadot.
 
-- Run the following: `sudo chmod +x polkadot`
-- Run the following:
+    ### Debian-based (Debian, Ubuntu)
 
-  ```bash
-  ./target/release/polkadot --name "Your Node's Name"
-  ```
+    Currently supports Debian 10 (Buster) and Ubuntu 20.04 (Focal), and derivatives. Run the following
+    commands as the `root` user.
 
-- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+    ```bash
+    # Import the security@parity.io GPG key
+    gpg --recv-keys --keyserver hkps://keys.mailvelope.com 9D4B2B6EB8F97156D19669A9FF0812D491B96798
+    gpg --export 9D4B2B6EB8F97156D19669A9FF0812D491B96798 > /usr/share/keyrings/parity.gpg
+    # Add the Parity repository and update the package index
+    echo 'deb [signed-by=/usr/share/keyrings/parity.gpg] https://releases.parity.io/deb release main' > /etc/apt/sources.list.d/parity.list
+    apt update
+    # Install the `parity-keyring` package - This will ensure the GPG key
+    # used by APT remains up-to-date
+    apt install parity-keyring
+    # Install polkadot
+    apt install polkadot
 
-</TabItem>
-<TabItem value="linux-package">
+    ```
 
-You can also install Polkadot from one of our package repositories.
+    If you don't want polkadot package to be automatically updated when you update packages on your
+    server, you can issue the following command:
 
-Installation from the Debian or rpm repositories will create a `systemd` service that can be used to
-run a Polkadot node. The service is disabled by default, and can be started by running
-`systemctl start polkadot` on demand (use `systemctl enable polkadot` to make it auto-start after
-reboot). By default, it will run as the `polkadot` user. Command-line flags passed to the binary can
-be customized by editing `/etc/default/polkadot`. This file will not be overwritten on updating
-polkadot.
+    ```bash
+    sudo apt-mark hold polkadot
+    ```
 
-### Debian-based (Debian, Ubuntu)
+    ### RPM-based (Fedora, CentOS)
 
-Currently supports Debian 10 (Buster) and Ubuntu 20.04 (Focal), and derivatives. Run the following
-commands as the `root` user.
+    Currently supports Fedora 32 and CentOS 8, and derivatives.
 
-```bash
-# Import the security@parity.io GPG key
-gpg --recv-keys --keyserver hkps://keys.mailvelope.com 9D4B2B6EB8F97156D19669A9FF0812D491B96798
-gpg --export 9D4B2B6EB8F97156D19669A9FF0812D491B96798 > /usr/share/keyrings/parity.gpg
-# Add the Parity repository and update the package index
-echo 'deb [signed-by=/usr/share/keyrings/parity.gpg] https://releases.parity.io/deb release main' > /etc/apt/sources.list.d/parity.list
-apt update
-# Install the `parity-keyring` package - This will ensure the GPG key
-# used by APT remains up-to-date
-apt install parity-keyring
-# Install polkadot
-apt install polkadot
+    ```bash
+    # Install dnf-plugins-core (This might already be installed)
+    dnf install dnf-plugins-core
+    # Add the repository and enable it
+    dnf config-manager --add-repo https://releases.parity.io/rpm/polkadot.repo
+    dnf config-manager --set-enabled polkadot
+    # Install polkadot (You may have to confirm the import of the GPG key, which
+    # should have the following fingerprint: 9D4B2B6EB8F97156D19669A9FF0812D491B96798)
+    dnf install polkadot
+    ```
 
-```
+    !!!info
+        If you choose to use a custom folder for the polkadot home by passing `--base-path '/custom-path'`,
+        you will need to issue following command:
 
-If you don't want polkadot package to be automatically updated when you update packages on your
-server, you can issue the following command:
+        ```bash
+        sudo mkdir /etc/systemd/system/polkadot.service.d
+        ```
 
-```bash
-sudo apt-mark hold polkadot
-```
+        And create a new file inside this folder:
 
-### RPM-based (Fedora, CentOS)
+        ```bash
+        sudo -e /etc/systemd/system/polkadot.service.d/custom.conf
+        ```
 
-Currently supports Fedora 32 and CentOS 8, and derivatives.
+        With the following content:
 
-```bash
-# Install dnf-plugins-core (This might already be installed)
-dnf install dnf-plugins-core
-# Add the repository and enable it
-dnf config-manager --add-repo https://releases.parity.io/rpm/polkadot.repo
-dnf config-manager --set-enabled polkadot
-# Install polkadot (You may have to confirm the import of the GPG key, which
-# should have the following fingerprint: 9D4B2B6EB8F97156D19669A9FF0812D491B96798)
-dnf install polkadot
-```
+        ```
+        [Service]
+        ReadWritePaths=/custom-path
+        ```
 
-:::info
+        And finally issue a reload to have your modifications applied by systemd:
 
-If you choose to use a custom folder for the polkadot home by passing `--base-path '/custom-path'`,
-you will need to issue following command:
-
-```bash
-sudo mkdir /etc/systemd/system/polkadot.service.d
-```
-
-And create a new file inside this folder:
-
-```bash
-sudo -e /etc/systemd/system/polkadot.service.d/custom.conf
-```
-
-With the following content:
-
-```
-[Service]
-ReadWritePaths=/custom-path
-```
-
-And finally issue a reload to have your modifications applied by systemd:
-
-```bash
-systemctl daemon-reload
-```
-
-:::
-
-</TabItem>
-</Tabs>
+        ```bash
+        systemctl daemon-reload
+        ```
 
 ## Get Substrate
 
-Follow instructions as outlined [here](https://docs.substrate.io/quick-start/) - note that Windows
+Follow instructions as outlined [here](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) - note that Windows
 users will have their work cut out for them. It's better to use a virtual machine instead.
 
 Test if the installation was successful by running `cargo --version`.
