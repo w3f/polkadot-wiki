@@ -1,7 +1,7 @@
 ---
 id: build-integrate-assets
 title: Using AssetHub
-sidebar_label: Using AssetHub
+sidebar_label: Using Asset Hub
 description: Tools that you can use for integrating assets.
 keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
