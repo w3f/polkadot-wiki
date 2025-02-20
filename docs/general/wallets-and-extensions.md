@@ -7,14 +7,10 @@ keywords: [wallets, account, signer, supported wallets, balance, token]
 slug: ../wallets-and-extensions
 ---
 
-:::caution
+:::caution Due Diligence
 
 Using your due diligence in researching and using the wallets listed below would be best. For any
 issues related to these wallet, reach out to their support teams directly.
-
-:::
-
-:::info
 
 Explore Polkadot with a secure and user-friendly wallets listed on the
 [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
