@@ -49,7 +49,7 @@ showcase their governance contributions and political philosophy through public 
 active engagement (optionally) on other social media platforms such as:
 
 - [Reddit](https://www.reddit.com/r/Polkadot/)
-- [Discord](https://discord.gg/polkadot)
+- [Discord](https://polkadot-discord.w3f.tools/)
 - [PolkaVerse](https://polkaverse.com/)
 
 Delegations are subject to review, and non-compliance may result in revocation.
