@@ -82,7 +82,7 @@
     "react-treebeard": "^3.2.4",
     "remark-docusaurus-tabs": "^0.2.0",
     "utf-8-validate": "^6.0.5",
-    "ws": "^8.18.0"
+    "ws": "^8.18.1"
   },
   "husky": {
     "hooks": {
