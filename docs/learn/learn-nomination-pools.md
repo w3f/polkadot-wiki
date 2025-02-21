@@ -41,7 +41,7 @@ the bonded tokens in the pool, as they are held in a
 
 :::tip Have questions on Nomination Pools?
 
-Please join the [Polkadot Discord](https://dot.li/discord) for asking general questions about
+Please join the [Polkadot Discord](https://polkadot-discord.w3f.tools/) for asking general questions about
 Nomination Pools. If you are a developer, please join our
 [nomination pools support channel](https://matrix.to/#/#nompools-support:matrix.parity.io).
 
