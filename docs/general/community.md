@@ -158,8 +158,8 @@ community members. The application we use most often to interact with the Matrix
 
 ### Chat
 
-- [Polkadot Discord](https://dot.li/discord) (RECOMMENDED)
-- [Kusama Discord](https://kusa.ma/discord)
+- [Polkadot Discord](https://polkadot-discord.w3f.tools/) (RECOMMENDED)
+- [Kusama Discord](https://kusama-discord.w3f.tools/)
 
 ### Social media
 
