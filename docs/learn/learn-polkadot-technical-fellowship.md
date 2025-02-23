@@ -129,3 +129,19 @@ from rank 1 to rank 2 can only be voted by members whose ranks are greater than 
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
 referendum. For more information, check the rank updates section on
 [the fellowship dashboard](https://polkadot-fellows.xyz/#/membership).
+
+## Fellowship Sub-treasury
+
+The Polkadot Technical Fellowship has its own sub-treasury, of which its members can submit spend
+proposals through the following tracks. Spends can be disbursed into any account on
+[AssetHub](./learn-system-chains.md#asset-hub):
+
+- [`Fellows`](#technical-fellowship-ranking-and-salary): for amounts up to 10,000 DOT
+- [`Architects`](#technical-fellowship-ranking-and-salary): for any amount of DOT
+
+Once a spend is approved, it must be manually claimed by the beneficiary account via the
+`fellowshipTreasury.payout` extrinsic.
+
+For each of these tracks, no more than **ten** general proposals (including whitelisting and
+treasury proposals) can be simultaneously voted on.
+[Refer to this tutorial to learn how to submit spend proposals as a fellow.]()
