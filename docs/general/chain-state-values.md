@@ -77,7 +77,7 @@ One conviction voting lock period on Polkadot equals <RPC network="polkadot" pat
 
 #### Existential Deposit
 
-The minimum number of tokens to keep an account alive on the Polkadot relay chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={333000000} filter="humanReadable"/>.
+The minimum number of tokens to keep an account alive on the Polkadot relay chain is <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/>.
 
 #### Inactive Issuance
 
