@@ -51,7 +51,7 @@ JAM is built as a distributed computer. This means that it can run almost any ta
 expressed as a service. The JAM chain will have almost no functionality, meaning there will be no
 user transactions. All the logic, like governance, staking, etc., would live on system **services**.
 The services will typically be asynchronous with regards to each other, limiting the possibility of 
-inter-service race conditions. JAM is also capable of providing synchronous composability across services
+inter-service race conditions. However, JAM is also capable of providing synchronous composability across services
 if needed.
 
 ## Will Agile Coretime remain part of the Polkadot vision?
