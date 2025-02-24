@@ -38,7 +38,8 @@ theme:
 plugins:
   - search
   - open-in-new-tab
-  - macros
+  - macros:
+      module_name: macros/rpc
 
 # Additional configuration
 extra:
@@ -224,6 +225,7 @@ nav:
       - Basics:
           - learn/basics/index.md
           - Accounts:
+              - Accounts: learn/learn-accounts.md
               - Account Balances: learn/learn-account-balances.md
               - Account Abstraction: learn/learn-account-abstraction.md
               - Identity: learn/learn-identity.md
@@ -248,6 +250,7 @@ nav:
               - DOT: learn/learn-DOT.md
               - Inflation: learn/learn-inflation.md
               - Asset Hub:
+                  - Asset Hub: learn/learn-assets.md
                   - Asset Conversion (Asset Hub): learn/learn-asset-conversion-assethub.md
               - Teleport: learn/learn-teleport.md
               - Introduction to NFTs: learn/learn-nft.md
@@ -265,10 +268,12 @@ nav:
       - Advanced:
           - learn/advanced/index.md
           - Architecture:
+              - Architecture: learn/learn-architecture.md
               - Consensus: learn/learn-consensus.md
               - Parachains Protocol: learn/learn-parachains-protocol.md
               - Async Backing: learn/learn-async-backing.md
               - Scheduling:
+                  - Agile Coretime: learn/learn-agile-coretime.md
                   - Coretime Marketplaces: learn/learn-guides-coretime-marketplaces.md
                   - Coretime Parachains: learn/learn-guides-coretime-parachains.md
               - Elastic Scaling: learn/learn-elastic-scaling.md
@@ -276,10 +281,19 @@ nav:
                   - Parachains: learn/learn-parachains.md
                   - System Chains: learn/learn-system-chains.md
                   - Parachains FAQ: learn/learn-parachains-faq.md
+              - Cross Consensus Messaging (XCM): 
+                    - XCM: learn/learn-xcm.md
+                    - XCM Pallet: learn/learn-xcm-pallet.md 
+                    - XCM Transport: learn/learn-xcm-transport.md
+                    - XCM Virtual Machine (XCVM): learn/learn-xcvm.md
+                    - XCM Instructions: learn/learn-xcm-instructions.md
+                    - XCM Use Cases: learn/learn-xcm-usecases.md
               - Bridges:
+                  - Bridges: learn/learn-bridges.md
                   - Snowbridge: learn/learn-snowbridge.md
                   - Hyperbridge: learn/learn-hyperbridge.md
                   - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
+              - Host Implementations: learn/learn-implementations.md
           - Account (Advanced): learn/learn-account-advanced.md
           - Staking (Advanced): learn/learn-staking-advanced.md
           - NFT Pallets: learn/learn-nft-pallets.md
@@ -289,12 +303,15 @@ nav:
               - PolkadotJS: general/polkadotjs.md
               - PolkadotJS UI: general/polkadotjs-ui.md
               - Polkadot-JS Guides:
+                  - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
                   - Account Guides:
+                      - Accounts Guides: learn/learn-guides-accounts.md
                       - Accounts Multisig: learn/learn-guides-accounts-multisig.md
                       - Accounts Proxy: learn/learn-guides-accounts-proxy.md
                       - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
                   - Transfers: learn/learn-guides-transfers.md
                   - Staking Guides:
+                      - Staking Guides: learn/learn-guides-staking.md
                       - Nominator: learn/learn-guides-nominator.md
                       - Staking Pools: learn/learn-guides-staking-pools.md
                   - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
@@ -305,19 +322,23 @@ nav:
                   - Ledger: learn/learn-guides-ledger.md
                   - Vault: learn/learn-guides-vault.md
                   - Asset Hub Guides:
+                      - Asset Hub Guides: learn/learn-guides-assets.md
                       - Assets Create: learn/learn-guides-assets-create.md
                       - Asset Conversion: learn/learn-guides-asset-conversion.md
                   - Bridge Hub Guides:
+                      - Bridge Hub Guides: learn/learn-guides-bridges.md
                       - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
                   - Claims: learn/learn-guides-claims.md
       - Comparisons:
           - learn/comparisons/index.md
+          - Comparions: learn/learn-comparisons.md
           - Kusama: learn/learn-comparisons-kusama.md
           - Ethereum: learn/learn-comparison-ethereum.md
           - Cosmos: learn/learn-comparisons-cosmos.md
           - Avalanche: learn/learn-comparisons-avalanche.md
       - Video Tutorials: https://www.youtube.com/@PolkadotNetwork/playlists
       - Future Implementations:
+          - learn/future-implementations/index.md
           - Spree: learn/learn-spree.md
           - Safrole: learn/learn-safrole.md
           - JAM:
@@ -396,6 +417,7 @@ nav:
           - How to Stop Validating: maintain/maintain-guides-how-to-stop-validating.md
           - Community Validator Guide: maintain/maintain-guides-validator-community.md
       - Archive:
+          - maintain/archive/index.md
           - Democracy Guide: maintain/archive/maintain-guides-democracy.md
           - How to Join Council: maintain/archive/maintain-guides-how-to-join-council.md
           - How to Vote Councillor: maintain/archive/maintain-guides-how-to-vote-councillor.md

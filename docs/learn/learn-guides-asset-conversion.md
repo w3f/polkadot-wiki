@@ -36,7 +36,7 @@ liquidity can be added to it via the `Pallet::add_liquidity` function.
 
 For example, the snapshot below shows how to create liquidity pool with `PAS` tokens and `EDU`
 tokens with the asset ID `149` on Paseo Asset Hub. Creating this extrinsic requires knowledge of
-[XCM Multilocations](xcm/fundamentals/multilocation/summary.md). From the perspective of AssetHub,
+[XCM Multilocations](https://paritytech.github.io/polkadot-sdk/master/staging_xcm/v3/struct.MultiLocation.html). From the perspective of AssetHub,
 an Asset Hub, the asset with an `AssetId` of `149` has a MultiLocation of
 
 ```

@@ -110,7 +110,7 @@ explicitly call an extrinsic to update the lock that is placed on an account.
 
 These extrinsics are exposed from the Vesting pallet.
 
-If you are using [the Polkadot-JS UI](./learn-polkadotjs.md), when there are tokens available to
+If you are using [the Polkadot-JS UI](../general/polkadotjs-ui.md), when there are tokens available to
 vest for an account, you can unlock tokens that have already been vested from the
 [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 

@@ -54,7 +54,7 @@ the next parachain blocks as collators do, fishermen will watch this process and
 state transitions are included.
 
 To address the motivation behind the Fishermen design consideration, the current
-[secondary backing checkers](#assignments--secondary-checks) perform a similar role in relation to
+[secondary backing checkers](#assignments-secondary-checks) perform a similar role in relation to
 the network. From a security standpoint, security is based on having at least one honest validator
 either among parachain validators or secondary checker (more about this later on).
 
@@ -91,7 +91,7 @@ the [Inclusion Pipeline](#inclusion-pipeline) and two within the
   2.  [Relay chain submission phase](#relay-chain-submission-phase)
   3.  [Availability and unavailability phase](#availability-and-unavailability-phase)
 - **Approval Process**
-  1.  [Assignments and secondary (validity) checks](#assignments--secondary-checks)
+  1.  [Assignments and secondary (validity) checks](#assignments-secondary-checks)
   2.  [Chain Selection](#chain-selection)
 
 In the Inclusion Pipeline, a parablock is made available (or unavailable), while in the Approval

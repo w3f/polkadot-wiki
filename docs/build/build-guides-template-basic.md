@@ -428,5 +428,5 @@ Now that you can launch a layer one blockchain, the possibilities are endless:
 
 - Setup a local development environment for your parachain
 - Create a pallet
-- [Take a look at the OpenZepplin template - which has a lot more pallets configured.](build-guides-coretime-start.md#openzeppelin-templates--guides)
+- [Take a look at the OpenZepplin template - which has a lot more pallets configured.](build-guides-coretime-start.md#openzeppelin-templates-guides)
 - Upgrade your network

@@ -42,7 +42,7 @@ share these with anyone, they can access your account and execute any transactio
 2. Be careful with extensions/applications and typing in recovery seeds or importing backup JSON
    files in there, they could be malicious or pretend to be a well-known wallet.
 3. Do not trust anyone online. Malicious actors often pretend to be someone else to gain your trust.
-4. [If you are scammed](#i-got-scammed---what-can-i-do), there is likely **nothing that can be
+4. [If you are scammed](#i-got-scammed-what-can-i-do), there is likely **nothing that can be
    done** to recover your funds. If a scammer gets a hold of your seed phrase, they can transfer all
    your funds to their account in seconds.
 5. If it sounds too good to be true, it probably is. People, especially celebrities, do not give

@@ -21,8 +21,6 @@ This document covers the basics of accounts in the Polkadot ecosystem. See the
 [indices](./learn-account-advanced.md#indices). For a more in-depth explanation of the cryptography
 behind accounts, please see the [cryptography page](learn-cryptography.md).
 
-<!-- TODO: INDEX CARDS -->
-
 ## Account Address
 
 An address is the public part of an account. The private part is the key used to access this

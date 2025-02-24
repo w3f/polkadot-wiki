@@ -17,7 +17,7 @@ try to optimize three metrics when computing a solution graph of nominators and 
 1. Maximize the stake behind the minimally staked validator.
 1. Minimize the variance of the stake in the set.
 
-!!!note [Sequential Phragmén](#basic-phragmén), [Phragmms](#phragmms-aka-balphragmms) and
+!!!note [Sequential Phragmén](#basic-phragmen), [Phragmms](#phragmms-aka-balphragmms) and
 [Star balancing](https://crates.parity.io/sp_npos_elections/balancing/fn.balance.html) are a few
 notable algorithms used for computing the NPoS solutions in Polkadot and Kusama.
 

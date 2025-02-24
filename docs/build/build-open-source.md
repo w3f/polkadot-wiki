@@ -235,6 +235,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | ------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | Storage             | [Merkle Tree DB](https://github.com/frisitano/merkle-tree-db) ⚪|                                  |
 | Merkle Proofs       | [Solidity Trie Verifier](https://github.com/polytope-labs/solidity-merkle-trees) 🟡| |
+
 ## Contributing
 
 Pull requests, issues, or other contributions from the community are encouraged! You can not only

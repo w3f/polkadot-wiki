@@ -86,7 +86,7 @@ implemented in the Asset Hub runtime. This signed-extension extends transactions
 optional `AssetId` that specifies the asset to be used for payment of both the execution fees and
 the optional tip. It defaults to the native token when it is set to `None`. In case it is given,
 this `AssetId` has to be an
-[XCM `Multilocation`](../learn/xcm/fundamentals/multilocation/summary.md). Once the transaction
+[XCM `Multilocation`](https://paritytech.github.io/polkadot-sdk/master/collectives_westend_integration_tests/v3/struct.MultiLocation.html). Once the transaction
 is executed in the block, it will emit an `AssetTxFeePaid` event, informing of the account paying
 the fees, the amount in the asset paid as fee, the tip (if any), and the asset ID of the asset
 paying the fees.
@@ -201,7 +201,7 @@ their system. For this, the service provider must query every new block created,
 events array, filter for any `balances.minted` event, and apply the appropriate business logic.
 
 In some special cases, DOT may be sent to the relay chain or the Asset Hub using other XCM instructions, 
-like [`Transact`](../learn/xcm/journey/transact.md).
+like [`Transact`](https://paritytech.github.io/polkadot-sdk/master/staging_xcm/v5/opaque/type.Instruction.html#variant.Transact).
 In these cases, the event emitted when processing the transact instruction in the destination chain is 
 `balances.transfer`, which is usually emitted during the finalization of the block execution process.
 

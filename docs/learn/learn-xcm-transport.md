@@ -8,7 +8,7 @@ slug: ../learn-xcm-transport
 ---
 
 !!!info "XCM Documentation"
-    For a more practical approach to utilizing XCM, refer to the [XCM Docs](./xcm/overview/intro.md). Please keep in mind that XCM is under active development.
+    For a more practical approach to utilizing XCM, refer to the [Polkadot Docs](https://docs.polkadot.com/develop/interoperability/intro-to-xcm/). Please keep in mind that XCM is under active development.
 
 With the XCM format established, common patterns for protocols of these messages are needed.
 Polkadot implements two message passing protocols for acting on XCM messages between its constituent

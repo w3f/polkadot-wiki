@@ -8,7 +8,7 @@ slug: ../learn-xcm-instructions
 ---
 
 !!!info "XCM Documentation"
-    For a more practical approach to utilizing XCM, refer to the [XCM Docs](./xcm/overview/intro.md). Please keep in mind that XCM is under active development.
+    For a more practical approach to utilizing XCM, refer to the [Polkadot Docs](). Please keep in mind that XCM is under active development.
 
 This page can also be viewed at the [`xcm-format`](https://github.com/paritytech/xcm-format)
 repository, where each instruction and register is explained in-depth.
