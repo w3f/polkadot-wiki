@@ -58,7 +58,7 @@
     "lint-staged": "^15.4.3",
     "loud-rejection": "^2.2.0",
     "mr-pdf": "^1.1.0",
-    "prettier": "^3.5.1",
+    "prettier": "^3.5.2",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^18.3.1",
