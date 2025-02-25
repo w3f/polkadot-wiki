@@ -22,4 +22,3 @@ jobs:
           stale-emoji: '🟡'
           inactive-emoji: '⚪'
           not-found-emoji: ':grey_question:'
-

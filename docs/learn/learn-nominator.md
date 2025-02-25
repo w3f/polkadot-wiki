@@ -7,34 +7,17 @@ keyword: [nominate, nominator, stake, staking]
 slug: ../learn-nominator
 ---
 
-:::tip New to Staking?
+!!!tip "New to Staking?"
+    Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by reading [this dedicated page](../learn/learn-staking.md).
+    
+    Discover the new [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started.
+    
+    You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
-Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by
-reading [this dedicated page](../learn/learn-staking.md).
-
-Discover the new [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes
-staking much easier and check this
-[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started.
-
-You can now
-[stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-
-:::
-
-:::info Stake through Nomination Pools
-
-The minimum amount required to become an active nominator (i.e. the
-[minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards may
-change from era to era. If you have less tokens than the minimum active nomination and still want to
-participate in staking, you can join the nomination pools with a
-[smaller amount of tokens](../general/chain-state-values.md#minimum-bond-to-participate-in-staking).
-For additional information, see
-[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
-
-:::
+!!!info "Stake through Nomination Pools"
+    The minimum amount required to become an active nominator (i.e. the [minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [smaller amount of tokens](../general/chain-state-values.md#minimum-bond-to-participate-in-staking). For additional information, see
+    [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+    Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 If you landed on this page, you decided to understand how you can be a good nominator. Note, this
 page is not for [nomination pool](./learn-nomination-pools.md) members, although pool members might
@@ -91,12 +74,8 @@ separate action, and it takes effect after the
 visible on the Polkadot-JS UI during the unbonding period, and after it, the staking lock can be
 unlocked, and the bonded funds become free balance you can transfer.
 
-:::info Fast Unstaking
-
-If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you
-can now unbond them immediately.
-
-:::
+!!!info "Fast Unstaking"
+    If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you can now unbond them immediately.
 
 If your bonded balance did not back any validators in the last 28 days on Polkadot (7 days on
 Kusama), you are eligible to perform fast unstaking. The
@@ -142,14 +121,8 @@ address. If you'd like to redirect payments to an account that is neither the st
 stash account, set one up. Note that setting an exchange address as the recipient of the staking
 rewards is extremely unsafe.
 
-:::info
-
-Being a nominator is made simpler by using the
-[**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step
-through specifying rewards destination and bonded amount, and nominating validators (more on this
-below). Note that staking proxies are not currently supported on the dashboard.
-
-:::
+!!!info
+    Being a nominator is made simpler by using the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step through specifying rewards destination and bonded amount, and nominating validators (more on this below). Note that staking proxies are not currently supported on the dashboard.
 
 ## Nominating with the Polkadot-JS UI
 
@@ -211,14 +184,8 @@ a trait is a combination of the metrics above). Available filters are:
   Nominating only small operators might not always guarantee staking rewards, but it helps to keep
   the network more resilient to attacks.
 
-:::info Validator vs Operator
-
-A validator is the node, the physical equipment with installed software that allows to produce new
-blocks and earn rewards. An operator is the entity responsible for setting up, running and
-maintaining the node. An operator can have multiple validators under different sub-identities. For
-example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the operator Zug Capital.
-
-:::
+!!!info "Validator vs Operator"
+    A validator is the node, the physical equipment with installed software that allows to produce new blocks and earn rewards. An operator is the entity responsible for setting up, running and maintaining the node. An operator can have multiple validators under different sub-identities. For example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the operator Zug Capital.
 
 - **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
 - **recent payouts**: Only show validators that have recently caused a
@@ -230,26 +197,13 @@ example, `ZUG CAPITAL/07` is one of the numerous validators belonging to the ope
   that this identity does not have to be verified by a registrar for the validator to appear in the
   list.
 
-:::warning Single Operators with Multiple Validators
-
-Recall that [slashing](./learn-offenses.md) is an additive function; the more validators
-equivocating in a given session, the harsher the penalties. Since validators that are controlled by
-a single operator are more at risk of a "synchronized" failure, nominating them implies a greater
-risk of having a large slash of your nominated funds. Generally, it is safer to nominate validators
-whose behavior is independent of others in many ways (different hardware, geographic location,
-owner, etc.).
-
-:::
+!!!warning "Single Operators with Multiple Validators"
+    Recall that [slashing](./learn-offenses.md) is an additive function; the more validators equivocating in a given session, the harsher the penalties. Since validators that are controlled by a single operator are more at risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of others in many ways (different hardware, geographic location, owner, etc.).
 
 ### Bags-list
 
-:::info
-
-On Polkadot and Kusama, the instance of the pallet
-[Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as
-`voterList`.
-
-:::
+!!!info
+    On Polkadot and Kusama, the instance of the pallet [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as `voterList`.
 
 Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
 extremely important for the long-term improvements of the staking/election system. Bags-list allows
@@ -291,7 +245,7 @@ If you are a beginner, please watch the video below for detailed instructions.
 
 [![Staking Tutorial](https://img.youtube.com/vi/F59N3YKYCRs/0.jpg)](https://www.youtube.com/watch?v=F59N3YKYCRs)
 
-The [Polkadot Staking Dashboard](../general/staking-dashboard.md) allows to choose pre-selected
+The [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md) allows to choose pre-selected
 lists of validators based on user preference, or to manually select validators similarly as in the
 Polkadot-JS UI.
 
@@ -337,35 +291,22 @@ not part of the [top 22,500 nominators](./learn-staking-advanced.md#bags-list), 
 are nominating has 100% commission. It is generally wise to choose as many trustworthy validators as
 you can to reduce the risk of none of your nominated validators being elected.
 
-:::info Not receiving Staking Rewards?
-
-To explore the possible reasons for not receiving staking rewards, check out the followings:
-
-- The
-  [Staking FAQ](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
-  on the Support Pages.
-- The
-  ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/)
-  Reddit article.
-- The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards)
-  section on the Staking Page.
-
-:::
+!!!info "Not receiving Staking Rewards?"
+    To explore the possible reasons for not receiving staking rewards, check out the followings:
+    - The [Staking FAQ](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s) on the Support Pages.
+    - The ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/) Reddit article.
+    - The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards) section on the Staking Page.
 
 Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go to all of the
 validator's nominators. Any account can do this, although validator operators often do this as a
 service to their nominators. See the page on [Simple Payouts](learn-staking-advanced.md) for more
 information and instructions for claiming rewards.
 
-:::note Explainer videos on Nominating
-
-These concepts have been further explained in the following videos:
-
-- [Why Nominate on Polkadot & Kusama](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
-- [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
-- [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
-
-:::
+!!!note "Explainer videos on Nominating"
+    These concepts have been further explained in the following videos:
+    - [Why Nominate on Polkadot & Kusama](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4)
+    - [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9)
+    - [Nominating/Staking on Polkadot and Kusama](https://youtu.be/FCXC0CDhyS4)
 
 ## Good Nominator Practices
 
@@ -422,14 +363,8 @@ almost always see only a single active nomination per era. See the
 
 ### Minimum Active Nomination to Receive Staking Rewards
 
-:::info Minimum DOT required to earn staking rewards
-
-The
-[minimum number of tokens required to submit intent to nominate](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
-differs from the [minimum active nomination](../general/chain-state-values.md#minimum-active-bond)
-required to earn staking rewards.
-
-:::
+!!!info "Minimum DOT required to earn staking rewards"
+    The [minimum number of tokens required to submit intent to nominate](../general/chain-state-values.md#minimum-bond-to-participate-in-staking) differs from the [minimum active nomination](../general/chain-state-values.md#minimum-active-bond) required to earn staking rewards.
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
 

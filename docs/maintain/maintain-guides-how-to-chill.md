@@ -19,13 +19,10 @@ Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps
 When an account chooses to chill, it becomes inactive in the next era. The call must be signed by
 the _staking proxy_ account, not the _stash_.
 
-:::note Primer on stash and staking proxy accounts
-
-If you need a refresher on the different responsibilities of the stash and staking proxy account
-when staking, take a look at the [accounts](../learn/learn-staking.md#accounts) section in the
-general staking guide.
-
-:::
+!!!note "Primer on stash and staking proxy accounts"
+    If you need a refresher on the different responsibilities of the stash and staking proxy account
+    when staking, take a look at the [accounts](../learn/learn-staking-advanced.md#staking-proxies) section in the
+    general staking guide.
 
 ![staking](../assets/NPoS/staking-keys-stash-proxy.png)
 
@@ -70,12 +67,9 @@ only on the accounts that newly call `nominate` or `validate` after the update. 
 bonding parameters would not automatically chill the active accounts on-chain which do not meet the
 requirements.
 
-:::note Chill Threshold
-
-`ChillThreshold` defines how close to the max nominators or validators we must reach before users
-can start chilling one another.
-
-:::
+!!!note "Chill Threshold"
+    `ChillThreshold` defines how close to the max nominators or validators we must reach before users
+    can start chilling one another.
 
 For instance, let us consider a scenario where the minimum staking requirement for nominators is
 changed from 80 DOTs to 120 DOTs. An account that was actively nominating with 80 DOTs before this
@@ -86,11 +80,8 @@ the minimum active bond is not satisfied, and chill that account. The list of ad
 active validators and their nominators can be viewed by running
 [validator stats](https://github.com/w3f/validator-stats) script.
 
-:::info Chill Other on Polkadot Network
-
-Through [Referendum 90](https://polkadot.polkassembly.io/referendum/90), `maxNominatorCount` on
-Polkadot is set to `None` eliminating the upper bound on the number of nominators on the network.
-Due to this, the `chillOther` extrinsic on Polkadot network has no effect as the chill threshold
-will never be met.
-
-:::
+!!!info "Chill Other on Polkadot Network"
+    Through [Referendum 90](https://polkadot.polkassembly.io/referendum/90), `maxNominatorCount` on
+    Polkadot is set to `None` eliminating the upper bound on the number of nominators on the network.
+    Due to this, the `chillOther` extrinsic on Polkadot network has no effect as the chill threshold
+    will never be met.

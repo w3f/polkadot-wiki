@@ -7,10 +7,11 @@ keywords: [Democracy, Council, Gov1, Councillor]
 slug: ../maintain-archive
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-import DocCardList from '@theme/DocCardList';
-
-<MessageBox message="This section contains archived pages. The content in them no longer applies to Polkadot but can
-still be relevant for parachains and related projects." />
-
-<DocCardList />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    This section contains archived pages. The content in them no longer applies to Polkadot but can
+    still be relevant for parachains and related projects.
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>

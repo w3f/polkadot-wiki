@@ -7,11 +7,16 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 [**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with Relay
 Chains and parachains in a granular way. Below we describe the different components of Polkadot-JS.
@@ -20,15 +25,14 @@ For more information about Polkadot-JS you can consult the
 
 ## Polkadot-JS UI
 
-:::info For Developers and Power Users Only
+!!!info For Developers and Power Users Only
+    Please note that this wallet UI is oriented toward developers and power users. Explore Polkadot with
+    a secure and user-friendly wallets listed on the
+    [Polkadot website](https://www.polkadot.network/ecosystem/wallets/). If you need help using the
+    Polkadot-JS UI you can contact the
+    [**Polkadot Support Team**](https://support.polkadot.network/support/home).
 
-Please note that this wallet UI is oriented toward developers and power users. Explore Polkadot with
-a secure and user-friendly wallets listed on the
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/). If you need help using the
-Polkadot-JS UI you can contact the
-[**Polkadot Support Team**](https://support.polkadot.network/support/home).
 
-:::
 
 The Polkadot-JS UI is an application that loads in your browser. There is a standard DNS
 [**hosted version**](https://polkadot.js.org/), which always has the latest features, and an
@@ -51,12 +55,11 @@ Scripting). There's no such risk when with files stored on disk.
 The desktop app uses the [**Electron**](https://www.electronjs.org/) framework. It provides the same
 features as web app, the only difference being different account storage.
 
-:::info Ledger not supported
+!!!info Ledger not supported
+    The desktop application does not support Ledger accounts. If you need a cold storage solution you
+    can try Parity Signer (aka Polkadot Vault).
 
-The desktop application does not support Ledger accounts. If you need a cold storage solution you
-can try Parity Signer (aka Polkadot Vault).
 
-:::
 
 ## Polkadot-JS Extension
 
@@ -79,15 +82,10 @@ and the [**Polkadot Staking Dashboard**](https://staking.polkadot.cloud/#/overvi
 [wallets and extensions](./wallets-and-extensions.md) page for wallets that are capable of
 transacting on-chain directly.
 
-:::info Metadata Updates
+!!!info Metadata Updates
+    The browser extension is a tool that interacts with the Polkadot network, but it is disconnected from it when it is not in use. It is important you [**always check for metadata updates**](../learn/learn-guides-accounts.md#polkadot-js-browser-extension) before using the extension or other account management tools such as Parity Signer (aka Polkadot Vault).
 
-The browser extension is a tool that interacts with the Polkadot network, but it is disconnected
-from it when it is not in use. It is important you
-[**always check for metadata updates**](../learn/learn-guides-accounts.md#metadata-updates-with-the-polkadot-js-browser-extension)
-before using the extension or other account management tools such as Parity Signer (aka Polkadot
-Vault).
 
-:::
 
 ## Polkadot-JS Phishing List
 
@@ -140,7 +138,7 @@ Let's see how we can query on-chain data with Polkadot-JS UI on the Polkadot net
 example. To find out the current value for existential deposit, navigate to Developer > Chain
 state > Constants and query the balances pallet for existential deposit as shown in the snapshot
 below. You need to click on the plus button to execute the query. The value displayed is in
-[plancks](learn-DOT#polkadot)
+[plancks](../learn/learn-DOT.md#polkadot)
 
 ![query chain state](../assets/chain-state-constant.png)
 

@@ -7,32 +7,31 @@ keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 slug: ../learn-guides-bounties
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+see the [wallets](../general/wallets-and-extensions.md), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 See [this page](./learn-polkadot-opengov-treasury.md#bounties) to learn about Bounties.
 
-:::info Notify the Polkadot Direction Channel
-
-Remember always to notify the
-[Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) about
-[OpenGov referenda](./learn-polkadot-opengov.md#referenda) so that the community can start reviewing
-them and voting on them.
-
-:::
+!!!info "Notify the Polkadot Direction Channel"
+    Remember always to notify the [Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) about [OpenGov referenda](./learn-polkadot-opengov.md#referenda) so that the community can start reviewing them and voting on them.
 
 ## Submit a Bounty Proposal
 
-:::info Step-by-step written tutorial
-
-See
-[this written tutorial](https://scribehow.com/shared/How_to_Submit_a_Bounty_Proposal_on_Polkadotjs_Apps__Ps_zfmNXRbm6PuZaj28JBQ)
-to learn more about how to submit a bounty proposal.
-
-:::
+!!!info "Step-by-step written tutorial"
+    See [this written tutorial](https://scribehow.com/shared/How_to_Submit_a_Bounty_Proposal_on_Polkadotjs_Apps__Ps_zfmNXRbm6PuZaj28JBQ) to learn more about how to submit a bounty proposal.
 
 See the video tutorial below to learn how you can create a bounty and submit it for approval through
 an OpenGov referendum.
@@ -40,7 +39,7 @@ an OpenGov referendum.
 <div className="row">
 <div className="col text--center">
     <a href="https://youtu.be/Qv_nJVcvQr8?t=52">
-      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://youtu.be/Qv_nJVcvQr8?t=52">Introduction to Bounties</a>
@@ -48,7 +47,7 @@ an OpenGov referendum.
   </div>
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">
-      <img src="https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/8Cft1-8RWmk/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=8Cft1-8RWmk">Submit a Bounty</a>
@@ -76,13 +75,8 @@ Submitting a bounty proposal will require a
 
 ## Assign a Curator to a Bounty
 
-:::info Step-by-step written tutorial
-
-See
-[this written tutorial](https://scribehow.com/shared/How_to_Assign_a_Curator_to_a_Bounty_on_Polkadotjs_Apps__JgK3eSfXQdm_PSvtz8TelQ)
-to learn more about how to assign a curator to a bounty.
-
-:::
+!!!info "Step-by-step written tutorial"
+    See [this written tutorial](https://scribehow.com/shared/How_to_Assign_a_Curator_to_a_Bounty_on_Polkadotjs_Apps__JgK3eSfXQdm_PSvtz8TelQ) to learn more about how to assign a curator to a bounty.
 
 Once your bounty is shown as "funded" on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. The
@@ -96,7 +90,7 @@ how you can add a curator to a bounty and submit it for approval through an Open
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=TM7vk3oP9IA">
-      <img src="https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/TM7vk3oP9IA/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=TM7vk3oP9IA">Assign Curator to a Bounty</a>
@@ -112,35 +106,21 @@ extrinsic. More information about when to do this can be found on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
 candidacy the bounty will show as "active" on the main Bounty page.
 
-:::info Curator assignment call must be executed after bounty is funded
-
-Curator assignment must take place after the bounty has been funded, and approved bounties are
-funded after a spend period has been completed. A curator assignment referendum cannot be executed
-during the same spend period when the bounty is funded.
+!!!info "Curator assignment call must be executed after bounty is funded"
+    Curator assignment must take place after the bounty has been funded, and approved bounties are funded after a spend period has been completed. A curator assignment referendum cannot be executed during the same spend period when the bounty is funded.
 
 If your bounty has been awarded but is not funded yet, you need to make sure that the curator
 assignment referendum gets enacted in the subsequent spending period (you can set a delay in
 [Polkadot-JS](./learn-guides-polkadot-opengov.md#submitting-a-proposal) when you submit the proposal
 during the current spend period).
 
-:::
-
 ## Create and Award Child Bounties
 
-:::info Step-by-step written tutorial
+!!!info "Step-by-step written tutorial"
+    See [this written tutorial](https://scribehow.com/shared/How_to_Create_and_Award_a_Child_Bounty__Q-YFGkYAR3WxMnvYGHiU3Q) to learn more about how to create and award child bounties.
 
-See
-[this written tutorial](https://scribehow.com/shared/How_to_Create_and_Award_a_Child_Bounty__Q-YFGkYAR3WxMnvYGHiU3Q)
-to learn more about how to create and award child bounties.
-
-:::
-
-:::info Remember to add contextual information about child bounties
-
-When you add child bounties, please add contextual information on the governance forums
-[Polkassembly](https://polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/).
-
-:::
+!!!info "Remember to add contextual information about child bounties"
+    When you add child bounties, please add contextual information on the governance forums [Polkassembly](https://polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/).
 
 See the video tutorial below to learn how to create a child bounty, assign a curator, and award a
 child bounty.
@@ -152,7 +132,7 @@ separately, depending on the process curators consider appropriate for their bou
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=mLpvx0OQoyM">
-      <img src="https://img.youtube.com/vi/mLpvx0OQoyM/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/mLpvx0OQoyM/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=mLpvx0OQoyM">Create and Award Child Bounties</a>
@@ -164,13 +144,8 @@ Once a child bounty is awarded, awardees can claim the child bounty.
 
 ## Claim a Child Bounty Reward
 
-:::info Step-by-step written tutorial
-
-See
-[this written tutorial](https://scribehow.com/shared/How_to_claim_a_Child_Bounty_reward_on_Polkadotjs__t3V7NDUjQlus40EUjc-5Kw)
-to learn more about how to claim a child bounty reward.
-
-:::
+!!!info "Step-by-step written tutorial"
+    See [this written tutorial](https://scribehow.com/shared/How_to_claim_a_Child_Bounty_reward_on_Polkadotjs__t3V7NDUjQlus40EUjc-5Kw) to learn more about how to claim a child bounty reward.
 
 The status of child bounties can be viewed on the
 [Polkassembly Bounty page](https://polkadot.polkassembly.io/bounties) under the specific parent
@@ -186,7 +161,7 @@ permissionless, and anyone can initiate the claim on behalf of the beneficiary.
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=db82aHgy23c">
-      <img src="https://img.youtube.com/vi/db82aHgy23c/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/db82aHgy23c/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=db82aHgy23c">Claim Child Bounty Reward</a>
@@ -206,7 +181,7 @@ See the video tutorial below to learn how to close a child bounty.
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=Qv_nJVcvQr8&t=2109s">
-      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/Qv_nJVcvQr8/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=Qv_nJVcvQr8&t=2109s">Close a Child Bounty</a>

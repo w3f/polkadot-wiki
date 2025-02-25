@@ -7,29 +7,23 @@ keywords: [parity signer, signer, polkadot vault, polkadot-js]
 slug: ../learn-guides-vault
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
-
-:::info
-
-These guides apply to both Parity Signer and Polkadot Vault apps.
-
-:::
+!!!info These guides apply to both Parity Signer and Polkadot Vault apps.
 
 ## Sending a Transfer with the Vault App
 
-:::danger Verifying Extrinsics
-
-Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger)
-and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn about how to
-verify extrinsics before signing them. The video will also mention potential attacks that can happen
-to you while signing for transactions.
-
-:::
+!!!danger "Verifying Extrinsics"
+    Visit the [**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn about how to verify extrinsics before signing them. The video will also mention potential attacks that can happen to you while signing for transactions.
 
 General instructions to send a transfer can be found on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
@@ -48,12 +42,8 @@ Accounts added to those extensions will be injected into the Polkadot-JS UI.
 
 ## Do Your Own Chain Spec and Metadata Update
 
-:::danger This section is for developers and power users only
-
-By requesting the chain specification and metadata you trust the specific endpoint you are using
-(unless you are using you own node).
-
-:::
+!!!danger "This section is for developers and power users only"
+    By requesting the chain specification and metadata you trust the specific endpoint you are using (unless you are using you own node).
 
 The following guide bases on the [Parity Signer](https://github.com/paritytech/parity-signer) Github
 page (to create the Chain Spec QR code and the metadata QR code fountain) and
@@ -82,13 +72,8 @@ on the Polkadot-JS UI.
 
 #### Generating Signature
 
-:::danger Use a hot account
-
-Make sure that the account used to sign the chain specification is a hot account. Never use a cold
-account from the Vault app or Ledger, as after typing the seed phrase into the terminal that account
-will be considered hot.
-
-:::
+!!!danger "Use a hot account"
+    Make sure that the account used to sign the chain specification is a hot account. Never use a cold account from the Vault app or Ledger, as after typing the seed phrase into the terminal that account will be considered hot.
 
 Start the terminal within the `files/in_progress` folder and type the following:
 
@@ -130,22 +115,13 @@ Kusama. This will create the file `sign_me_load_metadata_statemineV9370` under t
 `files/in_progress` folder. Note that for future metadata updates the file name will change as the
 version at the time of writing was `V9370`.
 
-:::info
-
-Note that the name of the file changes according to the network version. That is, `????` in
-`sign_me_load_metadata_statemineV????` will be the latest version at fetch time.
-
-:::
+!!!info
+    Note that the name of the file changes according to the network version. That is, `????` in `sign_me_load_metadata_statemineV????` will be the latest version at fetch time.
 
 #### Generating Signature
 
-:::danger Use a hot account
-
-Make sure that the account used to sign the metadata is a hot account. Never use a cold account from
-the Vault app or Ledger, as after typing the seed phrase into the terminal that account will be
-considered hot.
-
-:::
+!!!danger "Use a hot account"
+    Make sure that the account used to sign the metadata is a hot account. Never use a cold account from the Vault app or Ledger, as after typing the seed phrase into the terminal that account will be considered hot.
 
 Start the terminal within the `files/in_progress` folder and type the following:
 
@@ -156,14 +132,8 @@ specification. Running the code above will return a signature similar to that be
 
 `0xde1ad7aeb252acb3cf42a522dcc8dc3f317a49be2ed636836dd6df8f7e47135f2c712480055822eba87e9ea5ac7d3bba96045992ae795856fdf4eea09a411f85`
 
-:::info Do not copy the code lines above
-
-Note that the name of the file changes according to the network version. That is, `????` in
-`sign_me_load_metadata_statemineV????` will be the latest version at fetch time. So, do not copy the
-code line above, but change the version with the appropriate one saved under the `files/in_progress`
-folder. The signature changes as well.
-
-:::
+!!!info "Do not copy the code lines above"
+    Note that the name of the file changes according to the network version. That is, `????` in `sign_me_load_metadata_statemineV????` will be the latest version at fetch time. So, do not copy the code line above, but change the version with the appropriate one saved under the `files/in_progress` folder. The signature changes as well.
 
 #### Signing Metadata
 

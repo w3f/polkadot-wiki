@@ -30,13 +30,8 @@ equals to 10<sup>12</sup> Planck.
 | Dot (DOT)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 DOT  |
 | Million (MDOT)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 DOT  |
 
-:::note DOT was redenominated at block #1_248_328
-
-DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT
-(old)"), but went through a process of [redenomination](./archive/learn-redenomination.md) which
-increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
-
-:::
+!!!note "DOT was redenominated at block #1_248_328"
+    DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT (old)"), but went through a process of [redenomination](./archive/learn-redenomination.md) which increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
 
 ### Kusama
 
@@ -59,12 +54,9 @@ DOT serves three key functions in Polkadot:
 DOT can also serve ancillary functions by being a transferrable token. For example, DOT stored in
 the Treasury can be sent to teams working on relevant projects for the Polkadot network.
 
-:::note Explainer video on token utility
-
-These concepts have been further explained in the video
-[Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
-
-:::
+!!!note "Explainer video on token utility"
+    These concepts have been further explained in the video
+    [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
 
 ### DOT for Governance
 
@@ -151,7 +143,7 @@ On the Westend network, you can also earn WNDs as rewards by
 <div className="row">
   <div className="col text--center">
     <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">
-      <img src="https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">Testing Polkadot features on Westend</a>

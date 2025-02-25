@@ -7,26 +7,24 @@ keywords: [NFT, non-fungible token, NFT 2.0]
 slug: ../learn-nft-projects
 ---
 
-:::info Community Page
-
-This page is open to contributions from the community. Please follow the
-[Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your NFT app to this page.
-
-:::
+!!!info "Community Page"
+    This page is open to contributions from the community. Please follow the [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) and add your NFT app to this page.
 
 ## List of NFT Projects
 
 <!-- prettier-ignore -->
 <!-- no toc -->
 
+- [List of NFT Projects](#list-of-nft-projects)
 - [Asset Hub](#asset-hub)
 - [Astar](#astar)
 - [Basilisk](#basilisk)
 - [Crust](#crust)
 - [Darwinia Network](#darwinia-network)
 - [KodaDot](#kodadot)
-- [MNet Continuum](#mnet-continuum) (ex BitCountry)
+  - [History of KodaDot](#history-of-kodadot)
+  - [Ecosystem Tools by KodaDot](#ecosystem-tools-by-kodadot)
+- [MNet Continuum](#mnet-continuum)
 - [Moonbeam](#moonbeam)
 - [Mythical](#mythical)
 - [NFTMozaic](#nftmozaic)
@@ -35,13 +33,13 @@ and add your NFT app to this page.
 
 ## Asset Hub
 
-The Asset Hub is a [system chain](./learn-system-chains) which provides functionality for deploying
+The Asset Hub is a [system chain](./learn-system-chains.md) which provides functionality for deploying
 and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently
-hosts [Uniques pallet](./learn-nft-pallets#uniques-pallet) (its use on AssetHub is not encouraged)
-and the [NFTs pallet](./learn-nft-pallets#nfts-pallet).
+hosts [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) (its use on AssetHub is not encouraged)
+and the [NFTs pallet](./learn-nft-pallets.md#nfts-pallet).
 
 A more in-depth overview of the Asset Hub pallets and developer resources available to the
-developers can be found in the dedicated [section about NFT pallets](./learn-nft-pallets).
+developers can be found in the dedicated [section about NFT pallets](./learn-nft-pallets.md).
 
 ## Astar
 
@@ -59,7 +57,7 @@ writing smart contracts with [ink!](https://use.ink/) based on
 
 The main advantage of having a multi-virtual machine environment for NFT developers is that it gives
 builders more possibilities for the use cases they are developing. With the support of Wasm smart
-contracts, developers can create solutions like [RMRK](./learn-nft#rmrk) with smart contracts.
+contracts, developers can create solutions like RMRK with smart contracts.
 
 Developer tools and documentation links:
 
@@ -111,10 +109,10 @@ robust collaboration has earned KodaDot the
 See below a video tutorial about how to mint your NFT on [the Polkadot Asset Hub](#asset-hub) using
 KodaDot.
 
-<div className="row">
-  <div className="col text--center">
+<div class="row">
+  <div class="col text--center">
     <a href="https://www.youtube.com/watch?v=SKdx4pTgL04">
-      <img src="https://img.youtube.com/vi/SKdx4pTgL04/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/SKdx4pTgL04/0.jpg" width="350" style="border-radius: 10px; border: 1px solid slategrey;" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=SKdx4pTgL04">KodaDot Tutorial on Minting NFTs</a>

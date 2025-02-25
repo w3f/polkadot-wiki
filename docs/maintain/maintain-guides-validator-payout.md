@@ -18,14 +18,11 @@ points are reward points earned for payable actions like:
 - producing a reference to a previously unreferenced uncle block.
 - producing a referenced uncle block.
 
-:::note
-
-An uncle block is a relay chain block that is valid in every regard, but which failed to become
-canonical. This can happen when two or more validators are block producers in a single slot, and the
-block produced by one validator reaches the next block producer before the others. We call the
-lagging blocks uncle blocks.
-
-:::
+!!!note
+    An uncle block is a relay chain block that is valid in every regard, but which failed to become
+    canonical. This can happen when two or more validators are block producers in a single slot, and the
+    block produced by one validator reaches the next block producer before the others. We call the
+    lagging blocks uncle blocks.
 
 Payments occur at the end of every era.
 
@@ -35,7 +32,7 @@ If the _mean_ of staking rewards is the average rewards per era, then the _varia
 variability from the average staking rewards. The exact DOT value of each era point is not known in
 advance since it depends on the total number of points earned by all validators in a given era. This
 is designed this way so that the total payout per era depends on Polkadot's
-[inflation model](../learn/learn-staking-advanced.md#inflation), and not on the number of payable
+[inflation model](../learn/learn-inflation.md), and not on the number of payable
 actions (f.e., authoring a new block) executed. For more information, check
 [this stackexchange post](https://substrate.stackexchange.com/questions/5353/how-are-rewards-in-dot-calculated-from-the-era-points-earned-by-validators-in-po).
 
@@ -48,41 +45,38 @@ In this case, analyzing the _expected value_ of staking rewards will paint a bet
 weight of era points of validators and para-validators in the reward average are taken into
 consideration.
 
-:::note High-level breakdown of reward variance
+!!!note "High-level breakdown of reward variance"
+    This should only serve as a high-level overview of the probabilistic nature for staking rewards.
 
-This should only serve as a high-level overview of the probabilistic nature for staking rewards.
+    Let:
 
-Let:
+    - `pe` = para-validator era points,
+    - `ne` = non-para-validator era points,
+    - `EV` = expected value of staking rewards,
 
-- `pe` = para-validator era points,
-- `ne` = non-para-validator era points,
-- `EV` = expected value of staking rewards,
+    Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`.
 
-Then, `EV(pe)` has more influence on the `EV` than `EV(ne)`.
+    Since `EV(pe)` has a more weighted probability on the `EV`, the increase in variance against the
+    `EV` becomes apparent between the different validator pools (aka. validators in the active set and
+    the ones chosen to para-validate).
 
-Since `EV(pe)` has a more weighted probability on the `EV`, the increase in variance against the
-`EV` becomes apparent between the different validator pools (aka. validators in the active set and
-the ones chosen to para-validate).
+    Also, let:
 
-Also, let:
+    - `v` = the variance of staking rewards,
+    - `p` = number of para-validators,
+    - `w` = number validators in the active set,
+    - `e` = era,
 
-- `v` = the variance of staking rewards,
-- `p` = number of para-validators,
-- `w` = number validators in the active set,
-- `e` = era,
+    Then, `v` &#8593; if `w` &#8593;, as this reduces `p` : `w`, with respect to `e`.
 
-Then, `v` &#8593; if `w` &#8593;, as this reduces `p` : `w`, with respect to `e`.
+    Increased `v` is expected, and initially keeping `p` &#8595; using the same para-validator set for
+    all parachains ensures
+    [availability](../learn/learn-parachains-protocol.md#availability-and-unavailability-phase) and
+    [voting](../learn/learn-polkadot-opengov.md). In addition, despite `v` &#8593; on an `e` to `e`
+    basis, over time, the amount of rewards each validator receives will equal out based on the
+    continuous selection of para-validators.
 
-Increased `v` is expected, and initially keeping `p` &#8595; using the same para-validator set for
-all parachains ensures
-[availability](../learn/learn-parachains-protocol.md#availability-and-unavailability-phase) and
-[voting](../learn/learn-polkadot-opengov.md). In addition, despite `v` &#8593; on an `e` to `e`
-basis, over time, the amount of rewards each validator receives will equal out based on the
-continuous selection of para-validators.
-
-There are plans to scale the active para-validation set in the future
-
-:::
+    There are plans to scale the active para-validation set in the future
 
 ## Payout Scheme
 
@@ -181,15 +175,12 @@ nominators).
 
 This includes the stake of the validator itself plus any stake bonded by nominators.
 
-:::info
-
-Validators set their preference as a percentage of the block reward, _not_ an absolute number of
-DOT. Polkadot's block reward is based on the _total_ amount at stake. The commission is set as the
-amount taken by the validator; that is, 0% commission means that the validator does not receive any
-proportion of the rewards besides that owed to it from self-stake, and 100% commission means that
-the validator operator gets all rewards and gives none to its nominators.
-
-:::
+!!!info
+    Validators set their preference as a percentage of the block reward, _not_ an absolute number of
+    DOT. Polkadot's block reward is based on the _total_ amount at stake. The commission is set as the
+    amount taken by the validator; that is, 0% commission means that the validator does not receive any
+    proportion of the rewards besides that owed to it from self-stake, and 100% commission means that
+    the validator operator gets all rewards and gives none to its nominators.
 
 In the following examples, we can see the results of several different validator payment schemes and
 split between nominator and validator stake. We will assume a single nominator for each validator.

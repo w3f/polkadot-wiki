@@ -13,18 +13,8 @@ networks protocols. It operates on-chain through the Polkadot
 system chain and off-chain through the [Polkadot Fellows](https://github.com/polkadot-fellows)
 repository.
 
-:::info Historical Context
-
-The Polkadot Technical Fellowship was established in 2022 and plays an important role in the
-Polkadot OpenGov. This fellowship replaced the
-[Technical Committee](./archive/learn-governance.md#technical-committee) from Polkadot's first
-iteration of governance, and will be serving both the Polkadot and Kusama networks. This Fellowship
-is designed to be far broader in membership (i.e. to work well with even tens of thousands of
-members) and with far lower barriers to entry both in terms of administrative process flow and
-levels of expertise. For more information, read through the
-[Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
-
-:::
+!!!info "Historical Context"
+    The Polkadot Technical Fellowship was established in 2022 and plays an important role in the Polkadot OpenGov. This fellowship replaced the [Technical Committee](./archive/learn-governance.md#technical-committee) from Polkadot's first iteration of governance, and will be serving both the Polkadot and Kusama networks. This Fellowship is designed to be far broader in membership (i.e. to work well with even tens of thousands of members) and with far lower barriers to entry both in terms of administrative process flow and levels of expertise. For more information, read through the [Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
 
 Apart from the collectives system chain and the GitHub repository, the Polkadot Technical Fellowship
 also uses multiple public avenues to discuss updates related to the Polkadot protocol. Their public
@@ -59,12 +49,8 @@ collectives system chain to the Polkadot relay chain. For instance,
 
 ![whitelist-xcm](../assets/fellowship-whitelist-xcm.png)
 
-:::info Submitting Whitelisted Proposals
-
-For more information about how to submit a whitelisted proposal see the
-[dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
-
-:::
+!!!info "Submitting Whitelisted Proposals"
+    For more information about how to submit a whitelisted proposal see the [dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
 
 ## Technical Fellowship Ranking and Salary
 
@@ -106,14 +92,8 @@ tenets:
 - Respect the operational procedures, norms and voting conventions of the Fellowship.
 - Respect fellow Members and the wider community.
 
-:::tip Register your interest
-
-For new fellowship inductions, Polkassembly has created an interface (still in beta) to
-[apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives)
-This initiative is funded by Polkadot treasury through
-[OpenGov referendum 373](https://polkadot.polkassembly.io/treasury/574)
-
-:::
+!!!tip "Register your interest"
+    For new fellowship inductions, Polkassembly has created an interface (still in beta) to [apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives) This initiative is funded by Polkadot treasury through [OpenGov referendum 373](https://polkadot.polkassembly.io/treasury/574)
 
 The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on
 [the fellowship dasboard](https://polkadot-fellows.xyz/#/membership).

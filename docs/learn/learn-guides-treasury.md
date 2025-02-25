@@ -7,11 +7,16 @@ keywords: [opengov, polkadot opengov, referenda, treasury, tipps, polkadot-js]
 slug: ../learn-guides-treasury
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 See [this page](./learn-polkadot-opengov-treasury.md) to learn about the Polkadot Treasury.
 
@@ -36,30 +41,17 @@ proposal, they will need to find an off-chain way to explain the proposal via
 Spreading the word about the proposal's explanation to the community is ultimately up to the
 proposer.
 
-:::tip Use Accounts with Verified On-Chain Identity for Treasury Proposals
-
-To ensure legitimacy, it is required that the account linked to the Treasury proposal has an
-[identity set](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity)
-and is
-[verified by an on-chain registrar](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement).
-
-:::
+!!!tip "Use Accounts with Verified On-Chain Identity for Treasury Proposals"
+    To ensure legitimacy, it is required that the account linked to the Treasury proposal has an [identity set](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity) and is [verified by an on-chain registrar](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement).
 
 ## Creating a Treasury Proposal - Spend Local
 
-:::info "Spend" vs. "Spend Local"
-
-You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and
-`treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of
-DOT that is locally available, i.e., DOT from the relay chain's treasury account. `spend` actually
-allows the caller to specify an asset other than DOT, or even assets in other locations, e.g.
-[Asset Hub](../general/glossary.md#asset-hub).
+!!!info ""Spend" vs. "Spend Local""
+    You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and `treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of DOT that is locally available, i.e., DOT from the relay chain's treasury account. `spend` actually allows the caller to specify an asset other than DOT, or even assets in other locations, e.g. [Asset Hub](../general/glossary.md#asset-hub).
 
 Unlike `treasury.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
 claimed manually via the `treasury.payout` extrinsic. `treasuy.spendLocal` behavior remains
 unchanged.
-
-:::
 
 ### Submit Treasury Proposal Preimage
 
@@ -75,25 +67,15 @@ transaction that requests 100 DOT from Treasury.
 - Submit preimage
 - Sign and submit the transaction by paying the specified transaction fees.
 
-:::info Preimage Submission Deposit
-
-A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional
-to the amount of information stored within the preimage. The deposit amount required for a preimage
-with a treasury spend transaction is around 41 DOT (1.4 KSM on Kusama). Ensure you have enough
-account balance to pay for the submission deposit and the transaction fees.
-
-:::
+!!!info "Preimage Submission Deposit"
+    A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional to the amount of information stored within the preimage. The deposit amount required for a preimage with a treasury spend transaction is around 41 DOT (1.4 KSM on Kusama). Ensure you have enough account balance to pay for the submission deposit and the transaction fees.
 
 Here is the preimage requesting for 100 DOT.
 
 ![Treasury Preimage](../assets/treasury/OpenGov-Treasury-Preimage-SpendLocal.png)
 
-:::info Balance entered is in Plancks
-
-Polkadot JS UI is for developers and the UI takes input of the balance in
-[plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals, which is 10000000000 plancks per DOT.
-
-:::
+!!!info "Balance entered is in Plancks"
+    Polkadot JS UI is for developers and the UI takes input of the balance in [plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals, which is 10000000000 plancks per DOT.
 
 After successful submission of the preimage, it is displayed on Polkadot-JS UI > Governance >
 Preimages page. Every preimage is associated with a unique preimage hash (highlighted in a box in
@@ -123,7 +105,7 @@ Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
 
 For the referendum to move from preparing phase to the deciding phase, a decision deposit needs to
 be placed. The decision deposit values for each individual
-[Treasury Tracks](./learn-polkadot-opengov-treasury#treasury-tracks) are listed in a section above
+[Treasury Tracks](./learn-polkadot-opengov-treasury.md#treasury-tracks) are listed in a section above
 in this document.
 
 ![Submit Treasury Proposal Decision Deposit](../assets/treasury/treasury-proposal-decision-deposit.png)
@@ -149,12 +131,8 @@ future:
 Governance can also propose to **void** a staged proposal before it has completed all of its
 payouts.
 
-:::info Calculating dates from block heights
-
-Although not the most accurate form of measurement, block heights can be used to correspond to
-certain dates in the future.
-
-:::
+!!!info "Calculating dates from block heights"
+    Although not the most accurate form of measurement, block heights can be used to correspond to certain dates in the future.
 
 ### Using `batch` for Multi-Spend Proposals
 
@@ -162,25 +140,16 @@ Using the Utility pallet, one can batch multiple `treasury.spend` calls together
 calls can have its own `validFrom` block height, which allows for scenarios such as the above to be
 possible.
 
-:::tip Multistage payout proposal example
-
-For reference on how to create a multistage payout proposal, please check
-[Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama.
-
-:::
+!!!tip "Multistage payout proposal example"
+    For reference on how to create a multistage payout proposal, please check [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama.
 
 ### Using `validFrom` for a Milestone-Based Proposal
 
 Once each spend is defined within the batched call, the `validFrom` field can be utilized to specify
 the "date", or block height, at which each spend will be executed.
 
-:::info Treasury Spends have to be claimed manually. Spends can expire!
-
-Keep in mind that once the `validFrom` block height has been reached, you will have to claim the
-spend within 30 days. Check the claiming process for treasury spends
-[here](#manually-claiming-payouts)
-
-:::
+!!!info "Treasury Spends have to be claimed manually. Spends can expire!"
+    Keep in mind that once the `validFrom` block height has been reached, you will have to claim the spend within 30 days. Check the claiming process for treasury spends [here](#manually-claiming-payouts)
 
 ## Creating a USDT Treasury Proposal - Spend (with AssetHub)
 
@@ -190,7 +159,7 @@ The following tutorial mostly goes over how to utilize the `spend` extrinsic, wh
 
 ### Creating a Preimage
 
-The example below shows how to create a [preimage](../general/glossary#preimage) for a transaction
+The example below shows how to create a [preimage](../general/glossary.md#preimage) for a transaction
 that requests 100 USDT from AssetHub.
 
 - Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
@@ -216,17 +185,10 @@ First, we specify the location - in this case, Asset Hub (parachain 1,000). `Pal
 refers to the Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of
 USDT in this instance of the Assets pallet.
 
-:::caution Bug on Polkadot-JS UI
-
-As the Polkadot-JS UI is interpreting the general index in DOT, it multiplies the entered values
-with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would
-like to have `1984` as the input argument, we can offset this UI induced error by entering
-`0.0000001984`.
-
-The issue on Polkadot-JS repo can be tracked
-[here](https://github.com/polkadot-js/apps/issues/10430).
-
-:::
+!!!caution "Bug on Polkadot-JS UI"
+    As the Polkadot-JS UI is interpreting the general index in DOT, it multiplies the entered values with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would like to have `1984` as the input argument, we can offset this UI induced error by entering `0.0000001984`.
+    
+    The issue on Polkadot-JS repo can be tracked [here](https://github.com/polkadot-js/apps/issues/10430).
 
 Here is how the final `assetKind` field should look:
 
@@ -237,17 +199,10 @@ Here is how the final `assetKind` field should look:
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
 asking for 100 USDT, we put `100000000` as the input for the amount.
 
-:::caution Bug on Polkadot-JS UI
-
-As the Polkadot-JS UI is interpreting the asset balance in DOT, it multiplies the entered values
-with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would
-like to have `100000000` as the input argument, we can offset this UI induced error by entering
-`0.01` for this particular example where we like to input 100 USDT.
-
-The issue on Polkadot-JS repo can be tracked
-[here](https://github.com/polkadot-js/apps/issues/10430).
-
-:::
+!!!caution "Bug on Polkadot-JS UI"
+    As the Polkadot-JS UI is interpreting the asset balance in DOT, it multiplies the entered values with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would like to have `100000000` as the input argument, we can offset this UI induced error by entering `0.01` for this particular example where we like to input 100 USDT.
+    
+    The issue on Polkadot-JS repo can be tracked [here](https://github.com/polkadot-js/apps/issues/10430).
 
 ![Asset Value, Beneficiary and ValidFrom](../assets/asset-hub/spend-amount-account-validfrom-temp.png)
 
@@ -262,7 +217,7 @@ an account address on the chain.
 The `validFrom` field is optional, and refers to the block height of the relay chain upon which the
 payout can be issued. If the `validFrom` parameter is not set, the spend can be paid out immediately
 after approval. For more information on this field, refer to the
-[guide below](#creating-a-staged-proposal-with-validfrom).
+[guide below](#creating-a-multistage-payout-proposal-with-validfrom).
 
 The final call should look like the following, where we:
 
@@ -292,16 +247,8 @@ on the plus button to the right.
 
 From the list of spends, find the `spendID` of your respetive payout and issue the payout extrinsic.
 
-:::tip payout example
-
-To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on
-Kusama, [this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After
-issuing the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a
-reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated.
-[Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset
-Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
-
-:::
+!!!tip "payout example"
+    To claim the first payout of [Referendum 382](https://kusama.subsquare.io/referenda/382?tab=call) on Kusama, [this payout extrinsic](https://kusama.subscan.io/extrinsic/23061444-2) was issued. After issuing the payout extrinsic, the status of the payout changes from `pending` to `Attempted` with a reference to a payment ID. If the payout is successful, the balance on Asset Hub should be updated. [Here](https://assethub-kusama.subscan.io/extrinsic/6923602-0) is the transfer extrinsic on Asset Hub for the first payout of [Referendum 382](https://kusama.subscan.io/referenda_v2/382).
 
 To clear the on-chain storage of a successful or expired spend, Treasury pallet's `checkStatus`
 extrinsic can be used. The transaction fees paid for issuing this extrinsic will be refunded.
@@ -311,14 +258,8 @@ extrinsic can be used. The transaction fees paid for issuing this extrinsic will
 If a proposal that hasn't completed all of its spends needs to be voided, the `treasury.voidSpend`
 extrinsic can be utilized via a governance proposal.
 
-:::tip Example proposal - Voiding a Treasury Spend
-
-For reference, check the referenda on Kusama that
-[tests VoidSpend functionality for Treasury Payouts](https://kusama.subsquare.io/referenda/391).
-Through this referenda, a treasury spend was
-[successfully voided](https://kusama.subscan.io/event?page=1&time_dimension=date&module=treasury&event_id=assetspendvoided).
-
-:::
+!!!tip "Example proposal - Voiding a Treasury Spend"
+    For reference, check the referenda on Kusama that [tests VoidSpend functionality for Treasury Payouts](https://kusama.subsquare.io/referenda/391). Through this referenda, a treasury spend was [successfully voided](https://kusama.subscan.io/event?page=1&time_dimension=date&module=treasury&event_id=assetspendvoided).
 
 ## Submit Treasury Proposal via Polkassembly
 

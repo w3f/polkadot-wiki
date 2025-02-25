@@ -9,12 +9,9 @@ slug: ../dev-heroes
 For more information about the Developer Heroes Program, see the
 [Polkadot blog post](https://polkadot.network/blog/introducing-the-polkadot-developer-heroes-program?utm_source=twitter&utm_medium=social&utm_campaign=dhp&utm_content=tweet&utm_term=announcement).
 
-:::info Sign up
-
-Use [this form](https://info.polkadot.network/polkadot-developer-heroes?ref=cms.polkadot.network) to
-sign up and become a candidate for the Polkadot Developer Heroes Program.
-
-:::
+!!!info "Sign up"
+    Use [this form](https://info.polkadot.network/polkadot-developer-heroes?ref=cms.polkadot.network) to
+    sign up and become a candidate for the Polkadot Developer Heroes Program.
 
 ## Goal
 
@@ -35,8 +32,8 @@ The program provides:
 A rookie is a beginner or first-timer developer. Someone who has previous experience in programming
 but needs to gain in-depth knowledge about the Polkadot technology.
 
-The technology includes but is not limited to independent [Substrate](./glossary.md#substrate)
-chains and [ink! development](../build/build-smart-contracts.md#ink), and Polkadot-related tooling.
+The technology includes but is not limited to independent [Substrate](../general/glossary.md#substrate)
+chains and [ink! development](https://docs.polkadot.com/develop/smart-contracts/), and Polkadot-related tooling.
 Rookies will need to learn these concepts and tools so that they can deliver the tasks required to
 be a Hero.
 

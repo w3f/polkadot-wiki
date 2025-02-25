@@ -23,7 +23,7 @@ guide is not meant to be viewed as financial or investment advice.**
 
 The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This
 usually means that the project is building, or intends to build, on the Polkadot ecosystem, using
-[Substrate](https://substrate.io). But any project can claim that, so the existence of this
+[Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate). But any project can claim that, so the existence of this
 statement on a project's site infers no information about the project's legitimacy, and it's
 certainly not a "seal of approval" by Web3 Foundation.
 
@@ -167,7 +167,7 @@ But if the team are ghosts that do not show up anywhere and only engage with the
 proxies, this can be considered a red flag and extra precaution should be taken.
 
 Besides their community, projects that are serious about building on Polkadot usually engage with
-the [community](./community.md). They are active in the various
+the [community](community.md). They are active in the various
 [Polkadot and Kusama channels](https://wiki.polkadot.network/docs/community/), and some of them are
 [Polkadot Ambassadors](https://polkadot.network/polkadot-ambassador-program/), or generally
 prominent members of the ecosystem.
@@ -182,7 +182,7 @@ Verifying which projects are currently parachains on Kusama can be quickly done 
 [parachains](https://polkadot.js.org/apps/#/parachains) page on
 [polkadot.js.org/apps](https://polkadot.js.org/apps).
 
-But not all projects that build a chain using [Substrate](https://substrate.io) aim to become a
+But not all projects that build a chain using [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) aim to become a
 parachain. Some use it simply because of its infrastructure to build their customised chain, without
 any plans to connect to the relay chain. And other projects may aim to become a parachain only on
 Kusama or directly on Polkadot.

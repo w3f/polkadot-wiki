@@ -7,14 +7,8 @@ keywords: [identity, registrars, judgements]
 slug: ../learn-identity
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
-
-:::info Setting your identity on Polkassembly
-
-You can set your identity using the Polkassembly dApp. Follow
-[these support guides](https://support.polkadot.network/support/solutions/articles/65000187627-how-to-set-your-on-chain-identity-on-polkassembly).
-
-:::
+!!!info "Setting your identity on Polkassembly"
+    You can set your identity using the Polkassembly dApp. Follow [these support guides](https://support.polkadot.network/support/solutions/articles/65000187627-how-to-set-your-on-chain-identity-on-polkassembly).
 
 Polkadot provides a naming system that allows participants to add personal information to their
 on-chain account and subsequently ask for verification of this information by
@@ -78,79 +72,61 @@ provide judgement.
 There are multiple registrars on Polkadot and Kusama. Unless no additional information is available
 here, you must reach out to specific registrars individually if you want to be judged by those.
 
-:::info Decommissioned Registrar Service
+!!!info "Decommissioned Registrar Service"
+    From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity judgement requests. Identities judged by the registrar before that date will not be affected. For new identity judgment, please use the other registrars.
 
-From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept
-any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity
-judgement requests. Identities judged by the registrar before that date will not be affected. For
-new identity judgment, please use the other registrars.
+=== "Polkadot"
 
-:::
+    ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
+    ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ <br /> **Fee**: ~~0 DOT~~ <br />
 
-<!-- prettier-ignore -->
-<Tabs groupId="clients" values={[ {label: 'Polkadot', value: 'polkadot'}, { label: 'Kusama', value: 'kusama'} ]}>
+    Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
+    1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ <br /> **Fee**: 20 DOT <br />
 
-<TabItem value="polkadot">
+    Registrar 2: <br /> **Account**: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB <br /> **Fee**: 0
+    DOT <br />
 
-~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
-~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ <br /> **Fee**: ~~0 DOT~~ <br />
+    Registrar 3: <br /> **Account**: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC <br /> **Fee**:
+    0.5 DOT <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
+    [website](https://polkadot.polkassembly.io/).
 
-Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ <br /> **Fee**: 20 DOT <br />
+    Registrar 4: <br /> **URL**: https://polkaidentity.com/ <br /> **Account**:
+    16LYBUcQKWZjAYE4oAPWx9XFaEYnCAffwpPuPWrUvU1mqBZT <br /> **Fee**: 0.5 DOT <br /> PolkaIdentity
+    (Registrar 4) provides setting on-chain ID as a service on their
+    [website](https://polkaidentity.com/).
 
-Registrar 2: <br /> **Account**: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB <br /> **Fee**: 0
-DOT <br />
+=== "Kusama"
 
-Registrar 3: <br /> **Account**: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC <br /> **Fee**:
-0.5 DOT <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
-[website](https://polkadot.polkassembly.io/).
+    ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
+    ~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
 
-Registrar 4: <br /> **URL**: https://polkaidentity.com/ <br /> **Account**:
-16LYBUcQKWZjAYE4oAPWx9XFaEYnCAffwpPuPWrUvU1mqBZT <br /> **Fee**: 0.5 DOT <br /> PolkaIdentity
-(Registrar 4) provides setting on-chain ID as a service on their
-[website](https://polkaidentity.com/).
+    Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
+    Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn <br /> **Fee**: 4.5 KSM <br />
 
-</TabItem>
-<TabItem value="kusama">
+    Registrar 2: is no longer offering registrar services on Kusama. <br /> **Account**:
+    ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ <br /> **Fee**: ~~1 KSM~~ <br />
 
-~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
-~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
+    Registrar 3: <br /> **Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM <br /> **Fee**: 1
+    KSM <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
+    [website](https://kusama.polkassembly.io/).
 
-Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn <br /> **Fee**: 4.5 KSM <br />
+    Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**:
+    0.04 KSM <br />
 
-Registrar 2: is no longer offering registrar services on Kusama. <br /> **Account**:
-~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ <br /> **Fee**: ~~1 KSM~~ <br />
+    Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**:
+    0.04 KSM <br /> Polkassembly (Registrar 5) provides setting on-chain ID as a service on their
+    [website](https://kusama.polkassembly.io/).
 
-Registrar 3: <br /> **Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM <br /> **Fee**: 1
-KSM <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
-[website](https://kusama.polkassembly.io/).
-
-Registrar 4: <br /> **Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6 <br /> **Fee**:
-0.04 KSM <br />
-
-Registrar 5: <br /> **Account**: F1wAMxpzvjWCpsnbUMamgKfqFM7LRvNdkcQ44STkeVbemEZ <br /> **Fee**:
-0.04 KSM <br /> Polkassembly (Registrar 5) provides setting on-chain ID as a service on their
-[website](https://kusama.polkassembly.io/).
-
-Registrar 6: <br /> **URL**: https://polkaidentity.com/ <br /> **Account**:
-HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**: 0.04 KSM <br /> PolkaIdentity
-(Registrar 6) provides setting on-chain ID as a service on their
-[website](https://polkaidentity.com/).
-
-</TabItem>
-</Tabs>
+    Registrar 6: <br /> **URL**: https://polkaidentity.com/ <br /> **Account**:
+    HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix <br /> **Fee**: 0.04 KSM <br /> PolkaIdentity
+    (Registrar 6) provides setting on-chain ID as a service on their
+    [website](https://polkaidentity.com/).
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the
-[Polkadot-JS guides about account identity](./learn-guides-identity.md).
-
-See also
-[these Polkadot-JS support guides](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity).
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about account identity](./learn-guides-identity.md).
+    
+    See also [these Polkadot-JS support guides](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity).

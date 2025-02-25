@@ -12,32 +12,23 @@ to be the most extensive knowledge resource on the Polkadot and Kusama ecosystem
 material currently focuses on Polkadot and Kusama directly, but is open to covering informational
 material for community projects.
 
-:::caution Marketing material
+!!!caution "Marketing Material"
+      Please do not try to pull request any marketing material as this will be rejected.
 
-Please do not try to pull request any marketing material as this will be rejected.
+Nonetheless, pull requests, discussions, and contributions from the community are encouraged. Active community members who demonstrate a record of good contributions may be given `write` access to the repository.
 
-:::
+Otherwise, the Web3 Foundation holds the administrative position and has the final say on the included content. Specifically, the foundation’s Technical Education team is most directly involved.
 
-Nonetheless, pull requests, discussions, and contributions from the community are encouraged. Active
-community members who demonstrate a record of good contributions may be given `write` access to the
-repository.
+!!!note "Contributing Explainer"
+      Check out the [How to Contribute to the Polkadot Wiki](https://www.youtube.com/watch?v=6i55KOcy7B0)
+      video for steps on contributions.
 
-Otherwise, the Web3 Foundation holds the administrative position and has the final say on the
-included content. Specifically, the foundation’s Technical Education team is most directly involved.
 
-:::note Contributing Explainer
-
-Check out the [How to Contribute to the Polkadot Wiki](https://www.youtube.com/watch?v=6i55KOcy7B0)
-video for steps on contributions.
-
-:::
 
 ## How to Contribute
 
 You can contribute to the wiki on the
-[w3f/polkadot-wiki GitHub repository](https://github.com/w3f/polkadot-wiki). Every page is a
-[MarkDown](https://guides.github.com/features/mastering-markdown/) file, which is an easy-to-learn
-syntax extension to plain text that makes creating links, rendering images, and nice-looking
+[w3f/polkadot-wiki GitHub repository](https://github.com/w3f/polkadot-wiki). Every page is a [MarkDown](https://guides.github.com/features/mastering-markdown/) file, which is an easy-to-learn syntax extension to plain text that makes creating links, rendering images, and nice-looking
 formatting simple.
 
 Each page has an "Edit this page" link at the bottom of the content. By clicking it, you are taken
@@ -51,8 +42,7 @@ the maintainers will review your changes and either merge them or request change
 ![contributing](../assets/contributing.png)
 ![creating-pull-request](../assets/creating-pull-request.png)
 
-Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the
-next page.
+Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the next page.
 
 ![creating-pull-request-2](../assets/creating-pull-request-2.png)
 
@@ -80,25 +70,13 @@ There are a few basic ground rules for contributors:
 
 ## Style Guides
 
-:::info Wiki General Style Guides
+!!!info "Wiki General Style Guides"
+      The style guide from the [Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style) provides general guidelines about how to write your Wiki contribution. See also [the Wiki readme file](https://github.com/w3f/polkadot-wiki?tab=readme-ov-file#contributing-to-documentation).
 
-The style guide from the
-[Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style)
-provides general guidelines about how to write your Wiki contribution. See also
-[the Wiki readme file](https://github.com/w3f/polkadot-wiki?tab=readme-ov-file#contributing-to-documentation).
 
-:::
 
 The Polkadot Wiki is powered by [Docusaurus](https://docusaurus.io/). Docusaurus 3 was a major
-version upgrade that caused [MDX errors](https://docusaurus.io/docs/3.2.1/migration/v3). As a
-general rule, avoid using curly brackets and special characters. If you must use them, for example,
-to get the \<-\> symbol, you can escape the error with a `\`.
-
-Following the Docusaurus 3 upgrade, conditional rendering has been disabled for Kusama and system
-chains. The previously used code for conditional rendering can be accessed
-[here](https://github.com/w3f/polkadot-wiki/blob/master/scripts/injectPlugin.js). Although
-Docusaurus 3 can support conditional rendering, due to practicality, we encourage using `Tabs` and
-`TabItem` formatting if you need to display text for different chains.
+version upgrade that caused [MDX errors](https://docusaurus.io/docs/3.2.1/migration/v3). As a general rule, avoid using curly brackets and special characters. If you must use them, for example, to get the \<-\> symbol, you can escape the error with a `\`.
 
 Avoid using exclamation marks `!` and informal sentences, which are usually more appropriate for
 blog posts. Running a grammar check before submitting your pull request for review can save
@@ -153,7 +131,7 @@ yarn polkadot:start
 The Polkadot Wiki can render chain state values via RPC as shown
 [here](https://github.com/w3f/polkadot-wiki/blob/master/components/RPC-Connection.jsx) and display
 them directly in the docs without the need to recompile or even reload the web app. The rendering of
-on-chain values is reserved only in the [Chain State page](./chain-state-values.md).
+on-chain values is reserved only in the [Chain State page](chain-state-values.md).
 
 See the example for a react component below:
 

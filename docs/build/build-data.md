@@ -13,15 +13,15 @@ aggregation layer.
 
 ## Custom Indexer
 
-### Subsquid
+### SQD
 
-[Subsquid](https://subsquid.io/) is an open-source framework for building tailored GraphQL APIs to
+[SQD](https://subsquid.io/) is an open-source framework for building tailored GraphQL APIs to
 query Substrate chain state and history.
 
-Subsquid replaces direct gRPC node access with performant Squid archive gateways, allowing quick
+SQD replaces direct gRPC node access with performant Squid archive gateways, allowing quick
 synchronization of the API with the historical on-chain data.
 
-Subsquid-powered APIs support filtering, pagination, union types, interfaces, and full-text search
+SQD-powered APIs support filtering, pagination, union types, interfaces, and full-text search
 out-of-the-box, and can be further extended with custom GraphQL resolvers.
 
 ### SubQuery
@@ -77,4 +77,4 @@ As you can imagine, blockchain explorers also offer data analytics through an in
 can examine common data points.
 
 Some block explorers in the Polkadot ecosystem are listed on the
-[tools page](build-tools-index.md##block-explorers).
+[tools page](build-tools-index.md#block-explorers).

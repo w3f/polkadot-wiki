@@ -7,7 +7,7 @@ keywords: [coretime, blockspace, parachain, on-demand, cores, multi-threading, s
 slug: ../learn-agile-coretime
 ---
 
-import DocCardList from '@theme/DocCardList';
+
 
 [Scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>) is the process of assigning
 tasks or jobs to resources (like CPU cores) at specific times or under certain conditions. Effective
@@ -31,7 +31,7 @@ among them.
 Polkadot achieves multi-threading by [splitting and interlacing](#splitting-and-interlacing)
 Coretime.
 
-<DocCardList />
+<!-- TODO: INDEX CARDS -->
 
 ## Introduction to Agile Coretime
 
@@ -90,12 +90,8 @@ Previously known as instantaneous coretime, the on-demand coretime refers to cor
 through bidding in near real-time for the validation of a single parachain block on one of the cores
 reserved specifically for on-demand orders.
 
-:::info Parathreads are renamed to on-demand parachains
-
-On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and
-use it to access the relay chain through the on-demand coretime pool.
-
-:::
+!!!info "Parathreads are renamed to on-demand parachains"
+    On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and use it to access the relay chain through the on-demand coretime pool.
 
 ### On-demand Coretime Pool
 
@@ -140,9 +136,9 @@ periods: the Renewal period and the Sale period.
   renewed.
 - Sale periods are as well divided into two periods: a Price Discovery period and a Fixed Price
   period. After the Renewal period, a new `start_price` will be set by the Coretime Chain and a
-  dutch auction of `leadin_length` blocks will start, putting downward pressure on price to find the
-  right equilibrium. This process will set the `regular_price` which will be the one offered at the
-  Fixed Price period.
+  dutch auction of `leadin_length` blocks will start, putting downward pressure on price to find
+  the right equilibrium. This process will set the `regular_price` which will be the one offered at
+  the Fixed Price period.
 
 This discussion on initial coretime pricing can be viewed
 [here](https://forum.polkadot.network/t/initial-coretime-pricing/5187)
@@ -407,13 +403,8 @@ the relay chain side’s cores and how many cores a parachain uses.
 
 ### Implementation
 
-:::caution Unable to use multiple cores!
-
-The coretime chain does not prohibit ordering multiple cores and assigning them to the same
-parachain. However, elastic scaling is still in the works **so don't do this, you will not be able
-to use those cores.**
-
-:::
+!!!caution "Unable to use multiple cores!"
+    The coretime chain does not prohibit ordering multiple cores and assigning them to the same parachain. However, elastic scaling is still in the works **so don't do this, you will not be able to use those cores.**
 
 #### What do I need to do for my parachain to continue working in the switch to coretime?
 

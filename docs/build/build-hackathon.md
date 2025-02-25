@@ -85,7 +85,7 @@ Here are a few examples of hackathons W3F has facilitated and supported:
 
 ## Resources
 
-- [Substrate Docs](https://docs.substrate.io/) - many introductory learning material lives here,
+- [Polkadot Docs](https://docs.polkadot.com/) - many introductory learning material lives here,
   that can be a feature of you hackathon or suggested prerequisite for those joining to use.
 
 ## Support / Contact

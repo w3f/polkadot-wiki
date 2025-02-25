@@ -1,0 +1,7 @@
+title: Polkadot Dashboards
+nav:
+  - 'Overview': polkadot-dashboards-overview.md
+  - 'Governance': polkadot-dashboards-governance.md
+  - 'Staking': polkadot-dashboards-staking.md
+  - 'Network': polkadot-dashboards-network.md
+  - ...

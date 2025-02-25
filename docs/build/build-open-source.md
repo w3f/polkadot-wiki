@@ -9,11 +9,8 @@ slug: ../build-open-source
 
 # Open Source Polkadot Stack <!-- omit in toc -->
 
-:::caution Do your research before using open-source tools
-
-The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
-
-:::
+!!!caution "Do your research before using open-source tools"
+    The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
 
 This page aims to provide an overview of the open-source Polkadot Tech Stack.
 
@@ -22,21 +19,6 @@ it. [**Please feel free to make edits and additions via pull requests**](#contri
 apologize if we missed your project!
 
 ---
-
-- [About](#about)
-- [Layers of Polkadot Stack](#layers-of-polkadot-stack)
-  - [Wallets](#wallets)  
-  - [User Interface](#user-interface)
-  - [Tools, APIs, and Languages](#tools-apis-and-languages)
-  - [ink! Smart Contracts](#ink-smart-contracts)
-  - [Chains and Pallets](#chains-and-pallets)
-  - [Host](#host)
-  - [Network Maintenance Tools](#network-maintenance-tools)
-  - [Signatures](#signatures)
-  - [Consensus](#consensus)
-  - [Networking](#networking)
-  - [Primitives](#primitives)
-- [Contributing](#contributing)
 
 ## About
 
@@ -140,7 +122,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Local Nodes         | [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) 🟡, [Swanky](https://github.com/swankyhub/swanky-cli) ⚪|                                    |
 | Smart Contract Development | [DRink!](https://github.com/Cardinal-Cryptography/drink) 🟡, [contracts-ui](https://github.com/paritytech/contracts-ui) ⚪, [SmartBeaver](https://github.com/Smart-Beaver), [OpenBrush](https://github.com/h4nsu/openbrush-contracts) :grey_question:, [Sol2Ink](https://github.com/727-Ventures/sol2ink) ⚪, [Polkadot Contract Wizard](https://github.com/protofire/polkadot-contract-wizard) ⚪, [ink-wrapper](https://github.com/Cardinal-Cryptography/ink-wrapper) ⚪, [ink-playground](https://github.com/paritytech/ink-playground) ⚪, [ink! Remix Plugin](https://github.com/blockchain-it-hr/ink-remix-plugin) ⚪, [Signac](https://github.com/standardweb3/signac/) ⚪, [ink!-boxes](https://github.com/avirajkhare00/ink-boxes/) ⚪, [ink!-smart-contract-wizard](https://github.com/avirajkhare00/ink-wizard) ⚪|
 | Security & Testing         | [ink! Waterfall](https://github.com/paritytech/ink-waterfall) ⚪, [Verifier Image for ink!](https://github.com/web3labs/ink-verifier-image) ⚪, [Patron](https://github.com/Brushfam/patron-backend/) ⚪, [Inkscope Fuzzer](https://github.com/inkscopexyz/inkscope-fuzzer) ⚪|                                    |
-| Frontend Development         | [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) 🟡, [useink](https://github.com/paritytech/useink) ⚪, [useInkathon](https://github.com/scio-labs/use-inkathon) 🟡, [ink-typegen](https://github.com/subsquid/squid-sdk/tree/master/substrate/ink-typegen) 🟢, [Typechain Polkadot](https://github.com/Brushfam/typechain-polkadot) ⚪|                                    |
+| Frontend Development         | [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) 🟡, [useink](https://github.com/paritytech/useink) ⚪, [useInkathon](https://github.com/scio-labs/use-inkathon) 🟡, [ink-typegen](https://github.com/subsquid/squid-sdk/tree/master/substrate/ink-typegen) 🟢, [Typechain Polkadot](https://github.com/Brushfam/typechain-polkadot) ⚪, [Typink!](https://github.com/dedotdev/typink) 🟢|                                    |
 | IDE Plugins         | [ink! Analyzer](https://github.com/ink-analyzer/ink-analyzer) 🟢|                                    |
 | Bridges         | [Dante Protocol](https://github.com/dantenetwork/protocol-stack-for-ink) ⚪|                                    |
 | DeFi            | [Pendulum-Ink-Wrapper](https://github.com/pendulum-chain/pendulum-ink-wrapper) ⚪, [Panorama Swap](https://github.com/RottenKiwi/Panorama-Swap-INK-SC) ⚪, [ink_bank](https://github.com/Juminstock/ink_bank) ⚪, [Polkadot AMM](https://github.com/realnimish/polkadot-amm) ⚪, [Vera](https://github.com/veradefi/defi) ⚪, [Nsure Insurance](https://github.com/nsure-tech/dot-contract) :grey_question:, [Everlasting Cash](https://github.com/CycanTech/ELC) ⚪, [Coinversation](https://github.com/Coinversation/coinpro) ⚪, [zenlink-dex-contract](https://github.com/zenlinkpro/zenlink-dex-contract) ⚪, [AlgoCash](https://github.com/ReserveLabs/AlgoCash) ⚪| New seigniorage-style stable coins |
@@ -253,6 +235,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | ------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | Storage             | [Merkle Tree DB](https://github.com/frisitano/merkle-tree-db) ⚪|                                  |
 | Merkle Proofs       | [Solidity Trie Verifier](https://github.com/polytope-labs/solidity-merkle-trees) 🟡| |
+
 ## Contributing
 
 Pull requests, issues, or other contributions from the community are encouraged! You can not only

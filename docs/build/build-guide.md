@@ -7,8 +7,6 @@ keywords: [build, how to build, develop, parachain, smart contract]
 slug: ../build-guide
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
-
 Polkadot is a blockchain network protocol that provides **shared security** among all connected
 parachains and allowing all connected tasks to **interoperate** by using
 [XCM](../learn/learn-xcm.md).
@@ -20,13 +18,10 @@ chain has dropped significantly. Depending on your goals, it may only take weeks
 This starters guide will walk you through the steps you can take today to get started building your
 vision with Polkadot. It will also point to resources you can use to start building immediately.
 
-:::note For Developers!
-
-Please note that the following documentation is more geared towards developers. If you are looking
-for more general knowledge related to Polkadot, be sure to check out the
-[Learn](../docs/learn-index) section.
-
-:::
+!!!note For Developers!
+    Please note that the following documentation is more geared towards developers. If you are looking
+    for more general knowledge related to Polkadot, be sure to check out the
+    [Learn](../learn/index.md) section.
 
 This build guide covers three different areas, taking a **top-down** approach from protocol
 development to user-facing applications:
@@ -38,13 +33,10 @@ development to user-facing applications:
 2. [Smart Contract Development - How Polkadot handles smart contracts](#developing-smart-contracts)
 3. [dApp Development - The tools available for dApp development on Polkadot](#developing-a-dapp)
 
-:::tip Keep reading to find out more, or explore each respective area
-
-Keep in mind that these areas are merely suggestive, and there are many ways to utilize Polkadot,
-Substrate, and their various developmental components. For more inspiration, look at the
-[open source projects](./build-open-source.md) featured here in the wiki!
-
-:::
+!!!tip "Keep reading to find out more, or explore each respective area"
+    Keep in mind that these areas are merely suggestive, and there are many ways to utilize Polkadot,
+    Substrate, and their various developmental components. For more inspiration, look at the
+    [open source projects](./build-open-source.md) featured here in the wiki!
 
 ## Development Ecosystem Overview
 
@@ -119,33 +111,27 @@ More elaborate (or simpler) tasks could be constructed in the future.
 
 ![build 1](../assets/build-1.png)
 
-:::info
-
-Throughout this document, you may encounter the term **runtime** or **STF (State Transition
-Function)**. Both refer to the same concept, as they define how a particular system, i.e., a
-blockchain, should deal with state changes externally and internally. Both of these terms are used
-extensively in Polkadot and Substrate.
-
-:::
+!!!info
+    Throughout this document, you may encounter the term **runtime** or **STF (State Transition
+    Function)**. Both refer to the same concept, as they define how a particular system, i.e., a
+    blockchain, should deal with state changes externally and internally. Both of these terms are used
+    extensively in Polkadot and Substrate.
 
 Parachains built through the Polkadot SDK, open possibilities to construct complex **runtime**, or
 **STF** (state transition function) the logic that would be too expensive to execute with smart
 contracts. However, unlike smart contracts, parachains lack a mandatory gas metering system entirely
 and could potentially be vulnerable to bugs that cause infinite loops (something that is prevented
 by design in smart contracts). This vulnerability is mitigated by the
-[weight system](https://docs.substrate.io/build/tx-weights-fees/) that is implemented in Substrate
+[weight system](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/) that is implemented in Substrate
 -- although it places more of a burden on the developer of the parachain to perform properly
 benchmarks.
 
-:::info What is an on-demand parachain?
-
-On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
-relay chain. On-demand parachains will only produce a block when needed, unlike full parachains,
-which have access to bulk coretime to produce a block at every block of the relay chain. When
-building an on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of
-building a parachain without the cost drawback of purchasing bulk coretime.
-
-:::
+!!!info "What is an on-demand parachain?"
+    On-demand parachains use a "pay-as-you-go" model enabled by Agile Coretime to interact with the
+    relay chain. On-demand parachains will only produce a block when needed, unlike full parachains,
+    which have access to bulk coretime to produce a block at every block of the relay chain. When
+    building an on-demand parachain, you will use the same tools (like PDKs) and get all the benefits of
+    building a parachain without the cost drawback of purchasing bulk coretime.
 
 ### Polkadot SDK Overview
 
@@ -188,16 +174,13 @@ Substrate. Substrate can be used to create new paradigms and abstractions. One s
 [Open Runtime Module Library (ORML)](https://github.com/open-web3-stack/open-runtime-module-library),
 which is another way of creating and using runtime modules.
 
-:::note
+!!!note
+    Although most parachains utilize FRAME and Substrate to build runtime/STFs for connecting to the
+    relay chain, it is not contingent. Building a parachain using other tools is possible if they follow
+    the [Parachains Protocol](../learn/learn-parachains-protocol.md).
 
-Although most parachains utilize FRAME and Substrate to build runtime/STFs for connecting to the
-relay chain, it is not contingent. Building a parachain using other tools is possible if they follow
-the [Parachains Protocol](../learn/learn-parachains-protocol.md).
-
-As a general rule of thumb, Substrate provides the means for this to become possible through
-comparably minimal effort.
-
-:::
+    As a general rule of thumb, Substrate provides the means for this to become possible through
+    comparably minimal effort.
 
 #### Building Parachains with Cumulus
 
@@ -265,18 +248,15 @@ quick comparison of how building a smart contract compares to building a paracha
 | Native chain features   | +          | -               |
 | Scalability             | +          | -               |
 
-:::info What's the difference between a smart contract and a pallet?
+!!!info What's the difference between a smart contract and a pallet?
+    If you recall, a parachain comprises a runtime/STF usually built on Substrate. These runtime/STFs
+    often utilize FRAME, which is subsequently made of pallets. Pallets are part of a Substrate
+    runtime/STF, whereas smart contracts are a product of a pallet (see:
+    [pallet_contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html)).
+    Pallets require more engineering and thought, as they can directly affect the chain's state.
 
-If you recall, a parachain comprises a runtime/STF usually built on Substrate. These runtime/STFs
-often utilize FRAME, which is subsequently made of pallets. Pallets are part of a Substrate
-runtime/STF, whereas smart contracts are a product of a pallet (see:
-[pallet_contracts](https://paritytech.github.io/substrate/master/pallet_contracts/index.html)).
-Pallets require more engineering and thought, as they can directly affect the chain's state.
-
-For a more comprehensive (and maintained) comparison, be sure to check out the
-[comparison from the Polkadot SDK documentation](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/runtime_vs_smart_contract/index.html).
-
-:::
+    For a more comprehensive (and maintained) comparison, be sure to check out the
+    [comparison from the Polkadot SDK documentation](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/runtime_vs_smart_contract/index.html).
 
 ### ink! and EVM-based Smart Contracts
 
@@ -285,17 +265,14 @@ callable by external actors. Whether it's [EVM-based](https://polkadot-evm.githu
 written using [ink!](https://use.ink/), smart contracts are sandboxed, executable programs that live
 on-chain.
 
-:::note
-
-_The Polkadot relay chain does not support smart contracts._ However, several parachains do. See the
-[smart contracts guide](build-smart-contracts.md#parachains) for the exact chains in which you can
-deploy contracts on Polkadot.
-
-:::
+!!!note
+    _The Polkadot relay chain does not support smart contracts._ However, several parachains do. See the
+    [smart contracts guide](build-smart-contracts.md#parachains) for the exact chains in which you can
+    deploy contracts on Polkadot.
 
 A Polkadot-native choice for smart contracts is [ink!](https://use.ink/). Other parachains that
 offer EVM-based contracts written in Solidity alongside ink!
-[are also available](./build-smart-contracts#parachains).
+[are also available](../build/build-smart-contracts.md#parachains).
 
 Because smart contracts exist on a single chain at a time, they can have smooth interoperability
 with other smart contracts on the same chain. However, they will always be constrained and limited
@@ -306,12 +283,9 @@ ensure that gas usage stays within reasonable bounds. Consider using the listed 
 [decentralized storage](build-storage.md) page to keep the data and submit only the content address
 on the chain.
 
-:::info Building a smart contract
-
-Please see the [smart contracts guide](build-smart-contracts.md) for how to get started on building
-a smart contract.
-
-:::
+!!!info Building a smart contract
+    Please see the [smart contracts guide](build-smart-contracts.md) for how to get started on building
+    a smart contract.
 
 ## Developing a dApp
 
@@ -322,10 +296,10 @@ For front-end applications, several options exist for interfacing with Substrate
 (parachains, relay chains, etc.) and smart contracts. These often will interact with the RPC of a
 Substrate node.
 
-[Please visit the documentation for developing dApps and other general client-side development resources.](build-dapp)
+[Please visit the documentation for developing dApps and other general client-side development resources.](../build/build-dapp.md)
 
 For a complete list of tools, please take a look here:
-[Tools, APIs, and Languages](build-open-source.md)
+[Tools, APIs, and Languages](../build/build-open-source.md)
 
 ## Resources
 

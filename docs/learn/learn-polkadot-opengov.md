@@ -8,21 +8,23 @@ slug: ../learn-polkadot-opengov
 ---
 
 import VLTable from "./../../components/Voluntary-Locking"; import Fellowship from
-"./../../components/Fellowship"; import MessageBox from "../../components/MessageBox"; import
-"../../components/MessageBox.css";
+"./../../components/Fellowship";
 
-<MessageBox message="Before voting or delegating in Polkadot OpenGov, get familiar with [balances and locks](./learn-account-balances#locks)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Before voting or delegating in Polkadot OpenGov, get familiar with
+    <a href="./learn-account-balances#locks" target="_blank" rel="noopener noreferrer">
+      balances and locks.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-:::caution The content in this document is subject to change
-
-The governance protocol has already undergone iterations (see
-[Governance V1](./archive/learn-governance.md)). Governance is a constantly evolving protocol at
-this stage in its lifecycle.
-
-For additional support about Polkadot OpenGov, see the
-[dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
-
-:::
+!!!caution "The content in this document is subject to change"
+    The governance protocol has already undergone iterations (see [Governance V1](./archive/learn-governance.md)). Governance is a constantly evolving protocol at this stage in its lifecycle.
+    
+    For additional support about Polkadot OpenGov, see the [dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
 the ultimate behest of its assembled stakeholders. The goal is to ensure that most of the stake can
@@ -80,12 +82,8 @@ network, Polkadot OpenGov proposes the following main changes:
 
 The figure below shows an overview of Polkadot OpenGov's structure.
 
-:::info
-
-See [this page](./archive/learn-governance.md#summary) for a comparison with the structure of
-Governance V1.
-
-:::
+!!!info
+    See [this page](./archive/learn-governance.md#governance-summary) for a comparison with the structure of Governance V1.
 
 ![opengov-overview](../assets/opengov-overview.png)
 
@@ -100,7 +98,7 @@ need to be submitted to the Small Tipper track, while a proposal requiring subst
 need to be submitted to the Medium or Big Spender track.
 
 The [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md) can decide to
-[whitelist](#whitelisting) a proposal that will be enacted through the Whitelist Caller origin.
+[whitelist](./learn-polkadot-technical-fellowship.md#whitelisting) a proposal that will be enacted through the Whitelist Caller origin.
 Those proposals will have a shorter Lead-in, Confirmation, and Enactment period when compared to the
 Root Origin track.
 
@@ -137,31 +135,23 @@ up-to-date with governance matters and can still make their votes count through 
 
 ## Referenda
 
-:::info Public and Council Referenda in Governance v1
-
-With the Council's dissolution, [council referenda](./archive/learn-governance.md#council-referenda)
-are no longer present in Polkadot OpenGov.
+!!!info "Public and Council Referenda in Governance v1"
+    With the Council's dissolution, [council referenda](./archive/learn-governance.md#council-referenda) are no longer present in Polkadot OpenGov.
 
 See [this page](./archive/learn-governance.md#public-referenda) for more information about public
 referenda in Governance v1.
-
-:::
 
 **In Polkadot OpenGov all referenda are public.** Anyone can start a referendum at any time and do
 so as often as they wish. Previous features were expanded and improved, most notably
 [**Origins and Tracks**](#origins-and-tracks) help facilitate the flow and processing of the
 submitted referenda. The [Technical Fellowship](./learn-polkadot-technical-fellowship.md) has the
-option to [whitelist](#whitelisting) referenda that can be then proposed in the track with
+option to [whitelist](./learn-polkadot-technical-fellowship.md#whitelisting) referenda that can be then proposed in the track with
 [whitelist origin](./learn-polkadot-opengov-origins.md#whitelisted-caller).
 
 ### Referenda Timeline
 
-:::info Voting timetable in Governance v1
-
-See [this page](./archive/learn-governance.md#referenda-timeline) for more information about the
-voting timetable in Governance v1.
-
-:::
+!!!info "Voting timetable in Governance v1"
+    See [this page](./archive/learn-governance.md#referenda-timeline) for more information about the voting timetable in Governance v1.
 
 ![opengov-timeline](../assets/opengov-timeline.png)
 
@@ -186,15 +176,8 @@ three criteria:
   referenda queue. Having a more significant but refundable deposit requirement makes sense to help
   mitigate spam. Failing to submit the decision deposit will lead to a referendum _timeout_.
 
-:::info Decision Deposit Amounts
-
-In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision
-Period. The number of tokens required for the Decision Deposit depends on the track’s privilege
-level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on
-the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda
-on the Root track can inflict more significant harm, such as changing the entire network's runtime.
-
-:::
+!!!info "Decision Deposit Amounts"
+    In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the track’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda on the Root track can inflict more significant harm, such as changing the entire network's runtime.
 
 Until they are in the lead-in period, proposals remain undecided. Once the criteria above are met,
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
@@ -242,13 +225,8 @@ include:
   before the proposal is approved and moved to the enactment period. The confirmation period should
   start before the end of the decision period.
 
-:::info Example Scenario of an Edge Case
-
-A referendum may enter the confirmation period just one block before the decision period ends. In
-this scenario, the referendum will pass if it satisfies approval and support thresholds for the
-minimum confirmation period (track-dependent).
-
-:::
+!!!info "Example Scenario of an Edge Case"
+    A referendum may enter the confirmation period just one block before the decision period ends. In this scenario, the referendum will pass if it satisfies approval and support thresholds for the minimum confirmation period (track-dependent).
 
 - **Voting Period**: The period in which voting is allowed on a referendum, which includes
   preparation, decision, and confirmation periods.
@@ -272,14 +250,8 @@ For detailed information about origin and tracks, and parameter values in Kusama
 
 ### Voluntary Locking (Conviction Voting)
 
-:::info Conviction Voting Locks created during Gov 1
-
-Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction
-in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any
-existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire.
-Delegations under Governance v1 will need to be re-issued under OpenGov.
-
-:::
+!!!info "Conviction Voting Locks created during Gov 1"
+    Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire. Delegations under Governance v1 will need to be re-issued under OpenGov.
 
 Polkadot utilizes an idea called voluntary locking that allows token holders to increase their
 voting power by declaring how long they are willing to lock up their tokens; hence, the number of
@@ -314,24 +286,13 @@ Kevin: Votes `Yes` with 15 DOT for a 2-week lock period => 15 x 2 = 30 Votes
 Even though both Logan and Kevin vote with more DOT than Peter, the lock period for both of them is
 less than Peter’s, leading to their voting power counting as less.
 
-:::info Staked tokens can be used in governance
-
-While the tokens are locked, you can still use them for voting and [staking](./learn-staking.md).
-You are only prohibited from transferring these tokens to another account. **See the section about
-[OpenGov locks](#voting-on-a-referendum), and learn more about locks on the
-[Balances page](./learn-account-balances.md#locks).**
-
-:::
+!!!info "Staked tokens can be used in governance"
+    While the tokens are locked, you can still use them for voting and [staking](./learn-staking.md). You are only prohibited from transferring these tokens to another account. **See the section about [OpenGov locks](#voting-on-a-referendum), and learn more about locks on the [Balances page](./learn-account-balances.md#locks).**
 
 ### Approval and Support
 
-:::info Adaptive Quorum Biasing is deprecated
-
-In Polkadot OpenGov,
-[Adaptive quorum biasing](./archive/learn-governance.md#adaptive-quorum-biasing) used in Governance
-V1 has been replaced with the **Approval and Support system**.
-
-:::
+!!!info "Adaptive Quorum Biasing is deprecated"
+    In Polkadot OpenGov, [Adaptive quorum biasing](./archive/learn-governance.md#adaptive-quorum-biasing) used in Governance V1 has been replaced with the **Approval and Support system**.
 
 ![opengov-curves-pass](../assets/opengov-curves-pass.png)
 
@@ -341,7 +302,7 @@ Decision Period.
 Once the proposal exits the Lead-in Period and enters the Voting Period, to be approved, it must
 satisfy the approval and support criteria for the **Confirmation Period**.
 
-- **Approval** is defined as the share of [conviction](#voluntary-locking)-weighted _aye_ votes
+- **Approval** is defined as the share of [conviction](#voluntary-locking-conviction-voting)-weighted _aye_ votes
   against the conviction-weighted total of _aye_ and _nay_ votes. The code implementation can be
   viewed
   [here](https://github.com/paritytech/polkadot-sdk/blob/f2fbba3be1d7deaf7cfc731cea00552c212ddfcf/substrate/frame/conviction-voting/src/types.rs#L77)
@@ -363,18 +324,8 @@ referendum. Now, let us calculate the Approval and Support values for that refer
 - Support is calculated as (Aye + Abstain) / (total active issuance), where "Aye" and "Abstain" are
   the votes without the conviction multiplier. Hence, Support = (10 + 20) / 100 which is 30%.
 
-:::info Nay votes are not counted towards Support
-
-Support is a measure of voters who turned out either in favor of the referenda or consciously
-abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_
-votes could push a referendum into a confirming state. For example, imagine current approval is high
-(near 100%, way above the approval curve), and current support is just below the support curve. A
-_nay_ could bump support above the support curve but not reduce approval below the approval curve.
-Therefore, someone voting against a proposal would make it pass. Hence, a decrease in % of current
-approval through new votes does not directly translate into increasing support because Support needs
-to consider _nay_ votes.
-
-:::
+!!!info "Nay votes are not counted towards Support"
+    Support is a measure of voters who turned out either in favor of the referenda or consciously abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_ votes could push a referendum into a confirming state. For example, imagine current approval is high (near 100%, way above the approval curve), and current support is just below the support curve. A _nay_ could bump support above the support curve but not reduce approval below the approval curve. Therefore, someone voting against a proposal would make it pass. Hence, a decrease in % of current approval through new votes does not directly translate into increasing support because Support needs to consider _nay_ votes.
 
 The figure above shows the following:
 
@@ -413,12 +364,8 @@ amount earlier than those which use highly privileged classes such as `Root`.
 
 ### Enactment
 
-:::info Enactment in Governance v1
-
-See [this page](./archive/learn-governance.md#enactment) for more information about enactment in
-Governance v1.
-
-:::
+!!!info "Enactment in Governance v1"
+    See [this page](./archive/learn-governance.md#enactment) for more information about enactment in Governance v1.
 
 In Polkadot OpenGov, the proposer suggests the enactment period, but there is also a minimum set for
 each Origin Track. For example, `root` Origin approvals require an extended period because of the
@@ -426,12 +373,8 @@ importance of the changes they bring to the network.
 
 ### Cancelling, Killing & Blacklisting
 
-:::info Cancelling Referenda in Governance v1
-
-See [this page](./archive/learn-governance.md#cancelling-proposals) for more information about
-cancelling referenda in Governance v1.
-
-:::
+!!!info "Cancelling Referenda in Governance v1"
+    See [this page](./archive/learn-governance.md#cancelling-proposals) for more information about cancelling referenda in Governance v1.
 
 Polkadot OpenGov has two origins dedicated to rejecting ongoing referenda:
 [Referendum Canceller](./learn-polkadot-opengov-origins.md#referendum-canceller) and
@@ -454,14 +397,10 @@ attempting to slash deposits of good referenda. A subsequent Referendum Killer c
 Referendum Killer.
 
 For more information about how to cancel or kill a referendum, see the
-[advanced how-to guides](./learn-guides-polkadot-opengov#cancel-or-kill-a-referendum).
+[advanced how-to guides](./learn-guides-polkadot-opengov.md#cancel-or-kill-a-referendum).
 
-:::info Blacklisting
-
-Blacklisting referenda in Polkadot OpenGov is
-[the same as in Governance v1](./archive/learn-governance.md#blacklisting-proposals).
-
-:::
+!!!info "Blacklisting"
+    Blacklisting referenda in Polkadot OpenGov is [the same as in Governance v1](./archive/learn-governance.md#blacklisting-proposals).
 
 ## Voting on a Referendum
 
@@ -473,12 +412,8 @@ additionally cast a _abstain_ and _split_ votes.
 different votes for _aye_, _nay_, and _abstain_. Voting with conviction is not possible when
 abstaining or splitting the votes.
 
-:::info Only the last vote counts
-
-Voting a second time replaces your original vote, e.g. voting with 10 DOT, then a second extrinsic
-to vote with 5 DOT, means that you are voting with 5 DOT, not 10 DOT.
-
-:::
+!!!info "Only the last vote counts"
+    Voting a second time replaces your original vote, e.g. voting with 10 DOT, then a second extrinsic to vote with 5 DOT, means that you are voting with 5 DOT, not 10 DOT.
 
 Note that to successfully cast votes you need to have the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping) and some additional funds
@@ -495,13 +430,8 @@ side.
 
 ![voting-locks-1](../assets/voting-locks-1.png)
 
-:::info Revoke your delegation on a track if you like to vote on your own
-
-If you want to vote on a referendum on a specific track on your own, you will need to revoke any
-existing [delegation](#multirole-delegation) on that track (i.e. undelegate). You can have a
-conviction lock on the track, but you cannot have an active delegation.
-
-:::
+!!!info "Revoke your delegation on a track if you like to vote on your own"
+    If you want to vote on a referendum on a specific track on your own, you will need to revoke any existing [delegation](#multirole-delegation) on that track (i.e. undelegate). You can have a conviction lock on the track, but you cannot have an active delegation.
 
 ### Voting Without Conviction
 
@@ -575,16 +505,11 @@ be unlocked.
 
 ![delegation-locks-2](../assets/delegation-locks-2.png)
 
-:::info
-
-If the account delegated votes to different delegates using different convictions, then after
-undelegating those delegates, there will be different unlocking periods with lengths dependent on
-the conviction multipliers.
+!!!info
+    If the account delegated votes to different delegates using different convictions, then after undelegating those delegates, there will be different unlocking periods with lengths dependent on the conviction multipliers.
 
 **Before delegating a specific track, you must remove any [vote](#voting-on-a-referendum) on that
 track.**
-
-:::
 
 It is worth noting that a user delegating their voting power does not imply that the delegate will
 have control over the funds of the delegating user's account. That delegate's account can vote with
@@ -607,9 +532,5 @@ entities.
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the
-[Polkadot-JS guides about OpenGov](./learn-guides-polkadot-opengov.md).
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about OpenGov](./learn-guides-polkadot-opengov.md).

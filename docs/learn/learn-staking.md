@@ -7,38 +7,23 @@ keywords: [staking, stake, nominate, nominating, NPoS, faq]
 slug: ../learn-staking
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Nomination Pools are evolving! Soon you'll be able to participate in a pool and in OpenGov with your pooled funds! You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check
+    <a href="https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation" target="_blank" rel="noopener noreferrer">
+      this article
+    </a>
+    on the actions you need to take as soon as possible. 
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="<b>Nomination Pools are evolving!</b>
-Soon you'll be able to participate in a pool and in OpenGov with your pooled funds!
-You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check [<b>this article</b>](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) on the actions you need to take as soon as possible." />
+!!!tip "New to Staking?"
+    Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey or explore more information about staking on [Polkadot's Staking Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
 
-:::tip New to Staking?
-
-Explore Polkadot with a secure and user-friendly wallets listed on the
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey
-or explore more information about staking on
-[Polkadot's Staking Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and
-check this
-[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and
-does not require an extension or wallet as an interface.
-
-:::
-
-:::info Stake through Nomination Pools
-
-The minimum amount required to become an active nominator (i.e.
-[the minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards
-may change from era to era. If you have less tokens than the minimum active nomination and still
-want to participate in staking, you can join the nomination pools with a
-[minimal bond](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool) and earn
-staking rewards. For additional information, check out
-[this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
-
-:::
+!!!info "Stake through Nomination Pools"
+    The minimum amount required to become an active nominator (i.e. [the minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [minimal bond](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 Here you will learn about what staking is, why it is important, and how it works.
 
@@ -104,15 +89,8 @@ nominator. Note that in NPoS the stake of both nominators and validators can be
 [slashed](./learn-offenses.md). For an in-depth review of NPoS see
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
-:::caution Minimum Nomination to Receive Staking Rewards
-
-[The minimum nomination intent](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
-does not guarantee staking rewards. The nominated amount has to be greater than
-[minimum active nomination](../general/chain-state-values.md#minimum-active-bond), which is a
-dynamic value that can be much higher than the minimum nomination intent. This dynamic value depends
-on the amount of tokens being staked, in addition to the selected nominations.
-
-:::
+!!!caution "Minimum Nomination to Receive Staking Rewards"
+    [The minimum nomination intent](../general/chain-state-values.md#minimum-bond-to-participate-in-staking) does not guarantee staking rewards. The nominated amount has to be greater than [minimum active nomination](../general/chain-state-values.md#minimum-active-bond), which is a dynamic value that can be much higher than the minimum nomination intent. This dynamic value depends on the amount of tokens being staked, in addition to the selected nominations.
 
 ### Nominating Validators
 
@@ -215,14 +193,8 @@ beginner and would like to securely stake your tokens using the Polkadot-JS UI, 
 support article. The tutorial presented in the support article is demonstrated on Polkadot, but the
 procedure is the same for Kusama.
 
-:::info Polkadot Staking Dashboard
-
-The [Staking Dashboard](https://staking.polkadot.cloud/dashboard/#/overview) provides a more
-user-friendly alternative to staking. See the instructions in
-[this](https://support.polkadot.network/support/solutions/articles/65000182133-how-to-use-the-staking-dashboard-staking-your-dot)
-support article to learn how to stake with the dashboard.
-
-:::
+!!!info "Polkadot Staking Dashboard"
+    The [Staking Dashboard](https://staking.polkadot.cloud/dashboard/#/overview) provides a more user-friendly alternative to staking. See the instructions in [this](https://support.polkadot.network/support/solutions/articles/65000182133-how-to-use-the-staking-dashboard-staking-your-dot) support article to learn how to stake with the dashboard.
 
 **Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking,
 without sacrificing Polkadot's strict security model.
@@ -271,25 +243,13 @@ validator in the active set is supposed to be fully online and available for pro
 the active validator node goes offline due to network interruptions or a power outage, that
 validator will get fewer rewards.
 
-:::tip Checking Validators using Network Providers
-
-You can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will
-show your rewards earned in the past 60 eras divided by network provider and country. You will be
-able to see networks used by each validator and verify if your validators are using providers who
-support PoS. This is also a great tool to explore how decentralized your nominations are and act
-accordingly.
-
-:::
+!!!tip "Checking Validators using Network Providers"
+    You can connect your stash account to the [Polkawatch app](https://polkawatch.app/). The app will show your rewards earned in the past 60 eras divided by network provider and country. You will be able to see networks used by each validator and verify if your validators are using providers who support PoS. This is also a great tool to explore how decentralized your nominations are and act accordingly.
 
 #### Keeping Track of Nominated Validators
 
-:::caution Nominators must periodically check their validators
-
-Nominating is _not_ a "set and forget" operation. The whole NPoS system is dynamic and nominators
-should periodically monitor the performance and reputation of their validators. Failing to do so
-could result in applied slashes and/or rewards not being paid out, possibly for a prolonged period.
-
-:::
+!!!caution "Nominators must periodically check their validators"
+    Nominating is _not_ a "set and forget" operation. The whole NPoS system is dynamic and nominators should periodically monitor the performance and reputation of their validators. Failing to do so could result in applied slashes and/or rewards not being paid out, possibly for a prolonged period.
 
 Although the theory can be used as a general guideline, in practice it is more complicated and
 following the theory might not necessarily lead to the desired result. Validators might have the
@@ -333,14 +293,8 @@ Two different accounts can be used to securely manage your funds while staking.
   a validator, it can also be used to set your [session keys](learn-cryptography.md). Staking
   proxies only need sufficient funds to pay for the transaction fees.
 
-:::warning
-
-Never leave a high balance on a proxy account which are usually "hot" as their private key is stored
-on the device (PC, phone) and it is always exposed to the internet for potential hacks and scams. It
-is good practice to deposit rewards on the stash account or to send them to another account on a
-cold wallet.
-
-:::
+!!!warning
+    Never leave a high balance on a proxy account which are usually "hot" as their private key is stored on the device (PC, phone) and it is always exposed to the internet for potential hacks and scams. It is good practice to deposit rewards on the stash account or to send them to another account on a cold wallet.
 
 ![staking](../assets/stash-and-staking-proxy.png)
 
@@ -352,18 +306,14 @@ to stolen private keys is different depending on the type of account derivation.
 derivation, all derived accounts are compromised. More information about account derivation can be
 found [here](./learn-account-advanced.md#derivation-paths).
 
-:::info
-
-For Ledger users staking directly on Ledger Live, currently, there is no option to use separate
-stash and staking proxy accounts.
+!!!info
+    For Ledger users staking directly on Ledger Live, currently, there is no option to use separate stash and staking proxy accounts.
 
 Ledger devices are now supported in [SubWallet](https://www.subwallet.app/download.html),
 [Talisman](https://talisman.xyz/), and [PolkaGate](https://polkagate.xyz/) extension. Users can
 import their Ledger accounts in the extension and use them as a stash in staking. You can find more
 information about, SubWallet, Talisman, PolkaGate and other wallets that officially secured funding
 from the treasury [here](../general/wallets-and-extensions.md).
-
-:::
 
 ### Claiming Staking Rewards
 
@@ -384,12 +334,8 @@ era. Staking rewards are kept available for
 
 For more information on why this is so, see the page on [simple payouts](learn-staking-advanced.md).
 
-:::info Payouts
-
-Payouts are unclaimed rewards waiting to be paid out to both validators and nominators. If you go to
-the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking), you will see a
-list of all validators that you have nominated in the past 84 eras and for which you have not yet
-received a payout. The payout page is visible only to stakers.
+!!!info "Payouts"
+    Payouts are unclaimed rewards waiting to be paid out to both validators and nominators. If you go to the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking), you will see a list of all validators that you have nominated in the past 84 eras and for which you have not yet received a payout. The payout page is visible only to stakers.
 
 Each validator as well as their nominators have the option to trigger the payout for all unclaimed
 eras. Note that this will pay everyone who was nominating that validator during those eras.
@@ -397,15 +343,8 @@ Therefore, you may not see anything in this tab, yet still have received a payou
 (generally, but not necessarily, another nominator or the validator operator) has triggered the
 payout for that validator for that era.
 
-:::
-
-:::warning Time limit to claim staking rewards
-
-If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and
-they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts
-will also be lost.
-
-:::
+!!!warning "Time limit to claim staking rewards"
+    If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts will also be lost.
 
 Rewards can be directed to the same account used to sign the payout or to a completely unrelated
 account. It is also possible to top-up / withdraw some bonded tokens without having to un-stake all
@@ -431,12 +370,8 @@ this wiki.
 
 ### Fast Unstake
 
-:::info Fast Unstaking feature is live!
-
-If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you
-can now unbond them immediately.
-
-:::
+!!!info "Fast Unstaking feature is live!"
+    If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you can now unbond them immediately.
 
 If your bonded balance did not back any validators for a
 [pre-determined period](../general/chain-state-values.md#bounty-duration), you are eligible to
@@ -454,7 +389,7 @@ automatically check if you qualify. For more information, visit the
   which can help to decentralize the network through the sophisticated
   [NPoS system](./learn-consensus.md#nominated-proof-of-stake)
 - 85% of inflation/year of the tokens is primarily intended for staking rewards. Check the
-  [inflation](learn-staking-advanced.md#inflation) section on the Wiki for more information.
+  [inflation](learn-inflation.md) section on the Wiki for more information.
 
 ### Cons of Staking
 
@@ -507,32 +442,16 @@ might not be receiving staking rewards using Polkadot-JS UI.
 |    Nominated validators are all in waiting status.    |                                                                                           Your stake has not been assigned to any of the nominated validators. You cannot earn rewards, nor be slashed in that era.                                                                                            |                                                                   Waiting validators are not in the active set in the current era and the stake backing them is not used to secure the network. In simple words, NPoS "does not see them".                                                                   |                                                                                    Change your nominations. Try to select validators (with reasonable commission) that have high chances to end up in the active set.                                                                                     |
 | You have some inactive, and some waiting nominations. | Validators shown as "Inactive" in your staking dashboard are still in the active set and are producing blocks in the current era, but your stake has not been assigned to any of them. You will not earn rewards if your stake is not backing an active validator. In this case, you cannot be slashed either. | **Scenario 1:** You have bonded less than the Minimum Active Bond. **Scenario 2:** You have more than the Minimum Active Bond, but your account is at the tail end of the [bags list](learn-staking-advanced.md#bags-list) and within your bag there are accounts with less stake than you, in front of you. | **Scenario 1:** Try bonding more funds. **Scenario 2:** Try to put your account in front of the accounts with less stake than you. Instructions available [here](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards) |
 
-:::tip Join a Nomination Pool
+!!!tip "Join a Nomination Pool"
+    By joining a [nomination pool](learn-nomination-pools.md) that is active and earning rewards, you can start earning staking rewards with as low as 1 DOT. The nomination pools typically have a dedicated pool operator who ensures that the pool's stake is always backing an active validator and is receiving rewards.
 
-By joining a [nomination pool](learn-nomination-pools.md) that is active and earning rewards, you
-can start earning staking rewards with as low as 1 DOT. The nomination pools typically have a
-dedicated pool operator who ensures that the pool's stake is always backing an active validator and
-is receiving rewards.
-
-:::
-
-:::info Bags List & Minimum Active Bond
-
-You can find information about why you might not receive staking rewards on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-)
-and [this video tutorial](https://youtu.be/hIIZRJLrBZA).
-
-:::
+!!!info "Bags List & Minimum Active Bond"
+    You can find information about why you might not receive staking rewards on [this support page](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-) and [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 ## Staking FAQ
 
-:::info
-
-See
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s)
-for the FAQs about staking.
-
-:::
+!!!info
+    See [this support page](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s) for the FAQs about staking.
 
 ## Resources
 
@@ -545,8 +464,5 @@ for the FAQs about staking.
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-staking).
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-staking.md).

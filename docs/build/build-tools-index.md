@@ -74,7 +74,7 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
 - [Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate) - Blockchain
   development platform written in Rust. The Rust version of the Polkadot Host is being built with
   Substrate.
-- [Substrate Docs](https://docs.substrate.io/) - Comprehensive documentation and tutorials for
+- [Substrate Docs](https://docs.polkadot.com/tutorials/) - Comprehensive documentation and tutorials for
   building a blockchain using Substrate.
 - [Substrate VSCode plugin (deprecated)](https://github.com/paritytech/vscode-substrate).
 - [Substrate Debug Kit (deprecated)](https://github.com/paritytech/substrate-debug-kit) - A
@@ -162,7 +162,7 @@ The following libraries/SDKs allow for interfacing with a Substrate node in othe
   Tool to construct, sign, and broadcast transactions. Signing can be done offline.
 - [Polkadot API Cpp](https://github.com/usetech-llc/polkadot_api_cpp) - A С++ API for Polkadot, can
   build `clip`, a command line tool.
-- [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) - Command line utility
+- [Subkey](https://docs.polkadot.com/polkadot-protocol/basics/accounts/#using-subkey) - Command line utility
   for generating and inspecting key pairs.
 
 ### WASM
@@ -232,7 +232,7 @@ The following tools help you extract and structure data from a Substrate node.
 - [Parity's Substrate Archive](https://github.com/paritytech/substrate-archive) - Can be run
   alongside a Substrate node to archive all blocks, state, and extrinsic data into PostgreSQL
   database.
-- [Subsquid Archives](https://github.com/subsquid/squid-archive-setup) - Generate a GraphQL database
+- [SQD Archives](https://github.com/subsquid/squid-archive-setup) - Generate a GraphQL database
   from a Substrate chain's data with rich filtering and querying capabilities. The data (events,
   extrinsics, blocks) for most parachains is readily available though public archive GraphQL
   endpoints, kept in

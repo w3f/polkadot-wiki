@@ -12,13 +12,8 @@ independent, standalone networks with different priorities. Kusama is wild and f
 bold experimentation and early-stage deployment. Polkadot is more conservative, prioritizing
 stability and dependability. Cousins have their differences after all.
 
-:::info
-
-To get a better understanding of the key similarities and difference between Polkadot and Kusama,
-checkout
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
-
-:::
+!!!info
+    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
 
 ## Cost and Speed
 
@@ -50,9 +45,7 @@ Kusama is not simply a testnet, the blockchain is fully functional with attached
 own governance. The future of Kusama is in the hands of its participants. In a typical blockchain
 development pipeline, Kusama would sit in between a "testnet" and a "mainnet":
 
-:::info Testnet --> Kusama --> Polkadot
-
-:::
+!!!info Testnet --> Kusama --> Polkadot
 
 As you can imagine, building on Kusama first allows teams to test things out in a live, fully
 decentralized, and community-controlled network with real-world conditions and lower stakes in the

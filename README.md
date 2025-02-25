@@ -10,8 +10,6 @@
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](#LICENSE)
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](https://www.markdownguide.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/general/contributing.md)
-[![Polkadot Prod](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-polkadot-prod.yml/badge.svg)](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-polkadot-prod.yml)
-[![Kusama Prod](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-kusama-prod.yml/badge.svg)](https://github.com/w3f/polkadot-wiki/actions/workflows/deploy-kusama-prod.yml)
 </div>
 
 <!-- TOC -->
@@ -19,16 +17,12 @@
 - [Contributing to Documentation](#contributing-to-documentation)
 - [Running Locally](#running-locally)
   - [Build](#build)
-  - [Start](#start)
-  - [Publish](#publish)
 - [Style and Configuration Guide](#style-and-configuration-guide)
   - [Formatting](#formatting)
-  - [Search Engine](#search-engine)
   - [Automation](#automation)
     - [Deployments](#deployments)
     - [GitHub Actions](#github-actions)
   - [Conditional Rendering](#conditional-rendering)
-  - [Inline React Components](#inline-react-components)
 - [Internationalization](#internationalization)
 - [License](#license)
 <!-- /TOC -->
@@ -66,65 +60,39 @@ https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-
 
 ## Running Locally
 
-Both the Polkadot Wiki and the Kusama Guide are built from the source files in this repository.
-After cloning the source locally, you can start the websites with each of these respective commands
-(ensure you run `yarn` at the root of the repository first to install dependencies).
-
-The Wiki uses Algolia search, which can be accessed locally by providing the correct App ID and API
-key. The `app_id` and `api_key` environment variables are needed for the Wiki to be built
-successfully. If you are an external contributor, set the variables with some values like shown
-below, which lets the Wiki repo build successfully (but disables the search bar).
-
-```bash
-export app_id="xxxxxx" api_key="xxxxxxx"
+- Make sure `python` (Python 3.12) and `pip` are installed and in your path
+- It's recommended to use a virtual environment, as is common practice
+  
+1. Enter a virtual environment:
+```sh
+# Create the env
+python -m venv venv
+# Enter the env
+source venv/bin/activate
 ```
 
-Using yarn, run:
+1. Install dependencies (make sure you're in the project's directory)
+```sh
+pip install -r requirements.txt
+```
 
-```bash
-yarn install
+1. Once installed, run the serve command:
+```sh
+# If you're in a virtual env (set to false if you're not editing RPC commands, otherwise it will take time to load)
+ENABLE_RPC=false mkdocs serve
+# If you're not in a virtual env
+python -m mkdocs build
 ```
 
 ### Build
 
-:bird: Building the Kusama Guide:
-
-```bash
-yarn kusama:build
-```
-
 🟣 Building the Polkadot Wiki:
 
 ```bash
-yarn polkadot:build
-```
-
-### Start
-
-:bird: Starting the Kusama Guide:
-
-```bash
-yarn kusama:start
-```
-
-🟣 Starting the Polkadot Wiki:
-
-```bash
-yarn polkadot:start
-```
-
-### Publish
-
-:bird: Publishing the Kusama Guide:
-
-```bash
-yarn kusama:publish-gh-pages
-```
-
-🟣 Publishing the Polkadot Wiki:
-
-```bash
-yarn polkadot:publish-gh-pages
+# If you're in a virtual env (set to false if you're not editing RPC commands, otherwise it will take time to load)
+ENABLE_RPC=false mkdocs build
+# If you're not in a virtual env
+python -m mkdocs build
 ```
 
 ## Style and Configuration Guide
@@ -141,46 +109,16 @@ See the [Conditional Rendering](#conditional-rendering) and
 [React Components](#inline-react-components) sections for additional details regarding how to
 properly format syntax for elements outside of the standard markdown library.
 
-### Search Engine
-
-[Algolia DocSearch](https://docsearch.algolia.com/) is the search engine that is used, which is
-built into Docusaurus. Indexing via Algolia provides faster lookup; the actual configuration for
-lookup is located in another repository that Algolia DocSearch maintains.
-
-We have enabled searching on the Wiki by declaring the `algolia` section in the `siteConfig.js` file
-in `scripts`, and defining an API key and index name that are provided by DocSearch.
-
-```js
-  algolia: {
-    apiKey: "53c6a4ab0d77c0755375a971c9b7cc3d",
-    indexName: "kusama_guide",
-    algoliaOptions: {
-      facetFilters: ["language:LANGUAGE"],
-    }, // Optional, if provided by Algolia
-  }
-```
-
-If you would like to access and modify this, you can re-submit the documentation url via
-[DocSearch Program](https://docsearch.algolia.com/apply/), where they will send a JavaScript snippet
-that you can re-integrate into the configuration, similar to the one shown above.
-
 ### Automation
 
 #### Deployments
 
-The Polkadot Wiki is built on the `gh-pages` branch and automatically deployed to GitHub Pages. The
-Kusama Wiki is also deployed to GitHub Pages (via a separate repository).
+The Polkadot Wiki is built in a CI job, where it is then deployed on Netlify. Each commit to master triggers a new build and subsequent deployment.
 
-Development servers exist at `https://staging.polkadot.network` and
-`https://staging.kusama.network`. The servers will reflect the latest `master` commit or PR put up
-against the master branch by a member of the Technical Education team. A staging environment can be
-generated to reflect a specific branch by invoking the `workflow_dispatch` command via the GitHub UI
-and can then be reviewed by the team before proceeding to production. If all is well, the new
-commits on `master` are transferred into the production branch,`prod`, by rebasing `master` on
-`prod`. This is completed automatically every 24 hours or manually through a `workflow_dispatch`
-command. After these jobs are completed, the CICD production workflow will automatically deploy
-`prod` to the public sites: [Polkadot Wiki](https://wiki.polkadot.network) and
-[Kusama Guide](https://guide.kusama.network), respectively.
+Pull request previews are enabled, meaning a temporary deployment via Netlify is generated per PR.
+
+After these jobs are completed, the CICD production workflow will automatically deploy
+`prod` to the public site: [Polkadot Wiki](https://wiki.polkadot.network).
 
 #### GitHub Actions
 
@@ -205,24 +143,6 @@ command. After these jobs are completed, the CICD production workflow will autom
 
 The Polkadot Wiki does not support conditional rendering. If needed, use `Tabs` and `TabItem` to
 display values for Polkadot and Kusama.
-
-### Inline React Components
-
-Occasionally you may require additional functionality that is outside of the scope of basic
-markdown. React components can be used inline in existing markdown documents as a solution, allowing
-you to render custom elements. This is currently the strategy used to
-[retrieve live on-chain values](https://github.com/w3f/polkadot-wiki/blob/master/components/RPC-Connection.jsx)
-and display them directly in the docs without the need to recompile or even reload the web app using
-RPCs.
-
-If you are looking to invoke and embed data from 3rd party APIs or sources, checkout the
-[Http-Request-Sample component](https://github.com/w3f/polkadot-wiki/blob/master/components/Http-Request-Sample.jsx).
-A full list of sample components can be found
-[here](https://github.com/w3f/polkadot-wiki/tree/master/components).
-
-Try and reuse existing components as much as possible instead of creating new ones to keep the code
-lean and comprehensive. It is also important to verify prettier has not modified the formatting of
-your component after making a commit.
 
 ## Internationalization
 

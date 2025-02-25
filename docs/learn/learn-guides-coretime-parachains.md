@@ -7,14 +7,8 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../learn-guides-coretime-parachains
 ---
 
-:::info
-
-If you aren't sure what Agile Coretime is, be sure to read the
-[introduction](./learn-agile-coretime.md),
-[terminology](./learn-agile-coretime.md#agile-coretime-terminology), and
-[FAQ](./learn-agile-coretime.md#agile-coretime-faq).
-
-:::
+!!!info
+    If you aren't sure what Agile Coretime is, be sure to read the [introduction](./learn-agile-coretime.md), [terminology](./learn-agile-coretime.md#agile-coretime-terminology), and [FAQ](./learn-agile-coretime.md#agile-coretime-faq).
 
 The landscape for parachains changes with the rollout of
 [Agile Coretime](./learn-agile-coretime.md). With [parachain auctions](./archive/learn-auction.md)
@@ -35,13 +29,8 @@ benefit from [coretime renewals](https://docs.lastic.xyz/coretime/renewals.html)
 continued assignment of bulk coretime for a core without going through the regular purchasing
 process.
 
-:::info
-
-The tutorials below assume that you have already developed the parachain runtime and a fully
-configured parachain [collator](./learn-collator.md) for the target relay chain using the Polkadot
-SDK.
-
-:::
+!!!info
+    The tutorials below assume that you have already developed the parachain runtime and a fully configured parachain [collator](./learn-collator.md) for the target relay chain using the Polkadot SDK.
 
 For the tutorials below,
 [the adder test parachain](https://github.com/paritytech/polkadot-sdk/tree/6f3d890ed35bfdee3e3f7d59018345635a62d1cd/polkadot/parachain/test-parachains/adder)
@@ -81,12 +70,8 @@ successfully.
 
 ## Register Parachain State and Code
 
-:::info Deposit requirements for registering a parachain
-
-Due to the reasons [discussed here](https://github.com/paritytech/polkadot-sdk/pull/2372), instead
-of the usual per-byte method of charging for storing validation and genesis code upon registration,
-the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual
-size.
+!!!info "Deposit requirements for registering a parachain"
+    Due to the reasons [discussed here](https://github.com/paritytech/polkadot-sdk/pull/2372), instead of the usual per-byte method of charging for storing validation and genesis code upon registration, the cost is fixed to the maximum possible code size (`MAX_CODE_SIZE`), regardless of the actual size.
 
 On **Kusama**, the deposit required to register a parachain is **~1100 KSM** and an estimated fee of
 **~5 KSM**.
@@ -98,8 +83,6 @@ It is possible to deregister the parachain and withdraw the deposit if the parac
 produced any blocks. If the parachain produced blocks, then the parachain can only be deregistered
 through the relay chain's governance.
 
-:::
-
 The next step is to register the parachain's genesis wasm and state, which you should have generated
 earlier. Note that for this example, we are using `adder-collator`, but in theory a custom runtime
 compiled from a
@@ -107,15 +90,10 @@ compiled from a
 would work as well.
 
 <!-- prettier-ignore -->
-<!-- :::info
+<!-- !!!info
+    Registering the genesis state and WASM code of the parachain requires a [deposit](../general/chain-state-values.md#genesis-state-registration-deposit) that is computed based on the size (a deposit is paid per byte uploaded).
 
-Registering the genesis state and WASM code of the parachain requires a [deposit](../general/chain-state-values.md#genesis-state-registration-deposit) that is computed based on the size (a deposit is paid per byte uploaded).
-
-<!-- The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit
-requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama
-and 116 DOT on Polkadot.
-
-::: -->
+<!-- The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama and 116 DOT on Polkadot. -->
 
 ![coretime-register-parathread](../assets/coretime/Register-Parachain.png)
 
@@ -132,14 +110,8 @@ following command to rapidly sync with the specified relay chain.
 
 ## Run a Parachain with Bulk Coretime
 
-:::info
-
-Note that we have two options: **bulk coretime** and **on-demand coretime**. Bulk coretime is
-purchased via the `broker` pallet, which is on the respective Coretime system parachain. On-demand
-coretime is ordered via the `OnDemandAssignment` pallet/module, which is located on the respective
-relay chain.
-
-:::
+!!!info
+    Note that we have two options: **bulk coretime** and **on-demand coretime**. Bulk coretime is purchased via the `broker` pallet, which is on the respective Coretime system parachain. On-demand coretime is ordered via the `OnDemandAssignment` pallet/module, which is located on the respective relay chain.
 
 You can purchase bulk coretime on [Coretime chain](./learn-guides-coretime-marketplaces.md) and
 assign the purchased core to the registered `ParaID`. The snapshot below is from
@@ -161,18 +133,10 @@ After the collator node is fully synced with the relay chain, navigate to
 
 ![coretime-ondemand-assignment](../assets/coretime/coretime-on-demand-assignment.png)
 
-:::info
-
-There are two extrinsics which allow you to place orders for on-demand coretime:
-
-- `onDemandAssignmentProvider.placeOrderAllowDeath` will
-  [reap](./learn-accounts.md#existential-deposit-and-reaping) the account once the provided funds
-  run out.
-
-- `onDemandAssignmentProvider.placeOrderKeepAlive` includes a check which will **not** reap the
-  account if the provided funds will run out, ensuring the account is kept alive.
-
-:::
+!!!info 
+    There are two extrinsics which allow you to place orders for on-demand coretime:
+    - `onDemandAssignmentProvider.placeOrderAllowDeath` will [reap](./learn-accounts.md#existential-deposit-and-reaping) the account once the provided funds run out.
+    - `onDemandAssignmentProvider.placeOrderKeepAlive` includes a check which will **not** reap the account if the provided funds will run out, ensuring the account is kept alive.
 
 With each successful on-demand extrinsic, the parachain head changes (you may have to zoom out on
 the browser for parachain head details to show up on Polkadot-JS UI).

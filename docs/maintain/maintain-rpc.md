@@ -16,19 +16,16 @@ between the end user and the RPC server. This can be achieved by setting up a se
 browsers, such as Google Chrome, will block non-secure ws endpoints if they come from a different
 origin.
 
-:::note
-
-Enabling remote access to your validator node should not be necessary and is not suggested, as it
-can often lead to security problems
-
-:::
+!!!note
+    Enabling remote access to your validator node should not be necessary and is not suggested, as it
+    can often lead to security problems
 
 ## Set up a Node
 
 Setting up any Substrate-based node relies on a similar process. For example, by default, they will
 all share the same WebSocket connection at port 9944 on localhost. In this example, we'll set up a
 Polkadot sync node on a Debian-flavoured server (such as Ubuntu 22.04). Create a new server on your
-provider of choice or locally at home. See [Set up a Full Node](./maintain-sync) for additional
+provider of choice or locally at home. See [Set up a Full Node](./maintain-sync.md) for additional
 instructions. You can install from the default apt repository or build from scratch. The startup
 options in the setup process provide various settings that can be modified.
 
@@ -59,11 +56,8 @@ An archive node requires a lot more disk space. At the start of April 2023, Polk
 archive node, you need the options `--state-pruning archive --blocks-pruning archive` in your
 startup settings.
 
-:::tip
-
-Inclusion in the Polkadot.js UI requires an archive node.
-
-:::
+!!!tip
+    Inclusion in the Polkadot.js UI requires an archive node.
 
 ### Secure the RPC server
 
@@ -83,7 +77,7 @@ mode is `--rpc-methods Safe`
 
 To safely access your ws connection over an SSL-enabled connection (needed for polkadot.js), you
 have to convert the ws connection to a secure (wss) connection by using a proxy and an SSL
-certificate, you can find instructions on securing the ws port [here](/docs/maintain-wss).
+certificate, you can find instructions on securing the ws port [here](./maintain-wss.md).
 
 ## Connecting to the Node
 

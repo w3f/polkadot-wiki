@@ -19,7 +19,7 @@ keywords:
 slug: ../learn-comparisons
 ---
 
-import DocCardList from '@theme/DocCardList';
+
 
 ## Rollup Comparison
 
@@ -30,20 +30,14 @@ sequencing transactions and publishing them. In practice, they are the same mach
 likely change as rollups decentralize more. This mechanism could include thousands of transactions
 in a single rollup.
 
-:::info Layer Two Definition
-
-Layer two (L2) networks are a key approach to blockchain scalability, off-loading the majority of
-computation from layer one (L1) networks. These solutions leverage the security of L1 to create an
-additional layer that is faster, reduces fees, and addresses platform-specific challenges. L2
-solutions also focus on utilizing L1 blockspace efficiently and cost-effectively.
+!!!info "Layer Two Definition"
+    Layer two (L2) networks are a key approach to blockchain scalability, off-loading the majority of computation from layer one (L1) networks. These solutions leverage the security of L1 to create an additional layer that is faster, reduces fees, and addresses platform-specific challenges. L2 solutions also focus on utilizing L1 blockspace efficiently and cost-effectively.
 
 By adopting modular designs and re-using functionality, L2 networks enable the deployment of
 scalable rollups for various virtual machine environments, including Ethereum Virtual Machine (EVM),
 Solana Virtual Machine (SVM) and [Move-based](https://move-language.github.io/move/) systems. These
 rollups settle back to Ethereum, ensuring a robust and secure foundation for diverse blockchain
 ecosystems.
-
-:::
 
 In this section, we explore the main differences in rollup technology between:
 
@@ -192,14 +186,8 @@ be "better" interoperability within the OP Stack ecosystem than independent L2s.
 fraud-proof mechanisms and dispute resolution. However, rather than natively executing L2 opcodes,
 the EVM interprets the logic of the rollup's virtual machine.
 
-:::info Opcodes
-
-An opcode (short for operation code) is the fundamental instruction used by a virtual machine to
-perform specific operations. In the context of the EVM, opcodes define low-level commands that
-execute computations, manage storage, and interact with smart contracts. Rollups process their
-opcodes, which the EVM interprets during dispute resolution and other operations.
-
-:::
+!!!info "Opcodes"
+    An opcode (short for operation code) is the fundamental instruction used by a virtual machine to perform specific operations. In the context of the EVM, opcodes define low-level commands that execute computations, manage storage, and interact with smart contracts. Rollups process their opcodes, which the EVM interprets during dispute resolution and other operations.
 
 While optimistic rollups often support EVM-compatible state transitions for seamless integration
 with Ethereum and its ecosystem, they are not inherently restricted to EVM logic. Developers could
@@ -235,4 +223,4 @@ In this section, we explore the main differences in interoperability between Pol
 
 ## Other Comparisons
 
-<DocCardList />
+<!-- TODO: INDEX CARDS -->

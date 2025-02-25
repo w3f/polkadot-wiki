@@ -51,13 +51,10 @@ Crust provides a native cross-chain communication pallet based on
 The protocol also supports most smart contract platforms, including Ethereum, with its
 [cross-chain dStorage solution](https://wiki.crust.network/docs/en/buildCrossChainSolution).
 
-:::note Learn more about Crust
-
-To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en). Try
-integrating with Crust by following their
-[Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
-
-:::
+!!!note "Learn more about Crust"
+        To learn more about Crust, check out the [Crust Network Wiki](https://wiki.crust.network/en). Try
+        integrating with Crust by following their
+        [Crust Storage 101](https://wiki.crust.network/docs/en/build101) guide.
 
 ### Filebase
 
@@ -74,14 +71,11 @@ Filebase acts as an easy on-ramp to IPFS and decentralized storage by offering a
 console dashboard, making drag-and-dropping files onto Web3 simple and easy. Filebase also provides
 an S3-compatible API for widespread integrations and configurations in current workflows.
 
-:::note Learn more about Filebase
-
-To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com), and
-specifically the documentation on
-[deploying Polkadot dApp on decentralized storage.](https://docs.filebase.com/web3-education/web3-tutorials/polkadot/polkadot-deploy-a-polkadot-dapp-on-decentralized-storage)
-You can get started with Filebase by signing up [here.](https://filebase.com/signup)
-
-:::
+!!!note "Learn more about Filebase"
+        To learn more about Filebase, check out the [Filebase Documentation](https://docs.filebase.com), and
+        specifically the documentation on
+        [deploying Polkadot dApp on decentralized storage.](https://docs.filebase.com/web3-education/web3-tutorials/polkadot/polkadot-deploy-a-polkadot-dapp-on-decentralized-storage)
+        You can get started with Filebase by signing up [here.](https://filebase.com/signup)
 
 #### Using Polkadot-JS Files (IPFS) module
 
@@ -111,19 +105,13 @@ As well as the file status:
 
 ![file statue](../assets/files/substrate-files-5.png)
 
-:::note
-
-The whole files module is decentralized, so your file directory is only cached in browser. The file
-directory info will not be visible if you switch to a new browser or clear the browser cache. The
-storage module allows you to export file directory info from the current browser and import it to
-the new browser.
-
-:::
+!!!note
+        The whole files module is decentralized, so your file directory is only cached in browser. The file
+        directory info will not be visible if you switch to a new browser or clear the browser cache. The
+        storage module allows you to export file directory info from the current browser and import it to
+        the new browser.
 
 ![manage file dir](../assets/files/substrate-files-6.png)
 
-:::note
-
-These above images are taken from this [pull request](https://github.com/polkadot-js/apps/pull/6106)
-
-:::
+!!!note
+        These above images are taken from this [pull request](https://github.com/polkadot-js/apps/pull/6106)

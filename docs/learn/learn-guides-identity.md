@@ -7,23 +7,21 @@ keywords: [registrar, identity, sub-identity, polkadot-js]
 slug: ../learn-guides-identity
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
-
-:::warning The identity pallet is no longer on the Kusama relay chain.
-
-If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to
-be called via the system parachain,
-[which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
-
-The identity pallet, along with all of its data, has been migrated to the
-[People Chain](../general/glossary.md#people-chain), a system parachain which can now be used for
-identity management.
-
-:::
+!!!warning "The identity pallet is no longer on the Kusama relay chain."
+    If you are on **Kusama**, any of the extrinsics which require you to use the relay chain now have to be called via the system parachain, [which you can find here.](https://polkadot.js.org/apps/?rpc=wss://kusama-people-rpc.polkadot.io)
+    
+    The identity pallet, along with all of its data, has been migrated to the [People Chain](../general/glossary.md#people-chain), a system parachain which can now be used for identity management.
 
 This is an advanced guide that is relevant for entities that would like to become registrars or
 would like to set sub-identities to an existing account with an identity. See
@@ -33,22 +31,12 @@ would like to set sub-identities to an existing account with an identity. See
 
 Users can set an identity by registering through default fields such as legal name, display name,
 website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which they would
-like attestations (see [Judgements](#judgements)).
+like attestations (see [Judgements](./learn-identity.md#judgements)).
 
-:::info Instructions for setting and clearing Identities
+!!!info "Instructions for setting and clearing Identities"
+    The procedure to set and clear identities is explained in detail in this support article - [How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity)
 
-The procedure to set and clear identities is explained in detail in this support article -
-[How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity)
-
-:::
-
-:::note
-
-The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround,
-create a primary identity with an on-chain account and then using that primary identity, assign a
-[sub-identity](#sub-accounts) to the Ledger stash.
-
-:::
+!!!note The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](./learn-identity.md#sub-identities) to the Ledger stash.
 
 ### Format Caveat
 
@@ -65,12 +53,8 @@ makes sense.
 
 ## Request Judgement
 
-:::info Instructions for requesting and cancelling Identity judgements
-
-The procedure to request and cancel identity judgments is explained in detail in this
-[support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
-
-:::
+!!!info "Instructions for requesting and cancelling Identity judgements"
+    The procedure to request and cancel identity judgments is explained in detail in this [support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
 
 To be judged after submitting your identity information, go to the
 [Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
@@ -88,38 +72,18 @@ automatically loaded.
 
 ![Chevdor is registrar #1](../assets/identity/16.jpg)
 
-:::info Requesting judgement through Web3 Foundation Registrar
+!!!info "Requesting judgement through Web3 Foundation Registrar"
+    If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks. For more information visit [this support article](https://support.polkadot.network/support/solutions/articles/65000179747-how-to-use-the-w3f-registrar-page).
 
-If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e.
-Registrar #0) you will need to complete a few additional tasks. For more information visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000179747-how-to-use-the-w3f-registrar-page).
-
-:::
-
-:::caution
-
-The set identity calls go on-chain. Hence, the contact information is available publicly, for both
-legitimate entities, like registrars or validators, but also scammers who might impersonate them.
-The strings in the identity fields are good candidates for homograph attacks, as someone could list
-a fraudulent website (web3.f0undation instead of web3.foundation for example) and still get verified
-by the registrar (if the checks are automated)!
-
-In a decentralized network, one should be cautious making transactions with accounts solely based on
-their identity. If an account on-chain claims to be of Web3 Foundation, it is wise to verify its
-authenticity by checking directly with Web3 Foundation or examining the established history of that
-account on-chain.
-
-:::
+!!!caution
+    The set identity calls go on-chain. Hence, the contact information is available publicly, for both legitimate entities, like registrars or validators, but also scammers who might impersonate them. The strings in the identity fields are good candidates for homograph attacks, as someone could list a fraudulent website (web3.f0undation instead of web3.foundation for example) and still get verified by the registrar (if the checks are automated)!
+    
+    In a decentralized network, one should be cautious making transactions with accounts solely based on their identity. If an account on-chain claims to be of Web3 Foundation, it is wise to verify its authenticity by checking directly with Web3 Foundation or examining the established history of that account on-chain.
 
 ## Clearing and Killing an Identity
 
-:::info
-
-Visit the section "Clear an Identity" on
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181981) for
-guidelines about clearing identities.
-
-:::
+!!!info
+    Visit the section "Clear an Identity" on [this support article](https://support.polkadot.network/support/solutions/articles/65000181981) for guidelines about clearing identities.
 
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.
@@ -136,7 +100,7 @@ support article and this [video tutorial](https://www.youtube.com/watch?v=0Yh1JY
 ### Setting Sub-Identity (Sub-ID) for your Ledger Account
 
 Setting an Identity is not possible on Ledger app yet, but as a workaround, you can
-[set the identity for an on-chain account ](../learn/learn-identity.md#setting-an-identity) and then
+[set the identity for an on-chain account ](../learn/learn-guides-identity.md#setting-an-identity) and then
 use it to set a sub-identity to your Ledger account.
 
 - Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots corresponding to
@@ -153,7 +117,7 @@ use it to set a sub-identity to your Ledger account.
 You should now see the sub-identity displayed on-chain. You need to be aware that the creation of
 identities and sub-identities requires
 [deposits](../general/chain-state-values.md#identity-deposit). This reserved account balance is
-freed once you [clear the identities](../learn/learn-identity.md#clearing-and-killing-an-identity)
+freed once you [clear the identities](../learn/learn-guides-identity.md#clearing-and-killing-an-identity)
 on the account.
 
 ![Sub-identity example](../assets/identity/sub-id-3.png)

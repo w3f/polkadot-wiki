@@ -7,13 +7,18 @@ keywords: [ledger, polkadot-js]
 slug: ../learn-guides-ledger
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
-
-The [Ledger devices](../general/ledger.md) are hardware wallets that keep your private key secured
+The [Ledger devices](../general/ledger.md#polkadot-generic-app) are hardware wallets that keep your private key secured
 on a physical device not directly exposed to your computer or the internet.
 
 The [Polkadot Generic application](../general/ledger.md#polkadot-generic-app) allows you to manage
@@ -23,12 +28,8 @@ being affected by their runtime upgrades.
 
 ## Loading Your Account
 
-:::info
-
-Ledger Live should be off while using Ledger with Polkadot-JS UI, as it can interfere with normal
-operation.
-
-:::
+!!!info
+    Ledger Live should be off while using Ledger with Polkadot-JS UI, as it can interfere with normal operation.
 
 You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to
 the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). For instructions on how to import
@@ -70,25 +71,11 @@ balances, visit the [balances page](./learn-account-balances.md#balance-types-on
 
 ## Sending a Transfer with Ledger Devices
 
-:::danger Verifying Extrinsics
+!!!danger "Verifying Extrinsics"
+    Visit the [**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to verify extrinsics before signing them. The video will also mention potential attacks that can happen while signing transactions.
 
-Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger)
-and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to
-verify extrinsics before signing them. The video will also mention potential attacks that can happen
-while signing transactions.
-
-:::
-
-:::info Signature error message
-
-If you have already connected your device, but an error message appears before signing a
-transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano
-device. Visit
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for
-more information about signing transactions using your ledger.
-
-:::
+!!!info "Signature error message"
+    If you have already connected your device, but an error message appears before signing a transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano device. Visit [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for more information about signing transactions using your ledger.
 
 General instructions to send a transfer can be found on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
@@ -102,26 +89,15 @@ To receive a transfer on the accounts stored on your Ledger device, you must pro
 (i.e., the payer) with your address. To do so, follow the instructions on
 [this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
 
-:::caution Sharing your account address
-
-Before giving anyone your address, ensure it matches what's on the Ledger by
-[confirming the address on your device](#confirming-the-address-on-your-device). Some malware will
-intercept clicks and clipboard requests and can change your copied value in-flight, so being extra
-vigilant around copy-paste operations makes sense.
-
-:::
+!!!caution "Sharing your account address"
+    Before giving anyone your address, ensure it matches what's on the Ledger by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will intercept clicks and clipboard requests and can change your copied value in-flight, so being extra vigilant around copy-paste operations makes sense.
 
 The easiest way to get your address is to click on the account name. This will open a sidebar
 showing your address and other information, such as on-chain identity. Another method is just
 clicking on your account's avatar icon - this immediately copies your address to the clipboard.
 
-:::note Your Asset Hub address is the same as your relay chain address
-
-Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub
-parachain, otherwise (if you're receiving DOT or KSM tokens) they could be sent on the Polkadot or
-Kusama relay chain.
-
-:::
+!!!note "Your Asset Hub address is the same as your relay chain address"
+    Make sure that you clarify to the sender that you wish to receive your tokens on the Asset Hub parachain, otherwise (if you're receiving DOT or KSM tokens) they could be sent on the Polkadot or Kusama relay chain.
 
 ## Staking
 
@@ -130,12 +106,8 @@ For staking using Ledger devices, follow the instructions on
 
 ## Ledger Developer Release
 
-:::warning
-
-This section is for developers only. It is recommended to install the application from Ledger Live
-unless you _know precisely what you're doing_.
-
-:::
+!!!warning
+    This section is for developers only. It is recommended to install the application from Ledger Live unless you _know precisely what you're doing_.
 
 ### Why you might need the Developer Release
 
@@ -151,15 +123,11 @@ install the developer release from the shell using the latest version published 
 
 ### Install the Developer Release
 
-:::info
-
-See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer
-release of your ledger app.
+!!!info
+    See [**this video tutorial**](https://youtu.be/4SyVQrlXZ_Q) to learn how to install the developer release of your ledger app.
 
 Currently, the developer release can be installed only on the Nano S and S Plus devices and can't be
 installed on the Nano X.
-
-:::
 
 To install the developer version, make sure you have the latest `pip` version and follow the steps
 below:
