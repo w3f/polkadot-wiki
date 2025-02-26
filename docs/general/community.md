@@ -42,7 +42,7 @@ contact and anyone doing so is likely trying to scam you.
       <a href="https://research.web3.foundation/news">Polkadot's Latest Research (news)</a>
       </li>
       <li>
-      <a href="https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be">Polkadot Meetup Hub</a> - Information on hosting meetups, applying for funding, and materials for running it.
+      <a href="https://dotmeetup.notion.site/Meetups-bounty-cd57b5990ba443559413dec3b339ab4a">Polkadot Meetup Hub</a> - Information on hosting meetups, applying for funding, and materials for running it.
       </li>
       <li>
       <a href="https://polkadot.polkassembly.io/">Polkadot Discussion and Governance on Polkassembly.</a>
