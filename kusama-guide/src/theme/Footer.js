@@ -49,14 +49,6 @@ export default function Footer() {
             Twitter
           </a>
           <a
-            href="https://www.notion.so/web3foundation/Polkadot-Kusama-Community-Hub-ee1fd077ff6c42c381940404f6aa9f1c"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="homepage-font"
-          >
-            Community Hub
-          </a>
-          <a
             href="https://kusa.ma/discord"
             target="_blank"
             rel="noreferrer noopener"
