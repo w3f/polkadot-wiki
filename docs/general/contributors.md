@@ -57,23 +57,20 @@ the Web3 Technology Stack.
 - matrix: [@filippo:web3.foundation](https://matrix.to/#/@filippo:web3.foundation)
 - twitter: [@filippoweb3](https://twitter.com/filippoweb3)
 
-Filippo is a Technical Educator at the Web3 Foundation with a PhD in Statistics. A former National
-Geographic Grantee, he has led expeditions in Indonesia and Laos. Filippo also is an ex-Special
-Forces and is an award-winning athlete, earning recognition in 2009 from the Swiss Federal Office
-for Sport.
-
-After completing his studies, he briefly worked in the healthcare industry before pivoting to
-blockchain technology. Filippo is deeply committed to the Web3 vision of a privacy-focused, secure,
-and decentralized internet that empowers users. He recognizes that the complexity of Web3 technology
-remains a major barrier to mainstream adoption and is passionate about bridging this gap through
-education.
+Filippo is a Technical Educator at the Web3 Foundation with a PhD in Statistics from
+[the University of St Andrews](https://www.st-andrews.ac.uk/). After completing his studies, he
+briefly worked in the healthcare industry before pivoting to blockchain technology. Filippo is
+deeply committed to the Web3 vision of a privacy-focused, secure, and decentralized internet that
+empowers users. He recognizes that the complexity of Web3 technology remains a major barrier to
+mainstream adoption and is passionate about bridging this gap through education.
 
 At the Web3 Foundation, Filippo contributes to this mission by educating professionals and the
 general public about blockchain and Web3. He actively engages with the Polkadot ecosystem, regularly
 contributing to Wiki articles. He is a
 [certified blockchain analyst](https://www.credential.net/bad85935-7e6e-4b4a-9ed2-e96128bdb5e5) and
 a [PBA-X](https://pbax.polkadot.academy/) graduate. Currently, he is expanding his expertise by
-learning [Rust](https://www.rust-lang.org/) and [Substrate](https://substrate.io/).
+learning [Rust](https://www.rust-lang.org/) and [Substrate](https://substrate.io/). For more details
+see [Filippo's bio on X](https://x.com/filippoweb3/bio).
 
 ### Bader Youssef
 
