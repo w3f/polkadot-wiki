@@ -202,7 +202,7 @@ module.exports = {
      announcementBar: {
        id: "banner",
        content:
-         'Register to the Polkadot Blockchain Academy Online (PBA-X) <a href="https://pbax.polkadot.academy/offers/8XLKnGiX/checkout" target="_blank" rel="noopener noreferrer">Here 👉</a>',
+         'Register to the Polkadot Blockchain Academy Online (PBA-X) <a href="https://pbax.polkadot.academy/offers/8XLKnGiX/checkout" target="_blank" rel="noopener noreferrer">👉Here</a>',
        backgroundColor: '#e6007a',
        textColor: 'white',
        isCloseable: true,
