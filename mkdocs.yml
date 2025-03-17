@@ -1,13 +1,13 @@
 # Project information
 site_name: ""
-site_url: https://w3f.github.io/polkadot-wiki-mkdocs
+site_url: wiki.polkadot.network
 site_author: Web3 Foundation Technologies
 site_description: >-
   High-level documentation for the Polkadot Ecosystem.
 
 # Repository
-repo_name: w3f/polkadot-wiki-mkdocs
-repo_url: https://github.com/w3f/polkadot-wiki-mkdocs
+repo_name: w3f/polkadot-wiki
+repo_url: https://github.com/w3f/polkadot-wiki
 
 # Copyright
 copyright: Copyright &copy; 2017 - 2025 Web3 Foundation Technologies
