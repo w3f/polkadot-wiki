@@ -120,16 +120,27 @@ the unified address format include the following:
 - Improved Ecosystem Usability: A unified experience enhances the overall robustness and usability
   of the Polkadot network.
 
-:::info Exchanges and Legacy Formats
+!!!info Exchanges and Legacy Formats
+    Some exchanges may require the legacy format for deposits or withdrawals during the transition.
+    Parachain upgrades are happening progressively, and exchanges may take time to fully integrate the
+    new format.
 
-Some exchanges may require the legacy format for deposits or withdrawals during the transition.
-Parachain upgrades are happening progressively, and exchanges may take time to fully integrate the
-new format.
+    To assist, a feature for copying legacy addresses is being implemented to ensure a seamless
+    experience during this interim period.
 
-To assist, a feature for copying legacy addresses is being implemented to ensure a seamless
-experience during this interim period.
+    - Simplified User Experience: A single address format reduces complexity, making Polkadot more
+      accessible.
+    - Consistency Across Ecosystem: No more dealing with multiple formats for different parachains.
+    - Improved Ecosystem Usability: A unified experience enhances the overall robustness and usability
+      of the Polkadot network.
 
-:::
+!!!info Exchanges and Legacy Formats
+    Some exchanges may require the legacy format for deposits or withdrawals during the transition.
+    Parachain upgrades are happening progressively, and exchanges may take time to fully integrate the
+    new format.
+
+    To assist, a feature for copying legacy addresses is being implemented to ensure a seamless
+    experience during this interim period.
 
 ## Existential Deposit and Reaping
 
