@@ -7,10 +7,8 @@ keywords: [coretime, blockspace, parathread, parachain, cores]
 slug: ../build-guides-coretime-start
 ---
 
-!!!warning
-    This section is under construction.
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
 
-<!-- TODO: INDEX CARDS -->
 
 ## Using the Polkadot SDK
 

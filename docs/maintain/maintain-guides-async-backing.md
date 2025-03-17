@@ -8,6 +8,9 @@ keywords: [async, backing, parachain, consensus]
 slug: ../maintain-guides-async-backing
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 !!!info Who is this guide for?
     This guide is relevant for cumulus based parachain projects started in 2023 or before. Later
     projects should already be async backing compatible. If starting a new parachain project, please use

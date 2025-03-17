@@ -7,6 +7,9 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 The relay chain which is a layer 0 blockchain, does not support smart contracts natively. However,
 parachains which are layer 1 blockchains are equipped with the functionality to support smart
 contracts.

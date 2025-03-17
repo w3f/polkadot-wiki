@@ -15,7 +15,7 @@ slug: ../learn-nominator
     You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 !!!info "Stake through Nomination Pools"
-    The minimum amount required to become an active nominator (i.e. the [minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [smaller amount of tokens](../general/chain-state-values.md#minimum-bond-to-participate-in-staking). For additional information, see
+    The minimum amount required to become an active nominator (i.e. the [minimum active bond](../general/chain-state-values.md)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [smaller amount of tokens](../general/chain-state-values.md). For additional information, see
     [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
     Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
@@ -70,7 +70,7 @@ While your tokens are staked for nominations, they are 'locked' (bonded). You ca
 [stop nominating at any time](./learn-guides-nominator.md#stop-nominating), but remember that the
 action is effective in the next era and does not automatically unbond your funds. Unbonding is a
 separate action, and it takes effect after the
-[unbonding period](../general/chain-state-values.md#unbonding-duration). A staking lock will be
+[unbonding period](../general/chain-state-values.md). A staking lock will be
 visible on the Polkadot-JS UI during the unbonding period, and after it, the staking lock can be
 unlocked, and the bonded funds become free balance you can transfer.
 
@@ -145,7 +145,7 @@ metrics shown as an example, followed by a brief description of each.
   nominators whose stake in the current era is baking other validators.
 
   Every nominator can select up to
-  [a maximum number of validators](../general/chain-state-values.md#maximum-votes-per-nominator),
+  [a maximum number of validators](../general/chain-state-values.md),
   which contributes towards maximizing the probability of having the nominator’s stake applied to
   the validators active set. Nominating too few validators could result in the nominators not
   receiving their rewards when none of them make it to the active set or when those validators stop
@@ -330,7 +330,7 @@ nominate with to receive staking rewards can change between the eras.
 Thus, for **nominator counters**, we have:
 
 - count of nominator intentions and
-  [max possible nominator intentions](../general/chain-state-values.md#maximum-number-of-nominators)
+  [max possible nominator intentions](../general/chain-state-values.md)
 - count of electing nominators, and maximum possible electing nominators (22500 on Polkadot and
   12500 on Kusama)
 - count of active nominators and maximum possible active nominators (22500 on Polkadot and 12500 on
@@ -364,7 +364,7 @@ almost always see only a single active nomination per era. See the
 ### Minimum Active Nomination to Receive Staking Rewards
 
 !!!info "Minimum DOT required to earn staking rewards"
-    The [minimum number of tokens required to submit intent to nominate](../general/chain-state-values.md#minimum-bond-to-participate-in-staking) differs from the [minimum active nomination](../general/chain-state-values.md#minimum-active-bond) required to earn staking rewards.
+    The [minimum number of tokens required to submit intent to nominate](../general/chain-state-values.md) differs from the [minimum active nomination](../general/chain-state-values.md) required to earn staking rewards.
 
 ![Minimum Active Nomination](../assets/staking/min-active-nomination.png)
 

@@ -7,6 +7,9 @@ keywords: [rpc, rpc node, web socket, remote, connection, secure websocket]
 slug: ../maintain-rpc
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 The substrate node RPC server can be accessed over the WebSocket protocol, which can be used to
 access the underlying network and/or validator node. By default, you can access your node's RPC
 server from localhost (for example, to rotate keys or do other maintenance). To access it from

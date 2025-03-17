@@ -7,6 +7,9 @@ keywords: [transaction, transaction construction, format, tools]
 slug: ../build-transaction-construction
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 This page will discuss the transaction format in Polkadot and how to create, sign, and broadcast
 transactions. Like the other pages in this guide, this page demonstrates some of the available
 tools. **Always refer to each tool's documentation when integrating.**

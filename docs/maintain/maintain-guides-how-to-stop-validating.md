@@ -7,6 +7,9 @@ keywords: [validating, how to stop validating, validate, chill]
 slug: ../maintain-guides-how-to-stop-validating
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 If you wish to remain a validator or nominator (e.g. you're only stopping for planned downtime or
 server maintenance), submitting the `chill` extrinsic in the `staking` pallet should suffice. It is
 only if you wish to unbond funds or reap an account that you should continue with the following.

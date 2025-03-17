@@ -7,6 +7,9 @@ keywords: [validate, validator, kusama, stake, maintain]
 slug: ../../maintain-guides-how-to-validate-kusama
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 ## Preliminaries
 
 Running a validator on a live network is a lot of responsibility! You will be accountable for not
@@ -63,7 +66,7 @@ On Kusama, one day is approximately four eras whereas on Polkadot, one era is ap
 In each era, the validators elected to the active set earn era points which correspond to the actual
 rewards earned that are distributed proportionally to the nominators after deducting the validator
 commission. The
-[minimum validator commission](../../general/chain-state-values.md#minimum-validator-commission) can
+[minimum validator commission](../../general/chain-state-values.md) can
 be set through on-chain governance. For more information rewards and payouts, check the
 [validator payout](../maintain-guides-validator-payout.md) document.
 

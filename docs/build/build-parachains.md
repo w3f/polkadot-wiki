@@ -7,6 +7,9 @@ keywords: [build, parachain, develop, implement, PDK]
 slug: ../build-pdk
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Parachains are connected to and secured by the relay chain. They benefit from the _pooled security_,
 _thought-through governance_, and overall _scalability_ of the heterogeneous sharding approach of
 the network. Creating a parachain can be seen as creating a **Layer-1 blockchain**, which has its

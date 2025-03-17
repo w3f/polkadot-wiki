@@ -301,6 +301,6 @@ Briefly, you will need to:
   or [the Kusama Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) about
   your referendum
 - Place the decision deposit
-  [before the timeout](../general/chain-state-values.md#opengov-referendum-timeout)
+  [before the timeout](../general/chain-state-values.md)
 - Once the referendum ends you can
   [claim the preimage and decision deposits back](./learn-guides-polkadot-opengov.md#claiming-the-preimage-and-decision-deposits)

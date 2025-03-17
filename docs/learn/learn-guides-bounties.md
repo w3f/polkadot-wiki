@@ -71,7 +71,7 @@ medium to explain the proposal, for example a bounty proposal document on
 can be used to submit all the information needed by OpenGov voters to make an informed decision.
 
 Submitting a bounty proposal will require a
-[deposit](../general/chain-state-values.md#bounty-deposit).
+[deposit](../general/chain-state-values.md).
 
 ## Assign a Curator to a Bounty
 

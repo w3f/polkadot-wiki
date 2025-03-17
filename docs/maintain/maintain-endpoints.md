@@ -7,6 +7,7 @@ keywords: [endpoints, network, connect]
 slug: ../maintain-endpoints
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
 
 
 Ideally, one may run their own node when interacting with the

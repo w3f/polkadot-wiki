@@ -7,6 +7,9 @@ keywords: [council, vote, councillors]
 slug: ../maintain-guides-how-to-vote-councillor
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

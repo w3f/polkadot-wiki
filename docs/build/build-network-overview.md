@@ -7,6 +7,9 @@ keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, c
 slug: ../build-network-overview
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 While Polkadot itself is the mainnet, there are several networks that can cater to different
 development or application-driven contexts.
 

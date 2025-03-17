@@ -7,6 +7,9 @@ keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
 slug: ../build-guides-template-basic
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 !!!warning "Not a production ready guide."
     This guide is considered a moving document and currently uses the **Paseo** testnet. This guide is
     also applicable to the parachains on the Kusama relay chain, as coretime is also enabled there.

@@ -89,12 +89,12 @@ the relay chain to benefit from Polkadot's security and interoperability.
 
 #### Total Issuance
 
-The [total issuance](../general/chain-state-values.md#total-issuance) is the total number of token
+The [total issuance](../general/chain-state-values.md) is the total number of token
 units in existence on the network.
 
 #### Inactive Issuance
 
-The [inactive issuance](../general/chain-state-values.md#inactive-issuance) is the total units of
+The [inactive issuance](../general/chain-state-values.md) is the total units of
 outstanding deactivated balance on the network that cannot be used for participation in governance.
 This comprises tokens locked away in crowdloans and nomination pools.
 

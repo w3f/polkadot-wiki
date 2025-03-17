@@ -7,6 +7,9 @@ keywords: [hackathon, build, event, host, resources]
 slug: ../build-hackathon
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 ## Join a Hackathon
 
 Web3 Foundation regularly supports developer focused events! Be the first to know by signing up for

@@ -23,7 +23,7 @@ slug: ../learn-staking
     Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey or explore more information about staking on [Polkadot's Staking Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
 
 !!!info "Stake through Nomination Pools"
-    The minimum amount required to become an active nominator (i.e. [the minimum active bond](../general/chain-state-values.md#minimum-active-bond)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [minimal bond](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
+    The minimum amount required to become an active nominator (i.e. [the minimum active bond](../general/chain-state-values.md)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [minimal bond](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 Here you will learn about what staking is, why it is important, and how it works.
 
@@ -77,20 +77,20 @@ and sophisticated mechanism to select the validators who are allowed to particip
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator, in turn, submits a
-[capped list of candidates](../general/chain-state-values.md#maximum-votes-per-nominator) that it
+[capped list of candidates](../general/chain-state-values.md) that it
 supports, and the network will automatically distribute the stake among validators in an even manner
 so that the economic security is maximized. In the next era, a certain number of validators having
 the highest backing get elected and become active. For more information about the election algorithm
 go to [this](learn-phragmen.md) page on the wiki or
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Paper) research article. As a
-nominator, a [minimum bond](../general/chain-state-values.md#minimum-bond-to-participate-in-staking)
+nominator, a [minimum bond](../general/chain-state-values.md)
 is required to submit an intention to nominate, which can be thought of as registering to be a
 nominator. Note that in NPoS the stake of both nominators and validators can be
 [slashed](./learn-offenses.md). For an in-depth review of NPoS see
 [this](https://research.web3.foundation/Polkadot/protocols/NPoS/Overview) research article.
 
 !!!caution "Minimum Nomination to Receive Staking Rewards"
-    [The minimum nomination intent](../general/chain-state-values.md#minimum-bond-to-participate-in-staking) does not guarantee staking rewards. The nominated amount has to be greater than [minimum active nomination](../general/chain-state-values.md#minimum-active-bond), which is a dynamic value that can be much higher than the minimum nomination intent. This dynamic value depends on the amount of tokens being staked, in addition to the selected nominations.
+    [The minimum nomination intent](../general/chain-state-values.md) does not guarantee staking rewards. The nominated amount has to be greater than [minimum active nomination](../general/chain-state-values.md), which is a dynamic value that can be much higher than the minimum nomination intent. This dynamic value depends on the amount of tokens being staked, in addition to the selected nominations.
 
 ### Nominating Validators
 
@@ -330,7 +330,7 @@ The distribution of staking rewards to the nominators is not automatic and needs
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
 payout for all the nominators whose stake has backed a specific validator in the active set of that
 era. Staking rewards are kept available for
-[a limited amount of time](../general/chain-state-values.md#staking-reward-retention).
+[a limited amount of time](../general/chain-state-values.md).
 
 For more information on why this is so, see the page on [simple payouts](learn-staking-advanced.md).
 
@@ -374,7 +374,7 @@ this wiki.
     If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you can now unbond them immediately.
 
 If your bonded balance did not back any validators for a
-[pre-determined period](../general/chain-state-values.md#bounty-duration), you are eligible to
+[pre-determined period](../general/chain-state-values.md), you are eligible to
 perform fast unstaking. The [staking dashboard](https://staking.polkadot.cloud/#/overview) will
 automatically check if you qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
@@ -385,7 +385,7 @@ automatically check if you qualify. For more information, visit the
 
 - Earn rewards for contributing to the network's security through staking.
 - Low barrier of entry through [Nomination Pools](learn-nomination-pools.md).
-- Can choose [multiple validators](../general/chain-state-values.md#maximum-votes-per-nominator)
+- Can choose [multiple validators](../general/chain-state-values.md)
   which can help to decentralize the network through the sophisticated
   [NPoS system](./learn-consensus.md#nominated-proof-of-stake)
 - 85% of inflation/year of the tokens is primarily intended for staking rewards. Check the
@@ -394,7 +394,7 @@ automatically check if you qualify. For more information, visit the
 ### Cons of Staking
 
 - Tokens will be locked during the
-  [unbonding period](../general/chain-state-values.md#unbonding-duration) and no rewards will be
+  [unbonding period](../general/chain-state-values.md) and no rewards will be
   earned if you unbond.
 - Possible punishment in case of the active validator found to be misbehaving (see
   [slashing](./learn-offenses.md)).
@@ -403,24 +403,24 @@ automatically check if you qualify. For more information, visit the
 
 #### Unbonding Period Length
 
-The [unbonding period](../general/chain-state-values.md#unbonding-duration) provides a safety net
+The [unbonding period](../general/chain-state-values.md) provides a safety net
 for slashing offenses identified in
 [past eras](https://research.web3.foundation/Polkadot/security/slashing/npos#slashing-in-past-eras),
 which can hold the respective validators and their nominators accountable. The unbonding period is
 crucial in mitigating ex post facto slashing, particularly in guarding against long-range attacks.
 When a client encounters a chain finalized by
 [GRANDPA](./learn-consensus.md#finality-gadget-grandpa) that originates more than one
-[unbonding period](../general/chain-state-values.md#unbonding-duration) in the past, it lacks the
+[unbonding period](../general/chain-state-values.md) in the past, it lacks the
 security of slashing protection.
 
 Essentially, this period establishes a cadence for synchronizing with the chain or acquiring a
 checkpoint within a timeframe that engenders trust. It's worth noting that while the choice of
-[unbonding period length](../general/chain-state-values.md#unbonding-duration) is somewhat
+[unbonding period length](../general/chain-state-values.md) is somewhat
 arbitrary, it unquestionably provides a higher level of security compared to a shorter period.
 
 ## How many Validators?
 
-The top bound on the [number of validators](../general/chain-state-values.md#active-validator-count)
+The top bound on the [number of validators](../general/chain-state-values.md)
 has not been determined yet, but should only be limited by the bandwidth strain of the network due
 to peer-to-peer message passing.
 

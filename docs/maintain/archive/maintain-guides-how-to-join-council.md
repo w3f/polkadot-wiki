@@ -7,6 +7,9 @@ keywords: [council, how to join council, governance, candidate]
 slug: ../maintain-guides-how-to-join-council
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

@@ -7,6 +7,9 @@ keywords: [node, full node, sync, setup node]
 slug: ../maintain-sync
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 If you're building dApps or products on a Substrate-based chain like Polkadot, Kusama, or a custom
 Substrate implementation, you want the ability to run a node-as-a-back-end. After all, relying on
 your infrastructure is always better than a third-party-hosted one in this brave new decentralized

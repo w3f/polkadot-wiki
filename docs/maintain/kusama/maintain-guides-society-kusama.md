@@ -7,6 +7,9 @@ keywords: [kappa sigma mu, society, kusama, member]
 slug: ../../maintain-guides-society-kusama
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Kappa Sigma Mu is a membership club using the Substrate
 [Society pallet](https://paritytech.github.io/substrate/master/pallet_society/index.html). It is an
 economic game to incentivize users to join a society that coordinates around whatever the rules are

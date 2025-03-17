@@ -40,7 +40,7 @@ For additional background on the Asset Hub check out
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**
 
 To create an asset on the Asset Hub, you would need to
-[deposit some funds](../general/chain-state-values.md#asset-deposit). Before you create an asset on
+[deposit some funds](../general/chain-state-values.md). Before you create an asset on
 the Asset Hub, ensure that your Asset Hub account balance is a bit more than the sum of those two
 deposits, which should seamlessly account for the required deposits and transaction fees. You can
 send the native token from a relay chain account to a the Asset Hub account using the teleport

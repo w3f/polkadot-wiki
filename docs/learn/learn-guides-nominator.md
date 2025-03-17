@@ -90,7 +90,7 @@ earn compound interest.
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can be
-distributed to [multiple validators](../general/chain-state-values.md#maximum-votes-per-nominator).
+distributed to [multiple validators](../general/chain-state-values.md).
 Be careful about the validators you choose since you will be slashed if your validator commits an
 [offence](./learn-offenses.md).
 

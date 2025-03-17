@@ -76,7 +76,7 @@ signatories to approve the call before finally executing it.
 ### Multisig Call Deposit
 
 When you create a new multi-sig call, you will need to place a
-[deposit](../general/chain-state-values.md#multisig-deposit-base). The deposit stays locked until
+[deposit](../general/chain-state-values.md). The deposit stays locked until
 the call is executed. This deposit is to establish an economic cost on the storage space that the
 multisig call takes up in the chain state and discourage users from creating multisig calls that
 never get executed. The deposit will be reserved in the call initiator's account.
@@ -87,8 +87,8 @@ The deposit is dependent on the `threshold` parameter and is calculated as follo
 Deposit = depositBase + threshold * depositFactor
 ```
 
-Where [`depositBase`](../general/chain-state-values.md#multisig-deposit-base) and
-[`depositFactor`](../general/chain-state-values.md#multisig-deposit-factor) are chain constants set
+Where [`depositBase`](../general/chain-state-values.md) and
+[`depositFactor`](../general/chain-state-values.md) are chain constants set
 in the runtime code.
 
 The other signatory accounts should have enough funds to pay for the transaction fees associated

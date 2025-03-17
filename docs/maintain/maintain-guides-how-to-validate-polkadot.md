@@ -7,6 +7,9 @@ keywords: [validator setup, validator, validate, binary, runtime]
 slug: ../maintain-guides-how-to-validate-polkadot
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 !!!tip
     If you are a beginner, it is recommended that you start your validator journey on Kusama network.
     Check the [Kusama guide](kusama/maintain-guides-how-to-validate-kusama.md) for details on how to get
@@ -489,7 +492,7 @@ below are a few public snapshot providers for Polkadot and Kusama.
 
 ## Bond DOT
 
-There is a [minimum bond](../general/chain-state-values.md#minimum-validator-bond) to start a
+There is a [minimum bond](../general/chain-state-values.md) to start a
 validator instance, but to enter the active validator set and be eligible to earn rewards, your
 validator node should be nominated by a minimum number of DOT tokens.
 

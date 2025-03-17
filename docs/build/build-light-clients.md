@@ -7,6 +7,9 @@ keywords: [build, substrate, substrate connect, light client]
 slug: ../build-light-clients
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 ## Blockchain User Interfaces are still Centralized
 
 The communication between a standard user interface (UI) and a network node is through a JSON RPC

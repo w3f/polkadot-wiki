@@ -7,6 +7,9 @@ keywords: [build, index, tools, resources]
 slug: ../build-index
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Welcome to the builder's section of the Polkadot Wiki.
 
 Here, you will discover many development tools and resources in the Polkadot ecosystem. We are

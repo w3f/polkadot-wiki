@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build MkDocs site
-        run: mkdocs build
+        run: sh scripts/deploy.sh
         env:
           ENABLE_RPC: true
 

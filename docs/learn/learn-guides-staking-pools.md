@@ -32,7 +32,7 @@ have some skin in the game. A significant stake from the depositor is always a g
 pool's credibility.
 
 The current minimum bond to create a pool can be found
-[here](../general/chain-state-values.md#minimum-bond-to-create-a-nomination-pool).
+[here](../general/chain-state-values.md).
 
 The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
 navigate to Network > Staking > Pools and click on Add Pool button.

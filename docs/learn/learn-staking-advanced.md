@@ -22,7 +22,7 @@ slug: ../learn-staking-advanced
 ---
 
 !!!tip "New to Staking?"
-      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md#minimum-bond-to-join-a-nomination-pool) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 This page is meant to be an advanced guide to staking with the relay chain. For a more general
 introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
@@ -358,7 +358,7 @@ A maximum of
 [`pallet::Config::SignedMaxSubmissions`](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L390)
 will be stored on-chain and they will be sorted based on score. Higher the score the more optimal
 the election solution is. The
-[`SignedMaxSubmissions`](../general/chain-state-values.md#staking-miner-max-submissions) variable
+[`SignedMaxSubmissions`](../general/chain-state-values.md) variable
 can be modified through governance.
 
 Upon arrival of a new solution:

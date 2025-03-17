@@ -26,7 +26,7 @@ The Treasury funds are held in a [system account](../learn-account-advanced.md#s
 accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
 spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
 waiting period before distribution. This waiting period is known as the
-[_spend period_](../../general/chain-state-values.md#treasury-spending-period), and its duration is
+[_spend period_](../../general/chain-state-values.md), and its duration is
 subject to [governance](learn-governance.md). The Treasury attempts to spend as many proposals in
 the queue as it can without running out of funds.
 
@@ -35,7 +35,7 @@ Treasury payout is an automatic process:
 - If the Treasury funds run out with approved proposals left to fund, those proposals are kept in
   the approved queue, and will receive funding in the following spend period.
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of
-  [a percentage of its funds](../../general/chain-state-values.md#treasury-burn-factor) - thereby
+  [a percentage of its funds](../../general/chain-state-values.md) - thereby
   causing deflationary pressure. This encourages the spending of the funds in the Treasury by
   Polkadot's governance system.
 

@@ -138,7 +138,7 @@ experience during this interim period.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the
-[existential deposit](../general/chain-state-values.md#existential-deposit).
+[existential deposit](../general/chain-state-values.md).
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account
 will be wiped from the blockchain's state to conserve space, along with any funds in that address.

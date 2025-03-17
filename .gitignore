@@ -2,6 +2,9 @@ venv/
 .DS_Store
 __pycache__
 site/
+
+node_modules/
+
 # Local Netlify folder
 .netlify
 

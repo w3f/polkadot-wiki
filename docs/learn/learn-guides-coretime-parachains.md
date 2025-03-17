@@ -59,7 +59,7 @@ Polkadot-SDK repository.
 ## Reserve ParaID
 
 Reserving a `ParaID` requires a
-[deposit](../general/chain-state-values.md#parachain-id-registration-deposit). The first step is to
+[deposit](../general/chain-state-values.md). The first step is to
 register a [`ParaID`](../general/glossary.md#paraid) for the parachain. This can be done through
 Polkadot-JS UI by navigating to
 [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) and

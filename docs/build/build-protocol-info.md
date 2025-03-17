@@ -8,6 +8,9 @@ keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
 specific to Polkadot, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.
@@ -149,7 +152,7 @@ valid. If the extrinsic is not included in a block within this validity window, 
 from the transaction queue.
 
 The chain only stores a limited number of prior block hashes as reference. You can query this
-parameter, called [`BlockHashCount`](../general/chain-state-values.md#block-hash-count), from the
+parameter, called [`BlockHashCount`](../general/chain-state-values.md), from the
 chain state or metadata. If the validity period is larger than the number of blocks stored on-chain,
 then the transaction will only be valid as long as there is a block to check it against, i.e. the
 minimum value of validity period and block hash count.

@@ -7,6 +7,9 @@ keywords: [systemd, validate, node]
 slug: ../maintain-guides-how-to-systemd
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it
 will automatically restart on server reboots or crashes (and helps to avoid getting
 [slashed](../learn/learn-offenses.md)).

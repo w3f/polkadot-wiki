@@ -201,7 +201,7 @@ nav:
           - Decentralized Nodes: https://nodes.web3.foundation/
           - Thousand Contributors: general/thousand-contributors.md
           - Dev Heroes: general/dev-heroes.md
-      - Metadata: https://paritytech.github.io/subxt-explorer/#/
+      - Metadata: general/metadata.md
       - Chain State Values: general/chain-state-values.md
   - Learn:
       - learn/index.md
@@ -225,6 +225,7 @@ nav:
       - Basics:
           - learn/basics/index.md
           - Accounts:
+              - learn/accounts/index.md
               - Accounts: learn/learn-accounts.md
               - Account Balances: learn/learn-account-balances.md
               - Account Abstraction: learn/learn-account-abstraction.md
@@ -250,6 +251,7 @@ nav:
               - DOT: learn/learn-DOT.md
               - Inflation: learn/learn-inflation.md
               - Asset Hub:
+                  - learn/asset-hub/index.md
                   - Asset Hub: learn/learn-assets.md
                   - Asset Conversion (Asset Hub): learn/learn-asset-conversion-assethub.md
               - Teleport: learn/learn-teleport.md
@@ -278,10 +280,12 @@ nav:
                   - Coretime Parachains: learn/learn-guides-coretime-parachains.md
               - Elastic Scaling: learn/learn-elastic-scaling.md
               - Parachains:
+                  - learn/parachains/index.md
                   - Parachains: learn/learn-parachains.md
                   - System Chains: learn/learn-system-chains.md
                   - Parachains FAQ: learn/learn-parachains-faq.md
               - Cross Consensus Messaging (XCM): 
+                    - learn/xcm/index.md
                     - XCM: learn/learn-xcm.md
                     - XCM Pallet: learn/learn-xcm-pallet.md 
                     - XCM Transport: learn/learn-xcm-transport.md

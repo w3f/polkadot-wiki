@@ -60,7 +60,7 @@ In Polkadot there are two main ways to transfer funds from one account to anothe
 
 - `transfer keep-alive` (default option) will not allow you to send an amount that would allow the
   sending account to be removed due to it going below the
-  [existential deposit](../general/chain-state-values.md#existential-deposit).
+  [existential deposit](../general/chain-state-values.md).
 - `transfer allow-death` will allow you to send tokens regardless of the consequence. If the balance
   drops below the existential deposit your account will be reaped. It may be that you do not want to
   keep the account alive (for example, because you are moving all of your funds to a different
@@ -68,7 +68,7 @@ In Polkadot there are two main ways to transfer funds from one account to anothe
   [this support article](https://support.polkadot.network/support/solutions/articles/65000169248).
 
 !!!info
-    Attempting to send less than the [existential deposit](../general/chain-state-values.md#existential-deposit) to an account with zero balance will always fail, no matter if the keep-alive check is on or not.
+    Attempting to send less than the [existential deposit](../general/chain-state-values.md) to an account with zero balance will always fail, no matter if the keep-alive check is on or not.
 
 Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the
 sending account if you attempt to transfer.

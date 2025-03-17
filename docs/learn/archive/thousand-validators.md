@@ -112,7 +112,7 @@ determined by parsing data found [here](https://kusama.w3f.community/nominators)
 Since approximately early January 2021, the nominators will select an automatic number of validators
 to nominate based on the lowest amount staked for a validator and the amount of funds it holds. This
 can be anywhere from a few validators receiving nomination from a single nominator, to the
-[max of nominators](../../general/chain-state-values.md#maximum-votes-per-nominator).
+[max of nominators](../../general/chain-state-values.md).
 
 ## Selection
 

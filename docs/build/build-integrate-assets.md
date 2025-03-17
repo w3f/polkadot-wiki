@@ -7,6 +7,9 @@ keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 The relay chain does not natively support assets beyond its native token. This functionality exists
 in parachains. On both Polkadot and Kusama, this parachain is called Asset Hub.
 

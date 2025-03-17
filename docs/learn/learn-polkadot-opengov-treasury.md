@@ -32,7 +32,7 @@ mechanisms:
 The outflow is determined by the following mechanisms:
 
 - **Burned tokens:** at the end of each spend period,
-  **[a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
+  **[a fraction](../general/chain-state-values.md) of the available funds are
   burned**.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
   community and need to be approved by governance. Then, payouts occur at the end of a
@@ -146,7 +146,7 @@ total value of the bounty. In this sense, the curator's fee can be defined as th
 the amounts paid to child bounty awardees and the total value of the bounty.
 
 Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to
-pay an upfront [deposit](../general/chain-state-values.md#bounty-curator-deposit) to take the
+pay an upfront [deposit](../general/chain-state-values.md) to take the
 position. This deposit can be used to punish curators if they act maliciously. However, if they are
 successful in managing the bounty to completion, they will receive their deposit back, and part of
 the bounty funding as a payment for their efforts.
@@ -158,7 +158,7 @@ mechanism. A Bounty is a reward for a specified body of work or set of objective
 executed for a predefined treasury amount designated to be paid out. The responsibility of assigning
 a payout address once the specified set of objectives is completed is delegated to the curator.
 
-The bounty has a [predetermined duration](../general/chain-state-values.md#bounty-duration), with
+The bounty has a [predetermined duration](../general/chain-state-values.md), with
 possible extension(s) to be requested by the curator. To maintain flexibility during the tasks’
 curation, the curator will also be able to create child bounties for more granularity in the
 allocation of funds and as part of a nested iteration of the bounty mechanism.

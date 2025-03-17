@@ -7,6 +7,9 @@ keywords: [parameters, actions, attributes, behaviors]
 slug: ../maintain-polkadot-parameters
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Many of these parameter values can be updated via on-chain governance. If you require absolute
 certainty of these parameter values, it is recommended you directly check the constants by looking
 at the [chain state](https://polkadot.js.org/apps/#/chainstate/constants) and/or
@@ -68,7 +71,7 @@ a block in the chain. Thus, the times given are *estimates*. See
 ### Staking, Validating, and Nominating
 
 The maximum number of validators that can be nominated by a nominator is can be see
-[here](../general/chain-state-values.md#maximum-votes-per-nominator).
+[here](../general/chain-state-values.md).
 
 === "Polkadot"
 

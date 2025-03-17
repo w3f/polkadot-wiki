@@ -371,7 +371,7 @@ nomination pool and parachain accounts as well.
 ## Indices
 
 Polkadot addresses can have indices. An index is like a short and easy-to-remember version of an
-address. Claiming an index requires [a deposit](../general/chain-state-values.md#index-deposit)
+address. Claiming an index requires [a deposit](../general/chain-state-values.md)
 released when the index is cleared. Any index can be claimed if it is not taken by someone else.
 
 But what if an account gets reaped, as explained above? In that case, the index is emptied. In other

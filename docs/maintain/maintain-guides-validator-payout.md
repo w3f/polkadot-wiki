@@ -7,6 +7,9 @@ keywords: [validator payout, payments, rewards, era points]
 slug: ../maintain-guides-validator-payout
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 ## Era Points
 
 For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in

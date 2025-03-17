@@ -7,6 +7,9 @@ keywords: [build, cloud, storage]
 slug: ../build-storage
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Storage is an integral part of modern computer systems, and the same is true for distributed and
 decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it will be
 helpful if you familiarize yourself with the current Web3 approach towards decentralized storage.

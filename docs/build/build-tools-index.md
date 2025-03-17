@@ -7,6 +7,9 @@ keywords: [tools, clients, libraries, explorers, monitor, data, SCALE]
 slug: ../build-tools-index
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Here, we provide a list of tools available for your development needs. They are sorted by context.
 If you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate
 developers, feel free to [add it in](../general/contributing.md).

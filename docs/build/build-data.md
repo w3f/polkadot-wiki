@@ -7,6 +7,9 @@ keywords: [data, index, query, explorer, dashboard]
 slug: ../build-data
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 The tools that accentuate and aggregate the data within blockchains are integral for a multi-chain
 future. Parachains will need robust and secure ways to index and aggregate data, such as a data
 aggregation layer.

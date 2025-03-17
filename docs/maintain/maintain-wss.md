@@ -7,6 +7,9 @@ keywords: [web socket, remote, connection, secure websocket]
 slug: ../maintain-wss
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 ## Secure a WS Port
 
 A non-secure ws port can be converted to a secure wss port by placing it behind an SSL-enabled
