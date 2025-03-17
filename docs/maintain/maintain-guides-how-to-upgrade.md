@@ -7,6 +7,9 @@ keywords: [upgrade, node, validator, release, session]
 slug: ../maintain-guides-how-to-upgrade
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Validators perform critical functions for the network by
 [backing and including blocks](../learn/learn-parachains-protocol.md). Validators may have to go
 offline for short-periods of time to upgrade client software or to upgrade the host machine.
@@ -24,11 +27,8 @@ to allow for maintenance operations.
 The process can take several hours, so make sure you understand the instructions first and plan
 accordingly.
 
-:::tip Keep an eye out on new releases from the community
-
-Upgrade or downgrade accordingly.
-
-:::
+!!!tip "Keep an eye out on new releases from the community"
+   Upgrade or downgrade accordingly.
 
 ## Key Components
 

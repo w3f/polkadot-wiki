@@ -7,14 +7,11 @@ keywords: [ambassadors, contribute, contributions, program]
 slug: ../ambassadors
 ---
 
-:::info Polkadot Ambassador On-chain Collective
+!!!info "Polkadot Ambassador On-chain Collective"
+    Polkadot Ambassador Program is transitioning into an on-chain, rank-based, system collective after
+    the approval of [Polkadot OpenGov referenda 487](https://polkadot.polkassembly.io/referenda/487).
 
-Polkadot Ambassador Program is transitioning into an on-chain, rank-based, system collective after
-the approval of [Polkadot OpenGov referenda 487](https://polkadot.polkassembly.io/referenda/487).
-
-:::
-
-If you are enthusiastic about [Polkadot and Web3](./web3-and-polkadot.md) and are willing to help
+If you are enthusiastic about [Polkadot and Web3](web3-and-polkadot.md) and are willing to help
 the community grow, you can join the program and receive funding for hosting events, gain access to
 communication channels of core team members, and gain access to Polkadot events.
 

@@ -7,10 +7,16 @@ keywords: [elastic scaling, parachains, coretime, blockspace, parallel computing
 slug: ../learn-elastic-scaling
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="To fully follow the material on this page, it is recommended to be familiar with the primary stages
-of the [Parachain Protocol](./learn-parachains-protocol)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    To fully follow the material on this page, it is recommended to be familiar with the primary stages of the 
+    <a href="./learn-parachains-protocol.md" target="_blank" rel="noopener noreferrer">
+      Parachain Protocol.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 [Parallel computing](https://en.wikipedia.org/wiki/Parallel_computing) involves performing many
 calculations or processes simultaneously by dividing tasks into sub-tasks that run on multiple

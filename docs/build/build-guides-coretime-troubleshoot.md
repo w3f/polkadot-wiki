@@ -8,6 +8,9 @@ keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
 slug: ../build-guides-coretime-troubleshoot
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 This page aims to cover and aggregate various resources that relate to troubleshooting common
 problems when using the Polkadot SDK or deploying on a core.
 

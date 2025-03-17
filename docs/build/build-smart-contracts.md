@@ -7,6 +7,9 @@ keywords: [build, smart contract, evm, wasm]
 slug: ../build-smart-contracts
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 The relay chain which is a layer 0 blockchain, does not support smart contracts natively. However,
 parachains which are layer 1 blockchains are equipped with the functionality to support smart
 contracts.
@@ -94,7 +97,7 @@ Here is the list of current resources available to developers who want to get st
 contracts to deploy on parachains based on Substrate.
 
 - [ink!](https://github.com/paritytech/ink) - Parity's ink to write smart contracts.
-- [Substrate ink! Workshop](https://docs.substrate.io/tutorials/smart-contracts/) - Walks you
+- [Substrate ink! Workshop](https://docs.polkadot.com/develop/smart-contracts/#smart-contracts) - Walks you
   through the basics of writing and deploying an ERC-20 token using `ink!`.
 
 ### Contracts Pallet

@@ -1,0 +1,51 @@
+.floating-message-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  background: pink;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  font-size: 14px;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-message-box p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.floating-message-box a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+.floating-message-box a:hover {
+  text-decoration: underline;
+}
+
+.floating-message-box .close-messagebox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.floating-message-box .close-messagebox:hover {
+  color: #d9534f;
+}
+
+/* Hide the message box when closed */
+.floating-message-box.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}

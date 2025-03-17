@@ -7,6 +7,9 @@ keywords: [hackathon, build, event, host, resources]
 slug: ../build-hackathon
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 ## Join a Hackathon
 
 Web3 Foundation regularly supports developer focused events! Be the first to know by signing up for
@@ -85,7 +88,7 @@ Here are a few examples of hackathons W3F has facilitated and supported:
 
 ## Resources
 
-- [Substrate Docs](https://docs.substrate.io/) - many introductory learning material lives here,
+- [Polkadot Docs](https://docs.polkadot.com/) - many introductory learning material lives here,
   that can be a feature of you hackathon or suggested prerequisite for those joining to use.
 
 ## Support / Contact

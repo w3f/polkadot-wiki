@@ -7,6 +7,9 @@ keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
 slug: ../build-hrmp-channels
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 In order to communicate over [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite), parachains must
 establish channels by registering them on the relay chain. Like
 [XCMP](../learn/learn-xcm-transport.md#xcmp-cross-chain-message-passing), HRMP is a message

@@ -7,9 +7,8 @@ keywords: [validate, validator, kusama, stake, maintain]
 slug: ../../maintain-guides-how-to-validate-kusama
 ---
 
-import RPC from "./../../../components/RPC-Connection";
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
 
-import MinimumStake from "./../../../components/Minimum-Stake";
 
 ## Preliminaries
 
@@ -19,15 +18,12 @@ only your own stake, but also the stake of your current nominators. If you make 
 running a validator can also be very rewarding, knowing that you contribute to the security of a
 decentralized network while growing your stash.
 
-:::warning
+!!!warning
+    It is highly recommended that you have significant system administration experience before
+    attempting to run your own validator.
 
-It is highly recommended that you have significant system administration experience before
-attempting to run your own validator.
-
-You must be able to handle technical issues and anomalies with your node which you must be able to
-tackle yourself. Being a validator involves more than just executing the binary file.
-
-:::
+    You must be able to handle technical issues and anomalies with your node which you must be able to
+    tackle yourself. Being a validator involves more than just executing the binary file.
 
 Since security is so important to running a successful validator, you should take a look at the
 [secure validator](../maintain-guides-secure-validator.md) information to make sure you understand
@@ -41,12 +37,9 @@ The team and other validators are there to help answer questions and provide tip
 
 ### How many KSM do I need to become an active Validator?
 
-:::info Controller accounts are deprecated
-
-Controller accounts are deprecated. For more information, see
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
-
-:::
+!!!info "Controller accounts are deprecated"
+    Controller accounts are deprecated. For more information, see
+    [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
 
 You can have a rough estimate on that by using the methods listed
 [here](../../general/faq.md#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator).
@@ -57,13 +50,10 @@ with the existential deposit, plus a little extra for transaction fees. The rest
 nominators. To understand how validators are elected, check the
 [NPoS Election algorithms](../../learn/learn-phragmen.md) page.
 
-:::tip Join the Decentralized Nodes program
-
-[The Decentralized Nodes program](https://nodes.web3.foundation/) is an initiative by Web3
-Foundation and Parity Technologies to use the funds held by both organizations to nominate
-validators in the community.
-
-:::
+!!!tip "Join the Decentralized Nodes program"
+    [The Decentralized Nodes program](https://nodes.web3.foundation/) is an initiative by Web3
+    Foundation and Parity Technologies to use the funds held by both organizations to nominate
+    validators in the community.
 
 **Warning:** Any KSM that you stake for your validator is liable to be slashed, meaning that an
 insecure or improper setup may result in loss of KSM tokens! If you are not confident in your
@@ -76,7 +66,7 @@ On Kusama, one day is approximately four eras whereas on Polkadot, one era is ap
 In each era, the validators elected to the active set earn era points which correspond to the actual
 rewards earned that are distributed proportionally to the nominators after deducting the validator
 commission. The
-[minimum validator commission](../../general/chain-state-values.md#minimum-validator-commission) can
+[minimum validator commission](../../general/chain-state-values.md) can
 be set through on-chain governance. For more information rewards and payouts, check the
 [validator payout](../maintain-guides-validator-payout.md) document.
 

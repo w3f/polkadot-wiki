@@ -1,16 +1,25 @@
 ---
 id: ledger
 title: Using the Polkadot Ledger Apps
-sidebar_label: Ledger
 description: Use the Polkadot Ledger Application.
-keywords: [ledger, staking, polkadot app]
+keywords: [Ledger, Polkadot Ledger app, Ledger Generic]
 slug: ../ledger
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="If you need help using Ledger, see [this support article](https://support.ledger.com/article/Migrate-Assets-to-Polkadot-Generic-App-Accounts-Using-the-Polkadot-Generic-App). If the problem persists, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    If you need help using Ledger, see
+    <a href="https://support.ledger.com/article/Migrate-Assets-to-Polkadot-Generic-App-Accounts-Using-the-Polkadot-Generic-App" target="_blank" rel="noopener noreferrer">
+      this support article.
+    </a>
+    If the problem persists, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S,
 Nano X, and Stax devices. Ledger devices are hardware wallets that keep your secret key secured on a
@@ -46,7 +55,7 @@ If you do use a Nano S with the XL version, you will not be able to:
 - Install any other Ledger application on your device
 - Add Polkadot accounts to the Ledger Live App.
 
-But you will be able to add them to [wallets and extensions](./wallets-and-extensions.md) that
+But you will be able to add them to [wallets and extensions](wallets-and-extensions.md) that
 support Ledger devices.
 
 More information on Ledger device comparisons
@@ -75,28 +84,18 @@ Ledger apps are developed by [Zondax](https://zondax.ch/) and are available
 [here](https://github.com/Zondax/ledger-polkadot). The Polkadot Ledger application allows you to
 manage Polkadot, Kusama and their parachains native tokens.
 
-:::note Ledger apps may not support all the transactions
-
-Check the [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the
-list of transactions supported. Some transactions are supported only on a specific app version, and
-others are not supported by any version. For instance, joining a
-[nomination pool](../learn/learn-nomination-pools.md) is only possible with the **XL version** but
-not on the **lite version**.
-
-:::
+!!! note "Ledger apps may not support all the transactions"
+    Check the [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of transactions supported. Some transactions are supported only on a specific app version, and others are not supported by any version. For instance, joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible with the **XL version** but not on the **lite version**.
 
 ### Polkadot Migration App
 
-:::warning For Migration Only
+!!! warning "For Migration Only"
+    This app is only meant for performing the migration to the Polkadot Generic App; do not use it frequently. 
 
-This app is only meant for performing the migration to the Polkadot Generic App; do not use it
-frequently. After you migrate your assets, delete the Migration app and use the Polkadot Generic
-App.
-
-:::
+    After you migrate your assets, delete the Migration app and use the Polkadot Generic App.
 
 The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot relay chain
-and [Polkadot System Chains](./glossary.md#system-parachains)**. Old Ledger accounts are accounts
+and [Polkadot System Chains](glossary.md#system-parachains)**. Old Ledger accounts are accounts
 that have been created using the old Kusama Ledger app and any parachain Ledger apps (for both
 Kusama and Polkadot) except for Polkadot System Chains.
 
@@ -107,17 +106,14 @@ Ledger app.
 
 ### Polkadot (Generic) App
 
-:::info Ledger Generic Support
-
-See [this page](https://data.parity.io/metadata) to see which chains support the Ledger Generic App.
-
-:::
+!!! info "Ledger Generic Support"
+    See [this page](https://data.parity.io/metadata) to see which chains support the Ledger Generic App.
 
 The Polkadot Ledger Generic App will allow you to use your Ledger device on the relay chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
 for the entire Polkadot ecosystem without compromising security. This new app will also count with
 Clear Signing, allowing you to see what you sign on a trusted display. This way, unintentionally
-signing rogue transactions can be avoided. [See this page](./transaction-attacks.md) to understand
+signing rogue transactions can be avoided. [See this page](transaction-attacks.md) to understand
 the importance of verifying transactions before signing them.
 
 The Polkadot Ledger Generic app brings the following benefits:
@@ -154,13 +150,10 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 - When the migration process is finished, you can delete the Migration app, and everything will be
   accessible using the Polkadot Generic app.
 
-:::info Staking and Identities
-
-The migration process will also include removing identities from your old account and resetting them
-to the new one. You will also need to unstake, wait for the unbonding period, transfer the funds to
-the new account, and stake again.
-
-:::
+!!! info "Staking and Identities"
+    The migration process will also include removing identities from your old account and resetting them
+    to the new one. You will also need to unstake, wait for the unbonding period, transfer the funds to
+    the new account, and stake again.
 
 ## Using Ledger Live
 
@@ -170,9 +163,8 @@ to learn how to use Polkadot with ledger live.
 
 ---
 
-:::info Polkadot-JS Guides
+!!! info "Polkadot-JS Guides"
+    If you are an advanced user, see the
+    [Polkadot-JS guides about Ledger](../learn/learn-guides-ledger.md).
 
-If you are an advanced user, see the
-[Polkadot-JS guides about Ledger](../learn/learn-guides-ledger.md).
 
-:::

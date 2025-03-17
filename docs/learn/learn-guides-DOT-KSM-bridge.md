@@ -7,11 +7,16 @@ keywords: [Bridge, XCM, Bridge Hub, polkadot-js]
 slug: ../learn-guides-dot-ksm-bridge
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The fully functional Polkadot < > Kusama bridge facilitates secure asset transfers between the
 chains in both the ecosystems. The progress of Polkadot < > Kusama bridge implementation can be
@@ -168,20 +173,8 @@ Transfer functionality of assets other than DOT and KSM between Asset Hubs is ye
 Once this functionality is enabled, assets which are sufficient or non-sufficient on the Asset Hubs
 can be bridged.
 
-:::caution Avoid Asset Traps
-
-To avoid issues on the receiving side for non-sufficient assets, make sure to call
-[pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531)
-or
-[pallet_assets::touch_other()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1616)
-effectively guaranteeing the ability to successfully receive and accept the bridged assets in your
-account on the destination chain. This eliminates issues like your account on destination not
-existing or not having enough ED or having reached the maximum limit of different assets it can
-hold. Without this sanity step, you risk that the bridged assets will make their way to the
-destination chain but will not be accepted by your account, and instead get trapped in the Asset
-Trap on the destination chain.
-
-:::
+!!!caution "Avoid Asset Traps"
+    To avoid issues on the receiving side for non-sufficient assets, make sure to call [pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531) or [pallet_assets::touch_other()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1616) effectively guaranteeing the ability to successfully receive and accept the bridged assets in your account on the destination chain. This eliminates issues like your account on destination not existing or not having enough ED or having reached the maximum limit of different assets it can hold. Without this sanity step, you risk that the bridged assets will make their way to the destination chain but will not be accepted by your account, and instead get trapped in the Asset Trap on the destination chain.
 
 Once arbitrary asset transfers are enabled by the Asset Hubs, a guide will be posted to this Wiki
 page.

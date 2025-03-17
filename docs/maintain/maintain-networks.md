@@ -7,6 +7,9 @@ keywords: [networks, mainnet, testnet, canary, substrate]
 slug: ../maintain-networks
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 Polkadot is built on top of Substrate, a modular framework for blockchains. One feature of Substrate
 is to allow for connection to different networks using a single executable and configuring it with a
 start-up flag. Here are some of the networks associated with Polkadot or Substrate that you may want
