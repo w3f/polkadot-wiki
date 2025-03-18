@@ -49,7 +49,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^15.0.5",
     "axios": "^1.8.3",
-    "cloudflare": "^4.1.0",
+    "cloudflare": "^4.2.0",
     "cross-env": "^7.0.3",
     "fs-extra": "^11.3.0",
     "husky": "^9.1.7",

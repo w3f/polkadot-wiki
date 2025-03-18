@@ -5315,10 +5315,10 @@ clone-deep@^4.0.1:
     kind-of "^6.0.2"
     shallow-clone "^3.0.0"
 
-cloudflare@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-4.1.0.tgz#247fd467c7c983d125cdf9634bbc15e2b0f6c7dd"
-  integrity sha512-TySwSEGGQhuVHFVjKRUHkzZum0MSGJkgfVjep+KBJxuxScEvjoTckQFbxlYThPp5kLm8IUi4C7oJeVr5e9etVw==
+cloudflare@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-4.2.0.tgz#d938088948bdd99b79499bc6677924ad3f458d09"
+  integrity sha512-L9IainZq+7PN3NG/Mg7T9oRm7SB7AskNe6QLD8j7FrJY+2Dn1qpeLqXF8Im04ANnssezf0KAOtSuxNAAyNEgkg==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
