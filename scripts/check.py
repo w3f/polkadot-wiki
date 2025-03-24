@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 sitemap_path = './wiki_sitemap.xml'
 
 # Base URL for testing
-base_url = 'http://localhost:8888'
+base_url = 'https://wiki-mkdocs.netlify.app'
 
 # Parse the sitemap.xml file
 tree = ET.parse(sitemap_path)
