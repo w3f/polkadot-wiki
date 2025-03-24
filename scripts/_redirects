@@ -19,9 +19,9 @@
 /docs/learn-advanced-index    /learn/advanced    301
 /docs/learn/xcm    /learn/learn-xcm    301
 /docs/learn-comparisons    /learn/learn-comparisons    301
-/docs/learn-video-tutorials    /learn/learn-video-tutorials    301
+/docs/learn-video-tutorials    https://www.youtube.com/@PolkadotNetwork/playlists    301
 /docs/learn-future-implementations-index    /learn/future-implementations   301
-/docs/learn-archive    /learn/learn-archive    301
+/docs/learn-archive    /learn/archive    301
 /docs/build-network-overview    /build/build-network-overview    301
 /docs/build-client-index    /build/client    301
 /docs/build-smart-contracts    /build/build-smart-contracts    301
@@ -37,7 +37,7 @@
 /docs/learn-xcm-usecases    /learn/learn-xcm-usecases   301
 /docs/learn-xcm-*   /learn/learn-xcm    301
 /docs/learn-agile-coretime    /learn/learn-agile-coretime    301
-/docs/build-open-source    /general/build-open-source    301
+/docs/build-open-source    /build/build-open-source    301
 /docs/learn-parachains    /learn/learn-parachains    301
 /docs/learn-parachains-protocol    /learn/learn-parachains-protocol    301
 /docs/learn-wasm    /learn/learn-wasm    301
@@ -132,7 +132,7 @@
 /docs/learn-staking-advanced    /learn/learn-staking-advanced    301
 /docs/learn-nft-pallets    /learn/learn-nft-pallets    301
 /docs/learn-cryptography    /learn/learn-cryptography    301
-/docs/learn-polkadotjs    /learn/learn-polkadotjs    301
+/docs/learn-polkadotjs    /general/polkadotjs    301
 /docs/learn-runtime-upgrades    /learn/learn-runtime-upgrades    301
 /docs/learn/xcm/introduction    /learn/learn-xcm    301
 /docs/learn/xcm/overview    /learn/learn-xcm    301
