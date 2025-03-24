@@ -19,11 +19,9 @@ Polkadot SDK comprises three main pieces of software:
 
 The programming language used for development is [Rust](https://www.rust-lang.org/).
 
-:::info
+!!!info
+    For more information about building on Polkadot, see [the Builder's Guide](../build/build-guide.md).
 
-For more information about building on Polkadot, see [the Builder's Guide](../build/build-guide.md).
-
-:::
 
 ## Requests for Comment (RFCs)
 
@@ -60,15 +58,8 @@ below:
   [adding a new system collective](https://github.com/polkadot-fellows/RFCs/blob/main/text/0012-process-for-adding-new-collectives.md)
   or making changes to network parameters like inflation rate, treasury inflow etc.
 
-:::note Polkadot Runtime Code Changes through Root track
-
-Although the Technical Fellowship maintains the
-[runtimes of Polkadot and Kusama](https://github.com/polkadot-fellows/runtimes), changes to the
-network protocol are not gated by the fellowship. Any DOT holder can submit a referendum on
-[the Polkadot OpenGov Root track](../learn/learn-polkadot-opengov-origins.md#root) to set the
-runtime code with the proposed changes.
-
-:::
+!!!note "Polkadot Runtime Code Changes through Root track"
+    Although the Technical Fellowship maintains the [runtimes of Polkadot and Kusama](https://github.com/polkadot-fellows/runtimes), changes to the network protocol are not gated by the fellowship. Any DOT holder can submit a referendum on [the Polkadot OpenGov Root track](../learn/learn-polkadot-opengov-origins.md#root) to set the runtime code with the proposed changes.
 
 For more information about the adoption of RFCs within the Polkadot ecosystem, see
 [this Medium article](https://www.polkadotphilosophy.com/polkadots-strategic-adoption-of-rfcs-pioneering-a-collaborative-future-in-blockchain-3330843cfd4f)

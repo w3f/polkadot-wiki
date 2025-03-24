@@ -13,12 +13,8 @@ is listed as a precaution - if one of these people ever contacts you directly, f
 contact information to see that it matches the origin of the message, and then feel free to get in
 touch with someone else on this list to verify the legitimacy of the original inquiry.
 
-:::warning Employee impersonation is a common type of scam
-
-For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](scams.md)
-guide.
-
-:::
+!!!warning "Employee impersonation is a common type of scam"
+    For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](scams.md) guide.
 
 ## Technical Education
 

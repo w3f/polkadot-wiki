@@ -7,8 +7,6 @@ keywords: [bridges, cross-chain, bridge methods]
 slug: ../learn-bridges
 ---
 
-import DocCardList from '@theme/DocCardList';
-
 Bridges are vital infrastructure, enabling cross-chain communication between technically diverse
 networks like Polkadot and Ethereum. Bridges allow these chains to acknowledge and trust each
 other’s finalized states, paving the way for many applications like asset swaps and chain
@@ -24,19 +22,11 @@ billion. Four of the top five incidents on the [rekt leaderboard](https://rekt.n
 are bridge-related hacks. A system’s security is only **as strong as its weakest link**, and bridges
 have proven to be a critical vulnerability.
 
-:::info Purpose of bridging
-
-Bridges enable Polkadot to communicate with external blockchains such as Bitcoin and Ethereum.
-Within Polkadot, chains already benefit from secure interoperability. For more information about the
-native interoperability technology that allows parachains to communicate trustlessly, please see the
-dedicated [cross consensus](learn-xcm.md) page on the Wiki.
-
-:::
+!!!info "Purpose of bridging"
+    Bridges enable Polkadot to communicate with external blockchains such as Bitcoin and Ethereum. Within Polkadot, chains already benefit from secure interoperability. For more information about the native interoperability technology that allows parachains to communicate trustlessly, please see the dedicated [cross consensus](learn-xcm.md) page on the Wiki.
 
 Thus, Bridge designs come in various flavors ranging from centralized and trusted to more
 decentralized and trustless. Polkadot favors the latter bridge designs for its ecosystem.
-
-<DocCardList />
 
 ## Trustless Bridges
 
@@ -107,12 +97,8 @@ cost-effective solution for operating a trustless bridge with Ethereum and other
 Trustless bridges to chains like Cosmos, Avalanche, NEAR, etc., would require custom pallets to be
 deployed on Bridge Hub.
 
-:::note
-
-To learn more on how Bitcoin and Ethereum can cooperate and collaborate through Polkadot, check out
-this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
-
-:::
+!!!note
+    To learn more on how Bitcoin and Ethereum can cooperate and collaborate through Polkadot, check out this explainer video [here](https://www.youtube.com/watch?v=rvoFUiOR3cM)
 
 ### via Higher-Order Protocols
 
@@ -162,13 +148,8 @@ through the
 bridges that connect Polkadot with other ecosystems. Here below is a main technical comparison
 between the two.
 
-:::danger Tokens sent through different bridges are different
-
-Unless specific logic is implemented, WETH sent through Snowbridge cannot be sent back using
-Hyperbridge, and _vice versa_. **Sending tokens using different bridges might lead to loss of
-funds.**
-
-:::
+!!!danger "Tokens sent through different bridges are different"
+    Unless specific logic is implemented, WETH sent through Snowbridge cannot be sent back using Hyperbridge, and _vice versa_. **Sending tokens using different bridges might lead to loss of funds.**
 
 |                                                                                                                       Snowbridge                                                                                                                       |                                                                                                          Hyperbridge                                                                                                          |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |

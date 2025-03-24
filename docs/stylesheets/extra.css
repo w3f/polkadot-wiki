@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root {
+    --md-text-font: sans-serif;
+    --md-default-fg-color: #000;
+}
+
+h1 {
+    font-family: 'Unbounded', sans-serif;
+    color: var(--md-default-fg-color) !important;
+    font-weight: 900;
+}
+
+.md-tabs__list {
+    margin-bottom: 15px;
+}
+
+.md-tabs__link {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+nav .md-header__ellipsis {
+    font-family: 'Unbounded', sans-serif;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 2rem;
+}
+
+.md-nav__list {
+    font-size: 16px;
+    color: var(--md-default-fg-color) !important;
+}
+
+.md-grid {
+    max-width: 80rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.col {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.col img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.col a:hover {
+    color: #0078d4;
+    /* Add hover effect */
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card container: Entire card is clickable */
+.card-container {
+    height: 450px;
+    /* Adjusted height for description */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Ensure text inherits color */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+    /* Optional: Slight color change on hover */
+}
+
+/* Image inside the card */
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    /* Ensures images fit nicely */
+    max-height: 250px;
+    /* Keeps image height consistent */
+}
+
+/* Title text inside the card */
+.card-title {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.title {
+    font-size: 25px;
+}
+
+/* Description text inside the card */
+.card-description {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.4;
+    /* Better spacing for multi-line descriptions */
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .card-container {
+        width: 500px;
+    }
+}

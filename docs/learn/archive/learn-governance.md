@@ -7,11 +7,16 @@ keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../learn-polkadot-opengov)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived. For up-to-date information about governance, see the
+    <a href="../learn-polkadot-opengov" target="_blank" rel="noopener noreferrer">
+      Polkadot OpenGov page.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
 the ultimate behest of its assembled stakeholders. The stated goal is to ensure that the majority of
@@ -41,7 +46,7 @@ the top of the queue. When it is time, the proposal at the top of the queue will
 [Public Referendum](#public-referenda). For instance, the proposal with 11 endorsements is shown at
 the top of the queue in the figure, which is ready to become a referendum.
 
-The public can also submit a [treasury proposal](./learn-treasury.md#creating-a-treasury-proposal),
+The public can also submit a [treasury proposal](./learn-treasury.md),
 which must be evaluated by the [Council](#council) through a motion. If the Council motion passes,
 the treasury proposal can be directly executed or go to the external queue, which will be voted on
 through a [Council Referendum](#council-referenda). See the figure's green horizontal path from the
@@ -83,12 +88,8 @@ Referenda can be started in different ways:
 - Emergency proposals submitted by the [Technical Committee](#technical-committee) and approved by
   the [Council](#council)
 
-:::info Starting a proposal in Governance V1
-
-For more information about how to start a proposal, see the
-[dedicated page](../../maintain/archive/maintain-guides-democracy.md#proposing-an-action).
-
-:::
+!!!info "Starting a proposal in Governance V1"
+    For more information about how to start a proposal, see the [dedicated page](../../maintain/archive/maintain-guides-democracy.md#proposing-an-action).
 
 ### Endorsing Proposals
 
@@ -115,7 +116,7 @@ it will be left to the stakeholders _en masse_ to determine the proposal’s fat
 ### Blacklisting Proposals
 
 A proposal can be blacklisted by Root Origin (e.g. sudo). A blacklisted proposal and its related
-referendum (if any) are immediately [canceled](#canceling). Additionally, a blacklisted proposal's
+referendum (if any) are immediately [canceled](#cancelling-proposals). Additionally, a blacklisted proposal's
 hash cannot re-appear in the proposal queue. Blacklisting is useful when removing erroneous
 proposals that could be submitted with the same hash.
 
@@ -178,11 +179,8 @@ increases towards 100%, it will require a simple majority of _aye_ votes to pass
 Note that the bonded tokens will be released once the proposal is tabled (that is, brought to a
 vote), and a maximum of 100 public proposals can be in the proposal queue.
 
-:::info turnout
-
-The total number of voting tokens excluding conviction or [voluntary locking](#voluntary-locking).
-
-:::
+!!!info "turnout"
+    The total number of voting tokens excluding conviction or [voluntary locking](#voluntary-locking).
 
 ### Council Referenda
 
@@ -194,16 +192,8 @@ will require a simple majority of _nay_ votes to fail (i.e. 51% wins).
 Majority Council - When agreement from only a simple majority of council members occurs, the
 referendum will need [**simple majority**](#adaptive-quorum-biasing) to pass.
 
-:::info Public- vs. Council-initiated Referenda
-
-Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or
-ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council,
-it benefits from using the negative bias. We assume low turnout is less problematic if the council
-proposes a referendum. Also, the council members are elected by the community and have strong
-technical as well as functional knowledge about the system, and we assume solid justifications back
-changes proposed by the council.
-
-:::
+!!!info "Public- vs. Council-initiated Referenda"
+    Public referenda must be agreed upon using a positive bias to mitigate attacks by malicious or ill-conceived proposals. Conversely, when a proposal is unanimously voted in favor by the council, it benefits from using the negative bias. We assume low turnout is less problematic if the council proposes a referendum. Also, the council members are elected by the community and have strong technical as well as functional knowledge about the system, and we assume solid justifications back changes proposed by the council.
 
 ### Alternating Voting Timetable
 
@@ -300,13 +290,8 @@ Since the above example is a public referendum, **Super-Majority Approve** would
 calculate the result. Super-Majority Approve requires more _aye_ votes to pass the referendum when
 turnout is low; therefore, based on the above result, the referendum will be rejected.
 
-:::info only the winning voter's tokens are locked.
-
-If the voters on the losing side of the referendum believe that the outcome will have adverse
-effects, their tokens are transferrable, so they will not be locked into the decision. Winning
-proposals are autonomously enacted after the [enactment period](#enactment).
-
-:::
+!!!info "only the winning voter's tokens are locked."
+    If the voters on the losing side of the referendum believe that the outcome will have adverse effects, their tokens are transferrable, so they will not be locked into the decision. Winning proposals are autonomously enacted after the [enactment period](#enactment).
 
 ### Enactment
 
@@ -328,12 +313,8 @@ To vote, a voter generally must lock their tokens up for at least the enactment 
 end of the referendum. This is to ensure that some minimal economic buy-in to the result is needed
 and to dissuade vote selling.
 
-:::note Referenda explainer video
-
-To learn more about voting on referenda, please check out our
-[technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
-
-:::
+!!!note "Referenda explainer video"
+    To learn more about voting on referenda, please check out our [technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
 
 It is possible to vote without locking, but your vote is worth a small fraction of a normal vote,
 given your stake. At the same time, holding only a small amount of tokens does not mean that the
@@ -342,12 +323,8 @@ below).
 
 ### Voluntary Locking
 
-:::info Voluntary Locking
-
-For more information about voluntary locking or conviction voting see
-[Polkadot OpenGov](../learn-polkadot-opengov.md#voluntary-locking).
-
-:::
+!!!info "Voluntary Locking"
+    For more information about voluntary locking or conviction voting see [Polkadot OpenGov](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting).
 
 ### Delegations
 
@@ -355,7 +332,7 @@ In Polkadot, you can
 [delegate your voting power](../../maintain/archive/maintain-guides-democracy.md#delegate-a-vote) to
 another account you trust if you are not willing to stay up-to-date with all referenda.
 
-You can also use a [governance proxy](../learn-proxies.md#governance-proxy) to vote on behalf of
+You can also use a [governance proxy](../learn-proxies.md#proxy-types) to vote on behalf of
 your stash account. The proxy can be yours, or you can authorize a third-party governance proxy to
 vote with your stash. Learn more from the [dedicated page on Proxy Accounts](../learn-proxies.md).
 
@@ -381,12 +358,8 @@ will move to a public referendum under a neutral, majority-carries voting scheme
 all members of the council that voted are in favor of a motion, the vote is considered unanimous and
 becomes a referendum with [negative turnout bias](#adaptive-quorum-biasing).
 
-:::note Explainer video on the Council
-
-For more information, check out our
-[video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
-
-:::
+!!!note "Explainer video on the Council"
+    For more information, check out our [video explainer on Council](https://www.youtube.com/watch?v=837Vv3gdRzI)
 
 ### Prime Members
 
@@ -434,7 +407,7 @@ selects validators from the available pool based on nominations. However, token 
 councilors are isolated from any nominations they may have on validators. Council terms last for one
 week on Polkadot and one day day on Kusama.
 
-At the end of each term, [Phragmén election algorithm](../learn-phragmen#algorithm) runs and the
+At the end of each term, [Phragmén election algorithm](../learn-phragmen.md#algorithm) runs and the
 result will choose the new councilors based on the vote configurations of all voters. The election
 also chooses a set number of runners-up, which is 20 on Polkadot (12 on Kusama), that will remain in
 the queue with their votes intact.
@@ -495,12 +468,8 @@ At some point, you will likely need a place for a longer-form discussion. For th
 a post on Polkassembly, present all the evidence for your circumstances and state clearly what kind
 of change you would suggest to the councilors to enact.
 
-:::info
-
-Remember, the councilors do not need to make the change, it is your responsibility to make a strong
-case for why the change should be made.
-
-:::
+!!!info
+    Remember, the councilors do not need to make the change, it is your responsibility to make a strong case for why the change should be made.
 
 ## Gov1 Runtime Upgrade Monitoring
 

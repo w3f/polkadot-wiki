@@ -82,7 +82,7 @@ for lease deposits in exchange for pre-sale tokens. There was no other way you c
 Polkadot 1.0.
 
 The relay chain currently manages other tasks such as [staking](../learn/learn-staking.md),
-[accounts](./learn-accounts-index), [balances](../learn/learn-transactions.md#balance-transfers),
+[accounts](./../learn/learn-accounts.md), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md).
 
 ### Polkadot's Resilience

@@ -87,10 +87,10 @@ The required deposit amount for `n` proxies is equal to:
 
 `ProxyDepositBase` + `ProxyDepositFactor` \* `n`
 
-where the [`ProxyDepositBase`](../general/chain-state-values.md#proxy-deposits) is the required
+where the [`ProxyDepositBase`](../general/chain-state-values.md) is the required
 amount to be reserved for an account to have a proxy list (creates one new item in storage). For
 every proxy the account has, an additional amount defined by the
-[`ProxyDepositFactor`](../general/chain-state-values.md#proxy-deposits) is reserved as well (appends
+[`ProxyDepositFactor`](../general/chain-state-values.md) is reserved as well (appends
 33 bytes to storage location).
 
 ## Time-delayed Proxy
@@ -107,17 +107,12 @@ Announcing `n` calls using a time-delayed proxy also requires a deposit of the f
 
 `announcementDepositBase` + `announcementDepositFactor` \* `n`
 
-where the [`announcementDepositBase`](../general/chain-state-values.md#proxy-deposits) is the
+where the [`announcementDepositBase`](../general/chain-state-values.md) is the
 required amount to be reserved for an account to announce a proxy call. For every proxy call the
 account has, an additional amount defined by the
-[`announcementDepositFactor`](../general/chain-state-values.md#proxy-deposits) is reserved as well.
+[`announcementDepositFactor`](../general/chain-state-values.md) is reserved as well.
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the
-[Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md). You can find
-information about creating and removing proxies, and more.
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md). You can find information about creating and removing proxies, and more.

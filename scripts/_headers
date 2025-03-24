@@ -1,0 +1,4 @@
+/*
+  Content-Security-Policy: frame-ancestors 'self' wiki-mkdocs.netlify.app wiki.polkadot.network
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff

@@ -7,9 +7,20 @@ keywords: [parachains, application-specific, sharding, faq]
 slug: ../learn-parachains-faq
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Parachain Slot Auctions and Crowdloans will be deprecated right after [Agile Coretime](./learn-agile-coretime) is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information [here](./learn-agile-coretime#implementation)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Parachain Slot Auctions and Crowdloans will be deprecated right after
+    <a href="./learn-agile-coretime" target="_blank" rel="noopener noreferrer">
+      Agile Coretime
+    </a>
+    is activated on the network. For existing parachains, the remainder of the lease will automatically be converted to coretime. See more information
+    <a href="./learn-agile-coretime#implementation" target="_blank" rel="noopener noreferrer">
+      here.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 ## General
 
@@ -24,7 +35,7 @@ chain provides.
 
 ### How about parachains that are not Substrate-based?
 
-Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
+Substrate provides [FRAME Pallets](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#frame)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
 that can be used for consensus. Polkadot, being a Substrate-based chain, relies on BABE as the block
 production scheme and GRANDPA as the finality gadget as part of its consensus mechanism.
@@ -48,7 +59,7 @@ blockchains that can be supported by the relay chain.
 
 The minimal safe ratio of validators per parachain is 5:1. With a sufficiently large set of
 validators, the randomness of their distribution along with
-[availability and validity](./learn-parachains-protocol.md#anv-protocol) will make sure security is
+[availability and validity](./learn-parachains-protocol.md#availability-and-validity-anv-protocol) will make sure security is
 on-par. However, should there be a big outage of a popular cloud provider or another network
 connectivity catastrophe, it is reasonable to expect that the number of validators per chain will
 drop.

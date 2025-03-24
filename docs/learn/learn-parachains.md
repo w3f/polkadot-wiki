@@ -7,17 +7,26 @@ keywords: [parachains, application-specific, sharding, on-demand, parathread]
 slug: ../learn-parachains
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    <a href="./learn-agile-coretime.md" target="_blank" rel="noopener noreferrer">
+      Agile Coretime 
+    </a>
+    is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information
+    <a href="./learn-agile-coretime#implementation" target="_blank" rel="noopener noreferrer">
+      here.
+    </a>
+    For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the
+    <a href="https://www.polimec.org/" target="_blank" rel="noopener noreferrer">
+      Polimec parachain.
+    </a> 
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="[Agile Coretime](./learn-agile-coretime) is activated on the network, and parachain slot auctions and crowdloans have been deprecated. For existing parachains, the remainder of the lease is automatically converted to coretime. See more information [here](./learn-agile-coretime#implementation). For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
-
-:::info Testing on Paseo
-
-For information on how to test coretime functionalities on Paseo, please see the
-[Paseo Content](../build/build-parachains.md#testing-a-parachain) on the parachain development
-guide.
-
-:::
+!!!info "Testing on Paseo"
+    For information on how to test coretime functionalities on Paseo, please see the [Paseo Content](../build/build-parachains.md#testing-a-parachain) on the parachain development guide.
 
 ## Definition of a Parachain
 
@@ -207,12 +216,8 @@ scaling technology to host itself.
 
 ## On-demand Parachains
 
-:::info On-demand parachains were previously named parathreads
-
-On-demand parachains (previously called parathreads) are parachains that acquire
-[on-demand coretime](./learn-agile-coretime.md#on-demand-coretime).
-
-:::
+!!!info "On-demand parachains were previously named parathreads"
+    On-demand parachains (previously called parathreads) are parachains that acquire [on-demand coretime](./learn-agile-coretime.md#on-demand-coretime).
 
 On-demand parachains temporarily participate (on a block by block basis) in network security without
 needing to lease a dedicated relay chain core. This is done through economically sharing the scarce
@@ -247,7 +252,7 @@ economic distinction than a technological one.
 
 On-demand parachains have the exact same benefits for connecting to the relay chain that a full
 parachain has. Namely, it is able to send messages to other para-objects through
-[XCMP](learn-xcm.md###XCMP) and it is secured under the full economic security of the relay chain
+[XCMP](learn-xcm-transport.md#xcmp-cross-chain-message-passing) and it is secured under the full economic security of the relay chain
 validator set.
 
 ## Parachains' Use Cases
@@ -288,13 +293,9 @@ addressed by two different components:
   - **API** provides means for the node-side behavior to extract meaningful information from the
     state of a single fork.
 
-  :::info
-
-  The Polkadot Parachain Host Implementers' Guide provides details about
+  !!!info The Polkadot Parachain Host Implementers' Guide provides details about
   [Runtime Architecture](https://paritytech.github.io/polkadot/book/runtime/index.html) and
   [Runtime API](https://paritytech.github.io/polkadot/book/runtime-api/index.html).
-
-  :::
 
 - Knowing various forks of the blockchain, what behaviors should a node take? What information
   should a node extract from the state of which forks, and how should that information be used? This
@@ -312,20 +313,15 @@ addressed by two different components:
   [Overseer](https://paritytech.github.io/polkadot/book/node/overseer.html) that prevents race
   conditions.
 
-  :::info
-
-  The Polkadot Parachain Host Implementers' Guide provides details about
-  [node architecture](https://paritytech.github.io/polkadot/book/node/index.html) the main
-  subsystems:
-
-  - [Collator subsystem](https://paritytech.github.io/polkadot/book/node/collators/index.html)
-  - [Backing subsystem](https://paritytech.github.io/polkadot/book/node/backing/index.html)
-  - [Availability subsystem](https://paritytech.github.io/polkadot/book/node/availability/index.html)
-  - [Approval subsystem](https://paritytech.github.io/polkadot/book/node/approval/index.html)
-  - [Dispute subsystem](https://paritytech.github.io/polkadot/book/node/disputes/index.html)
-  - [Utility subsystem](https://paritytech.github.io/polkadot/book/node/utility/index.html)
-
-  :::
+  !!!info
+      The Polkadot Parachain Host Implementers' Guide provides details about [node architecture](https://paritytech.github.io/polkadot/book/node/index.html) the main subsystems:
+      
+      - [Collator subsystem](https://paritytech.github.io/polkadot/book/node/collators/index.html)
+      - [Backing subsystem](https://paritytech.github.io/polkadot/book/node/backing/index.html)
+      - [Availability subsystem](https://paritytech.github.io/polkadot/book/node/availability/index.html)
+      - [Approval subsystem](https://paritytech.github.io/polkadot/book/node/approval/index.html)
+      - [Dispute subsystem](https://paritytech.github.io/polkadot/book/node/disputes/index.html)
+      - [Utility subsystem](https://paritytech.github.io/polkadot/book/node/utility/index.html)
 
 The Runtime and Node-side behavior are dependent on each other. The Runtime depends on Node-side
 behavior to author blocks, and to include [extrinsics](./learn-transactions.md) which trigger the

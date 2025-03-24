@@ -7,10 +7,13 @@ keyword: [launch, phases, polkadot, DOT, claim, token sale, redenomination]
 slug: ../learn-launch
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived.
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The Polkadot network has a phased roll-out plan, with important milestones toward decentralization
 marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at by viewing the
@@ -18,17 +21,13 @@ marking each phase. Keep up-to-date with the Polkadot's phased roll-out plan at 
 
 **Current Phase: Post-launch Upgrades**
 
-:::info Claims
-
-For the most update-to-date information on DOT claims (if you bought your DOTs before Polkadot went
-live), check out the following claiming resources and tutorials:
+!!!info "Claims"
+    For the most update-to-date information on DOT claims (if you bought your DOTs before Polkadot went live), check out the following claiming resources and tutorials:
 
 - [Why do I need to claim my DOT tokens, and is there a deadline?](https://support.polkadot.network/support/solutions/articles/65000063553-why-do-i-need-to-claim-my-dot-tokens-and-is-there-a-deadline-)
 - [I claimed my DOT before Polkadot went live, but still see zero balance!](https://support.polkadot.network/support/solutions/articles/65000063667-i-claimed-my-dot-before-polkadot-went-live-but-still-see-zero-balance-)
 - [How to claim your DOT - Tutorial](https://support.polkadot.network/support/solutions/articles/65000138217-how-to-claim-your-dot-tutorial)
 - [How do I know my claim worked?](https://support.polkadot.network/support/solutions/articles/65000103605-how-do-i-know-my-claim-worked-)
-
-:::
 
 ## The PoA Launch
 

@@ -16,12 +16,8 @@ enabled through their respective OpenGov referenda. This trustless bridge allows
 to bridge in wrapped KSM tokens and Kusama Asset Hub to bridge in wrapped DOT tokens, thus making
 DOT available to all Kusama parachains and KSM to all Polkadot parachains.
 
-:::info Transferring Assets between Polkadot and Kusama
-
-The user guides for transferring assets between Polkadot and Kusama are available
-[here](./learn-guides-DOT-KSM-bridge.md).
-
-:::
+!!!info "Transferring Assets between Polkadot and Kusama"
+    The user guides for transferring assets between Polkadot and Kusama are available [here](./learn-guides-DOT-KSM-bridge.md).
 
 ## Polkadot and Kusama Bridge Relayers
 
@@ -39,14 +35,11 @@ relayer pays for transactions at both sides of the bridge.
 
 ### Relayer Rewards
 
-:::caution Relayer Incentive Mechanism - Work in Progress
-
-The initial bridge design supports any number of relayers, but there's no guaranteed reward for each
-and every relayer submitting valid bridge transactions. Also, these rewards are distributed from the
-accounts controlled by the respective relay chain's governance. Hence, any delays in replenishing
-the funds on these accounts will result in not receiving any rewards.
-
-:::
+!!!caution "Relayer Incentive Mechanism - Work in Progress"
+    The initial bridge design supports any number of relayers, but there's no guaranteed reward for each
+    and every relayer submitting valid bridge transactions. Also, these rewards are distributed from the
+    accounts controlled by the respective relay chain's governance. Hence, any delays in replenishing
+    the funds on these accounts will result in not receiving any rewards.
 
 Rewards paid to relayer has two parts - static and dynamic. The static part of the reward is set
 through the on-chain governance. It requires the relayer to deliver a preset number of valid

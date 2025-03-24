@@ -28,7 +28,7 @@ Polkadot's multiple implementations.
 [Parity Technologies](https://www.parity.io/) is often in the spotlight for its core development of
 Polkadot, and while this is true, Parity Polkadot also serves to be the
 [Rust](https://www.rust-lang.org/) client. Parity Tech has a rustic vision for Polkadot through the
-use of their main product, [Substrate](https://www.substrate.io/). Substrate can also be used for
+use of their main product, [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate). Substrate can also be used for
 different chains and different networks, but in the case of Polkadot, Substrate acts as the tech
 stack that is used to implement Polkadot's sharded heterogeneous multi-chain model.
 

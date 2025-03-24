@@ -1,0 +1,43 @@
+#announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #e6007a;
+    color: white;
+    padding: 10px 20px; /* Add some padding for a better appearance */
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between; /* Space out elements within the bar */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#announcement-bar p {
+    margin: 0; /* Remove unnecessary margin for proper centering */
+    font-weight: 500;
+    text-align: center;
+    flex: 1; /* Ensures text takes up space evenly */
+}
+
+#announcement-bar a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#close-announcement {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px; /* Adjust icon size */
+    cursor: pointer;
+    margin-left: 10px; /* Add minimal margin for spacing */
+    padding: 0 10px; /* Ensure it doesn’t stick to the edge */
+}
+
+#close-announcement:hover {
+    color: #ffd700; /* Optional hover effect */
+}
+

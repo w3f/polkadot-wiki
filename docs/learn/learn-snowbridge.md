@@ -7,14 +7,8 @@ keywords: [Bridge, XCM, Bridge Hub, Snowbridge, Snowfork]
 slug: ../learn-snowbridge
 ---
 
-:::info Using Snowbridge
-
-Snowbridge can be accessed through [the web app](https://app.snowbridge.network/), where you may
-track [processing times of transactions](https://app.snowbridge.network/status),
-[recent transfers](https://app.snowbridge.network/history), and other information about the bridge's
-overall status.
-
-:::
+!!!info "Using Snowbridge"
+    Snowbridge can be accessed through [the web app](https://app.snowbridge.network/), where you may track [processing times of transactions](https://app.snowbridge.network/status), [recent transfers](https://app.snowbridge.network/history), and other information about the bridge's overall status.
 
 Snowbridge by [Snowfork](https://snowfork.com/) is a general-purpose, trustless bridge between
 Polkadot and Ethereum. It utilizes the

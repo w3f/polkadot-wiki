@@ -7,9 +7,19 @@ keywords: [token, DOT, inflation]
 slug: ../learn-inflation
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="[In November 2024, Polkadot transitioned from a model that led to exponential growth in the token supply (but with a constant inflation rate) to one with linear growth (with a decreasing inflation rate).](https://forum.polkadot.network/t/proposal-for-adjusting-polkadots-inflation-system-reducing-issuance-and-complexity/9157) The constant inflation rate model is still in use for [Kusama](./learn-kusama-inflation)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    <a href="https://forum.polkadot.network/t/proposal-for-adjusting-polkadots-inflation-system-reducing-issuance-and-complexity/9157" target="_blank" rel="noopener noreferrer">
+      In November 2024, Polkadot transitioned from a model that led to exponential growth in the token supply (but with a constant inflation rate) to one with linear growth (with a decreasing inflation rate).
+    </a>
+    The constant inflation rate model is still in use for
+    <a href="./learn-kusama-inflation.md" target="_blank" rel="noopener noreferrer">
+      Kusama.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 DOT is an inflationary token, with
 [**fixed annual expansion of the token supply of 120,000,000 DOT**](https://github.com/polkadot-fellows/runtimes/pull/471),

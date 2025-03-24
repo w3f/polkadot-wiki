@@ -7,21 +7,24 @@ keywords: [data, index, query, explorer, dashboard]
 slug: ../build-data
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 The tools that accentuate and aggregate the data within blockchains are integral for a multi-chain
 future. Parachains will need robust and secure ways to index and aggregate data, such as a data
 aggregation layer.
 
 ## Custom Indexer
 
-### Subsquid
+### SQD
 
-[Subsquid](https://subsquid.io/) is an open-source framework for building tailored GraphQL APIs to
+[SQD](https://subsquid.io/) is an open-source framework for building tailored GraphQL APIs to
 query Substrate chain state and history.
 
-Subsquid replaces direct gRPC node access with performant Squid archive gateways, allowing quick
+SQD replaces direct gRPC node access with performant Squid archive gateways, allowing quick
 synchronization of the API with the historical on-chain data.
 
-Subsquid-powered APIs support filtering, pagination, union types, interfaces, and full-text search
+SQD-powered APIs support filtering, pagination, union types, interfaces, and full-text search
 out-of-the-box, and can be further extended with custom GraphQL resolvers.
 
 ### SubQuery
@@ -77,4 +80,4 @@ As you can imagine, blockchain explorers also offer data analytics through an in
 can examine common data points.
 
 Some block explorers in the Polkadot ecosystem are listed on the
-[tools page](build-tools-index.md##block-explorers).
+[tools page](build-tools-index.md#block-explorers).
