@@ -1,19 +1,15 @@
 ---
 id: staking-apps
 title: Polkadot Staking Apps
-sidebar_label: Staking Apps
 description: Staking Apps in the Polkadot Ecosystem.
-keywords: [staking, stake, nominate, nominating, NPoS, staking dashboard]
+keywords: [staking, staking apps]
 slug: ../staking-apps
 ---
 
-:::info Community Page
-
-This page is open to contributions from the community. Please follow the
-[Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your protocol native, permissionless, non-custodial NPoS Staking app to this page.
-
-:::
+!!!info "Community Page"
+    This page is open to contributions from the community. Please follow the
+    [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
+    and add your protocol native, permissionless, non-custodial NPoS Staking app to this page.
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
 - [Sub.ID](#subid)
@@ -26,63 +22,80 @@ The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a
 dedicated to native non-custodial [staking](../learn/learn-staking.md) on the relay chain. The
 dashboard allows to stake as a solo nominator or as a
 [nomination pool](../learn/learn-nomination-pools.md) member. Users can also create their nomination
-pools. The dashboard supports [Ledger](../general/ledger.md),
-[Polkadot Vault](../general/polkadot-vault.md),
-[SubWallet](../general/wallets-and-extensions.md#subwallet),
-[Talisman](../general/wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
-[PolkaGate](../general/wallets-and-extensions.md#polkagate), and Enkrypt. The dashboard also
-supports [staking proxies](../learn/learn-proxies.md#staking-proxy).
+pools. The dashboard supports [Ledger](./ledger.md),
+[Polkadot Vault](./polkadot-vault.md),
+[SubWallet](./wallets-and-extensions.md#subwallet),
+[Talisman](./wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
+[PolkaGate](./wallets-and-extensions.md#polkagate), and Enkrypt. The dashboard also
+supports [staking proxies](../learn/learn-staking.md#stash-account-and-staking-proxy).
 
-You can find more information about the Polkadot staking dashboard on the dedicated
-[wiki page](./staking-dashboard.md) and
+You can find more information about the Polkadot staking dashboard on the dedicated [wiki page](./dashboards/staking-dashboard.md) and
 [support articles](https://support.polkadot.network/support/solutions/folders/65000157523).
 
 Below a list of video tutorial about the Polkadot Staking Dashboard.
 
-<div className="row">
-  <div className="col text--center">
-    <a href="https://youtu.be/F59N3YKYCRs?feature=shared">
-      <img src="https://img.youtube.com/vi/F59N3YKYCRs/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtu.be/F59N3YKYCRs?feature=shared">Stake your DOT</a>
-    </p>
-  </div>
-  <div className="col text--center">
-    <a href="https://youtu.be/dDIG7QAApig?feature=shared">
-      <img src="https://img.youtube.com/vi/dDIG7QAApig/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtu.be/dDIG7QAApig?feature=shared">Join a Nomination Pool</a>
-    </p>
-  </div>
-  <div className="col text--center">
-    <a href="https://youtu.be/hvXLc4H7rA4?feature=shared">
-      <img src="https://img.youtube.com/vi/hvXLc4H7rA4/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtu.be/hvXLc4H7rA4?feature=shared">Staking Dashboard Walkthrough</a>
-    </p>
-  </div>
+<div class="row">
+  <!-- Card 1 -->
+  <a 
+    href="https://youtu.be/F59N3YKYCRs?feature=shared" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/F59N3YKYCRs/0.jpg" class="card-image" />
+    <p class="card-title">Stake Your DOT</p>
+  </a>
+
+  <!-- Card 2 -->
+  <a 
+    href="https://youtu.be/dDIG7QAApig?feature=shared" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/dDIG7QAApig/0.jpg" class="card-image" />
+    <p class="card-title">Join a Nomination Pool</p>
+  </a>
+
+  <!-- Card 3 -->
+  <a 
+    href="https://youtu.be/hvXLc4H7rA4?feature=shared" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/hvXLc4H7rA4/0.jpg" class="card-image" />
+    <p class="card-title">Staking Dashboard Walkthrough</p>
+  </a>
 </div>
 
-<div className="row">
-  <div className="col text--center">
-    <a href="https://youtu.be/58pIe8tt2o4?feature=shared">
-      <img src="https://img.youtube.com/vi/58pIe8tt2o4/0.jpg" width="300" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtu.be/58pIe8tt2o4?feature=shared">After Staking</a>
-    </p>
-  </div>
-  <div className="col text--center">
-    <a href="https://youtu.be/aTFWhwy_Mxg?feature=shared">
-      <img src="https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg" width="300" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtu.be/aTFWhwy_Mxg?feature=shared">Create, Manage & Destroy Pools</a>
-    </p>
-  </div>
+<div class="row">
+  <!-- Card 1 -->
+  <a 
+    href="https://youtu.be/58pIe8tt2o4?feature=shared" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/58pIe8tt2o4/0.jpg" class="card-image" />
+    <p class="card-title">After Staking</p>
+  </a>
+
+  <!-- Card 2 -->
+  <a 
+    href="https://youtu.be/aTFWhwy_Mxg?feature=shared" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/aTFWhwy_Mxg/0.jpg" class="card-image" />
+    <p class="card-title">Create, Manage & Destroy Pools</p>
+  </a>
 </div>
 
 ## Sub.ID

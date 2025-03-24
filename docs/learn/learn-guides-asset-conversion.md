@@ -7,19 +7,19 @@ keywords: [Assets, DEX, Exchange, Pools, Tokens]
 slug: ../learn-guides-asset-conversion
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
-
-:::info Wallet and UI Developers
-
-The [DOT ACP UI](https://github.com/MVPWorkshop/dot-acp-ui) project is part of Polkadot initiative
-for building front-end and UI for Asset Conversion Pallet on Polkadot's Asset Hub. Currently, the
-app is deployed on Westend and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
-
-:::
+!!!info "Wallet and UI Developers"
+    The [DOT ACP UI](https://github.com/MVPWorkshop/dot-acp-ui) project is part of Polkadot initiative for building front-end and UI for Asset Conversion Pallet on Polkadot's Asset Hub. Currently, the app is deployed on Westend and Kusama [here](https://app.dotacp.mvpworkshop.co/swap).
 
 The tutorial below demonstrates the complete journey from creating a liquidity pool on Paseo test
 net and exploring all of the key functionalities of Asset Conversion pallet.
@@ -36,7 +36,7 @@ liquidity can be added to it via the `Pallet::add_liquidity` function.
 
 For example, the snapshot below shows how to create liquidity pool with `PAS` tokens and `EDU`
 tokens with the asset ID `149` on Paseo Asset Hub. Creating this extrinsic requires knowledge of
-[XCM Multilocations](xcm/fundamentals/multilocation/summary.md). From the perspective of AssetHub,
+[XCM Multilocations](https://paritytech.github.io/polkadot-sdk/master/staging_xcm/v3/struct.MultiLocation.html). From the perspective of AssetHub,
 an Asset Hub, the asset with an `AssetId` of `149` has a MultiLocation of
 
 ```

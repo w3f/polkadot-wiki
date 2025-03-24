@@ -7,13 +7,13 @@ keywords: [open, source, development, code, resources, tools, apis]
 slug: ../build-open-source
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 # Open Source Polkadot Stack <!-- omit in toc -->
 
-:::caution Do your research before using open-source tools
-
-The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
-
-:::
+!!!caution "Do your research before using open-source tools"
+    The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../general/how-to-dyor.md) and be aware of [scams](../general/scams.md).
 
 This page aims to provide an overview of the open-source Polkadot Tech Stack.
 
@@ -22,21 +22,6 @@ it. [**Please feel free to make edits and additions via pull requests**](#contri
 apologize if we missed your project!
 
 ---
-
-- [About](#about)
-- [Layers of Polkadot Stack](#layers-of-polkadot-stack)
-  - [Wallets](#wallets)  
-  - [User Interface](#user-interface)
-  - [Tools, APIs, and Languages](#tools-apis-and-languages)
-  - [ink! Smart Contracts](#ink-smart-contracts)
-  - [Chains and Pallets](#chains-and-pallets)
-  - [Host](#host)
-  - [Network Maintenance Tools](#network-maintenance-tools)
-  - [Signatures](#signatures)
-  - [Consensus](#consensus)
-  - [Networking](#networking)
-  - [Primitives](#primitives)
-- [Contributing](#contributing)
 
 ## About
 
@@ -97,6 +82,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Block Explorers        | [Calamar](https://github.com/topmonks/calamar) ⚪, [Polkascan](https://github.com/polkascan/explorer-api) ⚪, [Polkastats](https://github.com/Colm3na/polkastats-backend) ⚪, [Subscan](https://github.com/itering/subscan) ⚪, [Statescan](https://github.com/opensquare-network/statescan-v2) 🟢, [Edgscan](https://github.com/edgeware-builders/edgscan) ⚪, [Sirato](https://github.com/web3labs/epirus-substrate) ⚪, [ink! Explorer API](https://github.com/blockcoders/ink-substrate-explorer-api) ⚪, [Substats](https://github.com/CESSProject/substats) ⚪, [Hybrid Block Explorer](https://github.com/hybrid-explorer/hybrid-dapp) ⚪|  Mempool focused explorer (including parachain transaction)                                                                                                                                                                                           |
 | Validator Dashboards   | [Polkadot Telemetry](https://github.com/paritytech/substrate-telemetry) 🟡, [Polkacube](https://github.com/hashquark-io/polkacube-frontend) ⚪, [YieldScan](https://github.com/buidl-labs/YieldScan) ⚪, [Hubble](https://github.com/w3f-community/hubble/tree/master/app/controllers/polkadot) ⚪, [Cyclops](https://github.com/ArthurHoeke/cyclops) ⚪, [Web3Go](https://github.com/web3go-xyz/web3go-xyz-v2) ⚪, [1kv insights](https://github.com/MathCryptoDoc/insights-1kv) ⚪|
+| Validator Dashboards   | [Polkadot Telemetry](https://github.com/paritytech/substrate-telemetry) 🟡, [Polkacube](https://github.com/hashquark-io/polkacube-frontend) ⚪, [YieldScan](https://github.com/buidl-labs/YieldScan) ⚪, [Hubble](https://github.com/w3f-community/hubble/tree/master/app/controllers/polkadot) ⚪, [Cyclops](https://github.com/ArthurHoeke/cyclops) ⚪, [Web3Go](https://github.com/web3go-xyz/web3go-xyz-v2) ⚪, [1kv insights](https://github.com/MathCryptoDoc/insights-1kv) ⚪|
 | Node Explorers         | [Polkadot Node Explorer](https://github.com/protos-research/polkadot-node-explorer) ⚪|
 | NFT Explorer           | [NFT Explorer for Kusama & Polkadot](https://github.com/kodadot/nft-gallery) 🟢|
 | Governance Dashboards  | [Polkadot Delegation Dashboard](https://github.com/paritytech/governance-ui) ⚪, [Polkassembly](https://github.com/premiurly/polkassembly) ⚪, [dotreasury](https://github.com/opensquare-network/dotreasury) 🟡, [Bright Treasury](https://github.com/bright/bright-tresury) ⚪, [OpenSquare offchain voting](https://github.com/opensquare-network/collaboration) 🟢, [OpenGov Insights](https://github.com/wpank/open-gov-insights) ⚪, [Treasury Tracker](https://github.com/stake-plus/treasury-tracker) ⚪, [OpenGov CLI](https://github.com/joepetrowski/opengov-cli) 🟡| UI for the Kusama and/or Polkadot treasury (see [bounty module](https://github.com/paritytech/substrate/pull/5715)<!-- NO_STATUS_BADGE -->), UI for Parachain Lease Offering (PLO)                                                                                               |
@@ -104,6 +90,8 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Bridge UI              | [Parity Bridges UI](https://github.com/paritytech/parity-bridges-ui) ⚪, [Donut Interface (Steem - Dot)](https://github.com/nutbox-dao/donut-interface) ⚪, [Plutonication](https://github.com/RostislavLitovkin/PlutonicationServer) 🟡|                                                                                                                                                                                                                                                                                   |
 | Parachain/Crowdloan    | [Parachains.Network](https://github.com/jhonalino/parachains.network) :grey_question:, [PolkAuction](https://github.com/CrommVardek/polk-auction-ui) ⚪, [Crowdloan Front End Template](https://github.com/10clouds/crowdloan-template) ⚪, [Slothunter](https://github.com/hack-ink/slothunter/) ⚪|                                                                                                                                                                                                                                                                      |
 | Identicon              | [Polkicon](https://polkadot.cloud/polkicon) 🟢, [PolkadotWebIdenticon](https://github.com/RidOne-technologies/polkadot-web-identicon) ⚪, [Polkadot Angular IdentIcon](https://github.com/RidOne-technologies/polkadot-angular-identicon) ⚪, [Bird Identicon](https://github.com/Noc2/Bird-Identicon) ⚪|
+| Coretime               | [Lastic](https://github.com/LasticXYZ/LasticUI) 🟡, [RegionX](https://github.com/RegionX-Labs/RegionX-Node) ⚪|
+| Other                  | [Polkadot Cloud](https://polkadot.cloud) 🟢, [ĐÓTConsole](https://github.com/tien/dot-console) 🟢, [KappaSigmaMu Fratority](https://github.com/KappaSigmaMu/ksm-app) ⚪, [DAOSign](https://github.com/DAOsign/daosign-ink-js-sdk/tree/main) ⚪, [Quadratic Funding Webapp](https://github.com/OAK-Foundation/quadratic-funding-webapp) ⚪, [Polkawatch](https://gitlab.com/polkawatch/polkawatch), [Bytepay](https://github.com/bytepayment/bytepay) ⚪, [charging-management-platform](https://github.com/Delmonicos/charging-management-platform) ⚪, [subidentity-webapp](https://github.com/TDSoftware/subidentity-webapp) ⚪, [OpenSquare Paid QA](https://github.com/opensquare-network/paid-qa/) ⚪, [DotPulse](https://github.com/CrossChainLabs-DOT/dotpulse-api) ⚪, [Rubeus Keeper](https://github.com/bsn-si/rubeus-smartcontract) ⚪, [Polkaflow](https://github.com/justmert/eco-flow-frontend) ⚪, [ChainViz](https://github.com/helikon-labs/chainviz) 🟡, [Dotsight](https://github.com/fidi-tech/dotsight) ⚪| [zkLogin](https://docs.sui.io/build/zk_login)<!-- NO_STATUS_BADGE -->, Portfolio Viewer like Zapper or Zerion                                                                                                                                                                                                                                            
 | Coretime               | [Lastic](https://github.com/LasticXYZ/LasticUI) 🟡, [RegionX](https://github.com/RegionX-Labs/RegionX-Node) ⚪|
 | Other                  | [Polkadot Cloud](https://polkadot.cloud) 🟢, [ĐÓTConsole](https://github.com/tien/dot-console) 🟢, [KappaSigmaMu Fratority](https://github.com/KappaSigmaMu/ksm-app) ⚪, [DAOSign](https://github.com/DAOsign/daosign-ink-js-sdk/tree/main) ⚪, [Quadratic Funding Webapp](https://github.com/OAK-Foundation/quadratic-funding-webapp) ⚪, [Polkawatch](https://gitlab.com/polkawatch/polkawatch), [Bytepay](https://github.com/bytepayment/bytepay) ⚪, [charging-management-platform](https://github.com/Delmonicos/charging-management-platform) ⚪, [subidentity-webapp](https://github.com/TDSoftware/subidentity-webapp) ⚪, [OpenSquare Paid QA](https://github.com/opensquare-network/paid-qa/) ⚪, [DotPulse](https://github.com/CrossChainLabs-DOT/dotpulse-api) ⚪, [Rubeus Keeper](https://github.com/bsn-si/rubeus-smartcontract) ⚪, [Polkaflow](https://github.com/justmert/eco-flow-frontend) ⚪, [ChainViz](https://github.com/helikon-labs/chainviz) 🟡, [Dotsight](https://github.com/fidi-tech/dotsight) ⚪| [zkLogin](https://docs.sui.io/build/zk_login)<!-- NO_STATUS_BADGE -->, Portfolio Viewer like Zapper or Zerion                                                                                                                                                                                                                                            
 
@@ -140,7 +128,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | Local Nodes         | [substrate-contracts-node](https://github.com/paritytech/substrate-contracts-node) ⚪, [Swanky](https://github.com/swankyhub/swanky-cli) ⚪|                                    |
 | Smart Contract Development | [DRink!](https://github.com/Cardinal-Cryptography/drink) ⚪, [contracts-ui](https://github.com/paritytech/contracts-ui) ⚪, [SmartBeaver](https://github.com/Smart-Beaver), [OpenBrush](https://github.com/h4nsu/openbrush-contracts) :grey_question:, [Sol2Ink](https://github.com/727-Ventures/sol2ink) ⚪, [Polkadot Contract Wizard](https://github.com/protofire/polkadot-contract-wizard) ⚪, [ink-wrapper](https://github.com/Cardinal-Cryptography/ink-wrapper) ⚪, [ink-playground](https://github.com/paritytech/ink-playground) ⚪, [ink! Remix Plugin](https://github.com/blockchain-it-hr/ink-remix-plugin) ⚪, [Signac](https://github.com/standardweb3/signac/) ⚪, [ink!-boxes](https://github.com/avirajkhare00/ink-boxes/) ⚪, [ink!-smart-contract-wizard](https://github.com/avirajkhare00/ink-wizard) ⚪|
 | Security & Testing         | [ink! Waterfall](https://github.com/paritytech/ink-waterfall) ⚪, [Verifier Image for ink!](https://github.com/web3labs/ink-verifier-image) ⚪, [Patron](https://github.com/Brushfam/patron-backend/) ⚪, [Inkscope Fuzzer](https://github.com/inkscopexyz/inkscope-fuzzer) ⚪|                                    |
-| Frontend Development         | [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) ⚪, [useink](https://github.com/paritytech/useink) ⚪, [useInkathon](https://github.com/scio-labs/use-inkathon) ⚪, [ink-typegen](https://github.com/subsquid/squid-sdk/tree/master/substrate/ink-typegen) 🟢, [Typechain Polkadot](https://github.com/Brushfam/typechain-polkadot) ⚪|                                    |
+| Frontend Development         | [ink!athon Boilerplate](https://github.com/scio-labs/inkathon) ⚪, [useink](https://github.com/paritytech/useink) ⚪, [useInkathon](https://github.com/scio-labs/use-inkathon) ⚪, [ink-typegen](https://github.com/subsquid/squid-sdk/tree/master/substrate/ink-typegen) 🟢, [Typechain Polkadot](https://github.com/Brushfam/typechain-polkadot) ⚪, [Typink!](https://github.com/dedotdev/typink) 🟢|                                    |
 | IDE Plugins         | [ink! Analyzer](https://github.com/ink-analyzer/ink-analyzer) 🟡|                                    |
 | Bridges         | [Dante Protocol](https://github.com/dantenetwork/protocol-stack-for-ink) ⚪|                                    |
 | DeFi            | [Pendulum-Ink-Wrapper](https://github.com/pendulum-chain/pendulum-ink-wrapper) ⚪, [Panorama Swap](https://github.com/RottenKiwi/Panorama-Swap-INK-SC) ⚪, [ink_bank](https://github.com/Juminstock/ink_bank) ⚪, [Polkadot AMM](https://github.com/realnimish/polkadot-amm) ⚪, [Vera](https://github.com/veradefi/defi) ⚪, [Nsure Insurance](https://github.com/nsure-tech/dot-contract) :grey_question:, [Everlasting Cash](https://github.com/CycanTech/ELC) ⚪, [Coinversation](https://github.com/Coinversation/coinpro) ⚪, [zenlink-dex-contract](https://github.com/zenlinkpro/zenlink-dex-contract) ⚪, [AlgoCash](https://github.com/ReserveLabs/AlgoCash) ⚪| New seigniorage-style stable coins |
@@ -253,6 +241,7 @@ In the below sections, you can find a list of different layers of the Polkadot S
 | ------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | Storage             | [Merkle Tree DB](https://github.com/frisitano/merkle-tree-db) ⚪|                                  |
 | Merkle Proofs       | [Solidity Trie Verifier](https://github.com/polytope-labs/solidity-merkle-trees) ⚪| |
+
 ## Contributing
 
 Pull requests, issues, or other contributions from the community are encouraged! You can not only

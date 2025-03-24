@@ -1,31 +1,21 @@
 ---
-id: parachains-apps
 title: Polkadot Parachain Apps
-sidebar_label: Parachain Apps
 description: Polkadot's Parachain Apps.
-keywords: [parachains, apps, staking, liquid staking]
-slug: ../parachains-apps
 ---
 
-:::tip Polkadot dApps
+!!!tip "Polkadot dApps"
+    Join the global Web3 movement – be among the first to try out innovative dapps running on Polkadot.
+    You can browse the list of dApps on
+    [the official Polkadot website](https://polkadot.network/ecosystem/dapps/). This page also features
+    a form that can be submitted to showcase dApps that are not already listed.
 
-Join the global Web3 movement – be among the first to try out innovative dapps running on Polkadot.
-You can browse the list of dApps on
-[the official Polkadot website](https://polkadot.network/ecosystem/dapps/). This page also features
-a form that can be submitted to showcase dApps that are not already listed.
-
-:::
-
-:::info Community Page
-
-It is recommended to have the parachain apps added to
-[the official Polkadot website](https://polkadot.network/ecosystem/dapps/) and then use this page to
-elaborate their key features to the Pokadot Wiki readers. This page is open to contributions from
-the community. Please follow the
-[Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your parachain app to this page.
-
-:::
+!!!info "Community Page"
+    It is recommended to have the parachain apps added to
+    [the official Polkadot website](https://polkadot.network/ecosystem/dapps/) and then use this page to
+    elaborate their key features to the Pokadot Wiki readers. This page is open to contributions from
+    the community. Please follow the
+    [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
+    and add your parachain app to this page.
 
 ## Astar Network
 

@@ -7,30 +7,24 @@ keyword: [guides, polkadot-js, accounts, proxy, pure proxy, anonymous proxy]
 slug: ../learn-guides-accounts-proxy-pure
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+!!!caution "The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups"
+    The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig -> a pure proxy which is part of another multisig). These complex setups must be done using the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+        
+    **We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if you are testing features for the first time.** By performing the complex proxy setups on the testnet, you can comfortably replicate the procedure on the main networks.
 
-:::caution The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups
-
-The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig
--> a pure proxy which is part of another multisig). These complex setups must be done using the
-[Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
-
-**We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if
-you are testing features for the first time.** By performing the complex proxy setups on the
-testnet, you can comfortably replicate the procedure on the main networks.
-
-:::
-
-:::danger Risk of loss of funds
-
-Read carefully the text below and before performing any action using pure proxies, experiment on the
-Westend testnet.
-
-:::
+!!!danger "Risk of loss of funds"
+    Read carefully the text below and before performing any action using pure proxies, experiment on the Westend testnet.
 
 ## Create and Remove Pure Proxies with Polkadot-JS
 
@@ -38,26 +32,16 @@ To create a **pure proxy** see
 [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or
 watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
-:::caution Removing Pure Proxies
-
-The procedure for removing a _pure_ proxy is different from the one used to remove other proxies.
-Visit the section "Removing an Anonymous Proxy" on
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or
-watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
-
-:::
+!!!caution "Removing Pure Proxies"
+    The procedure for removing a _pure_ proxy is different from the one used to remove other proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 Learn more about pure proxies from our
 [technical explainer video](https://www.youtube.com/watch?v=YkYApbhU3i0).
 
 ## Advanced Account Management with Pure Proxies
 
-:::info Walk-through tutorial video of Account Management
-
-You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through the
-example below. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
-
-:::
+!!!info "Walk-through tutorial video of Account Management"
+    You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through the example below. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
 
 Let's take for example 3 accounts belonging to Charlie, Dan and Eleanor working for Company X.
 Charlie holds funds belonging to Company X, but he wants to leave the company and transfer the
@@ -91,12 +75,8 @@ below).
 
 ### Scenario One: One Pure Proxy within a Multisig
 
-:::info Walk-through tutorial video
-
-You can see [this video tutorial](https://www.youtube.com/watch?v=iGRoGstB_pQ) that goes through
-this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
-
-:::
+!!!info "Walk-through tutorial video"
+    You can see [this video tutorial](https://www.youtube.com/watch?v=iGRoGstB_pQ) that goes through this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
 
 It is possible to put a _pure_ proxy within a multisig, and then transactions will be signed by the
 _any_ proxy on behalf of the _pure_ proxy (proxied account). Let's take for example the diagram
@@ -115,23 +95,13 @@ If Charly wants to leave the multisig, a new _any_ proxy can be added to P-C and
 removed (by himself or by the new _any_ proxy). Note that the multisig also contains Bob that in
 this specific example does not do anything.
 
-:::note Proxy calls
-
-To use a _pure_ proxy within a multisig you need to use the Extrinsic Tab and generate a
-`proxy.proxy` extrinsic. If you try to sign a multisig transaction using the _pure_ proxy you will
-be prompted with a warning. Remember, you cannot sign something directly if you do not have a
-private key.
-
-:::
+!!!note "Proxy calls"
+    To use a _pure_ proxy within a multisig you need to use the Extrinsic Tab and generate a `proxy.proxy` extrinsic. If you try to sign a multisig transaction using the _pure_ proxy you will be prompted with a warning. Remember, you cannot sign something directly if you do not have a private key.
 
 ### Scenario Two: Multisig made of Pure Proxies
 
-:::info Walk-through Tutorial Video
-
-You can see [this video tutorial](https://www.youtube.com/watch?v=F82C3zDNJyk) that goes through
-this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
-
-:::
+!!!info "Walk-through Tutorial Video"
+    You can see [this video tutorial](https://www.youtube.com/watch?v=F82C3zDNJyk) that goes through this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
 
 The diagram below shows a multisig that is made only with _pure_ proxies (P-A, P-B and P-C). In this
 situation Alice, Bob or Charly can leave the multisig at any time without the requirement of
@@ -149,7 +119,7 @@ transaction.
 
 ### Scenario Three: Multisig controlling a Pure Proxy
 
-This setup is used by the [MultiX](../general/multisig-apps.md#multix) tool.
+This setup is used by the [MultiX](../general/multisig-apps.md#multix-by-chainsafe) tool.
 
 After its creation, a multi-signature account creates a pure proxy that becomes the proxied account.
 The multi-signature account behaves as _any_ proxy of the pure. If signatories of the

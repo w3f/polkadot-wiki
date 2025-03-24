@@ -7,11 +7,16 @@ keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
 slug: ../polkadotjs-ui
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) is the native application for
 accessing all features available on Substrate chains as Polkadot and Kusama. The UI is one of the
@@ -44,7 +49,7 @@ can also:
   [Settings](#settings)).
 - Create a [**multi-signature account**](../learn/learn-account-multisig.md).
 - Add a proxied account (see
-  [**Pure Proxies**](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy) for more
+  [**Pure Proxies**](../learn/learn-proxies-pure.md) for more
   information).
 
 For each account visible in the UI, you can perform different actions, including
@@ -90,9 +95,7 @@ In this UI section, you can change general settings such as appearance and langu
   differs from having an account injected from a browser extension).
 - Choose to attach Ledger devices. This adds an account directly in the UI from a Ledger device.
 
-Under Settings you can also do the metadata update. Usually, if there is an update, this will be
-shown as a notification. For more information about metadata updates, see the
-[**dedicated section**](../learn/learn-guides-accounts.md#metadata-updates-with-the-polkadot-js-browser-extension).
+Under Settings you can also do the metadata update. Usually, if there is an update, this will be shown as a notification.
 
 ## Other Functionalities
 
@@ -121,10 +124,10 @@ In this section of the UI, you can access advanced features such as:
 
 The [Extrinsic tab](https://polkadot.js.org/apps/#/extrinsics) provides the use to access more
 granular functions such as
-[**pure proxies**](../learn/learn-proxies-pure.md#anonymous-proxy-pure-proxy) and
+[**pure proxies**](../learn/learn-proxies-pure.md) and
 [**time-delayed proxies**](../learn/learn-proxies.md#time-delayed-proxy), change
 [**nomination pool**](../learn/learn-nomination-pools.md) settings (nomination and roles) and use
-[**non-transfer proxies**](../learn/learn-proxies.md#non-transfer-proxy),
+[**non-transfer proxies**](../learn/learn-proxies.md#proxy-types),
 [**destroy assets**](../learn/learn-assets.md#destroying-an-asset), and much more.
 
 ## Beginner's Guide to Polkadot-JS

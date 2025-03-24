@@ -7,6 +7,9 @@ keywords: [systemd, validate, node]
 slug: ../maintain-guides-how-to-systemd
 ---
 
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
+
 You can run your validator as a [systemd](https://en.wikipedia.org/wiki/Systemd) process so that it
 will automatically restart on server reboots or crashes (and helps to avoid getting
 [slashed](../learn/learn-offenses.md)).
@@ -35,16 +38,13 @@ RestartSec=120
 WantedBy=multi-user.target
 ```
 
-:::warning
-
-It is recommended to delay the restart of a node with `RestartSec` in the case of node crashes. It's
-possible that when a node crashes, consensus votes in GRANDPA aren't persisted to disk. In this
-case, there is potential to equivocate when immediately restarting. What can happen is the node will
-not recognize votes that didn't make it to disk, and will then cast conflicting votes. Delaying the
-restart will allow the network to progress past potentially conflicting votes, at which point other
-nodes will not accept them.
-
-:::
+!!!warning
+    It is recommended to delay the restart of a node with `RestartSec` in the case of node crashes. It's
+    possible that when a node crashes, consensus votes in GRANDPA aren't persisted to disk. In this
+    case, there is potential to equivocate when immediately restarting. What can happen is the node will
+    not recognize votes that didn't make it to disk, and will then cast conflicting votes. Delaying the
+    restart will allow the network to progress past potentially conflicting votes, at which point other
+    nodes will not accept them.
 
 To enable this to autostart on bootup run:
 

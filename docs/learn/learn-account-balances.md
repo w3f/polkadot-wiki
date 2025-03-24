@@ -11,15 +11,8 @@ In the Polkadot ecosystem, there are different types of balances depending on th
 Different balance types dictate whether your balance can be used for transfers, to pay fees, or must
 remain frozen and unused due to an on-chain requirement.
 
-:::info A more efficient distribution of account balance types
-
-Soon, pallets on Polkadot SDK will be implementing the _fungible_ trait (see
-[the tracking issue](https://github.com/paritytech/polkadot-sdk/issues/226) for more info). This new
-logic will allow for more efficient use of your account balance. Specifically, the
-[fungible trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html)
-will allow using the `free` balance for on-chain activity like setting proxies and identities.
-
-:::
+!!!info "A more efficient distribution of account balance types"
+    Soon, pallets on Polkadot SDK will be implementing the _fungible_ trait (see [the tracking issue](https://github.com/paritytech/polkadot-sdk/issues/226) for more info). This new logic will allow for more efficient use of your account balance. Specifically, the [fungible trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) will allow using the `free` balance for on-chain activity like setting proxies and identities.
 
 There are 5 types of account balances:
 
@@ -89,12 +82,8 @@ depends on the proxied account; the proxy is the consumer). **Because the existe
 part of the untouchable balance, the user can use all the spendable balance (there is no need to
 keep 1 DOT as spendable).**
 
-:::info
-
-The use of the _free_ balance as shown in the following figures will be possible once the _fungible_
-trait is implemented for account balances.
-
-:::
+!!!info
+    The use of the _free_ balance as shown in the following figures will be possible once the _fungible_ trait is implemented for account balances.
 
 If the account creates a proxy, it will use the `free` balance as shown below.
 

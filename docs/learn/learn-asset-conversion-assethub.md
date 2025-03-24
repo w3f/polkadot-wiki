@@ -14,13 +14,8 @@ In the AMM model the prices of tokens are determined by a mathematical formula b
 tokens in a liquidity pool, unlike traditional exchanges that use an order book. This will be a
 “trustless” DEX, controlled through Polkadot OpenGov.
 
-:::note
-
-The asset pairs of the liquidity pools of AssetHub will always contain the relay chain's native
-token as one of the assets. Provision of liquidity for pools with arbitrary asset pairs is not
-allowed.
-
-:::
+!!!note
+    The asset pairs of the liquidity pools of AssetHub will always contain the relay chain's native token as one of the assets. Provision of liquidity for pools with arbitrary asset pairs is not allowed.
 
 Asset Conversion on Asset Hub enables fee payment in any asset, given it has a liquidity pool, such
 that the fee handler (in this case, a Collator) only receives the native asset.
@@ -37,12 +32,8 @@ Asset Conversion pallet allows you to:
   via a runtime call endpoint
 - [Query the size of a liquidity pool](https://docs.rs/pallet-asset-conversion/latest/pallet_asset_conversion/trait.AssetConversionApi.html#method.get_reserves).
 
-:::info Asset Conversion Tutorials
-
-The Asset Conversion user guide and tutorials are available
-[here](./learn-guides-asset-conversion.md)
-
-:::
+!!!info "Asset Conversion Tutorials"
+    The Asset Conversion user guide and tutorials are available [here](./learn-guides-asset-conversion.md)
 
 ## Fee Payment in Any Asset - Wallets
 
@@ -55,13 +46,8 @@ this functionality is enabled through
 allowing runtimes that include it to pay for transactions in assets other than the native token of
 the chain.
 
-:::caution Handling Pools with Low Liquidity
-
-The wallets and UIs should ensure that the user is prompted with the necessary warnings, such that
-they do not accidentally spend all of their funds to perform a swap on a pool with no or low
-liquidity.
-
-:::
+!!!caution "Handling Pools with Low Liquidity"
+    The wallets and UIs should ensure that the user is prompted with the necessary warnings, such that they do not accidentally spend all of their funds to perform a swap on a pool with no or low liquidity.
 
 ## Fee Payment in Any Asset - Parachains
 

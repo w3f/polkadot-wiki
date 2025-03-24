@@ -7,11 +7,8 @@ keywords: [Polkadot, JAM, join-accumulate, faq]
 slug: ../learn-jam-faq
 ---
 
-:::info Technical information about JAM
-
-For an in-depth overview of JAM, see the [Wiki page about the JAM Chain](./learn-jam-chain.md).
-
-:::
+!!!info "Technical information about JAM"
+    For an in-depth overview of JAM, see the [Wiki page about the JAM Chain](./learn-jam-chain.md).
 
 ## What is JAM?
 

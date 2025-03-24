@@ -9,12 +9,8 @@ slug: ../learn-comparisons-avalanche
 
 <!-- Add more infographics to this page -->
 
-:::info
-
-To keep the content on this page factually correct and up-to-date,
-[contributions](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) are welcome.
-
-:::
+!!!info
+    To keep the content on this page factually correct and up-to-date, [contributions](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) are welcome.
 
 Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to
 be designed and connected to a primary network. In Polkadot, the primary network is the relay chain
@@ -31,7 +27,7 @@ three chains. This allows for a separation of concern over validators and consen
 and smart contract execution. Avalanche uses a DAG (Directed Acyclic Graph) structure for one of its
 chains which is non-linear. Polkadot uses the linear chain structure similar to Bitcoin and
 Ethereum. Smart contracts in Polkadot are implemented on
-[parachains](build-smart-contracts#parachains). Polkadot being a layer-0 blockchain, is not a smart
+[parachains](../build/build-smart-contracts.md#parachains). Polkadot being a layer-0 blockchain, is not a smart
 contract platform and does not have plans to support them natively.
 
 ![avalanche-network](../assets/comparisons/avalanche/avalanche-network.png)
@@ -96,8 +92,8 @@ hierarchical collection of systems used to reach finality on Avalanche:
 
 Compared to Polkadot, Avalanche uses an asynchronous hybrid system that is based on a classical and
 Nakomoto approach. Polkadot uses a synchronous hybrid model that combines
-[BABE](learn-consensus#block-production-babe) and
-[GRANDPA](learn-consensus#finality-gadget-grandpa), where BABE is the algorithm used to build blocks
+[BABE](learn-consensus.md#block-production-babe) and
+[GRANDPA](learn-consensus.md#finality-gadget-grandpa), where BABE is the algorithm used to build blocks
 in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to
 adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single
 new blocks.
@@ -131,7 +127,7 @@ points for uptime and correctness of their work, and the remuneration of rewards
 In Polkadot the minimum stake needed to be a validator is variable, same for being a nominator. The
 true minimum need to be competitive enough to be included in the active set for validators, or
 successfully being chosen as a nominator depends on the minimum staked amounts on the network at a
-given time. Read more about this in the [staking page](learn-staking).
+given time. Read more about this in the [staking page](learn-staking.md).
 
 <!-- Staking points and how they are occurred is not clear in the documentation -->
 
@@ -139,8 +135,8 @@ given time. Read more about this in the [staking page](learn-staking).
 
 Avalanche does not have a native trustless message-passing mechanism. Instead, it relies on bridges.
 Though, because it is an EVM-compatible protocol, it's able to interoperate at a token level.
-However, subnets do not have a messaging layer out of the box. Polkadot, with its [XCM](learn-xcm)
-and [XCMP](learn-xcm#xcmp-cross-chain-message-passing) messaging protocols, allows for a native and
+However, subnets do not have a messaging layer out of the box. Polkadot, with its [XCM](learn-xcm.md)
+and [XCMP](learn-xcm-transport.md#xcmp-cross-chain-message-passing) messaging protocols, allows for a native and
 trustless messaging scheme, thus supporting the composability of chains and enabling the development
 of powerful cross-chain applications.
 
@@ -186,7 +182,7 @@ include them in the Avalanche ecosystem via subnets. The trade-offs are that the
 is limited and blockchains have to buy into the design decisions of Avalanche's main chains. Unlike
 parachains on Polkadot, Subnets are not able to share the security of the main chains. In addition
 to utilizing block finality and security of the relay chain, parachains on Polkadot use
-[XCM](learn-xcm) to pass native trustless messages, instead of having to rely on multiple bridging
+[XCM](learn-xcm.md) to pass native trustless messages, instead of having to rely on multiple bridging
 solutions. However, Subnets are easy to launch when compared to parachains, given that they only
 need a recommended minimum of 5 validators, which make the costs of launch predictable. Avalanche
 has plans to implement shared security, interoperability, composability and on-chain governance

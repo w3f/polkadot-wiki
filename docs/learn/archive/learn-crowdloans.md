@@ -7,29 +7,38 @@ keywords: [crowdloans, parachains, lending, auction]
 slug: ../learn-crowdloans
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived. [Agile Coretime](../learn-agile-coretime) is activated on the network, and crowdloans have been deprecated. For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the [Polimec parachain](https://www.polimec.org/)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived.
+    <a href="../learn-agile-coretime" target="_blank" rel="noopener noreferrer">
+      Agile Coretime
+    </a>
+    is activated on the network, and crowdloans have been deprecated. For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the
+    <a href="https://www.polimec.org/" target="_blank" rel="noopener noreferrer">
+      Polimec parachain.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 Polkadot allows parachains to source tokens for their parachain bids in a decentralized crowdloan.
 
-:::note Contributing to a crowdloan
+!!!note "Contributing to a crowdloan"
+    If you are here for guidance on how to contribute to a crowdloan, watch the video below or read this [support article on crowdloans](https://support.polkadot.network/support/solutions/articles/65000177341-how-to-participate-in-crowdloans-on-polkadot-or-kusama).
 
-If you are here for guidance on how to contribute to a crowdloan, watch the video below or read this
-[support article on crowdloans](https://support.polkadot.network/support/solutions/articles/65000177341-how-to-participate-in-crowdloans-on-polkadot-or-kusama).
-
-:::
-
-<div className="row">
-  <div className="col text--center">
-    <a href="https://youtu.be/AA9mPANmzmU">
-      <img src="https://img.youtube.com/vi/AA9mPANmzmU/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
-    </a>
-    <p>
-      <a href="https://youtu.be/AA9mPANmzmU">Crowdloans on Polkadot-JS</a>
-    </p>
-  </div>
+<div class="row" style="display: flex; gap: 20px; justify-content: center;">
+  <!-- Card 1 -->
+  <a 
+    href="https://youtu.be/AA9mPANmzmU" 
+    class="card-container" 
+    data-aos="fade-up" 
+    data-aos-delay="100" 
+    style="width: 300px; height: 300px;"
+  >
+    <img src="https://img.youtube.com/vi/AA9mPANmzmU/0.jpg" class="card-image"/>
+    <p class="card-title">Crowdloans on Polkadot-JS</p>
+  </a>
 </div>
 
 ## Crowdloan Campaigns vs Parachain Auctions
@@ -72,12 +81,8 @@ several auctions as long as the range of slots matches those of the auction (i.e
 period of the crowdloan is the same or bigger than that of the auction). This means a team will not
 need to restart the campaign just because they do not secure a slot on their first attempt.
 
-:::info Crowdloan Submission Deposit Required
-
-To create a new crowdloan campaign, your account must have 500 DOT (or 100 KSM on Kusama)
-transferrable which will be reserved for the duration of the crowdloan.
-
-:::
+!!!info "Crowdloan Submission Deposit Required"
+    To create a new crowdloan campaign, your account must have 500 DOT (or 100 KSM on Kusama) transferrable which will be reserved for the duration of the crowdloan.
 
 When setting the parameters of a crowdloan campaign, consider the following:
 
@@ -109,14 +114,8 @@ upgrades (as determined through its local governance).
 
 ### Contributing to Crowdloans
 
-:::info Minimum Crowdloan Contribution
-
-There is a
-[minimum balance for contributions for a crowdloan campaign](../../general/chain-state-values.md#minimum-crowdloan-contribution).
-This is to make crowdloans as accessible as possible while maintaining a balance to justify using
-the network's resources.
-
-:::
+!!!info "Minimum Crowdloan Contribution"
+    There is a [minimum balance for contributions for a crowdloan campaign](../../general/chain-state-values.md). This is to make crowdloans as accessible as possible while maintaining a balance to justify using the network's resources.
 
 Each created campaign will have an index. Once a crowdloan campaign is open, anyone can participate
 by sending a transaction referencing the campaign's index. Tokens used to participate must be
@@ -125,13 +124,8 @@ transferable &mdash; that is, not locked for any reason, including staking, vest
 this campaign. See [system accounts](../learn-account-advanced.md#system-accounts) for more
 information.
 
-:::caution Do not send Crowdloan contributions directly to the Parachain address
-
-All crowdloan contributions are handled by the Crowdloan module’s logic, where a campaign is
-identified by an index, not by address. **Never transfer tokens to an address in support of a
-campaign**.
-
-:::
+!!!caution "Do not send Crowdloan contributions directly to the Parachain address"
+    All crowdloan contributions are handled by the Crowdloan module’s logic, where a campaign is identified by an index, not by address. **Never transfer tokens to an address in support of a campaign**.
 
 It is up to individual parachain teams to decide if and how they want to reward participants who
 forgo staking and choose to lock their tokens in support of the parachain’s campaign. As one can
@@ -150,14 +144,8 @@ Participants will be able to reclaim their tokens in one of two ways:
 - If the campaign is unsuccessful, this retirement phase will begin at its configured end, and
   participants can likewise withdraw their tokens.
 
-:::tip `crowdloan.contribute` extrinsic is trustless
-
-Contributing to a crowdloan through Polkadot JS Apps (which uses `crowdloan.contribute` extrinsic)
-guarantees that you receive your tokens after the campaign ends. If you intend to contribute through
-other websites and custodial service providers like central exchanges, review their terms and
-conditions thoroughly and assess the associated risks.
-
-:::
+!!!tip "`crowdloan.contribute` extrinsic is trustless"
+    Contributing to a crowdloan through Polkadot JS Apps (which uses `crowdloan.contribute` extrinsic) guarantees that you receive your tokens after the campaign ends. If you intend to contribute through other websites and custodial service providers like central exchanges, review their terms and conditions thoroughly and assess the associated risks.
 
 Note: When the lease periods won by the crowdloan have finished, or the crowdloan has ended without
 winning a slot, anyone can trigger the refund of crowdloan contributions back to their original
