@@ -123,6 +123,7 @@ or the [Wallets](../general/wallets-and-extensions.md) page on the Wiki for deta
   Chrome extension.
 - [PAPI Developer Console](https://dev.papi.how/explorer)
 - [Polkadot Developer Console](https://console.polkadot.cloud/)
+- [Polkadot Next.js Starter](https://github.com/niklasp/polkadot-nextjs-starter) - next.js v15 starter template with papi, shadcn, tailwind
 
 ## Libraries
 
