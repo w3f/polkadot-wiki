@@ -71,6 +71,15 @@ nav .md-header__ellipsis {
     justify-content: center;
 }
 
+.md-nav__item a[target="_blank"]::after {
+    content: url('./external_item.svg');
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
 /* Card container: Entire card is clickable */
 .card-container {
     height: 450px;

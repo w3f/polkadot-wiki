@@ -26,6 +26,7 @@ theme:
     - navigation.path
     - navigation.instant
     - content.action.edit
+    - announce.dismiss
   palette: 
     scheme: default
     primary: white
@@ -63,7 +64,6 @@ extra_css:
 extra_javascript:
   - javascript/MessageBox.js
   - javascript/init_kapa_widget.js
-  - javascript/announcement-bar.js
   - javascript/simple-analytics.js
 
 # Extensions
