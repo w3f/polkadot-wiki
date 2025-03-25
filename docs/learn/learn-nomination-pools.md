@@ -141,7 +141,7 @@ for guidelines.
   may be changed in the future once accounts are afforded the ability to split votes.
 - For a member to switch pools, all funds from the account must be unbonded. This process takes 28
   eras.
-- A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
+- A member can partially unbond the staked funds in the pool (at most 32 partial unbonds).
 
 ## Pool Administration
 
