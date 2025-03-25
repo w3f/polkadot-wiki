@@ -73,11 +73,6 @@ nav .md-header__ellipsis {
 
 .md-nav__item a[target="_blank"]::after {
     content: url('./external_item.svg');
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-left: 2px;
-    vertical-align: middle;
 }
 
 /* Card container: Entire card is clickable */
@@ -144,6 +139,10 @@ nav .md-header__ellipsis {
     margin-top: 5px;
     line-height: 1.4;
     /* Better spacing for multi-line descriptions */
+}
+
+.md-search-result__meta {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
