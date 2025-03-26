@@ -1,10 +1,6 @@
 ---
-id: learn-guides-accounts-proxy
-title: Polkadot-JS Guides about Proxy Accounts
-sidebar_label: Proxy Guides
-description: Polkadot-JS Guides about Proxy Accounts
-keyword: [guides, polkadot-js, accounts, proxy]
-slug: ../learn-guides-accounts-proxy
+title: Proxy Account Guides
+description: Learn how to create, manage, and use proxy accounts on Polkadot-JS for enhanced security and flexibility.
 ---
 
 <!-- MessageBox -->

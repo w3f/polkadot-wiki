@@ -1,25 +1,7 @@
 ---
-id: learn-comparisons
 title: Polkadot Comparisons
-sidebar_label: Comparisons
-description: Comparison between Polkadot and other Networks.
-keywords:
-  [
-    comparisons,
-    Polkadot,
-    blockchain,
-    rollups,
-    polkadot,
-    scalability,
-    shared,
-    security,
-    parachain,
-    ethereum,
-  ]
-slug: ../learn-comparisons
+description: Explore how Polkadot compares to other blockchain networks, including rollups, scalability, and shared security.
 ---
-
-
 
 ## Rollup Comparison
 

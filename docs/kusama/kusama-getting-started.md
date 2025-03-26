@@ -1,10 +1,6 @@
 ---
-id: kusama-getting-started
 title: Interact with Kusama
-sidebar_label: Home
-description: Reference point for Kusama content.
-keywords: [getting started, introduction, kusama, interact]
-slug: ../../kusama-getting-started
+description: Learn how to interact with Kusama, Polkadot's canary network, and explore its features like staking, governance, and account recovery.
 ---
 
 ### Polkadot's Canary Network

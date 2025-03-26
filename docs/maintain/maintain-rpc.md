@@ -1,10 +1,6 @@
 ---
-id: maintain-rpc
-title: Set up a RPC node
-sidebar_label: Set up a RPC node
-description: Steps on setting up a RPC node.
-keywords: [rpc, rpc node, web socket, remote, connection, secure websocket]
-slug: ../maintain-rpc
+title: Set up an RPC Node
+description: Learn how to configure and secure an RPC node for remote access to your Polkadot or Substrate-based blockchain.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

@@ -1,10 +1,6 @@
 ---
-id: learn-offenses
 title: Offenses & Slashes on Polkadot
-sidebar_label: Offenses & Slashes
-description: Offenses and Slashes in the Polkadot Ecosystem.
-keyword: [nominate, nominator, offenses, slashes, validator, equivocation, disabling]
-slug: ../learn-offenses
+description: Learn about offenses, slashes, and penalties in the Polkadot ecosystem to ensure network security and validator accountability.
 ---
 
 <!-- MessageBox -->

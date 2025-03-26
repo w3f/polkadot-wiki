@@ -1,10 +1,6 @@
 ---
-id: build-node-management
 title: Node Management
-sidebar_label: Node Management
-description: Steps on how to manage your Polkadot node.
-keywords: [node, management, deployment, operations, monitor]
-slug: ../build-node-management
+description: Learn how to deploy, manage, and monitor Polkadot nodes effectively, including archive nodes and telemetry setup.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

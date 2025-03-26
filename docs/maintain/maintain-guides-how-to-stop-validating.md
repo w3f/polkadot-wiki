@@ -1,10 +1,6 @@
 ---
-id: maintain-guides-how-to-stop-validating
 title: How to Stop Validating
-sidebar_label: How to Stop Validating
-description: Steps on how to stop validating.
-keywords: [validating, how to stop validating, validate, chill]
-slug: ../maintain-guides-how-to-stop-validating
+description: Steps to stop validating, including chilling, purging session keys, and unbonding tokens.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

@@ -1,10 +1,6 @@
 ---
-id: learn-comparisons-avalanche
 title: Polkadot vs. Avalanche
-sidebar_label: Avalanche
-description: Comparison between Polkadot and Avalanche.
-keywords: [avalance, proof of stake, comparison]
-slug: ../learn-comparisons-avalanche
+description: Discover the differences between Polkadot and Avalanche, including architecture, consensus, and staking mechanisms.
 ---
 
 <!-- Add more infographics to this page -->

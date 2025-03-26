@@ -1,10 +1,6 @@
 ---
-id: learn-phragmen
 title: NPoS Election Algorithms
-sidebar_label: NPoS Election Algorithms
-description: The Election Methods used in Polkadot's NPoS Mechanism.
-keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms]
-slug: ../learn-phragmen
+description: Learn about the election methods used in Polkadot's NPoS mechanism, including Sequential Phragmén, Phragmms, and Star Balancing.
 ---
 
 ## NPoS Election Algorithms

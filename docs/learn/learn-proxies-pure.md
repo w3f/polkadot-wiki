@@ -1,10 +1,6 @@
 ---
-id: learn-proxies-pure
 title: Pure Proxy Accounts
-sidebar_label: Pure Proxy Accounts
-description: Pure Proxy Accounts on Polkadot.
-keywords: [proxy, proxies, proxy accounts, pure proxy, anonymous proxy]
-slug: ../learn-proxies-pure
+description: Discover pure proxy accounts in Polkadot, their unique features, security benefits, and use cases for efficient account management.
 ---
 
 Pure proxies are very different from other proxy types. The proxies we described so far are

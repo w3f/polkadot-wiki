@@ -1,6 +1,6 @@
 ---
 title: Polkadot Vault (formerly Parity Signer)
-description: Your old Smartphone as an Air-gapped Wallet.
+description: Use your old smartphone as an air-gapped wallet with Polkadot Vault, a secure cold storage solution for managing accounts and signing transactions.
 ---
 
 !!!info "Rebranding of Parity Signer to Polkadot Vault"

@@ -1,10 +1,7 @@
 ---
-id: learn-account-multisig
 title: Multi-Signature Accounts
-sidebar_label: Multi-Signature Accounts
-description: Multi-signature Accounts on Polkadot.
-keywords: [account, multisig, polkadot account, polkadotjs, multix]
-slug: ../learn-account-multisig
+description: Learn how to create and manage multi-signature accounts on Polkadot for enhanced security and group decision-making.
+template: learn
 ---
 
 !!!info "Multisig Apps"

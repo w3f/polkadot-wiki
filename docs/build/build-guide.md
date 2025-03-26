@@ -1,10 +1,6 @@
 ---
-id: build-guide
 title: Polkadot Developer Portal
-sidebar_label: Polkadot Developer Portal
-description: Start building with Polkadot/Kusama.
-keywords: [build, how to build, develop, parachain, smart contract]
-slug: ../build-guide
+description: Start building with Polkadot and Kusama, from parachains to smart contracts and dApps.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

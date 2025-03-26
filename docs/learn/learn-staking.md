@@ -1,10 +1,6 @@
 ---
-id: learn-staking
 title: Introduction to Staking
-sidebar_label: Introduction to Staking
-description: Overview of Staking and NPoS on Polkadot.
-keywords: [staking, stake, nominate, nominating, NPoS, faq]
-slug: ../learn-staking
+description: Overview of staking and Nominated Proof-of-Stake (NPoS) in Polkadot, including validator selection, rewards, and security mechanisms.
 ---
 
 <!-- MessageBox -->

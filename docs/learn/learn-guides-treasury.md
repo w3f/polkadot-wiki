@@ -1,10 +1,6 @@
 ---
-id: learn-guides-treasury
-title: Polkadot-JS Guides about the Treasury
-sidebar_label: Treasury Guides
-description: Polkadot-JS Guides about the Polkadot Treasury.
-keywords: [opengov, polkadot opengov, referenda, treasury, tipps, polkadot-js]
-slug: ../learn-guides-treasury
+title: Treasury Guides for Polkadot-JS
+description: Learn how to create treasury proposals, submit referenda, and manage funds using Polkadot-JS.
 ---
 
 <!-- MessageBox -->

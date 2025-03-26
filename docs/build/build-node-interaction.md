@@ -1,10 +1,6 @@
 ---
-id: build-node-interaction
 title: Node Interaction
-sidebar_label: Node Interaction
-description: Tools for node interaction.
-keywords: [RPC, api, integration]
-slug: ../build-node-interaction
+description: Explore tools and APIs for interacting with Polkadot nodes, including RPC, Polkadot-JS, and Substrate API Sidecar.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

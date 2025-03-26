@@ -1,10 +1,6 @@
 ---
-id: community
 title: Community
-sidebar_label: Community
-description: Connect and stay updated with the Polkadot Community.
-keywords: [community, events, socials, chat, blogs, ecosystem]
-slug: ../community
+description: Connect with the Polkadot and Kusama communities through events, chats, and socials.
 ---
 
 Below are the most essential links to the community channels for Polkadot and Kusama.

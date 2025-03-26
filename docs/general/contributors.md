@@ -1,9 +1,6 @@
 ---
-id: contributors
 title: Contributors
-sidebar_label: Contributors
-description: Get to know your Wiki-slayers.
-slug: ../contributors
+description: Meet the contributors shaping the Polkadot Wiki and their roles in the ecosystem.
 ---
 
 ## Current Contributors

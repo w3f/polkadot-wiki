@@ -1,10 +1,6 @@
 ---
-id: maintain-guides-how-to-chill
 title: How to Chill
-sidebar_label: How to Chill
-description: Steps on chilling as a network participant.
-keywords: [chill, chilling, pause]
-slug: ../maintain-guides-how-to-chill
+description: Learn how to temporarily pause staking participation without unbonding your funds.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

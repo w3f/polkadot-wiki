@@ -1,10 +1,6 @@
 ---
-id: learn-crowdloans
 title: Parachain Crowdloans
-sidebar_label: Parachain Crowdloans
-description: Polkadot's Crowdloans and How to Participate.
-keywords: [crowdloans, parachains, lending, auction]
-slug: ../learn-crowdloans
+description: Learn about Polkadot's crowdloan mechanism, its purpose, and how to participate in parachain auctions.
 ---
 
 <!-- MessageBox -->

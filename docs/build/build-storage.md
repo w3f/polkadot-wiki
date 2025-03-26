@@ -1,14 +1,9 @@
 ---
-id: build-storage
 title: Decentralized Storage
-sidebar_label: Decentralized Storage
-description: Information about building with decentralized storage.
-keywords: [build, cloud, storage]
-slug: ../build-storage
+description: Learn about decentralized storage solutions like IPFS, Crust, and Filebase, and how they integrate with the Polkadot ecosystem.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
-
 
 Storage is an integral part of modern computer systems, and the same is true for distributed and
 decentralized systems like a blockchain. When interacting with the Polkadot ecosystem, it will be

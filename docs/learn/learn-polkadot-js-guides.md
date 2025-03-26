@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-js-guides
 title: Polkadot-JS Guides
-sidebar_label: Polkadot-JS Guides
-description: Guides about Polkadot-JS.
-keywords: [polkadot-JS, polkadotjs, guides, advanced]
-slug: ../learn-polkadot-js-guides
+description: Advanced guides for developers and power users on using Polkadot-JS UI and related tools for interacting with the Polkadot network.
 ---
 
 import DocCardList from '@theme/DocCardList';

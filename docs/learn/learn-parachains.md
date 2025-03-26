@@ -1,10 +1,6 @@
 ---
-id: learn-parachains
 title: Parachains
-sidebar_label: Introduction to Parachains
 description: An Introduction to Polkadot's Parachains.
-keywords: [parachains, application-specific, sharding, on-demand, parathread]
-slug: ../learn-parachains
 ---
 
 <!-- MessageBox -->

@@ -1,22 +1,13 @@
 ---
-id: faq
 title: Frequently Asked Questions (FAQs)
-sidebar_label: FAQ
-description: FAQs to Help you Navigate on Polkadot.
-keywords: [FAQ, questions]
-slug: ../faq
+description: Find answers to common questions about Polkadot and its ecosystem.
 ---
 
 !!!info
     This FAQ focuses on technical questions for users interested in developing applications for
     Polkadot. If you have a more general question, you may wish to search for the answer on our support
     [Knowledge Base](https://support.polkadot.network/support/home) or the main
-    [Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
-    please feel free to ask on the Polkadot Watercooler
-    [Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or contact
-    [Polkadot Support](https://support.polkadot.network).
-
-
+    [Polkadot network FAQ](https://polkadot.network/faq).
 
 ## Polkadot Launch
 

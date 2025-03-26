@@ -1,10 +1,6 @@
 ---
-id: learn-validator
 title: Validator
-sidebar_label: Validator
-description: Role of Validators within the Polkadot Ecosystem.
-keywords: [validate, validator, maintain, NPoS, stake]
-slug: ../learn-validator
+description: Validators secure Polkadot's relay chain by staking tokens, validating proofs, and participating in consensus to ensure network security.
 ---
 
 !!!info

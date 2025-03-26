@@ -1,9 +1,6 @@
 ---
-id: multisig-apps
 title: Polkadot Multisig Apps
-description: Multisig Apps in the Polkadot Ecosystem.
-keywords: [multisig, multisig apps, multi-signature]
-slug: ../multisig-apps
+description: Explore multisig apps in the Polkadot ecosystem, including Mimir, Multix, Nova Spektr, Polkadot Multisig by Signet, and Polkasafe.
 ---
 
 !!!info "Community Page"

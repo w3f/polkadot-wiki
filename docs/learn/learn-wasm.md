@@ -1,10 +1,6 @@
 ---
-id: learn-wasm
 title: WebAssembly (Wasm)
-sidebar_label: WebAssembly (Wasm)
-description: WASM and its Role in Polkadot's Runtime.
-keywords: [webassembly, wasm, runtime]
-slug: ../learn-wasm
+description: WebAssembly (Wasm) is a portable binary instruction format used in Polkadot and Substrate for efficient and deterministic blockchain runtimes.
 ---
 
 WebAssembly is used in Polkadot and Substrate as the compilation target for the runtime.

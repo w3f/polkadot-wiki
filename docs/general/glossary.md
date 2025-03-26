@@ -1,10 +1,6 @@
 ---
-id: glossary
 title: Glossary
-sidebar_label: Glossary
-description: Common Terms and Concepts in the Polkadot Ecosystem.
-keywords: [glossary, questions, definitions]
-slug: ../glossary
+description: Definitions of common terms and concepts in the Polkadot ecosystem.
 ---
 
 ## Active Nomination

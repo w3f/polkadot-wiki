@@ -1,10 +1,6 @@
 ---
-id: kusama-social-recovery
 title: Social Recovery
-sidebar_label: Account Recovery
-description: Steps on how to perform account recovery on Kusama.
-keywords: [recovery, social recovery, account, kusama]
-slug: ../../kusama-social-recovery
+description: Learn how to set up and use social recovery to regain access to lost accounts on the Kusama network.
 ---
 
 Managing an account is not an easy task. Many people have lost their private keys due to improper

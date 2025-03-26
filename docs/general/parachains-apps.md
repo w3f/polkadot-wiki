@@ -1,6 +1,6 @@
 ---
 title: Polkadot Parachain Apps
-description: Polkadot's Parachain Apps.
+description: Discover innovative dApps running on Polkadot parachains, including Astar Network, Bifrost Finance, and more.
 ---
 
 !!!tip "Polkadot dApps"

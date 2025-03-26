@@ -1,10 +1,6 @@
 ---
-id: maintain-networks
-title: Networks
-sidebar_label: Networks
-description: Information about the different networks of the Polkadot ecosystem.
-keywords: [networks, mainnet, testnet, canary, substrate]
-slug: ../maintain-networks
+title: Networks Overview
+description: Explore the main and test networks in the Polkadot ecosystem, including Polkadot, Kusama, and Westend.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-host
-title: Polkadot Host (PH)
-sidebar_label: Polkadot Host
-description: The Polkadot Host and its Components.
-keywords: [polkadot host, runtime]
-slug: ../learn-polkadot-host
+title: Polkadot Host
+description: Learn about the Polkadot Host, its components, and its role in executing the Polkadot runtime and maintaining network stability.
 ---
 
 The architecture of Polkadot can be divided into two different parts, the Polkadot _runtime_ and the

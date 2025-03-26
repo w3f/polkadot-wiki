@@ -1,10 +1,6 @@
 ---
-id: learn-snowbridge
 title: Snowbridge
-sidebar_label: Snowbridge
-description: Overview of Snowbridge by Snowfork
-keywords: [Bridge, XCM, Bridge Hub, Snowbridge, Snowfork]
-slug: ../learn-snowbridge
+description: Overview of Snowbridge, a trustless bridge enabling token transfers and messaging between Polkadot and Ethereum using BEEFY protocol.
 ---
 
 !!!info "Using Snowbridge"

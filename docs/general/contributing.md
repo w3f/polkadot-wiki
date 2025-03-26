@@ -1,10 +1,6 @@
 ---
-id: contributing
 title: Contributing to the Polkadot Wiki
-sidebar_label: Contributing to the Wiki
-description: Contribute to the Polkadot Wiki.
-keywords: [contributing, contributions, translations]
-slug: ../contributing
+description: Learn how to contribute to the Polkadot Wiki and help expand its knowledge base.
 ---
 
 The wiki was started and is maintained by [the Web3 Foundation Technical Education Team](./contributors.md). It is an open-source project and aims

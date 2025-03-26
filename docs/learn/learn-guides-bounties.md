@@ -1,13 +1,11 @@
 ---
 id: learn-guides-bounties
-title: Polkadot-JS Guides about Bounties
+title: Bounty Management Guide
+description: Learn how to submit, manage, and claim bounties using Polkadot-JS UI.
 sidebar_label: Bounty Guides
-description: Polkadot-JS Guides for Bounties
 keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 slug: ../learn-guides-bounties
 ---
-
-
 
 <MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
 [Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools

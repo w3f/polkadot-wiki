@@ -1,10 +1,6 @@
 ---
-id: decentralized-futures
 title: Decentralized Futures Program
-sidebar_label: Decentralized Futures
-description: Learn about the Decentralized Futures Program.
-keywords: [community, ecosystem, funding]
-slug: ../decentralized-futures
+description: Learn about the Decentralized Futures Program and its funding for Polkadot ecosystem growth.
 ---
 
 The new [Decentralized Futures Program](https://futures.web3.foundation/) supplements the Grants

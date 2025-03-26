@@ -1,10 +1,6 @@
 ---
-id: polkadot-v1
 title: Polkadot 1.0
-sidebar_label: Polkadot 1.0
-description: Polkadot's 1.0, Blockspace, Decentralization and Resilience.
-keywords: [polkadot vison, polkadot 1.0, Blockspace, Resilience, Decentralization]
-slug: ../polkadot-v1
+description: Explore Polkadot 1.0's innovations, including blockspace, decentralization, shared security, and its vision for a multi-chain future.
 ---
 
 Since the release of Bitcoin in 2009, blockchain projects increased exponentially to the order of

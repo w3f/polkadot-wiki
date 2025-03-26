@@ -1,11 +1,5 @@
----
-id: learn-guides-nominator
-title: Polkadot-JS Guides For Nominators
-sidebar_label: Nominator Guides
-description: Polkadot-JS Guides for Nominators.
-keyword: [nominate, stake, staking, claim, rewards, polkadot-js]
-slug: ../learn-guides-nominator
----
+title: Nominator Guides for Polkadot-JS
+description: Learn how to bond tokens, nominate validators, and claim staking rewards using Polkadot-JS.
 
 import DocCardList from '@theme/DocCardList';
 

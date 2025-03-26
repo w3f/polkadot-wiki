@@ -1,10 +1,6 @@
 ---
-id: scams
-title: How to Protect Yourself from Scams
-sidebar_label: Scam Protection
-description: How to Protect yourself against Scams.
-keywords: [scams, protect, official]
-slug: ../learn-scams
+title: Protect Yourself from Scams
+description: Learn how to safeguard your crypto assets from scams and hacks with essential tips and guidelines for staying secure in the Polkadot ecosystem.
 ---
 
 Scams and hacks are an unfortunate reality of the crypto industry. It's important to stay alert and

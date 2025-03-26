@@ -1,11 +1,6 @@
 ---
-id: maintain-guides-async-backing
-title: Upgrade Parachain for Asynchronous Backing Compatibility
-sidebar_label: Async Backing Upgrade
-description:
-  Steps on how to upgrade a parachain to be compatible with the relay chain's async backing feature.
-keywords: [async, backing, parachain, consensus]
-slug: ../maintain-guides-async-backing
+title: Async Backing Upgrade
+description: Steps to upgrade a parachain for compatibility with the relay chain's async backing feature.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

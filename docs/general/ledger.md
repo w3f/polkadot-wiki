@@ -1,9 +1,6 @@
 ---
-id: ledger
 title: Using the Polkadot Ledger Apps
 description: Use the Polkadot Ledger Application.
-keywords: [Ledger, Polkadot Ledger app, Ledger Generic]
-slug: ../ledger
 ---
 
 <!-- MessageBox -->

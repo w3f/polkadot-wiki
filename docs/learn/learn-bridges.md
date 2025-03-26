@@ -1,10 +1,6 @@
 ---
-id: learn-bridges
-title: Bridges
-sidebar_label: Bridges
-description: Bridges and Examples of Common Bridges.
-keywords: [bridges, cross-chain, bridge methods]
-slug: ../learn-bridges
+title: Blockchain Bridges
+description: Learn about blockchain bridges, their role in cross-chain communication, and trustless designs for secure interoperability.
 ---
 
 Bridges are vital infrastructure, enabling cross-chain communication between technically diverse

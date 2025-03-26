@@ -1,10 +1,6 @@
 ---
-id: ambassadors
 title: Polkadot Ambassador Program
-sidebar_label: Polkadot Ambassadors
-description: The Polkadot's Ambassador Program and How you can Participate in It.
-keywords: [ambassadors, contribute, contributions, program]
-slug: ../ambassadors
+description: Join the Polkadot Ambassador Program to help grow the ecosystem and gain exclusive benefits.
 ---
 
 !!!info "Polkadot Ambassador On-chain Collective"

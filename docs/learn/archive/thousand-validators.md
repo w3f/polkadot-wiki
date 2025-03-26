@@ -1,10 +1,6 @@
 ---
-id: thousand-validators
 title: Thousand Validators Programme
-sidebar_label: Thousand Validators
-description: The Thousand Validators Program and How it can Support your Validator Endeavors.
-keywords: [thousand validators program, validator, validate, maintain, TVP]
-slug: ../thousand-validators
+description: Learn about the Thousand Validators Programme and how it supports validator decentralization on Kusama and Polkadot.
 ---
 
 <!-- MessageBox -->

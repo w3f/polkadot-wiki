@@ -1,10 +1,6 @@
 ---
-id: how-to-dyor
 title: How to Do Your Own Research (DYOR)
-sidebar_label: Do Your Own Research
-description: Importance of Doing Your Own Research (DYOR).
-keywords: [dyor, research, scams, protect]
-slug: ../how-to-dyor
+description: Learn how to evaluate projects in the Polkadot ecosystem and distinguish legitimate ones from scams.
 ---
 
 Many projects are being built, or intend to build, on both Polkadot and Kusama. However, many claim

@@ -1,9 +1,6 @@
 ---
-id: staking-apps
 title: Polkadot Staking Apps
-description: Staking Apps in the Polkadot Ecosystem.
-keywords: [staking, staking apps]
-slug: ../staking-apps
+description: Explore staking apps in the Polkadot ecosystem, including dashboards, wallets, and tools for non-custodial staking and nomination pools.
 ---
 
 !!!info "Community Page"

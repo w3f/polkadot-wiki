@@ -1,13 +1,7 @@
 ---
-id: learn-agile-coretime
-title: Scheduling
-sidebar_label: Scheduling
-description: How the Polkadot Cloud achieves multi-threading to improve efficiency.
-keywords: [coretime, blockspace, parachain, on-demand, cores, multi-threading, scheduling]
-slug: ../learn-agile-coretime
+title: Agile Coretime
+description: Learn how Polkadot's Agile Coretime enables efficient resource utilization, economic flexibility, and multi-threading for parachains.
 ---
-
-
 
 [Scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>) is the process of assigning
 tasks or jobs to resources (like CPU cores) at specific times or under certain conditions. Effective

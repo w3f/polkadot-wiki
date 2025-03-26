@@ -1,14 +1,9 @@
 ---
-id: maintain-guides-how-to-join-council
 title: Join the Council
-sidebar_label: Join the Council
-description: Steps on how to join the official on-chain council.
-keywords: [council, how to join council, governance, candidate]
-slug: ../maintain-guides-how-to-join-council
+description: Learn how to submit your candidacy and participate in Polkadot's on-chain council elections.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
-
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">

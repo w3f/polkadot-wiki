@@ -1,10 +1,6 @@
 ---
-id: learn-auction
 title: Parachain Slot Auctions
-sidebar_label: Parachain Slot Auctions
-description: Polkadot's Parachain Slot Auction Mechanism.
-keywords: [auction, slot auctions, parachain, bidding]
-slug: ../learn-auction
+description: Learn about Polkadot's Parachain Slot Auction mechanism and its transition to Agile Coretime.
 ---
 
 <!-- MessageBox -->

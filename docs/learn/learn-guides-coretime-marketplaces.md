@@ -1,8 +1,8 @@
 ---
 id: learn-guides-coretime-marketplaces
-title: Coretime Marketplaces
+title: Coretime Marketplaces Guide
 sidebar_label: Coretime Marketplaces
-description: Usage guides for coretime marketplaces
+description: Learn how to purchase, manage, and assign coretime using RegionX and Lastic marketplaces.
 keywords: [coretime, blockspace, on-demand, parachain, parathread, cores]
 slug: ../learn-guides-coretime-marketplaces
 ---

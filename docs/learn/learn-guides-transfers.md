@@ -1,10 +1,6 @@
 ---
-id: learn-guides-transfers
-title: Polkadot-JS Guides about Transfers
-sidebar_label: Transfer Guides
-description: Polkadot-JS Guides about Balances Transfers.
-keywords: [gides, advanced, polkadot-js, transfers]
-slug: ../learn-guides-transfers
+title: Transfer Guides for Polkadot-JS
+description: Step-by-step guides for transferring balances, verifying extrinsics, and calculating fees using Polkadot-JS.
 ---
 
 <!-- MessageBox -->

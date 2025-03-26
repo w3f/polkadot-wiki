@@ -2,7 +2,7 @@
 id: build-integrate-assets
 title: Using AssetHub
 sidebar_label: Using AssetHub
-description: Tools that you can use for integrating assets.
+description: Learn how to integrate fungible and non-fungible assets using AssetHub for efficient operations on Polkadot and Kusama.
 keywords: [assets, integration, api, operations]
 slug: ../build-integrate-assets
 ---

@@ -1,10 +1,6 @@
 ---
-id: learn-guides-vault
-title: Polkadot-JS Guides about the Vault App
-sidebar_label: Polkadot Vault Guides
-description: Polkadot-JS Guides about Polkadot Vault.
-keywords: [parity signer, signer, polkadot vault, polkadot-js]
-slug: ../learn-guides-vault
+title: Polkadot Vault Guides
+description: Comprehensive guides for using the Polkadot Vault app, including sending transfers, importing accounts, and updating metadata.
 ---
 
 <!-- MessageBox -->

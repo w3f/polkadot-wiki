@@ -1,10 +1,6 @@
 ---
-id: learn-guides-asset-conversion
 title: Asset Conversion Tutorials
-sidebar_label: Asset Conversion Tutorials
-description: Asset Conversion implementation details on AssetHub.
-keywords: [Assets, DEX, Exchange, Pools, Tokens]
-slug: ../learn-guides-asset-conversion
+description: Step-by-step guides for creating liquidity pools, swapping assets, and more on Polkadot's AssetHub.
 ---
 
 <!-- MessageBox -->

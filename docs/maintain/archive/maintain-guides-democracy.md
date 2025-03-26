@@ -1,14 +1,9 @@
 ---
-id: maintain-guides-democracy
 title: Participate in Democracy
-sidebar_label: Participate in Democracy
-description: Steps on how to participate in democracy.
-keywords: [democracy, council, action, proposal]
-slug: ../maintain-guides-democracy
+description: Learn how to propose, endorse, vote, and delegate in Polkadot's democracy governance system.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
-
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">

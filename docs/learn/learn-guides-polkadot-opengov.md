@@ -1,10 +1,6 @@
 ---
-id: learn-guides-polkadot-opengov
-title: Polkadot-JS Guides about OpenGov
-sidebar_label: OpenGov Guides
-description: Polkadot-JS Guides about Polkadot OpenGov.
-keywords: [opengov, polkadot opengov, referenda, cancel, polkadot-js]
-slug: ../learn-guides-polkadot-opengov
+title: OpenGov Guides for Polkadot-JS
+description: Learn how to propose, vote, and manage referenda in Polkadot OpenGov using Polkadot-JS.
 ---
 
 <!-- MessageBox -->

@@ -1,10 +1,6 @@
 ---
-id: learn-comparisons-kusama
 title: Polkadot vs. Kusama
-sidebar_label: Kusama
-description: Comparing the cousins.
-keywords: [polkadot, kusama, polkadot vs kusama, canary]
-slug: ../learn-comparisons-kusama
+description: Compare Polkadot and Kusama, their priorities, governance, and use cases for blockchain experimentation and stability.
 ---
 
 Although they are like cousins and share many parts of their code, Polkadot and Kusama are

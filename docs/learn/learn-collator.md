@@ -1,10 +1,6 @@
 ---
-id: learn-collator
-title: Collator
-sidebar_label: Collator
-description: Role of Collators within the Polkadot Ecosystem.
-keywords: [collator, maintain, full node, block candidate]
-slug: ../learn-collator
+title: Collators in Polkadot
+description: Understand the role of collators in Polkadot, including block production, state transition proofs, and cross-chain messaging.
 ---
 
 !!!info

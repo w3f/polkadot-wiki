@@ -2,9 +2,7 @@
 id: build-network-overview
 title: Development Networks
 sidebar_label: Development Networks
-description: An overview of the different networks on Polkadot
-keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, client]
-slug: ../build-network-overview
+description: Overview of Polkadot's mainnet, canary network Kusama, and testnets like Westend and Paseo for development and testing.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

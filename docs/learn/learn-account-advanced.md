@@ -1,10 +1,7 @@
 ---
-id: learn-account-advanced
-title: Polkadot Accounts In-Depth
-sidebar_label: Accounts
-description: Advanced Concepts about Polkadot's Accounts.
-keywords: [account, polkadot account, polkadotjs, indices, identity, reaping, ENS, domain, ETH]
-slug: ../learn-account-advanced
+title: Advanced Polkadot Accounts
+description: Dive deeper into advanced concepts like address formats, derivation paths, and system accounts in Polkadot.
+template: learn
 ---
 
 ## Address Format

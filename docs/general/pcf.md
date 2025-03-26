@@ -1,10 +1,6 @@
 ---
-id: polkadot-community-foundation
 title: Polkadot Community Foundation
-sidebar_label: Polkadot Community Foundation
-description: Polkadot Community Foundation.
-keywords: [polkadot, governance, OpenGov, community, polkadot community foundation]
-slug: ../polkadot-community-foundation
+description: Understand the role of the Polkadot Community Foundation in executing OpenGov tasks and bridging on-chain governance with real-world actions.
 ---
 
 The Polkadot Community Foundation (PCF) is a foundation company incorporated in the Cayman Islands

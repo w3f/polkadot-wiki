@@ -1,10 +1,6 @@
 ---
-id: build-parachains
 title: Parachain Development
-sidebar_label: Parachain Development
-description: A guide on what it means to become a Parachain and the steps to do so.
-keywords: [build, parachain, develop, implement, PDK]
-slug: ../build-pdk
+description: A comprehensive guide to building and deploying Layer-1 parachains on Polkadot using the Parachain Development Kit (PDK).
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

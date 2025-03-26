@@ -1,10 +1,6 @@
 ---
-id: learn-guides-staking
-title: Polkadot-JS Guides about Staking
-sidebar_label: Staking Guides
-description: Polkadot-JS Guides about Staking.
-keyword: [nominate, stake, staking, claim, rewards, polkadot-js, pools]
-slug: ../learn-guides-staking
+title: Staking Guides for Polkadot-JS
+description: Learn how to stake, nominate, and manage rewards using Polkadot-JS for Polkadot and Kusama networks.
 ---
 
 <!-- MessageBox -->

@@ -1,13 +1,7 @@
 ---
-id: learn-transactions
 title: Types of Transactions (a.k.a. Extrinsics)
-sidebar_label: Transactions
-description: Types of Transactions on Polkadot.
-keywords: [transaction, transfer, DOT, extrinsics]
-slug: ../learn-transactions
+description: Learn about the different types of transactions (extrinsics) in Polkadot, including signed, unsigned, and inherent transactions.
 ---
-
-
 
 ## Pallets and Extrinsics
 

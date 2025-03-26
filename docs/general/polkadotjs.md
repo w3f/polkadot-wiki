@@ -1,10 +1,6 @@
 ---
-id: polkadotjs
 title: Polkadot-JS Tooling
-sidebar_label: Polkadot-JS Tooling
-description: The Polkadot-JS Tool Collection.
-keywords: [polkadotjs, polkadotjs apps, apps UI, extension]
-slug: ../polkadotjs
+description: Discover Polkadot-JS tools for developers and power users, including UI, extension, API, and phishing protection.
 ---
 
 <!-- MessageBox -->

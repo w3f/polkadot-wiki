@@ -1,10 +1,6 @@
 ---
-id: learn-consensus
 title: Polkadot's Consensus Protocols
-sidebar_label: Consensus
-description: The Consensus Mechanisms of Polkadot.
-keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus, finality]
-slug: ../learn-consensus
+description: Learn about Polkadot's consensus mechanisms, including NPoS, hybrid consensus, BABE, and GRANDPA.
 ---
 
 In traditional PoS systems, block production participation is dependent on token holdings as opposed

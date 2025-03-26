@@ -1,10 +1,6 @@
 ---
-id: learn-controller
 title: Controller Accounts
-sidebar_label: Controller Accounts
-description: Controller Accounts used in Staking.
-keywords: [nominated proof of stake, staking, controller]
-slug: ../learn-controller
+description: Learn about the deprecated controller accounts used in Polkadot's staking mechanism and their replacement.
 ---
 
 <!-- MessageBox -->

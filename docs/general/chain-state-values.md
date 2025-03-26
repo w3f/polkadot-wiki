@@ -1,12 +1,6 @@
 ---
-id: chain-state-values
 title: Chain State Values
-sidebar_label: Chain State
-description:
-  Chain constants and storage values that can be queried from the live network nodes of Polkadot,
-  Kusama and their system chains.
-keywords: [polkadot, kusama, constants, storage, values]
-slug: ../chain-state-values
+description: Explore chain constants and storage values for Polkadot, Kusama, and their system chains.
 ---
 
 <!-- prettier-ignore-start -->

@@ -1,14 +1,9 @@
 ---
-id: build-tools-index
 title: Tool Index
-sidebar_label: Tool Index
-description: Reference point for a list of tools to support your development.
-keywords: [tools, clients, libraries, explorers, monitor, data, SCALE]
-slug: ../build-tools-index
+description: Explore a comprehensive list of tools, libraries, and SDKs to support your development in the Polkadot ecosystem.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
-
 
 Here, we provide a list of tools available for your development needs. They are sorted by context.
 If you're actively maintaining a tool that might be useful to other Polkadot, Kusama or Substrate

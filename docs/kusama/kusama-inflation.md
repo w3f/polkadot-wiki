@@ -1,10 +1,6 @@
 ---
-id: kusama-inflation
 title: Kusama Inflation Model
-sidebar_label: KSM Inflation
-description: Explanation of KSM's Inflation Model.
-keywords: [token, KSM, inflation]
-slug: ../../kusama-inflation
+description: Understand Kusama's inflation model, staking incentives, and how the ideal staking rate impacts token distribution.
 ---
 
 <!-- MessageBox -->

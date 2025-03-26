@@ -1,11 +1,5 @@
----
-id: learn-guides-staking-pools
-title: Polkadot-JS Guides for Pool Creators
-sidebar_label: Nomination Pool Guides
-description: Polkadot-JS Guides about Nomination Pools.
-keyword: [stake, staking, pools, create, destroy, claim, rewards, polkadot-js]
-slug: ../learn-guides-staking-pools
----
+title: Nomination Pool Guides
+description: Detailed guides for creating, managing, and destroying nomination pools using Polkadot-JS.
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">

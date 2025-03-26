@@ -1,11 +1,6 @@
 ---
-id: learn-cryptography
 title: Cryptography on Polkadot
-sidebar_label: Cryptography
-description: Cryptographic Functions used in Polkadot.
-keywords:
-  [cryptography, hashing, keypair, signing, keys, randomness, verifiable random function, VDF]
-slug: ../learn-cryptography
+description: Explore the cryptographic functions, keypairs, and randomness mechanisms used in Polkadot.
 ---
 
 This is a high-level overview of the cryptography used in Polkadot. It assumes that you have some

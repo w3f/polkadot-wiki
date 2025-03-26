@@ -1,10 +1,6 @@
 ---
-id: learn-comparisons-cosmos
 title: Polkadot vs. Cosmos
-sidebar_label: Cosmos
-description: Comparison between Polkadot and Cosmos.
-keywords: [cosmos, polkadot, interoperability, interoperability hub]
-slug: ../learn-comparisons-cosmos
+description: Compare Polkadot and Cosmos, their interoperability models, governance, and approaches to blockchain scalability.
 ---
 
 Polkadot and Cosmos are both protocols that provide an interface for different state machines to
