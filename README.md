@@ -62,28 +62,19 @@ https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-
 
 ## Running Locally
 
-- Make sure `python` (Python 3.12) and `pip` are installed and in your path
+- Make sure `python` (Python 3.12+), `pip` and `mkdocs` are installed and configured in your path
 - It's recommended to use a virtual environment, as is common practice
-  
- 1. Enter a virtual environment:
-    ```sh
-    # Create the env
-    python -m venv venv
-    # Enter the env
-    source venv/bin/activate
-    ```
+- Ensure you are in the `polkadot-wiki` directory
 
-2. Install dependencies (make sure you're in the project's directory)
+1. Install dependencies 
     ```sh
     pip install -r requirements.txt
     ```
 
-3. Once installed, run the serve command:
+2. Once installed, run the serve command:
     ```sh
-    # If you're in a virtual env (set to false if you're not editing RPC commands, otherwise it will take time to load)
+    # Set ENABLE_RPC to true if you plan to work with RPC macros
     ENABLE_RPC=false mkdocs serve
-    # If you're not in a virtual env
-    python -m mkdocs build
     ```
 
 ### Build
@@ -91,10 +82,8 @@ https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-
 🟣 Building the Polkadot Wiki:
 
 ```bash
-# If you're in a virtual env (set to false if you're not editing RPC commands, otherwise it will take time to load)
+# Set ENABLE_RPC to true if you plan to work with RPC macros
 ENABLE_RPC=false mkdocs build
-# If you're not in a virtual env
-python -m mkdocs build
 ```
 
 ## Style and Configuration Guide
