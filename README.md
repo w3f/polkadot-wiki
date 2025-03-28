@@ -48,18 +48,6 @@ these corrections directly. Larger contributions may start as issues to test the
 subject with the maintainers. It is generally preferable to create a pull request over an issue to
 propose a change to the Wiki content.
 
-:sparkles: **_The Wiki belongs to the community, help generate its identity._** :sparkles:
-
-https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-9746-109191db5271.mp4
-
-> :inbox_tray: There will be an upcoming initiative that will promote and encourage contributions
-> towards Polkadot-based content and documentation. In the meantime, feel free to share any ideas or
-> feedback you may have for the Wiki by opening a
-> [Feature Request issue](https://github.com/w3f/polkadot-wiki/issues/new/choose).
-
-**Keep engaged by checking out these common
-[Polkadot ecosystem resources](https://hackmd.io/IMgniwlyT_GIqjI8Wui35A)**.
-
 ## Running Locally
 
 - Make sure `python` (Python 3.12+), `pip` and `mkdocs` are installed and configured in your path
