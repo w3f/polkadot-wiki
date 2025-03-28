@@ -1,10 +1,6 @@
 ---
-id: build-smart-contracts
 title: Smart Contracts
-sidebar_label: Smart Contracts
-description: How smart contracts play their role in the Polkadot ecosystem.
-keywords: [build, smart contract, evm, wasm]
-slug: ../build-smart-contracts
+description: Explore tools and frameworks for building smart contracts on Polkadot and Kusama using Substrate and other technologies.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

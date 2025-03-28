@@ -1,9 +1,6 @@
 ---
-id: alpha-program
 title: Polkadot Alpha Program
-sidebar_label: Alpha Program
-description: The Polkadot Alpha Program and How it can Support your Development.
-slug: ../alpha-program
+description: Learn how the Polkadot Alpha Program supports blockchain projects using the Polkadot SDK.
 ---
 
 Over 150 projects are using the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk) to create

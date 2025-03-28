@@ -1,10 +1,6 @@
 ---
-id: kusama-bug-bounty
 title: Bug Bounty
-sidebar_label: Bug Bounty
-description: An overview of how you can help catch bugs.
-keywords: [bug, bounty, error, report]
-slug: ../../kusama-bug-bounty
+description: Learn how to participate in Kusama's bug bounty program and contribute to improving network security.
 ---
 
 !!!note "Program Scope"

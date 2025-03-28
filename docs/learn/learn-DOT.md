@@ -1,10 +1,6 @@
 ---
-id: learn-DOT
-title: DOT
-sidebar_label: DOT
-description: Tokenomics of Polkadot's Native Token DOT.
-keywords: [token, DOT, what are the uses of DOT, KSM, faucet]
-slug: ../learn-DOT
+title: DOT Token Overview
+description: Learn about Polkadot's native token DOT, its uses, denominations, and how to obtain it.
 ---
 
 ## What is DOT?

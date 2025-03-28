@@ -1,10 +1,6 @@
 ---
-id: learn-governance
 title: Governance V1
-sidebar_label: Governance V1
-description: Polkadot's First Governance Model.
-keywords: [governance, referenda, proposal, voting, endorse]
-slug: ../learn-governance
+description: Learn about Polkadot's first governance model, including referenda, council, and adaptive quorum biasing.
 ---
 
 <!-- MessageBox -->

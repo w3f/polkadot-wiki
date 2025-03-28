@@ -1,10 +1,6 @@
 ---
-id: learn-async-backing
-title: Pipelining
-sidebar_label: Pipelining
-description: How the Polkadot Cloud achieves pipelining to improve scalability.
-keywords: [parachains, backing, parablock, perspective parachains, unincluded segments, pipelining]
-slug: ../learn-async-backing
+title: Pipelining in Polkadot
+description: Understand how asynchronous backing improves scalability and throughput in Polkadot's parachain protocol.
 ---
 
 <!-- MessageBox -->

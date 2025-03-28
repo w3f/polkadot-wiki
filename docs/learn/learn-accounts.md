@@ -1,10 +1,7 @@
 ---
-id: learn-accounts
 title: Polkadot Accounts
-sidebar_label: Polkadot Accounts
-description: Polkadot Accounts, Account Identity, and Account Reaping.
-keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
-slug: ../learn-accounts
+description: Learn about Polkadot accounts, their structure, identity, and how to manage them effectively.
+
 ---
 
 !!!info "User friendly wallets"

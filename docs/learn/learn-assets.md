@@ -1,10 +1,6 @@
 ---
-id: learn-assets
-title: Asset Hub
-sidebar_label: Asset Hub
-description: Fungible Tokens and NFTs on Polkadot.
-keywords: [assets, fungible, non-fungible, asset hub, statemine, statemint]
-slug: ../learn-assets
+title: Asset Hub Overview
+description: Learn about fungible tokens, NFTs, and asset management on Polkadot's Asset Hub.
 ---
 
 Assets in the Polkadot ecosystem can be represented on several chains. They can take many forms,

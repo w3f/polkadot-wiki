@@ -1,10 +1,6 @@
 ---
-id: build-light-clients
 title: Using Light Clients
-sidebar_label: Using Light Clients
-description: Information about light client options.
-keywords: [build, substrate, substrate connect, light client]
-slug: ../build-light-clients
+description: Learn about Substrate Connect and light clients for decentralized, secure, and efficient blockchain interactions.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

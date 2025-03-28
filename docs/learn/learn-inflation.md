@@ -1,10 +1,7 @@
 ---
-id: learn-inflation
 title: DOT Inflation Model
-sidebar_label: DOT Inflation
 description: Explanation of DOT's Inflation.
-keywords: [token, DOT, inflation]
-slug: ../learn-inflation
+
 ---
 
 <!-- MessageBox -->

@@ -1,10 +1,6 @@
 ---
-id: maintain-guides-validator-payout
 title: Validator Payout Overview
-sidebar_label: Validator Payout Overview
-description: How validator payout works on the network and what you should expect.
-keywords: [validator payout, payments, rewards, era points]
-slug: ../maintain-guides-validator-payout
+description: Understand how validator payouts work, including era points, rewards distribution, and commission structures.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

@@ -1,10 +1,6 @@
 ---
-id: maintain-wss
 title: Secure the WebSocket
-sidebar_label: Secure the WebSocket
-description: Steps on setting up a secure socket for remote connections.
-keywords: [web socket, remote, connection, secure websocket]
-slug: ../maintain-wss
+description: Steps to secure WebSocket connections for remote access to your Polkadot node using SSL-enabled proxies.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

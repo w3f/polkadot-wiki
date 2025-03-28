@@ -1,10 +1,6 @@
 ---
-id: learn-comparisons-ethereum
 title: Polkadot vs. Ethereum
-sidebar_label: Ethereum
-description: Comparison between Polkadot and Ethereum.
-keywords: [ethereum, Ethereum, proof of stake, sharding]
-slug: ../learn-comparisons-ethereum
+description: Compare Polkadot and Ethereum, their scalability, governance, and approaches to blockchain interoperability and smart contracts.
 ---
 
 Both protocols are blockchains at their core but serve fundamentally different roles in how they are

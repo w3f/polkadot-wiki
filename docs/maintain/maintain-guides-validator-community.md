@@ -1,10 +1,6 @@
 ---
-id: doc-maintain-guides-validator-community
-title: Validator Community Overview
-sidebar_label: Validator Community Overview
-description: An extensive guide to help you start and build a validator community.
-keywords: [validator, community, reputation, nominations]
-slug: ../maintain-guides-validator-community
+title: Validator Community Guide
+description: Learn strategies to build a validator community, attract nominations, and establish trust within the Polkadot ecosystem.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

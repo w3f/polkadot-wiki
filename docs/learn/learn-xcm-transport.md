@@ -1,10 +1,6 @@
 ---
-id: learn-xcm-transport
 title: XCM Transport Methods (XCMP, HRMP, VMP)
-sidebar_label: XCM Transport
 description: Methods to send XCM Messages across Networks.
-keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
-slug: ../learn-xcm-transport
 ---
 
 !!!info "XCM Documentation"

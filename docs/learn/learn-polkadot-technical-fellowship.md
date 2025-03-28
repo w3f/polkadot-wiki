@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-technical-fellowship
 title: Polkadot Technical Fellowship
-sidebar_label: Technical Fellowship
-description: Self-governing body of experts and developers of the Polkadot protocol.
-keywords: [governance, referenda, proposal, voting, whitelist, fellowship, opengov, rank]
-slug: ../learn-polkadot-technical-fellowship
+description: Learn about the Polkadot Technical Fellowship, its governance model, ranking system, and role in Polkadot's OpenGov.
 ---
 
 The Technical Fellowship is a self-governing body of experts and developers of Polkadot and Kusama

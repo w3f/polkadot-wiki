@@ -1,22 +1,6 @@
 ---
-id: learn-parachains-protocol
 title: Security Protocol Overview
-sidebar_label: Security Protocol
-description: Actors and Protocols involved in Polkadot and its Parachains' Block Finality.
-keywords:
-  [
-    parachains,
-    application-specific,
-    sharding,
-    protocol,
-    validator,
-    collator,
-    nominator,
-    AnV,
-    availability,
-    validity,
-  ]
-slug: ../learn-parachains-protocol
+description: Overview of actors and protocols ensuring Polkadot and its parachains' block finality and security.
 ---
 
 !!!info

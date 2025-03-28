@@ -1,10 +1,6 @@
 ---
-id: build-data
 title: Explorer, Data, & Indexing Tools
-sidebar_label: Explorer, Data, & Indexing Tools
-description: An overview about building with data analytics
-keywords: [data, index, query, explorer, dashboard]
-slug: ../build-data
+description: Overview of tools for data analytics, indexing, and blockchain exploration in the Polkadot ecosystem.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

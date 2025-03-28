@@ -1,10 +1,6 @@
 ---
-id: learn-jam-faq
 title: FAQ for Polkadot's JAM Chain
-sidebar_label: JAM FAQ
-description: FAQ about Polkadot's Join-Accumulate Machine.
-keywords: [Polkadot, JAM, join-accumulate, faq]
-slug: ../learn-jam-faq
+description: Frequently asked questions about Polkadot's Join-Accumulate Machine and its potential evolution of the relay chain.
 ---
 
 !!!info "Technical information about JAM"

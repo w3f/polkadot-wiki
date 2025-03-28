@@ -1,10 +1,6 @@
 ---
-id: build-guides-template-basic
-title: Template to Core - Setup & Initial Deployment of a Parachain
-sidebar_label: Parachain Template Guide
-description: A minimal guide on how to deploy a parachain using Polkadot SDK's parachain template.
-keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
-slug: ../build-guides-template-basic
+title: Parachain Template Guide
+description: A step-by-step guide to deploying a parachain using Polkadot SDK's parachain template.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

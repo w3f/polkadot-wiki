@@ -1,10 +1,6 @@
 ---
-id: learn-xcvm
 title: XCM Virtual Machine (XCVM) & XCM Executor
-sidebar_label: XCM Virtual Machine (XCVM)
 description: Design of the XCM Executor and Mechanics of the XCM Virtual Machine.
-keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
-slug: ../learn-xcvm
 ---
 
 !!!info "XCM Documentation"

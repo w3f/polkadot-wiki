@@ -18,8 +18,8 @@ Welcome to the Advanced. Here you will find advanced information about Polkadot.
 - **[Snowbridge](../learn-snowbridge.md)** - Information on Snowbridge.
 - **[Hyperbridge](../learn-hyperbridge.md)** - Details on Hyperbridge.
 - **[DOT-KSM Bridge](../learn-DOT-KSM-bridge.md)** - Information on the DOT-KSM bridge.
-- **[Account (Advanced)](../learn-account-advanced.md)** - Advanced account information.
-- **[Staking (Advanced)](../learn-staking-advanced.md)** - Advanced staking information.
+- **[Accounts](../learn-account-advanced.md)** - Advanced account information.
+- **[Staking](../learn-staking-advanced.md)** - Advanced staking information.
 - **[NFT Pallets](../learn-nft-pallets.md)** - Information on NFT pallets.
 - **[Cryptography](../learn-cryptography.md)** - Details on cryptography.
 - **[Phragmen](../learn-phragmen.md)** - Information on Phragmen.

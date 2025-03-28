@@ -1,10 +1,6 @@
 ---
-id: maintain-endpoints
 title: Node Endpoints
-sidebar_label: Node Endpoints
-description: List of node endpoints and examples of use.
-keywords: [endpoints, network, connect]
-slug: ../maintain-endpoints
+description: A list of node endpoints for Polkadot, Kusama, and test networks, with examples of usage.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

@@ -1,10 +1,6 @@
 ---
-id: learn-dot-ksm-bridge
 title: Polkadot <> Kusama Bridge
-sidebar_label: DOT <> KSM Bridge
-description: Overview of Polkadot and Kusama Bridge.
-keywords: [Bridge, XCM, Bridge Hub]
-slug: ../learn-dot-ksm-bridge
+description: Overview of the trustless bridge between Polkadot and Kusama, enabling seamless asset transfers.
 ---
 
 Both Polkadot and Kusama blockchain networks achieve finality through GRANDPA consensus, which

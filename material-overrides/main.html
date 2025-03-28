@@ -1,12 +1,9 @@
 {% extends "base.html" %}
-
-{% block header %}
-<div id="announcement-bar">
-    <p>
-        Join the Polkadot Blockchain Academy Online (PBA-X) 👉
-        <a href="https://pbax.polkadot.academy/offers/8XLKnGiX/checkout" target="_blank" rel="noopener noreferrer">Register Here</a>
-    </p>
-    <span id="announcement-close" aria-label="Close Announcement" style="cursor: pointer;">✖</span>
-</div>
+{% block announce %}
+<p>
+    Join the Polkadot Blockchain Academy Online (PBA-X) 👉
+    <a href="https://pbax.polkadot.academy/offers/8XLKnGiX/checkout" target="_blank" rel="noopener noreferrer">Register
+        Here</a>
+</p>
 {{ super () }}
 {% endblock %}

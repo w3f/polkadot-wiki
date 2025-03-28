@@ -1,10 +1,6 @@
 ---
-id: learn-implementations
 title: Polkadot Implementations
-sidebar_label: Polkadot Implementations
-description: Learn about the different Polkadot implementations.
-keywords: [implementations, wasm, meta protocol]
-slug: ../learn-implementations
+description: Explore the various Polkadot implementations and their role in the Web3 ecosystem.
 ---
 
 Polkadot is the flagship protocol of the [Web3 Foundation](https://web3.foundation/), and while

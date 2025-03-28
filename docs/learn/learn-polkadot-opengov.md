@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-opengov
-title: Introduction to Polkadot OpenGov
-sidebar_label: Polkadot OpenGov
-description: Polkadot’s Latest Model for Decentralized Governance.
-keywords: [governance, referenda, proposal, voting, endorse]
-slug: ../learn-polkadot-opengov
+title: Polkadot OpenGov
+description: Dive into Polkadot OpenGov, its decentralized governance model, referenda, tracks, and multi-role delegation features.
 ---
 
 import VLTable from "./../../components/Voluntary-Locking"; import Fellowship from

@@ -1,13 +1,7 @@
 ---
-id: learn-architecture
-title: Architecture
-sidebar_label: Architecture
-description: Key Components to Polkadot's Architecture.
-keywords: [polkadot, components, architecture]
-slug: ../learn-architecture
+title: Polkadot Architecture
+description: Discover Polkadot's architecture, including the relay chain, parachains, shared security, and interoperability mechanisms.
 ---
-
-
 
 Polkadot is a heterogeneous multichain with shared security and interoperability.
 

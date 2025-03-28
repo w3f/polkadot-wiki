@@ -1,10 +1,6 @@
 ---
-id: maintain-guides-how-to-monitor-your-node
 title: Monitor your node
-sidebar_label: Monitor your node
-descriptions: Tips on how to monitor your node.
-keywords: [node, monitor, dashboard]
-slug: ../maintain-guides-how-to-monitor-your-node
+description: Learn how to monitor your node using Prometheus and Grafana for metrics and performance insights.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

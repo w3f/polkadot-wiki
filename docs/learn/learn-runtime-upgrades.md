@@ -1,10 +1,6 @@
 ---
-id: learn-runtime-upgrades
 title: Runtime Upgrades
-sidebar_label: Runtime Upgrades
-description: Forkless Runtime Upgrades on Polkadot.
-keywords: [runtime, upgrades, releases, forkless]
-slug: ../learn-runtime-upgrades
+description: Understand forkless runtime upgrades on Polkadot and how they enable seamless changes to the blockchain's core logic.
 ---
 
 Runtime upgrades allow the relay chain, parachains, and solo blockchains built with the Polkadot SDK

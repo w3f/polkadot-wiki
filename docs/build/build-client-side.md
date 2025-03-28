@@ -1,10 +1,6 @@
 ---
-id: build-client-side
 title: Building Client-side Apps
-sidebar_label: Building Client-side Apps
-description: An overview about building clients that use Polkadot
-keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, client]
-slug: ../build-client-side
+description: Explore tools and frameworks for building client-side applications that interact with Polkadot and its parachains.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

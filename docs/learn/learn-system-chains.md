@@ -1,10 +1,6 @@
 ---
-id: learn-system-chains
 title: System Chains
-sidebar_label: System Chains
-description: System Parachains currently deployed on Polkadot.
-keywords: [common good, system, parachains, system level, public utility]
-slug: ../learn-system-chains
+description: System parachains on Polkadot offload core functionalities like governance, assets, and bridging from the relay chain for better performance.
 ---
 
 The primary functionality of the relay chain is to secure the parachains and facilitate secure

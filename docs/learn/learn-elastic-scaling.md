@@ -1,10 +1,6 @@
 ---
-id: learn-elastic-scaling
-title: Parallel Computing
-sidebar_label: Parallel Computing
-description: How the Polkadot Cloud achieves parallel computation to boost throughput.
-keywords: [elastic scaling, parachains, coretime, blockspace, parallel computing]
-slug: ../learn-elastic-scaling
+title: Parallel Computing on Polkadot
+description: Explore how Polkadot achieves parallel computation and elastic scaling to boost throughput and efficiency.
 ---
 
 <!-- MessageBox -->

@@ -2,8 +2,7 @@
 id: build-protocol-info
 title: Polkadot Protocol Overview
 sidebar_label: Polkadot Protocol Overview
-description:
-  Characteristics about the Polkadot protocol, and what you need to consider when building.
+description: Learn about Polkadot's protocol, unique features, and practical considerations for developers building on the network.
 keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---

@@ -1,9 +1,6 @@
 ---
-id: doc-thousand-contributors
 title: Thousand Contributors Program
-sidebar_label: Thousand Contributors
-description: The Thousand Contributors Program and How it can Support your Contributions.
-slug: ../thousand-contributors
+description: Learn about the Thousand Contributors Program, supporting and rewarding community contributions in the Polkadot and Kusama ecosystems.
 ---
 
 The [Thousand Contributors Program](https://github.com/w3f/1KC) is an initiative maintained by Web3

@@ -1,10 +1,6 @@
 ---
-id: maintain-guides-how-to-systemd
 title: Using systemd for a Validator Node
-sidebar_label: Using systemd for a Validator Node
-description: Using a service manager for your validator node.
-keywords: [systemd, validate, node]
-slug: ../maintain-guides-how-to-systemd
+description: Set up systemd to manage your validator node, ensuring automatic restarts and reliability.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

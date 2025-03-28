@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-opengov-treasury
 title: Treasury
-sidebar_label: Treasury
-description: Polkadot's On-chain Treasury.
-keywords: [treasury, funds, funding, tips, tipping]
-slug: ../learn-polkadot-opengov-treasury
+description: Learn about Polkadot's on-chain treasury, its inflow and outflow mechanisms, and how to submit proposals for funding.
 ---
 
 The Treasury is a pot of funds collected through a portion of block production rewards,

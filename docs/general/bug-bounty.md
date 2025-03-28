@@ -1,10 +1,6 @@
 ---
-id: bug-bounty
 title: Bug Bounty Program
-sidebar_label: Bug Bounty
-description: An Overview of How you can Help Catch Bugs.
-keywords: [bug, bug bounty, report]
-slug: ../bug-bounty
+description: Learn how to report bugs and contribute to Polkadot's security through the Bug Bounty Program.
 ---
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it

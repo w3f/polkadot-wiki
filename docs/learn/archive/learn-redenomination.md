@@ -1,10 +1,6 @@
 ---
-id: learn-redenomination
 title: Redenomination of DOT
-sidebar_label: Redenomination of DOT
-description: Everything about the DOT Token Redenomination.
-keywords: [DOT, redenomination]
-slug: ../learn-redenomination
+description: Understand the redenomination of DOT tokens, its impact, and the community-driven decision-making process.
 ---
 
 <!-- MessageBox -->

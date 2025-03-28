@@ -1,10 +1,6 @@
 ---
-id: build-guides-coretime-start
-title: Getting Started - Intro to the Polkadot SDK
-sidebar_label: Intro to the Polkadot SDK
-description: Introduction to the Polkadot SDK
-keywords: [coretime, blockspace, parathread, parachain, cores]
-slug: ../build-guides-coretime-start
+title: Intro to the Polkadot SDK
+description: An introduction to the Polkadot SDK and how to get started with building parachains and tasks.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

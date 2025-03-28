@@ -1,10 +1,6 @@
 ---
-id: learn-teleport
 title: Teleporting Assets
-sidebar_label: Teleporting Assets
-description: Teleport Assets between Parachains and Relay Chain.
-keywords: [teleport, assets, transfer]
-slug: ../learn-teleport
+description: Learn how Polkadot enables secure asset teleportation between parachains and the relay chain using XCM and SPREE modules.
 ---
 
 One of the main properties that Polkadot brings to the blockchain industry is secure

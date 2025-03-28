@@ -1,10 +1,6 @@
 ---
-id: learn-guides-accounts
-title: Polkadot-JS Guides about Accounts
-sidebar_label: Account Guides
-description: Polkadot-JS Guides about Accounts
-keyword: [guides, polkadot-js, accounts]
-slug: ../learn-guides-accounts
+title: Polkadot-JS Account Guides
+description: Comprehensive guides for managing accounts, backups, and security using Polkadot-JS tools.
 ---
 
 import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from

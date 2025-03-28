@@ -1,10 +1,6 @@
 ---
-id: maintain-bootnode
 title: Set up a Boot Node
-sidebar_label: Set up a Boot Node
-description: Steps on setting up a boot node.
-keywords: [bootnode, web socket, remote, connection, secure websocket]
-slug: ../maintain-bootnode
+description: Learn how to set up a boot node to help other nodes connect to the Polkadot network.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

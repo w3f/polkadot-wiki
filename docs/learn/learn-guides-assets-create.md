@@ -1,12 +1,6 @@
+title: Create Assets with Polkadot-JS
+description: Learn how to create fungible and non-fungible assets on the Asset Hub using Polkadot-JS UI.
 ---
-id: learn-guides-assets-create
-title: Polkadot-JS Guides about Creating Assets
-sidebar_label: Create Asset Guides
-description: Polkadot-JS Guides about Creating Assets.
-keywords: [asset hub, assets, statemine, statemint, polkadot-js]
-slug: ../learn-guides-assets-create
----
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

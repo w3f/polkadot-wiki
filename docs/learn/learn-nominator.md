@@ -1,10 +1,6 @@
 ---
-id: learn-nominator
 title: Nominator
-sidebar_label: Nominator
-description: Role of Nominators in the Polkadot Ecosystem.
-keyword: [nominate, nominator, stake, staking]
-slug: ../learn-nominator
+description: Understand the role of nominators in Polkadot's staking ecosystem, including rewards, risks, and best practices.
 ---
 
 !!!tip "New to Staking?"

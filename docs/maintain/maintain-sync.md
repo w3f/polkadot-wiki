@@ -1,10 +1,6 @@
 ---
-id: maintain-sync
 title: Set up a Full Node
-sidebar_label: Set up a Full Node
-description: Steps on how to set up a full node.
-keywords: [node, full node, sync, setup node]
-slug: ../maintain-sync
+description: A guide to setting up a full node for Polkadot or other Substrate-based chains, including installation and configuration.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

@@ -1,10 +1,6 @@
 ---
-id: kusama-timeline
 title: Kusama Timeline
-sidebar_label: Timeline
-description: Stay up-to-date with the latest action on Kusama.
-keywords: [timeline, roadmap, kusama]
-slug: ../../kusama-timeline
+description: Explore the history and key milestones of the Kusama network, from its launch to its evolution as Polkadot's canary network.
 ---
 
 Kusama network started as a Proof-of-Authority network and was transitioned to Proof-of-Stake on

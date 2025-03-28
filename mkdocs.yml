@@ -1,5 +1,5 @@
 # Project information
-site_name: ""
+site_name: "Polkadot Wiki"
 site_url: https://wiki.polkadot.network
 site_author: Web3 Foundation Technologies
 site_description: >-
@@ -26,6 +26,7 @@ theme:
     - navigation.path
     - navigation.instant
     - content.action.edit
+    - announce.dismiss
   palette: 
     scheme: default
     primary: white
@@ -63,7 +64,6 @@ extra_css:
 extra_javascript:
   - javascript/MessageBox.js
   - javascript/init_kapa_widget.js
-  - javascript/announcement-bar.js
   - javascript/simple-analytics.js
 
 # Extensions
@@ -299,8 +299,8 @@ nav:
                   - Hyperbridge: learn/learn-hyperbridge.md
                   - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
               - Host Implementations: learn/learn-implementations.md
-          - Account (Advanced): learn/learn-account-advanced.md
-          - Staking (Advanced): learn/learn-staking-advanced.md
+          - Accounts: learn/learn-account-advanced.md
+          - Staking: learn/learn-staking-advanced.md
           - NFT Pallets: learn/learn-nft-pallets.md
           - Cryptography: learn/learn-cryptography.md
           - Phragmen: learn/learn-phragmen.md

@@ -1,11 +1,6 @@
 ---
-id: learn-spree
 title: SPREE
-sidebar_label: SPREE
-description: Fundamentals of SPREE.
-keywords: [execution, SPREE, wasm, runtime]
-
-slug: ../learn-spree
+description: Learn about Shared Protected Runtime Execution Enclaves (SPREE) and their role in trustless message interpretation across Polkadot parachains.
 ---
 
 Shared Protected Runtime Execution Enclaves (SPREE) sometimes referred to as "trust wormholes," are

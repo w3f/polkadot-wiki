@@ -1,10 +1,6 @@
 ---
-id: decentralized-voices
 title: Decentralized Voices Program
-sidebar_label: Decentralized Voices
-description: Learn about the Decentralized Voices Program.
-keywords: [community, ecosystem, governance, decentralized voices, delegations]
-slug: ../decentralized-voices
+description: Explore the Decentralized Voices Program and its role in Polkadot OpenGov governance.
 ---
 
 The Decentralized Voices program empowers broader community participation in

@@ -1,10 +1,6 @@
 ---
-id: learn-xcm-instructions
 title: XCM Instructions & Register Specification
-sidebar_label: XCM Instructions
 description: Specification for Instructions and Registers for the XCM Format.
-keywords: [cross-consensus, XCM, XCMP, interoperability, communication]
-slug: ../learn-xcm-instructions
 ---
 
 !!!info "XCM Documentation"

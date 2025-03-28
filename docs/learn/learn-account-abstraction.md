@@ -1,10 +1,6 @@
 ---
-id: learn-account-abstraction
-title: Polkadot's Account Abstraction
-sidebar_label: Account Abstraction
-description: Polkadot's Native Account Abstraction.
-keywords: [account, polkadot account, account abstraction, proxy, multisig, batch]
-slug: ../learn-account-abstraction
+title: Polkadot Account Abstraction
+description: Learn about Polkadot's native account abstraction, its features, and how it enhances security and user experience in blockchain interactions.
 ---
 
 ## Your Keys, Your Responsibility

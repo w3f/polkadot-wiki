@@ -1,10 +1,6 @@
 ---
-id: web3-and-polkadot
 title: Web3 and Polkadot
-sidebar_label: Web3 and Polkadot
-description: Introduction to Web3 and Polkadot's Role in shaping the Web3 Vision.
-keywords: [web3, polkadot, light clients, decentralization]
-slug: ../web3-and-polkadot
+description: Learn how Polkadot contributes to Web3 by enabling decentralization, data ownership, trustless environments, and interoperability.
 ---
 
 Back in the early 2000's the internet featured read-only, static, basic web pages. The online

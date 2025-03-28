@@ -71,6 +71,14 @@ nav .md-header__ellipsis {
     justify-content: center;
 }
 
+.md-nav__item a[target="_blank"]::after {
+    content: url('./external_item.svg');
+}
+
+.md-header__title .md-ellipsis {
+   display: none;
+}
+
 /* Card container: Entire card is clickable */
 .card-container {
     height: 450px;
@@ -135,6 +143,10 @@ nav .md-header__ellipsis {
     margin-top: 5px;
     line-height: 1.4;
     /* Better spacing for multi-line descriptions */
+}
+
+.md-search-result__meta {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {

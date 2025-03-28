@@ -1,10 +1,6 @@
 ---
-id: build-guides-install-deps
-title: Install Polkadot SDK Dependencies
-sidebar_label: Install Dependencies
-description: Install dependencies for developing for using the Polkadot SDK
-keywords: [coretime, blockspace, parathread, parachain, cores]
-slug: ../build-guides-install-deps
+title: Install Dependencies
+description: Learn how to install dependencies for developing with the Polkadot SDK on various platforms.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

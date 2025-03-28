@@ -1,10 +1,6 @@
 ---
-id: maintain-archive
 title: Archived Maintain Resources
-sidebar_label: Archive
-description: Archive for the Maintain Section.
-keywords: [Democracy, Council, Gov1, Councillor]
-slug: ../maintain-archive
+description: Archived resources for the Maintain section, relevant for parachains and related projects.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

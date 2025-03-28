@@ -1,10 +1,6 @@
 ---
-id: maintain-polkadot-parameters
 title: Polkadot Parameters
-sidebar_label: Parameters
-description: A description about fundamental Polkadot parameters.
-keywords: [parameters, actions, attributes, behaviors]
-slug: ../maintain-polkadot-parameters
+description: Overview of key Polkadot parameters, including staking, governance, and treasury configurations.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

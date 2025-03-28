@@ -1,24 +1,6 @@
 ---
-id: learn-staking-advanced
 title: Advanced Staking Concepts
-sidebar_label: Advanced Staking Concepts
-description: Advanced Concepts about Staking on Polkadot.
-
-keywords:
-  [
-    staking,
-    stake,
-    nominate,
-    nominating,
-    NPoS,
-    proxies,
-    payouts,
-    simple payouts,
-    rewards,
-    staking miner,
-    phragmén,
-  ]
-slug: ../learn-staking-advanced
+description: Explore advanced staking concepts in Polkadot, including staking proxies, bags list, rewards distribution, and staking miner mechanics.
 ---
 
 !!!tip "New to Staking?"

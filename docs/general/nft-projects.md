@@ -1,10 +1,6 @@
 ---
-id: learn-nft-projects
-title: NFT projects on Polkadot and Kusama
-sidebar_label: NFT Projects
-description: NFT Projects in the Polkadot Ecosystem.
-keywords: [NFT, non-fungible token, NFT 2.0]
-slug: ../learn-nft-projects
+title: NFT Projects on Polkadot and Kusama
+description: Explore NFT projects in the Polkadot ecosystem, including Astar, Basilisk, KodaDot, Moonbeam, RMRK, and Unique Network.
 ---
 
 !!!info "Community Page"
@@ -16,18 +12,18 @@ slug: ../learn-nft-projects
 <!-- prettier-ignore -->
 <!-- no toc -->
 
-  - [List of NFT Projects](#list-of-nft-projects)
-  - [Astar](#astar)
-  - [Basilisk](#basilisk)
-  - [KodaDot](#kodadot)
-    1. [The Team Behind KodaDot](#the-team-behind-kodadot)
-    2. [Ecosystem Tools by KodaDot](#ecosystem-tools-by-kodadot)
-  - [Moonbeam](#moonbeam)
-  - [RMRK](#rmrk)
-    1. [NFT Legos](#nft-legos)
-    2. [NFT from Kanaria](#nft-from-kanaria)
-  - [Asset Hub](#asset-hub)
-  - [Unique Network](#unique-network)
+- [List of NFT Projects](#list-of-nft-projects)
+- [Astar](#astar)
+- [Basilisk](#basilisk)
+- [KodaDot](#kodadot)
+  - [The Team Behind KodaDot](#the-team-behind-kodadot)
+  - [Ecosystem Tools by KodaDot](#ecosystem-tools-by-kodadot)
+- [Moonbeam](#moonbeam)
+- [RMRK](#rmrk)
+  - [NFT Legos](#nft-legos)
+  - [NFT from Kanaria](#nft-from-kanaria)
+- [Asset Hub](#asset-hub)
+- [Unique Network](#unique-network)
 
 ## Astar
 

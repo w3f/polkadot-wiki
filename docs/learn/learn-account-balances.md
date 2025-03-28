@@ -1,10 +1,6 @@
 ---
-id: learn-account-balances
 title: Account Balances
-sidebar_label: Account Balances
-description: Polkadot and Kusama Network Account Balance Types.
-keywords: [Polkadot, Kusama, locks, balance, account]
-slug: ../learn-account-balances
+description: Discover the different types of account balances in Polkadot and Kusama, including free, frozen, and spendable balances.
 ---
 
 In the Polkadot ecosystem, there are different types of balances depending on the account activity.

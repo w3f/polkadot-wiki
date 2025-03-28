@@ -1,10 +1,6 @@
 ---
-id: maintain-guides-secure-validator
-title: Secure Validator
-sidebar_label: Secure Validator
-description: Tips for running a secure validator.
-keywords: [secure validator, validator, configuration]
-slug: ../maintain-guides-secure-validator
+title: Secure Validator Guide
+description: Tips for running a secure Polkadot validator, including key management, high availability, and monitoring best practices.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

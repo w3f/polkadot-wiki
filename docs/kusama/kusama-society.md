@@ -1,10 +1,6 @@
 ---
-id: kusama-society
 title: Kappa Sigma Mu
-sidebar_label: Kappa Sigma Mu
-description: Learn about the Kappa Sigma Mu society and join as a member.
-keywords: [kappa sigma mu, society, kusama, member]
-slug: ../../kusama-society
+description: Learn about the Kappa Sigma Mu society, its rules, and how to join as a member in the Kusama ecosystem.
 ---
 
 Kappa Sigma Mu is a membership club using the Substrate

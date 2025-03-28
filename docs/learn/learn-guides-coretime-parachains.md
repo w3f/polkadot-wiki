@@ -2,8 +2,7 @@
 id: learn-guides-coretime-parachains
 title: Agile Coretime for Parachains
 sidebar_label: Coretime for Parachains
-description: Agile Coretime from Parachains perspective
-keywords: [coretime, blockspace, parathread, parachain, cores]
+description: Explore Agile Coretime and its impact on parachains, including bulk and on-demand coretime models.
 slug: ../learn-guides-coretime-parachains
 ---
 

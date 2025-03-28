@@ -1,10 +1,6 @@
 ---
-id: build-open-source
 title: Open Source Stack
-sidebar_label: Open Source Stack
-description: Overview of the open source Polkadot/Kusama Tech Stack
-keywords: [open, source, development, code, resources, tools, apis]
-slug: ../build-open-source
+description: Explore the open-source tools, libraries, and frameworks in the Polkadot and Kusama tech stack for decentralized application development.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

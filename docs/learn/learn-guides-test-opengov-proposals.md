@@ -1,10 +1,6 @@
 ---
-id: learn-guides-test-opengov-proposals
-title: Test OpenGov Referenda before Submission
-sidebar_label: Test OpenGov Referenda
-description: Polkadot-JS Guides about testing Polkadot OpenGov referenda using Chopsticks
-keywords: [opengov, polkadot opengov, referenda, polkadot-js]
-slug: ../learn-guides-test-opengov-proposals
+title: Test OpenGov Referenda
+description: Learn how to test Polkadot OpenGov referenda using Chopsticks to ensure successful execution before submission.
 ---
 
 A Polkadot OpenGov referendum always contains a call that will be executed after the referendum is

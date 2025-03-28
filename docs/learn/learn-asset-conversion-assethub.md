@@ -1,10 +1,6 @@
 ---
-id: learn-asset-conversion-assethub
 title: Asset Conversion on AssetHub
-sidebar_label: Asset Conversion
-description: Asset Conversion implementation details on AssetHub.
-keywords: [Assets, DEX, Exchange, Pools, Tokens]
-slug: ../learn-asset-conversion-assethub
+description: Explore how AssetHub enables asset conversion, liquidity pools, and fee payments in any asset using automated market maker logic.
 ---
 
 Asset conversion is a simple AMM (Automated Market Maker) based on

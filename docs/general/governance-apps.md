@@ -1,6 +1,6 @@
 ---
 title: Polkadot Governance Apps
-description: Governance Apps in the Polkadot Ecosystem.
+description: Discover governance apps in the Polkadot ecosystem for proposals and voting.
 ---
 
 !!!info "Community Page"

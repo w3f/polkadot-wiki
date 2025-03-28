@@ -1,10 +1,6 @@
 ---
-id: learn-launch
 title: Polkadot Launch Phases
-sidebar_label: Polkadot Launch Phases
-description: Polkadot's Launch Process and its Individual Phases.
-keyword: [launch, phases, polkadot, DOT, claim, token sale, redenomination]
-slug: ../learn-launch
+description: Discover Polkadot's phased launch process, from PoA to full decentralization and parachain functionality.
 ---
 
 <!-- MessageBox -->

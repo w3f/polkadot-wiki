@@ -1,11 +1,6 @@
 ---
-id: build-guides-coretime-troubleshoot
 title: Coretime Troubleshooting FAQ
-sidebar_label: Troubleshooting FAQ
-description:
-  FAQ on issues related to using coretime and testing/deploying parachains using Polkadot SDK
-keywords: [coretime, blockspace, parathread, parachain, cores, coretime, agile]
-slug: ../build-guides-coretime-troubleshoot
+description: Frequently asked questions and solutions for troubleshooting coretime and parachain deployment issues.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

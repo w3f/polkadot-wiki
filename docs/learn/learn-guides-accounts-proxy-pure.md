@@ -1,10 +1,6 @@
 ---
-id: learn-guides-accounts-proxy-pure
-title: Polkadot-JS Guides about Pure Proxy Accounts
-sidebar_label: Pure Proxy Guides
-description: Polkadot-JS Guides about Pure Proxy Accounts
-keyword: [guides, polkadot-js, accounts, proxy, pure proxy, anonymous proxy]
-slug: ../learn-guides-accounts-proxy-pure
+title: Pure Proxy Account Guides
+description: Detailed guides on creating and managing pure proxy accounts for advanced account setups on Polkadot-JS.
 ---
 
 <!-- MessageBox -->

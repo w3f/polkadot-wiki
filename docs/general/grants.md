@@ -1,10 +1,6 @@
 ---
-id: grants
 title: Grants Program
-sidebar_label: Grants
-description: The Grant Programs in the Polkadot Ecosystem.
-keywords: [grants program, grants, funding]
-slug: ../grants
+description: Explore grant programs supporting development in the Polkadot ecosystem.
 ---
 
 !!!info "Decentralized Futures Program"

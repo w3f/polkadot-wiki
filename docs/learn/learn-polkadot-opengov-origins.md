@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-opengov-origins
 title: Polkadot OpenGov Origins
-sidebar_label: OpenGov Origins
-description: All Origins for Polkadot's OpenGov.
-keywords: [proposal, referenda, OpenGov, origins]
-slug: ../learn-polkadot-opengov-origins
+description: Explore the origins and tracks in Polkadot OpenGov, their parameters, and how they shape the governance process.
 ---
 
 !!!info "Learn more about Polkadot OpenGov"

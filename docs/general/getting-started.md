@@ -1,9 +1,6 @@
 ---
 title: Getting Started
-sidebar_label: Getting Started
-description: Get started with Polkadot and Web3.
-keywords: [introduction, getting started, what is polkadot, why polkadot]
-slug: ../getting-started
+description: Learn how to get started with Polkadot and Web3 technologies.
 template: explore-cards.html
 ---
 

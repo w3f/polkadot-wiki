@@ -1,10 +1,6 @@
 ---
-id: learn-proxies
 title: Proxy Accounts
-sidebar_label: Proxy Accounts
-description: Proxy Accounts on Polkadot.
-keywords: [proxy, proxies, proxy accounts, proxy types, staking proxy]
-slug: ../learn-proxies
+description: Explore proxy accounts in Polkadot, their types, security benefits, and how they simplify account management and staking operations.
 ---
 
 Proxies are helpful because they let you delegate efficiently and add a layer of security. Rather

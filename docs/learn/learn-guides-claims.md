@@ -1,12 +1,7 @@
 ---
-id: learn-guides-claims
-title: Polkadot-JS Guides about Claims
-sidebar_label: Claim Guides
-description: Step-by-step guide on how to claim your tokens.
-keywords: [claims, tokens, kusama, polkadot]
-slug: ../learn-guides-claims
+title: Token Claims Guide
+description: Step-by-step guide to claiming your DOT and KSM tokens using Polkadot-JS UI.
 ---
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

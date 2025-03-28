@@ -1,9 +1,6 @@
 ---
-id: start-building
 title: Build on Polkadot
-sidebar_label: Build on Polkadot
-description: Start Building with the Polkadot SDK.
-slug: ../start-building
+description: Start building on Polkadot with the SDK, runtime, and tools for creating interoperable and scalable blockchain applications.
 ---
 
 ## Polkadot SDK

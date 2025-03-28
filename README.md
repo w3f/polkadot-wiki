@@ -65,26 +65,26 @@ https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-
 - Make sure `python` (Python 3.12) and `pip` are installed and in your path
 - It's recommended to use a virtual environment, as is common practice
   
-1. Enter a virtual environment:
-```sh
-# Create the env
-python -m venv venv
-# Enter the env
-source venv/bin/activate
-```
+ 1. Enter a virtual environment:
+    ```sh
+    # Create the env
+    python -m venv venv
+    # Enter the env
+    source venv/bin/activate
+    ```
 
-1. Install dependencies (make sure you're in the project's directory)
-```sh
-pip install -r requirements.txt
-```
+2. Install dependencies (make sure you're in the project's directory)
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-1. Once installed, run the serve command:
-```sh
-# If you're in a virtual env (set to false if you're not editing RPC commands, otherwise it will take time to load)
-ENABLE_RPC=false mkdocs serve
-# If you're not in a virtual env
-python -m mkdocs build
-```
+3. Once installed, run the serve command:
+    ```sh
+    # If you're in a virtual env (set to false if you're not editing RPC commands, otherwise it will take time to load)
+    ENABLE_RPC=false mkdocs serve
+    # If you're not in a virtual env
+    python -m mkdocs build
+    ```
 
 ### Build
 

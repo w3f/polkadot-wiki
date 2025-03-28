@@ -1,10 +1,6 @@
 ---
-id: learn-identity
 title: Account Identity
-sidebar_label: Account Identity
-description: On-chain Identity, Judgements and Registrars.
-keywords: [identity, registrars, judgements]
-slug: ../learn-identity
+description: Learn about on-chain identity, judgements, registrars, and how to manage your identity on Polkadot.
 ---
 
 !!!info "Setting your identity on Polkassembly"

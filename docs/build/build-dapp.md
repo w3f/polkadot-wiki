@@ -1,10 +1,6 @@
 ---
-id: build-dapp
 title: Building dApps
-sidebar_label: Building dApps
-description: An overview about building dApps on Polkadot
-keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, client]
-slug: ../build-dapp
+description: Learn how to build decentralized applications (dApps) on Polkadot using various SDKs and frameworks.
 ---
 
 !!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"

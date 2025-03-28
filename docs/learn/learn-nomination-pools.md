@@ -1,10 +1,6 @@
 ---
-id: learn-nomination-pools
 title: Nomination Pools
-sidebar_label: Nomination Pools
-description: Staking through Polkadot's Nomination Pools.
-keyword: [nominate, nominator, stake, staking, pools]
-slug: ../learn-nomination-pools
+description: Learn about staking through Polkadot's nomination pools, enabling users to pool tokens and earn rewards with minimal requirements.
 ---
 
 <!-- MessageBox -->

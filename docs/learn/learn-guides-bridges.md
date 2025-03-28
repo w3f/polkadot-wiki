@@ -1,8 +1,8 @@
 ---
 id: learn-guides-bridges
-title: Polkadot-JS Guides about Bridge Hub
+title: Bridge Hub Guides
 sidebar_label: Bridge Hub Guides
-description: Polkadot-JS Guides about the Bridge Hub.
+description: Learn how to use the Bridge Hub for secure cross-chain asset transfers.
 keywords: [Bridge, XCM, Bridge Hub, polkadot-js]
 slug: ../learn-guides-bridges
 ---

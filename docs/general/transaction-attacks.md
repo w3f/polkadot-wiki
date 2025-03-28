@@ -1,10 +1,6 @@
 ---
-id: transaction-attacks
 title: Why Verify Transactions?
-sidebar_label: Transaction Verification
-description: How to Prevent from being a Victim of an Attack
-keywords: [transaction, extrinsic, verification, protection]
-slug: ../transaction-attacks
+description: Understand transaction verification to prevent attacks like clipboard memory swaps, malicious dApps, and replay attacks in the Polkadot ecosystem.
 ---
 
 In general, an attacker would make you think you are signing a Transaction A when in reality you are
