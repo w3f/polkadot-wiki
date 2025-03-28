@@ -1,7 +1,6 @@
 ---
 title: Asset Hub Overview
 description: Learn about fungible tokens, NFTs, and asset management on Polkadot's Asset Hub.
-template: learn
 ---
 
 Assets in the Polkadot ecosystem can be represented on several chains. They can take many forms,

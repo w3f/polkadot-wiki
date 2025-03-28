@@ -1,7 +1,6 @@
 ---
 title: Account Balances
 description: Discover the different types of account balances in Polkadot and Kusama, including free, frozen, and spendable balances.
-template: learn
 ---
 
 In the Polkadot ecosystem, there are different types of balances depending on the account activity.

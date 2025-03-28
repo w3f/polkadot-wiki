@@ -1,7 +1,6 @@
 ---
 title: Account Identity
 description: Learn about on-chain identity, judgements, registrars, and how to manage your identity on Polkadot.
-template: learn
 ---
 
 !!!info "Setting your identity on Polkassembly"

@@ -1,7 +1,6 @@
 ---
 title: Polkadot Account Abstraction
 description: Learn about Polkadot's native account abstraction, its features, and how it enhances security and user experience in blockchain interactions.
-template: learn
 ---
 
 ## Your Keys, Your Responsibility

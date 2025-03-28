@@ -1,7 +1,6 @@
 ---
 title: Advanced Polkadot Accounts
 description: Dive deeper into advanced concepts like address formats, derivation paths, and system accounts in Polkadot.
-template: learn
 ---
 
 ## Address Format

@@ -1,7 +1,6 @@
 ---
 title: Pipelining in Polkadot
 description: Understand how asynchronous backing improves scalability and throughput in Polkadot's parachain protocol.
-template: learn
 ---
 
 <!-- MessageBox -->

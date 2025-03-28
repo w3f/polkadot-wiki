@@ -1,7 +1,7 @@
 ---
 title: Polkadot Accounts
 description: Learn about Polkadot accounts, their structure, identity, and how to manage them effectively.
-template: learn
+
 ---
 
 !!!info "User friendly wallets"

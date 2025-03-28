@@ -1,7 +1,6 @@
 ---
 title: Multi-Signature Accounts
 description: Learn how to create and manage multi-signature accounts on Polkadot for enhanced security and group decision-making.
-template: learn
 ---
 
 !!!info "Multisig Apps"
