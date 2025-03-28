@@ -40,6 +40,9 @@ theme:
 plugins:
   - search
   - open-in-new-tab
+  - social:
+      cards_layout_options:
+        logo: assets/wiki-logo.svg
   - macros:
       module_name: macros/rpc
 
