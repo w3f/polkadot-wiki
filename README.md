@@ -74,11 +74,6 @@ propose a change to the Wiki content.
 ENABLE_RPC=false mkdocs build
 ```
 
-## Style and Configuration Guide
-
-Use the style guide from the
-[Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style)
-
 ### Formatting
 
 See the [Conditional Rendering](#conditional-rendering) and
@@ -89,12 +84,12 @@ properly format syntax for elements outside of the standard markdown library.
 
 #### Deployments
 
-The Polkadot Wiki is built in a CI job, where it is then deployed on Netlify. Each commit to master triggers a new build and subsequent deployment.
+The Polkadot Wiki is built in a CI job, where it is then deployed on Netlify. Each commit to master triggers a new build and production deployment.
 
-Pull request previews are enabled, meaning a temporary deployment via Netlify is generated per PR.
+Pull request previews are enabled, meaning a temporary deployment via Netlify is generated for each PR.
 
-After these jobs are completed, the CICD production workflow will automatically deploy
-`prod` to the public site: [Polkadot Wiki](https://wiki.polkadot.network).
+After these jobs are successfully completed, the CICD production workflow will automatically deploy
+`prod` to the public site when the PR is merged to master: [Polkadot Wiki](https://wiki.polkadot.network).
 
 #### GitHub Actions
 
