@@ -31,17 +31,17 @@ def blocks_to_days(blocks):
 def get_network_url(network):
     match network:
         case "polkadot":
-            return "wss://rpc-polkadot.luckyfriday.io"
+            return "wss://rpc.polkadot.io"
         case "kusama":
-            return "wss://rpc-kusama.luckyfriday.io"
+            return "wss://kusama-rpc.publicnode.com"
         case "polkadot-assethub":
-            return "wss://rpc-asset-hub-polkadot.luckyfriday.io"
+            return "wss://polkadot-asset-hub-rpc.polkadot.io"
         case "kusama-assethub":
-            return "wss://rpc-asset-hub-kusama.luckyfriday.io"
+            return "wss://kusama-asset-hub-rpc.polkadot.io"
         case "polkadot-people":
-            return "wss://rpc-people-polkadot.luckyfriday.io"
+            return "wss://polkadot-people-rpc.polkadot.io"
         case "kusama-people":
-            return "wss://rpc-people-kusama.luckyfriday.io"
+            return "wss://kusama-people-rpc.polkadot.io"
         
 def human_readable(decimals_amount, number, rounded=True):
     balance_str = str(number)
