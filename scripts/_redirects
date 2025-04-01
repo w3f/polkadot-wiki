@@ -137,6 +137,8 @@
 /docs/learn/xcm/introduction    /learn/learn-xcm    301
 /docs/learn/xcm/overview    /learn/learn-xcm    301
 /docs/learn/xcm/*    /learn/learn-xcm    301
+/docs/learn-safrole    /learn/learn-safrole    301
+/docs/learn-jam    /learn/learn-jam-chain    301
 /docs/learn-*    /general/web3-and-polkadot    301
 /docs/build-*    /build/build-guide    301
 /docs/*    /general/getting-started    301
