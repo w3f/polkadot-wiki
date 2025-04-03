@@ -3,8 +3,6 @@ title: Open Source Stack
 description: Explore the open-source tools, libraries, and frameworks in the Polkadot and Kusama tech stack for decentralized application development.
 ---
 
-!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
-
 
 # Open Source Polkadot Stack <!-- omit in toc -->
 
@@ -244,7 +242,7 @@ Pull requests, issues, or other contributions from the community are encouraged!
 add specific projects, but also potentially interesting fields/areas which are currently missing in
 the tech stack.
 
-:heavy_exclamation_mark: All technologies listed above need to be open-source. Ideally, the links
+All technologies listed above need to be open-source. Ideally, the links
 lead directly to the code.
 
 _Note: You will need a GitHub account to suggest changes or open issues. If you do not have one, you
