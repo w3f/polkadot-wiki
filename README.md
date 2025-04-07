@@ -48,18 +48,6 @@ these corrections directly. Larger contributions may start as issues to test the
 subject with the maintainers. It is generally preferable to create a pull request over an issue to
 propose a change to the Wiki content.
 
-:sparkles: **_The Wiki belongs to the community, help generate its identity._** :sparkles:
-
-https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-9746-109191db5271.mp4
-
-> :inbox_tray: There will be an upcoming initiative that will promote and encourage contributions
-> towards Polkadot-based content and documentation. In the meantime, feel free to share any ideas or
-> feedback you may have for the Wiki by opening a
-> [Feature Request issue](https://github.com/w3f/polkadot-wiki/issues/new/choose).
-
-**Keep engaged by checking out these common
-[Polkadot ecosystem resources](https://hackmd.io/IMgniwlyT_GIqjI8Wui35A)**.
-
 ## Running Locally
 
 - Make sure `python` (Python 3.12+), `pip` and `mkdocs` are installed and configured in your path
@@ -86,11 +74,6 @@ https://user-images.githubusercontent.com/25497083/146822391-5c52a64a-dc2e-4583-
 ENABLE_RPC=false mkdocs build
 ```
 
-## Style and Configuration Guide
-
-Use the style guide from the
-[Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style).
-
 ### Formatting
 
 See the [Conditional Rendering](#conditional-rendering) and
@@ -101,12 +84,12 @@ properly format syntax for elements outside of the standard markdown library.
 
 #### Deployments
 
-The Polkadot Wiki is built in a CI job, where it is then deployed on Netlify. Each commit to master triggers a new build and subsequent deployment.
+The Polkadot Wiki is built in a CI job, where it is then deployed on Netlify. Each commit to master triggers a new build and production deployment.
 
-Pull request previews are enabled, meaning a temporary deployment via Netlify is generated per PR.
+Pull request previews are enabled, meaning a temporary deployment via Netlify is generated for each PR.
 
-After these jobs are completed, the CICD production workflow will automatically deploy
-`prod` to the public site: [Polkadot Wiki](https://wiki.polkadot.network).
+After these jobs are successfully completed, the CICD production workflow will automatically deploy
+`prod` to the public site when the PR is merged to master: [Polkadot Wiki](https://wiki.polkadot.network).
 
 #### GitHub Actions
 
