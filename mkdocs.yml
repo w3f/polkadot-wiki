@@ -40,9 +40,6 @@ theme:
 plugins:
   - search
   - open-in-new-tab
-  - social:
-      cards_layout_options:
-        logo: assets/wiki-logo.svg
   - macros:
       module_name: macros/rpc
 
@@ -440,6 +437,6 @@ nav:
       - Society Guide: maintain/kusama/maintain-guides-society-kusama.md
       - How to Validate Kusama: maintain/kusama/maintain-guides-how-to-validate-kusama.md
       - Kusama Inflation: kusama/kusama-inflation.md
-      - Kusama Society: kusama/kusama-society.md
+      - Kusama Society: https://ksmsociety.io/
 
 
