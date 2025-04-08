@@ -96,7 +96,7 @@ would work as well.
 
 ![coretime-register-parathread](../assets/coretime/Register-Parachain.png)
 
-After successful registration, the parachain starts onboarding as a parathread.
+After successful registration, the parachain starts onboarding as a parathread. **Note that the parachain id must be the same as the one used in the previous steps**.
 
 ## Run Parachain Collator
 
