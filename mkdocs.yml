@@ -336,7 +336,6 @@ nav:
                   - Claims: learn/learn-guides-claims.md
       - Comparisons:
           - learn/comparisons/index.md
-          - Comparions: learn/learn-comparisons.md
           - Kusama: learn/learn-comparisons-kusama.md
           - Ethereum: learn/learn-comparison-ethereum.md
           - Cosmos: learn/learn-comparisons-cosmos.md
