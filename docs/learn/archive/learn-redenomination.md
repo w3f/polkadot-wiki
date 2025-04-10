@@ -70,7 +70,7 @@ The initial referendum was proposed before the Polkadot genesis block, assuming 
 redenomination would be simpler before the Polkadot chain was live. However, many in the community
 pointed out the disconnect between the two networks and how it was unfair for holders of DOT to be
 impacted by a vote by a different token holder set. For this reason, Web3 Foundation
-[decided to make a new vote on Polkadot](https://polkadot.network/results-of-dot-redenomination-referendum/)
+[decided to make a new vote on Polkadot](https://polkadot.com/blog/results-of-dot-redenomination-referendum/)
 when it went live, although the Kusama vote ended with a majority in favor of the redenomination
 change.
 
@@ -88,7 +88,7 @@ be executed if voted through. In comparison, the vote on Kusama was non-binding 
 without a direct way to affect the Polkadot chain.
 
 Based on the feedback received during the Kusama referendum, the
-[Polkadot vote](https://polkadot.network/the-first-polkadot-vote/) was held as an approval vote,
+[Polkadot vote](https://medium.com/polkadot-network/the-first-polkadot-vote-1fc1b8bd357b) was held as an approval vote,
 with four available options. DOT holders could issue votes for any configuration of the four
 options: no change, a change of 10x, a change of 100x, or a change of 1000x. The voting logic was
 contained in a specially-built Substrate pallet included in Polkadot's runtime for this poll.
@@ -108,7 +108,7 @@ community for a final, binding decision.
 
 ![redenomination](../../assets/redenomination.png)
 
-After two weeks of voting, the [results](https://polkadot.network/the-results-are-in/) of the
+After two weeks of voting, the [results](https://polkadot.com/blog/the-results-are-in/) of the
 redenomination vote were tallied. About one-third of the total DOT in the network participated in
 the vote. The redenomination proposal passed with 86% of the voters favoring a 100x factor increase
 (or two decimal places of precision loss).

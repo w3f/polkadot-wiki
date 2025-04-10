@@ -201,7 +201,7 @@ specific amount of the payout from the payout address, by calling `Claim_bounty`
 closed the allocation.
 
 To understand more about Bounties and how this new mechanism works, read this
-[Polkadot Blog post](https://polkadot.network/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/).
+[Polkadot Blog post](https://polkadot.com/blog/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/).
 
 ## FAQ
 

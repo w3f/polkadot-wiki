@@ -71,5 +71,5 @@ blocks on the network.
 
 Check out these resources for further information:
 
-- [Polkadot Network blog](https://polkadot.network/blog/parachains-are-live-polkadot-launch-is-now-complete/).
+- [Polkadot Network blog](https://polkadot.com/blog/parachains-are-live-polkadot-launch-is-now-complete/).
 - [Polkadot A to Z: L for Polkadot Launch](https://www.reddit.com/r/Polkadot/comments/s3yb3d/l_for_polkadot_launch_polkadot_a_to_z/).
