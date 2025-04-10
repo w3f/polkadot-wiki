@@ -81,7 +81,7 @@ they don't submit the same data as everyone else.
 
 === "Chainlink"
     Solutions such as
-    <a href="https://polkadot.network/chainlink-reaches-milestone-with-polkadot/" target="_blank" rel="noopener noreferrer">Chainlink</a>
+    <a href="https://polkadot.com/blog/chainlink-reaches-milestone-with-polkadot/" target="_blank" rel="noopener noreferrer">Chainlink</a>
     fit somewhere in the middle, where the amount of trust you put into the reporting oracles can be
     adjusted based on your preferences. A Chainlink
     <a href="https://github.com/smartcontractkit/chainlink-polkadot/blob/master/pallet-chainlink-feed/README.md" target="_blank" rel="noopener noreferrer">Feed

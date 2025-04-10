@@ -11,7 +11,7 @@ Substrate implementation, you want the ability to run a node-as-a-back-end. Afte
 your infrastructure is always better than a third-party-hosted one in this brave new decentralized
 world.
 
-This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
+This guide will show you how to connect to [Polkadot](https://polkadot.network/), but the
 same process applies to any other [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate)-based chain. First, let's
 clarify the term _full node_.
 

@@ -375,7 +375,7 @@ prime.
 ## Technical Committee
 
 The Technical Committee(TC) was introduced in the
-[Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
+[Kusama rollout and governance post](https://polkadot.com/blog/kusama-rollout-and-governance/) as one
 of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 TC is composed of the teams that have successfully implemented or specified either a Polkadot
 runtime or Polkadot Host. Teams are added or removed from the TC via a simple majority vote of the

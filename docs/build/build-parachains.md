@@ -346,7 +346,7 @@ benefiting from Polkadot's security. See
 
 - [Getting started with the Polkadot SDK for parachain development](../build/build-guides-coretime-start.md)
 - [Polkadot Bridges](../learn/learn-bridges.md)
-- [The Path of a Parachain Block](https://polkadot.network/blog/the-path-of-a-parachain-block/)
+- [The Path of a Parachain Block](https://polkadot.com/blog/the-path-of-a-parachain-block/)
 - [The Path of a Parachain Block (Parachain Protocol page)](../learn/learn-parachains-protocol.md)
 - [How to become a parachain on Polkadot (Video)](https://www.youtube.com/watch?v=fYc1yolanoE)
 - [Trusted Execution Environments and the Polkadot Ecosystem](https://polkadot.network/blog/trusted-execution-environments-and-the-polkadot-ecosystem/)
