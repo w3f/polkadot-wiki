@@ -20,7 +20,7 @@ randomly generated (non-deterministic). Also, in some sense, nobody owns a pure 
 
 ## Why Pure Proxy?
 
-In the Polkadot ecosystem, pure proxies are useful to efficiently manage multi-signature accounts. In fact, multi-signature accounts are deterministic, which means that once a multisig is created the signatories cannot be changed. If one of the signatories wants to leave the multisig, a new multisig must be created. _Pure_ proxies allow keeping the same multisig address when the multisig configuration changes (signatories and threshold).
+In the Polkadot ecosystem, pure proxies are useful to efficiently manage multi-signature accounts. In fact, multi-signature accounts are deterministic, which means that once a multisig is created the signatories cannot be changed. If one of the signatories wants to leave the multisig, a new multisig must be created. _Pure_ proxies allow keeping the same multisig address when the multisig configuration changes (signatories and threshold). See more examples about using pure proxies with multisigs [here](./learn-guides-accounts-proxy-pure.md#pure-proxies-and-multisigs).
 
 ## Use of Pure Proxy
 

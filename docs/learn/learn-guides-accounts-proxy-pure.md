@@ -24,7 +24,7 @@ description: Detailed guides on creating and managing pure proxy accounts for ad
 
 ## Create and Remove Pure Proxies with Polkadot-JS
 
-To learn how to create and remove a **pure proxy** with the Polkadot-JS UI see
+To learn how to create and remove a pure proxy with the Polkadot-JS UI see
 [this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
 
 ## Advanced Account Management with Pure Proxies
