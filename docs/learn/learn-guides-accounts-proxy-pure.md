@@ -29,7 +29,7 @@ To create a **pure proxy** see
 watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 !!!caution "Removing Pure Proxies"
-    The procedure for removing a _pure_ proxy is different from the one used to remove other proxies. Visit the section "Removing an Anonymous Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
+    The procedure for removing a _pure_ proxy is different from the one used to remove other proxies. Visit the section "Removing a Pure Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
 
 Learn more about pure proxies from our
 [technical explainer video](https://www.youtube.com/watch?v=YkYApbhU3i0).
@@ -53,7 +53,7 @@ Then Eleanor adds Dan as a staking proxy (1 signature). The whole process requir
 Here we are presenting a simple example, in fact, with multi-signature accounts and multiple proxies
 the procedure would be more time-consuming and labor-intensive.
 
-![why anonymous proxies](../assets/why-anon-proxy.png)
+![why pure proxies](../assets/why-anon-proxy.png)
 
 **With _Pure_ Proxy** (see _right_ side of the Figure above), Charlie must add Eleanor as _any_
 proxy of the _pure_ proxy, and remove himself (or Eleanor can remove him). The process requires just

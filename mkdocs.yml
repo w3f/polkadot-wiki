@@ -233,7 +233,7 @@ nav:
               - Identity: learn/learn-identity.md
               - Account Multisig: learn/learn-account-multisig.md
               - Proxies: learn/learn-proxies.md
-              - Proxies Pure: learn/learn-proxies-pure.md
+              - Pure Proxies: learn/learn-proxies-pure.md
           - Transactions: learn/learn-transactions.md
           - Staking:
               - learn/staking/index.md
