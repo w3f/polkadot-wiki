@@ -24,15 +24,8 @@ description: Detailed guides on creating and managing pure proxy accounts for ad
 
 ## Create and Remove Pure Proxies with Polkadot-JS
 
-To create a **pure proxy** see
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or
-watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
-
-!!!caution "Removing Pure Proxies"
-    The procedure for removing a _pure_ proxy is different from the one used to remove other proxies. Visit the section "Removing a Pure Proxy" on [this support article](https://support.polkadot.network/support/solutions/articles/65000182196), or watch [this technical explainer video](https://www.youtube.com/watch?v=T443RcCYP24).
-
-Learn more about pure proxies from our
-[technical explainer video](https://www.youtube.com/watch?v=YkYApbhU3i0).
+To learn how to create and remove a **pure proxy** with the Polkadot-JS UI see
+[this support article](https://support.polkadot.network/support/solutions/articles/65000182196).
 
 ## Advanced Account Management with Pure Proxies
 
