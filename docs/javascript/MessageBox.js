@@ -1,10 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+document$.subscribe(() => {
   const messageBox = document.getElementById("messageBox");
   const closeButton = document.querySelector(".close-messagebox");
 
   if (messageBox && closeButton) {
-    closeButton.addEventListener("click", (event) => {
-      event.stopPropagation();
+    closeButton.addEventListener("click", () => {
       messageBox.classList.add("hidden");
     });
   }
