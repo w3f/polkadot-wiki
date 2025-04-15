@@ -114,8 +114,8 @@
 /docs/learn-staking-advanced    /learn/learn-staking-advanced    301
 /docs/learn-nft-pallets    /learn/learn-nft-pallets    301
 /docs/learn-cryptography    /learn/learn-cryptography    301
-/docs/learn-polkadotjs    /general/polkadotjs    301
-/docs/learn-runtime-upgrades    /learn/learn-runtime-upgrades    301
+/docs/learn-polkadotjs    https://docs.polkadot.com/develop/toolkit/api-libraries/polkadot-js-api/    301
+/docs/learn-runtime-upgrades    https://docs.polkadot.com/develop/parachains/maintenance/runtime-upgrades/    301
 /docs/learn-polkadot-opengov-treasury    /learn/learn-polkadot-opengov-treasury    301
 /docs/learn-DOT    /learn/learn-DOT    301
 /docs/learn-account-abstraction    /learn/learn-account-abstraction    301

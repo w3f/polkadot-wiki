@@ -3,6 +3,8 @@ title: System Chains
 description: System parachains on Polkadot offload core functionalities like governance, assets, and bridging from the relay chain for better performance.
 ---
 
+!!! info "Information about Polkadot's system chains is also available on the [Polkadot Developer Documentation](https://docs.polkadot.com/polkadot-protocol/architecture/system-chains/)"
+
 The primary functionality of the relay chain is to secure the parachains and facilitate secure
 communication between them. All other functionalities like asset transfers, governance, identities
 and bridging (a potentially resource intensive task) can benefit from operating separately on system
