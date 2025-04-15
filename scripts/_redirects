@@ -76,9 +76,9 @@
 /docs/kusama-bug-bounty    /kusama/kusama-bug-bounty    301
 /docs/kusama-social-recovery    /kusama/kusama-social-recovery    301
 /docs/kusama-adversarial-cheatsheet    /kusama/kusama-adverserial-cheatsheet    301
-/docs/maintain-guides-society-kusama    /maintain/kusama/maintain-guides-society-kusama    301
+/docs/maintain-guides-society-kusama    https://ksmsociety.io   301
 /docs/learn-kusama-inflation    /kusama/kusama-inflation    301
-/docs/maintain-guides-how-to-validate-kusama    /maintain/kusama/maintain-guides-how-to-validate-kusama    301
+/docs/maintain-guides-how-to-validate-kusama   https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator    301
 
 # Learn Section
 
@@ -179,30 +179,30 @@
 
 # Maintain Section
 
-/docs/maintain-polkadot-parameters    /maintain/maintain-polkadot-parameters    301
-/docs/maintain-node-index    /maintain/node    301
+/docs/maintain-polkadot-parameters    https://docs.polkadot.com/infrastructure/    301
+/docs/maintain-node-index    https://docs.polkadot.com/infrastructure   301
 /docs/maintain-collator-index    /maintain/collator   301
-/docs/maintain-validator-index    /maintain/validator   301
+/docs/maintain-validator-index   https://docs.polkadot.com/infrastructure/running-a-validator   301
 /docs/maintain-archive    /maintain/maintain-archive    301
 /docs/maintain/maintain-guides-how-to-vote-councillor    /maintain/archive/maintain-guides-how-to-vote-councillor    301
 /docs/maintain/maintain-guides-democracy    /maintain/archive/maintain-guides-democracy    301
-/docs/maintain-guides-how-to-validate-polkadot    /maintain/maintain-guides-how-to-validate-polkadot     301
-/docs/maintain-guides-secure-validator    /maintain/maintain-guides-secure-validator    301
+/docs/maintain-guides-how-to-validate-polkadot    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator     301
+/docs/maintain-guides-secure-validator    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management    301
 /docs/maintain-endpoints    /maintain/maintain-endpoints    301
-/docs/maintain-sync    /maintain/maintain-sync    301
+/docs/maintain-sync    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node   301
 /docs/maintain-bootnode    /maintain/maintain-bootnode    301
-/docs/maintain-rpc    /maintain/maintain-rpc    301
-/docs/maintain-wss    /maintain/maintain-wss    301
-/docs/maintain-networks    /maintain/maintain-networks    301
+/docs/maintain-rpc    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node    301
+/docs/maintain-wss    https://docs.polkadot.com/infrastructure/running-a-node/setup-secure-wss    301
+/docs/maintain-networks    https://docs.polkadot.com/develop/networks    301
 /docs/maintain-errors    /maintain/maintain-errors    301
 /docs/maintain-guides-async-backing    /maintain/collator/maintain-guides-async-backing    301
-/docs/maintain-guides-validator-payout    /maintain/validator/maintain-guides-validator-payout    301
-/docs/maintain-guides-how-to-systemd    /maintain/validator/maintain-guides-how-to-systemd    301
-/docs/maintain-guides-how-to-upgrade    /maintain/validator/maintain-guides-how-to-upgrade    301
+/docs/maintain-guides-validator-payout     https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout   301
+/docs/maintain-guides-how-to-systemd    https://docs.polkadot.com/infrastructure/running-a-validator   301
+/docs/maintain-guides-how-to-upgrade    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node    301
 /docs/maintain-guides-how-to-monitor-your-node    /maintain/validator/maintain-guides-how-to-monitor-your-node    301
 /docs/maintain-guides-how-to-chill    /maintain/validator/maintain-guides-how-to-chill    301
-/docs/maintain-guides-how-to-stop-validating    /maintain/validator/maintain-guides-how-to-stop-validating    301
-/docs/maintain-guides-validator-community    /maintain/validator/maintain-guides-validator-community    301
+/docs/maintain-guides-how-to-stop-validating    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/stop-validating    301
+/docs/maintain-guides-validator-community     https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management   301
 /docs/maintain/maintain-guides-how-to-join-council    /maintain/archive/maintain-guides-how-to-join-council    301
 
 # XCM docs
