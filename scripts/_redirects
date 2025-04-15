@@ -176,6 +176,7 @@
 /docs/build-guides-template-basic    /build/build-guides-template-basic    301
 /docs/build-guides-coretime-troubleshoot    /build/build-guides-coretime-troubleshoot    301
 /docs/learn-guides-coretime-swap    /learn/learn-guides-coretime-swap    301
+/docs/build-oracle   https://docs.polkadot.com/develop/toolkit/integrations/oracles/    301
 
 # Maintain Section
 
