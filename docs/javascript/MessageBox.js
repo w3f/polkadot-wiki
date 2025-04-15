@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageBox = document.getElementById("messageBox");
   const closeButton = document.querySelector(".close-messagebox");
 
-  if (closeButton !== null && messageBox !== null) {
-    closeButton.addEventListener("click", () => {
+  if (messageBox && closeButton) {
+    closeButton.addEventListener("click", (event) => {
+      event.stopPropagation();
       messageBox.classList.add("hidden");
     });
   }
