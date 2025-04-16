@@ -271,15 +271,15 @@ nav:
       - Advanced:
           - learn/advanced/index.md
           - Architecture:
-              - Architecture: learn/learn-architecture.md
+              - learn/learn-architecture.md
               - Consensus: learn/learn-consensus.md
               - Parachains Protocol: learn/learn-parachains-protocol.md
-              - Async Backing: learn/learn-async-backing.md
+              - Pipelining: learn/learn-async-backing.md
               - Scheduling:
-                  - Agile Coretime: learn/learn-agile-coretime.md
+                  - learn/learn-agile-coretime.md
                   - Coretime Marketplaces: learn/learn-guides-coretime-marketplaces.md
                   - Coretime Parachains: learn/learn-guides-coretime-parachains.md
-              - Elastic Scaling: learn/learn-elastic-scaling.md
+              - Parallel Computing: learn/learn-elastic-scaling.md
               - Parachains:
                   - learn/parachains/index.md
                   - Parachains: learn/learn-parachains.md
