@@ -1,12 +1,16 @@
 """
-Polkadot Wiki Macro functionality
+Polkadot Wiki Macro functionality with connection pooling
 """
 
 import substrateinterface
 import os
+from functools import lru_cache
+
+# Global connection cache to reuse connections by network
+_connection_cache = {}
 
 def enable_rpc():
-    return os.environ["ENABLE_RPC"] == "true"
+    return os.environ.get("ENABLE_RPC", "false") == "true"
 
 def format(value, filter):
     match filter:
@@ -45,33 +49,101 @@ def get_network_url(network):
         
 def human_readable(decimals_amount, number, rounded=True):
     balance_str = str(number)
+    
+    # Determine display decimals based on token type (derived from decimals_amount)
+    # For DOT (decimals_amount=10), show 2 decimals
+    # For KSM (decimals_amount=12), show 6 decimals
+    if decimals_amount == 10:  # DOT
+        display_decimals = 2
+    elif decimals_amount == 12:  # KSM
+        display_decimals = 6
+    else:
+        display_decimals = 2  # Default to 2 decimals for other cases
+    
     if len(balance_str) <= decimals_amount:
         # Add leading zeros if necessary
         padded_balance = "0" * (decimals_amount - len(balance_str)) + balance_str
-        if rounded:
-            padded_balance = str(round(int(padded_balance) / 10 ** (decimals_amount - 1)))
-        return f"0.{padded_balance}" 
+        # Get the decimal representation with appropriate precision
+        decimal_display = padded_balance[:display_decimals]
+        return f"0.{decimal_display}" 
     else:
         # Split the string at the decimal point
         whole_part = balance_str[:-decimals_amount]
         decimal_part = balance_str[-decimals_amount:]
-        if rounded:
-            decimal_part = str(round(int(decimal_part) / 10 ** (decimals_amount - 1)))
-        return f"{whole_part}.{decimal_part}"
+        
+        # Limit decimal part to display_decimals
+        decimal_display = decimal_part[:display_decimals]
+        
+        return f"{whole_part}.{decimal_display}"
+
+def get_connection(network):
+    """
+    Get or create a connection to the specified network.
+    Uses a cache to avoid creating multiple connections to the same network.
+    """
+    if network not in _connection_cache:
+        url = get_network_url(network)
+        _connection_cache[network] = substrateinterface.SubstrateInterface(url)
+    return _connection_cache[network]
+
+def close_connections():
+    """
+    Close all open connections in the cache.
+    Should be called when processing of a page is complete.
+    """
+    for conn in _connection_cache.values():
+        if hasattr(conn, 'close') and callable(conn.close):
+            conn.close()
+    _connection_cache.clear()
+
+def query_chain(network, module, call, is_constant=False):
+    """
+    Query the chain for data, reusing connections when possible.
+    """
+    api = get_connection(network)
+    result = None
+    
+    if is_constant:
+        result = api.get_constant(module, call)
+    else:
+        result = api.query(module, call)
+        
+    return result.value if result and hasattr(result, 'value') else None
+
+# Dictionary to store query results - further reduces RPC calls
+# by caching results across multiple macro calls
+_query_cache = {}
+
+def cached_query(network, module, call, is_constant=False):
+    """
+    Cache query results to further reduce RPC calls
+    """
+    cache_key = f"{network}:{module}:{call}:{is_constant}"
+    if cache_key not in _query_cache:
+        _query_cache[cache_key] = query_chain(network, module, call, is_constant)
+    return _query_cache[cache_key]
 
 def define_env(env):
+    # Reset the caches at the beginning of each page
+    _connection_cache.clear()
+    _query_cache.clear()
+    
+    # Track if we've registered atexit handler
+    if not hasattr(define_env, '_atexit_registered'):
+        import atexit
+        atexit.register(close_connections)
+        define_env._atexit_registered = True
+    
     @env.macro
     def rpc(network, module, call, default_value, is_constant=False, readable=""):
         if enable_rpc():
-            url = get_network_url(network)
-            api = substrateinterface.SubstrateInterface(url)
-            result = None
-            if is_constant:
-                result = api.get_constant(module, call)
-            else:
-                result = api.query(module, call)
-            if result == None or result.value == None:
-                return "NOT_FOUND"
-            return format(result.value, readable)
+            try:
+                result = cached_query(network, module, call, is_constant)
+                if result is None:
+                    return "NOT_FOUND"
+                return format(result, readable)
+            except Exception as e:
+                # Log the exception if needed
+                return f"ERROR: {str(e)}"
         else:
             return "DEV_MODE"
