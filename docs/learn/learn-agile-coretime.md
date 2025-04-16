@@ -1,6 +1,6 @@
 ---
-title: Agile Coretime
-description: Learn how Polkadot's Agile Coretime enables efficient resource utilization, economic flexibility, and multi-threading for parachains.
+title: Scheduling
+description: Learn how Polkadot enables efficient resource utilization, economic flexibility, and multi-threading for parachains.
 ---
 
 [Scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>) is the process of assigning

@@ -1,5 +1,5 @@
 ---
-title: Polkadot Architecture
+title: Architecture
 description: Discover Polkadot's architecture, including the relay chain, parachains, shared security, and interoperability mechanisms.
 ---
 
