@@ -156,7 +156,7 @@
 
 /docs/build-network-overview    https://docs.polkadot.com/polkadot-protocol/basics/networks    301
 /docs/build-smart-contracts    /build/build-smart-contracts    301
-/docs/build-hackathon    https://docs.polkadot.com/    301
+/docs/build-hackathon    /build/build-hackathon   301
 /docs/build-open-source    /build/build-open-source    301
 /docs/build-guides-coretime-start    https://docs.polkadot.com/tutorials/polkadot-sdk/parachains/zero-to-hero    301
 /docs/build-storage    /build/build-client-side/#decentralized-storage-options    301
@@ -169,7 +169,7 @@
 /docs/build-integrate-assets    https://docs.polkadot.com/polkadot-protocol/architecture/system-chains/asset-hub    301
 /docs/build-hrmp-channels    https://docs.polkadot.com/tutorials/interoperability/xcm-channels    301
 /docs/build-data    https://docs.polkadot.com/develop/toolkit/integrations/indexers    301
-/docs/build-transaction-construction    /build/archive/build-transaction-construction    301
+/docs/build-transaction-construction    /build/build-transaction-construction    301
 /docs/build-integration    https://docs.polkadot.com/develop/toolkit/integrations/    301
 /docs/build-node-management    https://docs.polkadot.com/running-a-validator/operational-tasks/general-management    301
 /docs/build-guides-install-deps    https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/    301
