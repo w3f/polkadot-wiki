@@ -99,7 +99,7 @@
 /docs/learn-guides-claims    /learn/learn-guides-claims    301
 /docs/learn-polkadot-opengov    /learn/learn-polkadot-opengov    301
 /docs/learn-accounts    /learn/learn-accounts    301
-/docs/learn-transactions    /learn/learn-transactions    301
+/docs/learn-transactions    https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/transactions/    301
 /docs/learn-staking    /learn/learn-staking    301
 /docs/learn-proxies    /learn/learn-proxies    301
 /docs/learn-identity    /learn/learn-identity    301
@@ -114,8 +114,8 @@
 /docs/learn-staking-advanced    /learn/learn-staking-advanced    301
 /docs/learn-nft-pallets    /learn/learn-nft-pallets    301
 /docs/learn-cryptography    /learn/learn-cryptography    301
-/docs/learn-polkadotjs    /general/polkadotjs    301
-/docs/learn-runtime-upgrades    /learn/learn-runtime-upgrades    301
+/docs/learn-polkadotjs    https://docs.polkadot.com/develop/toolkit/api-libraries/polkadot-js-api/    301
+/docs/learn-runtime-upgrades    https://docs.polkadot.com/develop/parachains/maintenance/runtime-upgrades/    301
 /docs/learn-polkadot-opengov-treasury    /learn/learn-polkadot-opengov-treasury    301
 /docs/learn-DOT    /learn/learn-DOT    301
 /docs/learn-account-abstraction    /learn/learn-account-abstraction    301
@@ -193,7 +193,7 @@
 /docs/maintain-guides-secure-validator    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
 /docs/maintain-endpoints    /maintain/maintain-endpoints    301
 /docs/maintain-sync    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node   301
-/docs/maintain-bootnode    /maintain/maintain-bootnode    301
+/docs/maintain-bootnode    https://docs.polkadot.com/infrastructure/running-a-node/setup-bootnode/    301
 /docs/maintain-rpc    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node    301
 /docs/maintain-wss    https://docs.polkadot.com/infrastructure/running-a-node/setup-secure-wss    301
 /docs/maintain-networks    https://docs.polkadot.com/develop/networks    301
@@ -202,17 +202,16 @@
 /docs/maintain-guides-validator-payout     https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout   301
 /docs/maintain-guides-how-to-systemd    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/start-validating/#run-a-validator-using-systemd   301
 /docs/maintain-guides-how-to-upgrade    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node    301
-/docs/maintain-guides-how-to-monitor-your-node    /maintain/validator/maintain-guides-how-to-monitor-your-node    301
-/docs/maintain-guides-how-to-chill    /maintain/validator/maintain-guides-how-to-chill    301
+/docs/maintain-guides-how-to-monitor-your-node    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/    301
+/docs/maintain-guides-how-to-chill    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/pause-validating/    301
 /docs/maintain-guides-how-to-stop-validating    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/stop-validating    301
 /docs/maintain-guides-validator-community     https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management   301
 /docs/maintain/maintain-guides-how-to-join-council    /maintain/archive/maintain-guides-how-to-join-council    301
 
 # XCM docs
 
-/docs/learn/xcm    /learn/learn-xcm    301
-/docs/learn-xcm    /learn/learn-xcm    301
-/docs/learn-xcm-pallet    /learn/learn-xcm    301
+/docs/learn-xcm    https://docs.polkadot.com/develop/interoperability/intro-to-xcm/    301
+/docs/learn-xcm-pallet    https://docs.polkadot.com/develop/interoperability/send-messages/    301
 /docs/learn-xcm-transport    /learn/learn-xcm-transport    301
 /docs/learn-xcvm    /learn/learn-xcvm    301
 /docs/learn-xcm-instructions    /learn/learn-xcm-instructions    301
@@ -221,7 +220,9 @@
 /docs/learn/xcm/introduction    /learn/learn-xcm    301
 /docs/learn/xcm/overview    /learn/learn-xcm    301
 /docs/learn/xcm/*    /learn/learn-xcm    301
-
+/docs/learn-xcm-index   https://docs.polkadot.com/develop/interoperability/    301
+/docs/learn/xcm/config-deep-dive    https://docs.polkadot.com/develop/interoperability/xcm-config/    301
+/docs/learn/xcm/testing   https://docs.polkadot.com/develop/interoperability/test-and-debug/    301
 
 # Dashboards
 
