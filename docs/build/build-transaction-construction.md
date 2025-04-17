@@ -3,7 +3,7 @@ title: Transaction Construction and Signing
 description: Understand how to construct, sign, and broadcast transactions in the Polkadot ecosystem using various tools and libraries.
 ---
 
-!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/polkadot-protocol/basics/data-encoding/)"
 
 This page will discuss the transaction format in Polkadot and how to create, sign, and broadcast
 transactions. Like the other pages in this guide, this page demonstrates some of the available
