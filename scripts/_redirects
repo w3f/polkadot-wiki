@@ -162,7 +162,7 @@
 /docs/build-storage    /build/build-client-side/#decentralized-storage-options    301
 /docs/build-dapp    https://docs.polkadot.com/develop/#application-developers    301
 /docs/build-pdk    /build/build-parachains   301
-/docs/build-light-clients    https://docs.polkadot.com/develop/toolkit    301
+/docs/build-light-clients    /build/build-light-clients    301
 /docs/build-node-interaction    https://docs.polkadot.com/develop/toolkit/api-libraries    301
 /docs/build-client-side    https://docs.polkadot.com/develop/#application-developers    301
 /docs/build-protocol-info    /build/build-protocol-info    301
