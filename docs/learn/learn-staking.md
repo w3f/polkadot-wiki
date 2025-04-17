@@ -1,27 +1,13 @@
 ---
-title: Introduction to Staking
+title: Intro to Staking
 description: Overview of staking and Nominated Proof-of-Stake (NPoS) in Polkadot, including validator selection, rewards, and security mechanisms.
 ---
 
-<!-- MessageBox -->
-<div id="messageBox" class="floating-message-box">
-  <p>
-    Nomination Pools are evolving! Soon you'll be able to participate in a pool and in OpenGov with your pooled funds! You do not need to do anything, unless you are participating in a pool and also staking solo from the same account. In this case, please check
-    <a href="https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation" target="_blank" rel="noopener noreferrer">
-      this article
-    </a>
-    on the actions you need to take as soon as possible. 
-  </p>
-  <button class="close-messagebox" aria-label="Close message">✖</button>
-</div>
-
 !!!tip "New to Staking?"
-    Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey or explore more information about staking on [Polkadot's Staking Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
+    Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey or explore more information about staking on [Polkadot's Staking Page](https://polkadot.com/get-started/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview) and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
 
 !!!info "Stake through Nomination Pools"
-    The minimum amount required to become an active nominator (i.e. [the minimum active bond](../general/chain-state-values.md)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [minimal bond](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
-
-Here you will learn about what staking is, why it is important, and how it works.
+    The minimum amount required to become an active nominator (i.e. [the minimum active bond](../general/chain-state-values.md)) and earn rewards is variable. If you have less tokens than the minimum active bond and still want to participate in staking, you can join the nomination pools with a [minimal bond](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
 
 ## Proof-of-Stake (PoS)
 

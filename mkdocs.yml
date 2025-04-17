@@ -236,8 +236,7 @@ nav:
               - Pure Proxies: learn/learn-proxies-pure.md
           - Transactions: learn/learn-transactions.md
           - Staking:
-              - learn/staking/index.md
-              - Staking: learn/learn-staking.md
+              - learn/learn-staking.md
               - Nomination Pools: learn/learn-nomination-pools.md
           - Polkadot OpenGov:
               - learn/polkadot-opengov/index.md
