@@ -3,9 +3,6 @@ title: Polkadot OpenGov
 description: Dive into Polkadot OpenGov, its decentralized governance model, referenda, tracks, and multi-role delegation features.
 ---
 
-import VLTable from "./../../components/Voluntary-Locking"; import Fellowship from
-"./../../components/Fellowship";
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -260,7 +257,15 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-<VLTable />
+| Lock Periods | Vote Multiplier  | Length in Days   |
+|-----|------|------|
+|0|0.1|0|
+|1|1|7|
+|2|2|14|
+|4|3|28|
+|8|4|56|
+|16|5|112|
+|32|6|224|
 
 The maximum number of "doublings" of the
 [lock period](../general/chain-state-values.md) is set to 6 (and thus
