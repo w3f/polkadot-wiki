@@ -18,7 +18,22 @@ description: Learn about staking through Polkadot's nomination pools, enabling u
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-Nomination pools allow users to pool their tokens together on-chain to nominate validators and receive rewards, significantly improving the staking system’s scalability. Now, anyone with [as little as 1 DOT](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/) can receive rewards for staking natively on Polkadot. Note that **only members of active pools will receive rewards**, that is rewards are not guaranteed for those pools that do not have enough bonded funds to be included within the [bags list](./learn-staking-advanced.md#bags-list).
+Nominating is the action of choosing validators. It does not simply involve bonding tokens.
+Nominating is an active task, which implies that you regularly monitor that your stake is backing an
+active validator in all the eras and check if you are receiving your staking rewards. More
+importantly, ensure that the validators you chose always act in the best interests of the network
+protocol and have less chance of getting [slashed](./learn-offenses.md). To nominate you need a
+[minimum bond](../general/chain-state-values.md), while to
+receive rewards, you need at least a balance greater than the
+[minimum active bond](../general/chain-state-values.md). If the validator
+misbehaves, It is worth noting that your stake is subject to slashing, irrespective of whether you
+are at the top nominators or not.
+
+As the minimum active bond is a dynamic value, it can make your nomination inactive when the
+threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
+you would need to stake a much higher balance than the minimum active bond.
+
+Nomination pools allow users to pool their tokens together on-chain to nominate validators and receive rewards, significantly improving the staking system’s scalability. Now, anyone with [as little as 1 DOT](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/) can receive rewards for staking natively on Polkadot. Nomination pools differ from custodial solutions (like staking through central exchanges) because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run in a decentralized way by the community. Note that **only members of active pools will receive rewards**, that is rewards are not guaranteed for those pools that do not have enough bonded funds to be included within the [bags list](./learn-staking-advanced.md#bags-list).
 
 !!!note "Learn the key differences between [**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool)."
     
@@ -48,34 +63,6 @@ applied proportionally to members who may have been actively bonded.
 
 ## Nominating vs Joining a Pool
 
-Nominating is the action of choosing validators. It does not simply involve bonding tokens.
-Nominating is an active task, which implies that you regularly monitor that your stake is backing an
-active validator in all the eras and check if you are receiving your staking rewards. More
-importantly, ensure that the validators you chose always act in the best interests of the network
-protocol and have less chance of getting [slashed](./learn-offenses.md). To nominate you need a
-[minimum bond](../general/chain-state-values.md), while to
-receive rewards, you need at least a balance greater than the
-[minimum active bond](../general/chain-state-values.md). If the validator
-misbehaves, It is worth noting that your stake is subject to slashing, irrespective of whether you
-are at the top nominators or not.
-
-As the minimum active bond is a dynamic value, it can make your nomination inactive when the
-threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
-you would need to stake a much higher balance than the minimum active bond.
-
-Nomination pools are a way to participate in staking with as little as 1 DOT and earn staking
-rewards. Nomination pools differ from custodial solutions (like staking through central exchanges)
-because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run
-in a decentralized way by the community. Before joining a nomination pool, you must ensure that the
-pool is earning rewards and nominating the validators that match your preferences. Participating in
-pools is more of a set-and-forget action than nominating by yourself. The pool operator maintains
-the list of validators nominated by the pool, and so, in a way, you are trusting the pool operator
-to act in your best interests. However, it is advised to check the validators nominated by the pool
-from time to time and change the pool if necessary.
-
-!!!info "Minimum Active Nomination Value is Dynamic"
-    The minimum amount required to become an active nominator and earn rewards can be seen [here](../general/chain-state-values.md). If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [smaller bond](../general/chain-state-values.md). For additional information, see [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
-
 |                                                                                                                                 Nominating                                                                                                                                  |                                                                                                              Joining a Pool                                                                                                               |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                        Minimum 250 DOT to nominate.                                                                                                                         |                                                                                                       Minimum 1 DOT to be a member.                                                                                                       |
@@ -93,6 +80,13 @@ from time to time and change the pool if necessary.
 ## For Pool Members
 
 ### Join a pool
+
+Before joining a nomination pool, you must ensure that the
+pool is earning rewards and nominating the validators that match your preferences. Participating in
+pools is more of a set-and-forget action than nominating by yourself. The pool operator maintains
+the list of validators nominated by the pool, and so, in a way, you are trusting the pool operator
+to act in your best interests. However, it is advised to check the validators nominated by the pool
+from time to time and change the pool if necessary.
 
 A member delegates funds to a pool with the `join` extrinsic. The pool then increases its bond with the new funds. A member is afforded the
 ability to bond additional funds or re-stake rewards as long as they are already actively bonded.
@@ -135,6 +129,10 @@ See the [Staking Dashboard page](../general/dashboards/staking-dashboard.md#pool
 See the [advanced guides](./learn-guides-staking-pools.md#claim-rewards-for-other-pool-members-with-polkadot-js) to
 learn how to claim rewards for another pool member.
 
+### Vote in OpenGov
+
+Nomination pool members can vote in Polkadot OpenGov with funds they delegated to the pool.
+
 ### Unbond and withdraw funds
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
@@ -155,7 +153,11 @@ for guidelines.
   eras.
 - A member can partially unbond the staked funds in the pool (at most 32 partial unbonds).
 
-## Nomination Pools - Slashing
+## Nomination Pools - Lazy Slashing
+
+Because pool funds are spread all its members and each member need to be slashed proportionally, slashes are applied to pool members lazily. The protocol keeps track of how much a pool and its members need to be slashed. There is a permissionless extrinsic to apply any pending slash to the pool member. If successful, the caller gets part of slash as reward (if configured), incentivising free market bots to monitor and apply slashes swiftly.
+
+The advantage is, the slashing (computation) cost is spread over multiple blocks. A disadvantage is that a member might have more funds in their account locked than their actual pool contribution, which they can use to vote, until these pending slashes are applied.
 
 Suppose the staking system [slashes](./learn-offenses.md) a pool’s underlying nomination account. In
 that case, the slash is distributed evenly across the bonded pool, and the unbonding pools from
