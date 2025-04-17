@@ -1,5 +1,5 @@
 """
-Polkadot Wiki Macro functionality with connection pooling
+Polkadot Wiki Macro functionality with connection caching
 """
 
 import substrateinterface
