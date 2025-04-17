@@ -1,7 +1,9 @@
 ---
-title: Polkadot Architecture
+title: Architecture
 description: Discover Polkadot's architecture, including the relay chain, parachains, shared security, and interoperability mechanisms.
 ---
+
+!!! info "Information about Polkadot's architecture is also available on the [Polkadot Developer Documentation](https://docs.polkadot.com/polkadot-protocol/architecture/)"
 
 Polkadot is a heterogeneous multichain with shared security and interoperability.
 
