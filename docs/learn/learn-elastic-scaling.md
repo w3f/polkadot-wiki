@@ -25,6 +25,11 @@ respectively. Polkadot also provides throughput boost via parallel computation f
 with **elastic scaling**: parachains can use multiple cores to include multiple parablocks within
 the same relay chain block.
 
+The capabilities of elastic scaling were tested live on Kusama in December 2024 with [the Spammening Event](https://polkadot.com/spammening/). During this event, 143,343 TPS were recorded on 23 out of 100 cores (23% capacity), consistently achieving an average block time of 6.3 seconds and finality of 16.5 seconds.
+
+!!! info "Polkadot 2.0"
+    Elastic scaling is the last technical upgrade of Polkadot 2.0 that includes pipelining, agile scheduling, and now parallel computing. This makes Polkadot a true decentralized computer offering secure computation. 
+
 Take, for example, a parachain that wants to submit four parablocks to the relay chain. Without
 elastic scaling, it will take 24 seconds to include all of them through one core. Remember that a
 core is occupied after backing and before inclusion, i.e., for the whole data availability process.
@@ -67,6 +72,38 @@ checked if all their state roots line up during their inclusion, but assume they
 parachain blocks during backing, availability, and approvals. With elastic scaling implemented, a
 parachain's throughput depends upon its collator infrastructure.
 
+If the pace per core on the relay chain will not change (backing and inclusion every 6 seconds per
+core), on the parachain side, collators will need to increase the parablock production rate to push
+P1 and P3 to the two relay chain cores.
+
+## Elastic Scaling Benefits
+
+- **Higher throughput**: Parachains can utilize multiple cores simultaneously, enabling much faster transaction processing. Previously, parachains were limited to one block per Relay Chain block. They can handle much greater capacity with elastic scaling, significantly increasing overall performance.
+
+- **Latency**: Elastic scaling reduces latency significantly, enabling faster block production and processing. For example, parachains on Kusama can reduce latency to 2 seconds with three cores today and potentially achieve 500ms latency with 12 cores in 2025, ensuring quicker response times for real-time applications.
+
+- **Cost efficiency for applications**: Applications only pay for the resources they use, saving money and reducing upfront costs. Coretime can be purchased dynamically - by the block, hour, or month. This is perfect for apps with bursts in activity, like online auctions or sudden social media surges.
+
+- **Flexible scaling for new applications**: Elastic scaling allows applications to start small with On-Demand Coretime and scale up seamlessly beyond one core when demand grows. This prevents over-allocation (wasting money on unused resources) or under-allocation (causing performance issues), both common in traditional setups.
+
+- **Resource optimization**: Parachains can load-balance their core usage by leasing additional cores when demand increases and releasing them when activity subsides. Secondary markets for coretime also ensure that unused resources are reallocated efficiently, optimizing overall system performance.
+
+- **Improved user experience**: End-users enjoy smooth and reliable performance, even during peak traffic. Applications no longer face the risk of slowing down or freezing when demand spikes, ensuring a consistent, high-quality experience.
+
+Elastic scaling increases the single-shard performance. Polkadot’s approach to scaling has traditionally been to scale via multiple parachains, called “horizontal scaling” or “horizontal sharding”. However, setting up and parallelizing processes over multiple parachains and opening channels via XCM takes time and effort. With elastic scaling, projects can benefit from higher throughput before parallelizing processes over multiple parachains.
+
+## Elastic Scaling Use Cases
+
+- **"Bursty” applications**: Many applications experience sporadic spikes in activity rather than constant demand, e.g., Gaming, DeFi, Auctions, Messaging, Social Media, etc. With elastic scaling, these applications can acquire additional coretime during peak usage and release it during off-peak hours, optimizing performance while reducing costs.
+
+- **Growing applications & startups**: Startups and new projects often face unpredictable user growth. Elastic scaling allows them to start with minimal resources (e.g., a single core) and scale seamlessly as user demand increases before scaling horizontally, thus preventing overcommitting resources upfront. This ensures applications can grow efficiently while maintaining performance and cost-effectiveness.
+
+- **Large-scale IoT applications**: IoT systems require massive scalability to process data from millions of devices. Elastic scaling enables parachains to process high transaction volumes cost-effectively, while Polkadot’s model ensures the privacy and security needed in IoT environments.
+
+- **Real-time applications**: Some applications require low latency and real-time performance (e.g., gaming, payments / financial services, or data feeds). These benefit from elastic scaling’s ability to reduce latency down to 2s. This ensures smooth and reliable performance during high-demand scenarios.
+
+## Elastic Scaling Roadmap
+
 The [elastic scaling implementation](https://github.com/paritytech/polkadot-sdk/issues/1829) will be
 rolled out in multiple phases. In the first phase, elastic scaling is set to work on parachains with
 a trusted/permissioned collator set. With this restriction, it is possible to launch elastic scaling
@@ -75,13 +112,7 @@ be made to the candidate receipt so the collator set can be untrusted/permission
 final phase will feature full integration with the Cumulus framework, enabling parachains to be
 configured to access multiple cores continuously.
 
-
-
 ## Technical Considerations
-
-If the pace per core on the relay chain will not change (backing and inclusion every 6 seconds per
-core), on the parachain side, collators will need to increase the parablock production rate to push
-P1 and P2 to the two relay chain cores.
 
 Assuming a constant number of cores, from the relay chain side, elastic scaling will not see major
 upgrades as a parachain will use multiple existing cores instead of just one. However, from the
