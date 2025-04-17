@@ -23,8 +23,8 @@
 /docs/learn-basics-index    /learn/basics    301
 /docs/learn-advanced-index    /learn/advanced    301
 /docs/build-client-index    https://docs.polkadot.com/develop/toolkit    301
-/docs/build-protocol-index    /build/protocol    301
-/docs/build-tools-index    /build/tooling    301
+/docs/build-protocol-index    https://docs.polkadot.com/polkadot-protocol/    301
+/docs/build-tools-index    https://docs.polkadot.com/develop/toolkit/    301
 /docs/build-archive-index    https://docs.polkadot.com/develop    301
 
 # Redirects for all Docusaurus Wiki links to match with Mkdocs structure
@@ -76,9 +76,9 @@
 /docs/kusama-bug-bounty    /kusama/kusama-bug-bounty    301
 /docs/kusama-social-recovery    /kusama/kusama-social-recovery    301
 /docs/kusama-adversarial-cheatsheet    /kusama/kusama-adverserial-cheatsheet    301
-/docs/maintain-guides-society-kusama    /maintain/kusama/maintain-guides-society-kusama    301
+/docs/maintain-guides-society-kusama    https://ksmsociety.io   301
 /docs/learn-kusama-inflation    /kusama/kusama-inflation    301
-/docs/maintain-guides-how-to-validate-kusama    /maintain/kusama/maintain-guides-how-to-validate-kusama    301
+/docs/maintain-guides-how-to-validate-kusama   https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator    301
 
 # Learn Section
 
@@ -105,8 +105,8 @@
 /docs/learn-identity    /learn/learn-identity    301
 /docs/learn-nomination-pools    /learn/learn-nomination-pools    301
 /docs/learn-polkadot-opengov-index    /learn/polkadot-opengov    301
-/docs/learn-assets-index    /learn/assets    301
-/docs/learn-assets    /learn/learn-assets    301
+/docs/learn-assets-index    https://docs.polkadot.com/polkadot-protocol/architecture/system-chains/asset-hub/    301
+/docs/learn-assets    https://docs.polkadot.com/polkadot-protocol/architecture/system-chains/asset-hub/    301
 /docs/learn-participants-index    /learn/participants    301
 /docs/learn-components-index    /learn/components    301
 /docs/learn-architecture    /learn/learn-architecture    301
@@ -119,7 +119,7 @@
 /docs/learn-polkadot-opengov-treasury    /learn/learn-polkadot-opengov-treasury    301
 /docs/learn-DOT    /learn/learn-DOT    301
 /docs/learn-account-abstraction    /learn/learn-account-abstraction    301
-/docs/learn-offenses    /learn/learn-offenses    301
+/docs/learn-offenses    https://docs.polkadot.com/infrastructure/staking-mechanics/offenses-and-slashes/    301
 /docs/learn-phragmen    /learn/learn-phragmen    301
 /docs/learn-inflation    /learn/learn-inflation     301
 /docs/learn-comparisons-kusama    /learn/learn-comparisons-kusama    301
@@ -138,11 +138,11 @@
 /docs/learn/learn-crowdloans    /learn/archive/learn-crowdloans    301
 /docs/learn-jam-faq    /learn/learn-jam-faq    301
 /docs/learn-implementations    /learn/learn-implementations    301
-/docs/learn-consensus    /learn/learn-consensus    301
+/docs/learn-consensus    https://docs.polkadot.com/polkadot-protocol/architecture/polkadot-chain/pos-consensus/    301
 /docs/learn-elastic-scaling    /learn/learn-elastic-scaling    301
-/docs/learn-parachains-index    /learn/parachains    301
+/docs/learn-parachains-index    https://docs.polkadot.com/polkadot-protocol/architecture/parachains/    301
 /docs/learn-guides-coretime-marketplaces    /learn/learn-guides-coretime-marketplaces    301
-/docs/learn-guides-coretime-parachains    /learn/learn-guides-coretime-parachains    301
+/docs/learn-guides-coretime-parachains    https://docs.polkadot.com/tutorials/polkadot-sdk/parachains/zero-to-hero/deploy-to-testnet/    301
 /docs/how-to-dyor    /general/how-to-dyor    301
 /docs/learn-system-chains    /learn/learn-system-chains    301
 /docs/learn-parachains-faq    /learn/learn-parachains-faq    301
@@ -151,58 +151,61 @@
 /docs/learn-snowbridge    /learn/learn-snowbridge    301
 /docs/learn-hyperbridge    /learn/learn-hyperbridge    301
 /docs/learn-dot-ksm-bridge    /learn/learn-DOT-KSM-bridge    301
+/docs/learn-asset-conversion-assethub   https://docs.polkadot.com/tutorials/polkadot-sdk/system-chains/asset-hub/asset-conversion/    301
 
 # Build Section
 
 /docs/build-network-overview    https://docs.polkadot.com/polkadot-protocol/basics/networks    301
-/docs/build-smart-contracts    /build/build-smart-contracts    301
+/docs/build-smart-contracts    https://docs.polkadot.com/develop/smart-contracts/    301
 /docs/build-hackathon    /build/build-hackathon   301
 /docs/build-open-source    /build/build-open-source    301
 /docs/build-guides-coretime-start    https://docs.polkadot.com/tutorials/polkadot-sdk/parachains/zero-to-hero    301
-/docs/build-storage    /build/build-client-side/#decentralized-storage-options    301
+/docs/build-storage    https://docs.polkadot.com/develop/    301
 /docs/build-dapp    https://docs.polkadot.com/develop/#application-developers    301
-/docs/build-pdk    /build/build-parachains   301
+/docs/build-pdk    https://docs.polkadot.com/develop/parachains/   301
 /docs/build-light-clients    /build/build-light-clients    301
 /docs/build-node-interaction    https://docs.polkadot.com/develop/toolkit/api-libraries    301
 /docs/build-client-side    https://docs.polkadot.com/develop/#application-developers    301
-/docs/build-protocol-info    /build/build-protocol-info    301
+/docs/build-protocol-info    https://docs.polkadot.com/polkadot-protocol/architecture/polkadot-chain/overview/    301
 /docs/build-integrate-assets    https://docs.polkadot.com/polkadot-protocol/architecture/system-chains/asset-hub    301
 /docs/build-hrmp-channels    https://docs.polkadot.com/tutorials/interoperability/xcm-channels    301
 /docs/build-data    https://docs.polkadot.com/develop/toolkit/integrations/indexers    301
-/docs/build-transaction-construction    /build/build-transaction-construction    301
+/docs/build-transaction-construction    /build/archive/build-transaction-construction    301
 /docs/build-integration    https://docs.polkadot.com/develop/toolkit/integrations/    301
 /docs/build-node-management    https://docs.polkadot.com/running-a-validator/operational-tasks/general-management    301
 /docs/build-guides-install-deps    https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/    301
 /docs/build-guides-template-basic    https://docs.polkadot.com/tutorials/polkadot-sdk/parachains/zero-to-hero    301
 /docs/build-guides-coretime-troubleshoot    https://docs.polkadot.com/develop/parachains/deployment/obtain-coretime    301
 /docs/learn-guides-coretime-swap    /learn/learn-guides-coretime-swap    301
+/docs/build-oracle   https://docs.polkadot.com/develop/toolkit/integrations/oracles/    301
+/docs/build-transaction-construction   /build/build-transaction-construction     301
 
 # Maintain Section
 
-/docs/maintain-polkadot-parameters    /maintain/maintain-polkadot-parameters    301
-/docs/maintain-node-index    /maintain/node    301
+/docs/maintain-polkadot-parameters    https://docs.polkadot.com/infrastructure/    301
+/docs/maintain-node-index    https://docs.polkadot.com/infrastructure   301
 /docs/maintain-collator-index    /maintain/collator   301
-/docs/maintain-validator-index    /maintain/validator   301
+/docs/maintain-validator-index   https://docs.polkadot.com/infrastructure/running-a-validator   301
 /docs/maintain-archive    /maintain/maintain-archive    301
 /docs/maintain/maintain-guides-how-to-vote-councillor    /maintain/archive/maintain-guides-how-to-vote-councillor    301
 /docs/maintain/maintain-guides-democracy    /maintain/archive/maintain-guides-democracy    301
-/docs/maintain-guides-how-to-validate-polkadot    /maintain/maintain-guides-how-to-validate-polkadot     301
-/docs/maintain-guides-secure-validator    /maintain/maintain-guides-secure-validator    301
+/docs/maintain-guides-how-to-validate-polkadot    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator     301
+/docs/maintain-guides-secure-validator    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
 /docs/maintain-endpoints    /maintain/maintain-endpoints    301
-/docs/maintain-sync    /maintain/maintain-sync    301
+/docs/maintain-sync    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node   301
 /docs/maintain-bootnode    /maintain/maintain-bootnode    301
-/docs/maintain-rpc    /maintain/maintain-rpc    301
-/docs/maintain-wss    /maintain/maintain-wss    301
-/docs/maintain-networks    /maintain/maintain-networks    301
+/docs/maintain-rpc    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node    301
+/docs/maintain-wss    https://docs.polkadot.com/infrastructure/running-a-node/setup-secure-wss    301
+/docs/maintain-networks    https://docs.polkadot.com/develop/networks    301
 /docs/maintain-errors    /maintain/maintain-errors    301
 /docs/maintain-guides-async-backing    /maintain/collator/maintain-guides-async-backing    301
-/docs/maintain-guides-validator-payout    /maintain/validator/maintain-guides-validator-payout    301
-/docs/maintain-guides-how-to-systemd    /maintain/validator/maintain-guides-how-to-systemd    301
-/docs/maintain-guides-how-to-upgrade    /maintain/validator/maintain-guides-how-to-upgrade    301
+/docs/maintain-guides-validator-payout     https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout   301
+/docs/maintain-guides-how-to-systemd    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/start-validating/#run-a-validator-using-systemd   301
+/docs/maintain-guides-how-to-upgrade    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node    301
 /docs/maintain-guides-how-to-monitor-your-node    /maintain/validator/maintain-guides-how-to-monitor-your-node    301
 /docs/maintain-guides-how-to-chill    /maintain/validator/maintain-guides-how-to-chill    301
-/docs/maintain-guides-how-to-stop-validating    /maintain/validator/maintain-guides-how-to-stop-validating    301
-/docs/maintain-guides-validator-community    /maintain/validator/maintain-guides-validator-community    301
+/docs/maintain-guides-how-to-stop-validating    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/stop-validating    301
+/docs/maintain-guides-validator-community     https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management   301
 /docs/maintain/maintain-guides-how-to-join-council    /maintain/archive/maintain-guides-how-to-join-council    301
 
 # XCM docs
