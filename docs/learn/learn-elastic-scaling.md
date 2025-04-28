@@ -90,7 +90,7 @@ P1 and P3 to the two relay chain cores.
 
 - **Improved user experience**: End-users enjoy smooth and reliable performance, even during peak traffic. Applications no longer face the risk of slowing down or freezing when demand spikes, ensuring a consistent, high-quality experience.
 
-Elastic scaling increases the single-shard performance. Polkadot’s approach to scaling has traditionally been to scale via multiple parachains, called “horizontal scaling” or “horizontal sharding”. However, setting up and parallelizing processes over multiple parachains and opening channels via XCM takes time and effort. With elastic scaling, projects can benefit from higher throughput before parallelizing processes over multiple parachains.
+Elastic scaling increases the throughput of a parachain. Polkadot’s approach to scaling has traditionally been to scale via multiple parachains, called “horizontal scaling” or “horizontal sharding” through cross-consensus messaging (XCM). However, setting up and parallelizing processes over multiple parachains and opening channels via XCM takes time and effort. With elastic scaling, projects can benefit from higher throughput before parallelizing processes over multiple parachains.
 
 ## Elastic Scaling Use Cases
 
