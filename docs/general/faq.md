@@ -178,11 +178,7 @@ Hence, the Transactions Per Second (TPS) of Polkadot is a number that encompasse
 transactions on the relay chain as well as parachains. As the transactions on these Substrate-based
 blockchains are [weights based](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#transactions-weights-and-fees), it makes sense to
 use TPS as a measure for the network performance if all the transactions carry the same weight.
-[Performance benchmark tests](https://twitter.com/gavofyork/status/1270025498580656134) show that
-Substrate-based blockchains can achieve over 1000 TPS for balance transfer transactions. Assuming
-Polkadot is running over 100 parachains; the projected TPS is well over 100,000. With
-[asynchronous backing upgrade](../learn/learn-async-backing.md), the TPS is expected to increase
-tenfold to 1,000,000.
+A performance benchmark test performed in 2024 (dubbed ["The Spammening"](https://polkadot.com/spammening/)) demonstrated that Polkadot is capable of at least 623,000 TPS. The test delivered 143,000 TPS when utilizing only 23% of network cores on Kusama, Polkadot's live sister network that shares its codebase.
 
 It is essential to realize that TPS is inherently a subjective measurement with numerous factors
 that can contribute to it. It's hard to gauge the usefulness of TPS in isolation (when compared to
