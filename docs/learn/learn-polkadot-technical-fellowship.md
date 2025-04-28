@@ -108,13 +108,13 @@ referendum. For more information, check the rank updates section on
 
 ## Cumulative Rank-Based Voting
 
-As specified in the [manifesto](https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf), when it comes to governance voting, the Polkadot Technical Fellowship uses a **cumulative rank-voting** system, where the **weight of a vote increases non-linearly with the member's rank**. The weight is calculated using a triangular number formula, meaning higher-ranked members have significantly more influence. The weight function `w(r)` is defined as:
+As specified in the [manifesto](https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf), when it comes to governance voting, the Polkadot Technical Fellowship uses a **cumulative rank-voting** system, where the **weight of a vote increases non-linearly with the member's rank**. The weight function `w(r)` is defined as:
 
 ```
 w(r) = r(r + 1) / 2
 ```
 
-where `r` is the member rank. For example, a member with rank 3 has a voting weight of 6, while rank 5 has a weight of 15.
+where `r` is the member rank. For example, a member with rank 3 has a voting weight of 6, while rank 5 has a weight of 15. Thus, higher-ranked members have significantly more influence than lower-ranked ones.
 
 For votes requiring a **minimum rank** to participate (such as Membership, Promotion, or Continuation votes), the weight calculation is adjusted so that the **lowest eligible rank has a base weight of 1**, and higher ranks scale upward from there. This is formalized as:
 
