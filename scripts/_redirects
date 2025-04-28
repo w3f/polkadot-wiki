@@ -198,7 +198,7 @@
 /docs/maintain-wss    https://docs.polkadot.com/infrastructure/running-a-node/setup-secure-wss    301
 /docs/maintain-networks    https://docs.polkadot.com/develop/networks    301
 /docs/maintain-errors    /maintain/maintain-errors    301
-/docs/maintain-guides-async-backing    /maintain/collator/maintain-guides-async-backing    301
+/docs/maintain-guides-async-backing    /maintain/maintain-guides-async-backing/    301
 /docs/maintain-guides-validator-payout     https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout   301
 /docs/maintain-guides-how-to-systemd    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/start-validating/#run-a-validator-using-systemd   301
 /docs/maintain-guides-how-to-upgrade    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node    301
