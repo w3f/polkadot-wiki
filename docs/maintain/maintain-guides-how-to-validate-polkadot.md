@@ -512,7 +512,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) secti
 - **Value bonded** - How much DOT from the Stash account you want to bond/stake. Note that you do
   not need to bond all of the DOT in that account. Also note that you can always bond _more_ DOT
   later. However, _withdrawing_ any bonded amount requires the duration of the unbonding period. On
-  Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is 28 days.
+  Kusama, the unbonding period is 7 days. On Polkadot, the planned unbonding period is maximum 28 days.
 - **Payment destination** - The account where the rewards from validating are sent. More info
   [here](../learn/learn-staking.md#claiming-staking-rewards). Starting with runtime version v23
   natively included in client version

@@ -26,38 +26,28 @@ protocol and have less chance of getting [slashed](./learn-offenses.md). To nomi
 [minimum bond](../general/chain-state-values.md), while to
 receive rewards, you need at least a balance greater than the
 [minimum active bond](../general/chain-state-values.md). If the validator
-misbehaves, It is worth noting that your stake is subject to slashing, irrespective of whether you
+misbehaves, your stake is subject to slashing, irrespective of whether you
 are at the top nominators or not.
 
 As the minimum active bond is a dynamic value, it can make your nomination inactive when the
 threshold goes above your bonded balance. Hence, to be eligible to earn rewards while nominating,
 you would need to stake a much higher balance than the minimum active bond.
 
-Nomination pools allow users to pool their tokens together on-chain to nominate validators and receive rewards, significantly improving the staking system’s scalability. Now, anyone with [as little as 1 DOT](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/) can receive rewards for staking natively on Polkadot. Nomination pools differ from custodial solutions (like staking through central exchanges) because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run in a decentralized way by the community. Note that **only members of active pools will receive rewards**, that is rewards are not guaranteed for those pools that do not have enough bonded funds to be included within the [bags list](./learn-staking-advanced.md#bags-list).
-
-!!!note "Learn the key differences between [**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool)."
-    
-**For Ledger users:** Joining a nomination pool is possible only with the XL version of the Polkadot Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
+Nomination pools allow users to pool their tokens together on-chain to nominate validators and receive rewards, significantly improving the staking system’s scalability. Now, anyone with [as little as 1 DOT](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/) can receive rewards for staking natively on Polkadot. Nomination pools differ from custodial solutions (like staking through central exchanges) because they are non-custodial, native to Polkadot's protocol, permissionless, transparent, and run in a decentralized way by the community.
 
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
-Nomination pools are designed to permissionlessly allow members to pool their funds together and act as a single nominator account.
+!!!note "Only members of active pools will receive rewards"
+    Staking rewards are not guaranteed for those pools that do not have enough bonded funds to be included within the [bags list](./learn-staking-advanced.md#bags-list).
 
-Due to the current runtime constraints, the relay chain can only handle a limited number of
-nominators (22500 on Polkadot and 12500 on Kusama) comfortably in the
-[electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the
-[NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be
-inferred that the staking system favors nominators with a larger stake. 
+    Due to the current runtime constraints, the relay chain can only handle a limited number of nominators (22500 on Polkadot and 12500 on Kusama) comfortably in the [electing set](learn-nominator.md#staking-election-stages). As one of the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the network, it can be inferred that the staking system favors nominators with a larger stake. 
 
-Only the nominator accounts which back the validators in the active set are eligible for receiving staking rewards. This leaves out nomination intents from the accounts with lower token balance than the min-active nomination and
-places them in a waiting queue to enter electing set. 
+    Only the nominator accounts which back the validators in the active set are eligible for receiving staking rewards. This leaves out nomination intents from the accounts with lower token balance than the min-active nomination and places them in a waiting queue to enter electing set. 
+    Each nomination pool is viewed as a single nominator from the NPoS system point of view, meaning that a pool with stake below the minimum active bond will result as inactive and thus will not earn rewards.
+    
+    Learn the key differences between [**Staking directly vs Joining a Nomination Pool**](#nominating-vs-joining-a-pool).
 
-Nomination pools will be handy for members who
-want to participate in the staking system with a stake much lower than the dynamic min-active
-nomination threshold on the network. Each nomination pool is viewed as a single nominator from the NPoS
-system point of view.
-
-The pool’s earnings are split pro rata to a member's stake in the bonded pool (and thus, the staking
+The pool’s staking rewards are split pro rata to a member's stake in the bonded pool (and thus, the staking
 rewards for members will be the same as if they were a nominator). Importantly, slashes are also
 applied proportionally to members who may have been actively bonded.
 
@@ -69,17 +59,20 @@ applied proportionally to members who may have been actively bonded.
 |                                                                                                       Rewards can be compounded automatically or sent to any account.                                                                                                       |                                                              Rewards can be manually claimed to the pool member's account and be bonded in the pool again to compound them.                                                               |
 |                                                                                           If the active validator gets slashed, all active nominators are subjected to slashing.                                                                                            |                                                                             If the active validator gets slashed, all pool members are subjected to slashing.                                                                             |
 |                                                                                                                    Can bond and stake DOT indefinitely.                                                                                                                     |                                                                                               Can bond and stake DOT until the pool exists.                                                                                               |
-|                                                                                                    Unbonding period of 28 days. Can switch validators without unbonding.                                                                                                    |                                                                             Unbonding period of 28 days. Need to unbond before switching to a different pool.                                                                             |
+|                                                                                                    Maximum unbonding period of 28 days. Can switch validators without unbonding.                                                                                                    |                                                                             Maximum unbonding period of 28 days. Need to unbond before switching to a different pool.                                                                             |
 |                                                                                                                              Maximum uncapped.                                                                                                                              |                                                                                                             Maximum uncapped.                                                                                                             |
 | Should bond more than the [minimum active nomination](../learn/learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards) in an era to be eligible to earn staking rewards, although it can depend on multiple other factors outlined in the linked document. |           A nomination pool earns rewards in an era if it satisfies all the conditions mentioned for the nominator (as the nomination pool is just a nominator from [the NPoS system](../learn/learn-phragmen.md) perspective).           |
-|                                                                                                         Staked tokens can be used for participation in Governance.                                                                                                          |                                                                                       Staked tokens cannot be used for participation in Governance.                                                                                       |
-|                                                            [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).                                                             | A pool member can self claim the rewards or can grant permission to any other account to claim and compound rewards on your behalf. See [Claim Permissions](https://wiki.polkadot.network/docs/learn-nomination-pools#claim-permissions). |
-|                                                                                                                    Bonded funds remain in your account.                                                                                                                     |        Bonded funds are transferred to a pool account which is administered by the network protocol and is not accessible to anyone else. See [System Accounts](./learn-account-advanced.md#system-accounts) for more information.        |
+|                                                                                                         Staked tokens can be used for participation in Governance.                                                                                                          |                                                                                       Staked tokens can be used for participation in Governance.                                                                                       |
+|                                                            [Rewards payout](../learn/learn-staking-advanced.md#claiming-rewards) can be triggered permissionlessly by anyone (typically done by the validator).                                                             | A pool member can self claim the rewards or can grant permission to any other account to claim and compound rewards on your behalf. See [Claim Permissions](#claim-permissions). |
+|                                                                                                                    Bonded funds remain in your account.                                                                                                                     |        Bonded funds remain in your account.        |
 |                                                                                                         Nominator manages the list of staked validators (up to 16).                                                                                                         |                                                                                                 Nominations managed by the pool operator.                                                                                                 |
 
 ## For Pool Members
 
 ### Join a pool
+
+!!!note "Ledger users"
+    Joining a nomination pool is possible only with the XL version of the Polkadot Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
 
 Before joining a nomination pool, you must ensure that the
 pool is earning rewards and nominating the validators that match your preferences. Participating in
@@ -131,7 +124,10 @@ learn how to claim rewards for another pool member.
 
 ### Vote in OpenGov
 
-Nomination pool members can vote in Polkadot OpenGov with funds they delegated to the pool.
+Nomination pool members can vote in Polkadot OpenGov with funds they delegated to the pool. In the past, pool members' funds were transferred to the pool system account. A [delegation staking system](https://hackmd.io/@ak0n/454-np-governance#Pallet-Delegation-Staking) was introduced to allow keeping ownership of your funds and voting in governance. 
+
+!!!info "Dual Staking"
+    For pool members who were dual staking (i.e., pool members and nominators) before the introduction of delegation staking, follow [**these guides**](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) to migrate manually to the new system. 
 
 ### Unbond and withdraw funds
 
@@ -149,13 +145,13 @@ for guidelines.
 
 ### Limitations of Nomination Pools
 
-- For a member to switch pools, all funds from the account must be unbonded. This process takes 28
+- For a member to switch pools, all funds from the account must be unbonded. This process takes up to 28
   eras.
 - A member can partially unbond the staked funds in the pool (at most 32 partial unbonds).
 
 ## Nomination Pools - Lazy Slashing
 
-Because pool funds are spread all its members and each member need to be slashed proportionally, slashes are applied to pool members lazily. The protocol keeps track of how much a pool and its members need to be slashed. There is a permissionless extrinsic to apply any pending slash to the pool member. If successful, the caller gets part of slash as reward (if configured), incentivising free market bots to monitor and apply slashes swiftly.
+Because pool funds are spread to all its members and each member need to be slashed proportionally, slashes are applied to pool members lazily. The protocol keeps track of how much a pool and its members need to be slashed. There is a permissionless extrinsic to apply any pending slash to the pool member. If successful, the caller gets part of slash as reward (if configured), incentivising free market bots to monitor and apply slashes swiftly.
 
 The advantage is, the slashing (computation) cost is spread over multiple blocks. A disadvantage is that a member might have more funds in their account locked than their actual pool contribution, which they can use to vote, until these pending slashes are applied.
 
