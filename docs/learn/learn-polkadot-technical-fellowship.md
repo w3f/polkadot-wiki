@@ -105,3 +105,57 @@ from rank 1 to rank 2 can only be voted by members whose ranks are greater than 
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
 referendum. For more information, check the rank updates section on
 [the fellowship dashboard](https://polkadot-fellows.xyz/#/membership).
+
+## Cumulative Rank-Based Voting
+
+As specified in the [manifesto](https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf), when it comes to governance voting, the Polkadot Technical Fellowship uses a **cumulative rank-voting** system, where the **weight of a vote increases non-linearly with the member's rank**. The weight function `w(r)` is defined as:
+
+```
+w(r) = r(r + 1) / 2
+```
+
+where `r` is the member rank. For example, a member with rank 3 has a voting weight of 6, while rank 5 has a weight of 15. Thus, higher-ranked members have significantly more influence than lower-ranked ones.
+
+For votes requiring a **minimum rank** to participate (such as Membership, Promotion, or Continuation votes), the weight calculation is adjusted so that the **lowest eligible rank has a base weight of 1**, and higher ranks scale upward from there. This is formalized as:
+
+```
+w'(r, m) = w(r - m + 1)
+```
+
+Where `r` is the member's rank and `m` is the minimum rank allowed to vote.
+
+The table below illustrates this system with a minimum voting rank of 2 and a maximum of 6:
+
+| Rank | r - m + 1 | Weight w'(r, 2) |
+|------|-----------|-----------------|
+| 1    | 0         | 0 *(ineligible)* |
+| 2    | 1         | 1               |
+| 3    | 2         | 3               |
+| 4    | 3         | 6               |
+| 5    | 4         | 10              |
+| 6    | 5         | 15              |
+
+Note that because of this system, the same rank can have different voting weights, depending on the minimum rank required in that specific vote type (Membership, Promotion, or Continuation). Se the example below taken from an RFC proposal:
+
+| Rank | Amount |
+|-----|-------|
+|3|1|
+|4|3|
+|2|1|
+|3|3|
+|4|6|
+|6|15|
+
+Rank 3 has power 1 in one vote and power 3 in another, it means:
+
+- In the first vote, the minimum rank allowed was 3 → w'(3, 3) = w(1) = 1
+
+- In the second vote, the minimum rank was 2 → w'(3, 2) = w(2) = 3
+
+Similarly, for Rank 4 with power of 3 and 6, it means:
+
+- First case: w'(4, 3) = w(2) = 3
+
+- Second case: w'(4, 2) = w(3) = 6
+
+The system is flexible by design to reflect different eligibility levels.
