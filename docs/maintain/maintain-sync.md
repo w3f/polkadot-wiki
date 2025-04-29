@@ -30,9 +30,12 @@ a particular block was or which extrinsics resulted in a specific state change a
 when using an archive node. However, an archive node takes up a lot of disk space - around Kusama's
 12 millionth block, this was around 660 GB.
 
-!!!tip
-    On the [Paranodes](https://paranodes.io/DBSize) or [Stakeworld](https://stakeworld.io/docs/dbsize)
-    websites, you can find lists of the database sizes of Polkadot and Kusama nodes.
+:::tip
+
+On the [Stakeworld](https://stakeworld.io/docs/dbsize) website, you can find lists of the database
+sizes of Polkadot and Kusama nodes.
+
+:::
 
 Archive nodes are used by utilities that need past information - like block explorers, council
 scanners, discussion platforms like [Polkassembly](https://polkassembly.io), and others. They need
