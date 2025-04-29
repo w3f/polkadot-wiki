@@ -2,19 +2,17 @@
 id: build-network-overview
 title: Development Networks
 sidebar_label: Development Networks
-description: An overview of the different networks on Polkadot
-keywords: [data, index, query, explorer, dashboard, dapp, uapp, app, frontend, client]
-slug: ../build-network-overview
+description: Overview of Polkadot's mainnet, canary network Kusama, and testnets like Westend and Paseo for development and testing.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 While Polkadot itself is the mainnet, there are several networks that can cater to different
 development or application-driven contexts.
 
-:::info Looking for faucets?
-
-[See here for all available faucets and how to obtain testnet tokens.](../learn/learn-DOT.md#obtaining-testnet-tokens)
-
-:::
+!!!info "Looking for faucets?"
+    [See here for all available faucets and how to obtain testnet tokens.](../learn/learn-DOT.md#obtaining-testnet-tokens)
 
 ## Polkadot Ecosystem Networks
 
@@ -47,7 +45,7 @@ within front-end contexts. You can view more on PolkadotJS and its resources
 [here](https://polkadot.js.org/).
 
 For other programmatic ways of interacting with these networks (including PolkadotJS), please view
-the [Node Interactions page](./build-node-interaction.md).
+the [Node Interactions page](build-node-interaction.md).
 
 ## Testnet Faucets
 

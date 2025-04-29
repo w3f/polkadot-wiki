@@ -1,19 +1,17 @@
 ---
-id: learn-guides-claims
-title: Polkadot-JS Guides about Claims
-sidebar_label: Claim Guides
-description: Step-by-step guide on how to claim your tokens.
-keywords: [claims, tokens, kusama, polkadot]
-slug: ../learn-guides-claims
+title: Token Claims Guide
+description: Step-by-step guide to claiming your DOT and KSM tokens using Polkadot-JS UI.
 ---
-
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
-
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
-
-<MessageBox message="Screenshots on this page are based on Polkadot, but note that the same process applies to Kusama." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
 tokens, you can now claim your DOT (and a proportional amount of KSM on the Kusama network). The
@@ -26,13 +24,8 @@ can do this by using the Polkadot-JS UI [Claims app](https://polkadot.js.org/app
 that you are connected to the Polkadot network (displayed in the upper-left-hand corner of the
 screen).
 
-:::warning Third-party claim processes
-
-Claiming using a third-party process can lead to losing your allocation; therefore, we cannot
-recommend using any third-party apps. Manually specifying your transaction data, as specified in our
-claims process below, is the only way to ensure you will receive your allocation.
-
-:::
+!!!warning "Third-party claim processes"
+    Claiming using a third-party process can lead to losing your allocation; therefore, we cannot recommend using any third-party apps. Manually specifying your transaction data, as specified in our claims process below, is the only way to ensure you will receive your allocation.
 
 ## Generate an Account
 

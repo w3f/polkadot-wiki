@@ -1,16 +1,13 @@
 ---
-id: maintain-endpoints
 title: Node Endpoints
-sidebar_label: Node Endpoints
-description: List of node endpoints and examples of use.
-keywords: [endpoints, network, connect]
-slug: ../maintain-endpoints
+description: A list of node endpoints for Polkadot, Kusama, and test networks, with examples of usage.
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 Ideally, one may run their own node when interacting with the
-[Polkadot network](https://polkadot.network/) via [Polkadot-JS Apps](https://polkadot.js.org/apps/)
+[Polkadot network](https://polkadot.com) via [Polkadot-JS Apps](https://polkadot.js.org/apps/)
 or other UIs and programmatic methods. Another option would be to connect to one of the several
 public endpoints provided by infrastructure and API service providers. For development convenience,
 [Parity Tech](https://www.parity.io/) maintains archive nodes for Polkadot, Kusama, and their test
@@ -27,14 +24,7 @@ Endpoints for Polkadot relay chain and Kusama relay chain, parachains, and Paseo
 maintained by the community. System Chains as well as Westend test network endpoints maintained by
 Parity Technologies are listed below:
 
-<!-- prettier-ignore -->
-<Tabs groupId="endpoints" values={[ 
-  { label: 'Polkadot System Chains', value: 'psc' }, 
-  { label: 'Kusama System Chains', value: 'ksc' }, 
-  { label: 'Test Networks', value: 'tn' } 
-]}>
-
-  <TabItem value="psc">
+=== "Polkadot System Chains"
 
 | Network      | WSS Endpoint                               |
 | ------------ | ------------------------------------------ |
@@ -43,9 +33,7 @@ Parity Technologies are listed below:
 | Collectives  | wss://polkadot-collectives-rpc.polkadot.io |
 | People Chain | wss://polkadot-people-rpc.polkadot.io      |
 
-  </TabItem>
-
-  <TabItem value="ksc">
+=== "Kusama System Chains"
 
 | Network        | WSS Endpoint                             |
 | -------------- | ---------------------------------------- |
@@ -55,17 +43,11 @@ Parity Technologies are listed below:
 | People Chain   | wss://kusama-people-rpc.polkadot.io      |
 | Coretime Chain | wss://kusama-coretime-rpc.polkadot.io    |
 
-  </TabItem>
-
-  <TabItem value="tn">
+=== "Test Networks"
 
 | Network | WSS Endpoint                  |
 | ------- | ----------------------------- |
 | Westend | wss://westend-rpc.polkadot.io |
-
-  </TabItem>
-
-</Tabs>
 
 #### Example usage with Polkadot-JS API
 
@@ -100,9 +82,6 @@ service, and additional metrics.
 - [SubQuery](https://www.rpc.subquery.network/)
 - [dRPC](https://drpc.org/)
 
-:::note
-
-The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer)
-
-:::
+!!!note
+    The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from
+    [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer)

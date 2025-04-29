@@ -1,11 +1,9 @@
 ---
-id: build-transaction-construction
 title: Transaction Construction and Signing
-sidebar_label: Transaction Construction
-description: Information about how transactions are constructed on Polkadot.
-keywords: [transaction, transaction construction, format, tools]
-slug: ../build-transaction-construction
+description: Understand how to construct, sign, and broadcast transactions in the Polkadot ecosystem using various tools and libraries.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/polkadot-protocol/basics/data-encoding/)"
 
 This page will discuss the transaction format in Polkadot and how to create, sign, and broadcast
 transactions. Like the other pages in this guide, this page demonstrates some of the available
@@ -30,12 +28,9 @@ Polkadot has some basic transaction information that is common to all transactio
 - MetadataHash: Optional, the metadata hash which should match the RUNTIME_METADATA_HASH environment
   variable.
 
-:::caution
-
-There are risks to making a transaction immortal. If an account is reaped and a user re-funds the
-account, then they could replay an immortal transaction. Always default to using a mortal extrinsic.
-
-:::
+!!!caution
+    There are risks to making a transaction immortal. If an account is reaped and a user re-funds the
+    account, then they could replay an immortal transaction. Always default to using a mortal extrinsic.
 
 \*The nonce queried from the System module does not account for pending transactions. You must track
 and increment the nonce manually if you want to submit multiple valid transactions at the same time.
@@ -67,7 +62,7 @@ subject to change, the metadata allows developers to structure any extrinsics or
 accordingly. The metadata provides you with all of the information required to know how to construct
 the serialized call data specific to your transaction. You can read more about the metadata, its
 format and how to get it in the
-[Substrate documentation](https://docs.substrate.io/reference/command-line-tools/subxt/#metadata).
+[Substrate documentation](https://docs.polkadot.com/polkadot-protocol/basics/chain-data/#use-subxt).
 
 **Summary**
 
@@ -235,7 +230,7 @@ There are several ways to submit a signed payload:
 ## Notes
 
 Some addresses to use in the examples. See
-[Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/).
+[Subkey documentation](https://docs.polkadot.com/polkadot-protocol/basics/accounts/#using-subkey).
 
 ```bash
 $ subkey --network polkadot generate

@@ -1,11 +1,10 @@
 ---
-id: build-hackathon
 title: Hackathons
-sidebar_label: Hackathons
-description: Join or host a Hackathon.
-keywords: [hackathon, build, event, host, resources]
-slug: ../build-hackathon
+description: Discover how to join or host hackathons to promote Web3 technology and Polkadot development.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 ## Join a Hackathon
 
@@ -85,7 +84,7 @@ Here are a few examples of hackathons W3F has facilitated and supported:
 
 ## Resources
 
-- [Substrate Docs](https://docs.substrate.io/) - many introductory learning material lives here,
+- [Polkadot Docs](https://docs.polkadot.com/) - many introductory learning material lives here,
   that can be a feature of you hackathon or suggested prerequisite for those joining to use.
 
 ## Support / Contact

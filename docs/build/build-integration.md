@@ -1,11 +1,10 @@
 ---
-id: build-integration
 title: Polkadot Integration Guide
-sidebar_label: Integration Initiation
-description: Reference point for the Polkadot integration guides.
-keywords: [protocol, integration, structure]
-slug: ../build-integration
+description: A comprehensive guide for wallets, custodians, and developers to integrate with Polkadot and Kusama networks.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 Welcome to the Polkadot integration guide. This guide will provide all the information you need to
 get started on your integration. The target audiences for this guide are wallets and custodians, but

@@ -1,13 +1,7 @@
 ---
-id: learn-agile-coretime
 title: Scheduling
-sidebar_label: Scheduling
-description: How the Polkadot Cloud achieves multi-threading to improve efficiency.
-keywords: [coretime, blockspace, parachain, on-demand, cores, multi-threading, scheduling]
-slug: ../learn-agile-coretime
+description: Learn how Polkadot enables efficient resource utilization, economic flexibility, and multi-threading for parachains.
 ---
-
-import DocCardList from '@theme/DocCardList';
 
 [Scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>) is the process of assigning
 tasks or jobs to resources (like CPU cores) at specific times or under certain conditions. Effective
@@ -31,7 +25,7 @@ among them.
 Polkadot achieves multi-threading by [splitting and interlacing](#splitting-and-interlacing)
 Coretime.
 
-<DocCardList />
+<!-- TODO: INDEX CARDS -->
 
 ## Introduction to Agile Coretime
 
@@ -90,12 +84,8 @@ Previously known as instantaneous coretime, the on-demand coretime refers to cor
 through bidding in near real-time for the validation of a single parachain block on one of the cores
 reserved specifically for on-demand orders.
 
-:::info Parathreads are renamed to on-demand parachains
-
-On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and
-use it to access the relay chain through the on-demand coretime pool.
-
-:::
+!!!info "Parathreads are renamed to on-demand parachains"
+    On-demand parachains (previously called parathreads) are parachains that buy on-demand coretime and use it to access the relay chain through the on-demand coretime pool.
 
 ### On-demand Coretime Pool
 
@@ -407,13 +397,8 @@ the relay chain side’s cores and how many cores a parachain uses.
 
 ### Implementation
 
-:::caution Unable to use multiple cores!
-
-The coretime chain does not prohibit ordering multiple cores and assigning them to the same
-parachain. However, elastic scaling is still in the works **so don't do this, you will not be able
-to use those cores.**
-
-:::
+!!!caution "Unable to use multiple cores!"
+    The coretime chain does not prohibit ordering multiple cores and assigning them to the same parachain. However, elastic scaling is still in the works **so don't do this, you will not be able to use those cores.**
 
 #### What do I need to do for my parachain to continue working in the switch to coretime?
 

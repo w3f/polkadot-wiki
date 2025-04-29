@@ -1,11 +1,10 @@
 ---
-id: build-hrmp-channels
 title: Opening HRMP Channels
-sidebar_label: Opening HRMP Channels
-description: Steps on how to open HRMP channels between parachains.
-keywords: [HRMP, parachain, statemint, proposal, asset hub, statemine]
-slug: ../build-hrmp-channels
+description: Learn how to establish HRMP channels for communication between parachains on Polkadot.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 In order to communicate over [HRMP](../learn/learn-xcm-transport.md#hrmp-xcmp-lite), parachains must
 establish channels by registering them on the relay chain. Like

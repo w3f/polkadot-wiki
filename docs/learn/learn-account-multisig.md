@@ -1,18 +1,10 @@
 ---
-id: learn-account-multisig
 title: Multi-Signature Accounts
-sidebar_label: Multi-Signature Accounts
-description: Multi-signature Accounts on Polkadot.
-keywords: [account, multisig, polkadot account, polkadotjs, multix]
-slug: ../learn-account-multisig
+description: Learn how to create and manage multi-signature accounts on Polkadot for enhanced security and group decision-making.
 ---
 
-:::info Multisig Apps
-
-See the [multisig apps](../general/multisig-apps.md) page for more information about user-friendly
-tools about multi-signature accounts.
-
-:::
+!!!info "Multisig Apps"
+    See the [multisig apps](../general/multisig-apps.md) page for more information about user-friendly tools about multi-signature accounts.
 
 It is possible to create multi-signature accounts (multisig) in Substrate-based chains. A multisig
 is composed of one or more addresses and a threshold. The threshold defines how many signatories
@@ -44,9 +36,5 @@ threshold, they will immediately have access to these tokens.
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the
-[Polkadot-JS guides about multi-signature accounts](./learn-guides-accounts-multisig.md).
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about multi-signature accounts](./learn-guides-accounts-multisig.md).

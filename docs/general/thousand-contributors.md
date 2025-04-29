@@ -1,9 +1,6 @@
 ---
-id: doc-thousand-contributors
 title: Thousand Contributors Program
-sidebar_label: Thousand Contributors
-description: The Thousand Contributors Program and How it can Support your Contributions.
-slug: ../thousand-contributors
+description: Learn about the Thousand Contributors Program, supporting and rewarding community contributions in the Polkadot and Kusama ecosystems.
 ---
 
 The [Thousand Contributors Program](https://github.com/w3f/1KC) is an initiative maintained by Web3
@@ -12,12 +9,9 @@ support and reward community contributions. The program focuses on rewarding con
 areas of technical education, community, and support that relate to the Polkadot and Kusama
 ecosystems.
 
-:::note The pilot phase of Thousand Contributors Program has ended
-
-You can still submit your intent to participate. The submissions will be reviewed and accepted on a
-case-by-case basis.
-
-:::
+!!!note 
+      The pilot phase of Thousand Contributors Program has ended
+      You can still submit your intent to participate. The submissions will be reviewed and accepted on a case-by-case basis.
 
 ## How to Participate
 
@@ -30,7 +24,7 @@ You can signal your intent to participate by:
 
 Once you have submitted your contribution proposal, the team will:
 
-1. Evaluate. Your [evaluators](#1kc-evaluators) will differ depending on which area you want to
+1. Evaluate. Your evaluators will differ depending on which area you want to
    contribute.
 2. Accept or deny. Once we review your proposal, we will get in touch with you about the status.
 3. Define your delivery. All tasks will have different delivery requirements; we will communicate

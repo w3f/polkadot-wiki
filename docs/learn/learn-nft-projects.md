@@ -1,51 +1,65 @@
 ---
-id: learn-nft-projects
-title: NFT projects on Polkadot and Kusama
-sidebar_label: NFT Projects
-description: NFT Projects in the Polkadot Ecosystem.
-keywords: [NFT, non-fungible token, NFT 2.0]
-slug: ../learn-nft-projects
+title: NFT Projects on Polkadot and Kusama
+description: Discover NFT projects in the Polkadot ecosystem, including tools, platforms, and innovative use cases.
 ---
 
-:::info Community Page
-
-This page is open to contributions from the community. Please follow the
-[Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation)
-and add your NFT app to this page.
-
-:::
+!!!info "Community Page"
+    This page is open to contributions from the community. Please follow the [Wiki contribution guidelines](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) and add your NFT app to this page.
 
 ## List of NFT Projects
 
 <!-- prettier-ignore -->
 <!-- no toc -->
 
+- [List of NFT Projects](#list-of-nft-projects)
+- [Asset Hub](#asset-hub)
 - [Astar](#astar)
 - [Basilisk](#basilisk)
+- [Crust](#crust)
+- [Darwinia Network](#darwinia-network)
 - [KodaDot](#kodadot)
+  - [History of KodaDot](#history-of-kodadot)
+  - [Ecosystem Tools by KodaDot](#ecosystem-tools-by-kodadot)
+- [MNet Continuum](#mnet-continuum)
 - [Moonbeam](#moonbeam)
-- [RMRK](#rmrk)
-- [Asset Hub](#asset-hub)
+- [Mythical](#mythical)
+- [NFTMozaic](#nftmozaic)
+- [Nodle](#nodle)
 - [Unique Network](#unique-network)
+
+## Asset Hub
+
+The Asset Hub is a [system chain](./learn-system-chains.md) which provides functionality for deploying
+and transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently
+hosts [Uniques pallet](./learn-nft-pallets.md#uniques-pallet) (its use on AssetHub is not encouraged)
+and the [NFTs pallet](./learn-nft-pallets.md#nfts-pallet).
+
+A more in-depth overview of the Asset Hub pallets and developer resources available to the
+developers can be found in the dedicated [section about NFT pallets](./learn-nft-pallets.md).
 
 ## Astar
 
-[Astar Network](https://astar.network) and its sister network
-[Shiden Network](https://shiden.astar.network) are the smart contract infrastructure in the Polkadot
-Ecosystem. Astar Ecosystem ("Astar") supports NFTs developed with EVM smart contracts and WASM smart
-contracts.
+[Astar Network](https://astar.network/) and its sister network
+[Shiden Network](https://shiden.astar.network/) are smart contract infrastructure in the Polkadot
+Ecosystem, i.e. they are rollups that support EVM smart contracts. Astar supports NFTs developed
+with EVM smart contracts and Wasm smart contracts.
 
-Astar has all toolings available that every EVM NFT developer knows. The availability of those
-toolings makes the onboarding to Astar networks very attractive to any developer looking to explore
-the Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides
-supporting all EVM toolings, Astar also bootstrapped the WASM smart contract environment for NFT
-developers writing smart contracts with [ink!](https://use.ink) based on
+Astar has all the toolings available that every EVM NFT developer knows. The availability of those
+toolings makes the onboarding to Astar networks desirable to any developer looking to explore the
+Polkadot Ecosystem. Astar has an active community of artists and NFT enthusiasts. Besides supporting
+all EVM toolings, Astar also bootstrapped the Wasm smart contract environment for NFT developers
+writing smart contracts with [ink!](https://use.ink/) based on
 [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals).
 
-The main advantage of having a multi-virtual machine environment for NFT developers is that it will
-give more possibilities to the builders for the use case they are developing. With the support of
-WASM smart contracts, developers can develop solutions like [RMRK](./learn-nft#rmrk) with smart
-contracts.
+The main advantage of having a multi-virtual machine environment for NFT developers is that it gives
+builders more possibilities for the use cases they are developing. With the support of Wasm smart
+contracts, developers can create solutions like RMRK with smart contracts.
+
+Developer tools and documentation links:
+
+- [General information](https://astar.network/blog/An-introduction-to-NFTs-on-Astar-38359)
+- [Generating PSP34 NFTs via ink! contracts](https://docs.astar.network/docs/tutorials/from-zero-to-ink-hero/nft/)
+- [EVM NFT management example](https://docs.astar.network/docs/build/EVM/astarbase/#example-use-case-discount-price-on-an-nft)
 
 ## Basilisk
 
@@ -57,30 +71,44 @@ fee is distributed to the original creator of the NFT via the runtime pallet. Ad
 [Basilisk offers a feature](https://github.com/galacticcouncil/Basilisk-node/tree/master/pallets/marketplace)
 that allows creating a buy order for a specific NFT.
 
-These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz).
+These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz/).
 
 ![nft-basilisk](../assets/nft/nft-basilisk.png)
 
-## [KodaDot](https://kodadot.xyz)
+## Crust
 
-[KodaDot](https://kodadot.xyz) is an open-source NFT marketplace that operates on the Dotsama
-(Kusama/Polkadot) network, striving to aggregate various NFT standards (Kusama, RMRK, Asset Hub,
-Basilisk, etc.) in the Dotsama ecosystem, enhancing user experience by abstracting these standards.
+Crust is primarily a storage solution. A
+[separate section](https://wiki.crust.network/docs/en/buildIntegrationNFTDataStorage) is dedicated
+to NFT storage solutions.
+
+## Darwinia Network
+
+Darwinia Network is a decentralized heterogeneous cross-chain bridge protocol built on Substrate. It
+focuses on decentralized cross-chain token swap, exchange, and market and it is an EVM-compatible
+blockchain.
+
+NFT marketplace available [here](https://nft.io/collection/darwinia/assets).
+
+## KodaDot
+
+[KodaDot](https://kodadot.xyz/) is an open-source NFT marketplace that operates on the Polkadot
+Ecosystem and beyond (Polkadot and Kusama Asset Hubs, Mantle, Base, and Immutable zkEVM), striving
+to aggregate various NFT standards and enhancing user experience.
 
 KodaDot's strength lies in its commitment to open-source collaboration. It has transformed into a
 collaborative hub where creators, developers, and community members work collectively for decision
 making, amassing an extensive network of over
 [90 open-source contributors](https://hello.kodadot.xyz/about-us/who-are-we/achievements). This
 robust collaboration has earned KodaDot the
-[number one rank as a dapp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
+[number one rank as a dApp in the Polkadot ecosystem on Github](https://github.com/topics/polkadot).
 
 See below a video tutorial about how to mint your NFT on [the Polkadot Asset Hub](#asset-hub) using
 KodaDot.
 
-<div className="row">
-  <div className="col text--center">
+<div class="row">
+  <div class="col text--center">
     <a href="https://www.youtube.com/watch?v=SKdx4pTgL04">
-      <img src="https://img.youtube.com/vi/SKdx4pTgL04/0.jpg" width="350" style={{ borderRadius: 10, border: '1px solid slategrey' }} />
+      <img src="https://img.youtube.com/vi/SKdx4pTgL04/0.jpg" width="350" style="border-radius: 10px; border: 1px solid slategrey;" />
     </a>
     <p>
       <a href="https://www.youtube.com/watch?v=SKdx4pTgL04">KodaDot Tutorial on Minting NFTs</a>
@@ -91,14 +119,14 @@ KodaDot.
 For more information about minting using KodaDot see
 [this step-by-step tutorial](https://hello.kodadot.xyz/tutorial/minting/how-to-mint-nfts-on-polkadot-asset-hub-using-kodadot).
 
-### The Team Behind KodaDot
+### History of KodaDot
 
 KodaDot began as the first
 [unofficial explorer for RMRKv0.0.1](https://kusama.polkassembly.io/motion/256)
 [contributing to RMRK protocol](https://github.com/rmrk-team/rmrk-spec/issues/10). It later
 [received Kusama Treasury funding](https://kusama.polkassembly.io/motion/349), which propelled the
-team to create the
-[best end-user experience on the Asset hub](https://kusama.polkassembly.io/motion/349).
+team to create
+[great end-user experience on the Asset hub](https://kusama.polkassembly.io/motion/349).
 
 In the summer of 2022, KodaDot won the first prize at the
 [Polkadot North American event](https://devpost.com/software/kodadot-moonsama) for implementing
@@ -122,9 +150,18 @@ the SubSquid indexer. This platform also presents searchable items and collectio
 on-chain transactions into deep insights about collection ownership dynamics for end-users. For more
 info about KodaDot check out [link](https://hello.kodadot.xyz/).
 
+## MNet Continuum
+
+MNet Continuum (ex BitCountry) specializes in providing Metaverse as a Service (MaaS) to all
+networks. Their decentralized application (dApp) offers users the tools to create and customize a
+metaverse, run and reward a community through immersive quests, and mint and trade NFTs. Users can
+enjoy metaverse gaming, learning and networking.
+
+[Minting And NFT Generators](https://metaversenw.gitbook.io/user-manual/nfts/what-is-an-nft)
+
 ## Moonbeam
 
-[Moonbeam](https://moonbeam.network) and its Kusama counterpart Moonriver are full EVM deployments
+[Moonbeam](https://moonbeam.network/) and its Kusama counterpart Moonriver are full EVM deployments
 with Ethereum RPC endpoints.
 
 This means that the entire toolkit offered to other EVM chains (stacks like Hardhat, Remix, Truffle,
@@ -141,74 +178,138 @@ integration of custom pallets into the runtime is still possible, making NFT spe
 at the chain runtime level a reliable way to keep EVM compatibility of tools while at the same time
 optimizing storage and interactions for rich NFTs.
 
-## RMRK
+A convenient directory of Moonbeam dApps can be found here:
+[Moonbeam dApps](https://apps.moonbeam.network/moonbeam/app-dir&sa=D&source=docs&ust=1738885283203398&usg=AOvVaw1bnTE-WD_mIwe8VvoUxlmh)
 
-[RMRK](https://rmrk.app) is a set of NFT 2.0 standards developed in three distinct code flavors:
+Developer tools and documentation links:
 
-1. ["Colored coins"](https://en.bitcoin.it/wiki/Colored_Coins) approach, as on Bitcoin, originally
-   developed as a "hack" on the Kusama chain. This is now deprecated, and it is recommended
-   implementers use any of the other options.
-2. Solidity contracts, compatible with any EVM blockchain in and outside the Polkadot ecosystem.
-   Documented [here](https://evm.rmrk.app)
-3. Rust code (Substrate pallets), compatible with any Substrate chain. Code is available
-   [here](https://github.com/rmrk-team/rmrk-substrate).
+[Minting a Cross-Chain NFT with Axelar SDK](https://docs.moonbeam.network/tutorials/interoperability/using-axelar-sdk/)
+[Deploying an ERC-721 Contract Example](https://docs.moonbeam.network/tutorials/eth-api/thirdweb/)
 
-Additionally, two more flavors are in development:
+## Mythical
 
-1. [Astar](https://astar.network/) are developing the ink! version of RMRK:
-   [code here](https://github.com/rmrk-team/rmrk-ink).
-2. [Gear Technologies](https://www.gear-tech.io/) are developing the Gear implementation:
-   [code and docs here](https://wiki.gear-tech.io/docs/examples/rmrk/).
+[Mythical Games](https://mythicalgames.com/) is an online gaming platform that implements NFTs in
+its gaming ecosystem. Mythical Games has Mythos Chain, an L1 rollup in the Polkadot ecosystem that
+implements the Polkadot NFTs pallet to provide advanced NFT functionalities.
 
-The RMRK NFT 2.0 standards are a set of "NFT legos", primitives that, when put together, allow a
-builder to compose an NFT system of arbitrary complexity without smart contracts.
+Mythical offers a platform for game developers with comprehensive documentation and onboarding
+guides, to ensure anyone can get up and running in time. The primary integration path is REST APIs,
+but SDKs are also available upon request.
 
-### NFT Legos
+Developer tools and documentation links:
 
-1. NFTs can own other NFTs, NFTs can equip other NFTs for visual change
-2. NFTs can have multiple resources (different outputs based on context and resource priority)
-3. NFTs can have on-chain emotes (reactions) for price discovery and social mechanics
-4. NFTs have conditional rendering (e.g. show Mona Lisa as blushing if she got 50 kissy 😘 emoji)
-5. NFTs can be governed by the community via fungible shareholder-tokens (fractionalization of NFTs)
+- [The Mythical Platform API](https://docs.mythicalgames.com/mythical-platform-api)
 
-### NFT from [Kanaria](https://kanaria.rmrk.app)
+## NFTMozaic
 
-![kanaria.png](../assets/nft/kanaria.png)
+NFTMozaic is a Polkadot project created with a goal to establish Polkadot as the leading ecosystem
+for NFT-related applications by providing effective technology, support, business development and
+marketing efforts focused on this market segment.
 
-:::note Multi-resource NFTs
+Its efforts are focused on strengthening the positioning of Polkadot’s NFT ecosystem through
+strategic content, alliances, and growth programs. It aims to launch a grants program for
+consumer-facing MVPs, an NFT-focused website, educational journals, and more.
 
-A multi-resource NFT (gif of statue, and SVG-composable dynamic NFT in one) that can also equip
-other NFTs from within its "inventory".
+NFTMozaic aims to provide a comprehensive entry-point for both business and development aspects of
+the NFT technology. To achieve this it brings together all interested members of the Polkadot
+ecosystem that provide NFT functionality in their projects to the table and strives to establish a
+common guidance and cooperation platform as a way to ensure that all the contributors benefit from a
+joint effort and the best possible solution is sought.
 
-:::
+NFTMozaic links:
 
-Two marketplaces for RMRK-based NFTs exist with hundreds of projects already launched:
+- [X link](https://x.com/nftmozaic)
+- [Telegram NFTMozaic general topics group](https://t.me/NFTMozaic)
+- [Telegram NFTMozaic Tech Support group](https://t.me/https://t.me/nft%5C_moz%5C_support)
 
-- [Singular](https://singular.rmrk.app), the official marketplace
+## Nodle
 
-For a complete introduction into RMRK, see [this presentation](https://url.rmrk.app/wasmconf) or
-read [the non-technical docs](https://docs.rmrk.app).
+The Nodle Network is a decentralized wireless network, composed of Nodle Edge Nodes, powered by the
+Nodle Chain, and the NODL token.
 
-## Asset Hub
-
-The Asset Hub is a generic assets parachain which provides functionality for deploying and
-transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The Asset Hub currently hosts
-[Uniques pallet](./learn-nft-pallets.md#uniques-pallet) and the
-[NFTs pallet](./learn-nft-pallets.md#nfts-pallet) with NFT 2.0 functionalities.
+[Nodle NFT Minting Tool](https://docs.nodle.com/nft-minting-tool)
 
 ## Unique Network
 
-[Unique network](https://unique.network/), an NFT-specific blockchain offering innovations such as
-sponsored transactions, bundling fungible tokens with non-fungibles, and splitting NFTs into
-fungible tokens for partial ownership.
-
-Unique Network have launched two NFT projects to date: Substrapunks as part of
-[Hackusama](https://hackusama.devpost.com/), and Chelobricks as a promotion during
-[Polkadot Decoded](https://decoded.polkadot.network/).
+[**Unique Network**](https://unique.network) is a specialized Polkadot parachain offering **advanced
+“NFT 2.0”** capabilities—including dynamic, nested, fractionalized and composable NFTs—coupled with
+a **hybrid** environment that blends **EVM and Substrate**. Positioned as a **front-runner** for
+innovative NFT solutions, Unique Network streamlines creation, management, and cross-chain
+functionality via sophisticated developer tools and an in-house **NFT SDK** that substantially
+simplifies implementation of advanced NFT features and shortens the time-to-deployment. This
+approach allows dApps to harness both **advanced Substrate logic, security and native speed** and
+**EVM** compatibility, which aligns with Polkadot’s emerging “Cloud + Hub” framework.
 
 Unique Network focuses on B2B use cases, aiming to be an infrastructure provider for others to build
 on, rather than entering the NFT space themselves as an end-product.
 
-Unique Network aims to make their marketplace technology open-source and whitelabel-friendly. In
-theory, it should be trivial to set up a new marketplace for your project using Unique's technology.
-Unique network aims to be a parachain on Polkadot, and Quartz is their Kusama counterpart.
+Unique Network is spearheading the effort to develop the XCM utility towards accomplishing a
+bridgeless and secure cross-chain interoperability and transfer mechanism for NFTs in the Polkadot
+ecosystem.
+
+The Unique Network blockchain is specifically designed to support advanced NFT features. One very
+successful example of how this approach resolves complexities is demonstrated in the following
+unique way to create NFTs. In the Unique Network blockchain implementation builds NFTs as
+independent addressable objects instead of enumerated entities of a contract (ERC-721, Ethereum, EVM
+approach.) Since they are addressable, they can explicitly become recipients of a transfer. This
+means that they can receive and contain another NFT just like a wallet does and in this the
+receiving NFT becomes a container to the contained/received NFT thus forming an object tree with a
+parent/child relationship. As a result the nesting mechanism stems from the nature of
+transferability of blockchain objects, requires no additional contracts and is intrinsically a fast
+operation managed by simple transfers instead of dedicated nesting operations.
+
+These are the additional advantages of Unique Network dedicated NFT 2.0 blockchain:
+
+- Nested NFTs can be organised into structured bundles
+- NFT bundles can contain NFTs, RFTs and fungible tokens
+- The metadata format of an NFT can have arbitrary attribute structure and complexity
+- An NFT is intrinsically multi-asset
+- Mutability of attributes can be limited to only specific addresses or contracts providing access
+  control to metadata modification
+- Management rights capability allows for management roles i.e. separation of application and owner
+  rights to metadata management
+- Intrinsic mutability of metadata provides out-of-the box, contractless dynamic NFT capabilities
+- NFTs can be fractionalised (RFTs - refungible tokens)
+- Due to metadata format flexibility and mutability, it is possible and very simple to implement
+  on-chain data obfuscation for enhanced privacy
+
+Unique Network provides a fully featured EVM with a few perks:
+
+- The EVM address space (0x…) is mapped to the corresponding Substrate address space which
+  simplifies object and contract access between the EVM and Substrate objects via CrossAddressing
+  mechanism. This means that you can mix and match technologies. For example you can have a native
+  NFT call an EVM contract. This is the core mechanism for extending and customising NFTs for
+  specific use cases.
+- This also means that a native Substrate object is addressable in EVM applications without an
+  intermediary address handling contract, i.e. applications like the Metamask wallet can address
+  Unique Network Substrate objects directly. This greatly improves efficiency.
+- Unique network EVM utilities contain interfaces to the blockchain’s core Substrate pallet
+  functions which allows Solidity contracts to directly invoke them.
+- This interoperability is fully supported by the JS/TS SDK allowing rapid development even in the
+  mix-and-match scenario.
+
+The recommended and most efficient way to build on Unique Network is via the JS/TS SDK version 2.0.
+The SDK interacts with the blockchain via an RPC eliminating the need to build and maintain a
+complex development environment. It fully implements the
+[Unique Metadata Schema 2.0](https://docs.unique.network/reference/schemas/). The Unique SDK allows
+the creation of NFT assets on the Asset Hub as well which makes it a very versatile tool for NFT
+management and creation on the Polkadot ecosystem.
+
+Developer tools and documentation links:
+
+- [General information](https://docs.unique.network/about)
+- [Substrate native advanced NFTs (NFT 2.0)](https://docs.unique.network/build/sdk/v2/quick-start.html)
+- [Building NFTs in an EVM](https://docs.unique.network/build/evm/)
+- [Tutorials/Cookbook](https://docs.unique.network/tutorials)
+- [Youtube Workshops and Tutorials](https://www.youtube.com/watch?v=StfRap-dvks&list=PLFSU2-RmX858vLu9a5bukOTpJ1dYzsE4o)
+- [Reference Documentation](https://docs.unique.network/reference)
+- [NFT Marketplace](https://unqnft.io/market?filterState=)
+- [Indexer/Block Explorer](https://uniquescan.io/unique/)
+
+The most prominent projects that currently implement Unique Network’s advanced NFT capabilities are
+
+- [TapNation](https://www.tap-nation.io/)
+- [ForeverHasFallen](https://foreverhasfallen.com/)
+
+A more comprehensive list can be found on the pages of the
+[official website](https://unique.network).

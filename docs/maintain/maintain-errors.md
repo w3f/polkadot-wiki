@@ -1,11 +1,10 @@
 ---
-id: maintain-errors
-title: Errors and How to Resolve Them
-sidebar_label: Resolving Errors
-description: Common errors you might encounter and how they can be resolved.
-keywords: [errors, common errors, fix errors]
-slug: ../maintain-errors
+title: Resolving Errors
+description: Common errors in Substrate-based chains and how to resolve them using tools like Polkadot-JS Apps.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 Errors in Substrate-based chains are usually accompanied by descriptive messages. However, to read
 these messages, a tool parsing the blockchain data needs to request _chain metadata_ from a node.
@@ -77,14 +76,11 @@ The table below lists the most commonly encountered errors and ways to resolve t
 | Payment            | Unable to pay for TX fee.                                                                                    | You might not have enough free balance to cover the fee this transaction would incur.                                                                                                                                                                                                                                                                                                     |
 | Temporarily banned | The transaction is temporarily banned.                                                                       | The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.                                                                                                                                                                                                                                                                        |
 
-:::note Future Error
-
-This error will not cause the TX to be discarded immediately. Instead, it will be sent to the
-[futures queue](https://docs.substrate.io/main-docs/fundamentals/transaction-lifecycle/), where it
-will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to
-some other error (ex. the validity period expires).\*
-
-:::
+!!!note "Future Error"
+    This error will not cause the TX to be discarded immediately. Instead, it will be sent to the
+    [futures queue](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/transactions/#lifecycle-of-a-transaction), where it
+    will wait to be executed at the correct place in the nonce sequence OR it will get discarded due to
+    some other error (ex. the validity period expires).
 
 ## Error Table
 

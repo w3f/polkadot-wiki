@@ -1,10 +1,6 @@
 ---
-id: web3-and-polkadot
 title: Web3 and Polkadot
-sidebar_label: Web3 and Polkadot
-description: Introduction to Web3 and Polkadot's Role in shaping the Web3 Vision.
-keywords: [web3, polkadot, light clients, decentralization]
-slug: ../web3-and-polkadot
+description: Learn how Polkadot contributes to Web3 by enabling decentralization, data ownership, trustless environments, and interoperability.
 ---
 
 Back in the early 2000's the internet featured read-only, static, basic web pages. The online
@@ -24,12 +20,10 @@ internet into a decentralized web, where users control their data and identity i
 environment. The Web3 movement aims to remove intermediaries and build trustless infrastructure.
 Web3 is an interactive and collaborative web where users can read, write, and **own** data.
 
-:::note The Web3 Movement
+!!!note "The Web3 Movement"
+    To learn more about the Web3 movement, check out this video from the [Web3 Summit](https://youtu.be/l44z35vabvA)
 
-To learn more about the Web3 movement, check out this video from the
-[Web3 Summit](https://youtu.be/l44z35vabvA)
 
-:::
 
 ## Data Ownership
 
@@ -58,7 +52,7 @@ needed.
 To summarize, data ownership comes from the fact that any message you sign with your private key
 comes from your digital identity, and the signature proof can be cryptographically verified. Unless
 someone else stole your keys, you and only you are held accountable for signing the messages and are
-responsible for the information on your account. Transferring an [NFT](./learn-nft-index) between
+responsible for the information on your account. Transferring an [NFT](../learn/learn-nft.md) between
 two accounts is essentially a transfer of ownership.
 
 ## Trustless Environment
@@ -103,7 +97,7 @@ Data retrievability is dependent on how resilient the blockchain is. Resiliency 
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
 network can sustain on its own.
 
-:::info Data Retrievability vs. Data Availability
+!!!info Data Retrievability vs. Data Availability
 
 Data **retrievability** is the ability of nodes to retrieve historical information from the
 blockchain. Historical data is not needed to verify new blocks; it is only required for synching
@@ -114,7 +108,7 @@ a specific block. It does not necessarily imply that the data is accessible fore
 information about data availability on Polkadot, see the
 [dedicated section on the parachain protocol page](../learn/learn-parachains-protocol.md#availability-and-validity-anv-protocol).
 
-:::
+
 
 ### Decentralization
 
@@ -143,7 +137,7 @@ of new validator nodes to increase the level of node decentralization.
 
 ### Decentralized Storage
 
-[Blockspace](./glossary/#blockspace) is limited and valuable. Not all data we have can be stored on
+[Blockspace](./glossary.md#blockspace) is limited and valuable. Not all data we have can be stored on
 the blockchain. Large files like pictures, music, movies, etc., typically will never be held on the
 blockchain. But where can we stored those files? To stick to the web3 vision, we need a resilient
 and decentralized storage solution.

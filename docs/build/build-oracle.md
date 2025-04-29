@@ -1,11 +1,10 @@
 ---
-id: build-oracle
 title: Oracles
-sidebar_label: Oracles
-description: Information about building with oracles.
-keywords: [build, oracles, contracts]
-slug: ../build-oracle
+description: Discover how to integrate oracles for real-world data in decentralized applications on Polkadot and Kusama.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 In the blockchain context, an _oracle_ is a way to bring real-world data onto the blockchain so that
 it can be used by a decentralized application.

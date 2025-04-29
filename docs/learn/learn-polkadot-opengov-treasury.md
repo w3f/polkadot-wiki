@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-opengov-treasury
 title: Treasury
-sidebar_label: Treasury
-description: Polkadot's On-chain Treasury.
-keywords: [treasury, funds, funding, tips, tipping]
-slug: ../learn-polkadot-opengov-treasury
+description: Learn about Polkadot's on-chain treasury, its inflow and outflow mechanisms, and how to submit proposals for funding.
 ---
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
@@ -13,12 +9,8 @@ The Treasury is a pot of funds collected through a portion of block production r
 [system account](./learn-account-advanced.md#system-accounts) that cannot be controlled by any
 external account; only the system internal logic can access it.
 
-:::tip Creating a Treasury Proposal on Polkadot OpenGov
-
-If you would like to create a treasury proposal on Polkadot OpenGov, follow the instructions
-outlined on [this how-to guide](./learn-guides-treasury.md#creating-a-treasury-proposal).
-
-:::
+!!!tip "Creating a Treasury Proposal on Polkadot OpenGov"
+    If you would like to create a treasury proposal on Polkadot OpenGov, follow the instructions outlined on [this how-to guide](./learn-guides-treasury.md#creating-a-treasury-proposal).
 
 ## Treasury Inflow and Outflow
 
@@ -36,7 +28,7 @@ mechanisms:
 The outflow is determined by the following mechanisms:
 
 - **Burned tokens:** at the end of each spend period,
-  **[a fraction](../general/chain-state-values.md#treasury-burn-factor) of the available funds are
+  **[a fraction](../general/chain-state-values.md) of the available funds are
   burned**.
 - **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
   community and need to be approved by governance. Then, payouts occur at the end of a
@@ -44,14 +36,10 @@ The outflow is determined by the following mechanisms:
 - **Tips:** smaller payouts directly to grantees that can happen within a
   [spend period](../general/glossary.md#spend-period).
 
-:::info Spend Period Schedule
-
-On Polkadot-JS UI, navigate to Governance > Treasury to view the status of current
-[spend period](../general/glossary.md#spend-period).
+!!!info "Spend Period Schedule"
+    On Polkadot-JS UI, navigate to Governance > Treasury to view the status of current [spend period](../general/glossary.md#spend-period).
 
 ![preimage-whitelist](../assets/treasury/treasury-spend-period.png)
-
-:::
 
 ## Treasury Tracks
 
@@ -95,14 +83,14 @@ bottom right corner. Then,
 
 The treasury currently operates on a single account on-chain. The above tracks manage the outflow of
 the treasury on the network. With _sub_-treasuries, having treasury accounts that correspond to each
-[collective](./learn-system-chains#collectives) is also possible.
+[collective](./learn-system-chains.md#collectives) is also possible.
 
 Rather than have many referenda through OpenGov, the treasury can allocate funds to each
-sub-treasury (through [governance](./learn-polkadot-opengov)), from which each respective collective
+sub-treasury (through [governance](./learn-polkadot-opengov.md)), from which each respective collective
 can spend funds (depending on their specific rule set).
 
 New treasuries could be added to respective
-[system chains](./learn-system-chains#existing-system-chains) through governance by adding more
+[system chains](./learn-system-chains.md#existing-system-chains) through governance by adding more
 instances of this pallet.
 
 ## Multi-Asset Treasury Support
@@ -154,7 +142,7 @@ total value of the bounty. In this sense, the curator's fee can be defined as th
 the amounts paid to child bounty awardees and the total value of the bounty.
 
 Curators are selected through OpenGov referendum after the bounty proposal passes; and they need to
-pay an upfront [deposit](../general/chain-state-values.md#bounty-curator-deposit) to take the
+pay an upfront [deposit](../general/chain-state-values.md) to take the
 position. This deposit can be used to punish curators if they act maliciously. However, if they are
 successful in managing the bounty to completion, they will receive their deposit back, and part of
 the bounty funding as a payment for their efforts.
@@ -166,7 +154,7 @@ mechanism. A Bounty is a reward for a specified body of work or set of objective
 executed for a predefined treasury amount designated to be paid out. The responsibility of assigning
 a payout address once the specified set of objectives is completed is delegated to the curator.
 
-The bounty has a [predetermined duration](../general/chain-state-values.md#bounty-duration), with
+The bounty has a [predetermined duration](../general/chain-state-values.md), with
 possible extension(s) to be requested by the curator. To maintain flexibility during the tasks’
 curation, the curator will also be able to create child bounties for more granularity in the
 allocation of funds and as part of a nested iteration of the bounty mechanism.
@@ -178,9 +166,5 @@ access funds directly from the parent bounty without going through an OpenGov re
 
 ---
 
-:::info Polkadot-JS Guides
-
-If you are an advanced user, see the [Polkadot-JS guides about bounties](./learn-guides-bounties.md)
-and [treasury](./learn-guides-treasury.md).
-
-:::
+!!!info "Polkadot-JS Guides"
+    If you are an advanced user, see the [Polkadot-JS guides about bounties](./learn-guides-bounties.md) and [treasury](./learn-guides-treasury.md).

@@ -1,13 +1,10 @@
 ---
-id: build-guides-install-deps
-title: Install Polkadot SDK Dependencies
-sidebar_label: Install Dependencies
-description: Install dependencies for developing for using the Polkadot SDK
-keywords: [coretime, blockspace, parathread, parachain, cores]
-slug: ../build-guides-install-deps
+title: Install Dependencies
+description: Learn how to install dependencies for developing with the Polkadot SDK on various platforms.
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem";
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 ## macOS
 
@@ -173,43 +170,30 @@ To install the Rust toolchain on Linux:
 
    Click the tab titles to see examples for other Linux operating systems:
 
-<!-- prettier-ignore -->
-<Tabs groupId="clients" values={[ { label: 'Debian', value: 'deb'}, { label: 'Arch', value: 'arch'}, { label: 'Fedora', value: 'fed'}, { label: 'openSUSE', value: 'opensuse'} ]}>
+=== "Debian"
 
-<TabItem value="deb">
+    ```sh
+    sudo apt install --assume-yes git clang curl libssl-dev llvm libudev-dev make protobuf-compiler
+    ```
 
-```sh
-sudo apt install --assume-yes git clang curl libssl-dev llvm libudev-dev make protobuf-compiler
-```
+=== "Arch"
 
-</TabItem>
+    ```sh
+    pacman -Syu --needed --noconfirm curl git clang make protobuf
+    ```
 
-<TabItem value="arch">
+=== "Fedora"
 
-```sh
-pacman -Syu --needed --noconfirm curl git clang make protobuf
-```
+    ```sh
+    sudo dnf update
+    sudo dnf install clang curl git openssl-devel make protobuf-compiler
+    ```
 
-</TabItem>
+=== "openSUSE"
 
-<TabItem value="fed">
-
-```sh
-sudo dnf update
-sudo dnf install clang curl git openssl-devel make protobuf-compiler
-```
-
-</TabItem>
-
-<TabItem value="opensuse">
-
-```sh
-sudo zypper install clang curl git openssl-devel llvm-devel libudev-devel make protobuf
-```
-
-</TabItem>
-
-</Tabs>
+    ```sh
+    sudo zypper install clang curl git openssl-devel llvm-devel libudev-devel make protobuf
+    ```
 
 Remember that different distributions might use different package managers and bundle packages in
 different ways. For example, depending on your installation selections, Ubuntu Desktop and Ubuntu

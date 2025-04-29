@@ -1,10 +1,6 @@
 ---
-id: ecosystem-funds
 title: Polkadot Ecosystem Development Funds
-sidebar_label: Ecosystem Funds
-description: An Overview of Trusted Polkadot Ecosystem Development Funds.
-keywords: [funding, vc, venture, venture capital, fund, ecosystem fund]
-slug: ../ecosystem-funds
+description: Overview of trusted Polkadot ecosystem development funds supporting parachains and applications.
 ---
 
 The Polkadot has Ecosystem Development Funds aiming to support the development of parachains and

@@ -1,20 +1,6 @@
 ---
-id: learn-safrole
 title: "Polkadot Block Production: SAFROLE"
-sidebar_label: SAFROLE
-description: The Consensus Mechanism of Polkadot.
-keywords:
-  [
-    consensus,
-    proof of stake,
-    nominated proof of stake,
-    hybrid consensus,
-    block production,
-    sassafras,
-    safrole,
-    babe,
-  ]
-slug: ../learn-safrole
+description: SAFROLE is a SNARK-based block production algorithm providing anonymity and fork-free, constant time block production in Polkadot.
 ---
 
 SAFROLE (formerly known as SASSAFRAS) is a SNARK-based block production algorithm that provides

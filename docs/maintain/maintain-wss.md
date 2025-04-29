@@ -1,17 +1,16 @@
 ---
-id: maintain-wss
 title: Secure the WebSocket
-sidebar_label: Secure the WebSocket
-description: Steps on setting up a secure socket for remote connections.
-keywords: [web socket, remote, connection, secure websocket]
-slug: ../maintain-wss
+description: Steps to secure WebSocket connections for remote access to your Polkadot node using SSL-enabled proxies.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 ## Secure a WS Port
 
 A non-secure ws port can be converted to a secure wss port by placing it behind an SSL-enabled
-proxy. This can be used to secure a [bootnode](/docs/maintain-bootnode) or secure a
-[RPC server](/docs/maintain-rpc). The SSL-enabled apache2/nginx/other proxy server redirects
+proxy. This can be used to secure a [bootnode](./maintain-bootnode.md) or secure a
+[RPC server](./maintain-rpc.md). The SSL-enabled apache2/nginx/other proxy server redirects
 requests to the internal ws and converts it to a secure (wss) connection. For this, you will need an
 SSL certificate for which you can use a service like letsencrypt or self-signing.
 

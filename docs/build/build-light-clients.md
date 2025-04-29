@@ -1,11 +1,10 @@
 ---
-id: build-light-clients
 title: Using Light Clients
-sidebar_label: Using Light Clients
-description: Information about light client options.
-keywords: [build, substrate, substrate connect, light client]
-slug: ../build-light-clients
+description: Learn about Substrate Connect and light clients for decentralized, secure, and efficient blockchain interactions.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 ## Blockchain User Interfaces are still Centralized
 
@@ -23,14 +22,14 @@ done through two main approaches:
      centralized and insecure.
 
 There is now a new paradigm: instead of specifying a centralized RPC node, developers just need to
-define the blockchain's [chain specification](https://docs.substrate.io/main-docs/build/chain-spec/)
+define the blockchain's [chain specification](https://docs.polkadot.com/develop/parachains/deployment/generate-chain-specs/)
 for their application to synchronize with the chain. This is possible with Substrate connect.
 
 ## What is Substrate Connect?
 
 ### Replacing [RPC node](build-node-interaction.md) reliance with light clients
 
-[Substrate connect](https://substrate.io/substrate-connect/) is a JavaScript library and browser
+[Substrate connect](https://chromewebstore.google.com/detail/substrate-connect-extensi/khccbhhbocaaklceanjginbdheafklai) is a JavaScript library and browser
 extension that builds on the [PolkadotJS API](https://polkadot.js.org/api/) to enable developers to
 build application-specific light clients for Substrate chains. There is no installation required or
 optional extension with minimal or no maintenance. The node is run by the JavaScript engine.
@@ -85,12 +84,9 @@ The [browser extension](https://www.npmjs.com/package/@substrate/connect-extensi
 end-users to interact with applications connected to multiple blockchains or connect their own
 blockchains to applications that support it.
 
-:::note
-
-Substrate Connect will auto-detect whether a user is using the extension. If not, the Wasm light
-client will be created in-page for them.
-
-:::
+!!!note
+    Substrate Connect will auto-detect whether a user is using the extension. If not, the Wasm light
+    client will be created in-page for them.
 
 ## Resources
 

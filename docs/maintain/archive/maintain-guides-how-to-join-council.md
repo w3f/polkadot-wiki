@@ -1,17 +1,20 @@
 ---
-id: maintain-guides-how-to-join-council
 title: Join the Council
-sidebar_label: Join the Council
-description: Steps on how to join the official on-chain council.
-keywords: [council, how to join council, governance, candidate]
-slug: ../maintain-guides-how-to-join-council
+description: Learn how to submit your candidacy and participate in Polkadot's on-chain council elections.
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
 
-<MessageBox message="The content on this page is archived. For up-to-date information about governance, see the
-[Polkadot OpenGov page](../learn-polkadot-opengov)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived. For up-to-date information about governance, see the
+    <a href="../learn-polkadot-opengov" target="_blank" rel="noopener noreferrer">
+      Polkadot OpenGov page.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The council is an elected body of on-chain accounts that are intended to represent the passive
 stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
@@ -26,12 +29,9 @@ wins, the bond will be forfeited. You can receive your bond back if you manually
 candidacy before losing. Runners-up are selected after every round and are reserved members in case
 one of the winners gets forcefully removed.
 
-:::note
-
-Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.0033 KSM on
-Kusama.
-
-:::
+!!!note
+    Currently the bond for submitting a council candidacy on Polkadot is 100 DOT, and 0.0033 KSM on
+    Kusama.
 
 It is a good idea to announce your council intention before submitting your candidacy so that your
 supporters will know when they can start to vote for you. You can also vote for yourself in case no

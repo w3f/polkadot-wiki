@@ -1,23 +1,13 @@
 ---
-id: faq
 title: Frequently Asked Questions (FAQs)
-sidebar_label: FAQ
-description: FAQs to Help you Navigate on Polkadot.
-keywords: [FAQ, questions]
-slug: ../faq
+description: Find answers to common questions about Polkadot and its ecosystem.
 ---
 
-:::info
-
-This FAQ focuses on technical questions for users interested in developing applications for
-Polkadot. If you have a more general question, you may wish to search for the answer on our support
-[Knowledge Base](https://support.polkadot.network/support/home) or the main
-[Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
-please feel free to ask on the Polkadot Watercooler
-[Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or contact
-[Polkadot Support](https://support.polkadot.network).
-
-:::
+!!!info
+    This FAQ focuses on technical questions for users interested in developing applications for
+    Polkadot. If you have a more general question, you may wish to search for the answer on our support
+    [Knowledge Base](https://support.polkadot.network/support/home) or the main
+    [Polkadot network FAQ](https://polkadot.network/faq).
 
 ## Polkadot Launch
 
@@ -183,16 +173,12 @@ the ecosystem.
 ### What is Polkadot's Transactions Per Second (TPS)?
 
 Polkadot is a heterogeneous sharded network comprising a relay chain and numerous parachains, which
-are all individual blockchains built on [Substrate](https://substrate.io/) executing in parallel.
+are all individual blockchains built on [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) executing in parallel.
 Hence, the Transactions Per Second (TPS) of Polkadot is a number that encompasses all the
 transactions on the relay chain as well as parachains. As the transactions on these Substrate-based
-blockchains are [weights based](https://docs.substrate.io/build/tx-weights-fees/), it makes sense to
+blockchains are [weights based](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#transactions-weights-and-fees), it makes sense to
 use TPS as a measure for the network performance if all the transactions carry the same weight.
-[Performance benchmark tests](https://twitter.com/gavofyork/status/1270025498580656134) show that
-Substrate-based blockchains can achieve over 1000 TPS for balance transfer transactions. Assuming
-Polkadot is running over 100 parachains; the projected TPS is well over 100,000. With
-[asynchronous backing upgrade](../learn/learn-async-backing.md), the TPS is expected to increase
-tenfold to 1,000,000.
+A performance benchmark test performed in 2024 (dubbed ["The Spammening"](https://polkadot.com/spammening/)) demonstrated that Polkadot is capable of at least 623,000 TPS. The test delivered 143,000 TPS when utilizing only 23% of network cores on Kusama, Polkadot's live sister network that shares its codebase.
 
 It is essential to realize that TPS is inherently a subjective measurement with numerous factors
 that can contribute to it. It's hard to gauge the usefulness of TPS in isolation (when compared to
@@ -353,7 +339,7 @@ base_fee + (tx_length * length_fee) + WeightToFee(weight)
 ```
 
 Please see the
-[fee calculation](https://docs.substrate.io/reference/how-to-guides/weights/calculate-fees/) page in
+[fee calculation](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#how-fees-are-calculated) page in
 the Substrate documentation for more detailed information.
 
 ## Answered by Gav series

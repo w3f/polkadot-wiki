@@ -1,17 +1,25 @@
 ---
 id: learn-guides-assets
-title: Polkadot-JS Guides about Asset Hub
+title: Asset Hub Guides
 sidebar_label: Asset Hub Guides
-description: Polkadot-JS Guides about Asset Hub.
+description: Explore guides for managing assets on the Asset Hub using Polkadot-JS UI.
 keywords: [asset hub, assets, statemine, statemint, polkadot-js]
 slug: ../learn-guides-assets
 ---
 
-import MessageBox from "../../components/MessageBox"; import "../../components/MessageBox.css";
 import DocCardList from '@theme/DocCardList';
 
-<MessageBox message="Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-[Polkadot Support Team](https://support.polkadot.network/support/home). For more user-friendly tools
-see the [wallets](./wallets-index), [apps](./apps-index) and [dashboard](./dashboards-index) pages." />
 
-<DocCardList />
+
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+      Polkadot Support Team.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
+
+<!-- TODO: INDEX CARDS -->

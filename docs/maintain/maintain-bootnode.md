@@ -1,19 +1,15 @@
 ---
-id: maintain-bootnode
 title: Set up a Boot Node
-sidebar_label: Set up a Boot Node
-description: Steps on setting up a boot node.
-keywords: [bootnode, web socket, remote, connection, secure websocket]
-slug: ../maintain-bootnode
+description: Learn how to set up a boot node to help other nodes connect to the Polkadot network.
 ---
 
-:::note
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
 
-When you first start a node, it has to find a way to find other nodes in the network. For that
-purpose, you need "bootnodes". After the first bootnode is found, it can use that node’s connections
-to continue expanding and play its role in the network, like participating as a validator.
 
-:::
+!!!note
+    When you first start a node, it has to find a way to find other nodes in the network. For that
+    purpose, you need "bootnodes". After the first bootnode is found, it can use that node’s connections
+    to continue expanding and play its role in the network, like participating as a validator.
 
 ## Accessing the Bootnode
 
@@ -24,7 +20,7 @@ The consensus is that bootnodes have to be accessible in three ways:
 - **p2p/ws**: the WebSocket version, which can be set by `--listen-addr /ip4/0.0.0.0/tcp/<port>/ws`.
 - **p2p/wss**: the _secure_ websocket version. An SSL-secured connection to the p2p/ws port must be
   achieved by a proxy since the node cannot include certificates. It is needed for light clients.
-  See [here](/docs/maintain-wss) for info about setting this up.
+  See [here](./maintain-wss.md) for info about setting this up.
 
 ## Network Key
 
@@ -75,11 +71,8 @@ If we have the above node running with DNS name `dot-bootnode.stakeworld.io`, pr
 certificate and node-id `12D3KooWAb5MyC1UJiEQJk4Hg4B2Vi3AJdqSUhTGYUqSnEqCFMFg` then the following
 commands should give you a: "syncing 1 peers".
 
-:::tip
-
-You can add `-lsub-libp2p=trace` on the end to get libp2p trace logging for debugging purposes.
-
-:::
+!!!tip
+    You can add `-lsub-libp2p=trace` on the end to get libp2p trace logging for debugging purposes.
 
 **p2p**:
 

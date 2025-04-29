@@ -1,11 +1,10 @@
 ---
-id: maintain-networks
-title: Networks
-sidebar_label: Networks
-description: Information about the different networks of the Polkadot ecosystem.
-keywords: [networks, mainnet, testnet, canary, substrate]
-slug: ../maintain-networks
+title: Networks Overview
+description: Explore the main and test networks in the Polkadot ecosystem, including Polkadot, Kusama, and Westend.
 ---
+
+!!! danger "This section will be deprecated. For the latest information, please see the [Polkadot Developer Documentation](https://docs.polkadot.com/)"
+
 
 Polkadot is built on top of Substrate, a modular framework for blockchains. One feature of Substrate
 is to allow for connection to different networks using a single executable and configuring it with a

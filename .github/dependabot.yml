@@ -1,32 +1,13 @@
+# credit to https://til.simonwillison.net/github/dependabot-python-setup for the easy setup!
 version: 2
 updates:
-- package-ecosystem: npm
+- package-ecosystem: pip
   directory: "/"
   schedule:
     interval: daily
     time: "14:30"
+  groups:
+    python-packages:
+      patterns:
+        - "*"
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: "@polkadot/api"
-    versions:
-    - 3.10.1
-    - 4.6.2
-  - dependency-name: "@polkadot/keyring"
-    versions:
-    - 5.6.1
-    - 5.7.1
-    - 5.9.2
-    - 6.2.1
-  - dependency-name: katex
-    versions:
-    - 0.13.1
-  - dependency-name: "@octokit/rest"
-    versions:
-    - 18.4.0
-    - 18.5.0
-  - dependency-name: semver
-    versions:
-    - 7.3.5
-  - dependency-name: ipfs-http-client
-    versions:
-    - 49.0.2

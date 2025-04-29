@@ -1,10 +1,6 @@
 ---
-id: learn-teleport
 title: Teleporting Assets
-sidebar_label: Teleporting Assets
-description: Teleport Assets between Parachains and Relay Chain.
-keywords: [teleport, assets, transfer]
-slug: ../learn-teleport
+description: Learn how Polkadot enables secure asset teleportation between parachains and the relay chain using XCM and SPREE modules.
 ---
 
 One of the main properties that Polkadot brings to the blockchain industry is secure
@@ -14,13 +10,8 @@ any other asset native to that chain. Interoperability is possible through [XCM]
 [SPREE modules](learn-spree.md), which together ensure that assets are not lost or duplicated across
 multiple chains.
 
-:::info Walk-through video tutorial about teleporting assets
-
-See [this technical explainer video](https://youtu.be/3tE9ouub5Tg) to learn how to teleport assets
-from Kusama to the Asset Hub. The same procedure applies to teleporting between Polkadot and the
-Polkadot Asset Hub, or any other parachain.
-
-:::
+!!!info "Walk-through video tutorial about teleporting assets"
+    See [this technical explainer video](https://youtu.be/3tE9ouub5Tg) to learn how to teleport assets from Kusama to the Asset Hub. The same procedure applies to teleporting between Polkadot and the Polkadot Asset Hub, or any other parachain.
 
 ## How Teleports work
 

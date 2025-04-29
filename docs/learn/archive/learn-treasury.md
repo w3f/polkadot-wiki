@@ -1,27 +1,28 @@
 ---
-id: learn-treasury
 title: Governance v1 Treasury
-sidebar_label: Gov1 Treasury
-description: The Polkadot's On-chain Treasury during Gov1.
-keywords: [treasury, funds, funding, tips, tipping]
-slug: ../learn-treasury
+description: Explore Polkadot's on-chain treasury mechanism during Governance v1 and its funding and spending processes.
 ---
 
-import MessageBox from "../../../components/MessageBox"; import
-"../../../components/MessageBox.css";
-
-<MessageBox message="The content on this page is archived. For up-to-date information about treasury, see the
-[Polkadot OpenGov Treasury page](../learn-polkadot-opengov-treasury)." />
+<!-- MessageBox -->
+<div id="messageBox" class="floating-message-box">
+  <p>
+    The content on this page is archived. For up-to-date information, see the
+    <a href="../../learn/learn-polkadot-opengov-treasury.md" target="_blank" rel="noopener noreferrer">
+      Polkadot OpenGov Treasury page.
+    </a>
+  </p>
+  <button class="close-messagebox" aria-label="Close message">✖</button>
+</div>
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
 [transaction fees](../learn-transactions.md#transaction-fees), [slashing](../learn-offenses.md),
-[staking inefficiencies](../learn-staking.md#inflation), etc.
+[staking inefficiencies](../learn-inflation.md), etc.
 
 The Treasury funds are held in a [system account](../learn-account-advanced.md#system-accounts) not
 accessible by anyone; only the system internal logic can access it. Funds can be spent by making a
 spending proposal that, if approved by the [Council](learn-governance.md#council), will enter a
 waiting period before distribution. This waiting period is known as the
-[_spend period_](../../general/chain-state-values.md#treasury-spending-period), and its duration is
+[_spend period_](../../general/chain-state-values.md), and its duration is
 subject to [governance](learn-governance.md). The Treasury attempts to spend as many proposals in
 the queue as it can without running out of funds.
 
@@ -30,7 +31,7 @@ Treasury payout is an automatic process:
 - If the Treasury funds run out with approved proposals left to fund, those proposals are kept in
   the approved queue, and will receive funding in the following spend period.
 - If the Treasury ends a spend period without spending all of its funds, it suffers a burn of
-  [a percentage of its funds](../../general/chain-state-values.md#treasury-burn-factor) - thereby
+  [a percentage of its funds](../../general/chain-state-values.md) - thereby
   causing deflationary pressure. This encourages the spending of the funds in the Treasury by
   Polkadot's governance system.
 
@@ -47,15 +48,11 @@ Proposals may consist of (but are not limited to):
 - Community events and outreach (meetups, pizza parties, hackerspaces).
 - Software development (wallets and wallet integration, clients and client upgrades).
 
-The [Council](learn-governance#council) governs the Treasury and how the funds are spent is up to
+The [Council](learn-governance.md#council) governs the Treasury and how the funds are spent is up to
 their judgment.
 
-:::caution
-
-The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are
-not approved just because there are funds ready to spend but are subject to a burn.
-
-:::
+!!!caution
+    The Council does not approve or deny Treasury Proposals based on the available funds. Proposals are not approved just because there are funds ready to spend but are subject to a burn.
 
 ## Funding the Treasury
 
@@ -85,12 +82,8 @@ There are two types of tips:
   finder's fee of 20% (same on Polkadot and Kusama) which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
-:::info
-
-For information about how to submit a tip from the Treasury you can read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181971).
-
-:::
+!!!info
+    For information about how to submit a tip from the Treasury you can read [this support article](https://support.polkadot.network/support/solutions/articles/65000181971).
 
 To better understand the process a tip goes through until it is paid out, let's consider the example
 below.
@@ -189,8 +182,7 @@ requested allocation (including curator's fee) and confirm the call.
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a
 motion. You can contact the Council by joining the main
 [Direction Element Channel and Discord server](../../general/community.md) and publishing a short
-description of your bounty, with a link to one of the [forums](#announcing-the-proposal) for
-contextual information.
+description of your bounty, with a link to one of the forums for contextual information.
 
 A bounty can be cancelled by deleting the earmark for a specific treasury amount or be closed if the
 tasks have been completed. On the opposite side, the 90 days life of a bounty can be extended by
@@ -209,7 +201,7 @@ specific amount of the payout from the payout address, by calling `Claim_bounty`
 closed the allocation.
 
 To understand more about Bounties and how this new mechanism works, read this
-[Polkadot Blog post](https://polkadot.network/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/).
+[Polkadot Blog post](https://polkadot.com/blog/kusama-and-polkadot-now-reward-curators-helping-to-scale-councils-functions-join-the-force-moving-the-community-forward/).
 
 ## FAQ
 

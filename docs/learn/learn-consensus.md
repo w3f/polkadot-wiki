@@ -1,10 +1,6 @@
 ---
-id: learn-consensus
 title: Polkadot's Consensus Protocols
-sidebar_label: Consensus
-description: The Consensus Mechanisms of Polkadot.
-keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus, finality]
-slug: ../learn-consensus
+description: Learn about Polkadot's consensus mechanisms, including NPoS, hybrid consensus, BABE, and GRANDPA.
 ---
 
 In traditional PoS systems, block production participation is dependent on token holdings as opposed
@@ -46,7 +42,7 @@ allows for blocks to be rapidly produced, and the slower finality mechanism to r
 process to finalize blocks without risking slower transaction processing or stalling.
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in
-Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
+Ethereum's transition to proof of stake in [EIP 1011](https://eips.ethereum.org/EIPS/eip-1011), which
 specified [Casper FFG](#casper-ffg).
 
 ## Block Production: BABE
@@ -112,13 +108,8 @@ failures.
 In other words, as soon as more than 2/3 of validators attest to a chain containing a particular
 block, all blocks leading up to that one are finalized at once.
 
-:::info GRANDPA description and implementation
-
-Please refer to [the GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf)
-for a full description of the protocol. GRANDPA is implemented as a
-[module of the Substrate Frame System](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs).
-
-:::
+!!!info "GRANDPA description and implementation"
+    Please refer to [the GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf) for a full description of the protocol. GRANDPA is implemented as a [module of the Substrate Frame System](https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/grandpa/src/lib.rs).
 
 ### Probabilistic vs. Provable Finality
 
@@ -137,12 +128,8 @@ _provable finality._
 In the [GRANDPA paper](https://github.com/w3f/consensus/blob/master/pdf/grandpa.pdf), it is phrased
 in this way:
 
-:::note
-
-We say an Oracle A in a protocol is _eventually consistent_ if it returns the same value to all
-participants after some unspecified time.
-
-:::
+!!!note
+    We say an Oracle A in a protocol is _eventually consistent_ if it returns the same value to all participants after some unspecified time.
 
 ## Fork Choice
 

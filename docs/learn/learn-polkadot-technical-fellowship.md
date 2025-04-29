@@ -1,10 +1,6 @@
 ---
-id: learn-polkadot-technical-fellowship
 title: Polkadot Technical Fellowship
-sidebar_label: Technical Fellowship
-description: Self-governing body of experts and developers of the Polkadot protocol.
-keywords: [governance, referenda, proposal, voting, whitelist, fellowship, opengov, rank]
-slug: ../learn-polkadot-technical-fellowship
+description: Learn about the Polkadot Technical Fellowship, its governance model, ranking system, and role in Polkadot's OpenGov.
 ---
 
 The Technical Fellowship is a self-governing body of experts and developers of Polkadot and Kusama
@@ -13,18 +9,8 @@ networks protocols. It operates on-chain through the Polkadot
 system chain and off-chain through the [Polkadot Fellows](https://github.com/polkadot-fellows)
 repository.
 
-:::info Historical Context
-
-The Polkadot Technical Fellowship was established in 2022 and plays an important role in the
-Polkadot OpenGov. This fellowship replaced the
-[Technical Committee](./archive/learn-governance.md#technical-committee) from Polkadot's first
-iteration of governance, and will be serving both the Polkadot and Kusama networks. This Fellowship
-is designed to be far broader in membership (i.e. to work well with even tens of thousands of
-members) and with far lower barriers to entry both in terms of administrative process flow and
-levels of expertise. For more information, read through the
-[Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
-
-:::
+!!!info "Historical Context"
+    The Polkadot Technical Fellowship was established in 2022 and plays an important role in the Polkadot OpenGov. This fellowship replaced the [Technical Committee](./archive/learn-governance.md#technical-committee) from Polkadot's first iteration of governance, and will be serving both the Polkadot and Kusama networks. This Fellowship is designed to be far broader in membership (i.e. to work well with even tens of thousands of members) and with far lower barriers to entry both in terms of administrative process flow and levels of expertise. For more information, read through the [Fellowship Manifesto](https://github.com/polkadot-fellows/manifesto/blob/0c3df46d76625980b8b48742cb86f4d8fa6dda8d/manifesto.pdf).
 
 Apart from the collectives system chain and the GitHub repository, the Polkadot Technical Fellowship
 also uses multiple public avenues to discuss updates related to the Polkadot protocol. Their public
@@ -59,12 +45,8 @@ collectives system chain to the Polkadot relay chain. For instance,
 
 ![whitelist-xcm](../assets/fellowship-whitelist-xcm.png)
 
-:::info Submitting Whitelisted Proposals
-
-For more information about how to submit a whitelisted proposal see the
-[dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
-
-:::
+!!!info "Submitting Whitelisted Proposals"
+    For more information about how to submit a whitelisted proposal see the [dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
 
 ## Technical Fellowship Ranking and Salary
 
@@ -106,14 +88,8 @@ tenets:
 - Respect the operational procedures, norms and voting conventions of the Fellowship.
 - Respect fellow Members and the wider community.
 
-:::tip Register your interest
-
-For new fellowship inductions, Polkassembly has created an interface (still in beta) to
-[apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives)
-This initiative is funded by Polkadot treasury through
-[OpenGov referendum 373](https://polkadot.polkassembly.io/treasury/574)
-
-:::
+!!!tip "Register your interest"
+    For new fellowship inductions, Polkassembly has created an interface (still in beta) to [apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives) This initiative is funded by Polkadot treasury through [OpenGov referendum 373](https://polkadot.polkassembly.io/treasury/574)
 
 The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on
 [the fellowship dasboard](https://polkadot-fellows.xyz/#/membership).
@@ -129,3 +105,57 @@ from rank 1 to rank 2 can only be voted by members whose ranks are greater than 
 Promotion of the Polkadot Fellowship members from rank 5 needs to be done through an OpenGov
 referendum. For more information, check the rank updates section on
 [the fellowship dashboard](https://polkadot-fellows.xyz/#/membership).
+
+## Cumulative Rank-Based Voting
+
+As specified in the [manifesto](https://github.com/polkadot-fellows/manifesto/blob/main/manifesto.pdf), when it comes to governance voting, the Polkadot Technical Fellowship uses a **cumulative rank-voting** system, where the **weight of a vote increases non-linearly with the member's rank**. The weight function `w(r)` is defined as:
+
+```
+w(r) = r(r + 1) / 2
+```
+
+where `r` is the member rank. For example, a member with rank 3 has a voting weight of 6, while rank 5 has a weight of 15. Thus, higher-ranked members have significantly more influence than lower-ranked ones.
+
+For votes requiring a **minimum rank** to participate (such as Membership, Promotion, or Continuation votes), the weight calculation is adjusted so that the **lowest eligible rank has a base weight of 1**, and higher ranks scale upward from there. This is formalized as:
+
+```
+w'(r, m) = w(r - m + 1)
+```
+
+Where `r` is the member's rank and `m` is the minimum rank allowed to vote.
+
+The table below illustrates this system with a minimum voting rank of 2 and a maximum of 6:
+
+| Rank | r - m + 1 | Weight w'(r, 2) |
+|------|-----------|-----------------|
+| 1    | 0         | 0 *(ineligible)* |
+| 2    | 1         | 1               |
+| 3    | 2         | 3               |
+| 4    | 3         | 6               |
+| 5    | 4         | 10              |
+| 6    | 5         | 15              |
+
+Note that because of this system, the same rank can have different voting weights, depending on the minimum rank required in that specific vote type (Membership, Promotion, or Continuation). Se the example below taken from an RFC proposal:
+
+| Rank | Amount |
+|-----|-------|
+|3|1|
+|4|3|
+|2|1|
+|3|3|
+|4|6|
+|6|15|
+
+Rank 3 has power 1 in one vote and power 3 in another, it means:
+
+- In the first vote, the minimum rank allowed was 3 → w'(3, 3) = w(1) = 1
+
+- In the second vote, the minimum rank was 2 → w'(3, 2) = w(2) = 3
+
+Similarly, for Rank 4 with power of 3 and 6, it means:
+
+- First case: w'(4, 3) = w(2) = 3
+
+- Second case: w'(4, 2) = w(3) = 6
+
+The system is flexible by design to reflect different eligibility levels.
