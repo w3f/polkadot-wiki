@@ -260,7 +260,6 @@ nav:
                   - System Chains: learn/learn-system-chains.md
                   - Parachains FAQ: learn/learn-parachains-faq.md
               - Cross Consensus Messaging (XCM): 
-                    - learn/xcm/index.md
                     - XCM: learn/learn-xcm.md
                     - XCM Pallet: learn/learn-xcm-pallet.md 
                     - XCM Transport: learn/learn-xcm-transport.md
@@ -309,7 +308,7 @@ nav:
                       - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
                   - Claims: learn/learn-guides-claims.md
       - Comparisons:
-          - learn/comparisons/index.md
+          - Rollups & Interoperability: learn/learn-comparisons-rollups.md
           - Kusama: learn/learn-comparisons-kusama.md
           - Ethereum: learn/learn-comparison-ethereum.md
           - Cosmos: learn/learn-comparisons-cosmos.md

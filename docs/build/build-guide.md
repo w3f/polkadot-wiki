@@ -20,7 +20,7 @@ vision with Polkadot. It will also point to resources you can use to start build
 !!!note For Developers!
     Please note that the following documentation is more geared towards developers. If you are looking
     for more general knowledge related to Polkadot, be sure to check out the
-    [Learn](../learn/index.md) section.
+    [Learn](../general/web3-and-polkadot.md) section.
 
 This build guide covers three different areas, taking a **top-down** approach from protocol
 development to user-facing applications:
