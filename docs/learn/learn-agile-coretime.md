@@ -1,5 +1,5 @@
 ---
-title: Agile Coretime (aka Scheduling)
+title: Agile Coretime (Scheduling)
 description: Learn how Polkadot enables efficient resource utilization, economic flexibility, and multi-threading for parachains.
 ---
 
