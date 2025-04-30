@@ -1,5 +1,5 @@
 ---
-title: Asynchronous backing (aka Pipelining)
+title: Asynchronous Backing (aka Pipelining)
 description: Understand how asynchronous backing improves scalability and throughput in Polkadot's parachain protocol.
 ---
 
