@@ -3,12 +3,7 @@ title: Wallets and Extensions
 description: Overview of wallets and browser extensions in the Polkadot ecosystem, including features like staking, governance, and NFT management.
 ---
 
-!!!caution "Due Diligence"
-    Using your due diligence in researching and using the wallets listed below would be best. For any
-    issues related to these wallet, reach out to their support teams directly.
-
-    Explore Polkadot with a secure and user-friendly wallets listed on the
-    [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+Explore Polkadot with secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 If you are new to blockchain technology, generally a typical blockchain network account is a
 public-private key pair. Access to a private key gives full access to all the allowed transactions
@@ -46,7 +41,7 @@ them also allow interaction with air-gapped wallets and hardware devices.
     Currently, all browser extensions support Ledger devices only on chromium-based browsers (i.e.
     Chrome, Brave, Edge, Opera).
 
-
+Third-party Metamask snaps for Polkadot and its rollups are available on [the official Metamask snaps website](https://snaps.metamask.io/explore/).
 
 ### Mobile Wallets
 

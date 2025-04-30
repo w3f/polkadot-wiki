@@ -109,18 +109,13 @@ markdown_extensions:
 # Sidebar
 nav:
   - Explore:
-      - general/index.md
       - Getting Started: general/getting-started.md
       - Wallets:
-          - general/wallets/index.md 
-          - Polkadot Ecosystem Wallets: https://polkadot.com/get-started/wallets/
-          - Wallets and Extensions: general/wallets-and-extensions.md
+          - general/wallets-and-extensions.md
           - Ledger: general/ledger.md
           - Polkadot Vault: general/polkadot-vault.md
       - Apps:
-          - general/apps/index.md
           - Polkadot Ecosystem Apps: https://polkadot.com/get-started/dapps/
-          - DotAppStore: https://dotappstore.com/
           - Staking Apps: general/staking-apps.md
           - Governance Apps: general/governance-apps.md
           - Multisig Apps: general/multisig-apps.md
