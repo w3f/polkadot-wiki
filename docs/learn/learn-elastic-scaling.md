@@ -1,5 +1,5 @@
 ---
-title: Parallel Computation (aka Elastic Scaling)
+title: Parallel Computation (Elastic Scaling)
 description: Explore how Polkadot achieves parallel computation and elastic scaling to boost throughput and efficiency.
 ---
 
