@@ -1,5 +1,5 @@
 ---
-title: Polkadot Comparisons
+title: Rollups and Interoperability Comparison
 description: Explore how Polkadot compares to other blockchain networks, including rollups, scalability, and shared security.
 ---
 
@@ -86,7 +86,7 @@ proof generation and the difficulty of implementing these proofs in resource-con
 environments. This complexity also makes achieving Turing completeness more challenging, which can
 limit their generalizability in terms of blockspace usage. Despite these challenges, ZK rollups are
 becoming increasingly viable for specialized applications. For example,
-[Hyperbridge](../learn-bridges.md#bridge-comparison) is a SNARK-based rollup on Polkadot that acts as
+[Hyperbridge](./learn-bridges.md#bridge-comparison) is a SNARK-based rollup on Polkadot that acts as
 a scalable, trustless bridge. It produces a single proof for multiple blockchains, which can be
 instantly verified on Polkadot, demonstrating the potential of these rollups in niche use cases.
 
@@ -109,7 +109,7 @@ and [Arbitrium](https://bridge.arbitrum.io/) are an example of optimistic EVM-ba
 Polkadot Rollups work similarly to optimistic rollups. They are an interactive method with fraud
 proof mechanism. Like optimistic rollups and zk rollups are secured by Ethereum, Polkadot rollups
 are secured by the Polkadot Relay Chain. The checking and fraud-proof mechanics are natively
-implemented in Polkadot. [Collators](../learn-collator.md) are in principle similar to sequencers, as
+implemented in Polkadot. [Collators](./learn-collator.md) are in principle similar to sequencers, as
 they pass data with a proof-of-validity (PoV) function for liveness and communication with the Relay
 Chain.
 
@@ -124,15 +124,15 @@ Polkadot rollups have the following main differences compared to optimistic roll
 
 - Polkadot implements rollup functionality at the native level (i.e., without using L2 scaling
   solutions), allowing for shared security and scalability for each rollup through the
-  [Parachains Protocol](../learn-parachains-protocol.md). Polkadot handles data coordination from
+  [Parachains Protocol](./learn-parachains-protocol.md). Polkadot handles data coordination from
   parachains into an aggregated, representative state, similar to L2 rollups.
 - If optimistic rollups are based on the assumption that all transactions are valid, **Polkadot
   rollups are "cynical" and always check the validity of transactions using a subset of the
   validators**. In case of disputes, an escalation effect involving more validators is triggered,
-  and dispute resolution will end with the malicious actor being [slashed](../learn-offenses.md).
+  and dispute resolution will end with the malicious actor being [slashed](./learn-offenses.md).
 - Polkadot has multiple virtual cores that are made possible thanks to the Parachain Protocol, which
   allows execution sharding. Rollups access Polkadot by reserving time on those cores via
-  [coretime](../learn-agile-coretime.md).
+  [coretime](./learn-agile-coretime.md).
 
 A more detailed comparison of Polkadot rollups with optimistic and zk rollups can be found in the
 comparison table below.
@@ -147,8 +147,8 @@ be found on [l2beat](https://l2beat.com/scaling/summary).
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Finality**                 | Near-instant finality. Because the proof is immediately available, finality is also instantaneous.                                                                                                                                                                 | Delayed finality (a week) due to fraud-proof mechanisms.                                                                                                                                 | Fast finality (under 1 minute) via relay chain consensus.                                                                                                                                                                                                                                                                                           |
 | **Security Model**           | Relies on cryptographic validity proofs, ensuring high security and no reliance on game-theoretic assumptions.                                                                                                                                                     | Relies on economic incentives and a challenge period to catch fraud. Optimistic assumption makes it less secure than ZK Rollups.                                                         | "Cynical" model, where every transaction is checked by a subset of validators, with escalation and slashing in case of disputes.                                                                                                                                                                                                                    |
-| **Scalability**              | Limited scalability as they are a single state machine and are only as scalable as the prover machine and computation requirement. Many zk-rollups disable cryptographic precompiles on the mainnet as a result of the immense computational requirement for them. | High, with parallelization, but limited by gas costs on L1 chains like Ethereum.                                                                                                         | Inherently scalable through native execution sharding and parachains operating in parallel. [Pipelining](../learn-async-backing.md) and [core scheduling](../learn-agile-coretime.md) increase throughput and scalability for the single rollup. Execution sharding is enabled by multiple virtual cores using [coretime](../learn-agile-coretime.md). |
-| **Interoperability**         | Limited interoperability<sup>1</sup>, often restricted to compatible L1s.                                                                                                                                                                                          | Limited interoperability<sup>1</sup>, often confined to the parent blockchain ecosystem. See the [comparison about interoperability](#interoperability-comparison) for more information. | Native interoperability through [XCM](../learn-xcm.md), allowing seamless communication between parachains having different logic. [Trustless bridges](../learn-bridges.md) can connect Polkadot to other blockchains.                                                                                                                                |
+| **Scalability**              | Limited scalability as they are a single state machine and are only as scalable as the prover machine and computation requirement. Many zk-rollups disable cryptographic precompiles on the mainnet as a result of the immense computational requirement for them. | High, with parallelization, but limited by gas costs on L1 chains like Ethereum.                                                                                                         | Inherently scalable through native execution sharding and parachains operating in parallel. [Pipelining](./learn-async-backing.md) and [core scheduling](./learn-agile-coretime.md) increase throughput and scalability for the single rollup. Execution sharding is enabled by multiple virtual cores using [coretime](./learn-agile-coretime.md). |
+| **Interoperability**         | Limited interoperability<sup>1</sup>, often restricted to compatible L1s.                                                                                                                                                                                          | Limited interoperability<sup>1</sup>, often confined to the parent blockchain ecosystem. See the [comparison about interoperability](#interoperability-comparison) for more information. | Native interoperability through [XCM](./learn-xcm.md), allowing seamless communication between parachains having different logic. [Trustless bridges](./learn-bridges.md) can connect Polkadot to other blockchains.                                                                                                                                |
 | **State Transition Logic**   | General-purpose but constrained by zk-circuit implementation complexity.                                                                                                                                                                                           | Can support state transitions beyond EVM compatibility by interpreting other virtual machine (VM) logic within the EVM environment<sup>2</sup>.                                          | Each parachain can define its unique state transition function (STF), which is compiled to Wasm and validated per Parachain Protocol rules.                                                                                                                                                                                                         |
 | **Development Complexity**   | Complex due to the mathematics of zero-knowledge proofs.                                                                                                                                                                                                           | Moderate complexity, requiring fraud-proof implementation.                                                                                                                               | Moderate to high complexity; parachain runtimes must be written in WASM-compatible languages but can define custom logic and governance. Parachain maintenance can be an overhead.                                                                                                                                                                  |
 | **Data Availability**        | Data availability requirements posted by the optimistic and ZK rollups are the same.                                                                                                                                                                               | Data availability requirements posted by the optimistic and ZK rollups are the same.                                                                                                     | Built-in data availability with validators ensuring distributed state storage and reconstruction in case of disputes.                                                                                                                                                                                                                               |
@@ -207,9 +207,9 @@ In this section, we explore the main differences in interoperability between Pol
 
 <div class="grid cards" markdown>
 
-- **[Kusama](../learn-comparisons-kusama.md)** - Comparison with Kusama.
-- **[Ethereum](../learn-comparison-ethereum.md)** - Comparison with Ethereum.
-- **[Cosmos](../learn-comparisons-cosmos.md)** - Comparison with Cosmos.
-- **[Avalanche](../learn-comparisons-avalanche.md)** - Comparison with Avalanche.
+- **[Kusama](./learn-comparisons-kusama.md)** - Comparison with Kusama.
+- **[Ethereum](./learn-comparison-ethereum.md)** - Comparison with Ethereum.
+- **[Cosmos](./learn-comparisons-cosmos.md)** - Comparison with Cosmos.
+- **[Avalanche](./learn-comparisons-avalanche.md)** - Comparison with Avalanche.
 
 </div>

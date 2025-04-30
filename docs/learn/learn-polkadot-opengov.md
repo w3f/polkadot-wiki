@@ -28,6 +28,16 @@ state-transition function stored on-chain defined in a platform-agnostic languag
 [WebAssembly](learn-wasm.md)), and several on-chain voting mechanisms such as referenda and batch
 approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
+Here below there links to useful tools about Polkadot OpenGov.
+
+<div class="grid cards" markdown>
+
+- **[OpenGov.Watch](https://www.opengov.watch/)** - OpenGov Watch website.
+- **[OpenGov Tracker](https://ogtracker.io/)** - OpenGov Tracker website.
+- **[OpenGov Portal](https://opengovwatch.notion.site/Polkadot-OpenGov-Portal-f8baf91a46864144ae96c47173a10225)** - OpenGov Portal on Notion.
+
+</div>
+
 ## Premise
 
 Polkadot's first governance system ([Governance V1](./archive/learn-governance.md)) included three
