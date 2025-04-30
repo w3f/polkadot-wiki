@@ -120,7 +120,6 @@ nav:
           - Governance Apps: general/governance-apps.md
           - Multisig Apps: general/multisig-apps.md
           - NFT Projects: learn/learn-nft-projects.md
-          - Parachains Apps: general/parachains-apps.md
       - Dashboards:
               - general/dashboards/index.md
               - Dune Analytics:
@@ -177,12 +176,11 @@ nav:
               - Staking Dashboard: general/dashboards/staking-dashboard.md
               - Fellowship Dashboard: https://polkadot-fellows.xyz  
       - Community & Contributors:
-          - general/community/index.md
           - Community: general/community.md
           - Contributing: general/contributing.md
           - Contributors: general/contributors.md
       - Funding:
-          - general/funding/index.md
+          - general/funding.md
           - Grants: general/grants.md
           - Decentralized Futures: general/decentralized-futures.md
           - Polkadot OpenGov Treasury: learn/learn-polkadot-opengov-treasury.md
