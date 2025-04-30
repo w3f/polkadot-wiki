@@ -121,7 +121,6 @@ nav:
           - Multisig Apps: general/multisig-apps.md
           - NFT Projects: learn/learn-nft-projects.md
       - Dashboards:
-              - general/dashboards/index.md
               - Dune Analytics:
                   - general/dashboards/dune-analytics/index.md
                   - Polkadot Ecosystem Overview: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview.md
@@ -187,7 +186,6 @@ nav:
           - Polkadot Community Foundation: general/pcf.md
           - Ecosystem Funds: general/ecosystem-funds.md
       - Programs:
-          - general/programs/index.md   
           - Decentralized Voices: general/decentralized-voices.md
           - Bug Bounty: general/bug-bounty.md
           - Ambassadors: general/ambassadors.md
