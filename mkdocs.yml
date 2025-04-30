@@ -196,9 +196,7 @@ nav:
       - Metadata: general/metadata.md
       - Chain State Values: general/chain-state-values.md
   - Learn:
-      - learn/index.md
       - General:
-          - learn/general/index.md
           - Web3 and Polkadot: general/web3-and-polkadot.md
           - Polkadot Vision:
               - general/polkadot-vision/index.md
