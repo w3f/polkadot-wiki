@@ -193,7 +193,7 @@ synchronize (_warp sync_ in case of Polkadot) with a full node to obtain (Merkle
 the latest chain state, and hence can trustlessly verify any response by full node against the
 commitment. In this way, we can always verify that the data we see is the truth, which is done
 automatically by the light client. Polkadot has a browser-embedded light client
-[Substrate connect](../build/build-light-clients.md) that uses the
+[Substrate connect](https://chromewebstore.google.com/detail/substrate-connect-extensi/khccbhhbocaaklceanjginbdheafklai) that uses the
 [smoldot](https://github.com/smol-dot/smoldot) codebase. Most web3 applications today access
 blockchain data through a centralized RPC server.
 

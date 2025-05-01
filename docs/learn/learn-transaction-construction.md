@@ -14,17 +14,17 @@ tools. **Always refer to each tool's documentation when integrating.**
 Polkadot has some basic transaction information that is common to all transactions.
 
 - Address: The SS58-encoded address of the sending account.
-- Block Hash: The hash of the [checkpoint](build-protocol-info.md#transaction-mortality) block.
+- Block Hash: The hash of the [checkpoint](./learn-transactions.md#mortal-and-immortal-extrinsics) block.
 - Block Number: The number of the checkpoint block.
 - Genesis Hash: The genesis hash of the chain.
 - Metadata: The SCALE-encoded metadata for the runtime when submitted.
 - Nonce: The nonce for this transaction.\*
 - Spec Version: The current spec version for the runtime.
 - Transaction Version: The current version for transaction format.
-- Tip: Optional, the [tip](build-protocol-info.md#fees) to increase transaction priority.
+- Tip: Optional, the [tip](./learn-transactions.md#transaction-fees) to increase transaction priority.
 - Mode: The flag indicating whether to verify the metadata hash or not.
 - Era Period: Optional, the number of blocks after the checkpoint for which a transaction is valid.
-  If zero, the transaction is [immortal](build-protocol-info.md#transaction-mortality)
+  If zero, the transaction is [immortal](./learn-transactions.md#mortal-and-immortal-extrinsics)
 - MetadataHash: Optional, the metadata hash which should match the RUNTIME_METADATA_HASH environment
   variable.
 
@@ -222,8 +222,8 @@ const txHash = getTxHash(signedTx);
 There are several ways to submit a signed payload:
 
 1. Signer CLI (`yarn run:signer submit --tx <signed-transaction> --ws <endpoint>`)
-1. [Substrate API Sidecar](build-node-interaction.md#substrate-api-sidecar)
-1. [RPC](build-node-interaction.md#polkadot-rpc) with `author_submitExtrinsic` or
+1. [Substrate API Sidecar](https://docs.polkadot.com/develop/toolkit/api-libraries/sidecar/#sidecar-api)
+1. [RPC](https://docs.polkadot.com/develop/toolkit/api-libraries/) with `author_submitExtrinsic` or
    `author_submitAndWatchExtrinsic`, the latter of which will subscribe you to events to be notified
    as a transaction gets validated and included in the chain.
 

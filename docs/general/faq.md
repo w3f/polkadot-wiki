@@ -325,7 +325,7 @@ integration between the two applications.
 
 ### What is the minimum amount of KSM / DOT I can have in my account?
 
-Please see information about [Existential Deposits](../build/build-protocol-info.md).
+Please see information about [Existential Deposits](../learn/learn-accounts.md#existential-deposit-and-reaping).
 
 ### What are the transfer fees for Kusama?
 

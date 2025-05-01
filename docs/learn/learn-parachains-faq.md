@@ -82,9 +82,7 @@ within [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus)
 ### Parachain Development Kits (PDKs)
 
 Parachain Development Kits are a set of tools that enable developers to create their own
-applications as parachains. For more information, see the PDK
-content](../build/build-parachains.md#parachain-development-kit-pdk) and
-[Parachain Development page](../build/build-parachains.md).
+applications as parachains. For more information, see the [Parachain Development page](https://docs.polkadot.com/develop/parachains/).
 
 ## Security
 

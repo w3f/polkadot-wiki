@@ -23,7 +23,7 @@ three chains. This allows for a separation of concern over validators and consen
 and smart contract execution. Avalanche uses a DAG (Directed Acyclic Graph) structure for one of its
 chains which is non-linear. Polkadot uses the linear chain structure similar to Bitcoin and
 Ethereum. Smart contracts in Polkadot are implemented on
-[parachains](../build/build-smart-contracts.md#parachains). Polkadot being a layer-0 blockchain, is not a smart
+[parachains](https://docs.polkadot.com/develop/smart-contracts/evm/). Polkadot being a layer-0 blockchain, is not a smart
 contract platform and does not have plans to support them natively.
 
 ![avalanche-network](../assets/comparisons/avalanche/avalanche-network.png)

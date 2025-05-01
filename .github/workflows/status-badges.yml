@@ -14,7 +14,7 @@ jobs:
       - name: Check and update badges
         uses: w3f/status-badges@v1.2
         with:
-          path: 'docs/build/build-open-source.md'
+          path: 'docs/general/build-open-source.md'
           token: ${{ secrets.GITHUB_TOKEN }}
           find-all-links: true
           pull-request: true

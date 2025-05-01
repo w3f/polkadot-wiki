@@ -46,7 +46,7 @@ Depending on what you enjoy doing, you can become a hero by doing some of the fo
   or on the [Polkadot Forum](https://forum.polkadot.network/?ref=cms.polkadot.network).
 
 - **Contribute to the Polkadot stack**: Have a look at the
-  [open source technology stack list](../build/build-open-source.md) and contribute with a pull
+  [open source technology stack list](../general/build-open-source.md) and contribute with a pull
   request, an issue, or find and fix bugs.
 
 - **Create content**: Write a blog post, record a video tutorial, and write a Twitter thread. Share

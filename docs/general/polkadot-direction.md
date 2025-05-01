@@ -235,7 +235,7 @@ are breakable and prone to cyber-attacks. Polkadot is basing its resilience on d
 - **Preponderance of light-client usage:** Centralized RPC servers are common but susceptible to
   attack and not trustless decentralized entry points to using blockchain-based applications. Light
   client usage on Polkadot is possible through
-  [Smoldot](../build/build-light-clients.md#how-to-use-substrate-connect).
+  [Smoldot](https://github.com/smol-dot/smoldot).
 - **Zero-Knowledge (ZK) Primitives:** They can have a problematic effect on censorship and
   centralization as having a big state transition function boiled down to a single proof of correct
   execution is not currently a scaling solution to build resilient systems. However, a library of

@@ -17,7 +17,7 @@ Polkadot SDK comprises three main pieces of software:
 The programming language used for development is [Rust](https://www.rust-lang.org/).
 
 !!!info
-    For more information about building on Polkadot, see [the Builder's Guide](../build/build-guide.md).
+    For more information about building on Polkadot, see [the Builder's Guide](https://docs.polkadot.com/develop/).
 
 
 ## Requests for Comment (RFCs)
