@@ -120,6 +120,7 @@ nav:
           - Governance Apps: general/governance-apps.md
           - Multisig Apps: general/multisig-apps.md
           - NFT Projects: learn/learn-nft-projects.md
+          - Common Errors: general/maintain-errors.md
       - Dashboards:
               - Dune Analytics:
                   - general/dashboards/dune-analytics/index.md
@@ -195,6 +196,7 @@ nav:
           - Dev Heroes: general/dev-heroes.md
       - Metadata: general/metadata.md
       - Chain State Values: general/chain-state-values.md
+      - Open Source: build/build-open-source.md
   - Learn:
       - General:
           - Web3 and Polkadot: general/web3-and-polkadot.md
@@ -273,6 +275,7 @@ nav:
                   - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
               - Host Implementations: learn/learn-implementations.md
           - Accounts: learn/learn-account-advanced.md
+          - Transaction Construction: learn/learn-transaction-construction.md
           - Staking: learn/learn-staking-advanced.md
           - NFT Pallets: learn/learn-nft-pallets.md
           - Cryptography: learn/learn-cryptography.md
@@ -353,12 +356,10 @@ nav:
         - Tooling:
             - build/tooling/index.md
             - Data: build/build-data.md
-            - Open Source: build/build-open-source.md
             - Tools Index: build/build-tools-index.md
         - Hackathon: build/build-hackathon.md
         - Archive:
             - build/archive/index.md
-            - Transaction Construction: build/build-transaction-construction.md
             - Integration: build/build-integration.md
             - Node Management: build/build-node-management.md
             - Parachains: build/build-parachains.md
@@ -376,7 +377,6 @@ nav:
           - RPC: maintain/maintain-rpc.md
           - WSS: maintain/maintain-wss.md
           - Networks: maintain/maintain-networks.md
-          - Errors: maintain/maintain-errors.md
       - Collator Guides:
           - maintain/collator/index.md
           - Async Backing: maintain/maintain-guides-async-backing.md
