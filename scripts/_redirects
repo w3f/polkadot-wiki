@@ -179,6 +179,7 @@
 /docs/learn-guides-coretime-swap    /learn/learn-guides-coretime-swap    301
 /docs/build-oracle   https://docs.polkadot.com/develop/toolkit/integrations/oracles/    301
 /docs/build-guide   https://docs.polkadot.com/develop/    301
+/docs/build-parachains    https://docs.polkadot.com/develop/parachains/    301
 
 # Maintain Section
 
@@ -191,7 +192,7 @@
 /docs/maintain/maintain-guides-democracy    /maintain/archive/maintain-guides-democracy    301
 /docs/maintain-guides-how-to-validate-polkadot    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator     301
 /docs/maintain-guides-secure-validator    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
-/docs/maintain-endpoints    /maintain/maintain-endpoints    301
+/docs/maintain-endpoints    https://docs.polkadot.com/develop/networks/    301
 /docs/maintain-sync    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node   301
 /docs/maintain-bootnode    https://docs.polkadot.com/infrastructure/running-a-node/setup-bootnode/    301
 /docs/maintain-rpc    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node    301
@@ -199,8 +200,6 @@
 /docs/maintain-networks    https://docs.polkadot.com/develop/networks    301
 /docs/maintain-errors    /general/maintain-errors    301
 /docs/maintain-guides-async-backing    /maintain/maintain-guides-async-backing    301
-/docs/maintain/maintain-guides-async-backing   /maintain/maintain-guides-async-backing    301
-/docs/maintain/collator/maintain-guides-async-backing   /maintain/maintain-guides-async-backing    301
 /docs/maintain-guides-validator-payout     https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout   301
 /docs/maintain-guides-how-to-systemd    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/start-validating/#run-a-validator-using-systemd   301
 /docs/maintain-guides-how-to-upgrade    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node    301
@@ -209,6 +208,7 @@
 /docs/maintain-guides-how-to-stop-validating    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/stop-validating    301
 /docs/maintain-guides-validator-community     https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management   301
 /docs/maintain/maintain-guides-how-to-join-council    /maintain/archive/maintain-guides-how-to-join-council    301
+/docs/maintain/maintain-guides-secure-validator   https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
 
 # XCM docs
 

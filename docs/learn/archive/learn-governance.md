@@ -85,14 +85,14 @@ Referenda can be started in different ways:
   the [Council](#council)
 
 !!!info "Starting a proposal in Governance V1"
-    For more information about how to start a proposal, see the [dedicated page](../../maintain/archive/maintain-guides-democracy.md#proposing-an-action).
+    For more information about how to start a proposal, see the [dedicated page](../archive/maintain-guides-democracy.md#proposing-an-action).
 
 ### Endorsing Proposals
 
 Anyone can submit a proposal by depositing the minimum amount of tokens for a certain period (number
 of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to
 support it - this action is called
-[_endorsing_](../../maintain/archive/maintain-guides-democracy.md#endorsing-a-proposal). The
+[_endorsing_](../archive/maintain-guides-democracy.md#endorsing-a-proposal). The
 proposal with the highest amount of bonded support will be selected to be a referendum in the next
 voting cycle based on an [alternating voting timetable](#alternating-voting-timetable).
 
@@ -325,7 +325,7 @@ below).
 ### Delegations
 
 In Polkadot, you can
-[delegate your voting power](../../maintain/archive/maintain-guides-democracy.md#delegate-a-vote) to
+[delegate your voting power](../archive/maintain-guides-democracy.md#delegate-a-vote) to
 another account you trust if you are not willing to stay up-to-date with all referenda.
 
 You can also use a [governance proxy](../learn-proxies.md#proxy-types) to vote on behalf of

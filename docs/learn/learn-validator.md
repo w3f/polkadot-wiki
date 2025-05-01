@@ -83,17 +83,17 @@ that only available and valid blocks end within the finalized relay chain.
 
 ### Guides
 
-- [How to Validate on Polkadot](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on
+- [How to Validate on Polkadot](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator) - Guide on
   how to set up a validator on the Polkadot live network.
-- [Validator Payout Overview](../maintain/maintain-guides-validator-payout.md) - A short overview on
+- [Validator Payout Overview](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/) - A short overview on
   how the validator payout mechanism works.
-- [How to run your validator as a systemd process](../maintain/maintain-guides-how-to-systemd.md) -
+- [How to run your validator as a systemd process](https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/start-validating/#run-a-validator-using-systemd) -
   Guide on running your validator as a `systemd` process so that it will run in the background and
   start automatically on reboots.
-- [How to Upgrade your Validator](../maintain/maintain-guides-how-to-upgrade.md) - Guide for
+- [How to Upgrade your Validator](https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node) - Guide for
   securely upgrading your validator when you want to switch to a different machine or begin running
   the latest version of client code.
-- [How to Use Validator Setup](../maintain/maintain-guides-how-to-validate-polkadot.md) - Guide on
+- [How to Use Validator Setup](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator) - Guide on
   how to use Polkadot / Kusama validator setup.
 
 ### Other References
@@ -101,7 +101,7 @@ that only available and valid blocks end within the finalized relay chain.
 - [How to run a Polkadot node (Docker)](https://medium.com/@acvlls/setting-up-a-maintain-the-easy-way-3a885283091f)
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) -
   Blog that details how to create a robust failover solution for running validators.
-- [VPS list](../maintain/kusama/maintain-guides-how-to-validate-kusama.md)
+- [VPS list](https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) -
   A place to chat about being a validator.
 - [Slashing Consequences](./learn-offenses.md) - Learn more about slashing consequences for running

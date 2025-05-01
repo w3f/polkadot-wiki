@@ -114,7 +114,7 @@ or during the auction.
   to select that [sample index](https://kusama.subscan.io/block/9434277).
 
   !!!note "Inspecting the block state"
-      You can inspect the state at the end of `block 9434277` to see the sample indices with an [archive node](../../maintain/maintain-sync.md#types-of-nodes). The digest in the `Logs` of `9434277` is decodable and contains the random value as well as the BABE authorities.
+      You can inspect the state at the end of `block 9434277` to see the sample indices with an [archive node](https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node). The digest in the `Logs` of `9434277` is decodable and contains the random value as well as the BABE authorities.
 
 - As a result, the winner of this auction was not the highest bid during the full duration.
 

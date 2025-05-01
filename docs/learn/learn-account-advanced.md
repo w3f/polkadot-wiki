@@ -380,7 +380,7 @@ will be permanently bound to the address with no option to release it.**
 
 Here is an example snapshot that shows how to lookup the corresponding account address of the
 account index 1988 on
-[Westend network (Polkadot Test Network)](../maintain/maintain-networks.md#westend-test-network),
+[Westend network (Polkadot Test Network)](https://docs.polkadot.com/develop/networks/#westend),
 using Polkadot-JS Apps UI. The output shows the account address, deposit amount, and a boolean flag
 indicating whether this is claimed permanently.
 

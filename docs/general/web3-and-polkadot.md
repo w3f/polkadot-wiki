@@ -97,16 +97,13 @@ Data retrievability is dependent on how resilient the blockchain is. Resiliency 
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
 network can sustain on its own.
 
-!!!info Data Retrievability vs. Data Availability
-
-Data **retrievability** is the ability of nodes to retrieve historical information from the
-blockchain. Historical data is not needed to verify new blocks; it is only required for synching
-full nodes from the Genesis block or serving specific historical requests.
-
-Data **availability** assures full nodes can access and verify the full transactions associated with
-a specific block. It does not necessarily imply that the data is accessible forever. For more
-information about data availability on Polkadot, see the
-[dedicated section on the parachain protocol page](../learn/learn-parachains-protocol.md#availability-and-validity-anv-protocol).
+!!!info "Data Retrievability vs. Data Availability"
+    Data **retrievability** is the ability of nodes to retrieve historical information from the blockchain. Historical data is not needed to verify new blocks; it is only required for synching full nodes from the Genesis block or serving specific historical requests.
+    
+    Data **availability** assures full nodes can access and verify the full transactions associated with
+    a specific block. It does not necessarily imply that the data is accessible forever. For more
+    information about data availability on Polkadot, see the
+    [dedicated section on the parachain protocol page](../learn/learn-parachains-protocol.md#availability-and-validity-anv-protocol).
 
 
 

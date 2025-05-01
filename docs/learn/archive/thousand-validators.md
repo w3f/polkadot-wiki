@@ -43,9 +43,9 @@ an opportunity to be elected into the active set.
 ## Setting up a Validator
 
 Please see the guide on how to
-[set up a validator](../../maintain/maintain-guides-how-to-validate-polkadot.md) as well as
+[set up a validator](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator) as well as
 additional information on how to
-[secure a validator](../../maintain/maintain-guides-secure-validator.md).
+[secure a validator](https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator).
 
 ## How to Apply
 

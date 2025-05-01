@@ -129,7 +129,7 @@ probabilistic component in the calculation of rewards, so they may not be exactl
 validators. In fact, during each era validators can earn **era points** by doing different tasks on
 chain. The more the points, the higher the reward for a specific era. This promotes validators'
 activity on chain. To know more about era points, and how and on which basis they are distributed
-visit the [dedicated page](../maintain/maintain-guides-validator-payout.md). Distribution of the
+visit the [dedicated page](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/). Distribution of the
 rewards is pro-rata to all stakers after the validator's commission is deducted.
 
 ### Skin in the game when Staking
@@ -159,7 +159,7 @@ parachains, and possibly some other responsibilities regarding data availability
 [XCM](learn-xcm.md). For more information, you can take a look at the
 [validator docs](learn-validator.md) to understand what you need to do as a validator. If you want
 to become a validator you can consult
-[this](../maintain/maintain-guides-how-to-validate-polkadot.md) guide.
+[this](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator) guide.
 
 **Nominators.** Nominators have far fewer responsibilities than validators. These include selecting
 validators and monitoring their performance, keeping an eye on changing commission rates (a
@@ -218,7 +218,7 @@ To maximize rewards and minimize risk, one could select those validators that:
 #### Network Providers
 
 For successful operation, a Validator node should always be ensured to meet the required
-[software, hardware, and network bandwidth specifications](../maintain/maintain-guides-how-to-validate-polkadot.md#reference-hardware).
+[software, hardware, and network bandwidth specifications](https://docs.polkadot.com/infrastructure/running-a-validator/requirements/#minimum-hardware-requirements).
 Understandably, most of the validator nodes run on cloud service providers that guarantee high
 hardware specifications and high levels of availability and connectivity. Keep in mind that a
 validator in the active set is supposed to be fully online and available for producing blocks. If
@@ -242,7 +242,7 @@ vary more than others, with era points being the most variable and thus one of t
 components of staking rewards. Part of this probability is directly related to the fact that a
 validator can produce blocks for a parachain (i.e. para-validators) or the relay chain, with
 para-validators earning more era points per unit time (see
-[this](../maintain/maintain-guides-validator-payout.md#era-points) page for more information). The
+[this](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/#era-points) page for more information). The
 role can switch between sessions, and you can look at
 [the staking tab on the Polkadot-JS UI](https://polkadot.js.org/apps/#/staking) to know which
 validator is producing blocks for the relay chain or parachains.
@@ -306,7 +306,7 @@ Rewards are calculated per era (approximately six hours on Kusama and twenty-fou
 Polkadot). These rewards are calculated based on era points, which have a probabilistic component.
 In other words, there may be slight differences in your rewards from era to era, and even amongst
 validators in the active set at the same time. These variations should cancel out over a long enough
-timeline. See the page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md).
+timeline. See the page on [Validator Payout Guide](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/).
 
 The distribution of staking rewards to the nominators is not automatic and needs to be triggered by
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
@@ -335,7 +335,7 @@ staked tokens.
 If you wish to know if you received a payout, you will have to check via a block explorer. See
 [the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
 for details. For specific details about validator payouts, please see
-[this guide](../maintain/maintain-guides-validator-payout.md).
+[this guide](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/).
 
 ### Chilling
 
@@ -347,8 +347,7 @@ surroundings or hosting provider, and the validator wants to exit to protect the
 slashing. Chilling will keep the validator active in the current era, but will move them to the
 inactive set in the next. The validator will not lose their nominators.
 
-For more on chilling, see the "[How to Chill](../maintain/maintain-guides-how-to-chill.md)" page on
-this wiki.
+For more on chilling, see the [How to Chill](https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/pause-validating/) page on the main website.
 
 ### Fast Unstake
 
@@ -439,7 +438,7 @@ might not be receiving staking rewards using Polkadot-JS UI.
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
   Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Validator setup](../maintain/maintain-guides-secure-validator.md)
+- [Validator setup](https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator)
 - [Polkadot validator selector tool](https://decentradot.com/polkadot-validator-selector/) - A tool
   that helps nominators find reliable validators that meet quality-control criteria, including
   commission rates, verified identity, etc.

@@ -29,7 +29,7 @@ Nominators are one type of staking participant. They appoint their stake to the 
 second type of participant. By appointing their stake, they can elect the active set of validators
 and share in the rewards that are paid out.
 
-While the [validators](../maintain/maintain-guides-how-to-validate-polkadot.md) are active
+While the [validators](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator) are active
 participants in the network that engage in the block production and finality mechanisms, nominators
 take a slightly more passive role. Being a nominator does not require running a node of your own or
 worrying about online uptime. However, a good nominator performs due diligence on the validators
