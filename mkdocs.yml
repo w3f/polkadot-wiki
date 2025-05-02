@@ -280,36 +280,6 @@ nav:
           - NFT Pallets: learn/learn-nft-pallets.md
           - Cryptography: learn/learn-cryptography.md
           - Phragmen: learn/learn-phragmen.md
-          - Polkadot-JS:
-              - PolkadotJS: general/polkadotjs.md
-              - PolkadotJS UI: general/polkadotjs-ui.md
-              - Polkadot-JS Guides:
-                  - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
-                  - Account Guides:
-                      - Accounts Guides: learn/learn-guides-accounts.md
-                      - Accounts Multisig: learn/learn-guides-accounts-multisig.md
-                      - Accounts Proxy: learn/learn-guides-accounts-proxy.md
-                      - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
-                  - Transfers: learn/learn-guides-transfers.md
-                  - Staking Guides:
-                      - Staking Guides: learn/learn-guides-staking.md
-                      - Nominator: learn/learn-guides-nominator.md
-                      - Staking Pools: learn/learn-guides-staking-pools.md
-                  - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
-                  - Test OpenGov Proposals: learn/learn-guides-test-opengov-proposals.md
-                  - Treasury: learn/learn-guides-treasury.md
-                  - Bounties: learn/learn-guides-bounties.md
-                  - Identity: learn/learn-guides-identity.md
-                  - Ledger: learn/learn-guides-ledger.md
-                  - Vault: learn/learn-guides-vault.md
-                  - Asset Hub Guides:
-                      - Asset Hub Guides: learn/learn-guides-assets.md
-                      - Assets Create: learn/learn-guides-assets-create.md
-                      - Asset Conversion: learn/learn-guides-asset-conversion.md
-                  - Bridge Hub Guides:
-                      - Bridge Hub Guides: learn/learn-guides-bridges.md
-                      - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
-                  - Claims: learn/learn-guides-claims.md
       - Comparisons:
           - Rollups & Interoperability: learn/learn-comparisons-rollups.md
           - Kusama: learn/learn-comparisons-kusama.md
@@ -341,5 +311,35 @@ nav:
       - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
       - Kusama Inflation: kusama/kusama-inflation.md
       - Kusama Society: https://ksmsociety.io/
-
-
+  - Guides:
+      - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
+      - Polkadot-JS:
+              - PolkadotJS: general/polkadotjs.md
+              - PolkadotJS UI: general/polkadotjs-ui.md
+      - Polkadot-JS Guides:
+                  - Account Guides:
+                      - Accounts Guides: learn/learn-guides-accounts.md
+                      - Accounts Multisig: learn/learn-guides-accounts-multisig.md
+                      - Accounts Proxy: learn/learn-guides-accounts-proxy.md
+                      - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
+                      - Transfers: learn/learn-guides-transfers.md
+                      - Identity: learn/learn-guides-identity.md
+                      - Ledger: learn/learn-guides-ledger.md
+                      - Vault: learn/learn-guides-vault.md
+                  - Staking Guides:
+                      - Staking Guides: learn/learn-guides-staking.md
+                      - Nominator: learn/learn-guides-nominator.md
+                      - Staking Pools: learn/learn-guides-staking-pools.md
+                  - OpenGov Guides:
+                      - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
+                      - Test OpenGov Proposals: learn/learn-guides-test-opengov-proposals.md
+                      - Treasury: learn/learn-guides-treasury.md
+                      - Bounties: learn/learn-guides-bounties.md
+                  - Asset Hub Guides:
+                      - Asset Hub Guides: learn/learn-guides-assets.md
+                      - Assets Create: learn/learn-guides-assets-create.md
+                      - Asset Conversion: learn/learn-guides-asset-conversion.md
+                  - Bridge Hub Guides:
+                      - Bridge Hub Guides: learn/learn-guides-bridges.md
+                      - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
+                  - Claims: learn/learn-guides-claims.md
