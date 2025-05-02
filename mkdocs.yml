@@ -312,11 +312,10 @@ nav:
       - Kusama Society: https://ksmsociety.io/
   - Guides:
       - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
-      - Async Backing Guides:
-          - Async Backing: learn/maintain-guides-async-backing.md
       - Polkadot-JS:
               - Polkadot-JS: general/polkadotjs.md
               - Polkadot-JS UI: general/polkadotjs-ui.md
+      - Async Backing Conversion: learn/maintain-guides-async-backing.md
       - Account Guides:
                       - Accounts Guides: learn/learn-guides-accounts.md
                       - Accounts Multisig: learn/learn-guides-accounts-multisig.md
@@ -338,7 +337,7 @@ nav:
                       - Treasury: learn/learn-guides-treasury.md
                       - Bounties: learn/learn-guides-bounties.md
       - Asset Hub Guides:
-                      - Assets Create: learn/learn-guides-assets-create.md
+                      - Create Assets on Polkadot: learn/learn-guides-assets-create.md
                       - Asset Conversion: learn/learn-guides-asset-conversion.md
       - Bridge Hub Guides:
                       - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
