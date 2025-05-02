@@ -3,9 +3,6 @@ title: Polkadot-JS Account Guides
 description: Comprehensive guides for managing accounts, backups, and security using Polkadot-JS tools.
 ---
 
-import Tabs from "@theme/Tabs"; import TabItem from "@theme/TabItem"; import DocCardList from
-'@theme/DocCardList';
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

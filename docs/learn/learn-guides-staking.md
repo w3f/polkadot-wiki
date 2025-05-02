@@ -13,5 +13,3 @@ description: Learn how to stake, nominate, and manage rewards using Polkadot-JS 
   </p>
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
-
-<!-- TODO: INDEX CARDS -->
