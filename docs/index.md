@@ -27,20 +27,20 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
 
 <div class="row">
   <!-- Card 1 -->
-  <a href="https://docs.polkadot.com/develop/" class="card-container" data-aos="fade-up" data-aos-delay="100">
-    <img src="./assets/home/Build.png" class="card-image" alt="Explore" />
-    <p class="card-title title">Build</p>
-    <p class="card-description">
-      Most up-to-date Information on the Status of Development Tools in the Polkadot Ecosystem.
-    </p>
-  </a>
-
-  <!-- Card 2 -->
   <a href="https://docs.polkadot.com/infrastructure/" class="card-container" data-aos="fade-up" data-aos-delay="200">
     <img src="./assets/home/Maintain.png" class="card-image" alt="Learn" />
     <p class="card-title title">Maintain</p>
     <p class="card-description">
       Information and Guides on how to Deploy a Node and Run the Network.
+    </p>
+  </a>
+  
+  <!-- Card 2 -->
+  <a href="./learn/learn-polkadot-js-guides" class="card-container" data-aos="fade-up" data-aos-delay="100">
+    <img src="./assets/home/Build.png" class="card-image" alt="Explore" />
+    <p class="card-title title">Guides</p>
+    <p class="card-description">
+      Advanced guides about the Polkadot-JS tools.
     </p>
   </a>
 </div>
