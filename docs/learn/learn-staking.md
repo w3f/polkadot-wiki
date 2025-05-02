@@ -446,4 +446,4 @@ might not be receiving staking rewards using Polkadot-JS UI.
 ---
 
 !!!info "Polkadot-JS Guides"
-    If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-staking.md).
+    If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-nominator.md).

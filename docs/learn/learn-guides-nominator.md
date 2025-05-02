@@ -1,7 +1,7 @@
+---
 title: Nominator Guides for Polkadot-JS
 description: Learn how to bond tokens, nominate validators, and claim staking rewards using Polkadot-JS.
-
-import DocCardList from '@theme/DocCardList';
+---
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">

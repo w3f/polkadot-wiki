@@ -247,7 +247,7 @@
 /docs/learn-polkadot-js-guides    /learn/learn-polkadot-js-guides    301
 /docs/learn-guides-accounts    /learn/learn-guides-accounts    301
 /docs/learn-guides-transfers    /learn/learn-guides-transfers    301
-/docs/learn-guides-staking    /learn/learn-guides-staking    301
+/docs/learn-guides-staking    /learn/learn-guides-nominator    301
 /docs/learn-guides-polkadot-opengov    /learn/learn-guides-polkadot-opengov    301
 /docs/learn-guides-test-opengov-proposals    /learn/learn-guides-test-opengov-proposals    301
 /docs/learn-guides-treasury    /learn/learn-guides-treasury    301
@@ -255,8 +255,8 @@
 /docs/learn-guides-identity    /learn/learn-guides-identity    301
 /docs/learn-guides-ledger    /learn/learn-guides-ledger    301
 /docs/learn-guides-vault    /learn/learn-guides-vault    301
-/docs/learn-guides-assets    /learn/learn-guides-assets    301
-/docs/learn-guides-bridges    /learn/learn-guides-bridges    301
+/docs/learn-guides-assets    /learn/learn-guides-assets-create.md   301
+/docs/learn-guides-bridges    /learn/learn-guides-DOT-KSM-bridge.md    301
 /docs/learn-guides-dot-ksm-bridge    /learn/learn-guides-DOT-KSM-bridge    301
 /docs/learn-guides-nominator   /learn/learn-guides-nominator    301
 /docs/learn-polkadot-opengov-origins    /learn/learn-polkadot-opengov-origins    301

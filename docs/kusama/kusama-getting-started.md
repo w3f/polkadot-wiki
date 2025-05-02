@@ -30,7 +30,7 @@ on-chain governance, and parachains.
 - **[Bug Bounty](kusama-bug-bounty.md)** - An Overview of how you can help catch bugs.
 - **[Account Recovery](kusama-social-recovery.md)** - Steps on how to perform account recovery on Kusama.
 - **[Adversarial Cheatsheet](kusama-adverserial-cheatsheet.md)** - A Cheatsheet to help you create chaos.
-- **[Kappa Sigma Mu](kusama-society.md)** - Learn about the Kappa Sigma Mu Society and Join as a Member.
+- **[Kappa Sigma Mu](https://ksmsociety.io/)** - Learn about the Kappa Sigma Mu Society and Join as a Member.
 - **[KSM Inflation](kusama-inflation.md)** - Explanation of KSM's Inflation Model.
 
 </div>

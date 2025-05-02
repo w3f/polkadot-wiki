@@ -17,6 +17,14 @@ description: Advanced guides for developers and power users on using Polkadot-JS
 !!!info
     We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) together with the [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/), [**Ledger**](https://www.ledger.com/ledger-live) and [**Polkadot Vault**](https://www.parity.io/technologies/signer/) for signing transactions. We do not provide support for third party applications.
 
-<!-- TODO: INDEX CARDS -->
-
 This section of the Polkadot Wiki is dedicated to advanced guides for [the Polkadot-JS tooling](../general/polkadotjs.md).
+
+<!-- padding to make it look at little better -->
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
