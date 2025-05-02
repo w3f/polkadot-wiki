@@ -22,7 +22,7 @@ description: An Introduction to Polkadot's Parachains.
 </div>
 
 !!!info "Testing on Paseo"
-    For information on how to test coretime functionalities on Paseo, please see the [Paseo Content](../build/build-parachains.md#testing-a-parachain) on the parachain development guide.
+    For information on how to test coretime functionalities on Paseo, please see the [Paseo Content](https://docs.polkadot.com/develop/parachains/testing/) on the parachain development guide.
 
 ## Definition of a Parachain
 

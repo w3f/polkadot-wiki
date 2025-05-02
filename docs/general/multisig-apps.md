@@ -38,7 +38,7 @@ Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
 !!!info "Walk-Through Video Tutorial"
     See [this video tutorial](https://www.youtube.com/watch?v=APxPsawebJw) and [this article](https://blog.chainsafe.io/multix-a-simple-interface-to-manage-complex-multisigs-on-polkadot-97328be26f9d) for more information about using [Multix](https://multix.chainsafe.io/) for multisig accounts.
 
-The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex multisigs. The tool is part of [the open-source Polkadot/Kusama Tech Stack](../build/build-open-source.md#user-interface). Besides being user-friendly, Multix provides several benefits:
+The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex multisigs. The tool is part of [the open-source Polkadot/Kusama Tech Stack](../general/build-open-source.md#user-interface). Besides being user-friendly, Multix provides several benefits:
 
 - When one person creates the multisig account, all the signatories see the multisig account on
   their interface.

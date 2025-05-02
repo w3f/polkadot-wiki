@@ -186,7 +186,7 @@ Example for Kusama:
 polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io
 ```
 
-For wss endpoints see [this page](../maintain/maintain-endpoints.md).
+For wss endpoints see [this page](https://docs.polkadot.com/develop/networks/).
 
 Result:
 

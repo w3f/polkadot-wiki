@@ -119,7 +119,7 @@ hashed information from signatories’ public keys and the multisig threshold.
 ### Smart-contract Level Account Abstraction
 
 Account abstraction can be implemented in parachains also with traditional smart-contracts for
-example using the [ink!](../build/build-smart-contracts.md#ink) smart contract language.
+example using the [ink!](https://docs.polkadot.com/develop/smart-contracts/wasm-ink/) smart contract language.
 
 ## Further Readings
 

@@ -196,7 +196,7 @@ nav:
           - Dev Heroes: general/dev-heroes.md
       - Metadata: general/metadata.md
       - Chain State Values: general/chain-state-values.md
-      - Open Source: build/build-open-source.md
+      - Open Source: general/build-open-source.md
   - Learn:
       - General:
           - Web3 and Polkadot: general/web3-and-polkadot.md
@@ -275,41 +275,10 @@ nav:
                   - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
               - Host Implementations: learn/learn-implementations.md
           - Accounts: learn/learn-account-advanced.md
-          - Transaction Construction: learn/learn-transaction-construction.md
           - Staking: learn/learn-staking-advanced.md
           - NFT Pallets: learn/learn-nft-pallets.md
           - Cryptography: learn/learn-cryptography.md
           - Phragmen: learn/learn-phragmen.md
-          - Polkadot-JS:
-              - PolkadotJS: general/polkadotjs.md
-              - PolkadotJS UI: general/polkadotjs-ui.md
-              - Polkadot-JS Guides:
-                  - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
-                  - Account Guides:
-                      - Accounts Guides: learn/learn-guides-accounts.md
-                      - Accounts Multisig: learn/learn-guides-accounts-multisig.md
-                      - Accounts Proxy: learn/learn-guides-accounts-proxy.md
-                      - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
-                  - Transfers: learn/learn-guides-transfers.md
-                  - Staking Guides:
-                      - Staking Guides: learn/learn-guides-staking.md
-                      - Nominator: learn/learn-guides-nominator.md
-                      - Staking Pools: learn/learn-guides-staking-pools.md
-                  - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
-                  - Test OpenGov Proposals: learn/learn-guides-test-opengov-proposals.md
-                  - Treasury: learn/learn-guides-treasury.md
-                  - Bounties: learn/learn-guides-bounties.md
-                  - Identity: learn/learn-guides-identity.md
-                  - Ledger: learn/learn-guides-ledger.md
-                  - Vault: learn/learn-guides-vault.md
-                  - Asset Hub Guides:
-                      - Asset Hub Guides: learn/learn-guides-assets.md
-                      - Assets Create: learn/learn-guides-assets-create.md
-                      - Asset Conversion: learn/learn-guides-asset-conversion.md
-                  - Bridge Hub Guides:
-                      - Bridge Hub Guides: learn/learn-guides-bridges.md
-                      - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
-                  - Claims: learn/learn-guides-claims.md
       - Comparisons:
           - Rollups & Interoperability: learn/learn-comparisons-rollups.md
           - Kusama: learn/learn-comparisons-kusama.md
@@ -332,71 +301,6 @@ nav:
           - Auction: learn/archive/learn-auction.md
           - Crowdloans: learn/archive/learn-crowdloans.md
           - Thousand Validators: learn/archive/thousand-validators.md
-  - Build:
-        - build/index.md
-        - Build Guide: build/build-guide.md
-        - Network Overview: build/build-network-overview.md
-        - Client-side Development:
-            - build/client/index.md
-            - Client-side Development: build/build-client-side.md
-            - Light Clients: build/build-light-clients.md
-            - Node Interaction: build/build-node-interaction.md
-        - Smart Contracts: build/build-smart-contracts.md
-        - Protocol Development Resources:
-            - build/protocol/index.md
-            - Coretime Guides:
-                - Coretime Overview: build/build-guides-coretime-start.md
-                - Install Dependencies: build/build-guides-install-deps.md
-                - Basic Template: build/build-guides-template-basic.md
-                - Coretime Troubleshooting: build/build-guides-coretime-troubleshoot.md
-                - Coretime Swap: learn/learn-guides-coretime-swap.md
-            - Protocol Information: build/build-protocol-info.md
-            - Integrate Assets: build/build-integrate-assets.md
-            - HRMP Channels: build/build-hrmp-channels.md
-        - Tooling:
-            - build/tooling/index.md
-            - Data: build/build-data.md
-            - Tools Index: build/build-tools-index.md
-        - Hackathon: build/build-hackathon.md
-        - Archive:
-            - build/archive/index.md
-            - Integration: build/build-integration.md
-            - Node Management: build/build-node-management.md
-            - Parachains: build/build-parachains.md
-            - Build Dapp: build/build-dapp.md
-            - Build Oracle: build/build-oracle.md
-            - Storage:  build/build-storage.md
-  - Maintain:
-      - maintain/index.md
-      - Polkadot Parameters: maintain/maintain-polkadot-parameters.md
-      - Nodes and Dapps:
-          - maintain/node/index.md
-          - Endpoints: maintain/maintain-endpoints.md
-          - Sync: maintain/maintain-sync.md
-          - Bootnode: maintain/maintain-bootnode.md
-          - RPC: maintain/maintain-rpc.md
-          - WSS: maintain/maintain-wss.md
-          - Networks: maintain/maintain-networks.md
-      - Collator Guides:
-          - maintain/collator/index.md
-          - Async Backing: maintain/maintain-guides-async-backing.md
-      - Validator Guides:
-          - maintain/validator/index.md
-          - How to Validate Polkadot: maintain/maintain-guides-how-to-validate-polkadot.md
-          - Validator Payout: maintain/maintain-guides-validator-payout.md
-          - How to Systemd: maintain/maintain-guides-how-to-systemd.md
-          - Secure Validator: maintain/maintain-guides-secure-validator.md
-          - How to Upgrade: maintain/maintain-guides-how-to-upgrade.md
-          - How to Monitor Your Node: maintain/maintain-guides-how-to-monitor-your-node.md
-          - How to Chill: maintain/maintain-guides-how-to-chill.md
-          - How to Stop Validating: maintain/maintain-guides-how-to-stop-validating.md
-          - Community Validator Guide: maintain/maintain-guides-validator-community.md
-      - Archive:
-          - maintain/archive/index.md
-          - Democracy Guide: maintain/archive/maintain-guides-democracy.md
-          - How to Join Council: maintain/archive/maintain-guides-how-to-join-council.md
-          - How to Vote Councillor: maintain/archive/maintain-guides-how-to-vote-councillor.md
-          - maintain/maintain-archive.md
   - Kusama:
       - Getting Started: kusama/kusama-getting-started.md
       - Timeline: kusama/kusama-timeline.md
@@ -404,9 +308,37 @@ nav:
       - Bug Bounty: kusama/kusama-bug-bounty.md
       - Social Recovery: kusama/kusama-social-recovery.md
       - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
-      - Society Guide: maintain/kusama/maintain-guides-society-kusama.md
-      - How to Validate Kusama: maintain/kusama/maintain-guides-how-to-validate-kusama.md
       - Kusama Inflation: kusama/kusama-inflation.md
       - Kusama Society: https://ksmsociety.io/
-
-
+  - Guides:
+      - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
+      - Polkadot-JS:
+              - Polkadot-JS: general/polkadotjs.md
+              - Polkadot-JS UI: general/polkadotjs-ui.md
+      - Account Guides:
+                      - Accounts Guides: learn/learn-guides-accounts.md
+                      - Accounts Multisig: learn/learn-guides-accounts-multisig.md
+                      - Accounts Proxy: learn/learn-guides-accounts-proxy.md
+                      - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
+                      - Transfers: learn/learn-guides-transfers.md
+                      - Identity: learn/learn-guides-identity.md
+                      - Ledger: learn/learn-guides-ledger.md
+                      - Vault: learn/learn-guides-vault.md
+                      - Transaction Construction: learn/learn-transaction-construction.md
+      - Staking Guides:
+                      - Staking Guides: learn/learn-guides-staking.md
+                      - Nominator: learn/learn-guides-nominator.md
+                      - Staking Pools: learn/learn-guides-staking-pools.md
+      - OpenGov Guides:
+                      - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
+                      - Test OpenGov Proposals: learn/learn-guides-test-opengov-proposals.md
+                      - Treasury: learn/learn-guides-treasury.md
+                      - Bounties: learn/learn-guides-bounties.md
+      - Asset Hub Guides:
+                      - Asset Hub Guides: learn/learn-guides-assets.md
+                      - Assets Create: learn/learn-guides-assets-create.md
+                      - Asset Conversion: learn/learn-guides-asset-conversion.md
+      - Bridge Hub Guides:
+                      - Bridge Hub Guides: learn/learn-guides-bridges.md
+                      - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
+      - Claims: learn/learn-guides-claims.md

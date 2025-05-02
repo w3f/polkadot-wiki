@@ -30,7 +30,7 @@ transact with them using your private key. That is why you should keep your priv
 ### Mnemonic Seed Phrase
 
 A user's account requires a private key that can sign on to one of the
-[supported curves and signature schemes](../build/build-protocol-info.md#cryptography). Without a
+[supported curves and signature schemes](./learn-cryptography.md#session-keys). Without a
 private key, an account cannot sign anything. In Polkadot, there are some exceptions of accounts
 that do not have known private keys (i.e. keyless accounts). Such accounts are
 [multi-signature accounts](./learn-account-multisig.md),

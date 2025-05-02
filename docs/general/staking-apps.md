@@ -22,8 +22,8 @@ dashboard allows to stake as a solo nominator or as a
 pools. The dashboard supports [Ledger](./ledger.md),
 [Polkadot Vault](./polkadot-vault.md),
 [SubWallet](./wallets-and-extensions.md#subwallet),
-[Talisman](./wallets-and-extensions.md#talisman), WalletConnect, Fearless Wallet,
-[PolkaGate](./wallets-and-extensions.md#polkagate), and Enkrypt. The dashboard also
+[Talisman](./wallets-and-extensions.md#talisman), [WalletConnect](https://walletconnect.network/), [Fearless Wallet](https://fearlesswallet.io/),
+[PolkaGate](https://polkagate.xyz/), and [Enkrypt](https://www.enkrypt.com/). The dashboard also
 supports [staking proxies](../learn/learn-staking.md#stash-account-and-staking-proxy).
 
 You can find more information about the Polkadot staking dashboard on the dedicated [wiki page](./dashboards/staking-dashboard.md) and

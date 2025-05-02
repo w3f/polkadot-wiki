@@ -433,11 +433,6 @@ A blockchain that meets several characteristics that allow it to work within the
 network Host. Also known as "parallelized chain". All parachains start their life-cycle as a
 parathread.
 
-## Parachain Development Kit (PDK)
-
-Similar to an [SDK](#software-development-kit-sdk), parachain development kits (PDK) is a set of tools that make it easy for
-developers to create Polkadot-compatible [parachains](#parachain).
-
 ## ParaID
 
 A unique numeric (non-negative integer) identifier for a parachain.

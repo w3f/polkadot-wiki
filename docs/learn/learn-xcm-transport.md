@@ -73,7 +73,7 @@ out in favor of it.
     A stop-gap protocol is a temporary substitute for the functionality that is not fully complete. While XCMP proper is still in development, HRMP is a working replacement.
 
 A tutorial on how to open an HRMP channel on a parachain can be found
-[here](../build/build-hrmp-channels.md).
+[here](https://docs.polkadot.com/tutorials/interoperability/xcm-channels).
 
 ### XCMP (Cross Consensus Message Passing) Design Summary
 

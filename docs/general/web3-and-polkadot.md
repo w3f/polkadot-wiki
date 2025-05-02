@@ -97,16 +97,13 @@ Data retrievability is dependent on how resilient the blockchain is. Resiliency 
 elements such as decentralization, economic incentives, and on-chain governance to ensure the
 network can sustain on its own.
 
-!!!info Data Retrievability vs. Data Availability
-
-Data **retrievability** is the ability of nodes to retrieve historical information from the
-blockchain. Historical data is not needed to verify new blocks; it is only required for synching
-full nodes from the Genesis block or serving specific historical requests.
-
-Data **availability** assures full nodes can access and verify the full transactions associated with
-a specific block. It does not necessarily imply that the data is accessible forever. For more
-information about data availability on Polkadot, see the
-[dedicated section on the parachain protocol page](../learn/learn-parachains-protocol.md#availability-and-validity-anv-protocol).
+!!!info "Data Retrievability vs. Data Availability"
+    Data **retrievability** is the ability of nodes to retrieve historical information from the blockchain. Historical data is not needed to verify new blocks; it is only required for synching full nodes from the Genesis block or serving specific historical requests.
+    
+    Data **availability** assures full nodes can access and verify the full transactions associated with
+    a specific block. It does not necessarily imply that the data is accessible forever. For more
+    information about data availability on Polkadot, see the
+    [dedicated section on the parachain protocol page](../learn/learn-parachains-protocol.md#availability-and-validity-anv-protocol).
 
 
 
@@ -193,7 +190,7 @@ synchronize (_warp sync_ in case of Polkadot) with a full node to obtain (Merkle
 the latest chain state, and hence can trustlessly verify any response by full node against the
 commitment. In this way, we can always verify that the data we see is the truth, which is done
 automatically by the light client. Polkadot has a browser-embedded light client
-[Substrate connect](../build/build-light-clients.md) that uses the
+[Substrate connect](https://chromewebstore.google.com/detail/substrate-connect-extensi/khccbhhbocaaklceanjginbdheafklai) that uses the
 [smoldot](https://github.com/smol-dot/smoldot) codebase. Most web3 applications today access
 blockchain data through a centralized RPC server.
 

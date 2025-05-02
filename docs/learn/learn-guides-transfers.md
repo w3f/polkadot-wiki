@@ -220,7 +220,7 @@ account that need to get resolved.
 
 If you used this account to set up a validator and you did not purge your keys before unbonding your
 tokens, you need to purge your keys. You can do this by seeing the
-[How to Stop Validating](../maintain/maintain-guides-how-to-stop-validating.md) page. This can also
+[How to Stop Validating](https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/stop-validating/) page. This can also
 be checked by checking `session.nextKeys` in the chain state for an existing key.
 
 ### Existing Recovery Info

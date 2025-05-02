@@ -95,7 +95,7 @@ version shown on the top left section of Polkadot-JS UI below is `kusama-9370`, 
 
 Infrastructure services include but are not limited to the following:
 
-- [Validators](../maintain/maintain-guides-how-to-upgrade.md)
+- [Validators](https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node)
 - API services
 - Node-as-a-Service (NaaS)
 - General infrastructure management (e.g. block explorers, custodians)

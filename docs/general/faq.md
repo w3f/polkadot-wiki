@@ -72,7 +72,7 @@ There is no central authority that decides on validators, so there is not per se
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
 on how to do validate you can consult the
-[validator guide](../maintain/maintain-guides-how-to-validate-polkadot.md).
+[validator guide](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
@@ -91,7 +91,7 @@ nominate validators if they apply and fit the requirements.
 Validators are rewarded from the [inflation of the relay chain](../learn/learn-inflation.md),
 [transaction fees](../learn/learn-transactions.md#transaction-fees), and tips. However, they only
 take a percentage of the former two. More details can be read on the page for
-[validator payouts](../maintain/maintain-guides-validator-payout.md).
+[validator payouts](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout).
 
 ### What is the minimum stake necessary to be elected as an active validator?
 
@@ -325,7 +325,7 @@ integration between the two applications.
 
 ### What is the minimum amount of KSM / DOT I can have in my account?
 
-Please see information about [Existential Deposits](../build/build-protocol-info.md).
+Please see information about [Existential Deposits](../learn/learn-accounts.md#existential-deposit-and-reaping).
 
 ### What are the transfer fees for Kusama?
 

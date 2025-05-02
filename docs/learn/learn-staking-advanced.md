@@ -132,7 +132,7 @@ running time complexity, etc.), please read
 ## Rewards Distribution
 
 !!!info
-    The general rule for rewards across validators is that two validators get paid essentially the same amount of tokens for equal work, i.e. they are not paid proportional to their total stakes. There is a probabilistic component to staking rewards in the form of [era points](../maintain/maintain-guides-validator-payout.md#era-points) and [tips](./learn-guides-transfers.md#calculating-fees-with-polkadot-js) but these should average out over time.
+    The general rule for rewards across validators is that two validators get paid essentially the same amount of tokens for equal work, i.e. they are not paid proportional to their total stakes. There is a probabilistic component to staking rewards in the form of [era points](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/#era-points) and [tips](./learn-guides-transfers.md#calculating-fees-with-polkadot-js) but these should average out over time.
 
 Validators are paid the same regardless of stake backing them. Validators with less stake will
 generally pay more to nominators per-token than the ones with more stake. This gives nominators an

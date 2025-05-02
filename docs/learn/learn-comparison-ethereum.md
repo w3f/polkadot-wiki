@@ -35,7 +35,7 @@ Polkadot _does not_ directly run a virtual machine for smart contracts, as Polka
 purpose is to validate the protocols that operate under it.
 
 However, several parachains provide
-[smart contract functionality](https://wiki.polkadot.network/docs/build-smart-contracts#parachains).
+[smart contract functionality](https://docs.polkadot.com/develop/smart-contracts/evm/).
 Parachains on Polkadot can even run an EVM for executing smart contracts written in Solidity using
 [Frontier, an Ethereum compatibility layer for Substrate](https://github.com/polkadot-evm/frontier).
 
@@ -212,7 +212,7 @@ multiple components working together to modify, retrieve, and watch state change
 happen.
 
 For a more comprehensive list of how to build on Polkadot, be sure to check the
-[Build Section](../build/build-guide.md).
+[Build Section](https://docs.polkadot.com/develop/) on the main website.
 
 ## Conclusion
 

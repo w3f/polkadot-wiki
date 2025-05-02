@@ -279,9 +279,7 @@ double.
 
 The maximum number of "doublings" of the
 [lock period](../general/chain-state-values.md) is set to 6 (and thus
-32 lock periods in total). For additional information regarding the timeline of governance events,
-check out the governance section on the
-[Polkadot Parameters page](../maintain/maintain-polkadot-parameters.md#governance).
+32 lock periods in total). For additional information regarding the timeline of governance events, see the [origins and tracks information](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
 
 Votes are always "counted" at the same time (at the end of the voting period), no matter how long
 the tokens are locked.

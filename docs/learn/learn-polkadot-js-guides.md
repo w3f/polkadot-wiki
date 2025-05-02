@@ -3,10 +3,6 @@ title: Polkadot-JS Guides
 description: Advanced guides for developers and power users on using Polkadot-JS UI and related tools for interacting with the Polkadot network.
 ---
 
-import DocCardList from '@theme/DocCardList';
-
-
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -22,3 +18,5 @@ import DocCardList from '@theme/DocCardList';
     We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) together with the [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/), [**Ledger**](https://www.ledger.com/ledger-live) and [**Polkadot Vault**](https://www.parity.io/technologies/signer/) for signing transactions. We do not provide support for third party applications.
 
 <!-- TODO: INDEX CARDS -->
+
+This section of the Polkadot Wiki is dedicated to advanced guides for [the Polkadot-JS tooling](../general/polkadotjs.md).

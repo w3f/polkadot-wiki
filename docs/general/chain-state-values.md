@@ -86,7 +86,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Minimum Validator Commission
 
-    The minimum commission a Polkadot Validator can set is {{ rpc("polkadot", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
+    The minimum commission a Polkadot Validator can set is {{ rpc("polkadot", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
 
     #### Multisig Deposit Base
 
@@ -242,7 +242,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Minimum Validator Commission
 
-    The minimum commission a Kusama Validator can set is {{ rpc("kusama", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](../maintain/maintain-guides-how-to-validate-polkadot.md#how-many-dot-do-i-need-to-become-an-active-validator).
+    The minimum commission a Kusama Validator can set is {{ rpc("kusama", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
 
     #### Multisig Deposit Base
 
