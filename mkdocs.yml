@@ -192,8 +192,6 @@ nav:
           - Ambassadors: general/ambassadors.md
           - Alpha Program: general/alpha-program.md
           - Decentralized Nodes: https://nodes.web3.foundation/
-          - Thousand Contributors: general/thousand-contributors.md
-          - Dev Heroes: general/dev-heroes.md
       - Metadata: general/metadata.md
       - Chain State Values: general/chain-state-values.md
       - Open Source: general/build-open-source.md

@@ -41,7 +41,6 @@ initiatives:
   such as:
   - [The Polkadot Blockchain Academy](https://polkadot.network/development/academy/)
   - [Polkadot Alpha Program](./alpha-program.md)
-  - [Polkadot Developer Heroes Program](./dev-heroes.md)
   - [Edx Courses](https://www.edx.org/school/web3x)
   - Rust and Substrate Courses (coming soon)
 
