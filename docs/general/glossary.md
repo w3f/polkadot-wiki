@@ -678,10 +678,6 @@ burning an amount on the sending chain and minting an equivalent amount on the d
 Short for "test network": an experimental network where testing and development takes place.
 Networks are often executed on a testnet before they are deployed to a [mainnet](#mainnet).
 
-## Tokenization
-
-The process of replacing sensitive data with non-sensitive data.
-
 ## Tracks
 
 Each [Origin](#origin) is associated with a single referendum class and each class is associated
