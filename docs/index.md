@@ -27,11 +27,11 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
 
 <div class="row">
   <!-- Card 1 -->
-  <a href="./kusama/kusama-getting-started" class="card-container" data-aos="fade-up" data-aos-delay="200">
-    <img src="./assets/kusama-ksm-logo.png" class="card-image" alt="Learn" />
-    <p class="card-title title">Kusama</p>
+  <a href="./general/dashboards/parity-data-dashboards" class="card-container" data-aos="fade-up" data-aos-delay="200">
+    <img src="./assets/Dashboards.png" class="card-image" alt="Learn" />
+    <p class="card-title title">Analytics</p>
     <p class="card-description">
-      Information about Polkadot's canary network Kusama.
+      Explore data-driven insights into the Polkadot ecosystem with interactive analysis and visualizations.
     </p>
   </a>
   
