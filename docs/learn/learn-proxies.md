@@ -108,6 +108,12 @@ required amount to be reserved for an account to announce a proxy call. For ever
 account has, an additional amount defined by the
 [`announcementDepositFactor`](../general/chain-state-values.md) is reserved as well.
 
+## Remote Proxies
+
+Remote proxies are proxy accounts originally created on one chain (the parent chain) and then replicated on another chain (the target chain). This mechanism allows users to use a proxy on the target chain by providing proof that the same proxy exists and is valid on the parent chain. Remote proxy replication is especially useful for multi-signature setups where a pure proxy, created on the Polkadot relay chain, needs to perform actions on the Polkadot Asset Hub system chain.
+
+Functions like the `create_pure` and `announce` ensure that the proxy’s presence is acknowledged by the target chain. Events such as `PureCreated` and `Announced` help trace and verify proxy replication, making the entire flow transparent and auditable. More information about pure proxy replication can be found [here](https://github.com/polkadot-fellows/runtimes/pull/535#event-16513620291).
+
 ---
 
 !!!info "Polkadot-JS Guides"
