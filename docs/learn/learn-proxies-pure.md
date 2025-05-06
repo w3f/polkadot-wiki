@@ -46,6 +46,19 @@ _pure_ proxy, which in turn will do a multisig call.
 
 In the past, pure proxies were called anonymous proxies. However, pure proxies are not anonymous because they have an address spawned by a primary account acting as _any_ proxy. Even if _any_ proxy changes, it is still possible to find who generated the _anonymous_ proxy by going backward using a block explorer. There was thus the need to change the name of _anonymous_ proxy. People suggested _keyless accounts_ since they do not have a private key and are proxied accounts. However, multisig accounts are also keyless (but deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that has been chosen is **pure proxy**. If you want to know more about the reasoning behind the renaming of pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or the discussion on [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
 
+## Remote Proxies
+
+Remote proxies enable the utilization of pure proxy accounts, initially established on a designated parent chain (i.e., the Polkadot relay chain), for actions on a separate target chain (i.e., Polkadot Asset Hub). This is achieved by providing a cryptographic proof, specifically a storage proof anchored to the parent chain's storage root. This proof verifies that the specified pure proxy account indeed exists and is valid on the parent chain at a particular point in time.
+
+An example would be a multi-signature account, where a pure proxy is created on the Polkadot Relay Chain. To cosign a transaction on Polkadot Asset Hub, this keyless pure proxy cannot directly interact. The remote proxy mechanism bridges this gap. Leveraging the remote proxy pallet on Asset Hub, a transaction can be constructed that includes a storage proof demonstrating the pure proxy's existence on the relay chain. Upon successful verification of this proof, the Asset Hub chain allows actions to be executed as if they originated from the pure proxy on the Relay Chain.
+
+Once a successful remote proxy call is executed, a `ProxyExecuted` event should be evident.
+
+For more context and details about remote proxies, see the following two blog posts:
+
+- [Ecosystem proxy](https://blog.kchr.de/ecosystem-proxy/)
+- [Remote proxies for the braves](https://blog.kchr.de/polkadot/guides/remote-proxies-for-the-braves/)
+
 ---
 
 !!!info "Polkadot-JS Guides"
