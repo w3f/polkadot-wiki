@@ -207,6 +207,10 @@ its track to be executed simultaneously. In contrast, Root will allow only one p
 track. Once the track capacity is filled, additional proposals in the lead-in period will queue
 until place is available to enter the decision period.
 
+### Collectives
+
+Collectives are on-chain groups hosted on the Polkadot Collectives parachain, designed to serve the Polkadot network. They enable collaborative decision-making and governance through customizable parameters such as promotion/demotion periods, offboarding timeouts, and more. Collectives can manage [sub-treasuries](./learn-polkadot-opengov-treasury.md#sub-treasuries), allocate salaries, and submit evidence for governance actions. Examples include the [Polkadot Alliance](https://polkadot.polkassembly.io/referendum/94) and the [Polkadot Technical Fellowship.](./learn-polkadot-technical-fellowship.md)
+
 ### Origins and Tracks
 
 An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
