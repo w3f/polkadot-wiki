@@ -54,7 +54,7 @@ An example would be a multi-signature account, where a pure proxy is created on 
 
 Once a successful remote proxy call is executed, a `ProxyExecuted` event should be visible. 
 
-You can use [this tool](https://w3f.github.io/RemoteProxyCall/) to construct a transaction that transfers all funds from a pure proxy on Kusama Asset Hub to its controlling account on the Kusama Relay Chain. The underlying code is available [on GitHub](https://github.com/w3f/RemoteProxyCall), and is based on [this blog post](https://blog.kchr.de/polkadot/guides/remote-proxies-for-the-braves/). For more context on how remote proxies work and why they're helpful, check out [this blog post](https://blog.kchr.de/ecosystem-proxy/).
+Here is an example usage of a remote proxy call: If you have a pure proxy setup on Kusama Relay Chain, you can use [this tool](https://w3f.github.io/RemoteProxyCall/) to construct a transaction that transfers all funds from the pure proxy account address to its controlling account address on Kusama Asset Hub, even though no proxy setup is present on Kusama Asset Hub. The underlying code is available [on GitHub](https://github.com/w3f/RemoteProxyCall), and is based on [this blog post](https://blog.kchr.de/polkadot/guides/remote-proxies-for-the-braves/). For more context on how remote proxies work and why they're helpful, check out [this blog post](https://blog.kchr.de/ecosystem-proxy/).
 
 
 ---
