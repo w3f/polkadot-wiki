@@ -114,7 +114,7 @@ Remote proxies enable the utilization of pure proxy accounts, initially establis
 
 An example would be a multi-signature account, where a pure proxy is created on the Polkadot Relay Chain. To cosign a transaction on Polkadot Asset Hub, this keyless pure proxy cannot directly interact. The remote proxy mechanism bridges this gap. Leveraging the remote proxy pallet on Asset Hub, a transaction can be constructed that includes a storage proof demonstrating the pure proxy's existence on the relay chain. Upon successful verification of this proof, the Asset Hub chain allows actions to be executed as if they originated from the pure proxy on the Relay Chain.
 
-Functions like the `create_pure` and `announce` ensure that the proxy’s presence is acknowledged by the target chain. Events such as `PureCreated` and `Announced` help trace and verify proxy replication, making the entire flow transparent and auditable. More information about pure proxy replication can be found [here](https://github.com/polkadot-fellows/runtimes/pull/535#event-16513620291).
+Once a successful remote proxy call is executed, a `ProxyExecuted` event should be evident.
 
 ---
 
