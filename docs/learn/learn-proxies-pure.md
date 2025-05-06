@@ -52,12 +52,10 @@ Remote proxies enable the utilization of pure proxy accounts, initially establis
 
 An example would be a multi-signature account, where a pure proxy is created on the Polkadot Relay Chain. To cosign a transaction on Polkadot Asset Hub, this keyless pure proxy cannot directly interact. The remote proxy mechanism bridges this gap. Leveraging the remote proxy pallet on Asset Hub, a transaction can be constructed that includes a storage proof demonstrating the pure proxy's existence on the relay chain. Upon successful verification of this proof, the Asset Hub chain allows actions to be executed as if they originated from the pure proxy on the Relay Chain.
 
-Once a successful remote proxy call is executed, a `ProxyExecuted` event should be evident.
+Once a successful remote proxy call is executed, a `ProxyExecuted` event should be visible. 
 
-For more context and details about remote proxies, see the following two blog posts:
+Here is an example usage of a remote proxy call: If you have a pure proxy setup on Kusama Relay Chain, you can use [this tool](https://w3f.github.io/RemoteProxyCall/) to construct a transaction that transfers all funds from the pure proxy account address to its controlling account address on Kusama Asset Hub, even though no proxy setup is present on Kusama Asset Hub. The underlying code is available [on GitHub](https://github.com/w3f/RemoteProxyCall), and is based on [this blog post](https://blog.kchr.de/polkadot/guides/remote-proxies-for-the-braves/). For more context on how remote proxies work and why they're helpful, check out [this blog post](https://blog.kchr.de/ecosystem-proxy/).
 
-- [Ecosystem proxy](https://blog.kchr.de/ecosystem-proxy/)
-- [Remote proxies for the braves](https://blog.kchr.de/polkadot/guides/remote-proxies-for-the-braves/)
 
 ---
 
