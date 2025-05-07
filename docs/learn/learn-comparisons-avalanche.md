@@ -23,39 +23,33 @@ three chains. This allows for a separation of concern over validators and consen
 and smart contract execution. Avalanche uses a DAG (Directed Acyclic Graph) structure for one of its
 chains which is non-linear. Polkadot uses the linear chain structure similar to Bitcoin and
 Ethereum. Smart contracts in Polkadot are implemented on
-[parachains](https://docs.polkadot.com/develop/smart-contracts/evm/). Polkadot being a layer-0 blockchain, is not a smart
-contract platform and does not have plans to support them natively.
+[parachains](https://docs.polkadot.com/develop/smart-contracts/evm/).
 
 ![avalanche-network](../assets/comparisons/avalanche/avalanche-network.png)
 
 Image source: [Avalanche docs](https://docs.avax.network/).
 
-#### P-chain (Platform)
+Avalanche's Primary Network is split into three blockchains. 
 
-The P-chain is responsible for maintaining the validator set and securing the network. AVAX token
-holders can spin up their own nodes and become validators by staking their tokens. Similar to the
-NPoS system that Polkadot uses, Avalanche uses a Delegated PoS which allows token holders to also
-delegate their token stake to existing validators instead of running their own nodes.
+### P-chain (Platform)
 
-#### X-chain (Exchange)
+- Maintains the validator set and secures the network.
+- Supports staking operations and Avalanche L1s.
+- Uses Delegated Proof-of-Stake (DPoS), allowing token holders to delegate their stake to validators.
 
-The X-chain is responsible for the transaction layer of the Avalanche blockchain. It uses a UTXO
-model like Bitcoin whereas Polkadot uses an account model like Ethereum. This is the only chain that
-implements the DAG (Directed Acyclic Graph) model for its blockchain, making this the fastest chain
-on the Avalanche network. This chain does not support smart contract execution.
+### X-chain (Exchange)
 
-#### C-chain (Contracts)
+- Handles the transaction layer using a UTXO model (similar to Bitcoin).
+- Implements a DAG (Directed Acyclic Graph) structure for fast transaction processing.
+- Does not support smart contract execution.
 
-The C-chain is where the most activity will happen on the Avalanche network. It allows for different
-virtual machines to execute smart contract code. Out of the box, it has support for EVM and AVM
-(Avalanche VM). C-Chain runs a fork of go-ethereum called coreth that has the networking and
-consensus portions replaced with Avalanche equivalents.
+### C-chain (Contracts)
 
-As Polkadot does not have a smart contract layer out of the box, the EVM and WASM smart contract
-abilities lie in the Parachain layers. This is a major difference between Polkadot and Avalanche.
-The smart-contract abilities of Avalanche are baked into its three-chain model.
+- Supports EVM-compatible smart contracts.
+- Runs the Coreth VM, a fork of go-ethereum with Avalanche-specific networking and consensus.
+- Focuses on high activity for smart contract execution.
 
-#### Subnets or sub-networks
+### Subnets
 
 Avalanche defines a subnet as a dynamic set of validators that achieve consensus on a set of
 blockchains. In Polkadot's terminology, Subnets can be viewed as public or private blockchain
@@ -64,6 +58,27 @@ validate these runtimes. Similar to the Parachains on Polkadot, Subnets provide 
 choose the transaction fee model, tokenomics, and custom compile rules. One or many validators can
 start validating a subnet runtime, effectively becoming a subset of the overall validator set of the
 Primary Network.
+
+#### Virtual Machines
+
+Avalanche uses Virtual Machines (VMs) as blueprints for defining blockchain behavior, including state 
+transitions, transaction rules, and API interfaces. Developers can use the same VM to create multiple 
+independent blockchains with identical rules.
+
+For example, Avalanche's Primary Network requires validators to run three core VMs:
+
+Avalanche allows developers to build custom VMs for advanced use cases. These custom VMs 
+can be implemented in any programming language and communicate with Avalanche using a language-agnostic 
+RPC protocol. Developers can also use the Subnet-EVM for quick deployment of Solidity-based blockchains 
+or create fully custom VMs for maximum flexibility.
+
+In contrast, Polkadot does not have a native smart contract layer. Instead, its EVM and WASM smart 
+contract capabilities are implemented on parachains. Parachains on Polkadot are independent blockchains 
+that connect to the relay chain and share its security. Its parachain model allows developers to build highly customized blockchain 
+runtimes using the Polkadot SDK, a modular framework for blockchain development. These runtimes (state transition functions for Polkadot parachains/rollups) are compiled to WASM.
+
+This difference highlights Avalanche's focus on VM-based blockchain customization and Polkadot's 
+emphasis on shared security and modular runtime development.
 
 ## Consensus
 
@@ -129,12 +144,15 @@ given time. Read more about this in the [staking page](learn-staking.md).
 
 ## Message Passing
 
-Avalanche does not have a native trustless message-passing mechanism. Instead, it relies on bridges.
-Though, because it is an EVM-compatible protocol, it's able to interoperate at a token level.
-However, subnets do not have a messaging layer out of the box. Polkadot, with its [XCM](learn-xcm.md)
-and [XCMP](learn-xcm-transport.md#xcmp-cross-chain-message-passing) messaging protocols, allows for a native and
-trustless messaging scheme, thus supporting the composability of chains and enabling the development
-of powerful cross-chain applications.
+Avalanche has introduced [Avalanche Interchain Messaging (ICM)](https://build.avax.network/docs/cross-chain/avalanche-warp-messaging/overview), 
+a native cross-chain communication protocol that allows subnets to exchange messages securely and trustlessly. 
+ICM enables interoperability between subnets by leveraging cryptographic proofs to ensure message integrity. 
+This is a significant improvement over relying solely on bridges for communication. However, ICM is limited 
+to subnets within the Avalanche ecosystem and does not extend to external blockchains.
+
+Polkadot, with its [XCM](learn-xcm.md) and [XCMP](learn-xcm-transport.md#xcmp-cross-chain-message-passing) messaging protocols, 
+provides a native and trustless messaging scheme that supports the composability of chains and enables the development 
+of powerful cross-chain applications. Unlike ICM, XCM extends beyond Polkadot's ecosystem, allowing for broader interoperability.
 
 ## Governance
 
@@ -179,10 +197,10 @@ is limited and blockchains have to buy into the design decisions of Avalanche's 
 parachains on Polkadot, Subnets are not able to share the security of the main chains. In addition
 to utilizing block finality and security of the relay chain, parachains on Polkadot use
 [XCM](learn-xcm.md) to pass native trustless messages, instead of having to rely on multiple bridging
-solutions. However, Subnets are easy to launch when compared to parachains, given that they only
-need a recommended minimum of 5 validators, which make the costs of launch predictable. Avalanche
-has plans to implement shared security, interoperability, composability and on-chain governance
-features which are already offered by Polkadot.
+solutions. However, Subnets are easier to launch compared to parachains, given that they only
+require a recommended minimum of 5 validators, making the costs of launch predictable. Avalanche
+has plans to implement shared security, interoperability, composability, and on-chain governance
+features, but these are already offered by Polkadot.
 
 ## References
 
