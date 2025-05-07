@@ -149,6 +149,15 @@ nav:
           - Contributors: general/contributors.md
       - FAQ: general/faq.md   
       - Glossary: general/glossary.md
+      - Kusama:
+        - Getting Started: kusama/kusama-getting-started.md
+        - Timeline: kusama/kusama-timeline.md
+        - Code of Conduct: kusama/kusama-coc.md
+        - Bug Bounty: kusama/kusama-bug-bounty.md
+        - Social Recovery: kusama/kusama-social-recovery.md
+        - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
+        - Kusama Inflation: kusama/kusama-inflation.md
+        - Kusama Society: https://ksmsociety.io/
   - Essentials:
       - Accounts:
          - Accounts: learn/learn-accounts.md
@@ -296,15 +305,6 @@ nav:
                       - Unique: general/dashboards/dune-analytics/parachain-dashboards/unique-dashboards.md
                   - Project Dashboards: general/dashboards/dune-analytics/project-dashboards.md
                   - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
-  - Kusama:
-      - Getting Started: kusama/kusama-getting-started.md
-      - Timeline: kusama/kusama-timeline.md
-      - Code of Conduct: kusama/kusama-coc.md
-      - Bug Bounty: kusama/kusama-bug-bounty.md
-      - Social Recovery: kusama/kusama-social-recovery.md
-      - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
-      - Kusama Inflation: kusama/kusama-inflation.md
-      - Kusama Society: https://ksmsociety.io/
   - Developer Guides:
       - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
       - Polkadot-JS:
