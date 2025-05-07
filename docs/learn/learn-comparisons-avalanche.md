@@ -10,8 +10,8 @@ description: Discover the differences between Polkadot and Avalanche, including 
 
 Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to
 be designed and connected to a primary network. In Polkadot, the primary network is the relay chain
-and Avalanche does this with 3 main chains - the P-chain, X-chain, and C-chain. Similar to how
-Polkadot has its Parachains that connect to the relay chain, Avalanche has what’s called
+and Avalanche does this with 3 main chains - the P-chain, X-chain, and C-chain (which collectively is known as the "Primary Chain"). Similar to how
+Polkadot has parachains/rollups that connect to the relay chain, Avalanche has what’s called
 [subnets](https://docs.avax.network/subnets). Similar to Polkadot, Avalanche also uses a PoS
 mechanism for achieving consensus. The validators stake their AVAX tokens in order to participate in
 the PoS system and secure the network.
@@ -22,14 +22,14 @@ Avalanche's architecture separates the responsibility of a layer-1 smart contrac
 three chains. This allows for a separation of concern over validators and consensus, transactions,
 and smart contract execution. Avalanche uses a DAG (Directed Acyclic Graph) structure for one of its
 chains which is non-linear. Polkadot uses the linear chain structure similar to Bitcoin and
-Ethereum. Smart contracts in Polkadot are implemented on
-[parachains](https://docs.polkadot.com/develop/smart-contracts/evm/).
+Ethereum.
 
 ![avalanche-network](../assets/comparisons/avalanche/avalanche-network.png)
 
 Image source: [Avalanche docs](https://docs.avax.network/).
 
-Avalanche's Primary Network is split into three blockchains. 
+Smart contracts in Polkadot are implemented on
+[parachains](https://docs.polkadot.com/develop/smart-contracts/evm/). Avalanche takes a similar approach, with the Avalanche Primary Network split into three blockchains:
 
 ### P-chain (Platform)
 
@@ -65,20 +65,17 @@ Avalanche uses Virtual Machines (VMs) as blueprints for defining blockchain beha
 transitions, transaction rules, and API interfaces. Developers can use the same VM to create multiple 
 independent blockchains with identical rules.
 
-For example, Avalanche's Primary Network requires validators to run three core VMs:
-
 Avalanche allows developers to build custom VMs for advanced use cases. These custom VMs 
 can be implemented in any programming language and communicate with Avalanche using a language-agnostic 
 RPC protocol. Developers can also use the Subnet-EVM for quick deployment of Solidity-based blockchains 
 or create fully custom VMs for maximum flexibility.
 
-In contrast, Polkadot does not have a native smart contract layer. Instead, its EVM and WASM smart 
-contract capabilities are implemented on parachains. Parachains on Polkadot are independent blockchains 
-that connect to the relay chain and share its security. Its parachain model allows developers to build highly customized blockchain 
-runtimes using the Polkadot SDK, a modular framework for blockchain development. These runtimes (state transition functions for Polkadot parachains/rollups) are compiled to WASM.
+In contrast, developers on Polkadot utilize the Polkadot SDK to build highly customized blockchain 
+runtimes. The Polkadot SDK (also known as Substrate) is a modular framework for blockchain development which allow for runtime (state transition functions) development. Unlike the different VM options that Avalanche provides, the Polkadot SDK compiles runtimes to WASM, which is what the relay chain uses to verify the state changes coming from each rollup/parachain.
 
-This difference highlights Avalanche's focus on VM-based blockchain customization and Polkadot's 
-emphasis on shared security and modular runtime development.
+Polkadot does not have a native smart contract layer. Instead, its EVM and WASM smart contract capabilities are implemented on parachains. Parachains on Polkadot are independent blockchains that connect to the relay chain and share its security.
+
+This difference highlights Avalanche's focus on VM-based blockchain customization and Polkadot's emphasis on shared security and modular runtime development.
 
 ## Consensus
 
