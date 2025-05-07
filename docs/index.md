@@ -11,7 +11,7 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
     <img src="./assets/home/Explore.png" class="card-image" alt="Explore" />
     <p class="card-title title">Get Started</p>
     <p class="card-description">
-      Explore Wallets, Applications and Programs within the Polkadot Ecosystem.
+      Explore Wallets, Applications and Programs.
     </p>
   </a>
 
@@ -20,7 +20,7 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
     <img src="./assets/home/Learn.png" class="card-image" alt="Learn" />
     <p class="card-title title">Essentials</p>
     <p class="card-description">
-      Learn about Polkadot how to interact with Polkadot.
+      Learn about how to interact with Polkadot.
     </p>
   </a>
 
@@ -29,7 +29,7 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
     <img src="./assets/Architecture.png" class="card-image" alt="Explore" />
     <p class="card-title title">Architecture</p>
     <p class="card-description">
-      Learn about Polkadot's Architecture.
+      Learn about Polkadot's core architecture.
     </p>
   </a>
 </div>
@@ -49,7 +49,7 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
     <img src="./assets/home/Build.png" class="card-image" alt="Explore" />
     <p class="card-title title">Developer Guides</p>
     <p class="card-description">
-      Advanced guides about the Polkadot-JS tools.
+      Advanced guides for power users and developers about the Polkadot-JS tools.
     </p>
   </a>
 </div>
