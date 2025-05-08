@@ -47,7 +47,7 @@ example, optimistic rollups often have challenge periods of several hours or eve
 A **non-interactive method** (associated with validity proofs) relies on cryptographic mechanisms,
 such as SNARKs or STARKs, to validate transactions upfront. These proofs are generated off-chain and
 submitted to L1 for verification without requiring dispute resolution. While these methods offer
-near-instant finality (limited by L1's finality), in theory, in practice delays are sometimes intentionally introduced as
+potential near-instant finality on the rollup itself, it is ultimately limited by L1's finality (unless it is a sovereign rollup, in which case it would vary). In practice, delays are sometimes intentionally introduced as
 safeguards. For instance, zkSync rollups may take up to a day to finalize transactions, not due to
 technical limitations but as a precautionary measure while the technology matures and secures
 high-value assets.
