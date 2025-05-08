@@ -5,12 +5,12 @@ description: Learn about Polkadot's native token DOT, its uses, denominations, a
 
 ## What is DOT?
 
-DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
+DOT is the native token of the Polkadot network similarly that BTC is the native token of
 Bitcoin or Ether is the native token of the Ethereum blockchain.
 
 ### The Planck Unit
 
-The smallest unit for the account balance on Substrate based blockchains (Polkadot, Kusama, etc.) is
+The smallest unit for the account balance on Polkadot SDK-based blockchains (Polkadot, Kusama, etc.) is
 Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest
 possible distance in the physical Universe). You can compare DOT's Planck to BTC's Satoshi or ETH's
 Wei. Polkadot's native token DOT equals to 10<sup>10</sup> Planck and Kusama's native token KSM
@@ -43,16 +43,12 @@ equals to 10<sup>12</sup> Planck.
 
 DOT serves three key functions in Polkadot:
 
-- to be used for governance of the network,
-- to be staked for the operation of the network,
-- to be bonded to connect a chain to Polkadot as a parachain.
+- To be used for governance of the network via [OpenGov](./learn-polkadot-opengov.md),
+- To be staked for the operation of the network via [Nominated Proof of Stake](./learn-staking.md),
+- To purchase resources for running a rollup, such as reserving a [parachain identifier](../general/glossary.md#paraid) and [Coretime](../general/glossary.md#coretime).
 
 DOT can also serve ancillary functions by being a transferrable token. For example, DOT stored in
 the Treasury can be sent to teams working on relevant projects for the Polkadot network.
-
-!!!note "Explainer video on token utility"
-    These concepts have been further explained in the video
-    [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
 
 ### DOT for Governance
 
@@ -78,23 +74,23 @@ about staking on Polkadot visit [the dedicated staking page](./learn-staking.md)
 
 ### DOT to Access Cores on the Relay Chain
 
-DOT can be used to [purchase coretime in-bulk or on-demand](./learn-agile-coretime.md) and access
+DOT can be used to [purchase coretime in-bulk or on-demand](./learn-agile-coretime.md) and allows rollups to access
 the relay chain to benefit from Polkadot's security and interoperability.
 
-### Token Issuance
+## Token Issuance
 
-#### Total Issuance
+### Total Issuance
 
 The [total issuance](../general/chain-state-values.md) is the total number of token
 units in existence on the network.
 
-#### Inactive Issuance
+### Inactive Issuance
 
 The [inactive issuance](../general/chain-state-values.md) is the total units of
 outstanding deactivated balance on the network that cannot be used for participation in governance.
 This comprises tokens locked away in crowdloans and nomination pools.
 
-#### Active Issuance
+### Active Issuance
 
 Active issuance = Total issuance - Inactive issuance
 
