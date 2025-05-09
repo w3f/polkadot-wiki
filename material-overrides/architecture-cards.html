@@ -1,0 +1,55 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<style>
+.md-content .md-typeset h1:nth-of-type(2) {
+    display: none;
+}
+</style>
+
+<h1>Architecture</h1>
+<div class="admonition info">
+    <p class="admonition-title">Welcome to the Polkadot Wiki</p>
+    <p>The Polkadot Wiki serves as the central source of truth for Polkadot. It is a community-focused
+        initiative led by Web3 Foundation to keep an up-to-date resource on the best information for learning about
+        Polkadot.</p>
+    <p>For developer-focused documentation see <a href="https://docs.polkadot.com/">the Polkadot Documentation</a>.</p>
+</div>
+<div class="row">
+
+    <!-- Card 1 -->
+    <a href="../../learn/learn-parachains-protocol" class="card-container" data-aos="fade-up" data-aos-delay="100"
+        style="width: 300px; height: 200px;">
+        <img src="../../assets/decentralized-computer.png" class="card-image" alt="Bridges" />
+        <p class="card-title">Decentralized Computer</p>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="../../learn/learn-parachains" class="card-container" data-aos="fade-up" data-aos-delay="100"
+        style="width: 300px; height: 200px;">
+        <img src="../../assets/explore/Parachains.png" class="card-image" alt="Parachains" />
+        <p class="card-title">Rollups</p>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="../../learn/learn-bridges" class="card-container" data-aos="fade-up" data-aos-delay="100"
+        style="width: 300px; height: 200px;">
+        <img src="../../assets/explore/Bridges.png" class="card-image" alt="Bridges" />
+        <p class="card-title">Bridges</p>
+    </a>
+
+</div>
+
+<div class="row">
+
+    <!-- Card 1 -->
+    <a href="../../learn/learn-comparisons-rollups" class="card-container" data-aos="fade-up" data-aos-delay="100"
+        style="width: 300px; height: 200px;">
+        <img src="../../assets/comparisons.png" class="card-image" alt="Bridges" />
+        <p class="card-title">Comparisons</p>
+    </a>
+
+</div>
+{{ super () }}
+{% endblock %}

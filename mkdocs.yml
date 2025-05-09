@@ -108,8 +108,12 @@ markdown_extensions:
 
 # Sidebar
 nav:
-  - Explore:
+  - Get Started:
       - Getting Started: general/getting-started.md
+      - Web3 and Polkadot: general/web3-and-polkadot.md
+      - Polkadot Vision:
+              - Polkadot 1.0: general/polkadot-v1.md
+              - Polkadot Direction: general/polkadot-direction.md
       - Wallets:
           - general/wallets-and-extensions.md
           - Ledger: general/ledger.md
@@ -120,125 +124,129 @@ nav:
           - Staking Dashboard: general/dashboards/staking-dashboard.md
           - Governance Apps: general/governance-apps.md
           - Multisig Apps: general/multisig-apps.md
-          - NFT Projects: learn/learn-nft-projects.md
-          - Common Errors: general/maintain-errors.md            
-      - Community & Contributors:
-          - Community: general/community.md
-          - Contributing: general/contributing.md
-          - Contributors: general/contributors.md
+          - Common Errors: general/maintain-errors.md
+          - Open Source: general/build-open-source.md    
       - Funding:
           - general/funding.md
           - Grants: general/grants.md
           - Decentralized Futures: general/decentralized-futures.md
           - Polkadot OpenGov Treasury: learn/learn-polkadot-opengov-treasury.md
           - Polkadot Community Foundation: general/pcf.md
-          - Ecosystem Funds: general/ecosystem-funds.md
+          - Ecosystem Funds: general/ecosystem-funds.md  
       - Programs:
           - Decentralized Voices: general/decentralized-voices.md
           - Bug Bounty: general/bug-bounty.md
           - Ambassadors: general/ambassadors.md
           - Alpha Program: general/alpha-program.md
-          - Decentralized Nodes: https://nodes.web3.foundation/
-      - Metadata: general/metadata.md
-      - Chain State Values: general/chain-state-values.md
-      - Open Source: general/build-open-source.md
-  - Learn:
-      - General:
-          - Web3 and Polkadot: general/web3-and-polkadot.md
-          - Polkadot Vision:
-              - Polkadot 1.0: general/polkadot-v1.md
-              - Polkadot Direction: general/polkadot-direction.md
-          - Stay Safe:
+          - Decentralized Nodes: https://nodes.web3.foundation/   
+      - Stay Safe:
               - How to DYOR: general/how-to-dyor.md
               - Scams: general/scams.md
               - Transaction Attacks: general/transaction-attacks.md
-          - Web3 Foundation Research: https://research.web3.foundation/
-          - Start Building: general/start-building.md
-          - FAQ: general/faq.md
-          - Glossary: general/glossary.md
-          - NFT Projects: general/nft-projects.md
-      - Basics:
-          - Accounts:
-              - Accounts: learn/learn-accounts.md
-              - Account Balances: learn/learn-account-balances.md
-              - Account Abstraction: learn/learn-account-abstraction.md
-              - Identity: learn/learn-identity.md
-              - Account Multisig: learn/learn-account-multisig.md
-              - Proxies: learn/learn-proxies.md
-              - Pure Proxies: learn/learn-proxies-pure.md
-          - Transactions: learn/learn-transactions.md
-          - Staking:
-              - learn/learn-staking.md
-              - Nomination Pools: learn/learn-nomination-pools.md
-          - Polkadot OpenGov:
-              - Polkadot OpenGov: learn/learn-polkadot-opengov.md
-              - Polkadot OpenGov Origins: learn/learn-polkadot-opengov-origins.md
-              - Polkadot Technical Fellowship: learn/learn-polkadot-technical-fellowship.md
-              - Fellowship Dashboard: https://polkadot-fellows.xyz  
-          - Tokens and Assets:
-              - DOT: learn/learn-DOT.md
-              - Inflation: learn/learn-inflation.md
-              - Asset Hub:
-                  - Asset Hub: learn/learn-assets.md
-                  - Asset Conversion (Asset Hub): learn/learn-asset-conversion-assethub.md
-              - Teleport: learn/learn-teleport.md
-              - Introduction to NFTs: learn/learn-nft.md
-          - Network Participants:
-              - Collator: learn/learn-collator.md
-              - Nominator: learn/learn-nominator.md
-              - Validator: learn/learn-validator.md
-          - Offenses: learn/learn-offenses.md
-          - Components:
-              - Polkadot Host: learn/learn-polkadot-host.md
-              - WASM: learn/learn-wasm.md
-              - Runtime Upgrades: learn/learn-runtime-upgrades.md
-      - Advanced:
-          - Architecture:
-              - learn/learn-architecture.md
-              - Consensus: learn/learn-consensus.md
-              - Parachains Protocol: learn/learn-parachains-protocol.md
-              - Pipelining: learn/learn-async-backing.md
-              - Scheduling:
-                  - learn/learn-agile-coretime.md
-                  - Coretime Marketplaces: learn/learn-guides-coretime-marketplaces.md
-                  - Coretime Parachains: learn/learn-guides-coretime-parachains.md
-              - Parallel Computing: learn/learn-elastic-scaling.md
-              - Parachains:
-                  - Parachains: learn/learn-parachains.md
-                  - System Chains: learn/learn-system-chains.md
-                  - Parachains FAQ: learn/learn-parachains-faq.md
-              - Cross Consensus Messaging (XCM): 
-                    - XCM: learn/learn-xcm.md
-                    - XCM Pallet: learn/learn-xcm-pallet.md 
-                    - XCM Transport: learn/learn-xcm-transport.md
-                    - XCM Virtual Machine (XCVM): learn/learn-xcvm.md
-                    - XCM Instructions: learn/learn-xcm-instructions.md
-                    - XCM Use Cases: learn/learn-xcm-usecases.md
-              - Bridges:
-                  - Bridges: learn/learn-bridges.md
-                  - Snowbridge: learn/learn-snowbridge.md
-                  - Hyperbridge: learn/learn-hyperbridge.md
-                  - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
-              - Host Implementations: learn/learn-implementations.md
-          - Accounts: learn/learn-account-advanced.md
-          - Staking: learn/learn-staking-advanced.md
-          - NFT Pallets: learn/learn-nft-pallets.md
-          - Cryptography: learn/learn-cryptography.md
-          - Phragmen: learn/learn-phragmen.md
-      - Comparisons:
+      - Community & Contributors:
+          - Community: general/community.md
+          - Contributing: general/contributing.md
+          - Contributors: general/contributors.md
+      - FAQ: general/faq.md   
+      - Glossary: general/glossary.md
+      - Kusama:
+        - Getting Started: kusama/kusama-getting-started.md
+        - Timeline: kusama/kusama-timeline.md
+        - Code of Conduct: kusama/kusama-coc.md
+        - Bug Bounty: kusama/kusama-bug-bounty.md
+        - Social Recovery: kusama/kusama-social-recovery.md
+        - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
+        - Kusama Inflation: kusama/kusama-inflation.md
+        - Kusama Society: https://ksmsociety.io/
+  - Fundamentals:
+      - general/fundamentals.md
+      - DOT Token:
+        - DOT: learn/learn-DOT.md
+        - DOT Inflation: learn/learn-inflation.md  
+      - Accounts:
+         - Accounts: learn/learn-accounts.md
+         - Account Abstraction: learn/learn-account-abstraction.md
+         - Identity: learn/learn-identity.md
+         - Multi-signature: learn/learn-account-multisig.md
+         - Proxies: learn/learn-proxies.md
+         - Pure Proxies: learn/learn-proxies-pure.md
+         - Accounts (advanced): learn/learn-account-advanced.md
+      - Balances and Transactions:
+         - Account Balances: learn/learn-account-balances.md
+         - Transactions: learn/learn-transactions.md
+         - Teleport: learn/learn-teleport.md
+      - Staking:
+         - learn/learn-staking.md
+         - Nomination Pools: learn/learn-nomination-pools.md
+         - Staking (advanced): learn/learn-staking-advanced.md
+      - Polkadot OpenGov:
+         - Polkadot OpenGov: learn/learn-polkadot-opengov.md
+         - Polkadot OpenGov Origins: learn/learn-polkadot-opengov-origins.md
+      - Asset Hub:
+         - Asset Hub: learn/learn-assets.md
+         - Asset Conversion (Asset Hub): learn/learn-asset-conversion-assethub.md
+      - NFTs:
+         - NFTs: learn/learn-nft.md
+         - NFT Projects: learn/learn-nft-projects.md
+         - NFT Pallets: learn/learn-nft-pallets.md
+      - Collectives:
+         - Polkadot Technical Fellowship: learn/learn-polkadot-technical-fellowship.md
+         - Fellowship Dashboard: https://polkadot-fellows.xyz  
+      - Metadata: general/metadata.md
+      - Chain State Values: general/chain-state-values.md
+      - Web3 Foundation Research: https://research.web3.foundation/
+      - Video Tutorials: https://youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&feature=shared
+  - Architecture:
+     - learn/learn-architecture.md
+     - Network Participants:
+         - Collator: learn/learn-collator.md
+         - Nominator: learn/learn-nominator.md
+         - Validator: learn/learn-validator.md
+         - Offenses: learn/learn-offenses.md
+     - Decentralized Computer:
+         - ELVES Protocol: learn/learn-parachains-protocol.md
+         - Pipelining: learn/learn-async-backing.md
+         - Scheduling: learn/learn-agile-coretime.md
+         - Coretime Marketplaces: learn/learn-guides-coretime-marketplaces.md
+         - Coretime Parachains: learn/learn-guides-coretime-parachains.md
+         - Parallel Computing: learn/learn-elastic-scaling.md
+     - Rollups (Parachains):
+            - Parachains: learn/learn-parachains.md
+            - System Chains: learn/learn-system-chains.md
+            - Parachains FAQ: learn/learn-parachains-faq.md
+     - Cross Consensus Messaging (XCM): 
+            - XCM: learn/learn-xcm.md
+            - XCM Pallet: learn/learn-xcm-pallet.md 
+            - XCM Transport: learn/learn-xcm-transport.md
+            - XCM Virtual Machine (XCVM): learn/learn-xcvm.md
+            - XCM Instructions: learn/learn-xcm-instructions.md
+            - XCM Use Cases: learn/learn-xcm-usecases.md
+     - Bridges:
+            - Bridges: learn/learn-bridges.md
+            - Snowbridge: learn/learn-snowbridge.md
+            - Hyperbridge: learn/learn-hyperbridge.md
+            - DOT-KSM Bridge: learn/learn-DOT-KSM-bridge.md
+     - Implementation:
+        - Polkadot Host: learn/learn-polkadot-host.md
+        - Host Implementations: learn/learn-implementations.md
+        - WASM: learn/learn-wasm.md
+        - Runtime Upgrades: learn/learn-runtime-upgrades.md
+        - Consensus: learn/learn-consensus.md
+        - Cryptography: learn/learn-cryptography.md
+        - Phragmen: learn/learn-phragmen.md
+     - Comparisons:
           - Rollups & Interoperability: learn/learn-comparisons-rollups.md
           - Kusama: learn/learn-comparisons-kusama.md
           - Ethereum: learn/learn-comparison-ethereum.md
           - Cosmos: learn/learn-comparisons-cosmos.md
           - Avalanche: learn/learn-comparisons-avalanche.md
-      - Video Tutorials: https://www.youtube.com/@PolkadotNetwork/playlists
-      - Future Implementations:
+     - Future Upgrades:
           - Spree: learn/learn-spree.md
           - Safrole: learn/learn-safrole.md
-          - JAM:
-              - JAM Chain: learn/learn-jam-chain.md
-              - JAM FAQ: learn/learn-jam-faq.md
-      - Archive:
+          - JAM Chain: learn/learn-jam-chain.md
+          - JAM FAQ: learn/learn-jam-faq.md
+     - Start Building: general/start-building.md
+     - Archive:
           - Governance: learn/archive/learn-governance.md
           - Treasury: learn/archive/learn-treasury.md
           - Launch: learn/archive/learn-launch.md
@@ -331,12 +339,3 @@ nav:
       - Bridge Hub Guides:
                       - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
       - Claims: learn/learn-guides-claims.md
-  - Kusama:
-      - Getting Started: kusama/kusama-getting-started.md
-      - Timeline: kusama/kusama-timeline.md
-      - Code of Conduct: kusama/kusama-coc.md
-      - Bug Bounty: kusama/kusama-bug-bounty.md
-      - Social Recovery: kusama/kusama-social-recovery.md
-      - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
-      - Kusama Inflation: kusama/kusama-inflation.md
-      - Kusama Society: https://ksmsociety.io/
