@@ -2,12 +2,11 @@
 *[Alexander]: The fourth and now defunct PoC-4 testnet for Polkadot.
 *[Asset Hub]: A system chain for asset management and more.
 *[Attestation]: A validator's message on parachain block validity.
-*[Auction (Parachain)]: A method for parachains to access Polkadot by bidding for coretime.
+*[Auction (Parachain)]: An old method for parachains to access Polkadot by bidding for a parachain slot.
 *[Aura]: A round-robin block authoring mechanism.
 *[Authority]: A role in blockchain consensus mechanisms.
 *[Availability Cores]: Entry points to Polkadot's security and interoperability. Time on a core is guaranteed by purchasing coretime.
 *[BABE]: Polkadot's block production mechanism.
-*[Bitfield Array]: Single-bit values indicating parachain candidate availability.
 *[Block]: A data structure representing a blockchain state transition.
 *[Blockspace]: Umbrella term to define the resource created and often sold by a blockchain network.
 *[Block Explorer]: A tool for exploring blockchain data through visualization and summaries.
@@ -24,7 +23,6 @@
 *[Collectives]: A parachain hosting on-chain collectives like the Polkadot Technical Fellowship.
 *[Commission]: A validator's rate deducted from rewards to cover operational costs and other expenses.
 *[Common Good (Parachain)]: An old term used to define system chains like the Polkadot Asset Hub.
-*[Community Queue]: A queue for individual proposals awaiting referenda.
 *[Consensus]: The process of agreeing on blockchain data values.
 *[Coretime]: Time allocated for using a Polkadot's virtual core.
 *[Crowdloan]: A mechanism for sourcing tokens to bid for relay chain cores.
@@ -34,14 +32,13 @@
 *[Epoch]: A time duration in the BABE protocol.
 *[Era]: A period of sessions for recalculating validator sets and rewards.
 *[Equivocation]: Conflicting information provided by a validator.
-*[External Queue]: A queue for Council-originated proposals.
 *[Extrinsic]: External state changes invoked on the blockchain.
 *[Finality]: A block property ensuring it cannot be reverted.
 *[Finality Gadget]: A mechanism ensuring block finality.
-*[Frame]: Substrate-provided pallets for building runtimes.
+*[FRAME]: Polkadot SDK-provided pallets (modules) for building runtimes.
 *[Genesis]: The origin block or initial state of a blockchain.
 *[Governance]: The process of stakeholder voting on network changes and other organizational matters.
-*[GRANDPA Finality Gadget]: A mechanism for asynchronous and safe block finality.
+*[GRANDPA]: A mechanism for asynchronous and safe block finality. Verifies chains rather than individual blocks.
 *[Hard Fork]: A permanent blockchain split due to consensus rule changes.
 *[Inactive Nomination]: A validator that is nominated but not validating and producing blocks in the current era.
 *[Injected Account]: A specific term used to tag an account accessed via the Polkadot-JS UI but managed externally (for example, via a browser extension).
@@ -69,7 +66,8 @@
 *[Shared Security]: A model securing all chains equally via the relay chain.
 *[Slashing]: Punishment for validator misbehavior by removing staked DOT.
 *[Staking]: Bonding tokens to secure the network and earn rewards.
-*[Substrate]: A framework for building blockchains, used by Polkadot.
+*[Substrate]: A framework for building blockchains, used by Polkadot (mostly referred to as the Polkadot SDK).
+*[Polkadot SDK]: A framework for building blockchains, both rollups and solo chains, used by Polkadot.
 *[System Parachains]: Parachains forming part of Polkadot's core protocol.
 *[Teleport]: Sending assets between chains by burning and minting.
 *[Testnet]: An experimental network for testing before mainnet deployment.
