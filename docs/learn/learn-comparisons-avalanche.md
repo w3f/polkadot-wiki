@@ -144,3 +144,5 @@ Polkadot's features, such as XCM for trustless messaging and forkless upgrades, 
 2. [The Avalanche Consensus Whitepaper](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6009805681b416f34dcae012_Avalanche%20Consensus%20Whitepaper.pdf)
 3. [The AVAX Token Dynamics Paper](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6008d7bc56430d6b8792b8d1_Avalanche%20Native%20Token%20Dynamics.pdf)
 4. [Nakomoto vs Snow consensus](https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#what-is-snow-consensus)
+5. [Avalanche Consensus](https://build.avax.network/docs/quick-start/avalanche-consensus)
+6. [Avalanche L1s]https://build.avax.network/docs/quick-start/avalanche-l1s)
