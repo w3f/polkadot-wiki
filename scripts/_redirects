@@ -244,7 +244,7 @@
 # Polkadot-JS Section
 
 /docs/polkadotjs-ui    /general/polkadotjs-ui    301
-/docs/learn-polkadot-js-guides    /learn/learn-polkadot-js-guides    301
+/docs/learn-polkadot-js-guides    /general/polkadotjs    301
 /docs/learn-guides-accounts    /learn/learn-guides-accounts    301
 /docs/learn-guides-transfers    /learn/learn-guides-transfers    301
 /docs/learn-guides-staking    /learn/learn-guides-nominator    301

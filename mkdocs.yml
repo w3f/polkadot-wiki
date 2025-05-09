@@ -310,7 +310,6 @@ nav:
                   - Project Dashboards: general/dashboards/dune-analytics/project-dashboards.md
                   - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
   - Guides:
-      - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
       - Polkadot-JS:
               - Polkadot-JS: general/polkadotjs.md
               - Polkadot-JS UI: general/polkadotjs-ui.md

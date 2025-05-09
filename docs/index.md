@@ -45,9 +45,9 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
   </a>
 
   <!-- Card 2 -->
-  <a href="./learn/learn-polkadot-js-guides" class="card-container" data-aos="fade-up" data-aos-delay="100">
+  <a href="./general/polkadotjs" class="card-container" data-aos="fade-up" data-aos-delay="100">
     <img src="./assets/home/Build.png" class="card-image" alt="Explore" />
-    <p class="card-title title">Developer Guides</p>
+    <p class="card-title title">Guides</p>
     <p class="card-description">
       Advanced guides for power users and developers about the Polkadot-JS tools.
     </p>
