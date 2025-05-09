@@ -100,6 +100,30 @@ than the min enactment period.
     For every referendum in each of these tracks, the Polkadot-JS UI displays interactive graphs of the support and approval.
     ![UI Support and Approval](./../assets/governance/support-approval-polkadot-js-ui.png)
 
+
+## Extrinsics and Tracks
+
+The following table outlines which extrinsics can be placed on which governance tracks:
+
+| Pallet                        | Extrinsic Function       | Required Origin                                                                 |
+|-------------------------------|--------------------------|---------------------------------------------------------------------------------|
+| **Scheduler**                 | `schedule_named`         | `Root`, `AuctionAdmin`, `Treasurer`                                            |
+|                               | `schedule`              | `Root`, `AuctionAdmin`, `Treasurer`                                            |
+| **Treasury**                  | `reject_proposal`        | `Root`, `Treasurer`                                                            |
+|                               | `approve_proposal`       | `Root`, `Treasurer`                                                            |
+| **Election Provider Multi-Phase** | `submit_unsigned`    | `Root`, `StakingAdmin`                                                         |
+| **Nomination Pools**          | `set_metadata`           | `Root`, `StakingAdmin`                                                         |
+|                               | `update_roles`           | `Root`, `StakingAdmin`                                                         |
+| **Asset Rate**                | `create`                | `Root`, `Treasurer`                                                            |
+|                               | `remove`                | `Root`, `Treasurer`                                                            |
+|                               | `update`                | `Root`, `Treasurer`                                                            |
+| **Auctions**                  | `new_auction`           | `Root`, `AuctionAdmin`                                                         |
+| **Slots**                     | `force_lease`           | `Root`, `LeaseAdmin`                                                           |
+| **HRMP**                      | `open_channel`          | `Root`, `GeneralAdmin`                                                         |
+| **Dynamic Parameters**        | `set`                   | `DynamicParameterOrigin` (uses specific roles internally, e.g., `Treasurer`)   |
+| **Staking**                   | `force_new_era`         | `Root`, `StakingAdmin`                                                         |
+|                               | `set_validator_count`   | `Root`, `StakingAdmin`                                                         |
+
 ### Root
 
 === "Polkadot"
@@ -332,26 +356,3 @@ passing.
     Origin able to spend up to 33333.33 KSM from the treasury at once.
 
     ![](./../assets/polkadot-opengov-origins/big_spender_kusama.png)
-
-## Extrinsics and Tracks
-
-The following table outlines which extrinsics can be placed on which governance tracks:
-
-| Pallet                        | Extrinsic Function       | Required Origin                                                                 |
-|-------------------------------|--------------------------|---------------------------------------------------------------------------------|
-| **Scheduler**                 | `schedule_named`         | `Root`, `AuctionAdmin`, `Treasurer`                                            |
-|                               | `schedule`              | `Root`, `AuctionAdmin`, `Treasurer`                                            |
-| **Treasury**                  | `reject_proposal`        | `Root`, `Treasurer`                                                            |
-|                               | `approve_proposal`       | `Root`, `Treasurer`                                                            |
-| **Election Provider Multi-Phase** | `submit_unsigned`    | `Root`, `StakingAdmin`                                                         |
-| **Nomination Pools**          | `set_metadata`           | `Root`, `StakingAdmin`                                                         |
-|                               | `update_roles`           | `Root`, `StakingAdmin`                                                         |
-| **Asset Rate**                | `create`                | `Root`, `Treasurer`                                                            |
-|                               | `remove`                | `Root`, `Treasurer`                                                            |
-|                               | `update`                | `Root`, `Treasurer`                                                            |
-| **Auctions**                  | `new_auction`           | `Root`, `AuctionAdmin`                                                         |
-| **Slots**                     | `force_lease`           | `Root`, `LeaseAdmin`                                                           |
-| **HRMP**                      | `open_channel`          | `Root`, `GeneralAdmin`                                                         |
-| **Dynamic Parameters**        | `set`                   | `DynamicParameterOrigin` (uses specific roles internally, e.g., `Treasurer`)   |
-| **Staking**                   | `force_new_era`         | `Root`, `StakingAdmin`                                                         |
-|                               | `set_validator_count`   | `Root`, `StakingAdmin`                                                         |
