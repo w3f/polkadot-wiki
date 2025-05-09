@@ -8,62 +8,49 @@ description: Discover the differences between Polkadot and Avalanche, including 
 !!!info
     To keep the content on this page factually correct and up-to-date, [contributions](https://github.com/w3f/polkadot-wiki#contributing-to-documentation) are welcome.
 
-Polkadot and Avalanche both have an architecture that allows for application-specific blockchains to
-be designed and connected to a primary network. In Polkadot, the primary network is the relay chain
-and Avalanche does this with 3 main chains - the P-chain, X-chain, and C-chain. Similar to how
-Polkadot has its Parachains that connect to the relay chain, Avalanche has what’s called
-[subnets](https://docs.avax.network/subnets). Similar to Polkadot, Avalanche also uses a PoS
-mechanism for achieving consensus. The validators stake their AVAX tokens in order to participate in
-the PoS system and secure the network.
+Polkadot and Avalanche both have architectures that enable application-specific blockchains to connect to a primary network for publicly available state verification. In Polkadot, the primary network is the relay chain, while Avalanche uses three main chains—P-chain, X-chain, and C-chain—collectively known as the "Primary Chain." Similar to Polkadot's parachains and rollups, Avalanche uses [subnets](https://docs.avax.network/subnets). Both networks employ a PoS mechanism where validators stake tokens to secure the network.
 
 ## Architecture
 
-Avalanche's architecture separates the responsibility of a layer-1 smart contract platform into
-three chains. This allows for a separation of concern over validators and consensus, transactions,
-and smart contract execution. Avalanche uses a DAG (Directed Acyclic Graph) structure for one of its
-chains which is non-linear. Polkadot uses the linear chain structure similar to Bitcoin and
-Ethereum. Smart contracts in Polkadot are implemented on
-[parachains](https://docs.polkadot.com/develop/smart-contracts/evm/). Polkadot being a layer-0 blockchain, is not a smart
-contract platform and does not have plans to support them natively.
+Avalanche's architecture separates responsibilities into three chains, enabling distinct roles for validators, transactions, and smart contract execution. The X-chain uses a DAG (Directed Acyclic Graph) structure, which is non-linear, while Polkadot uses a linear chain structure similar to Bitcoin and Ethereum.
 
 ![avalanche-network](../assets/comparisons/avalanche/avalanche-network.png)
 
 Image source: [Avalanche docs](https://docs.avax.network/).
 
-#### P-chain (Platform)
+Smart contracts in Polkadot are implemented on [parachains](https://docs.polkadot.com/develop/smart-contracts/evm/). Avalanche's Primary Network is divided into three blockchains:
 
-The P-chain is responsible for maintaining the validator set and securing the network. AVAX token
-holders can spin up their own nodes and become validators by staking their tokens. Similar to the
-NPoS system that Polkadot uses, Avalanche uses a Delegated PoS which allows token holders to also
-delegate their token stake to existing validators instead of running their own nodes.
+### P-chain (Platform)
 
-#### X-chain (Exchange)
+- Maintains the validator set and secures the network.
+- Supports staking operations and Avalanche L1s.
+- Uses Delegated Proof-of-Stake (DPoS), allowing token holders to delegate their stake to validators.
 
-The X-chain is responsible for the transaction layer of the Avalanche blockchain. It uses a UTXO
-model like Bitcoin whereas Polkadot uses an account model like Ethereum. This is the only chain that
-implements the DAG (Directed Acyclic Graph) model for its blockchain, making this the fastest chain
-on the Avalanche network. This chain does not support smart contract execution.
+### X-chain (Exchange)
 
-#### C-chain (Contracts)
+- Handles the transaction layer using a UTXO model (similar to Bitcoin).
+- Implements a DAG structure for fast transaction processing.
+- Does not support smart contract execution.
 
-The C-chain is where the most activity will happen on the Avalanche network. It allows for different
-virtual machines to execute smart contract code. Out of the box, it has support for EVM and AVM
-(Avalanche VM). C-Chain runs a fork of go-ethereum called coreth that has the networking and
-consensus portions replaced with Avalanche equivalents.
+### C-chain (Contracts)
 
-As Polkadot does not have a smart contract layer out of the box, the EVM and WASM smart contract
-abilities lie in the Parachain layers. This is a major difference between Polkadot and Avalanche.
-The smart-contract abilities of Avalanche are baked into its three-chain model.
+- Supports EVM-compatible smart contracts.
+- Runs the Coreth VM, a fork of go-ethereum with Avalanche-specific networking and consensus.
+- Focuses on high activity for smart contract execution.
 
-#### Subnets or sub-networks
+### Subnets
 
-Avalanche defines a subnet as a dynamic set of validators that achieve consensus on a set of
-blockchains. In Polkadot's terminology, Subnets can be viewed as public or private blockchain
-runtimes that can be built on top of the primary network and allow a subset of the validators to
-validate these runtimes. Similar to the Parachains on Polkadot, Subnets provide the freedom to
-choose the transaction fee model, tokenomics, and custom compile rules. One or many validators can
-start validating a subnet runtime, effectively becoming a subset of the overall validator set of the
-Primary Network.
+Avalanche defines a subnet as a dynamic set of validators achieving consensus on a set of blockchains. In Polkadot's terminology, subnets are comparable to parachains (rollups) utilizing available compute on the Polkadot relay chain. Subnets allow validators to validate specific runtimes, offering flexibility in transaction fee models, tokenomics, and custom rules. Validators can validate one or more subnets, forming subsets of the overall validator set.
+
+#### Virtual Machines
+
+Avalanche uses virtual machines (VMs) as blueprints for defining blockchain behavior, including state transitions, transaction rules, and API interfaces. Developers can use the same VM to create multiple independent blockchains with identical rules.
+
+Avalanche allows developers to build custom VMs for advanced use cases. These VMs can be implemented in any programming language and communicate with Avalanche using a language-agnostic RPC protocol. However, developers can also use prebuilt runtimes, such as Subnet-EVM for quick deployment of Solidity-based blockchains.
+
+In contrast, Polkadot developers use the Polkadot SDK to build customized blockchain runtimes. Polkadot SDK compiles runtimes to WASM, which the relay chain uses to verify state changes from parachains or rollups. Polkadot does not have a native smart contract layer; instead, EVM and WASM smart contract capabilities are implemented on parachains.
+
+This distinction highlights Avalanche's focus on VM-based blockchain customization and Polkadot's emphasis on shared security and modular runtime development.
 
 ## Consensus
 
@@ -72,69 +59,47 @@ Primary Network.
 Image source:
 [gyuho.dev](https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#snow-family-protocols).
 
-Avalanche consensus uses a family of protocols to achieve security, liveness, and finality. These
-are known as the Snow\* protocols. This group of protocols composed together uses both classical and
-Nakamoto consensus as well as a Delegated Proof-of-Stake system for its block creators.
+Avalanche Consensus combines features of classical and Nakamoto consensus to achieve throughput, finality, and energy efficiency. It uses repeated sub-sampled voting to ensure scalability and robustness.
 
-The [Snow family](https://docs.avax.network/overview/getting-started/avalanche-consensus) is a
-hierarchical collection of systems used to reach finality on Avalanche:
+Polkadot employs deterministic finality and shared security through its relay chain. Polkadot uses a synchronous hybrid model with [BABE](learn-consensus.md#block-production-babe) for block production and [GRANDPA](learn-consensus.md#finality-gadget-grandpa) for deterministic finality. Polkadot validators agree on entire chains rather than individual blocks, ensuring robust finality. These two mechanisms ensure the network maintains its robustness and liveness.
 
-- Slush
-- Snowflake
-- Snowball
-- Avalanche
-- Snowman
-- Slushie
+### Snowball Algorithm
 
-Compared to Polkadot, Avalanche uses an asynchronous hybrid system that is based on a classical and
-Nakomoto approach. Polkadot uses a synchronous hybrid model that combines
-[BABE](learn-consensus.md#block-production-babe) and
-[GRANDPA](learn-consensus.md#finality-gadget-grandpa), where BABE is the algorithm used to build blocks
-in a probabilistic way, and GRANDPA is a finality mechanism that uses a deterministic approach to
-adding blocks to the longest chain. In the end, validators agree to whole chains, rather than single
-new blocks.
+The Snowball algorithm is a core component of Avalanche Consensus. It ensures consensus through iterative sampling and preference updates:
 
-### Snowball
+- **Parameters:**
+  - `k`: Sample size (e.g., 20 validators).
+  - `α`: Quorum size (e.g., 14 validators).
+  - `β`: Decision threshold (e.g., 20 consecutive rounds).
+- **Process:**
+  - Nodes query `k` validators and adopt the majority preference if it meets the quorum size `α`.
+  - This process repeats until the same preference is confirmed for `β` consecutive rounds.
 
-The snowball protocol is an algorithm that nodes use to come to a consensus. Each node continuously
-queries x number of validators and takes the majority consensus and adopts it as its own. This
-method, in normal circumstances, will lead to the network reaching a consensus. The scalability of
-Snowball is promising, as the number of participants in the network grows, the number of consensus
-messages being passed around remains the same. Nodes will query no more than 20 nodes at a given
-time.
+The algorithm ensures scalability, as the number of consensus messages remains constant even as the network grows.
 
-### DAG(Directed Acyclic Graph)
+### DAG (Directed Acyclic Graph)
 
-[DAGs](https://en.wikipedia.org/wiki/Directed_acyclic_graph) are graphs consisting of vertices and
-edges. In Avalanche they are used for **partial ordering** of decisions, such as transactions.
-Vertices point to each other using edges, and when ordered topologically vertices and edges create a
-sequence. Edges in the case of Avalanche can be conflicting, and nodes will use the snowball
-algorithm to make decisions about which edges to keep and which to not.
+Avalanche uses a DAG structure for partial ordering of transactions. Each transaction is represented as a vertex, with edges pointing to parent transactions. This structure allows for high throughput and efficient conflict resolution using the Snowball algorithm.
 
 ## Staking Mechanics
 
-Avalanche uses a Delegated Proof-of-Stake mechanism without any [slashing](./learn-offenses.md). The
-barrier to entry for staking as a full node validator is 2500 AVAX, and 25 AVAX to become a
-delegator. With a minimum stake period being two weeks and a maximum period being a year, for both
-validators and delegators. It is not clear from the Avalanche documentation what happens after a
-year, it is likely that validators will have to re-stake and start a new period. Validators acquire
-points for uptime and correctness of their work, and the remuneration of rewards depends on that.
+Avalanche uses a Delegated Proof-of-Stake (DPoS) mechanism without [slashing](./learn-offenses.md). Key staking details include:
 
-In Polkadot the minimum stake needed to be a validator is variable, same for being a nominator. The
-true minimum need to be competitive enough to be included in the active set for validators, or
-successfully being chosen as a nominator depends on the minimum staked amounts on the network at a
-given time. Read more about this in the [staking page](learn-staking.md).
+- **Validator Requirements:** A minimum of 2,500 AVAX is required to become a validator.
+- **Delegator Requirements:** A minimum of 25 AVAX is required to delegate stake.
+- **Staking Period:** Validators and delegators can stake for a minimum of two weeks and a maximum of one year. After this period, re-staking is required.
+- **Rewards:** Validators earn rewards based on uptime and correctness. Delegators share rewards with their chosen validators.
 
-<!-- Staking points and how they are occurred is not clear in the documentation -->
+In Polkadot, staking requirements are dynamic and depend on network conditions. The minimum stake for validators and nominators varies based on the total staked amount in the network. Polkadot also employs slashing to penalize misbehavior. For more details, refer to the [staking page](learn-staking.md).
 
 ## Message Passing
 
-Avalanche does not have a native trustless message-passing mechanism. Instead, it relies on bridges.
-Though, because it is an EVM-compatible protocol, it's able to interoperate at a token level.
-However, subnets do not have a messaging layer out of the box. Polkadot, with its [XCM](learn-xcm.md)
-and [XCMP](learn-xcm-transport.md#xcmp-cross-chain-message-passing) messaging protocols, allows for a native and
-trustless messaging scheme, thus supporting the composability of chains and enabling the development
-of powerful cross-chain applications.
+Avalanche has introduced [Avalanche Interchain Messaging (ICM)](https://build.avax.network/docs/cross-chain/avalanche-warp-messaging/overview), a native protocol for secure and trustless cross-chain communication. Key features include:
+
+- **Interoperability:** Enables subnets to exchange messages using cryptographic proofs.
+- **Limitations:** ICM is restricted to subnets within the Avalanche ecosystem and does not extend to external blockchains.
+
+Polkadot, by contrast, uses [XCM](learn-xcm.md) and [XCMP](learn-xcm-transport.md#xcmp-cross-chain-message-passing) for native, trustless cross-chain communication. XCM supports composability across parachains and extends beyond Polkadot's ecosystem, enabling broader interoperability.
 
 ## Governance
 
@@ -156,33 +121,22 @@ updating only a few key protocol parameters which include:
 
 Limiting the governance functionality is a design choice to increase predictability and safety.
 
-Polkadot's governance mechanism has been in production from the very beginning and was used to
-slowly release functionality and decentralize the initial network. It is also not limited to a few
-parameters and in fact, the whole runtime is subject to change via protocol making Polkadot a
-meta-protocol.
+Polkadot's governance ([OpenGov](learn-polkadot-opengov.md)) mechanism has been in production from the very beginning and was used to
+slowly release functionality and decentralize the initial network. Polkadot governance can set parameters for various network parameters, but it can also upgrade itself using governance by allowing stakeholders to vote on referenda.
+
+This notion of [runtime upgrades](learn-runtime-upgrades.md) via protocol makes Polkadot a **meta-protocol**.
 
 ## Upgrades
 
-The upgrades to Avalanche are administered by the protocol developers at
-[Ava Labs](https://www.avalabs.org/). On Polkadot, the forkless upgrades are administered and
-deployed through the on-chain governance. When performing upgrades, every single validator on the
-Subnet will need to perform the identical upgrade. This requires a co-ordination effort among the
-Validators of the Subnet. On Polkadot, upgrades to Parachains can be deployed automatically without
-any coordination with the Validators on the relaychain.
+Avalanche upgrades are managed by Ava Labs and require coordination among validators for implementation. Each validator in a subnet must apply the same upgrade, making the process manual and collaborative.
+
+Polkadot employs [forkless runtime upgrades](learn-runtime-upgrades.md) through on-chain governance. Parachain upgrades are automated and do not require validator coordination, streamlining the process.
 
 ## Conclusion
 
-Avalanche has made some design decisions that allow for an improved smart-contract development
-environment in which protocol engineers can have the freedom to create their own blockchains and
-include them in the Avalanche ecosystem via subnets. The trade-offs are that the autonomy of design
-is limited and blockchains have to buy into the design decisions of Avalanche's main chains. Unlike
-parachains on Polkadot, Subnets are not able to share the security of the main chains. In addition
-to utilizing block finality and security of the relay chain, parachains on Polkadot use
-[XCM](learn-xcm.md) to pass native trustless messages, instead of having to rely on multiple bridging
-solutions. However, Subnets are easy to launch when compared to parachains, given that they only
-need a recommended minimum of 5 validators, which make the costs of launch predictable. Avalanche
-has plans to implement shared security, interoperability, composability and on-chain governance
-features which are already offered by Polkadot.
+Avalanche focuses on providing a customizable environment for blockchain developers, enabling the creation of independent blockchains via subnets. However, subnets do not share the security of Avalanche's primary network. Polkadot emphasizes shared security and interoperability through its relay chain, parachains, and [beyond](./learn-bridges.md). 
+
+Polkadot's features, such as XCM for trustless messaging and forkless upgrades, are already in production, while Avalanche is still developing similar capabilities. Polkadot's governance mechanism, OpenGov, also enables for decentralized decision making when it comes to the direction and technical aspects of the Polkadot relay chain.
 
 ## References
 
@@ -190,3 +144,5 @@ features which are already offered by Polkadot.
 2. [The Avalanche Consensus Whitepaper](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6009805681b416f34dcae012_Avalanche%20Consensus%20Whitepaper.pdf)
 3. [The AVAX Token Dynamics Paper](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6008d7bc56430d6b8792b8d1_Avalanche%20Native%20Token%20Dynamics.pdf)
 4. [Nakomoto vs Snow consensus](https://gyuho.dev/nakamoto-bitcoin-vs-snow-avalanche-consensus.html#what-is-snow-consensus)
+5. [Avalanche Consensus](https://build.avax.network/docs/quick-start/avalanche-consensus)
+6. [Avalanche L1s]https://build.avax.network/docs/quick-start/avalanche-l1s)

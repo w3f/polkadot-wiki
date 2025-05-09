@@ -6,7 +6,11 @@ description: Discover Polkadot-JS tools for developers and power users, includin
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. Explore Polkadot with secure and user-friendly wallets listed on the
+    <a href="https://www.polkadot.network/ecosystem/wallets/" target="_blank" rel="noopener noreferrer">
+      Polkadot website.
+    </a>
+    If you need help using the Polkadot-JS UI, you can contact the
     <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -14,21 +18,13 @@ description: Discover Polkadot-JS tools for developers and power users, includin
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-[**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with Relay
-Chains and parachains in a granular way. Below we describe the different components of Polkadot-JS.
-For more information about Polkadot-JS you can consult the
+!!!info
+    We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) together with the [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/), [**Ledger**](https://www.ledger.com/ledger-live) and [**Polkadot Vault**](https://www.parity.io/technologies/signer/) for signing transactions. We do not provide support for third party applications.
+
+This section of the Polkadot Wiki is dedicated to advanced guides for [the Polkadot-JS tooling](../general/polkadotjs.md). [**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with Relay Chains and parachains in a granular way. Below we describe the different components of Polkadot-JS. For more information about Polkadot-JS you can consult the
 [**official documentation**](https://polkadot.js.org/docs/).
 
 ## Polkadot-JS UI
-
-!!!info For Developers and Power Users Only
-    Please note that this wallet UI is oriented toward developers and power users. Explore Polkadot with
-    a secure and user-friendly wallets listed on the
-    [Polkadot website](https://www.polkadot.network/ecosystem/wallets/). If you need help using the
-    Polkadot-JS UI you can contact the
-    [**Polkadot Support Team**](https://support.polkadot.network/support/home).
-
-
 
 The Polkadot-JS UI is an application that loads in your browser. There is a standard DNS
 [**hosted version**](https://polkadot.js.org/), which always has the latest features, and an
