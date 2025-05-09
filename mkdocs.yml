@@ -158,7 +158,11 @@ nav:
         - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
         - Kusama Inflation: kusama/kusama-inflation.md
         - Kusama Society: https://ksmsociety.io/
-  - Essentials:
+  - Fundamentals:
+      - general/fundamentals.md
+      - DOT Token:
+        - DOT: learn/learn-DOT.md
+        - DOT Inflation: learn/learn-inflation.md  
       - Accounts:
          - Accounts: learn/learn-accounts.md
          - Account Abstraction: learn/learn-account-abstraction.md
@@ -185,11 +189,9 @@ nav:
          - NFTs: learn/learn-nft.md
          - NFT Projects: learn/learn-nft-projects.md
          - NFT Pallets: learn/learn-nft-pallets.md
-      - Polkadot Technical Fellowship:
+      - Collectives:
          - Polkadot Technical Fellowship: learn/learn-polkadot-technical-fellowship.md
          - Fellowship Dashboard: https://polkadot-fellows.xyz  
-         - DOT: learn/learn-DOT.md
-         - DOT Inflation: learn/learn-inflation.md  
       - Metadata: general/metadata.md
       - Chain State Values: general/chain-state-values.md
       - Web3 Foundation Research: https://research.web3.foundation/
@@ -305,7 +307,7 @@ nav:
                       - Unique: general/dashboards/dune-analytics/parachain-dashboards/unique-dashboards.md
                   - Project Dashboards: general/dashboards/dune-analytics/project-dashboards.md
                   - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
-  - Developer Guides:
+  - Guides:
       - Polkadot-JS Guides: learn/learn-polkadot-js-guides.md
       - Polkadot-JS:
               - Polkadot-JS: general/polkadotjs.md
