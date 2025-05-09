@@ -40,15 +40,15 @@ Smart contracts in Polkadot are implemented on [parachains](https://docs.polkado
 
 ### Subnets
 
-Avalanche defines a subnet as a dynamic set of validators achieving consensus on a set of blockchains. In Polkadot's terminology, subnets are comparable to public or private blockchain runtimes built on the primary network. Subnets allow validators to validate specific runtimes, offering flexibility in transaction fee models, tokenomics, and custom rules. Validators can validate one or more subnets, forming subsets of the overall validator set.
+Avalanche defines a subnet as a dynamic set of validators achieving consensus on a set of blockchains. In Polkadot's terminology, subnets are comparable to parachains (rollups) utilizing available compute on the Polkadot relay chain. Subnets allow validators to validate specific runtimes, offering flexibility in transaction fee models, tokenomics, and custom rules. Validators can validate one or more subnets, forming subsets of the overall validator set.
 
 #### Virtual Machines
 
-Avalanche uses Virtual Machines (VMs) as blueprints for defining blockchain behavior, including state transitions, transaction rules, and API interfaces. Developers can use the same VM to create multiple independent blockchains with identical rules.
+Avalanche uses virtual machines (VMs) as blueprints for defining blockchain behavior, including state transitions, transaction rules, and API interfaces. Developers can use the same VM to create multiple independent blockchains with identical rules.
 
-Avalanche allows developers to build custom VMs for advanced use cases. These VMs can be implemented in any programming language and communicate with Avalanche using a language-agnostic RPC protocol. Developers can also use the Subnet-EVM for quick deployment of Solidity-based blockchains or create fully custom VMs for maximum flexibility.
+Avalanche allows developers to build custom VMs for advanced use cases. These VMs can be implemented in any programming language and communicate with Avalanche using a language-agnostic RPC protocol. However, developers can also use prebuilt runtimes, such as Subnet-EVM for quick deployment of Solidity-based blockchains.
 
-In contrast, Polkadot developers use the Polkadot SDK (Substrate) to build customized blockchain runtimes. Substrate compiles runtimes to WASM, which the relay chain uses to verify state changes from parachains or rollups. Polkadot does not have a native smart contract layer; instead, EVM and WASM smart contract capabilities are implemented on parachains.
+In contrast, Polkadot developers use the Polkadot SDK to build customized blockchain runtimes. Polkadot SDK compiles runtimes to WASM, which the relay chain uses to verify state changes from parachains or rollups. Polkadot does not have a native smart contract layer; instead, EVM and WASM smart contract capabilities are implemented on parachains.
 
 This distinction highlights Avalanche's focus on VM-based blockchain customization and Polkadot's emphasis on shared security and modular runtime development.
 
@@ -61,7 +61,7 @@ Image source:
 
 Avalanche Consensus combines features of classical and Nakamoto consensus to achieve throughput, finality, and energy efficiency. It uses repeated sub-sampled voting to ensure scalability and robustness.
 
-Polkadot employs deterministic finality and shared security through its relay chain. Polkadot uses a synchronous hybrid model with [BABE](learn-consensus.md#block-production-babe) for probabilistic block production and [GRANDPA](learn-consensus.md#finality-gadget-grandpa) for deterministic finality. Polkadot validators agree on entire chains rather than individual blocks, ensuring robust finality.
+Polkadot employs deterministic finality and shared security through its relay chain. Polkadot uses a synchronous hybrid model with [BABE](learn-consensus.md#block-production-babe) for block production and [GRANDPA](learn-consensus.md#finality-gadget-grandpa) for deterministic finality. Polkadot validators agree on entire chains rather than individual blocks, ensuring robust finality. These two mechanisms ensure the network maintains its robustness and liveness.
 
 ### Snowball Algorithm
 
@@ -121,20 +121,22 @@ updating only a few key protocol parameters which include:
 
 Limiting the governance functionality is a design choice to increase predictability and safety.
 
-Polkadot's governance mechanism has been in production from the very beginning and was used to
-slowly release functionality and decentralize the initial network. It is also not limited to a few
-parameters and in fact, the whole runtime is subject to change via protocol making Polkadot a
-meta-protocol.
+Polkadot's governance ([OpenGov](learn-polkadot-opengov.md)) mechanism has been in production from the very beginning and was used to
+slowly release functionality and decentralize the initial network. Polkadot governance can set parameters for various network parameters, but it can also upgrade itself using governance by allowing stakeholders to vote on referenda.
+
+This notion of [runtime upgrades](learn-runtime-upgrades.md) via protocol makes Polkadot a **meta-protocol**.
 
 ## Upgrades
 
 Avalanche upgrades are managed by Ava Labs and require coordination among validators for implementation. Each validator in a subnet must apply the same upgrade, making the process manual and collaborative.
 
-Polkadot employs forkless upgrades through on-chain governance. Parachain upgrades are automated and do not require validator coordination, streamlining the process.
+Polkadot employs [forkless runtime upgrades](learn-runtime-upgrades.md) through on-chain governance. Parachain upgrades are automated and do not require validator coordination, streamlining the process.
 
 ## Conclusion
 
-Avalanche focuses on providing a customizable environment for blockchain developers, enabling the creation of independent blockchains via subnets. However, subnets do not share the security of Avalanche's primary network. Polkadot emphasizes shared security and interoperability through its relay chain and parachains. Polkadot's features, such as XCM for trustless messaging and forkless upgrades, are already in production, while Avalanche is still developing similar capabilities.
+Avalanche focuses on providing a customizable environment for blockchain developers, enabling the creation of independent blockchains via subnets. However, subnets do not share the security of Avalanche's primary network. Polkadot emphasizes shared security and interoperability through its relay chain, parachains, and [beyond](./learn-bridges.md). 
+
+Polkadot's features, such as XCM for trustless messaging and forkless upgrades, are already in production, while Avalanche is still developing similar capabilities. Polkadot's governance mechanism, OpenGov, also enables for decentralized decision making when it comes to the direction and technical aspects of the Polkadot relay chain.
 
 ## References
 
