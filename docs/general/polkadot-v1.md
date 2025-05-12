@@ -3,22 +3,22 @@ title: Polkadot 1.0
 description: Explore Polkadot 1.0's innovations, including blockspace, decentralization, shared security, and its vision for a multi-chain future.
 ---
 
-Since the release of Bitcoin in 2009, blockchain projects increased exponentially to the order of
+Since the release of Bitcoin in 2009, blockchain projects have increased exponentially to the order of
 tens of thousands. Different projects have different value propositions, suggesting that the future
 will be multi-chain and that inter-chain communication will be crucial to establish collaborations
-and leveraging each other strengths.
+and leverage each other's strengths.
 
 ## Polkadot 1.0
 
-Polkadot 1.0 reflected the status of Polkadot in 2023 at time of the release of the
-[Polkadot runtime v1.0.0](https://github.com/paritytech/polkadot/releases/tag/v1.0.0). This sections
+Polkadot 1.0 reflected the status of Polkadot in 2023 at the time of the release of the
+[Polkadot runtime v1.0.0](https://github.com/paritytech/polkadot/releases/tag/v1.0.0). This section
 focuses on Polkadot 1.0 and some philosophical digressions about network resilience and blockspace.
 
 Polkadot is a Layer-0 blockchain that brings to the multi-chain vision the following innovations and
 initiatives:
 
 - **Application-specific Layer-1 (L1) blockchains (or parachains).** Polkadot is a sharded network
-  where transactions are processed in parallel with each shard. Polkadot shards can be heterogenous
+  where transactions are processed in parallel with each shard. Polkadot shards can be heterogeneous
   (i.e. they do not need the same state transition function as in the proposed Ethereum sharding
   architecture). This allows to build L1 chains designed explicitly around their application and
   value proposition.
@@ -31,7 +31,7 @@ initiatives:
   of them) can benefit from Polkadot's native interoperability and will thus be able to communicate
   and exchange value and information with other parachains.
 - **Truly resilient infrastructure.** This is achieved by keeping the network decentralized without
-  compromising scalability and throughput and through on-chain
+  compromising scalability and throughput and going on-chain
   [treasury](../learn/learn-polkadot-opengov-treasury.md) funds that can be accessed through
   governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
   educational material, education, software development, etc.
@@ -62,7 +62,7 @@ stays up to date with the many transactions that take place.
 
 The [Cross-Consensus Messaging Format (XCM)](../learn/learn-xcm.md) allows parachains to send
 messages of any type to each other. The shared security and validation logic of the relay chain
-provide the environment for trust-free message passing that opens up true interoperability.
+provides the environment for trust-free message passing that opens up true interoperability.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
 Polkadot has [bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
@@ -95,7 +95,7 @@ goal is resilience**, which is achieved by additionally providing on-chain treas
 mechanism allowing continuous incentives for the network's participants without relying on
 intermediaries or centralized entities.
 
-Currently, Polkadot 1.0 achieve resilience through the following strategies:
+Currently, Polkadot 1.0 achieves resilience through the following strategies:
 
 - Nominated Proof of Staking (NPoS) where the stake per validator is maximized and evenly
   distributed across validators.
@@ -130,7 +130,7 @@ different blockchains can vary in security, flexibility, and availability.
   centralization of the network).
 - **Flexibility**, intended as how flexible the blockspace is, what can be done with it, and what
   type of data can be stored. Data quality plays an important role depending on the type of network.
-  One might avoid having situations in which poor quality data flood blockspace hindering the prompt
+  One might avoid having situations in which poor quality data floods blockspace hindering the prompt
   execution of vital processes.
 - **Availability**, intended as how available blockspace is and how difficult it is to access it. It
   should not be too difficult to get your hands on it so that any business model can thrive using
