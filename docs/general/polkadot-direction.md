@@ -9,17 +9,18 @@ description: Learn about Polkadot's future direction as a decentralized, secure,
 
 
 Understanding what [Polkadot 1.0](./polkadot-v1.md) is about and the philosophy behind it will help
-us to envision the future direction of the Polkadot ecosystem toward abstraction and generalization.
+us envision the future direction of the Polkadot ecosystem toward abstraction and generalization.
 
 ## Polkadot as a Computational Resource
 
 Polkadot has been abstracted and generalized beyond what was originally proposed and envisioned in
-the [whitepaper](https://polkadot.network/whitepaper/). Polkadot is:
+the [whitepaper](https://polkadot.network/whitepaper/). 
 
+Polkadot is:
 - About [**Blockspace**](./polkadot-v1.md#polkadots-blockspace) (the underlying resources that
   chains need), not chains.
 - **A platform to build applications** rather than chains and for people to use those applications.
-  Fundamentally, Polkadot is not a platform to host chains, and so far, chains happened to be one
+  Fundamentally, Polkadot is not a platform to host chains, and so far, chains have happened to be one
   way to build applications and grow Polkadot's utility.
 - **A provider of resilient general-purpose continuation computation**, where the term
   _continuation_ refers to a broad, long-running task that can do something, pause, continue (or do
@@ -97,13 +98,13 @@ with the only difference of having the relay chain securing the network, providi
 capability, and doing some extra tasks such as [staking](../learn/learn-staking.md),
 [accounts](../learn/learn-accounts.md), [balances](../learn/learn-transactions.md#balance-transfers),
 and [governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately
-end in chain-centric application and UX.
+end in a chain-centric application and UX.
 
 The true innovation of Polkadot is about leveraging the unique value proposition offered by
 different chains and using those chains’ collaborative potential to build inter-chain applications
 to solve real-world problems. Those applications will thus need to span across chains.
 
-**Increasingly fewer tasks will be handled by the relay chain** that will focus efforts only on
+**Increasingly fewer tasks will be handled by the relay chain** which will focus efforts only on
 primary tasks: securing the network and providing secure message-passing capability.
 [System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay chain
 tasks such as staking, governance, etc.
@@ -113,7 +114,7 @@ tasks such as staking, governance, etc.
 [XCMP](../learn/learn-xcm.md) is the transport layer for delivering XCM messages. It gives the
 transportation method and a secure route but not a framework for binding agreements.
 
-[XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstract over
+[XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstracted over
 functionality common within chains. It creates an expressive language of what you intend to do or
 want to happen. XCM messages are transported between different chains using XCMP. Ideally, in a
 fully trustless environment, strong guarantees ensure chains faithfully interpret XCM messages. We
@@ -123,7 +124,7 @@ messages might be misinterpreted. These guarantees can be achieved with accords.
 An **Accord** is an _opt-in_ treaty across many chains, where treaty logic cannot be changed or
 undermined by one or more of those chains, and Polkadot guarantees faithful execution of this logic.
 Accords will be specific to a particular function, and any chain that enters the accord will be held
-to it and will service that particular function. To lower the entry barrier, accords can be proposed
+to it and will serve that particular function. To lower the entry barrier, accords can be proposed
 permissionlessly, but because they are opt-in, the accord proposal will take effect until chains
 agree and sign up.
 
@@ -229,7 +230,7 @@ using cores allows for maximized network efficiency and blockspace usage.
 
 ## Polkadot's Resilience
 
-Systems that have yet to be engineered with decentralization, cryptography, and game theory in mind,
+Systems that have yet to be engineered with decentralization, cryptography, and game theory in mind
 are breakable and prone to cyber-attacks. Polkadot is basing its resilience on different pillars:
 
 - **Preponderance of light-client usage:** Centralized RPC servers are common but susceptible to
@@ -243,17 +244,16 @@ are breakable and prone to cyber-attacks. Polkadot is basing its resilience on d
   The first use-case will be used to improve privacy for on-chain collectives such as
   [the Polkadot Technical Fellowship](../learn/learn-polkadot-technical-fellowship.md).
 - **[SAFROLE](../learn/learn-safrole.md) consensus:** New forkless block-production consensus
-  algorithm replacing [BABE](../learn/learn-consensus.md#block-production-babe) and where block are
+  algorithm replacing [BABE](../learn/learn-consensus.md#block-production-babe) and where blocks are
   not produced unless they are expected to be finalized. This will provide several benefits, such
   as:
   - Improved security, parachain performance, and UX from being forkless
   - Preventing front-running attacks through high-performance transaction routing where transactions
     are included in blocks in one hop instead of being gossiped, and transaction encryption.
-- **Internode Mixnet:** Shielded transport for short messages that
-  - avoids leaking IP information for transactions, and
-  - introduces a general messaging system allowing users, chains and off-chain workers, smart
-    contracts, pallets, and anything else existing within a chain to exchange messages containing
-    signatures, intentions, etc.
+- **Internode Mixnet:** Shielded transport for short messages that avoids leaking IP information for
+  transactions, and introduces a general messaging system allowing users, chains and off-chain workers,
+  smart contracts, pallets, and anything else existing within a chain to exchange messages containing
+  signatures, intentions, etc.
 - **Social Decentralization:** Resilience is achieved by including many participants contributing to
   the system and coming to decisions through on-chain governance. Involving as many people as
   possible ensures resilience against spending becoming systemically misjudged and appropriately
