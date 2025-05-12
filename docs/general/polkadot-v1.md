@@ -31,7 +31,7 @@ initiatives:
   of them) can benefit from Polkadot's native interoperability and will thus be able to communicate
   and exchange value and information with other parachains.
 - **Truly resilient infrastructure.** This is achieved by keeping the network decentralized without
-  compromising scalability and throughput and going on-chain
+  compromising scalability and throughput, and through the on-chain
   [treasury](../learn/learn-polkadot-opengov-treasury.md) funds that can be accessed through
   governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
   educational material, education, software development, etc.
