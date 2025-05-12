@@ -192,6 +192,7 @@ nav:
          - NFT Projects: learn/learn-nft-projects.md
          - NFT Pallets: learn/learn-nft-pallets.md
       - Collectives:
+         - Collectives: learn/learn-collectives.md      
          - Polkadot Technical Fellowship: learn/learn-polkadot-technical-fellowship.md
          - Fellowship Dashboard: https://polkadot-fellows.xyz  
       - Metadata: general/metadata.md
