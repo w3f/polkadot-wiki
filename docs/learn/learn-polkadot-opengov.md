@@ -207,6 +207,8 @@ its track to be executed simultaneously. In contrast, Root will allow only one p
 track. Once the track capacity is filled, additional proposals in the lead-in period will queue
 until place is available to enter the decision period.
 
+For examples of collectives, see the [Polkadot Alliance](https://polkadot.polkassembly.io/referendum/94) and the [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md).
+
 ### Origins and Tracks
 
 An **Origin** is a specific level of privilege that will determine the **Track** of all referenda

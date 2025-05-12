@@ -37,7 +37,7 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
 <div class="row">
   <!-- Card 1 -->
   <a href="./general/dashboards/parity-data-dashboards" class="card-container" data-aos="fade-up" data-aos-delay="200">
-    <img src="./assets/Dashboards.png" class="card-image" alt="Learn" />
+    <img src="./assets/Dashboards.png" class="card-image analytics" alt="Analytics" />
     <p class="card-title title">Analytics</p>
     <p class="card-description">
       Explore data-driven insights into the Polkadot ecosystem with interactive analysis and visualizations.
