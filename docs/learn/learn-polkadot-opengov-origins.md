@@ -100,6 +100,32 @@ than the min enactment period.
     For every referendum in each of these tracks, the Polkadot-JS UI displays interactive graphs of the support and approval.
     ![UI Support and Approval](./../assets/governance/support-approval-polkadot-js-ui.png)
 
+
+## Extrinsics and Tracks
+
+!!!note
+    You must submit the extrinsics in the table below using either the Root or a compatible OpenGov origin.
+
+
+| Pallet                        | Extrinsic Function       | Required OpenGov Origin                                                                 |
+|-------------------------------|--------------------------|---------------------------------------------------------------------------------|
+| **Scheduler**                 | `schedule_named`         | `AuctionAdmin`, `Treasurer`                                            |
+|                               | `schedule`              | `AuctionAdmin`, `Treasurer`                                            |
+| **Treasury**                  | `reject_proposal`        | `Treasurer`                                                            |
+|                               | `approve_proposal`       | `Treasurer`                                                            |
+| **Election Provider Multi-Phase** | `submit_unsigned`    | `StakingAdmin`                                                         |
+| **Nomination Pools**          | `set_metadata`           | `StakingAdmin`                                                         |
+|                               | `update_roles`           | `StakingAdmin`                                                         |
+| **Asset Rate**                | `create`                | `Treasurer`                                                            |
+|                               | `remove`                | `Treasurer`                                                            |
+|                               | `update`                | `Treasurer`                                                            |
+| **Auctions**                  | `new_auction`           | `AuctionAdmin`                                                         |
+| **Slots**                     | `force_lease`           | `LeaseAdmin`                                                           |
+| **HRMP**                      | `open_channel`          | `GeneralAdmin`                                                         |
+| **Dynamic Parameters**        | `set`                   | `DynamicParameterOrigin` (uses specific roles internally, e.g., `Treasurer`)   |
+| **Staking**                   | `force_new_era`         | `StakingAdmin`                                                         |
+|                               | `set_validator_count`   | `StakingAdmin`                                                         |
+
 ### Root
 
 === "Polkadot"
