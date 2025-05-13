@@ -33,8 +33,6 @@ KSM. In fact, there will likely be a system parachain specifically for network g
 
 ## Existing System Chains
 
-
-
 === "Polkadot"
 
     ### Asset Hub

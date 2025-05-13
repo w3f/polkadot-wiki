@@ -11,28 +11,27 @@ DOT is Polkadot's native token, similar to BTC for Bitcoin or ETH for Ethereum.
 
 The smallest unit of account balance on Polkadot SDK-based blockchains is Planck, named after the [Planck Length](https://en.wikipedia.org/wiki/Planck_length). DOT equals 10<sup>10</sup> Planck, while Kusama's KSM equals 10<sup>12</sup> Planck.
 
-### Polkadot Denominations
+### Denominations
 
-| Unit            | Decimal Places | Conversion to Planck   | Conversion to DOT |
-| --------------- | -------------- | ---------------------- | ----------------- |
-| Planck          | 0              | 1 Planck               | 0.0000000001 DOT  |
-| Microdot (uDOT) | 4              | 10<sup>4</sup> Planck  | 0.0000010000 DOT  |
-| Millidot (mDOT) | 7              | 10<sup>7</sup> Planck  | 0.0010000000 DOT  |
-| Dot (DOT)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 DOT  |
-| Million (MDOT)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 DOT  |
+=== "Polkadot"
+    | Unit            | Decimal Places | Conversion to Planck   | Conversion to DOT |
+    | --------------- | -------------- | ---------------------- | ----------------- |
+    | Planck          | 0              | 1 Planck               | 0.0000000001 DOT  |
+    | Microdot (uDOT) | 4              | 10<sup>4</sup> Planck  | 0.0000010000 DOT  |
+    | Millidot (mDOT) | 7              | 10<sup>7</sup> Planck  | 0.0010000000 DOT  |
+    | Dot (DOT)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 DOT  |
+    | Million (MDOT)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 DOT  |
 
-!!!note "DOT Redenomination"
-    DOT was redenominated at block #1_248_328, increasing its supply by 100x. Previously, 1 DOT equaled 10<sup>12</sup> Planck.
-
-### Kusama Denominations
-
-| Unit            | Decimal Places | Conversion to Planck   | Conversion to KSM  |
-| --------------- | -------------- | ---------------------- | ------------------ |
-| Planck          | 0              | 1 Planck               | 0.000000000001 KSM |
-| Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 KSM |
-| MicroKSM (uKSM) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 KSM |
-| MilliKSM (mKSM) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 KSM |
-| KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 KSM |
+    !!!note "DOT Redenomination"
+        DOT was redenominated at block #1_248_328, increasing its supply by 100x. Previously, 1 DOT equaled 10<sup>12</sup> Planck.
+=== "Kusama"
+    | Unit            | Decimal Places | Conversion to Planck   | Conversion to KSM  |
+    | --------------- | -------------- | ---------------------- | ------------------ |
+    | Planck          | 0              | 1 Planck               | 0.000000000001 KSM |
+    | Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 KSM |
+    | MicroKSM (uKSM) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 KSM |
+    | MilliKSM (mKSM) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 KSM |
+    | KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 KSM |
 
 ## Uses of DOT
 
