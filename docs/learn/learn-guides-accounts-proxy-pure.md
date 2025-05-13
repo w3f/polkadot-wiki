@@ -17,7 +17,7 @@ description: Detailed guides on creating and managing pure proxy accounts for ad
 !!!caution "The Account Tab in the Polkadot-JS UI cannot handle complex proxy setups"
     The Accounts Tab in the Polkadot-JS UI cannot handle complex proxy setups (e.g. a proxy -> multisig -> a pure proxy which is part of another multisig). These complex setups must be done using the [Extrinsics Tab](https://polkadot.js.org/apps/#/extrinsics) directly.
         
-    **We recommend to use the [Westend Testnet](learn-DOT.md#getting-tokens-on-the-westend-testnet) if you are testing features for the first time.** By performing the complex proxy setups on the testnet, you can comfortably replicate the procedure on the main networks.
+    **We recommend to use the [Westend Testnet](learn-DOT.md#obtaining-testnet-tokens) if you are testing features for the first time.** By performing the complex proxy setups on the testnet, you can comfortably replicate the procedure on the main networks.
 
 !!!danger "Risk of loss of funds"
     Read carefully the text below and before performing any action using pure proxies, experiment on the Westend testnet.
