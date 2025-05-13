@@ -89,7 +89,7 @@ See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
 to learn how to restore your account on the Polkadot Vault app.
 
 ## Metadata-less Signing
-With Polkadot Vault v7.0.0 and above, you can sign transactions without needing to add or update the network metadata. This functionality must be supported by the wallet that you are using, and is currently available in Nova Wallet. You still need to add the chain specs for the chain that you wish to use.
+With Polkadot Vault v7.0.0 and above, you can sign transactions without adding or updating the network metadata. This functionality must be supported by the wallet that you are using. Note that you still need to add the chain specification for the chain you wish to use.
 
 The process of signing a transaction using Polkadot Vault remains the same, except that the wallet that you are using should present you with an animated QR code at the time of signing the transaction using your Polkadot Vault. This QR code contains all of the data required to sign the transaction without needing to update the chain’s metadata in your Polkadot Vault. The data contained in the QR code is compressed, allowing for faster scanning.
 
