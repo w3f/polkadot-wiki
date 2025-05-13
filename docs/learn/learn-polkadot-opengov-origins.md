@@ -103,26 +103,29 @@ than the min enactment period.
 
 ## Extrinsics and Tracks
 
+!!!note
+    The following extrinsics must only be sent either with the `Root` or OpenGov origins, which are detailed in the table.
+
 The following table outlines which extrinsics can be submitted on which governance tracks.
 
-| Pallet                        | Extrinsic Function       | Required Origin                                                                 |
+| Pallet                        | Extrinsic Function       | Required OpenGov Origin                                                                 |
 |-------------------------------|--------------------------|---------------------------------------------------------------------------------|
-| **Scheduler**                 | `schedule_named`         | `Root`, `AuctionAdmin`, `Treasurer`                                            |
-|                               | `schedule`              | `Root`, `AuctionAdmin`, `Treasurer`                                            |
-| **Treasury**                  | `reject_proposal`        | `Root`, `Treasurer`                                                            |
-|                               | `approve_proposal`       | `Root`, `Treasurer`                                                            |
-| **Election Provider Multi-Phase** | `submit_unsigned`    | `Root`, `StakingAdmin`                                                         |
-| **Nomination Pools**          | `set_metadata`           | `Root`, `StakingAdmin`                                                         |
-|                               | `update_roles`           | `Root`, `StakingAdmin`                                                         |
-| **Asset Rate**                | `create`                | `Root`, `Treasurer`                                                            |
-|                               | `remove`                | `Root`, `Treasurer`                                                            |
-|                               | `update`                | `Root`, `Treasurer`                                                            |
-| **Auctions**                  | `new_auction`           | `Root`, `AuctionAdmin`                                                         |
-| **Slots**                     | `force_lease`           | `Root`, `LeaseAdmin`                                                           |
-| **HRMP**                      | `open_channel`          | `Root`, `GeneralAdmin`                                                         |
+| **Scheduler**                 | `schedule_named`         | `AuctionAdmin`, `Treasurer`                                            |
+|                               | `schedule`              | `AuctionAdmin`, `Treasurer`                                            |
+| **Treasury**                  | `reject_proposal`        | `Treasurer`                                                            |
+|                               | `approve_proposal`       | `Treasurer`                                                            |
+| **Election Provider Multi-Phase** | `submit_unsigned`    | `StakingAdmin`                                                         |
+| **Nomination Pools**          | `set_metadata`           | `StakingAdmin`                                                         |
+|                               | `update_roles`           | `StakingAdmin`                                                         |
+| **Asset Rate**                | `create`                | `Treasurer`                                                            |
+|                               | `remove`                | `Treasurer`                                                            |
+|                               | `update`                | `Treasurer`                                                            |
+| **Auctions**                  | `new_auction`           | `AuctionAdmin`                                                         |
+| **Slots**                     | `force_lease`           | `LeaseAdmin`                                                           |
+| **HRMP**                      | `open_channel`          | `GeneralAdmin`                                                         |
 | **Dynamic Parameters**        | `set`                   | `DynamicParameterOrigin` (uses specific roles internally, e.g., `Treasurer`)   |
-| **Staking**                   | `force_new_era`         | `Root`, `StakingAdmin`                                                         |
-|                               | `set_validator_count`   | `Root`, `StakingAdmin`                                                         |
+| **Staking**                   | `force_new_era`         | `StakingAdmin`                                                         |
+|                               | `set_validator_count`   | `StakingAdmin`                                                         |
 
 ### Root
 
