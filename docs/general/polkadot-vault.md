@@ -93,7 +93,6 @@ With Polkadot Vault v7.0.0 and above, you can sign transactions without adding o
 
 Signing a transaction using Polkadot Vault remains the same, except the wallet you use should present you with an animated QR code when you sign the transaction. This QR code contains all the data required to sign the transaction without updating the chain’s metadata in your Polkadot Vault. The data contained in the QR code is compressed, allowing for faster scanning.
 
-You may need to reimport your account and your derivation paths to Polkadot Vault when updating to v7.0.0+. Ensure you have backed up your seed phrase and derivation path details.
 
 ## Signing Extrinsics
 
