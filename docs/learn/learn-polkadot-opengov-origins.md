@@ -106,7 +106,6 @@ than the min enactment period.
 !!!note
     The following extrinsics must only be sent either with the `Root` or OpenGov origins, which are detailed in the table.
 
-The following table outlines which extrinsics can be submitted on which governance tracks.
 
 | Pallet                        | Extrinsic Function       | Required OpenGov Origin                                                                 |
 |-------------------------------|--------------------------|---------------------------------------------------------------------------------|
