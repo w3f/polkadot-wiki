@@ -39,10 +39,10 @@ The smallest unit of account balance on Polkadot SDK-based blockchains is Planck
 DOT has three main functions:
 
 1. **Governance**: DOT holders control network governance, including fees, parachain management, and upgrades. Learn more on the [governance page](./learn-polkadot-opengov.md).
-2. **Staking**: DOT is staked to secure the network via [Nominated Proof of Stake](./learn-staking.md). Staking discourages malicious behavior through [slashing](./learn-offenses.md).
-3. **Resource Purchase**: DOT is used to reserve [parachain identifiers](../general/glossary.md#paraid) and [Coretime](../general/glossary.md#coretime) for rollups.
+2. **Staking**: DOT is staked to secure the network via [Nominated Proof of Stake](./learn-staking.md).
+3. **Resource Purchase**: DOT is used to purchase [Coretime](../general/glossary.md#coretime) and reserve [parachain identifiers](../general/glossary.md#paraid) for rollups.
 
-DOT is also transferrable and can fund Polkadot-related projects via the Treasury.
+The DOT token is transferable; a portion of its inflation is diverted to the Treasury, which can fund Polkadot-related projects via OpenGov referenda.
 
 ### Governance
 
