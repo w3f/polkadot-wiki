@@ -103,7 +103,7 @@ than the min enactment period.
 
 ## Extrinsics and Tracks
 
-The following table outlines which extrinsics can be placed on which governance tracks:
+The following table outlines which extrinsics can be submitted on which governance tracks.
 
 | Pallet                        | Extrinsic Function       | Required Origin                                                                 |
 |-------------------------------|--------------------------|---------------------------------------------------------------------------------|
