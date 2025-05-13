@@ -8,20 +8,20 @@
 # Redirects for all index pages of docusaurus to respective links on Mkdocs
 # or the relevant Polkadot docs  
 
-/docs/explore-index    /general   301
-/docs/learn-index    /learn    301
-/docs/learn-staking-index    /learn/staking    301
+/docs/explore-index    /general/getting-started/   301
+/docs/learn-index    /general/fundamentals/    301
+/docs/learn-staking-index    /learn/learn-staking/    301
 /docs/build-index    https://docs.polkadot.com/develop    301
 /docs/build-guide    https://docs.polkadot.com/develop/#development-pathways    301
 /docs/maintain-index    https://docs.polkadot.com/infrastructure/    301
 /docs/wallets-index    https://polkadot.com/get-started/wallets/    301
-/docs/apps-index    /general/apps    301
+/docs/apps-index    https://polkadot.com/get-started/dapps/    301
 /docs/community-index    /general/community    301
-/docs/programs-index    /general/programs   301
-/docs/general-index     /learn/general   301
-/docs/dashboards-index    /general/dashboards    301
-/docs/learn-basics-index    /learn/basics    301
-/docs/learn-advanced-index    /learn/advanced    301
+/docs/programs-index    /general/decentralized-voices/   301
+/docs/general-index     /general/fundamentals/   301
+/docs/dashboards-index    https://polkadot.com/get-started/dapps/    301
+/docs/learn-basics-index    /general/fundamentals/    301
+/docs/learn-advanced-index    /general/fundamentals/    301
 /docs/build-client-index    https://docs.polkadot.com/develop/toolkit    301
 /docs/build-protocol-index    https://docs.polkadot.com/polkadot-protocol/    301
 /docs/build-tools-index    https://docs.polkadot.com/develop/toolkit/    301
