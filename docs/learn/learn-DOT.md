@@ -1,117 +1,81 @@
 ---
 title: DOT Token Overview
-description: Learn about Polkadot's native token DOT, its uses, denominations, and how to obtain it.
+description: Overview of Polkadot's native token DOT, its uses, denominations, and how to obtain it.
 ---
 
 ## What is DOT?
 
-DOT is the native token of the Polkadot network in a similar way that BTC is the native token of
-Bitcoin or Ether is the native token of the Ethereum blockchain.
+DOT is Polkadot's native token, similar to BTC for Bitcoin or ETH for Ethereum.
 
 ### The Planck Unit
 
-The smallest unit for the account balance on Substrate based blockchains (Polkadot, Kusama, etc.) is
-Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest
-possible distance in the physical Universe). You can compare DOT's Planck to BTC's Satoshi or ETH's
-Wei. Polkadot's native token DOT equals to 10<sup>10</sup> Planck and Kusama's native token KSM
-equals to 10<sup>12</sup> Planck.
+The smallest unit of account balance on Polkadot SDK-based blockchains is Planck, named after the [Planck Length](https://en.wikipedia.org/wiki/Planck_length). DOT equals 10<sup>10</sup> Planck, while Kusama's KSM equals 10<sup>12</sup> Planck.
 
-### Polkadot
+### Denominations
 
-| Unit            | Decimal Places | Conversion to Planck   | Conversion to DOT |
-| --------------- | -------------- | ---------------------- | ----------------- |
-| Planck          | 0              | 1 Planck               | 0.0000000001 DOT  |
-| Microdot (uDOT) | 4              | 10<sup>4</sup> Planck  | 0.0000010000 DOT  |
-| Millidot (mDOT) | 7              | 10<sup>7</sup> Planck  | 0.0010000000 DOT  |
-| Dot (DOT)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 DOT  |
-| Million (MDOT)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 DOT  |
+=== "Polkadot"
+    | Unit            | Decimal Places | Conversion to Planck   | Conversion to DOT |
+    | --------------- | -------------- | ---------------------- | ----------------- |
+    | Planck          | 0              | 1 Planck               | 0.0000000001 DOT  |
+    | Microdot (uDOT) | 4              | 10<sup>4</sup> Planck  | 0.0000010000 DOT  |
+    | Millidot (mDOT) | 7              | 10<sup>7</sup> Planck  | 0.0010000000 DOT  |
+    | Dot (DOT)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 DOT  |
+    | Million (MDOT)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 DOT  |
 
-!!!note "DOT was redenominated at block #1_248_328"
-    DOT was originally equal to 10<sup>12</sup> Planck just like Kusama (which is referred to as "DOT (old)"), but went through a process of [redenomination](./archive/learn-redenomination.md) which increased DOT's supply by 100x. As a consequence, 1 DOT now equals to 10<sup>10</sup> Planck.
+    !!!note "DOT Redenomination"
+        DOT was redenominated at block #1_248_328, increasing its supply by 100x. Previously, 1 DOT equaled 10<sup>12</sup> Planck.
+=== "Kusama"
+    | Unit            | Decimal Places | Conversion to Planck   | Conversion to KSM  |
+    | --------------- | -------------- | ---------------------- | ------------------ |
+    | Planck          | 0              | 1 Planck               | 0.000000000001 KSM |
+    | Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 KSM |
+    | MicroKSM (uKSM) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 KSM |
+    | MilliKSM (mKSM) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 KSM |
+    | KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 KSM |
 
-### Kusama
+## Uses of DOT
 
-| Unit            | Decimal Places | Conversion to Planck   | Conversion to KSM  |
-| --------------- | -------------- | ---------------------- | ------------------ |
-| Planck          | 0              | 1 Planck               | 0.000000000001 KSM |
-| Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 KSM |
-| MicroKSM (uKSM) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 KSM |
-| MilliKSM (mKSM) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 KSM |
-| KSM             | 12             | 10<sup>12</sup> Planck | 1.000000000000 KSM |
+DOT has three main functions:
 
-## What are the uses of DOT?
+1. **Governance**: DOT holders control network governance, including fees, parachain management, and upgrades. Learn more on the [governance page](./learn-polkadot-opengov.md).
+2. **Staking**: DOT is staked to secure the network via [Nominated Proof of Stake](./learn-staking.md).
+3. **Resource Purchase**: DOT is used to purchase [Coretime](../general/glossary.md#coretime) and reserve [parachain identifiers](../general/glossary.md#paraid) for rollups.
 
-DOT serves three key functions in Polkadot:
+The DOT token is transferable; a portion of its inflation is diverted to the Treasury, which can fund Polkadot-related projects via OpenGov referenda.
 
-- to be used for governance of the network,
-- to be staked for the operation of the network,
-- to be bonded to connect a chain to Polkadot as a parachain.
+### Governance
 
-DOT can also serve ancillary functions by being a transferrable token. For example, DOT stored in
-the Treasury can be sent to teams working on relevant projects for the Polkadot network.
+DOT holders participate in governance to manage network fees, parachains, and upgrades. Details are available on the [governance page](./learn-polkadot-opengov.md).
 
-!!!note "Explainer video on token utility"
-    These concepts have been further explained in the video
-    [Usage of DOT and KSM on Polkadot and Kusama](https://www.youtube.com/watch?v=POfFgrMfkTo&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=7).
+### Consensus
 
-### DOT for Governance
+DOT facilitates Polkadot's consensus mechanism. Staking DOT ensures valid transactions and penalizes malicious actors through [slashing](./learn-offenses.md). Learn more on the [staking page](./learn-staking.md).
 
-The first function of DOT is to entitle holders to control the governance of the platform. Some
-functions that are included under the governance mechanism include determining the fees of the
-network, the addition or removal of parachains, and exceptional events such as upgrades and fixes to
-the Polkadot platform.
+### Relay Chain Access
 
-Polkadot will enable any holder of DOT to participate in governance. For details on how holders can
-participate in governance, as well as their rights and responsibilities, see the
-[governance page](./learn-polkadot-opengov.md).
+DOT is used to [purchase coretime](./learn-agile-coretime.md), enabling rollups to leverage Polkadot's security and interoperability.
 
-### DOT for Consensus
+## Token Issuance
 
-DOT will be used to facilitate the consensus mechanism that underpins Polkadot. For the platform to
-function and allow for valid transactions to be carried out across parachains, Polkadot will rely on
-holders of DOT to play active roles. Participants will put their DOT at risk (via staking) to
-perform these functions. The staking of DOT acts as a disincentive for malicious participants who
-will be punished by the network by getting their DOT [slashed](./learn-offenses.md). The DOT
-required to participate in the network will vary depending on the activity that is being performed,
-the duration the DOT will be staked for, and the total number of DOT staked. For more information
-about staking on Polkadot visit [the dedicated staking page](./learn-staking.md).
+### Total Issuance
 
-### DOT to Access Cores on the Relay Chain
+The [total issuance](../general/chain-state-values.md) is the total number of tokens in existence.
 
-DOT can be used to [purchase coretime in-bulk or on-demand](./learn-agile-coretime.md) and access
-the relay chain to benefit from Polkadot's security and interoperability.
+### Inactive Issuance
 
-### Token Issuance
+The [inactive issuance](../general/chain-state-values.md) includes tokens locked in crowdloans and nomination pools, which cannot participate in governance.
 
-#### Total Issuance
+### Active Issuance
 
-The [total issuance](../general/chain-state-values.md) is the total number of token
-units in existence on the network.
-
-#### Inactive Issuance
-
-The [inactive issuance](../general/chain-state-values.md) is the total units of
-outstanding deactivated balance on the network that cannot be used for participation in governance.
-This comprises tokens locked away in crowdloans and nomination pools.
-
-#### Active Issuance
-
-Active issuance = Total issuance - Inactive issuance
-
-All the tokens under active issuance are can be used to participate in the governance on-chain.
+Active issuance = Total issuance - Inactive issuance. Active tokens can participate in governance.
 
 ## Obtaining Testnet Tokens
 
-DOT are required to make transactions on the Polkadot network. Tokens on Polkadot's Testnets do not
-have any value besides allowing you to experiment with the features on the network.
+Testnet tokens allow experimentation on Polkadot's features. Obtain tokens [here](https://faucet.polkadot.io/).
 
-Tokens for each testnet described below can be obtained [**here**](https://faucet.polkadot.io/).
+### Paseo Testnet
 
-### Getting Tokens on the Paseo Testnet
-
-The Paseo testnet mirrors the Polkadot runtime and it is maintained by the community. The PAS tokens
-can be obtained [here](https://faucet.polkadot.io/) and have the same Planck conversion as
-Polkadot's native token DOT.
+Paseo mirrors Polkadot's runtime. Obtain PAS tokens [here](https://faucet.polkadot.io/) or via `!drip <PASEO_ADDRESS>` in the [Matrix chatroom](https://matrix.to/#/#paseo_faucet:matrix.org).
 
 | Unit            | Decimal Places | Conversion to Planck   | Conversion to PAS |
 | --------------- | -------------- | ---------------------- | ----------------- |
@@ -121,31 +85,9 @@ Polkadot's native token DOT.
 | Dot (PAS)       | 10             | 10<sup>10</sup> Planck | 1.0000000000 PAS  |
 | Million (MPAS)  | 16             | 10<sup>16</sup> Planck | 1,000,000.00 PAS  |
 
-Users can also obtain PAS by posting `!drip <PASEO_ADDRESS>` in the Matrix chatroom
-[#paseo_faucet:matrix.org](https://matrix.to/#/#paseo_faucet:matrix.org).
+### Westend Testnet
 
-### Getting Tokens on the Westend Testnet
-
-Polkadot's testnet is called [Westend](https://docs.polkadot.com/develop/networks/#westend).
-Besides the [official faucet](https://faucet.polkadot.io/westend), you can obtain its native WND
-tokens by posting `!drip <WESTEND_ADDRESS>` in the Matrix chatroom
-[#westend_faucet:matrix.org](https://matrix.to/#/#westend_faucet:matrix.org). Your account will be
-credited with 1 WND by default. You can also specify to get more tokens by
-`!drip <WESTEND_ADDRESS> X`, where X is the number of tokens.
-
-On the Westend network, you can also earn WNDs as rewards by
-[becoming a validator](learn-validator.md). Watch the video below on how to get started on Westend.
-
-<div className="row">
-  <div className="col text--center">
-    <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">
-      <img src="https://img.youtube.com/vi/0ji0ccZyb3k/0.jpg" width="350" style="borderRadius: 10, border: '1px solid slategrey'" />
-    </a>
-    <p>
-      <a href="https://www.youtube.com/watch?v=0ji0ccZyb3k">Testing Polkadot features on Westend</a>
-    </p>
-  </div>
-</div>
+Westend is Polkadot's testnet. Obtain WND tokens via the [faucet](https://faucet.polkadot.io/westend) or `!drip <WESTEND_ADDRESS>` in the [Matrix chatroom](https://matrix.to/#/#westend_faucet:matrix.org). Validators can also earn WND. Watch the [video guide](https://www.youtube.com/watch?v=0ji0ccZyb3k).
 
 | Unit            | Decimal Places | Conversion to Planck   | Conversion to WND  |
 | --------------- | -------------- | ---------------------- | ------------------ |
@@ -155,22 +97,14 @@ On the Westend network, you can also earn WNDs as rewards by
 | MilliWND (mWND) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 WND |
 | WND             | 12             | 10<sup>12</sup> Planck | 1.000000000000 WND |
 
-### Faucets support
+### Faucet Support
 
-If you require help with using faucets, or wish to report an issue, there is a support chat
-[#faucets-support:matrix.org](https://matrix.to/#/#faucets-support:matrix.org), or you can
-[create an issue](https://github.com/paritytech/polkadot-testnet-faucet/issues/new/choose) directly
-in the faucets repo
+For faucet issues, use the [support chat](https://matrix.to/#/#faucets-support:matrix.org) or [create an issue](https://github.com/paritytech/polkadot-testnet-faucet/issues/new/choose).
 
 ## Kusama Tokens
 
-Unlike testnet DOT, Kusama tokens are not freely given away. Kusama tokens are available via the
-[claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis) or
-through the [Treasury](./archive/learn-treasury.md). Alternatively, they can be obtained on the open
-market.
+Kusama tokens are not freely distributed. Obtain them via the [claims process](https://claim.kusama.network/), [Treasury](./archive/learn-treasury.md), or the open market.
 
 ## Polkadot Mainnet DOT
 
-Polkadot Mainnet DOT are not freely given away. If you purchased DOT in the original 2017 offering,
-you may claim them via the [Polkadot claims process](https://claims.polkadot.network/).
-Alternatively, they are available on the open market.
+Mainnet DOT is not freely distributed. Claim them via the [Polkadot claims process](https://claims.polkadot.network/) or purchase on the open market.
