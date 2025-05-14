@@ -28,9 +28,20 @@ theme:
     - content.action.edit
     - announce.dismiss
   palette: 
-    scheme: default
-    primary: white
-    accent: pink
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   icon:
     fontawesome: true
   favicon: assets/Polkadot_Favicon.png

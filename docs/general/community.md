@@ -30,7 +30,7 @@ Below are the most essential links to the community channels for Polkadot and Ku
 [Polkadot Meetup Platform](https://www.meetup.com/pro/polkadot) - Information on hosting meetups,
 applying for funding, and materials for running it.
 
-[Community Events](https://web3foundation.notion.site/Community-Events-Introduction-05199fe6556b41f48a3390b1868c9ae7) -
+[Community Events](https://polkadot.com/community/events/) -
 Information on events funded by the [Treasury](https://polkadot.polkassembly.io/bounty/17) and
 organized by the Polkadot community (candidates or ambassadors) focused on promoting Polkadot,
 Kusama, and related technologies. The events are educational and informative, and their goal is to
