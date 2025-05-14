@@ -66,6 +66,7 @@
 /docs/governance-apps    /general/governance-apps    301
 /docs/multisig-apps    /general/multisig-apps    301
 /docs/learn-nft-projects    /learn/learn-nft-projects    301
+/*/nft-projects/    /learn/learn-nft-projects    301
 /docs/parachains-apps    https://polkadot.com/get-started/dapps/    301
 
 # Kusama
