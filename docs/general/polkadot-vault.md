@@ -88,7 +88,7 @@ See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
 [**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
 to learn how to restore your account on the Polkadot Vault app.
 
-## Metadata-less Signing
+## Signing Transactions Without Metadata
 With Polkadot Vault v7.0.0 and above, you can sign transactions without adding or updating the network metadata. This functionality must be supported by the wallet that you are using. Note that you still need to add the chain specification for the chain you wish to use.
 
 Signing a transaction using Polkadot Vault remains the same, except the wallet you use should present you with an animated QR code when you sign the transaction. This QR code contains all the data required to sign the transaction without updating the chain’s metadata in your Polkadot Vault. The data contained in the QR code is compressed, allowing for faster scanning.
