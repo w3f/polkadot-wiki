@@ -58,21 +58,15 @@ There are a few basic ground rules for contributors:
    local copy with `npx lint-staged`, but for simplicity, we also have a bot that runs this for us
    in your PRs.
 
-## Style Guides
+## Polkadot Wiki Style Guide
 
 !!!info "Wiki General Style Guides"
-      The style guide from the [Substrate Knowledge Base](https://github.com/substrate-developer-hub/knowledgebase/blob/master/CONTRIBUTING.md#documentation-style) provides general guidelines about how to write your Wiki contribution. See also [the Wiki readme file](https://github.com/w3f/polkadot-wiki?tab=readme-ov-file#contributing-to-documentation).
+    See also [the Wiki README - Contributing to Documentation](https://github.com/w3f/polkadot-wiki?tab=readme-ov-file#contributing-to-documentation).
+
+This style guide provides editorial guidelines for anyone writing documentation for the Polkadot Wiki. It is based in principle on the Google Developer Documentation Style Guide, adapted to fit the specific needs and terminology of the Polkadot ecosystem, with a focus on **creating static, long-lasting content.**
+
 
 The Polkadot Wiki is powered by [MkDocs](https://www.mkdocs.org/) using [the MkDocs Material template](https://squidfunk.github.io/mkdocs-material/).
-
-Avoid using exclamation marks `!` and informal sentences, which are usually more appropriate for
-blog posts. Running a grammar check before submitting your pull request for review can save
-reviewers time and speed up the review process.
-
-To ensure consistency across pages, note the following general terms:
-
-- `relay chain` in text and `Relay chain` at the beginning of a sentence.
-- `parachain` in text and `Parachain` at the beginning of a sentence.
 
 The Polkadot Wiki has multiple moving parts. To ensure your contribution does not introduce
 compilation errors and that your page is properly rendered in production, we encourage you to build
@@ -81,5 +75,89 @@ Wiki locally also adds the benefit of checking for broken links.
 
 !!!info "Run the Wiki Locally"
       For more information about how to run the Wiki locally on your machine visit [the README file on GitHub](https://github.com/w3f/polkadot-wiki/blob/master/README.md).
-      
-This document is based on the [Level contribution guidelines](https://github.com/Level/community/blob/master/CONTRIBUTING.md).
+
+
+
+### General Guidelines
+
+The overarching theme is to ensure the Polkadot Wiki achieves longevity in its content, ensuring that it adheres to the guidelines ensures that maintenance is low and quality of new content is high.
+
+#### Avoid informal language
+
+Avoid using exclamation marks `!` and informal sentences, which are usually more appropriate for blog posts.
+
+#### Grammar and consistency
+
+Running a grammar check before submitting your pull request for review can save reviewers time and speed up the review process.
+
+To ensure consistency across pages, note the following general terms:
+- `relay chain` in text and `Relay chain` at the beginning of a sentence.
+- `parachain` in text and `Parachain` at the beginning of a sentence.
+
+#### Clarity
+
+Prioritize clear, concise, and direct language. Assume the reader has a basic understanding of blockchain concepts but may be new to Polkadot.  
+- **Example:** Instead of: "The utilization of a multi-chain architecture enables the facilitation of diverse transactional modalities."  
+  
+- Write: "Polkadot's heterogeneous, multi-chain design allows for different types of transactions to be validated on the network."  
+
+#### Longevity
+
+Prioritize information that is expected to remain relevant for an extended period. Avoid language that quickly becomes outdated.  
+- **Example:** Instead of: "The upcoming upgrade will introduce new governance features."  
+- Write: "Polkadot governance allows token holders to participate in decision-making." (This describes the general function, not a specific, time-sensitive upgrade)  
+
+#### Accuracy
+
+Ensure all information is technically accurate and up-to-date. The Polkadot ecosystem evolves rapidly, so meticulous attention to detail is crucial.  
+
+!!!note
+    The Polkadot Wiki should only contain features that are live on the Polkadot relay chain, and should not refer to / allude to any upcoming features until they are live.
+
+#### Consistency
+
+Maintain a consistent style and terminology throughout all documentation. This creates a professional and cohesive experience for the reader.  
+- **Example:** Always use the term "parachain" and not "parallel chain" or "para-chain."  
+
+#### Mainnet focus
+
+Document features and information *only* when they are live and available on the Polkadot mainnet. Exclude information about features that are only available on Kusama, Westend, or other testnets.  
+- **Example:** Do not include a section on a new XCM feature if it is only live on Kusama. Only document it once it is available on Polkadot Mainnet.  
+
+#### Objectivity
+
+Present information in a neutral and objective tone, avoiding hype or marketing language.  
+- **Example:** Instead of: "Polkadot is the most revolutionary blockchain technology..."  
+- Write: "Polkadot is a network that enables interoperability between different blockchains."
+
+### Voice and tone
+
+#### Voice
+
+Use a confident and authoritative voice, but avoid being overly formal or academic. Prefer active voice over passive voice to make the documentation more direct and engaging.  
+- **Example (formal):** "It is imperative to note that the aforementioned process..."  
+- **Write (concise):** "Note that the process..."  
+- **Example (passive):** "The Relay Chain is secured by validators."  
+- **Write (active):** "Validators secure the Relay Chain."
+
+#### Tone
+
+Aim for a friendly, helpful, and approachable tone. Imagine you are a knowledgeable guide helping someone navigate the Polkadot ecosystem.  
+
+- **Example:** Instead of: "The user must execute the following commands..."  
+- Write: "You can use the following commands..."  
+
+Part of this can be accomplished via using the second-person tense when the user/reader is referred to. Use the second person ("you") to address the reader directly and make the documentation more engaging.  
+
+- **Example:** "To create a parachain, you need to..."  
+
+#### Tense
+
+- Use the present tense whenever possible to describe how Polkadot works on mainnet.  
+  - **Example:** "Validators secure the Polkadot network."  
+- Use the past tense to describe specific events that have already occurred on mainnet.  
+  - **Example:** "The first parachain auctions on Polkadot concluded in 2021."  
+- Avoid future tense and speculative language about features that are not yet live on Polkadot mainnet.  
+  - **Example:** Instead of: "Parachains will connect to the Relay Chain in the future."  
+  - Write: "Parachains connect to the Relay Chain." (Only if this is true on Polkadot Mainnet)
+
