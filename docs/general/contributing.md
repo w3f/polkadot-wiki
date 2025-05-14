@@ -63,7 +63,7 @@ There are a few basic ground rules for contributors:
 !!!info "Wiki General Style Guides"
     See also [the Wiki README - Contributing to Documentation](https://github.com/w3f/polkadot-wiki?tab=readme-ov-file#contributing-to-documentation).
 
-This style guide provides editorial guidelines for anyone writing documentation for the Polkadot Wiki. It is based in principle on the Google Developer Documentation Style Guide, adapted to fit the specific needs and terminology of the Polkadot ecosystem, with a focus on **creating static, long-lasting content.**
+This style guide provides editorial guidelines for anyone writing documentation for the Polkadot Wiki. It is based and inspired in principle on the Google Developer Documentation Style Guide, adapted to fit the specific needs and terminology of the Polkadot ecosystem, with a focus on **creating static, long-lasting content.**
 
 
 The Polkadot Wiki is powered by [MkDocs](https://www.mkdocs.org/) using [the MkDocs Material template](https://squidfunk.github.io/mkdocs-material/).
