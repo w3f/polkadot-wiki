@@ -8,20 +8,20 @@
 # Redirects for all index pages of docusaurus to respective links on Mkdocs
 # or the relevant Polkadot docs  
 
-/docs/explore-index    /general   301
-/docs/learn-index    /learn    301
-/docs/learn-staking-index    /learn/staking    301
+/docs/explore-index    /general/getting-started/   301
+/docs/learn-index    /general/fundamentals/    301
+/docs/learn-staking-index    /learn/learn-staking/    301
 /docs/build-index    https://docs.polkadot.com/develop    301
 /docs/build-guide    https://docs.polkadot.com/develop/#development-pathways    301
 /docs/maintain-index    https://docs.polkadot.com/infrastructure/    301
 /docs/wallets-index    https://polkadot.com/get-started/wallets/    301
-/docs/apps-index    /general/apps    301
+/docs/apps-index    https://polkadot.com/get-started/dapps/    301
 /docs/community-index    /general/community    301
-/docs/programs-index    /general/programs   301
-/docs/general-index     /learn/general   301
-/docs/dashboards-index    /general/dashboards    301
-/docs/learn-basics-index    /learn/basics    301
-/docs/learn-advanced-index    /learn/advanced    301
+/docs/programs-index    /general/decentralized-voices/   301
+/docs/general-index     /general/fundamentals/   301
+/docs/dashboards-index    https://polkadot.com/get-started/dapps/    301
+/docs/learn-basics-index    /general/fundamentals/    301
+/docs/learn-advanced-index    /general/fundamentals/    301
 /docs/build-client-index    https://docs.polkadot.com/develop/toolkit    301
 /docs/build-protocol-index    https://docs.polkadot.com/polkadot-protocol/    301
 /docs/build-tools-index    https://docs.polkadot.com/develop/toolkit/    301
@@ -35,13 +35,13 @@
 /docs/getting-started    /general/getting-started    301
 /docs/web3-and-polkadot    /general/web3-and-polkadot    301
 /docs/contributing    /general/contributing    301
-/docs/funding    /general/grants    301
+/docs/funding    /general/funding/    301
 /docs/metadata    /general/metadata    301
 /docs/chain-state-values    /general/chain-state-values    301
 /docs/ambassadors    /general/ambassadors    301
 /docs/polkadot-v1    /general/polkadot-v1    301
 /docs/community    /general/community    301
-/docs/polkadot-vision-index    /general/polkadot-vision    301
+/docs/polkadot-vision-index    /general/polkadot-v1/    301
 /docs/stay-safe-index    /general/stay-safe    301
 /docs/start-building    /general/start-building    301
 /docs/faq    /general/faq    301
@@ -130,13 +130,13 @@
 /docs/learn-collator    /learn/learn-collator    301
 /docs/learn-async-backing    /learn/learn-async-backing    301
 /docs/learn-spree    /learn/learn-spree    301
-/docs/learn/learn-governance    /learn/archive/learn-governance    301
-/docs/learn/learn-treasury    /learn/archive/learn-treasury    301
-/docs/learn/learn-launch    /learn/archive/learn-launch    301
-/docs/learn/learn-redenomination    /learn/archive/learn-redenomination    301
-/docs/learn/learn-controller    /learn/archive/learn-controller    301
-/docs/learn/learn-auction    /learn/archive/learn-auction    301
-/docs/learn/learn-crowdloans    /learn/archive/learn-crowdloans    301
+/docs/learn/learn-governance    /learn/learn-polkadot-opengov/    301
+/docs/learn/learn-treasury    /learn/learn-polkadot-opengov-treasury/    301
+/docs/learn/learn-launch    https://polkadot.com/    301
+/docs/learn/learn-redenomination    https://polkadot.com/    301
+/docs/learn/learn-controller    /learn/learn-accounts/    301
+/docs/learn/learn-auction    /learn/learn-agile-coretime/    301
+/docs/learn/learn-crowdloans    https://polkadot.com/    301
 /docs/learn-jam-faq    /learn/learn-jam-faq    301
 /docs/learn-implementations    /learn/learn-implementations    301
 /docs/learn-consensus    https://docs.polkadot.com/polkadot-protocol/architecture/polkadot-chain/pos-consensus/    301
@@ -153,12 +153,28 @@
 /docs/learn-hyperbridge    /learn/learn-hyperbridge    301
 /docs/learn-dot-ksm-bridge    /learn/learn-DOT-KSM-bridge    301
 /docs/learn-asset-conversion-assethub   https://docs.polkadot.com/tutorials/polkadot-sdk/system-chains/asset-hub/asset-conversion/    301
+/docs/learn-polkadot-opengov-origins    /learn/learn-polkadot-opengov-origins    301
+/docs/learn-polkadot-technical-fellowship    /learn/learn-polkadot-technical-fellowship    301
+/docs/learn-account-balances    /learn/learn-account-balances    301
+/docs/learn-account-multisig    /learn/learn-account-multisig    301
+/docs/learn-proxies-pure    /learn/learn-proxies-pure    301
+/docs/transaction-attacks    /general/transaction-attacks    301
+/docs/learn-accounts-index/    /learn/learn-accounts/    301
+/docs/learn-teleport    /learn/learn-teleport    301
+/docs/learn-nft    /learn/learn-nft    301
+/docs/wallets/    /general/wallets-and-extensions/    301
+/docs/learn-staking-miner/    /learn/learn-staking    301
+/docs/general/polkadot-ecosystem-overview    /general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview    301
+/docs/general/onboarding-status-and-key-dashboards    /general/dashboards/dune-analytics/onboarding-status-and-key-dashboards    301
+/docs/general/project-dashboards    /general/dashboards/dune-analytics/project-dashboards    301
+/docs/general/dunesql-cheatsheet    /general/dashboards/dune-analytics/dunesql-cheatsheet    301
+/docs/ens/    /general/getting-started    301
 
 # Build Section
 
 /docs/build-network-overview    https://docs.polkadot.com/polkadot-protocol/basics/networks    301
 /docs/build-smart-contracts    https://docs.polkadot.com/develop/smart-contracts/    301
-/docs/build-hackathon    https://github.com/polkadot-developers/hackathon-guide   301
+/*/build-hackathon    https://github.com/polkadot-developers/hackathon-guide   301
 /docs/build-open-source    /general/build-open-source    301
 /docs/build-guides-coretime-start    https://docs.polkadot.com/tutorials/polkadot-sdk/parachains/zero-to-hero    301
 /docs/build-storage    https://docs.polkadot.com/develop/    301
@@ -188,8 +204,8 @@
 /docs/maintain-collator-index    https://docs.polkadot.com/infrastructure/running-a-node  301
 /docs/maintain-validator-index   https://docs.polkadot.com/infrastructure/running-a-validator   301
 /docs/maintain-archive    https://docs.polkadot.com/infrastructure   301
-/docs/maintain/maintain-guides-how-to-vote-councillor    /maintain/archive/maintain-guides-how-to-vote-councillor    301
-/docs/maintain/maintain-guides-democracy    /maintain/archive/maintain-guides-democracy    301
+/docs/maintain/maintain-guides-how-to-vote-councillor    https://polkadot.com/    301
+/docs/maintain/maintain-guides-democracy    /learn/learn-guides-polkadot-opengov/    301
 /docs/maintain-guides-how-to-validate-polkadot    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator     301
 /docs/maintain-guides-secure-validator    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
 /docs/maintain-endpoints    https://docs.polkadot.com/develop/networks/    301
@@ -199,7 +215,7 @@
 /docs/maintain-wss    https://docs.polkadot.com/infrastructure/running-a-node/setup-secure-wss    301
 /docs/maintain-networks    https://docs.polkadot.com/develop/networks    301
 /docs/maintain-errors    /general/maintain-errors    301
-/docs/maintain-guides-async-backing    /maintain/maintain-guides-async-backing    301
+/docs/maintain-guides-async-backing    /learn/maintain-guides-async-backing/    301
 /docs/maintain-guides-validator-payout     https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout   301
 /docs/maintain-guides-how-to-systemd    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/start-validating/#run-a-validator-using-systemd   301
 /docs/maintain-guides-how-to-upgrade    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/upgrade-your-node    301
@@ -207,7 +223,7 @@
 /docs/maintain-guides-how-to-chill    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/pause-validating/    301
 /docs/maintain-guides-how-to-stop-validating    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/stop-validating    301
 /docs/maintain-guides-validator-community     https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management   301
-/docs/maintain/maintain-guides-how-to-join-council    /maintain/archive/maintain-guides-how-to-join-council    301
+/docs/maintain/maintain-guides-how-to-join-council    https://polkadot.com/    301
 /docs/maintain/maintain-guides-secure-validator   https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
 
 # XCM docs
@@ -255,33 +271,16 @@
 /docs/learn-guides-identity    /learn/learn-guides-identity    301
 /docs/learn-guides-ledger    /learn/learn-guides-ledger    301
 /docs/learn-guides-vault    /learn/learn-guides-vault    301
-/docs/learn-guides-assets    /learn/learn-guides-assets-create.md   301
-/docs/learn-guides-bridges    /learn/learn-guides-DOT-KSM-bridge.md    301
+/docs/learn-guides-assets    /learn/learn-guides-assets-create   301
+/docs/learn-guides-bridges    /learn/learn-guides-DOT-KSM-bridge    301
 /docs/learn-guides-dot-ksm-bridge    /learn/learn-guides-DOT-KSM-bridge    301
 /docs/learn-guides-nominator   /learn/learn-guides-nominator    301
-/docs/learn-polkadot-opengov-origins    /learn/learn-polkadot-opengov-origins    301
-/docs/learn-polkadot-technical-fellowship    /learn/learn-polkadot-technical-fellowship    301
-/docs/learn-account-balances    /learn/learn-account-balances    301
-/docs/learn-account-multisig    /learn/learn-account-multisig    301
-/docs/learn-proxies-pure    /learn/learn-proxies-pure    301
-/docs/transaction-attacks    /general/transaction-attacks    301
 /docs/learn-guides-accounts-proxy    /learn/learn-guides-accounts-proxy    301
-/docs/learn-accounts-index/    /learn/accounts    301
-/docs/learn-teleport    /learn/learn-teleport    301
-/docs/learn-nft    /learn/learn-nft    301
-/docs/wallets/    /general/wallets/index.md    301
-/docs/learn-staking-miner/    /learn/learn-staking    301
-/docs/general/polkadot-ecosystem-overview    /general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview.md    301
-/docs/general/onboarding-status-and-key-dashboards    /general/dashboards/dune-analytics/onboarding-status-and-key-dashboards.md    301
-/docs/general/project-dashboards    /general/dashboards/dune-analytics/project-dashboards.md    301
-/docs/general/dunesql-cheatsheet    /general/dashboards/dune-analytics/dunesql-cheatsheet.md    301
 /docs/learn-guides-staking-pools    /learn/learn-guides-staking-pools    301
-/docs/learn-asset-conversion-assethub    /learn/learn-asset-conversion-assethub    301
 /docs/learn-guides-assets-create    /learn/learn-guides-assets-create    301
 /docs/learn-guides-accounts-multisig    /learn/learn-guides-accounts-multisig    301
 /docs/learn-guides-accounts-proxy-pure    /learn/learn-guides-accounts-proxy-pure    301
 /docs/learn-guides-asset-conversion    /learn/learn-guides-asset-conversion    301
-/docs/ens/    /general/getting-started    301
 
 # Catch-all redirects
 
