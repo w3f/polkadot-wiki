@@ -89,7 +89,7 @@ main punishments: slashing, disabling, and reputation changes.
 **Slashing** will happen if a validator misbehaves in the network. They and their nominators will
 get slashed by losing a percentage of their staked tokens, from as little as 0.01% up to 100%.
 
-Any slashed token will be added to the [Treasury](./archive/learn-treasury.md). The rationale for
+Any slashed token will be added to the [Treasury](./learn-polkadot-opengov-treasury.md). The rationale for
 this (rather than burning or distributing them as rewards) is that slashes may be reverted by simply
 paying out from the Treasury. This would be useful in situations such as faulty slashes. In the case
 of legitimate slashing, tokens are moved away from malicious validators to those building the

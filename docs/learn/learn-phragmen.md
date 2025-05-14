@@ -45,7 +45,7 @@ validator election takes place.
 ### Council Elections
 
 !!!info "Deprecated in Polkadot OpenGov"
-    Phragmen was used for Council elections in [Governance v1](./archive/learn-governance.md).
+    Phragmen was used for Council elections in Governance V1.
 
 The Phragmén method was also used in the council election mechanism. When you voted for council
 members, you could select up to 16 different candidates and then place a reserved bond as the weight

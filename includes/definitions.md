@@ -1,5 +1,7 @@
 *[Active Nomination]: A validator that produces blocks in the current era and earns staking rewards.
+*[Adaptive Quorum Biasing]: A system used in Governance V1 to alter the effective supermajority required to make it easier or more difficult for a proposal to pass, depending on turnout and origin (Council or public); that has been replaced with the approval and support system in OpenGov.
 *[Alexander]: The fourth and now defunct PoC-4 testnet for Polkadot.
+*[Alternating Voting Timetable]: A system to vote on Council and public referenda in Governance V1.
 *[Asset Hub]: A system chain for asset management and more.
 *[Attestation]: A validator's message on parachain block validity.
 *[Auction (Parachain)]: An old method for parachains to access Polkadot by bidding for a parachain slot.
@@ -25,6 +27,8 @@
 *[Common Good (Parachain)]: An old term used to define system chains like the Polkadot Asset Hub.
 *[Consensus]: The process of agreeing on blockchain data values.
 *[Coretime]: Time allocated for using a Polkadot's virtual core.
+*[Council]: Together with the Technical Committee, it was one of the two chambers in the Polkadot Governance V1 model. It was an approval-voted, elected executive "government" to manage parameters, admin, and spending proposals.
+*[Council Referendum]: A referendum initiated by the Council in Governance V1.
 *[Crowdloan]: A mechanism for sourcing tokens to bid for relay chain cores.
 *[Curator]: An entity verifying bounty completion.
 *[DOT]: Polkadot's native token for governance, staking, and bonding.
@@ -38,6 +42,7 @@
 *[FRAME]: Polkadot SDK-provided pallets (modules) for building runtimes.
 *[Genesis]: The origin block or initial state of a blockchain.
 *[Governance]: The process of stakeholder voting on network changes and other organizational matters.
+*[Governance V1]: The first iteration of Polkadot's on-chain governance system that has been replaced by Polkadot OpenGov.
 *[GRANDPA]: A mechanism for asynchronous and safe block finality. Verifies chains rather than individual blocks.
 *[Hard Fork]: A permanent blockchain split due to consensus rule changes.
 *[Inactive Nomination]: A validator that is nominated but not validating and producing blocks in the current era.
@@ -60,6 +65,8 @@
 *[Proof of Stake (PoS)]: A consensus system selecting participants based on staked tokens.
 *[Proof of Validity]: A proof verifying parachain state transitions.
 *[Proposal]: A potential network change to be voted on.
+*[Public Referendum]: A referendum initiated by any token holder. In OpenGov all referenda are public referenda.
+*[Redenomination]: The process of changing the supply of a token. DOT redenomination occurred on 21 August 2020, with one old DOT set to 100 new DOT.
 *[Referendum]: A vote on whether to accept a proposal.
 *[Runtime]: The state transition function defining blockchain state changes.
 *[Session]: A period with a constant validator set.
@@ -69,8 +76,10 @@
 *[Substrate]: A framework for building blockchains, used by Polkadot (mostly referred to as the Polkadot SDK).
 *[Polkadot SDK]: A framework for building blockchains, both rollups and solo chains, used by Polkadot.
 *[System Parachains]: Parachains forming part of Polkadot's core protocol.
+*[Technical Committee]: Together with the Council, it was one of the two chambers in the Polkadot Governance V1 model. It was a technocratic committee to manage upgrade timelines.
 *[Teleport]: Sending assets between chains by burning and minting.
 *[Testnet]: An experimental network for testing before mainnet deployment.
+*[Thousand Validators Program]: Previous iteration of the currently run Decentralized Nodes Program.
 *[Validator]: A node securing the relay chain by staking and validating.
 *[Web3 Foundation]: A foundation fostering and supporting web3 technologies.
 *[WebAssembly]: A virtual machine instruction format that is used for Polkadot runtimes.

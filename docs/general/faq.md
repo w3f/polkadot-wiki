@@ -189,12 +189,11 @@ to consider precisely how benchmarking was performed for Polkadot.
 
 ## DOT
 
-### What is the difference between DOT (old) and new DOT?
+### What is the difference between old DOT and new DOT?
 
 The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
 August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
-ten billion) Plancks, meaning that the new DOT was valued at ten decimal places. Following the
-[redenomination](../learn/archive/learn-redenomination.md), the new DOT is called DOT.
+ten billion) Plancks, meaning that the new DOT was valued at ten decimal places.
 
 ### What is the inflation rate of the DOT?
 

@@ -10,8 +10,7 @@ slug: ../learn-guides-coretime-parachains
     If you aren't sure what Agile Coretime is, be sure to read the [introduction](./learn-agile-coretime.md), [terminology](./learn-agile-coretime.md#agile-coretime-terminology), and [FAQ](./learn-agile-coretime.md#agile-coretime-faq).
 
 The landscape for parachains changes with the rollout of
-[Agile Coretime](./learn-agile-coretime.md). With [parachain auctions](./archive/learn-auction.md)
-being phased out in favor of direct [coretime](./learn-agile-coretime.md#coretime) sales, the
+[Agile Coretime](./learn-agile-coretime.md). With parachain auctions being phased out in favor of direct [coretime](./learn-agile-coretime.md#coretime) sales, the
 existing parachains on the relaychain and the prospective parachains are presented with the
 following scenarios:
 

@@ -97,9 +97,7 @@ governance model.
 ### Monthly Tokens Voted by Direction / Monthly Voting Power by Direction
 
 The **Monthly Tokens Voted by Direction** and **Monthly Voting Power by Direction** charts provide a
-dynamic view of the Polkadot community's
-[voting behavior](../../../../../learn/archive/maintain-guides-democracy.md#voting-on-a-proposal)
-over time, breaking down the distribution of tokens and voting power across various voting options.
+dynamic view of the Polkadot community's voting behavior over time, breaking down the distribution of tokens and voting power across various voting options.
 These charts reveal the community's sentiment trends, showcasing the balance between support
 ('Aye'), opposition ('Nay'), and nuanced positions ('Split' and 'SplitAbstain'), both in terms of
 token quantity and the weighted influence of votes. By tracking these metrics, stakeholders can
