@@ -33,6 +33,7 @@
 *[Curator]: An entity verifying bounty completion.
 *[DOT]: Polkadot's native token for governance, staking, and bonding.
 *[Duty Roster]: Tasks assigned to validators, shuffled per parachain.
+*[Endorsed Proposal]: In Governance V1, the cation of depositing tokens in favor of a public proposal to be selected for a referendum in the next voting cycle based on an alternating voting timetable.
 *[Epoch]: A time duration in the BABE protocol.
 *[Era]: A period of sessions for recalculating validator sets and rewards.
 *[Equivocation]: Conflicting information provided by a validator.
