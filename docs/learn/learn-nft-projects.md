@@ -11,22 +11,6 @@ description: Discover NFT projects in the Polkadot ecosystem, including tools, p
 <!-- prettier-ignore -->
 <!-- no toc -->
 
-- [List of NFT Projects](#list-of-nft-projects)
-- [Asset Hub](#asset-hub)
-- [Astar](#astar)
-- [Basilisk](#basilisk)
-- [Crust](#crust)
-- [Darwinia Network](#darwinia-network)
-- [KodaDot](#kodadot)
-  - [History of KodaDot](#history-of-kodadot)
-  - [Ecosystem Tools by KodaDot](#ecosystem-tools-by-kodadot)
-- [MNet Continuum](#mnet-continuum)
-- [Moonbeam](#moonbeam)
-- [Mythical](#mythical)
-- [NFTMozaic](#nftmozaic)
-- [Nodle](#nodle)
-- [Unique Network](#unique-network)
-
 ## Asset Hub
 
 The Asset Hub is a [system chain](./learn-system-chains.md) which provides functionality for deploying
@@ -218,6 +202,7 @@ joint effort and the best possible solution is sought.
 
 NFTMozaic links:
 
+- [NFTMozaic Documentation](https://wiki.nftmozaic.com/docs/category/polkadot-nfts---what-they-offer)
 - [X link](https://x.com/nftmozaic)
 - [Telegram NFTMozaic general topics group](https://t.me/NFTMozaic)
 - [Telegram NFTMozaic Tech Support group](https://t.me/https://t.me/nft%5C_moz%5C_support)
