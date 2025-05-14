@@ -134,12 +134,9 @@ features within an EVM is also viable. Still, it is hampered by the necessity of
 mechanisms for cross-chain transfers and a lack of a derivative NFT solution. This approach exhibits
 much less efficient transaction processing than the native substrate solutions.
 
-:::info
-
-See [this page](./learn-nft-projects.md) for more information about specific NFT project on Polkadot
-and Kusama.
-
-:::
+!!!info
+    See [this page](./learn-nft-projects.md) for more information about specific NFT project on Polkadot
+    and Kusama.
 
 ## Cross-Chain Transfers
 
