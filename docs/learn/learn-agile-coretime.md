@@ -30,7 +30,7 @@ Coretime.
 ## Introduction to Agile Coretime
 
 In Polkadot 1.0, the only way for a parachain to be secured by Polkadot was to rent a lease through
-an [auction](./archive/learn-auction.md), which guaranteed parachain block validation for up-to two
+an auction, which guaranteed parachain block validation for up-to two
 years. This involved locking significant amount of DOT, leading to a high barrier of entry for small
 and medium scale blockchain projects. The parachains produced blocks at a regular interval of 12
 seconds, irrespective of the network activity. This led to inefficient resource allocation and

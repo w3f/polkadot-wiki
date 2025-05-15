@@ -24,6 +24,7 @@ The smallest unit of account balance on Polkadot SDK-based blockchains is Planck
 
     !!!note "DOT Redenomination"
         DOT was redenominated at block #1_248_328, increasing its supply by 100x. Previously, 1 DOT equaled 10<sup>12</sup> Planck.
+
 === "Kusama"
     | Unit            | Decimal Places | Conversion to Planck   | Conversion to KSM  |
     | --------------- | -------------- | ---------------------- | ------------------ |
@@ -103,7 +104,7 @@ For faucet issues, use the [support chat](https://matrix.to/#/#faucets-support:m
 
 ## Kusama Tokens
 
-Kusama tokens are not freely distributed. Obtain them via the [claims process](https://claim.kusama.network/), [Treasury](./archive/learn-treasury.md), or the open market.
+Kusama tokens are not freely distributed. Obtain them via the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis), [Treasury](./learn-polkadot-opengov-treasury.md), or the open market.
 
 ## Polkadot Mainnet DOT
 

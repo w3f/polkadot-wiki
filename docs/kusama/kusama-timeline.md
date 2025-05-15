@@ -51,14 +51,13 @@ what contributes to the much higher ratio of missed blocks on Kusama versus Polk
 ## Auctions
 
 Kusama promised chaos, and it delivered on that promise. On June 15th, 2021, the roll out of the
-first public parachain slot [auction](../learn/archive/learn-auction.md) commenced, marking the
+first public parachain slot auction commenced, marking the
 beginning of the end to deliver on the last piece of core functionality outlined in the Polkadot
 whitepaper: purpose-built, interoperable parachains.
 
 Teams and projects looking to become an official parachain on the Kusama network have been working
-hard to bring their technologies to life, many of whom started a
-[crowdloan campaign](../learn/archive/learn-crowdloans.md#starting-a-crowdloan-campaign) in order
-to participate in the auctions.
+hard to bring their technologies to life, many of whom started a crowdloan campaign in order
+to participate in the slot auctions.
 
 Kusama has made history with the permissionless launch of several independent parachains, and
 continues to do so with ongoing auction. As parachains become operational, the community will

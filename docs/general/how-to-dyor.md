@@ -131,8 +131,7 @@ analyses their technology and technical aspects, this is a potential indication 
 prowess. On the other hand, if the team focuses only on tokenomics or analyses their project only in
 broad, vague terms, this is potentially an indication that there is not a clear path to their goals.
 
-If you are looking for an example of good documentation, look no further than our own
-[wiki](https://wiki.polkadot.network). Of course, you should not expect to find such extensive
+If you are looking for an example of good documentation, look no further than our own wiki. Of course, you should not expect to find such extensive
 documentation on newly launched projects. Our wiki, after all, covers a whole ecosystem and was
 populated over the course of multiple years. Updates are also constantly being pushed out and edits
 are consistently being made. Nevertheless, this wiki provides a good example of the documentation a
@@ -164,8 +163,8 @@ proxies, this can be considered a red flag and extra precaution should be taken.
 
 Besides their community, projects that are serious about building on Polkadot usually engage with
 the [community](community.md). They are active in the various
-[Polkadot and Kusama channels](https://wiki.polkadot.network/docs/community/), and some of them are
-[Polkadot Ambassadors](https://polkadot.network/polkadot-ambassador-program/), or generally
+[Polkadot and Kusama channels](./community.md), and some of them are
+[Polkadot Ambassadors](./ambassadors.md), or generally
 prominent members of the ecosystem.
 
 ### Clear Integration

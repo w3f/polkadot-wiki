@@ -18,7 +18,7 @@ computation becomes available. The Staking Home Page is showing the most recentl
 
 Please note that Reward Rate and Effective Reward Rate can be volatile as erapoint varies based on
 network condition and total delegation amount are subject to
-[phragmen algo](https://wiki.polkadot.network/docs/learn-phragmen)
+[phragmen algo](../../../../../learn/learn-phragmen.md)
 
 Authored by _Stanley_, _Jerry_, and _William_ [**@ colorfulnotion**](https://x.com/colorfulnotion)
 (QA'ed: _MK_)

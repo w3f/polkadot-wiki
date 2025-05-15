@@ -70,8 +70,7 @@ transactions can be made between different parachains.
 
 ### Polkadot's Additional Functionalities
 
-The Polkadot relay chain managed [crowdloans](../learn/archive/learn-crowdloans.md) and
-[auctions](../learn/archive/learn-auction.md). Relay chain cores were leased via auctions in 3-month
+The Polkadot relay chain managed parachains' crowdloans and auctions. Relay chain cores were leased via auctions in 3-month
 chunks for a maximum of two years, and crowdloans allowed users to trustlessly loan funds to teams
 for lease deposits in exchange for pre-sale tokens. There was no other way you could access cores on
 Polkadot 1.0.
@@ -99,7 +98,7 @@ Currently, Polkadot 1.0 achieves resilience through the following strategies:
 
 - Nominated Proof of Staking (NPoS) where the stake per validator is maximized and evenly
   distributed across validators.
-- The [1KV program](../learn/archive/thousand-validators.md) aims to incentivize new operators to
+- The [Decentralized Nodes Program](https://nodes.web3.foundation/) aims to incentivize new operators to
   become network participants and further increase physical (how many validator nodes per service
   provider) and social decentralization (how many validator nodes per operator). Those can be
   explored with the [Polkawatch App](https://polkadot.polkawatch.app/).

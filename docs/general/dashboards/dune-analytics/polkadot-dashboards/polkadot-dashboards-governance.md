@@ -25,7 +25,7 @@ Authored by [**@ colorfulnotion**](https://x.com/colorfulnotion)
 **View On Dune:** [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov)
 
 The **Polkadot Governance Dashboard** provides a clear and concise representation of the
-[network's governance](https://wiki.polkadot.network/docs/en/learn-governance) activities.
+[network's governance](../../../../learn/learn-polkadot-opengov.md) activities.
 
 ### Polkadot Treasury Flow
 

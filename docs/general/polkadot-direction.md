@@ -50,7 +50,7 @@ A paradigm shift from:
   applications.
 
 Previously, securing a core was a competitive process through an
-[auction mechanism](../learn/archive/learn-auction.md). With Agile Coretime, there is no need for
+candle auction mechanism. With Agile Coretime, there is no need for
 auctions anymore. Teams can purchase on-demand coretime or reserve bulk coretime as required. This
 greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
 

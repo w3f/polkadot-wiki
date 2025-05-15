@@ -21,10 +21,10 @@ and state-proof-based interoperability across all blockchains.
 ## Coprocessor Model
 
 Ensuring secure cross-chain communication involves the meticulous verification of various aspects,
-including: [Consensus Mechanisms](https://wiki.polkadot.network/docs/learn-consensus),
+including: [Consensus Mechanisms](./learn-consensus.md),
 [Consensus Faults](https://research.polytope.technology/consensus-proofs),
 [State Proofs](https://research.polytope.technology/state-machine-proofs) and
-[State Transitions](https://wiki.polkadot.network/docs/learn-parachains#state-transitions).
+[State Transitions](./learn-parachains.md#state-transitions).
 
 > What is a coprocessor?
 >
