@@ -321,7 +321,8 @@ nav .md-header__ellipsis {
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+    /* Ensure smooth animation */
     text-decoration: none;
     /* Remove underline */
     color: inherit;
@@ -334,8 +335,9 @@ nav .md-header__ellipsis {
 }
 
 .card-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Gradual zoom effect */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), /* Pink polkadot glow */
+                0 0 15px rgba(255, 182, 193, 0.5); /* Enhanced glow */
     background-color: #f4f4f4;
     /* Optional: Slight color change on hover */
 }
@@ -347,8 +349,12 @@ nav .md-header__ellipsis {
 }
 
 [data-md-color-scheme="slate"] .card-container:hover {
+    transform: scale(1.05); /* Gradual zoom effect */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.2), /* Pink polkadot glow */
+                0 0 15px rgba(255, 182, 193, 0.3); /* Enhanced glow */
     background-color: #b3b3b3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid slategrey
+    /* ...existing code... */
 }
 
 /* Image inside the card */
@@ -407,7 +413,8 @@ nav .md-header__ellipsis {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffc0cb;
+    color: whitesmoke;
+    background-color: #e6007a;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -446,14 +453,6 @@ nav .md-header__ellipsis {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-[data-md-color-scheme="slate"] .floating-message-box p {
-    color: #333;
-}
-
-[data-md-color-scheme="slate"] .floating-message-box a {
-    color: #0078d4;
-}
-
-[data-md-color-scheme="slate"] .close-messagebox {
+[data-md_color-scheme="slate"] .close-messagebox {
     color: #666;
 }
