@@ -76,8 +76,6 @@ Wiki locally also adds the benefit of checking for broken links.
 !!!info "Run the Wiki Locally"
       For more information about how to run the Wiki locally on your machine, visit [the README file on GitHub](https://github.com/w3f/polkadot-wiki/blob/master/README.md#running-locally).
 
-
-
 ### General Guidelines
 
 The overarching theme is to ensure that the Polkadot Wiki's content is long-lasting, adheres to the guidelines, minimizes maintenance, and continues to have a high-quality standard.
@@ -103,7 +101,12 @@ Prioritize clear, concise, and direct language. Assume the reader has a basic un
 
 #### Longevity
 
-Prioritize information that is expected to remain relevant for an extended period. Avoid language that quickly becomes outdated.  
+The Polkadot Wiki should only contain features live in production, on the Polkadot relay chain. It should not allude to any feature on test networks or Kusama. **Document features and information *only* when they are live and available on the Polkadot mainnet.** Exclude information about features that are only available on Kusama, Westend, or other testnets. 
+
+- **Example:** Do not include a section on a new XCM feature if it is only live on Kusama. Only document it once it is available on Polkadot Mainnet.  
+
+Prioritize information that is expected to remain relevant for an extended period. Avoid language that quickly becomes outdated.
+
 - **Example:** Instead of: "The upcoming upgrade will introduce new governance features."  
 - Write: "Polkadot governance allows token holders to participate in decision-making." (This describes the general function, not a specific, time-sensitive upgrade)  
 
@@ -111,18 +114,10 @@ Prioritize information that is expected to remain relevant for an extended perio
 
 Ensure all information is technically accurate and up-to-date. The Polkadot ecosystem evolves rapidly, so meticulous attention to detail is crucial.  
 
-!!!note "Production-only Features"
-    The Polkadot Wiki should only contain features live in production, on the Polkadot relay chain. It should not allude to any feature on test networks or Kusama.
-
 #### Consistency
 
 Maintain a consistent style and terminology throughout all documentation. This creates a professional and cohesive experience for the reader.  
 - **Example:** Always use the term "parachain" and not "parallel chain" or "para-chain."  
-
-#### Mainnet focus
-
-Document features and information *only* when they are live and available on the Polkadot mainnet. Exclude information about features that are only available on Kusama, Westend, or other testnets.  
-- **Example:** Do not include a section on a new XCM feature if it is only live on Kusama. Only document it once it is available on Polkadot Mainnet.  
 
 #### Objectivity
 
