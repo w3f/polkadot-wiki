@@ -26,7 +26,7 @@ Authored by [**@ colorfulnotion**](https://x.com/colorfulnotion)
   token))
 - **Support Rate** - (Aye token + Abstain token) / Total Issuance
 - Learn more about
-  [**Opengov Support & Approval**](https://wiki.polkadot.network/docs/learn-polkadot-opengov-origins#origins-and-tracks-info)
+  [**Opengov Support & Approval**](../../../../../learn/learn-polkadot-opengov-origins.md#origins-and-tracks-info)
 
 <iframe src="https://dune.com/embeds/3394377/5695923/" height="350" width="100%"></iframe>
 

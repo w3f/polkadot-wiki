@@ -25,10 +25,10 @@ efficacy.
 
 - [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov): The _Polkadot Governance
   Dashboard_ provides a clear and concise representation of the
-  [network's governance](https://wiki.polkadot.network/docs/en/learn-governance) activities. It
+  [network's governance](../../../../learn/learn-polkadot-opengov.md) activities. It
   serves as a useful tool for community members to observe
-  [treasury management](https://wiki.polkadot.network/docs/en/learn-treasury),
-  [referendum outcomes](https://wiki.polkadot.network/docs/en/learn-governance#referenda), and
+  [treasury management](../../../../learn/learn-polkadot-opengov-treasury.md),
+  [referendum outcomes](../../../../learn/learn-polkadot-opengov.md#referenda), and
   voting patterns. This dashboard aims to enhance community engagement by simplifying access to
   governance information and fostering a transparent decision-making environment.
 - [Polkadot OpenGov Referenda - Home](https://dune.com/substrate/polkadot-opengov-active-referenda):
@@ -45,8 +45,8 @@ efficacy.
 Dive into the staking ecosystem with dashboards that analyze validator performance, nominator
 contributions, and staking distributions. For a deeper understanding of Polkadot's staking mechanism
 and to optimize your staking strategies, visit the
-[official staking mechanism documentation](https://wiki.polkadot.network/docs/learn-staking) and the
-[staking web app documentation](https://wiki.polkadot.network/docs/staking-dashboard).
+[official staking mechanism documentation](../../../../learn/learn-staking.md) and the
+[staking web app documentation](../../../../general/dashboards/staking-dashboard.md).
 
 - [Polkadot Staking Dashboard](https://dune.com/substrate/polkadot-staking): Overview of staking
   dynamics and distribution across the network.

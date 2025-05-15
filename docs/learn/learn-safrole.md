@@ -6,7 +6,7 @@ description: SAFROLE is a SNARK-based block production algorithm providing anony
 SAFROLE (formerly known as SASSAFRAS) is a SNARK-based block production algorithm that provides
 anonymity in the validator selection process. SAFROLE also aims to deliver (nearly) fork-free,
 constant time block production. SAFROLE is an upgrade to BABE, the block production portion of the
-[hybrid consensus model](https://wiki.polkadot.network/docs/learn-consensus#hybrid-consensus) that
+[hybrid consensus model](./learn-consensus.md#hybrid-consensus) that
 Polkadot uses (and later JAM).
 
 zkSNARKs, in conjunction with a RingVRF, are used to ensure that slots are not preassigned to

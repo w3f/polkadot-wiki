@@ -104,7 +104,7 @@ For faucet issues, use the [support chat](https://matrix.to/#/#faucets-support:m
 
 ## Kusama Tokens
 
-Kusama tokens are not freely distributed. Obtain them via the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis), [Treasury](./archive/learn-treasury.md), or the open market.
+Kusama tokens are not freely distributed. Obtain them via the [claims process](https://claim.kusama.network/) (if you had DOT at the time of Kusama genesis), [Treasury](./learn-polkadot-opengov-treasury.md), or the open market.
 
 ## Polkadot Mainnet DOT
 

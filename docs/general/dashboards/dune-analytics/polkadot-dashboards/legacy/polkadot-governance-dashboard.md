@@ -12,10 +12,10 @@ slug: ../polkadot-governance-dashboard
 ## View On Dune: [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov)
 
 The **Polkadot Governance Dashboard** provides a clear and concise representation of the
-[network's governance](https://wiki.polkadot.network/docs/en/learn-governance) activities. It serves
+[network's governance](../../../../learn/learn-polkadot-opengov.md) activities. It serves
 as a useful tool for community members to observe
-[treasury management](https://wiki.polkadot.network/docs/en/learn-treasury),
-[referendum outcomes](https://wiki.polkadot.network/docs/en/learn-governance#referenda), and voting
+[treasury management](../../../../../learn/learn-polkadot-opengov.md),
+[referendum outcomes](../../../../../learn/learn-polkadot-opengov.md#referenda), and voting
 patterns. This dashboard aims to enhance community engagement by simplifying access to governance
 information and fostering a transparent decision-making environment.
 
@@ -26,7 +26,7 @@ Authored by _Stanley_, _Jerry_, and _William_ [**@ colorfulnotion**](https://x.c
 The **Polkadot Treasury Flow** chart visualizes the monthly financial movements within the Polkadot
 treasury, delineating inflows from inflation and outflows from proposals, bounties, and burnt funds,
 to present a clear picture of the treasury's net flow. For more details, see the
-[Polkadot Treasury](https://wiki.polkadot.network/docs/learn-treasury) section on the Polkadot Wiki.
+[Polkadot Treasury](../../../../../learn/learn-polkadot-opengov-treasury.md) section on the Polkadot Wiki.
 
 - **Treasury Netflow**: Treasury Inflows - Treasury Outflows
 - **Treasury Inflows**: Inflation + Fees + Txn Tips + Slash
@@ -40,9 +40,7 @@ The **Number of Votes by Duration of Lock** chart visualizes Polkadot governance
 categorizing votes by token lock duration to reflect conviction levels. It highlights community
 engagement from short-term to long-term network commitments, showcasing voter participation strength
 and stability. For more on voting and locking, see
-[Voluntary Locking](https://wiki.polkadot.network/docs/learn-governance#voluntary-locking) and
-[Adaptive Quorum Biasing](https://wiki.polkadot.network/docs/learn-governance#adaptive-quorum-biasing)
-on Polkadot Wiki.
+[Voluntary Locking](../../../../../learn/learn-polkadot-opengov.md#voluntary-locking-conviction-voting) and Adaptive Quorum Biasing.
 
 <iframe src="https://dune.com/embeds/3393628/5694824/" height="350" width="100%"></iframe>
 
@@ -51,8 +49,7 @@ on Polkadot Wiki.
 These charts offer insights into monthly Polkadot governance engagement, tracking participant
 numbers, represented capital, and voting conviction. They highlight the community's dynamic
 involvement in network direction. For governance details, visit
-[Polkadot Governance](https://wiki.polkadot.network/docs/learn-governance) and
-[Introduction to Polkadot OpenGov](https://wiki.polkadot.network/docs/learn-governance#introduction-to-polkadot-opengov).
+[Polkadot Governance](../../../../../learn/learn-polkadot-opengov.md).
 
 <iframe src="https://dune.com/embeds/3393704/5695078/" height="350" width="100%"></iframe>
 <iframe src="https://dune.com/embeds/3393704/5695222/" height="350" width="100%"></iframe>
@@ -84,11 +81,7 @@ to a specified date.
 The **Polkadot Number of Referenda by Origin** chart delineates the sources of governance proposals
 within the Polkadot network. It quantifies the initiatives by their points of inception, offering a
 clear distribution of referenda across different origins. In the context of Polkadot, **Origin**
-refers to the track through which the proposal has been introduced. This can include
-[public proposals](https://wiki.polkadot.network/docs/learn-governance#public-referenda) submitted
-by the token holders,
-[council motions](https://wiki.polkadot.network/docs/learn-governance#council-referenda), or
-[treasury proposals](https://wiki.polkadot.network/docs/learn-treasury#bounties-spending). Each
+refers to the track through which the proposal has been introduced. Each
 track has its own procedural requirements and reflects a different aspect of the network’s
 governance model.
 
