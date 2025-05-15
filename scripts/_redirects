@@ -181,7 +181,7 @@
 /docs/build-storage    https://docs.polkadot.com/develop/    301
 /docs/build-dapp    https://docs.polkadot.com/develop/#application-developers    301
 /docs/build-pdk    https://docs.polkadot.com/develop/parachains/   301
-/docs/build-light-clients    /general/web3-and-polkadot/    301
+/docs/build-light-clients    https://docs.polkadot.com/develop/toolkit/parachains/light-clients/    301
 /docs/build-node-interaction    https://docs.polkadot.com/develop/toolkit/api-libraries    301
 /docs/build-client-side    https://docs.polkadot.com/develop/#application-developers    301
 /docs/build-protocol-info    https://docs.polkadot.com/polkadot-protocol/architecture/polkadot-chain/overview/    301
