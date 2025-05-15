@@ -74,13 +74,13 @@ and render the Wiki on your local machine before submitting a pull request for r
 Wiki locally also adds the benefit of checking for broken links.
 
 !!!info "Run the Wiki Locally"
-      For more information about how to run the Wiki locally on your machine visit [the README file on GitHub](https://github.com/w3f/polkadot-wiki/blob/master/README.md).
+      For more information about how to run the Wiki locally on your machine, visit [the README file on GitHub](https://github.com/w3f/polkadot-wiki/blob/master/README.md#running-locally).
 
 
 
 ### General Guidelines
 
-The overarching theme is to ensure the Polkadot Wiki achieves longevity in its content, ensuring that it adheres to the guidelines ensures that maintenance is low and quality of new content is high.
+The overarching theme is to ensure that the Polkadot Wiki's content is long-lasting, adheres to the guidelines, minimizes maintenance, and continues to have a high-quality standard.
 
 #### Avoid informal language
 
@@ -99,7 +99,7 @@ To ensure consistency across pages, note the following general terms:
 Prioritize clear, concise, and direct language. Assume the reader has a basic understanding of blockchain concepts but may be new to Polkadot.  
 - **Example:** Instead of: "The utilization of a multi-chain architecture enables the facilitation of diverse transactional modalities."  
   
-- Write: "Polkadot's heterogeneous, multi-chain design allows for different types of transactions to be validated on the network."  
+- Write: "Polkadot's heterogeneous, multi-chain design allows different types of transactions to be submitted on the network."  
 
 #### Longevity
 
@@ -111,8 +111,8 @@ Prioritize information that is expected to remain relevant for an extended perio
 
 Ensure all information is technically accurate and up-to-date. The Polkadot ecosystem evolves rapidly, so meticulous attention to detail is crucial.  
 
-!!!note
-    The Polkadot Wiki should only contain features that are live on the Polkadot relay chain, and should not refer to / allude to any upcoming features until they are live.
+!!!note "Production-only Features"
+    The Polkadot Wiki should only contain features live in production, on the Polkadot relay chain. It should not allude to any feature on test networks or Kusama.
 
 #### Consistency
 
