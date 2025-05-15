@@ -119,17 +119,17 @@ Ensure all information is technically accurate and up-to-date. The Polkadot ecos
 Maintain a consistent style and terminology throughout all documentation. This creates a professional and cohesive experience for the reader.  
 - **Example:** Always use the term "parachain" and not "parallel chain" or "para-chain."  
 
-#### Objectivity
+### Voice and tone
 
 Present information in a neutral and objective tone, avoiding hype or marketing language.  
-- **Example:** Instead of: "Polkadot is the most revolutionary blockchain technology..."  
-- Write: "Polkadot is a network that enables interoperability between different blockchains."
 
-### Voice and tone
+- **Example:** Instead of: "Polkadot is the most revolutionary blockchain technology..."
+- Write: "Polkadot is a network that enables interoperability between different blockchains."
 
 #### Voice
 
-Use a confident and authoritative voice, but avoid being overly formal or academic. Prefer active voice over passive voice to make the documentation more direct and engaging.  
+Use a confident and authoritative voice, but avoid being overly formal or academic. An active voice should be used, versus a passive voice, to make the documentation more direct and engaging.  
+
 - **Example (formal):** "It is imperative to note that the aforementioned process..."  
 - **Write (concise):** "Note that the process..."  
 - **Example (passive):** "The Relay Chain is secured by validators."  
