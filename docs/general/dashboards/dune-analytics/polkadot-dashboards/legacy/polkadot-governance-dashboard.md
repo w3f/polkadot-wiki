@@ -12,7 +12,7 @@ slug: ../polkadot-governance-dashboard
 ## View On Dune: [Polkadot Governance Dashboard](https://dune.com/substrate/polkadot-gov)
 
 The **Polkadot Governance Dashboard** provides a clear and concise representation of the
-[network's governance](../../../../learn/learn-polkadot-opengov.md) activities. It serves
+[network's governance](../../../../../learn/learn-polkadot-opengov.md) activities. It serves
 as a useful tool for community members to observe
 [treasury management](../../../../../learn/learn-polkadot-opengov.md),
 [referendum outcomes](../../../../../learn/learn-polkadot-opengov.md#referenda), and voting
