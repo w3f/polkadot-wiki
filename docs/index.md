@@ -9,7 +9,7 @@ The Polkadot Wiki features high-level technical documentation about the Polkadot
   <!-- Card 1 -->
   <a href="./general/getting-started" class="card-container" data-aos="fade-up" data-aos-delay="100">
     <img src="./assets/home/Explore.png" class="card-image" alt="Explore" />
-    <p class="card-title title">Get Started</p>
+    <p class="card-title title">Explore</p>
     <p class="card-description">
       Explore Wallets, Applications and Programs.
     </p>

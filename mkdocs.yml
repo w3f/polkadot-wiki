@@ -121,8 +121,8 @@ markdown_extensions:
 
 # Sidebar
 nav:
-  - Get Started:
-      - Getting Started: general/getting-started.md
+  - Explore:
+      - Explore: general/getting-started.md
       - Web3 and Polkadot: general/web3-and-polkadot.md
       - Polkadot Vision:
               - Polkadot 1.0: general/polkadot-v1.md
