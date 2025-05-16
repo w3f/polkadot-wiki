@@ -51,7 +51,7 @@ Spec and Metadata into a portal).
 #### Chain Spec QR
 
 To add more chains on the Vault app you can follow the instructions
-[here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-specs).
+[here](https://github.com/novasamatech/parity-signer/blob/master/docs/src/tutorials/Add-New-Network.md#add-network-specs).
 In this example we will add the [Asset Hub](../learn/learn-assets.md) system parachain. Briefly,
 fork the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
 terminal within the `/generate_message` folder and type the following:
@@ -98,7 +98,10 @@ metadata.
 
 #### Metadata QR Fountain
 
-To update the chain metadata for the Asset Hub specs on the Vault app you can start the terminal within the `/generate_message` folder and type the following:
+To update the chain metadata for the Asset Hub specs on the Vault app you can follow the
+instructions [here](https://github.com/novasamatech/parity-signer/blob/master/docs/src/tutorials/Add-New-Network.md#add-network-metadata).
+Briefly, in the Parity Signer repository, start the terminal within the `/generate_message` folder
+and type the following:
 
 `cargo run load-metadata -d -u wss://kusama-asset-hub-rpc.polkadot.io`
 

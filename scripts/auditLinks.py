@@ -25,9 +25,9 @@ def testLink(link):
     result = [False, 404]
     try:
         headers = {
-            "User-Agent": "Mozilla/5.0"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
         }
-        results = requests.get(link, headers=headers, allow_redirects=False)
+        results = requests.get(link, headers=headers, allow_redirects=True)
         code = results.status_code
         result = [code == 200, code]
     except Exception:

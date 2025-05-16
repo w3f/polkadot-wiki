@@ -176,7 +176,7 @@ support article. The tutorial presented in the support article is demonstrated o
 procedure is the same for Kusama.
 
 !!!info "Polkadot Staking Dashboard"
-    The [Staking Dashboard](https://staking.polkadot.cloud/dashboard/#/overview) provides a more user-friendly alternative to staking. See the instructions in [this](https://support.polkadot.network/support/solutions/articles/65000182133-how-to-use-the-staking-dashboard-staking-your-dot) support article to learn how to stake with the dashboard.
+    The [Staking Dashboard](https://staking.polkadot.cloud/) provides a more user-friendly alternative to staking. See the instructions in [this](https://support.polkadot.network/support/solutions/articles/65000182133-how-to-use-the-staking-dashboard-staking-your-dot) support article to learn how to stake with the dashboard.
 
 **Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking,
 without sacrificing Polkadot's strict security model.

@@ -92,7 +92,7 @@ fullest potential and focuses on making it as simple and useful to digest as pos
 Joe leads Technical Integrations at Web3 Foundation and was previously a Research Analyst at Parity
 Technologies. He focuses on making Substrate chain integration as smooth as possible, from educating
 users on Substrate and Polkadot fundamentals to building tools to create great user experiences and
-occasionally writing a bit of code. He also hosts the [relay chain](https://relaychain.fm) podcast.
+occasionally writing a bit of code.
 
 Prior to working at Parity, Joe worked in shock and vibration simulation for satellite launch,
 algorithmic trading, and professional cycling. He has a Bachelor of Science in Aeronautical and

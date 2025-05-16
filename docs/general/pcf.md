@@ -444,7 +444,7 @@ as contractor, consulting, and legal fees.
 **Where can I find referenda creation guidelines?**
 
 This can be found on
-[the Polkassembly docs website](https://docs.polkassembly.io/opengov/learn-about-referenda/creating-a-referendum/creating-a-referendum-on-polkassembly),
+[the Polkassembly docs website](https://docs.polkassembly.io/jekyll/2022-06-30-opengov.html#creating-a-referendum-on-polkassembly),
 or [Polkadot-JS guides](../learn/learn-guides-polkadot-opengov.md#create-a-referenda-proposal).
 
 **What happens if the proposal isn’t sufficiently funded during the execution phase?**
