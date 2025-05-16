@@ -121,11 +121,7 @@ To learn more about Hyperbridge, see the resources below.
   Article by Seun Lanlege, Polytope Lab founder.
 - [Hyperbridge: The New Interoperability Coprocessor on Polkadot](https://medium.com/simplystaking/hyperbridge-the-new-interoperability-coprocessor-on-polkadot-b532ae622d8e) -
   Article by Erik from Simply Staking
-- [Digital Services as State Machines](https://polkadot-blockchain-academy.github.io/pba-book/blockchain-contracts/services-as-state-machines/page.html) -
-  Lecture about state machine from Polkadot Blockchain Academy
 - [Hyperbridge Source Code](https://github.com/polytope-labs/hyperbridge) - Public codebase
   repository of hyperbridge.
-- [Interoperable State Machine Protocol (ISMP) Book](https://ismp.polytope.technology/) - Guidebook
-  of the ISMP
 - [The Puzzle of Blockchain Interoperability](https://twitter.com/stakenode_dev/status/1744653040764817675)
 - [ISMP, The Endgame for Parachain Interoperability | Sub0 2023](https://www.youtube.com/watch?v=MCOAwooWecs)

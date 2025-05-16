@@ -104,7 +104,6 @@ community members. The application we use most often to interact with the Matrix
 - [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) -
   official, infrequent
 - [Dot Leap Newsletter](https://dotleap.substack.com/) - less official, weekly
-- [NFT Review](https://news.nft.review) - Covering the evolution of the NFT ecosystem on Kusama
 
 ## Ecosystem
 
@@ -125,7 +124,5 @@ community members. The application we use most often to interact with the Matrix
   application of blockchain technology, using Polkadot and Substrate as its foundations.
 - [Polkadot Communities and Campaigns by AirLyft One](https://airlyft.one/communities?ecosystem=POLKADOT) -
   Discover thriving communities and participate in engaging campaigns.
-- [DotAppStore](https://dotappstore.com/) - Discover featured projects and apps upvoted by the
-  Polkadot community.
 - [Awesome Dot](https://github.com/haquefardeen/awesome-dot) - community curated resources,
   projects, and learning material about the Polkadot and Kusama ecosystems.

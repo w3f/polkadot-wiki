@@ -61,9 +61,8 @@ At the Web3 Foundation, Filippo contributes to this mission by educating profess
 general public about blockchain and Web3. He actively engages with the Polkadot ecosystem, regularly
 contributing to Wiki articles. He is a
 [certified blockchain analyst](https://www.credential.net/bad85935-7e6e-4b4a-9ed2-e96128bdb5e5) and
-a [PBA-X](https://pbax.polkadot.academy/) graduate. Currently, he is expanding his expertise by
-learning [Rust](https://www.rust-lang.org/) and [Substrate](https://substrate.io/). For more details
-see [Filippo's bio on X](https://x.com/filippoweb3/bio).
+a [PBA-X](https://pbax.polkadot.academy/) and [PBA on-chain track](https://polkadot.academy/pba-campus/) graduate. Currently, he is expanding his expertise by
+learning [Rust](https://www.rust-lang.org/) and [Substrate](https://substrate.io/).
 
 ### Bader Youssef
 
@@ -93,7 +92,7 @@ fullest potential and focuses on making it as simple and useful to digest as pos
 Joe leads Technical Integrations at Web3 Foundation and was previously a Research Analyst at Parity
 Technologies. He focuses on making Substrate chain integration as smooth as possible, from educating
 users on Substrate and Polkadot fundamentals to building tools to create great user experiences and
-occasionally writing a bit of code. He also hosts the [relay chain](https://relaychain.fm) podcast.
+occasionally writing a bit of code.
 
 Prior to working at Parity, Joe worked in shock and vibration simulation for satellite launch,
 algorithmic trading, and professional cycling. He has a Bachelor of Science in Aeronautical and

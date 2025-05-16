@@ -71,7 +71,7 @@ wildly, but it's just a quirk of Base58-check encoding.
 You can use the tools below to convert any SS58 address for any network for use on different
 networks
 
-- [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform)
+- [handy subscan tool](https://polkadot.subscan.io/tools/format_transform)
 - [simple address converter](https://polkadot-address-convertor.netlify.app/)
 
 ### How to Verify a Public Key's Associated Address
@@ -149,7 +149,7 @@ From:
 we prefix the address by "0x" ->
 `0x192c3c7e5789b461fbf1c7f614ba5eed0b22efc507cda60a5e7fda8e046bcdce`.
 
-Using the [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform), you can verify
+Using the [handy subscan tool](https://polkadot.subscan.io/tools/format_transform), you can verify
 both address associations to your public key. Copy your public key into the "Input Account or Public
 Key" textbox and click "Transform" at the bottom. On the right-hand side, the addresses for Polkadot
 and Substrate that are returned based on your public key should match the ones you inspected.

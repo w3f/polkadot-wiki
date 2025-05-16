@@ -58,9 +58,7 @@ which allows chains to interoperate with one another.
 
 IBC leverages light clients that can keep track of the consensus of a counterparty chain. For
 example, when chains A and B want to talk to one another, chain A uses its light client of B to
-verify messages sent from chain B, and vice versa. IBC is
-[currently live](https://app.trustless.zone/?from=POLKADOT&to=OSMOSIS) on Polkadot and Kusama. Work
-is ongoing to implement IBC to Ethereum and it's layer 2s.
+verify messages sent from chain B, and vice versa.
 
 ## Consensus
 

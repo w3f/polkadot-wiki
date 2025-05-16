@@ -74,7 +74,7 @@ amounts for each ranked members.
 
 The Polkadot technical Fellowship was initially
 [seeded](https://github.com/polkadot-fellows/seeding) with its members and their corresponding
-ranks, and got [added on to Polkadot's Collectives](https://polkadot.polkassembly.io/motion/403)
+ranks, and got [added on to Polkadot's Collectives](https://polkadot-old.polkassembly.io/motion/403)
 system chain. All new membership requests will go through the fellowship governance and the
 procedure is outlined in the section below.
 
@@ -89,7 +89,7 @@ tenets:
 - Respect fellow Members and the wider community.
 
 !!!tip "Register your interest"
-    For new fellowship inductions, Polkassembly has created an interface (still in beta) to [apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives) This initiative is funded by Polkadot treasury through [OpenGov referendum 373](https://polkadot.polkassembly.io/treasury/574)
+    For new fellowship inductions, Polkassembly has created an interface (still in beta) to [apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives) This initiative is funded by Polkadot treasury through [OpenGov referendum 373](https://polkadot-old.polkassembly.io/treasury/574)
 
 The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on
 [the fellowship dasboard](https://polkadot-fellows.xyz/#/membership).

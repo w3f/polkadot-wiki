@@ -68,7 +68,7 @@ When you set a proxy, you must choose a type of proxy for the relationship with 
 - **Spokesperson**: Kusama-specific proxy type that only allows `remark` or `remark_with_event`
   calls.
 - **Society**: Kusama-specific proxy type that only allows
-  [society-related](https://ksmsociety.io/guide) calls.
+  [society-related](https://ksmsociety.io/) calls.
 
 ## Proxy Deposits
 

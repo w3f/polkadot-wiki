@@ -102,9 +102,7 @@ size of the active set and how many validators are waiting in the pool.
 There are a few ways to estimate the minimum stake.
 
 One way can be to navigate to the
-[Polkadot Apps Targets tab](https://cloudflare-ipfs.com/ipns/polkadot.dotapps.io/#/staking/targets).
-The value at the top of the screen saying "Lowest" is the least staked validator. You need at least
-this much + 1 to enter the set.
+[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/targets). The value at the top of the screen saying "lowest/avg staked" is the least staked validator. You need at least this much + 1 to enter the set.
 
 You can also use some tools some to perform estimations.
 

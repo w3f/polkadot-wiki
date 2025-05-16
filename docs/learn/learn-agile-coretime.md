@@ -11,7 +11,7 @@ manner.
 Polkadot introduces scheduling with **Agile Coretime**, enabling efficient utilization of Polkadot
 network resources and provides economic flexibility for builders, generalizing Polkadot beyond what
 was initially proposed and envisioned in its
-[whitepaper](https://polkadot.com/papers/Polkadot-whitepaper.pdf). The introduction of coretime
+[whitepaper](https://polkadot.com/papers/). The introduction of coretime
 enables multi-threading.
 
 [Multi-threading](<https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)>) is a

@@ -47,7 +47,7 @@ Polkassembly ensures that the community remains at the heart of the decision-mak
   democratic process.
   - How to Delegate: Navigate to the Delegation section, choose a delegate, specify the amount, and confirm the delegation.
 
-**5. [Notifications and Alerts](https://polkadot.polkassembly.io/settings)**
+**5. Notifications and Alerts**
 
   - Custom Notifications: Receive real-time updates on topics of interest, proposal status changes,
   and more.

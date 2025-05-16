@@ -262,10 +262,6 @@ The information provided here is subject to change; keep up to date using the fo
 - [Asynchronous Backing Spec & Tracking Issue](https://github.com/paritytech/polkadot/issues/3779) -
   The implementation tracking issue for asynchronous backing
 - [Prospective Parachains Subsystem - The Polkadot Parachain Host Implementers' Guide](https://paritytech.github.io/polkadot/book/node/backing/prospective-parachains.html)
-- Chapter 6.11. from Polkadot Blockchain Academy (PBA) lecture material:
-  [Asynchronous Backing (Shallow)](https://polkadot-blockchain-academy.github.io/pba-book/polkadot/async-backing-shallow/page.html)
-- Chapter 6.15. from PBA lecture material:
-  [Asynchronous Backing (Deep)](https://polkadot-blockchain-academy.github.io/pba-book/polkadot/async-backing-deep/page.html)
 - Polkadot Blog Post -
   [Asynchronous Backing: Elevating Polkadot's Performance and Scale](https://www.polkadot.network/blog/elevating-polkadots-performance-and-scale-with-asynchronous-backing)
 - Blog posts by Filippo Franchini on

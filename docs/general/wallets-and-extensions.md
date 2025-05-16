@@ -92,7 +92,7 @@ NFT management, XCM Transfers, Parity Signer & Ledger Support, DApp Support with
 Metamask/EVM Integration and crowdloans. Nova Wallet received funding from Kusama Treasury
 [[1](https://kusama.polkassembly.io/treasury/122),
 [2](https://kusama.polkassembly.io/treasury/158)], as well as funding from the Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/motion/314)].
+[[1](https://polkadot-old.polkassembly.io/motion/314)].
 
 ## SubWallet
 
@@ -101,10 +101,10 @@ assets on 150+ networks. Import account with seed phrase, private key, QR code, 
 Import token & NFT, attach read-only account. XCM Transfer, NFT Management, Parity Signer & Ledger
 support, light clients support, EVM DApp support, MetaMask compatibility, custom endpoints, fiat
 on-ramp, phishing detection, transaction history. SubWallet received funding from Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/treasury/138),
-[2](https://polkadot.polkassembly.io/treasury/162),
-[3](https://polkadot.polkassembly.io/treasury/218),
-[4](https://polkadot.polkassembly.io/treasury/272)].
+[[1](https://polkadot-old.polkassembly.io/treasury/138),
+[2](https://polkadot-old.polkassembly.io/treasury/162),
+[3](https://polkadot-old.polkassembly.io/treasury/218),
+[4](https://polkadot-old.polkassembly.io/treasury/272)].
 
 ## Talisman
 
@@ -112,7 +112,7 @@ A better way to explore Web3. Keep your assets safe, manage your portfolio and e
 Ethereum apps with Talisman. Interact with Web3 apps, store your favourite crypto assets and manage
 your accounts on over 150+ Substrate and EVM networks. NFT Management, ledger Support, fiat On-ramp,
 portfolio tracking. Talisman received funding from Polkadot Treasury
-[[1](https://polkadot.polkassembly.io/treasury/148)].
+[[1](https://polkadot-old.polkassembly.io/treasury/148)].
 
 ## Telenova
 

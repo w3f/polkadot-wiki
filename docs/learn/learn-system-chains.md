@@ -21,7 +21,7 @@ chains are allocated through the network [governance](./learn-guides-polkadot-op
 By hosting core protocol logic in parachains instead of the relay chain, Polkadot uses its own
 scaling technology -- namely, parallel execution -- to host _itself_. System parachains remove
 transactions from the relay chain, allowing more relay chain
-[blockspace](https://www.rob.tech/polkadot-blockspace-over-blockchains/) to be used for Polkadot's
+[blockspace](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/) to be used for Polkadot's
 primary purpose: validating parachains.
 
 System parachains always defer to on-chain governance to manage their upgrades and other sensitive
@@ -60,12 +60,12 @@ KSM. In fact, there will likely be a system parachain specifically for network g
     ### Collectives
 
     The Polkadot Collectives parachain was added in
-    [Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
+    [Referendum 81](https://polkadot-old.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
     there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
     Polkadot network.
 
     Some of these collectives are the
-    [Polkadot Alliance](https://polkadot.polkassembly.io/referendum/94) and the Polkadot Technical
+    [Polkadot Alliance](https://polkadot-old.polkassembly.io/referendum/94) and the Polkadot Technical
     [Fellowship](./learn-polkadot-technical-fellowship.md). These on-chain collectives will play
     important roles in the future of network stewardship and decentralized governance.
 
