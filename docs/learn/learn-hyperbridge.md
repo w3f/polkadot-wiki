@@ -125,7 +125,5 @@ To learn more about Hyperbridge, see the resources below.
   Lecture about state machine from Polkadot Blockchain Academy
 - [Hyperbridge Source Code](https://github.com/polytope-labs/hyperbridge) - Public codebase
   repository of hyperbridge.
-- [Interoperable State Machine Protocol (ISMP) Book](https://ismp.polytope.technology/) - Guidebook
-  of the ISMP
 - [The Puzzle of Blockchain Interoperability](https://twitter.com/stakenode_dev/status/1744653040764817675)
 - [ISMP, The Endgame for Parachain Interoperability | Sub0 2023](https://www.youtube.com/watch?v=MCOAwooWecs)

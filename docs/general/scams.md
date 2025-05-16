@@ -102,9 +102,7 @@ Some simple things that you can do to keep your assets and information secure fr
 - Never enter your seed or mnemonic phrase directly into a website.
 - Your seed phrase is a backup in case you lose access to your wallet. Use it only for that purpose
   and only in wallets you've used before and trust.
-- Your passwords should be strong and unique. It is recommended that you use a
-  [password manager app](https://www.howtogeek.com/141500/why-you-should-use-a-password-manager-and-how-to-get-started/)
-  to create and store your passwords. Use fido2 (hardware dongles) for best security, not google
+- Your passwords should be strong and unique. It is recommended that you use a password manager app to create and store your passwords. Use fido2 (hardware dongles) for best security, not google
   authenticator/OTP.
 - Keep your computer free of malware. Although an antivirus can be of great help, it's not a
   panacea. Safe browsing and downloading is the only way to be sure your computer is clean. Beware

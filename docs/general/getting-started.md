@@ -99,12 +99,12 @@ This is recommended for users with backgrounds of all levels, and the course is 
 
 ### Brand-New Polkadot learners
 
-- [Polkadot's original white paper](https://polkadot.com/papers/Polkadot-whitepaper.pdf) is a technical
+- [Polkadot's original white paper](https://polkadot.com/papers/) is a technical
   summary around one possible direction of implementing the Polkadot network. This paper uses
   rationale and technical details to support why this direction is beneficial. This original white
   paper also explains how Polkadot's core components work together to build this decentralized
   network.
-- [Polkadot's light paper](https://polkadot.com/papers/Polkadot-lightpaper.pdf) is a visual, easy to
+- [Polkadot's light paper](https://polkadot.com/papers/) is a visual, easy to
   read, and less technical introduction into its blockchain technology. This paper dives into the
   components of Polkadot but is understandable for both a non-technical and technical reader.
 - [Polkadot's overview paper](https://arxiv.org/abs/2005.13456) is an updated version of the white

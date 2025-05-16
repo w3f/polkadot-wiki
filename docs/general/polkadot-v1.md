@@ -145,7 +145,7 @@ through auctions, but an auction winner has access to a "freighter of blocks" re
 needed or not. This creates high entry barriers and it can lead to waste of energy and resources.
 
 For more information about blockspace see [this interview](https://youtu.be/e1vISppPwe4) with Robert
-Habermeier as well as [this article](https://www.rob.tech/polkadot-blockspace-over-blockchains/) by
+Habermeier as well as [this article](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/) by
 him.
 
 ### A Perspective Shift: Upcoming Polkadot Features

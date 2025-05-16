@@ -71,7 +71,7 @@ wildly, but it's just a quirk of Base58-check encoding.
 You can use the tools below to convert any SS58 address for any network for use on different
 networks
 
-- [handy subscan tool](https://polkadot.subscan.io/tools/ss58_transform)
+- [handy subscan tool](https://polkadot.subscan.io/tools/format_transform)
 - [simple address converter](https://polkadot-address-convertor.netlify.app/)
 
 ### How to Verify a Public Key's Associated Address

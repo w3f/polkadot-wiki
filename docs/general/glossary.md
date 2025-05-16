@@ -135,7 +135,7 @@ transition proofs for the validators.
 
 ## Collectives
 
-The Polkadot Collectives parachain was added in [Referendum 81](https://polkadot.polkassembly.io/referendum/81) and exists only on Polkadot (i.e., there is no Kusama equivalent). The Collectives chain hosts on-chain groups that serve the Polkadot network, such as the [Polkadot Technical Fellowship](#technical-fellowship), the [Polkadot Alliance](#polkadot-alliance), and the Ambassador Fellowship. Collectives enable governance through customizable parameters, manage sub-treasuries, and facilitate collaborative decision-making.
+The Polkadot Collectives parachain was added in [Referendum 81](https://polkadot-old.polkassembly.io/referendum/81) and exists only on Polkadot (i.e., there is no Kusama equivalent). The Collectives chain hosts on-chain groups that serve the Polkadot network, such as the [Polkadot Technical Fellowship](#technical-fellowship), the [Polkadot Alliance](#polkadot-alliance), and the Ambassador Fellowship. Collectives enable governance through customizable parameters, manage sub-treasuries, and facilitate collaborative decision-making.
 
 ## Commission
 
@@ -465,7 +465,7 @@ perform arbitrary, cross-chain communication under shared security.
 
 The Polkadot Alliance is an [on-chain collective](#collectives) founded by Acala, Astar, Interlay,
 Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for open-source development in
-[referendum #94](https://polkadot.polkassembly.io/referendum/94). It aims to support development
+[referendum #94](https://polkadot-old.polkassembly.io/referendum/94). It aims to support development
 standards and expose bad actors within the ecosystems of Polkadot.
 
 ## Host

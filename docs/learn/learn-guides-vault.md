@@ -98,11 +98,7 @@ metadata.
 
 #### Metadata QR Fountain
 
-To update the chain metadata for the Asset Hub specs on the Vault app you can follow the
-instructions
-[here](https://paritytech.github.io/parity-signer/tutorials/Add-New-Network.html#add-network-metadata).
-Briefly, in the Parity Signer repository, start the terminal within the `/generate_message` folder
-and type the following:
+To update the chain metadata for the Asset Hub specs on the Vault app you can start the terminal within the `/generate_message` folder and type the following:
 
 `cargo run load-metadata -d -u wss://kusama-asset-hub-rpc.polkadot.io`
 
