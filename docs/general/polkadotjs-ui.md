@@ -30,9 +30,7 @@ functionalities include account generation, balance transfers, and staking.
 ### Accounts
 
 In this section of the UI, you can see accounts injected from a browser extension, such as the
-[**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or
-[**other in-browser wallets**](./wallets-and-extensions.md#browser-extensions). It is also possible
-to expand balance details and see different
+[**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or other in-browser wallets. It is also possible to expand balance details and see different
 [**account balance types**](../learn/learn-account-balances.md#balance-types-on-polkadot-js). You
 can also:
 

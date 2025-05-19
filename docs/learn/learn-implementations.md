@@ -15,7 +15,7 @@ built on top of a tech stack.
 
 ## A Wasm-based Meta Protocol
 
-Polkadot uses WebAssembly ([Wasm](learn-wasm.md)) as a "meta-protocol". This allows for the use of
+Polkadot uses WebAssembly ([Wasm](https://webassembly.org/)) as a "meta-protocol". This allows for the use of
 any programming language that can be interpreted or compiled into Wasm - being the driver for
 Polkadot's multiple implementations.
 

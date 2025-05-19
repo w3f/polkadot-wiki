@@ -30,7 +30,7 @@ screen).
 ## Generate an Account
 
 You will need to generate an account on the relay chain to claim DOT (or KSM on Kusama). See the
-[available wallets and extensions](../general/wallets-and-extensions.md) for more information about
+[available wallets and extensions](https://polkadot.com/get-started/wallets/) for more information about
 wallets and browser extensions you can use to create an account. In terms of hardware wallet
 support, you can use the [Ledger](../general/ledger.md) devices or
 [Polkadot Vault](../general/polkadot-vault.md).

@@ -61,7 +61,7 @@
 /docs/polkadotjs    /general/polkadotjs    301
 /docs/polkadot-direction    /general/polkadot-direction    301
 /docs/contributors    /general/contributors    301
-/docs/wallets-and-extensions    /general/wallets-and-extensions    301
+/*/wallets-and-extensions    https://polkadot.com/get-started/wallets/    301
 /docs/staking-apps    /general/staking-apps    301
 /docs/governance-apps    /general/governance-apps    301
 /docs/multisig-apps    /general/multisig-apps    301
@@ -91,7 +91,7 @@
 /docs/learn-agile-coretime    /learn/learn-agile-coretime    301
 /docs/learn-parachains    /learn/learn-parachains    301
 /docs/learn-parachains-protocol    /learn/learn-parachains-protocol    301
-/docs/learn-wasm    /learn/learn-wasm    301
+/*/learn-wasm    https://webassembly.org/    301
 /docs/learn-bridges    /learn/learn-bridges    301
 /docs/learn/thousand-validators    https://nodes.web3.foundation/    301
 /docs/learn-nominator    /learn/learn-nominator    301
@@ -163,7 +163,7 @@
 /docs/learn-accounts-index/    /learn/learn-accounts/    301
 /docs/learn-teleport    /learn/learn-teleport    301
 /docs/learn-nft    /learn/learn-nft    301
-/docs/wallets/    /general/wallets-and-extensions/    301
+/docs/wallets/    https://polkadot.com/get-started/wallets/    301
 /docs/learn-staking-miner/    /learn/learn-staking    301
 /docs/general/polkadot-ecosystem-overview    /general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview    301
 /docs/general/onboarding-status-and-key-dashboards    /general/dashboards/dune-analytics/onboarding-status-and-key-dashboards    301

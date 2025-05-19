@@ -1,5 +1,5 @@
 ---
-title: Intro to Staking
+title: Staking on Polkadot
 description: Overview of staking and Nominated Proof-of-Stake (NPoS) in Polkadot, including validator selection, rewards, and security mechanisms.
 ---
 
@@ -295,7 +295,7 @@ Ledger devices are now supported in [SubWallet](https://www.subwallet.app/downlo
 [Talisman](https://talisman.xyz/), and [PolkaGate](https://polkagate.xyz/) extension. Users can
 import their Ledger accounts in the extension and use them as a stash in staking. You can find more
 information about, SubWallet, Talisman, PolkaGate and other wallets that officially secured funding
-from the treasury [here](../general/wallets-and-extensions.md).
+from the treasury [here](https://polkadot.com/get-started/wallets/).
 
 ### Claiming Staking Rewards
 
