@@ -62,7 +62,7 @@ reflected in the Merkle root (in this case, the state root). One can verify the 
 looking at the new values and the paths that are affected within the tree.
 
 The Polkadot Host requires that the state transitions performed on parachains be specified as a
-[Wasm](learn-wasm.md) executable. Proofs of new state transitions that occur on a parachain must be
+[Wasm](https://webassembly.org/) executable. Proofs of new state transitions that occur on a parachain must be
 validated against the registered state transition function (STF) that is stored on the relay chain
 by the validators before the relay chain acknowledges a state transition has occurred on a
 parachain. The key constraint regarding the logic of a parachain is that it must be verifiable by

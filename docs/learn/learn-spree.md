@@ -29,7 +29,7 @@ be changed through an interface with each parachain. SmartProtocols are the prec
 ## What is a SPREE module?
 
 SPREE modules are fragments of logic (in concrete terms they are blobs of
-[WebAssembly](learn-wasm.md) code) that are uploaded onto Polkadot through a governance mechanism or
+[WebAssembly](https://webassembly.org/) code) that are uploaded onto Polkadot through a governance mechanism or
 by parachains. Once the blob is uploaded to the relay chain, all other parachains can decide to
 opt-in to the logic. The SPREE module would retain its own storage independent of the parachain, but
 would be callable through an interface with the parachain. Parachains will send messages to the

@@ -7,11 +7,6 @@ description: Learn about Polkadot accounts, their structure, identity, and how t
 !!!info "User friendly wallets"
     Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
-See the [Wallets](../general/wallets-and-extensions.md) section for more information about different wallet options
-available, and specifically the [wallets and extensions](../general/wallets-and-extensions.md) page,
-which lists the user friendly wallet projects funded by the Polkadot/Kusama Treasuries or by the
-[Web3 Foundation Grants Program](../general/grants.md).
-
 This document covers the basics of accounts in the Polkadot ecosystem. See the
 [Advanced Account](./learn-account-advanced.md) page for more information about accounts such as
 [account derivation](./learn-account-advanced.md#derivation-paths) and
@@ -69,11 +64,7 @@ when dealing with non-trivial amounts of funds.
 
 Generating a mnemonic seed on a browser extension or a mobile application will create a hot key or
 hot wallet. Create your Polkadot accounts with a secure and user-friendly wallet listed on the
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/). See also the
-[Wallets](../general/wallets-and-extensions.md) section for more information about wallets and the
-[wallets and extensions](../general/wallets-and-extensions.md) page for wallets and browser
-extensions funded by the Polkadot/Kusama Treasuries or by the
-[Web3 Foundation Grants Program](../general/grants.md).
+[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
 Cold keys are generated on special devices such as those provided by [Ledger](../general/ledger.md).
 Additionally, you can generate your account using the [Polkadot Vault](../general/polkadot-vault.md)

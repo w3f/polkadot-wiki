@@ -74,7 +74,7 @@ validation to occur on the protocol level without needing a layer two solution.
     For a more in-depth comparison of parachains versus rollups, take a look at the [rollup comparison page](./learn-comparisons-rollups.md#rollup-comparison).
 
 Each parachain hosts its own core logic, called a **runtime** (sometimes called a **state transition
-function**). Polkadot uses WebAssembly ([Wasm](./learn-wasm.md)) as a "meta-protocol".
+function**). Polkadot uses WebAssembly ([Wasm](https://webassembly.org/)) as a "meta-protocol".
 
 Parachains have the option of using [cross-consensus messaging (XCM)](./learn-xcm.md) to communicate
 with one another and facilitate inter-chain reactions. It is also possible to utilize XCM on

@@ -25,7 +25,7 @@ always command the network.
 
 Polkadot brings together various novel mechanisms, including an amorphous (abstract) form of
 state-transition function stored on-chain defined in a platform-agnostic language (i.e.
-[WebAssembly](learn-wasm.md)), and several on-chain voting mechanisms such as referenda and batch
+[WebAssembly](https://webassembly.org/)), and several on-chain voting mechanisms such as referenda and batch
 approval voting. All changes to the protocol must be agreed upon by stake-weighted referenda.
 
 Here below there links to useful tools about Polkadot OpenGov.

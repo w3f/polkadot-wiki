@@ -127,8 +127,7 @@ nav:
       - Polkadot Vision:
               - Polkadot 1.0: general/polkadot-v1.md
               - Polkadot Direction: general/polkadot-direction.md
-      - Wallets:
-          - general/wallets-and-extensions.md
+      - Hardware Wallets:
           - Ledger: general/ledger.md
           - Polkadot Vault: general/polkadot-vault.md
       - Apps:
@@ -243,7 +242,6 @@ nav:
      - Implementation:
         - Polkadot Host: learn/learn-polkadot-host.md
         - Host Implementations: learn/learn-implementations.md
-        - WASM: learn/learn-wasm.md
         - Runtime Upgrades: learn/learn-runtime-upgrades.md
         - Consensus: learn/learn-consensus.md
         - Cryptography: learn/learn-cryptography.md

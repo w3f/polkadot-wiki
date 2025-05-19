@@ -70,9 +70,7 @@ The extension does not let users interact directly with on-chain functions as on
 wallet app like Metamask, i.e. it does not allow you to transact or do anything else other than
 adding and managing accounts. However, it provides a simple interface for interacting with
 extension-compliant dApps such as the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer)
-and the [**Polkadot Staking Dashboard**](https://staking.polkadot.cloud/#/overview). Check
-[wallets and extensions](./wallets-and-extensions.md) page for wallets that are capable of
-transacting on-chain directly.
+and the [**Polkadot Staking Dashboard**](https://staking.polkadot.cloud/#/overview).
 
 !!!info Metadata Updates
     The browser extension is a tool that interacts with the Polkadot network, but it is disconnected from it when it is not in use. It is important you [**always check for metadata updates**](../learn/learn-guides-accounts.md#polkadot-js-browser-extension) before using the extension or other account management tools such as Parity Signer (aka Polkadot Vault).

@@ -17,7 +17,7 @@ thousands) of nodes in the network that need to upgrade their software. Thus, ha
 inefficient, and error-prone due to the levels of offline coordination required and, therefore, the
 propensity to bundle many upgrades into one large-scale event.
 
-The usage of [WebAssembly](./learn-wasm.md) in the Polkadot SDK (the framework powering Polkadot,
+The usage of [WebAssembly](https://webassembly.org/) in the Polkadot SDK (the framework powering Polkadot,
 Kusama and their respective parachains), give the relay chain, its parachains, as well as any other
 standalone solo chains built with the Polkadot SDK the ability to upgrade their runtime (the chain's
 "business logic") without a hard fork of the respective network.
@@ -57,7 +57,7 @@ two key extrinsics:
 
 ## Client Releases
 
-The existing runtime logic is followed to update the [Wasm](./learn-wasm.md) runtime stored on the
+The existing runtime logic is followed to update the [Wasm](https://webassembly.org/) runtime stored on the
 blockchain to a new version. The upgrade is then included in the blockchain itself, meaning that all
 the nodes on the network execute it. Generally, there is no need to upgrade your nodes manually
 before the runtime upgrade, as they will automatically start to follow the new logic of the chain.
@@ -99,7 +99,7 @@ Infrastructure services include but are not limited to the following:
 - API services
 - Node-as-a-Service (NaaS)
 - General infrastructure management (e.g. block explorers, custodians)
-- [Wallets](../general/wallets-and-extensions.md)
+- [Wallets](https://polkadot.com/get-started/wallets/)
 
 For validators, keeping in sync with the network is key. At times, upgrades will require validators
 to upgrade their clients within a specific time frame, for example, if a release includes breaking
