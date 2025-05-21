@@ -38,11 +38,7 @@ initiatives:
 - **Fast development and deployment of L1 chains.** This is achieved through the modular and
   flexible [Polkadot SDK Substrate](./glossary.md#substrate).
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
-  such as:
-  - [The Polkadot Blockchain Academy](https://polkadot.network/development/academy/)
-  - [Polkadot Alpha Program](./alpha-program.md)
-  - [Edx Courses](https://www.edx.org/school/web3x)
-  - Rust and Substrate Courses (coming soon)
+  such as [the Polkadot Blockchain Academy](https://polkadot.network/development/academy/) and [Polkadot Alpha Program](./alpha-program.md).
 
 ### Polkadot's Representation
 
