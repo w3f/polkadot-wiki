@@ -10,15 +10,15 @@ Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Le
 
 - **blockchain-powered:** Polkadot at its heart has a blockchain that permanently and immutably stores sensitive information about the protocol and applications running on top of it
 - **multi-core:** Like traditional computers, Polkadot has a virtual CPU with multiple virtual cores
-- **decentralized cloud computer:** Instead of being run by a single entity, Polkadot is run by real computers owned by different operators scattered around the globe, part of a peer-to-peer network
+- **decentralized cloud computer:** Instead of being run by a single entity, Polkadot is run by real computers owned by different operators scattered around the globe, part of a decentralized peer-to-peer network
 
-**Polkadot is a service provider**: it provides secure computation and interoperability for any application connected to its virtual cores. Applications can be fully fledged blockchains, known as [parachains](../learn/learn-parachains.md) or Polkadot rollups. Instead of bootstrapping their security, rollups can connect to Polkadot via its virtual cores by buying coretime with DOT. By doing so, they inherently access Polkadot's secure interoperability and can communicate with other applications running on different cores of Polkadot's virtual CPU.
+**Polkadot is a Web3 service provider**: it provides secure and resilient computation and interoperability for any application connected to its virtual cores. Applications can be fully fledged blockchains, known as [parachains](../learn/learn-parachains.md) or Polkadot rollups. Instead of bootstrapping their security, rollups can connect to Polkadot via its virtual cores by buying [coretime](../learn/learn-agile-coretime.md) with DOT. By doing so, they inherently access Polkadot's secure interoperability and can communicate with other applications running on different cores of Polkadot's virtual CPU.
 
 Polkadot decentralized computer is owned by the [DOT token](../learn/learn-DOT.md) holders who can shape its future through on-chain [governance](../learn/learn-polkadot-opengov.md) (also called Polkadot
 OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md). Technical changes to the protocol's code are enacted and implemented automatically.
 
-In addition to purchasing coretime and voting in governance, the DOT token gives you the power to participate in Polkadot in [staking](../learn/learn-staking.md) and help secure the network.
+In addition to purchasing coretime and voting in governance, the DOT token gives you the power to participate in Polkadot [staking](../learn/learn-staking.md) and help secure the network.
 
 Polkadot's level of abstraction and generalization allows for building applications 
 specific to their use cases, and for those applications to communicate securely, leveraging each
@@ -26,7 +26,6 @@ other's value proposition. The trustless cooperation between applications makes 
 ideal ecosystem to build a [web3 future](web3-and-polkadot.md).
 
 <div class="row" style="display: flex; gap: 20px; justify-content: center;">
-  <!-- Card 1 -->
   <a 
     href="https://www.youtube.com/watch?v=_-k0xkooSlA" 
     class="card-container" 
@@ -35,19 +34,7 @@ ideal ecosystem to build a [web3 future](web3-and-polkadot.md).
     style="width: 300px; height: 300px;"
   >
     <img src="https://img.youtube.com/vi/_-k0xkooSlA/0.jpg" class="card-image"/>
-    <p class="card-title">Polkadot: Are You Ready to Start Building?</p>
-  </a>
-
-  <!-- Card 2 -->
-  <a 
-    href="https://www.youtube.com/watch?v=BQ60bTU1bPg" 
-    class="card-container" 
-    data-aos="fade-up" 
-    data-aos-delay="100" 
-    style="width: 300px; height: 300px;"
-  >
-    <img src="https://img.youtube.com/vi/BQ60bTU1bPg/0.jpg" class="card-image"/>
-    <p class="card-title">What is Polkadot?</p>
+    <p class="card-title">Polkadot Explained</p>
   </a>
 </div>
 
