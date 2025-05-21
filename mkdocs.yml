@@ -172,9 +172,7 @@ nav:
         - Kusama Society: https://ksmsociety.io/
   - Fundamentals:
       - general/fundamentals.md
-      - DOT Token:
-        - DOT: learn/learn-DOT.md
-        - DOT Inflation: learn/learn-inflation.md  
+      - learn/learn-DOT.md
       - Accounts:
          - Accounts: learn/learn-accounts.md
          - Account Abstraction: learn/learn-account-abstraction.md

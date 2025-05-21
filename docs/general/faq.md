@@ -88,7 +88,7 @@ nominate validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
-Validators are rewarded from the [inflation of the relay chain](../learn/learn-inflation.md),
+Validators are rewarded from the [inflation of the relay chain](../learn/learn-DOT.md#dot-inflation),
 [transaction fees](../learn/learn-transactions.md#transaction-fees), and tips. However, they only
 take a percentage of the former two. More details can be read on the page for
 [validator payouts](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout).
@@ -198,7 +198,7 @@ ten billion) Plancks, meaning that the new DOT was valued at ten decimal places.
 The inflation rate is approximately 120,000,000 DOT per year.
 
 The 85% of inflation is rewarded to validators for performing their duties, while the 15% goes to
-the treasury. Please see the article on [inflation](../learn/learn-inflation.md) for more
+the treasury. Please see the article on [inflation](../learn/learn-DOT.md#dot-inflation) for more
 information.
 
 ### Why can't crowdloaned DOT be staked?

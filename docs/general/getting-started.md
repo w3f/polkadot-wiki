@@ -6,22 +6,23 @@ template: explore-cards.html
 
 ## What is Polkadot?
 
-Polkadot is the first layer-0 (L0) blockchain that provides shared security and secure
-interoperability to layer-1 (L1) blockchains. Those L1 blockchain attached to Polkadot are also
-called [parachains](../learn/learn-parachains.md) as their transactions are processed in parallel by
-Polkadot. For more information about Polkadot see the dedicated page about the state of
-[Polkadot 1.0](polkadot-v1.md) released in mid 2023.
+Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Let's break it down bit by bit:
 
-Polkadot has an on-chain [open governance](../learn/learn-polkadot-opengov.md) (also called Polkadot
+- **blockchain-powered:** Polkadot at its heart has a blockchain that permanently and immutably stores sensitive information about the protocol and applications running on top of it
+- **multi-core:** Like traditional computers, Polkadot has a virtual CPU with multiple virtual cores
+- **decentralized cloud computer:** Instead of being run by a single entity, Polkadot is run by real computers owned by different operators scattered around the globe, part of a peer-to-peer network
+
+**Polkadot is a service provider**: it provides secure computation and interoperability for any application connected to its virtual cores. Applications can be fully fledged blockchains, known as [parachains](../learn/learn-parachains.md) or Polkadot rollups. Instead of bootstrapping their security, rollups can connect to Polkadot via its virtual cores by buying coretime with DOT. By doing so, they inherently access Polkadot's secure interoperability and can communicate with other applications running on different cores of Polkadot's virtual CPU.
+
+Polkadot decentralized computer is owned by the [DOT token](../learn/learn-DOT.md) holders who can shape its future through on-chain [governance](../learn/learn-polkadot-opengov.md) (also called Polkadot
 OpenGov) to orchestrate decisions, including accessing funds from the
-[treasury](../learn/learn-polkadot-opengov-treasury.md).
+[treasury](../learn/learn-polkadot-opengov-treasury.md). Technical changes to the protocol's code are enacted and implemented automatically.
 
-The [DOT token](../learn/learn-DOT.md) gives you the power to participate in Polkadot OpenGov, and
-[staking](../learn/learn-staking.md).
+In addition to purchasing coretime and voting in governance, the DOT token gives you the power to participate in Polkadot in [staking](../learn/learn-staking.md) and help secure the network.
 
-The level of abstraction and generalization of Polkadot allows to build applications that are
-specific to their use cases, and for those applications to communicate securely leveraging each
-other value proposition. The trustless cooperation between applications is what makes Polkadot an
+Polkadot's level of abstraction and generalization allows for building applications 
+specific to their use cases, and for those applications to communicate securely, leveraging each
+other's value proposition. The trustless cooperation between applications makes Polkadot an
 ideal ecosystem to build a [web3 future](web3-and-polkadot.md).
 
 <div class="row" style="display: flex; gap: 20px; justify-content: center;">
@@ -60,8 +61,6 @@ functionalities on Polkadot. See more information on
 !!!info
     Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
-
-
 DOT has utility in Polkadot's OpenGov where you can
 [vote](../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
 [delegate your voting power](../learn/learn-polkadot-opengov.md#multirole-delegation), and place
@@ -81,12 +80,6 @@ Polkadot Gifts provide an easy way to:
 
 Learn more about how you can create and send Polkadot Gifts
 [here](https://polkadot.network/blog/introducing-polkadot-kusama-gifts/).
-
-## Why should you use Polkadot?
-
-Whether you're a blockchain developer or if you're interested in taking part of
-[Polkadot's community](ambassadors.md), Polkadot offers a
-platform for everyone.
 
 ## Where to start learning?
 

@@ -370,7 +370,7 @@ automatically check if you qualify. For more information, visit the
   which can help to decentralize the network through the sophisticated
   [NPoS system](./learn-consensus.md#nominated-proof-of-stake)
 - 85% of inflation/year of the tokens is primarily intended for staking rewards. Check the
-  [inflation](learn-inflation.md) section on the Wiki for more information.
+  [inflation](learn-DOT.md#dot-inflation) section on the Wiki for more information.
 
 ### Cons of Staking
 

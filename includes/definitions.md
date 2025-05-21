@@ -1,3 +1,4 @@
+*[active issuance]: The total issuance - inactive issuance. Active tokens can participate in governance.
 *[Active Nomination]: A validator that produces blocks in the current era and earns staking rewards.
 *[Adaptive Quorum Biasing]: A system used in Governance V1 to alter the effective supermajority required to make it easier or more difficult for a proposal to pass, depending on turnout and origin (Council or public); that has been replaced with the approval and support system in OpenGov.
 *[Alexander]: The fourth and now defunct PoC-4 testnet for Polkadot.
@@ -31,7 +32,7 @@
 *[Council Referendum]: A referendum initiated by the Council in Governance V1.
 *[Crowdloan]: A mechanism for sourcing tokens to bid for relay chain cores.
 *[Curator]: An entity verifying bounty completion.
-*[DOT]: Polkadot's native token for governance, staking, and bonding.
+*[DOT]: Polkadot's native token for staking, governance and coretime purchase.
 *[Duty Roster]: Tasks assigned to validators, shuffled per parachain.
 *[Endorsed Proposal]: In Governance V1, the cation of depositing tokens in favor of a public proposal to be selected for a referendum in the next voting cycle based on an alternating voting timetable.
 *[Epoch]: A time duration in the BABE protocol.
@@ -46,6 +47,7 @@
 *[Governance V1]: The first iteration of Polkadot's on-chain governance system that has been replaced by Polkadot OpenGov.
 *[GRANDPA]: A mechanism for asynchronous and safe block finality. Verifies chains rather than individual blocks.
 *[Hard Fork]: A permanent blockchain split due to consensus rule changes.
+*[inactive issuance]: Includes tokens locked in deposits, which cannot participate in governance.
 *[Inactive Nomination]: A validator that is nominated but not validating and producing blocks in the current era.
 *[Injected Account]: A specific term used to tag an account accessed via the Polkadot-JS UI but managed externally (for example, via a browser extension).
 *[Interoperability]: The ability of systems to exchange information. In the blockchain context, interoperability enables systems with different consensus to communicate safely.
@@ -81,6 +83,7 @@
 *[Teleport]: Sending assets between chains by burning and minting.
 *[Testnet]: An experimental network for testing before mainnet deployment.
 *[Thousand Validators Program]: Previous iteration of the currently run Decentralized Nodes Program.
+*[total issuance]: The total number of tokens in existence.
 *[Validator]: A node securing the relay chain by staking and validating.
 *[Web3 Foundation]: A foundation fostering and supporting web3 technologies.
 *[WebAssembly]: A virtual machine instruction format that is used for Polkadot runtimes.
