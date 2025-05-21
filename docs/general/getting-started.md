@@ -129,6 +129,7 @@ This is recommended for users with backgrounds of all levels, and the course is 
   on Medium. There are also other great articles to read on
   [Polkadot's Medium](https://medium.com/polkadot-network) or
   [Web3 Foundation's Medium](https://medium.com/web3foundation).
+- [DotCodeSchool](https://dotcodeschool.com) is an interactive online school that teaches you how to build meaningful web3 applications using the Polkadot SDK.
 - [Polkadot Study](https://polkadot.study/) is a platform where developers can write tutorials for
   the Polkadot ecosystem. Part of the development of the platform was funded by the
   [Kusama treasury](https://kusama.subsquare.io/referenda/102). The platform also hosts
