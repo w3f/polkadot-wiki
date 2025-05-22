@@ -1,32 +1,45 @@
 # Project information
-site_name: "Polkadot Wiki"
+site_name: Polkadot Wiki
 site_url: https://wiki.polkadot.network
 site_author: Web3 Foundation Technologies
-site_description: >-
-  High-level documentation for the Polkadot Ecosystem.
+copyright: Copyright &copy; 2017 - 2025 Web3 Foundation Technologies
+extra_javascript:
+  - js/MessageBox.js
+  - js/init_kapa_widget.js
+  - js/simple-analytics.js
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/MessageBox.css
+  - assets/stylesheets/announcement-bar.css
 
 # Repository
 repo_name: w3f/polkadot-wiki
 repo_url: https://github.com/w3f/polkadot-wiki
 
-# Copyright
-copyright: Copyright &copy; 2017 - 2025 Web3 Foundation Technologies
-
 # Configuration
 theme:
   name: material
   custom_dir: material-overrides
+  favicon: assets/images/favicon.webp
+  logo: assets/images/wiki-logo.svg
+  icon:
+    edit: material/github
+    admonition:
+      code: material/code-tags
+  font:
+    text: Manrope
   features:
-    - content.code.annotate
-    - content.tooltips
-    - navigation.footer
-    - navigation.tabs 
-    - navigation.indexes 
-    - navigation.top 
-    - navigation.path
-    - navigation.instant
+    - content.code.annotate # Adds annotations to code blocks
+    - content.code.copy # Adds copy to clipboard button to code snippets
+    - content.tooltips # Adds tooltips
+    - navigation.footer # Shows previous and next on the footer
+    - navigation.tabs # Top-level sections are rendered below the header (can be modified to in-line with CSS)
+    - navigation.tabs.sticky # When scrolling, the tabs remain at the top of the page
+    - navigation.sections # Render top-level sections as groups in the sidebar
+    - navigation.indexes # Index pages
+    - navigation.top # Show the back to top button since we don't keep top nav sticky
     - content.action.edit
-    - announce.dismiss
+    - content.action.report # Show report an issue button
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -42,10 +55,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  icon:
-    fontawesome: true
-  favicon: assets/Polkadot_Favicon.png
-  logo: assets/wiki-logo.svg
 
 # Plugins
 plugins:
@@ -68,14 +77,6 @@ extra:
       link: https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw
     - icon: fontawesome/brands/discord
       link: https://polkadot-discord.w3f.tools/
-extra_css:
-  - stylesheets/extra.css
-  - stylesheets/MessageBox.css
-  - stylesheets/announcement-bar.css
-extra_javascript:
-  - javascript/MessageBox.js
-  - javascript/init_kapa_widget.js
-  - javascript/simple-analytics.js
 
 # Extensions
 markdown_extensions:

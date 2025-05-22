@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root {
+    --md-text-font: sans-serif;
+    --md-default-fg-color: #000;
+}
+
 /* Dark mode styles */
 [data-md-color-scheme="slate"] {
     /* Base colors - maintaining contrast ratios */
@@ -116,6 +123,11 @@
     color: var(--md-typeset-a-color);
 }
 
+/* Logo switching in dark mode */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img[src*="wiki-logo.svg"] {
+    content: url("../images/wiki-logo-white-dark.svg");
+}
+
 /* Navigation tabs styles */
 [data-md-color-scheme="slate"] .md-tabs {
     background-color: var(--md-tabs-bg-color);
@@ -149,13 +161,62 @@
 }
 
 /* Search styles */
+[data-md-color-scheme="slate"] .md-search {
+    background-color: #1a1a1a;
+}
+
 [data-md-color-scheme="slate"] .md-search__input {
-    background-color: var(--md-search-input-bg-color);
+    background-color: #545454;
     color: var(--md-search-input-fg-color);
+    transition: background-color 0.3s ease;
+}
+
+[data-md-color-scheme="slate"] .md-search__input:hover {
+    background-color: #6a6a6a;
+}
+
+[data-md-color-scheme="slate"] .md-search__input::placeholder {
+    color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-search__input:focus {
+    background-color: var(--md-search-input-bg-color);
+    border-color: var(--md-typeset-a-color);
 }
 
 [data-md-color-scheme="slate"] .md-search__icon {
-    color: var(--md-header-fg-color);
+    color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-search__output {
+    background-color: var(--md-search-bg-color);
+    border: 1px solid var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__meta {
+    background-color: var(--md-search-bg-color);
+    color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__list {
+    background-color: var(--md-search-bg-color);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__item {
+    background-color: var(--md-search-bg-color);
+    border-bottom: 1px solid var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__item:hover {
+    background-color: var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__link {
+    color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__link:hover {
+    color: var(--md-typeset-a-color);
 }
 
 /* Source link styles */
@@ -170,4 +231,228 @@
 
 [data-md-color-scheme="slate"] .md-source__fact {
     color: var(--md-header-fg-color--light);
-} 
+}
+
+/* Original styles */
+h1 {
+    font-family: 'Unbounded', sans-serif;
+    color: var(--md-default-fg-color) !important;
+    font-weight: 900;
+}
+
+.md-tabs__list {
+    margin-bottom: 15px;
+}
+
+.md-tabs__link {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+nav .md-header__ellipsis {
+    font-family: 'Unbounded', sans-serif;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 2rem;
+}
+
+.md-nav__list {
+    font-size: 16px;
+    color: var(--md-default-fg-color) !important;
+}
+
+.md-grid {
+    max-width: 80rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.col {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.col img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.col a:hover {
+    color: #0078d4;
+    /* Add hover effect */
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.md-nav__item a[target="_blank"]::after {
+    content: url('./external_item.svg');
+}
+
+.md-header__title .md-ellipsis {
+   display: none;
+}
+
+/* Card container: Entire card is clickable */
+.card-container {
+    height: 450px;
+    /* Adjusted height for description */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+    /* Ensure smooth animation */
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Ensure text inherits color */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.card-container:hover {
+    transform: scale(1.05); /* Gradual zoom effect */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), /* Pink polkadot glow */
+                0 0 15px rgba(255, 182, 193, 0.5); /* Enhanced glow */
+    background-color: #f4f4f4;
+    /* Optional: Slight color change on hover */
+}
+
+/* Dark mode styles for card container */
+[data-md-color-scheme="slate"] .card-container {
+    background-color: #9f9f9f;
+    border-color: #808080;
+}
+
+[data-md-color-scheme="slate"] .card-container:hover {
+    transform: scale(1.05); /* Gradual zoom effect */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.2), /* Pink polkadot glow */
+                0 0 15px rgba(255, 182, 193, 0.3); /* Enhanced glow */
+    background-color: #b3b3b3;
+    border: 1px solid slategrey
+    /* ...existing code... */
+}
+
+/* Image inside the card */
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    /* Ensures images fit nicely */
+    max-height: 250px;
+    /* Keeps image height consistent */
+}
+
+/* Title text inside the card */
+.card-title {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.title {
+    font-size: 25px;
+}
+
+/* Description text inside the card */
+.card-description {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.4;
+    /* Better spacing for multi-line descriptions */
+}
+
+.md-search-result__meta {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .card-container {
+        width: 500px;
+    }
+}
+
+/* Floating message box styles */
+.floating-message-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: whitesmoke;
+    background-color: #e6007a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.floating-message-box p {
+    margin: 0;
+    color: #333;
+}
+
+.floating-message-box a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.floating-message-box a:hover {
+    text-decoration: underline;
+}
+
+.close-messagebox {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Dark mode styles for floating message box - keeping light mode appearance */
+[data-md-color-scheme="slate"] .floating-message-box {
+    background-color: #ffc0cb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-md_color-scheme="slate"] .close-messagebox {
+    color: #666;
+}
