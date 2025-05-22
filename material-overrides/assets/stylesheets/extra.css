@@ -301,7 +301,7 @@ nav .md-header__ellipsis {
 }
 
 .md-nav__item a[target="_blank"]::after {
-    content: url('./external_item.svg');
+    content: url('../images/external_item.svg');
 }
 
 .md-header__title .md-ellipsis {
