@@ -6,6 +6,9 @@ copyright: Copyright &copy; 2025 Web3 Foundation
 extra_javascript:
   - js/MessageBox.js
   - js/simple-analytics.js
+  - js/root-level-section.js
+  - js/search-bar-results.js
+  - js/header-scroll.js
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/MessageBox.css

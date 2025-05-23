@@ -1,0 +1,74 @@
+.subsection-wrapper {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.subsection-wrapper .card {
+  border: 1px solid var(--mystic);
+  border-radius: 16px;
+  text-decoration: none;
+  align-content: start;
+  flex: 1 0 48%;
+  max-width: 48%;
+}
+
+.md-typeset .subsection-wrapper .card a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.md-typeset .subsection-wrapper .card a:hover .title {
+  color: var(--pink);
+}
+
+.subsection-wrapper .card-header {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.2em 1.2em 0em;
+  gap: 0.25em;
+  display: flex;
+}
+.subsection-wrapper .card-header .badge {
+  order: 2;
+}
+
+.subsection-wrapper .card .card-header h2.title {
+  order: 1; 
+  padding: 0;
+}
+
+.subsection-wrapper .title {
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 1.15em;
+  padding: 1.05em 1.05em 0em;
+}
+
+.md-typeset hr {
+  margin: 0 1.5em 1em;
+}
+
+.subsection-wrapper .card hr {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.subsection-wrapper .description {
+  color: var(--md-default-fg-color);
+  margin: 0;
+  font-size: 0.9em;
+  padding: 0 1.5em 1.8em 1.5em;
+}
+
+@media screen and (max-width: 36em) {
+  .subsection-wrapper .card {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Hide TOC on index pages */
+.md-nav.md-nav--secondary {
+  display: none;
+}

@@ -1,0 +1,20 @@
+{#-
+    This file was automatically generated - do not edit
+  -#}
+  <div class="md-source-file">
+    <small>
+      {% if page.meta.git_revision_date_localized %}
+        <span class="source-file-label">{{ lang.t("source.file.date.updated") }}:</span>
+        {{ page.meta.git_revision_date_localized }}
+        {% if page.meta.git_creation_date_localized %}
+          <br>
+          <span class="source-file-seperator">|</span>
+          <span class="source-file-label">{{ lang.t("source.file.date.created") }}:</span>
+          {{ page.meta.git_creation_date_localized }}
+        {% endif %}
+      {% elif page.meta.revision_date %}
+        {{ lang.t("source.file.date.updated") }}:
+        {{ page.meta.revision_date }}
+      {% endif %}
+    </small>
+  </div>
