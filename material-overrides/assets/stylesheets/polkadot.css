@@ -128,6 +128,13 @@
   text-decoration: underline;
 }
 
+/* Remove underline from links in cards */
+.md-typeset .grid.cards a,
+.md-typeset .grid.cards ul.card-list > li a,
+.md-typeset .grid.cards.links > ul > li > a {
+  text-decoration: none !important;
+}
+
 .md-typeset a > code {
   color: var(--md-code-fg-color);
 }
@@ -1608,17 +1615,3 @@ img.browser-extension {
   text-align: center;
 }
 
-/** MetaMask connection button styling **/
-div.button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-div.button-wrapper > a.connectMetaMask {
-  text-decoration: none;
-}
-
-.md-typeset img {
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}

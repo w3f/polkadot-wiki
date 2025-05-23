@@ -6,13 +6,15 @@ copyright: Copyright &copy; 2025 Web3 Foundation
 extra_javascript:
   - js/MessageBox.js
   - js/simple-analytics.js
-  - js/root-level-section.js
+  - js/root-level-sections.js
   - js/search-bar-results.js
   - js/header-scroll.js
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/MessageBox.css
   - assets/stylesheets/announcement-bar.css
+  - assets/stylesheets/terminal.css
+  - assets/stylesheets/timeline-neoteroi.css
 
 # Repository
 repo_name: w3f/polkadot-wiki
@@ -298,9 +300,8 @@ nav:
                   - Project Dashboards: general/dashboards/dune-analytics/project-dashboards.md
                   - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
   - Guides:
-      - Polkadot-JS:
-              - Polkadot-JS: general/polkadotjs.md
-              - Polkadot-JS UI: general/polkadotjs-ui.md
+      - Polkadot-JS: general/polkadotjs.md
+      - Polkadot-JS UI: general/polkadotjs-ui.md
       - Async Backing Conversion: learn/maintain-guides-async-backing.md
       - Account Guides:
                       - Accounts Guides: learn/learn-guides-accounts.md

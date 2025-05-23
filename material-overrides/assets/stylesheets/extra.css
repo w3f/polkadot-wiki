@@ -54,11 +54,8 @@
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
-    /* Ensure smooth animation */
-    text-decoration: none;
-    /* Remove underline */
+    text-decoration: none !important;
     color: inherit;
-    /* Ensure text inherits color */
 }
 
 .card-title {
