@@ -6,7 +6,7 @@ description: Understand Kusama's inflation model, staking incentives, and how th
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    <a href="../learn/learn-inflation.md" target="_blank" rel="noopener noreferrer">
+    <a href="../learn/learn-DOT.md" target="_blank" rel="noopener noreferrer">
       Learn about Polkadot's native token DOT inflation.
     </a>
   </p>

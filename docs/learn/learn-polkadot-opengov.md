@@ -294,7 +294,7 @@ satisfy the approval and support criteria for the **Confirmation Period**.
   viewed
   [here](https://github.com/paritytech/polkadot-sdk/blob/f2fbba3be1d7deaf7cfc731cea00552c212ddfcf/substrate/frame/conviction-voting/src/types.rs#L77)
 - **Support** is the total number of _aye_ and _abstain_ votes (ignoring any adjustment for
-  conviction) compared to the total possible votes ([active issuance](learn-DOT.md#token-issuance))
+  conviction) compared to the total possible votes ([active issuance](../general/chain-state-values.md))
   that could be made in the system. In case of _split_ votes, only _aye_ and _abstain_ will count.
 
 For example, let us consider a hypothetical example where the total active issuance is 100 DOT.
