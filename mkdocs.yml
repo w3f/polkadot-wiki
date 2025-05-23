@@ -2,10 +2,9 @@
 site_name: Polkadot Wiki
 site_url: https://wiki.polkadot.network
 site_author: Web3 Foundation Technologies
-copyright: Copyright &copy; 2017 - 2025 Web3 Foundation Technologies
+copyright: Copyright &copy; 2025 Web3 Foundation
 extra_javascript:
   - js/MessageBox.js
-  - js/init_kapa_widget.js
   - js/simple-analytics.js
 extra_css:
   - assets/stylesheets/extra.css
@@ -21,7 +20,7 @@ theme:
   name: material
   custom_dir: material-overrides
   favicon: assets/images/favicon.webp
-  logo: assets/images/wiki-logo.svg
+  logo: assets/images/logo.webp
   icon:
     edit: material/github
     admonition:
@@ -40,32 +39,16 @@ theme:
     - navigation.top # Show the back to top button since we don't keep top nav sticky
     - content.action.edit
     - content.action.report # Show report an issue button
-  palette: 
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: pink
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: white
-      accent: pink
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 
 # Plugins
 plugins:
   - search
-  - open-in-new-tab
+  - awesome-pages
   - macros:
       module_name: macros/rpc
 
 # Additional configuration
 extra:
-  footer_logo: assets/Polkadot_Logo_White.png
   social:
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/Polkadot

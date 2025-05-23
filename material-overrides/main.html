@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block announce %}
 <p>
     Join the Web3 Summit in Berlin 16-18th July 👉
@@ -7,3 +8,129 @@
 </p>
 {{ super () }}
 {% endblock %}
+
+{% block styles %}
+	{{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/polkadot.css' | url }}">
+{% endblock %}
+
+{% block fonts %}
+  {#-
+    Add Google Fonts here
+  -#}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{% endblock%}
+
+{% block site_meta %}
+  {{ super() }}
+  {% if page and page.meta and page.meta.keywords %}
+    <meta name="keywords" content="{{ page.meta.keywords }}">
+  {% endif %}
+{% endblock %}
+
+{% block libs %}
+  {{ super() }}
+  <link rel="preconnect" href="https://widget.kapa.ai/">
+  <style data-emotion="mantine" data-s=""></style>
+  <script defer
+    src="https://widget.kapa.ai/kapa-widget.bundle.js"
+    data-website-id="f4bbad14-cc24-471c-8b7d-3267eafc6dc2"
+    data-project-name="Polkadot"
+    data-modal-title="Polkadot AI Chatbot"
+    data-project-color="#1E1E1E"
+    data-button-bg-color="#1C0533"
+    data-button-text-color="white"
+    data-button-height="80px"
+    data-button-width="72px"
+    data-font-size-xs="12px"
+    data-font-size-sm="14px"
+    data-font-size-md="16px"
+    data-font-size-lg="18px"
+    data-font-size-xl="22px"
+    data-modal-title-font-size="22px"
+    data-button-text-font-size="18px"
+    data-query-input-font-size="16px"
+    data-button-image-height="24px"
+    data-button-image-width="24px"
+    data-modal-image-height="24px"
+    data-modal-image-width="24px"
+    data-project-logo="https://1000logos.net/wp-content/uploads/2022/08/Polkadot-Symbol.png"
+    data-modal-header-bg-color="#1C0533"
+    data-modal-title-color="white"
+    data-modal-disclaimer="This is an AI chatbot trained to answer questions about Polkadot. As such, the answers it provides might not always be accurate or up-to-date. Please use your best judgement when evaluating its responses. Also, **please refrain from sharing any personal or private information with the bot**. By submitting a query, you agree that you have read and understood [these conditions](https://polkadot.com/legal-disclosures/).
+      **If you need further assistance, you can reach out to [Polkadot Support](https://support.polkadot.network/support/tickets/new?ticket_form=i_have_a_support_request).**"
+    data-modal-example-questions="Where can I store my DOT?, How can I create a DOT account?, How can I stake my DOT?, How does Polkadot OpenGov work?"
+    data-modal-disclaimer-font-size="12px"
+    data-search-mode-enabled="false"
+    data-search-mode-default="false"
+    data-search-result-primary-title-font-size="16px"
+    data-button-position-top="120px"
+    data-button-position-right="0px"
+  ></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.addEventListener('click', (event) => {
+        if (event.target.id === 'kapa-widget-container') {
+          event.target.addEventListener('keydown', (event) => {
+            event.stopPropagation();
+          });
+        }
+      });
+    });
+  </script>
+{% endblock %}
+
+{% block site_nav %}
+{#- Navigation (left menu) -#}
+  {% if nav %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "navigation" in page.meta.hide %}
+    {% endif %}
+    <div
+      class="md-sidebar md-sidebar--primary"
+      data-md-component="sidebar"
+      data-md-type="navigation"
+      {{ hidden }}
+    >
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/nav.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  
+  {#- Table of contents (TOC) -#}
+  {% if "toc.integrate" not in features %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "toc" in page.meta.hide %}
+    {% endif %}
+    <div
+      class="md-sidebar md-sidebar--secondary"
+      data-md-component="sidebar"
+      data-md-type="toc"
+      {{ hidden }}
+    >
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {#- TOC -#}
+          {% include "partials/toc.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{%- block container -%} 
+  <div class="md-content" data-md-component="content">
+    {% set class = "index-page" if not page.content %}
+    <article class="md-content__inner md-typeset {{ class }}">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{%- endblock -%} 

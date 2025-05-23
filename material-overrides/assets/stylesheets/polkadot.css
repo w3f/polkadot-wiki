@@ -1,0 +1,1624 @@
+:root {
+  --white: #ffffff;
+  --heather: #c6cfdb;
+  --mystic: #dce2e9;
+  --athens-gray: #eceff3;
+  --storm-gray: #6e7391;
+  --black: #000000;
+
+  /* Primary color */
+  --pink: #ff2670;
+
+  /* Secondary colors */
+  --chartreuse: #e4ff07;
+  --blue-ribbon: #383bff;
+  --aqua: #07ffff;
+  --electric-violet: #7204ff;
+
+  --md-hover-opacity: 0.7;
+  --max-page-width: 1600px;
+  --page-padding: 48px;
+  --header-height: 54px;
+  --dropdown-gap: 10px;
+}
+
+:root,
+[data-md-color-scheme='default'] {
+  --md-default-fg-color: var(--storm-gray);
+  --md-default-bg-color: var(--white);
+
+  --md-primary-fg-color: var(--mystic);
+  --md-accent-fg-color: var(--pink);
+  --md-accent-fg-color--transparent: var(--athens-gray);
+
+  --md-typeset-a-color: var(--storm-gray);
+
+  --md-footer-fg-color: var(--black);
+  --md-footer-fg-color--light: var(--black);
+  --md-footer-bg-color: var(--white);
+  --md-footer-bg-color--dark: var(--white);
+
+  /** Branded code snippets**/
+  --md-code-fg-color: #363732;
+  /** Code highlighting color shades **/
+  /* Numbers */
+  --md-code-hl-number-color: #4ca09f;
+  /* Python function names */
+  --md-code-hl-function-color: #363732;
+  /* JavaScript booleans, Python variable names */
+  --md-code-hl-name-color: var(--electric-violet);
+  /* Strings */
+  --md-code-hl-string-color: #d33262;
+  /* Python print */
+  --md-code-hl-constant-color: #070e8b;
+  /* Imports, const, let, var, async, await, function, etc. */
+  --md-code-hl-keyword-color: #070e8b;
+  /* Comments */
+  --md-code-hl-comment-color: #00000060;
+
+  /** Branded Mermaid Flowchart Diagrams **/
+  --md-mermaid-font-family: var(--md-text-font-family), sans-serif;
+  --md-mermaid-edge-color: var(--md-code-fg-color);
+  --md-mermaid-node-bg-color: var(--md-accent-fg-color--transparent);
+  --md-mermaid-node-fg-color: var(--md-accent-fg-color);
+  --md-mermaid-label-bg-color: var(--md-default-bg-color);
+  --md-mermaid-label-fg-color: var(--md-code-fg-color);
+
+  /** Branded Mermaid Sequence Diagrams **/
+  --md-mermaid-sequence-actor-bg-color: var(--md-mermaid-label-bg-color);
+  --md-mermaid-sequence-actor-fg-color: var(--md-mermaid-label-fg-color);
+  --md-mermaid-sequence-actor-border-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-actor-line-color: var(--md-default-fg-color--lighter);
+  --md-mermaid-sequence-actorman-bg-color: var(--md-mermaid-label-bg-color);
+  --md-mermaid-sequence-actorman-line-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-box-bg-color: var(--md-mermaid-node-bg-color);
+  --md-mermaid-sequence-box-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-label-bg-color: var(--md-mermaid-node-bg-color);
+  --md-mermaid-sequence-label-fg-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-loop-bg-color: var(--md-mermaid-node-bg-color);
+  --md-mermaid-sequence-loop-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-loop-border-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-message-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-message-line-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-note-bg-color: var(--md-mermaid-label-bg-color);
+  --md-mermaid-sequence-note-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-note-border-color: var(--md-mermaid-label-fg-color);
+  --md-mermaid-sequence-number-bg-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-number-fg-color: var(--md-accent-bg-color);
+
+  /*custom code admonition colors*/
+
+  --md-code-admo-border-color: #5ee20c;
+  --md-code-admo-title-bg: #64dd171a;
+}
+
+.md-grid {
+  max-width: var(--max-page-width);
+}
+
+.md-main {
+  padding: 0 2em;
+  height: 100%;
+}
+
+.md-container {
+  padding: 0 var(--page-padding);
+  top: 4.8rem;
+  position: sticky;
+}
+
+/* Font styling */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  font-family: 'Unbounded';
+  color: var(--black);
+  font-weight: 400;
+  line-height: 35.2px;
+}
+
+.md-typeset p {
+  color: var(--storm-gray);
+}
+
+/* Link styling */
+.md-typeset a {
+  text-decoration: underline;
+}
+
+.md-typeset a > code {
+  color: var(--md-code-fg-color);
+}
+
+.md-typeset a:hover > code,
+.md-typeset a:focus,
+.md-typeset a:hover {
+  color: var(--pink);
+}
+
+/* Code element styling */
+.md-typeset pre > code {
+  padding: 12px 18px;
+}
+
+/* Header styling */
+.md-header--shadow {
+  box-shadow: none;
+}
+
+[dir='ltr'] .md-header__title {
+  margin: 0;
+}
+
+.md-header__title {
+  flex-grow: unset;
+}
+
+.md-header__inner {
+  border: 1px solid var(--mystic);
+  width: fit-content;
+  margin-left: 0;
+  border-radius: 48px;
+  position: relative;
+  top: 16px;
+  transition: transform 0.3s ease;
+}
+
+.md-header__inner.hidden {
+  transform: translateY(calc(-100% - 16px));
+}
+
+.md-header__title > .md-header__ellipsis {
+  align-content: center;
+}
+
+.md-header__button.md-logo {
+  margin: 0;
+  padding: 0 24px 0 12px;
+  display: flex;
+}
+
+.md-header__button.md-logo img {
+  height: auto;
+  width: 140px;
+}
+
+.md-header__button.md-tabs__link {
+  color: var(--black);
+  font-weight: 600;
+  margin: 0;
+  padding: 1em 12px;
+}
+
+[dir='ltr'] .md-tabs__list {
+  margin-left: 0;
+}
+
+/* Header buttons styling */
+.md-header__buttons {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--heather);
+  border-right: 1px solid var(--heather);
+  height: var(--header-height);
+}
+
+.md-tabs__link {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.md-tabs__list {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.md-tabs__link {
+  opacity: 1;
+}
+
+.md-header {
+  background-color: transparent;
+  max-width: 1600px;
+  width: 100%;
+  padding: 0 var(--page-padding);
+  margin: auto;
+}
+
+/* Header, home button, header buttons styling on smaller screens */
+@media screen and (max-width: 76.2344em) {
+  .md-header {
+    padding: 0 32px;
+  }
+
+  .md-header__button.md-logo {
+    margin: 0;
+    padding: 0 1em;
+  }
+
+  .md-header__button {
+    color: var(--black);
+  }
+
+  .md-header__buttons {
+    height: unset;
+  }
+
+  .md-header__title {
+    border-left: 1px solid var(--heather);
+    border-right: 1px solid var(--heather);
+    height: var(--header-height);
+  }
+
+  .md-header__buttons {
+    display: none;
+  }
+}
+
+/* Dropdown styling */
+.md-header__inner,
+.md-tabs {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs .md-grid {
+  display: flex;
+}
+
+.md-tabs__list {
+  contain: none;
+  padding: 0 12px 0 0;
+}
+
+.md-tabs__item--custom {
+  padding: 0 12px;
+  transition: border 0.3s ease;
+  color: var(--black);
+  height: var(--header-height);
+  align-content: center;
+}
+
+.md-tabs__item--custom:hover {
+  cursor: pointer;
+}
+
+/* Pseudo-element to create hoverable area */
+.md-tabs__item--custom:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: var(--dropdown-gap);
+  width: 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.md-tab__list {
+  display: none;
+}
+
+.md-tabs__item--custom:hover .md-tab__list {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(100% + var(--dropdown-gap));
+  background: var(--md-default-bg-color);
+  border: 0.5px solid var(--mystic);
+  border-radius: 16px;
+  z-index: 3;
+  list-style: none;
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  box-shadow: 0 0.2rem 0.5rem #0003, 0 0 0.05rem #00000059;
+  /* For Safari */
+  transform: translateZ(0);
+}
+
+.md-tabs__item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.md-tabs__item--custom:hover .md-tabs__link {
+  color: var(--pink);
+}
+
+.md-tab__item {
+  font-weight: 400;
+  padding: 24px;
+}
+
+/* Apply bottom border to all items */
+.md-tab__item {
+  border-bottom: 1px solid var(--mystic);
+}
+
+/* Remove bottom border from the last item */
+.md-tab__item:last-child {
+  border-bottom: none;
+}
+
+/* Remove bottom border from the second-to-last item if it's odd */
+/* Adjust for common cases with specific nth-last-child selectors */
+.md-tab__item:nth-last-child(2):nth-child(odd) {
+  border-bottom: none;
+}
+
+/* Optionally, add right border to odd items for a two-column layout */
+.md-tab__item:nth-child(odd) {
+  border-right: 1px solid var(--mystic);
+}
+
+.md-tab__item:hover,
+.md-tab__item:active {
+  color: var(--pink);
+}
+
+.md-tab__item a {
+  display: flex;
+  align-items: center;
+}
+
+/** Search styling **/
+.md-header__button.md-icon[for='__search'] {
+  display: inline-block;
+  padding: 0 12px;
+}
+
+.md-header__button.md-icon[for='__search'] svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  fill: var(--black);
+}
+
+.md-search {
+  visibility: hidden;
+  width: 0;
+}
+
+.md-search__input {
+  font-size: 16px;
+}
+
+input.md-search__input::placeholder {
+  color: var(--md-default-fg-color--light) !important;
+}
+
+.md-search-result__meta {
+  background-color: var(--md-default-bg-color);
+}
+
+.md-typeset .md-button:hover,
+.md-header__option:hover .md-header__button,
+.md-header__option .md-header__button:hover,
+.md-header__button.md-icon[for='__search']:hover,
+.md-header__button.md-icon[for='__search']:active {
+  color: var(--black);
+  opacity: 1;
+}
+
+[data-md-toggle='search']:checked ~ .md-header .md-search {
+  visibility: visible;
+  width: fit-content;
+  height: auto;
+  padding-right: 0.3em;
+  position: relative;
+  right: 53px;
+  z-index: 100;
+  background: var(--md-default-bg-color);
+}
+
+[data-md-toggle='search']:checked ~ .md-header .md-search__overlay {
+  opacity: 0;
+}
+
+.md-search-result__link:focus,
+.md-search-result__link:hover {
+  background-color: var(--athens-gray);
+}
+
+@media screen and (min-width: 76.25em) {
+  [data-md-toggle='search']:checked ~ .md-header .md-search__inner,
+  .md-search__scrollwrap {
+    width: 25rem;
+    margin-right: -3em;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .md-search__output {
+    display: none;
+  }
+
+  .md-search__output.visible {
+    display: block;
+  }
+
+  [data-md-toggle='search']:checked ~ .md-header .md-search__form {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  [data-md-toggle='search']:checked ~ .md-header .md-search__output {
+    margin-top: 17px;
+    padding: 9px;
+    border-radius: 24px;
+    background: var(--md-default-bg-color);
+  }
+
+  [data-md-toggle='search']:checked
+    ~ .md-header
+    .md-search__input:valid
+    ~ .md-search__options
+    > .md-icon,
+  [data-md-toggle='search']:checked ~ .md-header .md-search__input,
+  [data-md-toggle='search']:checked
+    ~ .md-header
+    .md-search__input
+    + .md-search__icon {
+    color: var(--md-default-fg-color);
+    background: var(--md-default-bg-color);
+    border-top-right-radius: 5em;
+    border-bottom-right-radius: 5em;
+  }
+
+  [dir='ltr'] .md-search-result__meta {
+    padding: 0.2rem;
+    padding-left: 2.2rem;
+  }
+
+  [data-md-toggle='search']:checked
+    ~ .md-header
+    .md-search__input:valid
+    ~ .md-search__options
+    > .md-icon,
+  [data-md-toggle='search']:checked
+    ~ .md-header
+    .md-search__input
+    + .md-search__icon {
+    color: var(--black);
+  }
+}
+
+/** Left navigation styling **/
+.md-nav__link[for]:focus,
+.md-nav__link[for]:hover,
+.md-nav__link[href]:focus,
+.md-nav__link[href]:hover {
+  color: var(--pink);
+}
+
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code {
+  color: var(--black);
+}
+
+/* Render arrow next to expandable sections */
+.md-nav__link > * {
+  cursor: pointer;
+  display: flex;
+  flex: auto;
+  color: var(--black);
+  padding-right: 0.5em;
+}
+
+.md-nav__link:hover,
+.md-nav__link-wrapper.md-nav__item.md-nav__item--active,
+.md-nav__item div.md-nav__link--active {
+  background: var(--athens-gray);
+  border-radius: var(--border-radius);
+  margin-left: -1em;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-nav {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: var(--black);
+  }
+
+  [dir='ltr']
+    .md-nav[data-md-level='0']:not()
+    .md-nav__list:first-of-type
+    > .md-nav__item
+    > a.md-nav__link,
+  .md-nav__list .md-nav__item--section {
+    margin-top: 0;
+    margin-bottom: 1.25em;
+  }
+
+  /* Styling for root-level sections */
+  .md-nav--lifted
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link:not(.md-nav__container) {
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--mystic);
+    margin-left: -1em;
+    padding-left: 1em;
+    font-weight: 600;
+  }
+
+  /* Ensure the root-level section doesn't get indented when on it's index page */
+  .md-nav--lifted
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link:not(.md-nav__container)
+    a {
+    margin-left: 0;
+  }
+
+  /* Don't show arrow next to root-level sections */
+  .md-nav--lifted
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link:not(.md-nav__container)
+    > label {
+    display: none;
+  }
+
+  /* Top-level section title (not root-level) */
+  [dir='ltr']
+    .md-nav--primary
+    .md-nav__item--section.md-nav__item
+    > .md-nav__link {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6em;
+    padding-top: 0.362em;
+    padding-bottom: 0.362em;
+  }
+
+  /* Allow section headers to be clickable */
+  .md-nav--lifted
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link:not(.md-nav__container),
+  .md-nav__item--section > .md-nav__link:not(.md-nav__container) {
+    pointer-events: auto;
+  }
+
+  [dir='ltr'] .md-nav--primary .md-nav__item > .md-nav__link {
+    margin-right: 0;
+  }
+
+  /* Spacing styling */
+  .md-nav--primary .md-nav__list {
+    padding-bottom: 0;
+  }
+
+  [dir='ltr'] .md-nav--primary .md-nav__item > .md-nav__link {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin-top: 0.1em;
+    margin-right: 0;
+    margin-bottom: 0.1em;
+  }
+
+  [dir='ltr'] .md-nav--primary .md-nav__item > div.md-nav__link {
+    padding-top: 0.212em;
+    padding-bottom: 0.212em;
+  }
+
+  .md-nav__link {
+    margin-top: 0;
+  }
+
+  /* Remove spacing for items in expandable sections */
+  .md-nav__toggle ~ .md-nav > .nav-wrapper {
+    overflow: hidden;
+  }
+
+  /* Hover and active styling */
+  .md-nav__link:hover {
+    margin-left: -1.1em;
+    padding-left: 1.1em;
+  }
+
+  .md-nav__link-wrapper.md-nav__item.md-nav__item--active {
+    margin-left: -0.9em;
+    padding-left: 0.9em;
+  }
+
+  .md-nav__item div.md-nav__link--active {
+    margin-left: -1em;
+    padding-left: 0;
+    font-weight: 700;
+  }
+
+  /* For active sections, when on that section index page */
+  .md-nav__item .md-nav__link-wrapper.md-nav__link--active a,
+  .md-nav__item .md-nav__link--active a {
+    margin-left: 1em;
+    font-weight: 700;
+  }
+
+  /* For section links on hover */
+  .md-nav__link.md-nav__link--index:hover a {
+    color: var(--pink);
+  }
+
+  /* Ensure left navigation remains in place */
+  .md-header--lifted ~ .md-container .md-sidebar {
+    top: 3.8rem !important;
+  }
+
+  .md-sidebar__scrollwrap {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+  }
+
+  /* A root-level section (i.e., Develop) can have both sections (i.e., Toolkit) and 
+   individual pages (i.e. Development Pathways). We need to make sure that when the user 
+   is on an individual page, that the other sections do not show up in the left navigation.
+   Similarly, when the user is on a section, we need to make sure we're not showing the
+   individual pages in the left navigation. So, let's start with a clean slate and not display
+   any nav item. Then, we'll conditionally display the active section. Similarly, when on 
+   an individual page, we'll conditionally show the active page. */
+  .md-sidebar--primary .md-nav__list .md-nav__item > a.md-nav__link {
+    display: none;
+  }
+
+  /* Only show active section */
+  .md-sidebar--primary
+    .md-nav__list
+    .md-nav__item.md-nav__item--section.md-nav__item--active
+    a.md-nav__link {
+    display: block;
+  }
+
+  /* Only show active individual page */
+  .md-sidebar--primary .md-nav__list .md-nav__item--active > a.md-nav__link {
+    display: block;
+  }
+
+  /* To show only the active dropdown section on the left nav */
+  .md-nav > .md-nav__list .md-nav__item--section.md-nav__item--active,
+  .root-level-sidebar
+    .md-nav
+    > .md-nav__list
+    .md-nav__item--active
+    .md-nav__item,
+  .md-sidebar--primary
+    .root-level-sidebar
+    .md-nav__list
+    .md-nav__item
+    > a.md-nav__link {
+    display: block;
+  }
+
+  /** Show only active items **/
+  /* To hide the inactive dropdown sections on the left nav */
+  .md-nav > .md-nav__list .md-nav__item--section {
+    display: none;
+  }
+
+  /* Show the entire left navigation */
+  .root-subdirectory-page
+    + .md-sidebar--primary
+    .md-nav
+    > .md-nav__list
+    .md-nav__item--section,
+  .root-subdirectory-page
+    + .md-sidebar--primary
+    .md-nav__list
+    .md-nav__item
+    > a.md-nav__link {
+    display: block;
+  }
+}
+
+/* Styling for nav items that are active or hovered over on smaller screens */
+@media screen and (max-width: 76.2344em) {
+  .md-nav--primary .md-nav__title[for='__drawer'] {
+    background-color: var(--md-default-bg-color);
+    padding-bottom: 3em;
+    border-bottom: 1px solid var(--mystic);
+  }
+
+  .md-nav--primary .md-nav__link,
+  .md-nav--primary a.md-nav__link {
+    padding: 0.3rem 0.8rem;
+    color: var(--black);
+  }
+
+  .md-nav--primary .md-nav__link .md-nav__icon:after {
+    display: flex;
+  }
+
+  .md-nav--primary .md-nav__list {
+    flex: none;
+    display: grid;
+    margin-top: 1em;
+  }
+
+  .md-nav--primary .md-nav__title .md-nav__icon {
+    position: unset;
+    display: flex;
+  }
+
+  .md-nav--primary .md-nav__item--active > .md-nav__link,
+  .md-nav--primary .md-nav__item--active > .md-nav__link:hover,
+  .md-nav__link[href]:hover {
+    color: var(--black);
+  }
+
+  .md-nav--primary .md-nav__item--active > .md-nav__link {
+    background-color: var(--athens-gray);
+  }
+
+  .md-nav__item div.md-nav__link--active {
+    margin-left: 0;
+  }
+
+  /* Adjust size of arrows for sections in left nav */
+  .md-nav--primary .md-nav__link.md-nav__link--index .md-icon:after,
+  .md-nav--primary .md-nav__link.md-nav__link--index .md-nav__icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@media screen and (max-width: 76.1875em) {
+  /* Hide Nav Bar header label text - only show back arrow */
+  .md-nav--primary .md-nav__title {
+    height: 0;
+    padding: 1.5rem 0.5rem;
+    color: var(--black);
+    background-color: var(--md-default-bg-color);
+    border: 1px solid var(--mystic);
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  /* Remove lines between sidebar nav items*/
+  .md-nav--primary .md-nav__title ~ .md-nav__list {
+    box-shadow: none;
+  }
+
+  .md-nav--primary .md-nav__title ~ .md-nav__list[data-md-component='toc'] {
+    padding-top: 0;
+  }
+
+  .md-nav--primary .md-nav__item {
+    border-top: none;
+  }
+
+  /* Reset spacing */
+  .md-nav__link.md-nav__link--index,
+  .md-nav__link {
+    margin-top: 0;
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Nav hover styling active pages */
+  .md-nav__link:hover {
+    margin-left: unset;
+  }
+
+  /* Nav hover styling for sections */
+  div.md-nav__link:hover {
+    margin-left: 0;
+  }
+
+  /* Nav hover styling for pages */
+  a.md-nav__link:hover {
+    margin-left: 0;
+  }
+
+  /* TOC icon */
+  .md-nav__link--active > .md-nav__icon {
+    margin-left: 0.5em;
+  }
+
+  .md-nav__link-wrapper.md-nav__item.md-nav__item--active
+    .md-nav__link.md-nav__link--active {
+    display: none;
+  }
+}
+
+/** TOC Styling **/
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary .md-sidebar__inner {
+    border-left: 1px solid var(--mystic);
+  }
+
+  .md-sidebar--secondary {
+    width: 10rem;
+  }
+
+  .md-sidebar--secondary .md-sidebar__scrollwrap {
+    margin: 0;
+  }
+
+  .md-nav--secondary .md-nav__list {
+    padding-bottom: 0;
+  }
+
+  .md-nav--secondary .md-nav__title {
+    box-shadow: none;
+  }
+
+  .md-nav--secondary .md-nav__link {
+    margin-top: 0;
+    font-size: 12px;
+    padding-top: 0.362em;
+    padding-bottom: 0.362em;
+  }
+
+  .md-nav--secondary .md-nav__link > * {
+    color: var(--storm-gray);
+  }
+
+  .md-nav--secondary .md-nav__link.md-nav__link--active > * {
+    color: var(--black);
+    font-weight: 700;
+  }
+
+  .md-nav--secondary .md-nav__link.md-nav__link--active:hover > *,
+  .md-nav--secondary .md-nav__link:hover > * {
+    color: var(--pink);
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-nav--secondary .md-nav__link {
+    margin-top: 0;
+  }
+}
+
+/** TOC styling on smaller screens **/
+@media screen and (max-width: 59.9844em) {
+  .md-nav--primary .md-nav__link[for='__toc'] ~ .md-nav {
+    overflow: scroll;
+  }
+
+  /** Styling of icons in the navigation on smaller screens **/
+  /* Adjust size of the TOC icon in left nav */
+  .md-nav--primary
+    .md-nav__link--active.md-nav__link[for='__toc']
+    .md-icon:after,
+  .md-nav--primary .md-nav__link .md-nav__icon {
+    /* Override inline styling */
+    font-size: unset;
+    width: 36px;
+    max-width: 36px;
+  }
+}
+
+/** Main content styling **/
+@media screen and (min-width: 76.25em) {
+  [dir='ltr']
+    .md-sidebar--secondary:not([hidden])
+    ~ .md-content
+    > .md-content__inner,
+  [dir='rtl']
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin-right: 1rem;
+  }
+
+  [dir='ltr']
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin-left: 1rem;
+  }
+
+  .md-main__inner {
+    margin-top: 2rem;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 96.25em) {
+  [dir='rtl']
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin-right: 2rem;
+  }
+
+  [dir='ltr']
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 76.249em) {
+  [dir='ltr']
+    .md-sidebar--primary:not([hidden])
+    ~ .md-content
+    > .md-content__inner {
+    margin-left: 0;
+  }
+
+  .md-content__inner.md-typeset {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 76.2344em) {
+  .md-container {
+    position: unset;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .md-main {
+    padding: 0;
+  }
+
+  .md-header {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .md-header__inner {
+    margin-left: auto;
+    height: fit-content;
+  }
+}
+
+article.md-content__inner.md-typeset > h1:has(+ .badge) {
+  margin: 0 0 0.5em;
+}
+
+/** Footer styling **/
+.md-grid.md-footer-meta__inner {
+  padding: 0.75rem 1.5rem;
+  align-items: center;
+  max-width: 1600px;
+}
+
+.md-footer-meta__inner.md-grid img {
+  width: 126px;
+  height: max-content;
+  height: intrinsic; /* For Safari */
+}
+
+.md-footer-meta__inner.md-grid > div {
+  display: flex;
+  gap: 1em;
+}
+
+/* Policy and disclaimer links */
+.policy-links {
+  text-align: center;
+  font-size: 12px;
+}
+
+html .md-footer-meta.md-typeset .policy-links a {
+  text-decoration: none;
+  min-width: 100px;
+  height: auto;
+}
+
+html .md-footer-meta.md-typeset .policy-links a:hover {
+  background-color: unset;
+  color: var(--pink);
+  transition: none;
+}
+
+@media screen and (max-width: 48em) {
+  .md-grid.md-footer-meta__inner {
+    padding: 0.75rem 0;
+  }
+
+  .md-grid.md-footer-meta__inner {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .md-footer-meta__inner.md-grid > .policy-links {
+    flex-wrap: wrap;
+    padding: 1em 0;
+    justify-content: center;
+  }
+}
+
+/* Copyright styling */
+.md-copyright {
+  margin: 0;
+  margin-bottom: 0.1em;
+}
+
+.md-copyright__highlight {
+  font-weight: 600;
+  font-size: 14px;
+  color: #99a1bb;
+}
+
+/* Socials styling */
+html .md-footer-meta.md-typeset a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html .md-footer-meta.md-typeset a:focus,
+html .md-footer-meta.md-typeset a:hover {
+  background-color: #d5d4d8;
+  border-radius: 9999px;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 0.5s;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+}
+
+.md-social__link {
+  height: unset;
+  width: unset;
+}
+
+.md-social__link svg {
+  height: auto;
+  width: 32px;
+  max-height: unset;
+}
+
+/* Next and prev styling */
+.md-footer__link:focus,
+.md-footer__link:hover {
+  opacity: 1;
+}
+
+.md-footer__link:focus .md-footer__title .md-ellipsis,
+.md-footer__link:hover .md-footer__title .md-ellipsis {
+  color: var(--pink);
+}
+
+.md-footer__title .md-ellipsis {
+  font-size: 16px;
+}
+
+.md-footer__link {
+  align-items: center;
+}
+
+/* Back to top button */
+[dir='ltr'] .md-top {
+  left: 50%;
+  margin-left: 0;
+}
+
+/** API styling **/
+/* Remove inline code background */
+.md-typeset li > code,
+.md-typeset strong > code,
+.md-typeset a code,
+.md-typeset a:hover code,
+.md-typeset p code {
+  background-color: unset;
+}
+
+/* Types styling */
+/* Remove type background and adjust font size */
+.md-typeset kbd {
+  background-color: unset;
+  font-size: 0.7em;
+  padding-left: 0;
+  border-radius: 1em;
+  vertical-align: baseline;
+  box-shadow: none;
+}
+
+/* Add background for required parameters */
+.md-typeset .required kbd {
+  background-color: rgba(255, 0, 0, 0.3);
+  color: var(--black);
+  text-transform: capitalize;
+  padding-left: 0.6666666667em;
+}
+
+/* Code Admonition */
+
+.md-typeset .admonition.code,
+.md-typeset details.code {
+  border-color: var(--md-code-admo-border-color);
+}
+
+.md-typeset .code > .admonition-title,
+.md-typeset .code > summary {
+  background-color: var(--md-code-admo-title-bg);
+}
+
+.md-typeset .code > .admonition-title::before,
+.md-typeset .code > summary::before {
+  background-color: var(--md-code-admo-border-color);
+  -webkit-mask-image: var(--md-admonition-icon--code);
+  mask-image: var(--md-admonition-icon--code);
+}
+
+/* Child Admonition */
+.api-reference-link {
+  position: absolute;
+  margin-top: -1em;
+  left: 69%;
+}
+
+details.child summary::before {
+  display: none;
+}
+
+details.child {
+  width: fit-content;
+}
+
+[dir='ltr'] .md-typeset details.child summary {
+  width: fit-content;
+  padding-left: 1em;
+}
+
+[dir='ltr'] .md-typeset details.child[open] {
+  width: 100%;
+}
+
+.md-typeset details.child summary {
+  background-color: unset;
+}
+
+.md-typeset details.child {
+  width: fit-content;
+  border: 1px solid var(--mystic);
+  box-shadow: none;
+}
+
+/* Interface admonition */
+details.interface > summary::before {
+  display: none;
+}
+
+.md-typeset details.interface {
+  border: 1px solid var(--mystic);
+  box-shadow: none;
+}
+
+[dir='ltr'] .md-typeset details.interface > summary {
+  padding: 1em 0 1em 1em;
+  background-color: var(--athens-gray);
+}
+
+.md-typeset details.interface > summary:after {
+  top: auto;
+}
+
+.md-typeset details.interface {
+  width: 100%;
+}
+
+.md-typeset
+  details.interface
+  .tabbed-set
+  > input:first-child:checked
+  ~ .tabbed-labels
+  > :first-child,
+.md-typeset
+  details.interface
+  .tabbed-set
+  > input:nth-child(2):checked
+  ~ .tabbed-labels
+  > :nth-child(2) {
+  color: var(--white);
+}
+
+/* Styling for the Copy to Clipboard */
+/* Clipboard icon */
+.md-clipboard {
+  color: var(--storm-gray);
+}
+
+.md-clipboard:focus,
+.md-clipboard:hover {
+  color: var(--pink);
+}
+
+/* "Copied to clipboard" pop-up */
+.md-dialog {
+  text-align: center;
+}
+
+/* Make sure the clipboard icon isn't on top of the code */
+.md-typeset pre > code {
+  white-space: break-spaces;
+  padding-right: 3em;
+}
+
+/** Button styling **/
+.md-typeset .md-button {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Unbounded';
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 22px;
+  line-height: 17.36px;
+  border-radius: 12px;
+  border: 1px solid var(--black);
+}
+
+.md-typeset .md-button:hover {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.md-typeset .md-button.secondary {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--mystic);
+}
+
+.md-typeset .md-button.secondary:hover {
+  background-color: var(--pink);
+  color: var(--white);
+  border: 1px solid var(--pink);
+}
+
+/** Back to top button styling **/
+.md-top {
+  top: unset !important; /* To override inline styling */
+  bottom: 75px;
+}
+
+/** Table styling **/
+.md-typeset table:not([class]) {
+  border-radius: 6px;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--athens-gray);
+  color: var(--black);
+}
+
+.md-typeset table:not([class]) td {
+  vertical-align: middle;
+}
+
+/* Tables centered */
+.md-typeset__scrollwrap {
+  text-align: center;
+}
+
+/** Tabbed element styling **/
+/* Tables in tabs */
+.tabbed-content .md-typeset__scrollwrap {
+  margin: 0;
+}
+
+.tabbed-content .md-typeset__table {
+  display: inline-table;
+  margin-bottom: 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+/* Tabbed Styling */
+.md-typeset .tabbed-labels {
+  box-shadow: none;
+  padding: 0.2em;
+}
+
+.md-typeset .tabbed-set {
+  background: var(--storm-gray);
+  border-radius: 16px;
+}
+
+.md-typeset .tabbed-content {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--mystic);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.md-typeset .tabbed-labels > label,
+.md-typeset .tabbed-labels > label > [href]:first-child,
+.md-typeset .tabbed-labels > label > a > code {
+  color: var(--white);
+}
+
+.md-typeset .tabbed-labels--linked > label > a {
+  text-decoration: none;
+}
+
+.js .md-typeset .tabbed-labels:before {
+  background: #40465c;
+  height: 4px;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  color: var(--white);
+}
+
+/* Add margin to all items nested inside a tabbed element */
+.md-typeset .tabbed-block > *,
+/* Need this line to override inline styling */
+.md-typeset .tabbed-block > .tabbed-set {
+  margin: 1em;
+}
+
+/* Specifically remove the margin on code inside a tabbed element */
+.md-typeset .tabbed-block .highlight:first-child {
+  margin: 0;
+}
+
+/* Adjust border of code elements nested inside tabbed elements */
+.md-typeset .tabbed-block > .highlight:first-child > pre > code,
+.md-typeset .tabbed-block > pre:first-child > code {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/** Feedback widget styling **/
+.md-feedback {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+.md-feedback__title {
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
+
+.md-feedback__list {
+  margin-top: 0.75em;
+  gap: 1em;
+  margin-bottom: 0.75em;
+}
+
+.md-feedback__icon,
+.md-feedback__list:hover .md-icon:not(:disabled) {
+  color: var(--heather);
+}
+
+.md-feedback__icon:not(:disabled).md-icon:hover {
+  color: var(--pink);
+}
+
+.md-feedback__note {
+  font-size: 12px;
+}
+
+.feedback-actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--mystic);
+  border-radius: 16px;
+  padding: 1.5em;
+  width: calc(100% - 2em);
+  margin-top: 2rem;
+}
+
+.feedback-actions-container .divider {
+  height: 1px;
+  background-color: var(--mystic);
+  margin: 0.75em auto 0;
+}
+
+/* Styles to override unordered list defaults */
+/* Unordered list <ul> symbols:
+ * - level 2 is hollow circle
+ * - level 3 is filled square
+ * - ul default is filled disc (bullet)
+ */
+ul:not(nav ul) ul {
+  list-style-type: circle !important;
+}
+
+ul:not(nav ul) ul ul {
+  list-style-type: square !important;
+}
+
+/* Mermaid diagram styling */
+div.mermaid {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Card styling (as seen in Develop > Integrations section) */
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  box-shadow: unset;
+}
+
+.md-typeset .grid.cards .twemoji {
+  padding-right: 0.5em;
+}
+
+/* Additional card styling (as seen on the Develop index page) */
+.md-typeset .grid.cards:not(.links) > ul > li > :last-child:has(> a) {
+  margin-top: auto;
+  padding-top: 1em;
+}
+
+.md-typeset .grid.cards h3 {
+  margin: 0;
+  font-size: 1.15em;
+  display: flex;
+}
+
+.md-typeset .grid.cards.links > ul > li > a {
+  padding: 0.25em 0;
+}
+
+.md-typeset .grid.cards.links ul > li > p {
+  margin: 0;
+}
+
+.md-typeset .grid.cards.links .twemoji {
+  height: auto;
+  width: 1.75em;
+}
+
+/* Cards with lists */
+.md-typeset .grid.cards ul li ul.card-list {
+  margin: 0;
+}
+
+.md-typeset ul.card-list > li {
+  list-style: none;
+  margin: 0.25em 0;
+}
+
+.md-typeset ul.card-list > li a {
+  display: flex;
+  align-items: center;
+}
+
+.md-typeset .grid.cards > ul > li > hr, .md-typeset .grid.cards > ol > li > hr, .md-typeset .grid > .card > h {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+/** Kapa styling **/
+.mantine-r39cu6 {
+  height: 3rem;
+}
+
+.mantine-120ms1q {
+  font-size: 16px;
+}
+
+.mantine-1p3no9p {
+  height: 0.9rem !important;
+  width: 0.9rem !important;
+}
+
+.mantine-1wkdfe1 {
+  font-size: 12px;
+}
+
+/** Badge Styling */
+/* Basic style */
+span.badge {
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  white-space: nowrap;
+}
+
+/* Color Variants */
+span.badge.tutorial {
+  background-color: var(--electric-violet);
+  color: var(--white);
+}
+
+span.badge.guide {
+  background-color: var(--chartreuse);
+  color: var(--black);
+}
+span.badge.learn {
+  background-color: var(--aqua);
+  color: var(--black);
+}
+span.badge.external {
+  background-color: var(--blue-ribbon);
+  color: var(--white);
+}
+
+span.badge.beginner,
+span.badge.intermediate,
+span.badge.advanced {
+  background-color: var(--storm-gray);
+  color: var(--white);
+}
+
+/* Badge in card "Where to Go Next" */
+.grid.cards span.badge {
+  margin-right: 0.5em;
+}
+
+/* Badge in Content Page */
+.md-typeset > span.badge {
+  display: inline-block;
+}
+
+/* Document date styling */
+.md-source-file {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-source-file small {
+  display: flex;
+  justify-content: center;
+}
+
+.source-file-label {
+  margin-right: 0.5em;
+}
+
+.source-file-seperator {
+  margin: 0 0.5em;
+}
+
+@media screen and (max-width: 30em) {
+  .source-file-seperator {
+    display: none;
+  }
+
+  .actions {
+    margin: 2em auto 0;
+  }
+
+  .md-source-file small {
+    display: block;
+    text-align: center;
+  }
+}
+
+/** Screnshot styling **/
+img.browser-extension {
+  display: block;
+  margin: auto;
+}
+
+/** Announcement banner styling */
+.announce.hideable {
+  z-index: 1;
+}
+
+.md-banner {
+  background-color: var(--mystic);
+  text-align: center;
+}
+
+/** MetaMask connection button styling **/
+div.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+div.button-wrapper > a.connectMetaMask {
+  text-decoration: none;
+}
+
+.md-typeset img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
