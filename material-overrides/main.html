@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
 {% block announce %}
-<p>
-    Join the Web3 Summit in Berlin 16-18th July 👉
-    <a href="https://ti.to/web3-summit/web3-summit-2025" target="_blank" rel="noopener noreferrer">Register
-        Here</a>
-</p>
-{{ super () }}
+<div class="announcement-bar">
+  <span class="announcement-text">
+    Join the Web3 Summit in Berlin 16–18 July 👉
+  </span>
+  <a class="announcement-link" href="https://ti.to/web3-summit/web3-summit-2025" target="_blank" rel="noopener noreferrer">
+    Register Here
+  </a>
+</div>
+{{ super() }}
 {% endblock %}
 
 {% block styles %}
