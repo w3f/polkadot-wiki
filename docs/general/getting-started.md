@@ -16,7 +16,7 @@ Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Le
 
 **Polkadot is a Web3 service provider**: it provides secure and resilient computation and interoperability for any application connected to its network. Applications can be fully-fledged blockchains deployed as rollups on Polkadot (also known as [parachains](../learn/learn-parachains.md)). Instead of bootstrapping their security, rollups can connect to Polkadot via its virtual cores by buying [coretime](../learn/learn-agile-coretime.md) with DOT and tap into Polkadot's multi-billion shared security. By doing so, they inherently access Polkadot's secure interoperability and can communicate with other applications running on different cores of Polkadot's virtual CPU.
 
-Polkadot decentralized computer is owned by the [DOT token](../learn/learn-DOT.md) holders who can shape its future through on-chain [governance](../learn/learn-polkadot-opengov.md) (also called Polkadot
+Polkadot is owned by the [DOT token](../learn/learn-DOT.md) holders who can shape its future through on-chain [governance](../learn/learn-polkadot-opengov.md) (also called Polkadot
 OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md). Technical changes to the protocol's code are enacted and implemented automatically. Token holders can cast [direct votes](../learn/learn-polkadot-opengov.md#voting-on-a-referendum), [delegate their voting power](../learn/learn-polkadot-opengov.md#multirole-delegation) to entities and DAOs they trust, and place deposits for their referenda or referenda proposed by others.
 
