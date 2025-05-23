@@ -4,6 +4,9 @@
 }
 
 .home-container {
+  background-image: url('../images/gradient.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
   margin-top: calc(
     -1 * var(--adjust-header-height)
   ); /* Use a negative value to push the gradient to cover behind the header */
