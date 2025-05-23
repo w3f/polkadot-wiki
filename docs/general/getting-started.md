@@ -10,7 +10,7 @@ template: explore-cards.html
 
 Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Let's break it down bit by bit:
 
-- **blockchain-powered:** Polkadot at its heart has a blockchain that permanently and immutably stores sensitive information about the protocol and applications running on top of it
+- **blockchain-based:** Polkadot at its heart has a blockchain that permanently and immutably stores sensitive information about the protocol and applications running on top of it
 - **multi-core:** Like traditional computers, Polkadot has a virtual CPU with multiple virtual cores
 - **decentralized cloud computer:** Instead of being run by a single entity, Polkadot is run by real computers owned by different operators (validators) scattered around the globe, part of a decentralized peer-to-peer network
 
