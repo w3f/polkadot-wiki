@@ -1,0 +1,110 @@
+{% extends "main.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/index-page.css' | url }}">
+{% endblock %}
+
+{% macro find_active_page(element, nav) %}
+  {% for nav_item in element %}
+    {% if nav_item.active %}
+      {% if nav_item.is_section %}
+        {{ find_active_page(nav_item.children, nav) }}
+      {% else %}
+        {% if nav_item.is_page %}
+          <div class="subsection-wrapper">
+            {% set description = "" %}
+            {% for nav_item in element[1:] %}
+              {% if nav_item.is_section %}
+                {% set subsection_path = nav_item.children[0].url %}
+                {% set description = nav_item.children[0].meta.description %}
+              {% else %}
+                {% set subsection_path = nav_item.url %}
+                {% if nav_item.meta %}
+                  {% set description = nav_item.meta.description %}
+                {% endif %}
+              {% endif %}
+              {% if ".index" in page.url %}
+                {% set subsection_path = "/" + subsection_path %}
+              {% else %}
+                {% set subsection_path = subsection_path|replace(page.url, '') %}
+              {% endif %}
+
+              <div class="card">
+                <a href="{{ subsection_path }}">
+                  <div class="card-header">
+                    {% if nav_item.meta and nav_item.meta.tutorial_badge %}
+                      <span class="badge {{ nav_item.meta.tutorial_badge | lower }}">
+                        {{ nav_item.meta.tutorial_badge | capitalize }}
+                      </span>
+                    {% endif %}
+                    <h2 class="title">{{ nav_item.title }}</h2>
+                  </div>
+
+                  <hr>
+
+                  {% if description != "" %}
+                    <p class="description">{{ description }}</p>
+                  {% else %}
+                    {% if nav_item.is_link %}
+                      {% if '#' in nav_item.url %}
+                        {% set nav_item_url = nav_item.url.split('#')[0] %}
+                      {% else %}
+                        {% set nav_item_url = nav_item.url %}
+                      {% endif %}
+                      {% if nav_item_url.startswith('/') %}
+                        {% set nav_item_url = nav_item_url[1:] %}
+                      {% endif %}
+
+                      {% for nav_child in nav.children %}
+                        {{ find_desc_for_linked_pages(nav_child, nav_item_url, description) }}
+                      {% endfor %}
+                    {% endif %}
+                  {% endif %}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{% macro find_desc_for_linked_pages(nav, nav_item_url, description) %}
+  {% if nav.is_section %}
+    {% for nav_item in nav.children %}
+      {% if nav_item.is_page and nav_item.url in nav_item_url %}
+        {% if nav_item.url == nav_item_url %}
+          <p class="description">{{ nav_item.meta.description }}</p>
+          {% set description = nav_item.meta.description %}
+        {% endif %}
+      {% endif %}
+      {% if description == "" %}
+        {{ find_desc_for_linked_pages(nav_item, nav_item_url, description) }}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
+
+{% block content %}
+  {% set insert_marker = ':::INSERT_IN_THIS_SECTION:::' %}
+  {% if insert_marker in page.content %}
+    {% set parts = page.content.split(insert_marker) %}
+    {% set dynamic_html %}
+      <div class="subsection-page">
+        {% if nav|length > 1 %}
+          {% for nav_item in nav %}
+            {% if nav_item.is_section and nav_item.active %}
+              {{ find_active_page(nav_item.children, nav_item) }}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endset %}
+    {% set modified_content = parts[0] | safe + (dynamic_html | safe) + parts[1] | safe %}
+    {{ modified_content | safe }}
+  {% else %}
+    {{ page.content | safe }}
+  {% endif %}
+{% endblock %}

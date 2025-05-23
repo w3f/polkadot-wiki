@@ -1,0 +1,252 @@
+/** This is a modified version of the `timelinet.scss` stylesheet from
+Neoteroi Mkdocs timeline extension: https://github.com/Neoteroi/mkdocs-plugins/blob/main/styles/timeline.scss **/
+
+/** Timeline CSS **/
+
+/* displays if timeline doesn't render properly 
+(bad file path to JSON, etc)*/
+.nt-error {
+    border: 2px dashed darkred;
+    padding: 0 1rem;
+    background: #faf9ba;
+    color: darkred;
+  }
+  
+  /* main timeline element*/
+  .nt-timeline {
+    /* top margin entire element */
+    margin-top: 30px;
+    /* adjust to control width of total timeline element*/
+    max-width: 80%;
+  
+    /* heading name for each item on timeline */
+    .nt-timeline-title {
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+  
+    /** content blocks for each timeline item**/
+    /** border between timeline items **/
+    .nt-timeline-content {
+      border-bottom: 2px dashed var(--athens-gray);
+      padding-bottom: 1.2rem;
+    }
+  
+    &.horizontal {
+      .nt-timeline-items {
+        flex-direction: row;
+        overflow-x: scroll;
+  
+        > div {
+          min-width: 400px;
+          margin-right: 50px;
+        }
+      }
+  
+      &.reverse {
+        .nt-timeline-items {
+          flex-direction: row-reverse;
+        }
+      }
+      /* base gradient set up*/
+      &.center {
+        .nt-timeline-before {
+          background-image: linear-gradient(
+            rgba(255, 38, 112, 1) 0%,
+            rgba(255, 38, 112, 1) 100%
+          );
+          background-repeat: no-repeat;
+          background-size: 100% 2px;
+          background-position: 0 center;
+        }
+  
+        .nt-timeline-after {
+          background-image: linear-gradient(
+            180deg,
+            rgba(110, 115, 145, 0) 0%,
+            rgba(110, 115, 145, 0) 100%
+          );
+          background-repeat: no-repeat;
+          background-size: 100% 2px;
+          background-position: 0 center;
+        }
+  
+        .nt-timeline-items {
+          background-image: radial-gradient(
+            circle,
+            rgba(255, 38, 112, 1) 0%,
+            rgba(110, 115, 145, 0) 100%
+          );
+          background-repeat: no-repeat;
+          background-size: 100% 2px;
+          background-position: 0 center;
+        }
+      }
+  
+      .nt-timeline-dot {
+        left: 50%;
+  
+        &:not(.bigger) {
+          top: calc(50% - 4px);
+        }
+  
+        &.bigger {
+          top: calc(50% - 15px);
+        }
+      }
+    }
+  
+    &.vertical {
+      .nt-timeline-items {
+        flex-direction: column;
+      }
+  
+      &.reverse {
+        .nt-timeline-items {
+          flex-direction: column-reverse;
+        }
+      }
+  
+      &.left {
+        padding-left: 20px;
+  
+        .nt-timeline-item {
+          padding-left: 70px;
+        }
+  
+        /* set gradient for left aligned timeline*/
+        /* px here control left margin/width of timeline */
+        .nt-timeline-before {
+          background: linear-gradient(
+            rgba(121, 22, 243, .3) 0%,
+            rgba(121, 22, 243, .7) 100%
+            )
+            no-repeat 30px/2px 100%;
+        }
+  
+        .nt-timeline-after {
+          background: linear-gradient(
+            rgba(110, 115, 145, 0) 0%,
+            rgba(110, 115, 145, 0) 100%
+            )
+            no-repeat 30px/2px 100%;
+          display: none;
+        }
+  
+        .nt-timeline-items {
+          background: linear-gradient(
+            rgba(121, 22, 243, 0.7) 0%,
+            rgba(121, 22, 243, 0.3) 50%, 
+            rgba(255, 255, 255, 1) 100% 
+            )
+            no-repeat 30px/2px 100%;
+        }
+  
+        .nt-timeline-dot {
+          left: 21px;
+          top: 0px;
+  
+          &.bigger {
+            top: 0px;
+            left: 10px;
+            background: var(--white);
+          }
+        }
+      }
+    }
+  }
+  
+  /* sets height, padding for each item on timeline */
+  .nt-timeline-items {
+    display: flex;
+    position: relative;
+  
+    > div {
+      min-height: 100px;
+      padding-top: 2px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  /* set height for timeline gradient above the first item */
+  .nt-timeline-before {
+    content: '';
+    height: 15px;
+  }
+  
+  .nt-timeline-item {
+    position: relative;
+  }
+  
+  /* circles around icons*/
+  
+  .nt-timeline-dot {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  
+    border-radius: 100%;
+    background-color: var(--white);
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* border around each icon */
+    border: 2px solid var(--storm-gray);
+  
+    &:not(.bigger) {
+      .icon {
+        font-size: 10px;
+      }
+    }
+  
+    &.bigger {
+      width: 40px;
+      height: 40px;
+      padding: 3px;
+    }
+  
+    .icon {
+      color: var(--storm-gray);
+      position: relative;
+      top: 2px;
+    }
+  }
+  
+  /* Fix for webkit (Chrome, Safari) */
+  @supports not (-moz-appearance: none) {
+    /* The extension dev created this and the following note */
+    /*
+    This fix is necessary, for some reason, to render the timeline properly
+    inside `details` elements used by pymdownx. Firefox doesn't need this fix,
+    it renders elements properly.
+    */
+    details {
+      .nt-timeline.vertical.center.alternate
+        .nt-timeline-item:nth-child(odd)
+        .nt-timeline-sub-title,
+      .nt-timeline.vertical.center:not(.alternate)
+        .nt-timeline-item
+        .nt-timeline-sub-title {
+        left: -40px;
+      }
+  
+      .nt-timeline.vertical.center.alternate
+        .nt-timeline-item:nth-child(even)
+        .nt-timeline-sub-title {
+        right: -40px;
+      }
+  
+      .nt-timeline.vertical.center .nt-timeline-dot {
+        left: calc(50% - 12px);
+      }
+  
+      .nt-timeline-dot.bigger {
+        font-size: 1rem !important;
+      }
+    }
+  }

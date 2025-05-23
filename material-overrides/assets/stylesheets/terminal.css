@@ -1,0 +1,112 @@
+[data-termynal] {
+  max-width: 100%;
+  background: #101010;
+  color: var(--white);
+  font-size: 13px;
+  font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier,
+    monospace;
+  border-radius: 4px;
+  padding: 50px 30px 20px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[data-termynal]:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #d9515d;
+  -webkit-box-shadow: 22.5px 0 0 #f4c025, 45px 0 0 #3ec930;
+  box-shadow: 22.5px 0 0 #f4c025, 45px 0 0 #3ec930;
+}
+
+[data-termynal]:after {
+  content: 'bash';
+  position: absolute;
+  color: #a2a2a2;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+[data-termynal] a,
+.md-typeset [data-termynal] pre {
+  color: var(--white);
+}
+
+.md-typeset [data-termynal] pre {
+    white-space: break-spaces;
+}
+
+[data-ty] {
+  display: block;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  white-space-collapse: preserve;
+}
+
+[data-ty]:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[data-ty='input']:before,
+[data-ty-prompt]:before {
+  color: var(--pink);
+  content: 'papermoon@ubuntu-jammy:';
+  size: 12px;
+}
+
+.file-path:before {
+  content: '~$';
+  color: var(--blue);
+  margin-right: 0.75em;
+}
+
+[data-ty][data-ty-prompt]:before {
+  content: attr(data-ty-prompt);
+}
+
+/* For tables in terminal elements (see Zombienet page for example) */
+.md-typeset .table-termynal [data-ty] {
+  white-space-collapse: unset;
+}
+
+.md-typeset .table-termynal table:not([class]) {
+  border: none;
+}
+
+.md-typeset .table-termynal .md-typeset__table table th.left-header {
+  border-bottom: 0.05rem solid rgba(255, 255, 255, 0.4);
+  border-right: 0.05rem solid rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.md-typeset .table-termynal .md-typeset__table table th.center-header {
+  text-align: center;
+  width: 100%;
+  color: var(--white);
+  background-color: var(--pink);
+}
+
+.md-typeset .table-termynal table:not([class]) td {
+  background-color: var(--black);
+  border-color: rgba(255, 255, 255, 0.4);
+  border-top: none;
+  border-bottom: 0.05rem solid rgba(255, 255, 255, 0.4);
+}
+
+.md-typeset .table-termynal table:not([class]) tr:last-child th,
+.md-typeset .table-termynal table:not([class]) tr:last-child td {
+  border-bottom: none;
+}

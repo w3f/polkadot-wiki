@@ -1,0 +1,432 @@
+:root {
+  --adjust-header-height: 8em;
+  --min-padding: 0 3em;
+}
+
+.home-container {
+  background-image: url('../images/gradient.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: calc(
+    -1 * var(--adjust-header-height)
+  ); /* Use a negative value to push the gradient to cover behind the header */
+  display: flex;
+  flex-direction: column;
+  gap: var(--adjust-header-height);
+}
+
+.md-main,
+.md-container {
+  padding: 0;
+}
+
+.hero-section,
+.feature-section,
+.cta-section {
+  max-width: var(--max-page-width);
+  width: 100%;
+  margin: auto;
+  padding: 0 var(--page-padding);
+}
+
+.md-header {
+  height: var(--adjust-header-height);
+}
+
+.md-grid {
+  max-width: none;
+}
+
+.md-main__inner {
+  display: block;
+}
+
+.md-tabs__list {
+  padding-left: 12px;
+}
+
+.md-typeset img {
+  border-radius: unset;
+  box-shadow: unset;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--adjust-header-height);
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 44%;
+}
+
+.md-typeset .hero-content h1 {
+  font-size: 2.773rem;
+  margin-bottom: 0.5em;
+  line-height: 1;
+}
+
+.hero-content p {
+  font-size: 18px;
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 2em;
+  width: 100%;
+}
+
+.md-typeset .button-wrapper a {
+  flex: 1 1 0%;
+}
+
+.md-typeset .button-wrapper a .md-button {
+  width: 100%;
+  height: 100%;
+}
+
+.tutorial-cards {  
+  width: 44%;
+  display: grid;
+  gap: 1.5em;
+  max-width: 800px;
+  grid-template-rows: auto;
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-columns: 1fr 1fr;
+}
+
+.md-typeset a.tutorial-card {
+  background-color: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--mystic);
+  padding: 1em;
+  text-decoration: none;
+  position: relative;
+  min-height: 200px;
+}
+
+.md-typeset a.tutorial-card:first-child {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.md-typeset a.tutorial-card:nth-child(2) {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  align-self: center;
+  margin-bottom: 1.5em;
+}
+
+.md-typeset a.tutorial-card:nth-child(3) {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.md-typeset a.tutorial-card:hover h3,
+.md-typeset a.feature:hover h3 {
+  color: var(--pink);
+}
+
+.md-typeset a.tutorial-card .md-icon svg {
+  width: 32px;
+  height: 32px;
+  max-width: unset;
+  fill: var(--black);
+}
+
+.tutorial-card .column:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.tutorial-card h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.tutorial-card .tutorial-number {
+  font-size: 22px;
+  vertical-align: bottom;
+}
+
+.tutorial-card p {
+  font-size: 16px;
+}
+
+.feature-intro {
+  margin: auto;
+  max-width: 880px;
+}
+
+.md-typeset .feature-intro h2 {
+  font-size: 1.659rem;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+.featured-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 48px;
+  margin: auto;
+  padding: 2em 2em 0;
+}
+
+.md-typeset a.feature {
+  color: var(--md-default-fg-color);
+  flex: 1 1;
+  border: 1px solid var(--mystic);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.md-typeset a.feature h3 {
+  font-size: 1.382rem;
+  color: var(--black);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.md-typeset .featured-content a {
+  text-decoration: none;
+  background-color: var(--white);
+}
+
+.md-typeset a.feature .column:first-child {
+  width: 83.3%;
+  height: 100%;
+}
+
+.feature p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.md-typeset a.feature .md-icon svg {
+  width: 32px;
+  height: 32px;
+  max-width: unset;
+  fill: var(--black);
+}
+
+.feature a {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.feature a svg {
+  margin-left: 0.3em;
+}
+
+.cta-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+  margin-bottom: 3em;
+}
+
+.final-cta {
+  min-height: 360px;
+  border-radius: 16px;
+  border: 1px solid var(--mystic);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.final-cta:first-child {
+  background-image: url('../images/home-card-1.webp');
+}
+
+.final-cta:last-child {
+  background-image: url('../images/home-card-2.webp');
+}
+
+.final-cta-content {
+  width: unset;
+  min-height: 360px;
+  border-radius: 16px;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0.38%,
+    rgba(0, 0, 0, 0.5) 97.35%
+  );
+  padding: 0 3em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.md-typeset .final-cta h2 {
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.md-typeset .final-cta p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.md-typeset .final-cta .md-button {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 76.2344em) {  
+  .hero-section {
+    gap: 3em;
+  }
+
+  .hero-content {
+    justify-items: center;
+    width: unset;
+    max-width: unset;
+  }
+
+  .md-typeset .hero-content h1 {
+    line-height: 1;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .tutorial-cards {
+    max-width: unset;
+    width: unset;
+  }
+
+  .feature-intro {
+    max-width: unset;
+  }
+
+  .featured-content {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .md-typeset a.feature {
+    min-width: 60%;
+    max-width: 75%;
+  }
+
+  .cta-section .final-cta,
+  .final-cta-content {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 66.2344em) {  
+  .hero-section {
+    flex-wrap: wrap;
+    gap: 5em;
+  }
+
+  .tutorial-cards {
+    grid-auto-rows: auto;
+  }
+
+  .md-typeset a.tutorial-card {
+    min-height: unset;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .home-container {
+    gap: 4em;
+  }
+
+  .hero-section,
+  .feature-section,
+  .cta-section {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    word-break: break-word;
+  }
+
+  .md-typeset .hero-content h1 {
+    font-size: 1.659rem;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tutorial-cards {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tutorial-cards,
+  .featured-content,
+  .cta-section {
+    gap: 36px;
+  }
+
+  .md-typeset a.tutorial-card {
+    width: 100%;
+  }
+
+  .md-typeset a.tutorial-card:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .md-typeset .feature-intro h2 {
+    font-size: 1.382rem;
+  }
+
+  .featured-content {
+    padding: 0;
+  }
+
+  .md-typeset a.feature h3 {
+    font-size: 1rem;
+  }
+
+  .md-typeset a.feature {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .feature p,
+  .md-typeset .final-cta p {
+    font-size: 16px;
+  }
+
+  .cta-section {
+    flex-direction: column;
+    padding-bottom: 3em;
+  }
+
+  .final-cta {
+    min-height: unset;
+  }
+
+  .final-cta-content {
+    min-height: unset;
+  }  
+
+  .md-typeset .final-cta h2 {
+    font-size: 1.382rem;
+  }
+
+  .final-cta-content {
+    padding: 1.5em;
+  }
+
+  .md-typeset .final-cta .md-button {
+    margin-top: unset;
+  }
+}

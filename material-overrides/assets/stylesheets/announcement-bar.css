@@ -1,0 +1,31 @@
+.md-banner {
+  background-color: #e6007a;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em 1.2em;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.md-banner p {
+  margin: 0;
+  font-weight: 500;
+  flex: 1 1 100%;
+}
+
+.md-banner a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .md-banner {
+    font-size: 14px;
+    padding: 1em;
+  }
+}
