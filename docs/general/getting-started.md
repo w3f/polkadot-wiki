@@ -12,7 +12,7 @@ Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Le
 
 - **blockchain-powered:** Polkadot at its heart has a blockchain that permanently and immutably stores sensitive information about the protocol and applications running on top of it
 - **multi-core:** Like traditional computers, Polkadot has a virtual CPU with multiple virtual cores
-- **decentralized cloud computer:** Instead of being run by a single entity, Polkadot is run by real computers owned by different operators scattered around the globe, part of a decentralized peer-to-peer network
+- **decentralized cloud computer:** Instead of being run by a single entity, Polkadot is run by real computers owned by different operators (validators) scattered around the globe, part of a decentralized peer-to-peer network
 
 **Polkadot is a Web3 service provider**: it provides secure and resilient computation and interoperability for any application connected to its network. Applications can be fully-fledged blockchains deployed as rollups on Polkadot (also known as [parachains](../learn/learn-parachains.md)). Instead of bootstrapping their security, rollups can connect to Polkadot via its virtual cores by buying [coretime](../learn/learn-agile-coretime.md) with DOT and tap into Polkadot's multi-billion shared security. By doing so, they inherently access Polkadot's secure interoperability and can communicate with other applications running on different cores of Polkadot's virtual CPU.
 
