@@ -105,4 +105,4 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
   [Kusama treasury](https://kusama.subsquare.io/referenda/102). The platform also hosts
   [Substrate in Bits](https://polkadot.study/tutorials/substrate-in-bits/), a technical content
   series aimed at solving the pain points of developers building with
-  [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) and [Rust](https://www.rust-lang.org/).
+  [Polkadot SDK (Substrate)](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) and [Rust](https://www.rust-lang.org/).
