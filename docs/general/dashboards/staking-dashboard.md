@@ -88,7 +88,7 @@ This page of the dashboard has six main panels:
 Note that Sections A and B will always be visible while you use the dashboard.
 
 - **Section C: The Stats Panel** shows the general view of current staking metrics, including the historical reward rate (including after
-  [inflation](../../learn/learn-inflation.md)), the supply staked and time remaining
+  [inflation](../../learn/learn-DOT.md#dot-inflation)), the supply staked and time remaining
   in the current era.
 
 - **Section D: The Summary Panel** shows your current situation and gives you general tips about

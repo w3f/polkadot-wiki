@@ -5,7 +5,7 @@ description: Learn about Polkadot's on-chain treasury, its inflow and outflow me
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
 [transaction fees](./learn-transactions.md#transaction-fees), [slashing](./learn-offenses.md), and
-[staking inefficiencies](./learn-inflation.md). Treasury funds are held in a
+[staking inefficiencies](./learn-DOT.md#dot-inflation). Treasury funds are held in a
 [system account](./learn-account-advanced.md#system-accounts) that cannot be controlled by any
 external account; only the system internal logic can access it.
 
