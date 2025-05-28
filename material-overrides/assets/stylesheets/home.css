@@ -50,6 +50,16 @@
   box-shadow: unset;
 }
 
+.md-typeset a.tutorial-card img.tutorial-card-image {
+  display: block;
+  margin: 0 auto 1em auto;
+  max-width: 150px;
+  max-height: 150px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -105,7 +115,8 @@
   padding: 1em;
   text-decoration: none;
   position: relative;
-  min-height: 200px;
+  width: 300px;   
+  height: 300px; 
 }
 
 .md-typeset a.tutorial-card:first-child {
@@ -123,6 +134,14 @@
 .md-typeset a.tutorial-card:nth-child(3) {
   grid-row: 2;
   grid-column: 1;
+}
+
+.md-typeset a.tutorial-card h3,
+.md-typeset a.tutorial-card p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .md-typeset a.tutorial-card:hover h3,
