@@ -121,3 +121,11 @@ specifications for collators will likely increase.
 
 For more advanced technical challenges, see the
 [Elastic Scaling GitHub PR](https://github.com/paritytech/polkadot-sdk/issues/1829).
+
+## Elastic Scaling FAQ
+
+- Is there a maximum number of cores per rollup? There is no maximum number of cores per rollup defined. However, it depends on your goals. If you wish to achieve 500ms blocks, you can do that with 12 cores. But it will not be efficient; you can only use a fraction (up to 25%) of the reference CPU time. For max TPS, there is a limitation of three cores.
+
+- Can multiple cores be reserved in bulk? Yes, you can do a batch call to acquire multiple cores. For more info, see [the coretime FAQ](./learn-agile-coretime.md#agile-coretime-faq).
+
+- Are some cores reserved only for elastic scaling? No, and you can combine bulk with on-demand coretime.
