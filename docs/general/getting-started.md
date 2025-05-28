@@ -8,7 +8,7 @@ template: explore-cards.html
 
 !!!info "Explore Polkadot with [user-friendly wallets](https://www.polkadot.network/ecosystem/wallets/)."
 
-Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Let's break it down bit by bit:
+Polkadot is a **blockchain-based multi-core decentralized cloud computer**. Let's break it down bit by bit:
 
 - **blockchain-based:** Polkadot at its heart has a blockchain that permanently and immutably stores sensitive information about the protocol and applications running on top of it
 - **multi-core:** Like traditional computers, Polkadot has a virtual CPU with multiple virtual cores
