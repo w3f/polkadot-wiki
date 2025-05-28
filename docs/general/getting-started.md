@@ -6,7 +6,7 @@ template: explore-cards.html
 
 ## What is Polkadot?
 
-!!!info "Explore Polkadot with [secure and user-friendly wallets](https://www.polkadot.network/ecosystem/wallets/)."
+!!!info "Explore Polkadot with [user-friendly wallets](https://www.polkadot.network/ecosystem/wallets/)."
 
 Polkadot is a **blockchain-powered multi-core decentralized cloud computer**. Let's break it down bit by bit:
 
