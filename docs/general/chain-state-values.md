@@ -118,7 +118,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Parachain Genesis State Registration Deposit
 
-    Registering the genesis state and WASM code of a Polkadot parachain requires a deposit {{ rpc("polkadot", "Registrar", "DataDepositPerByte", 0, is_constant=true,  readable="human_readable") }} per byte.
+    Registering the genesis state and Wasm code of a Polkadot parachain requires a deposit {{ rpc("polkadot", "Registrar", "DataDepositPerByte", 0, is_constant=true,  readable="human_readable") }} per byte.
 
     #### Proxy Deposits
 
@@ -274,7 +274,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Parachain Genesis State Registration Deposit
 
-    Registering the genesis state and WASM code of a Kusama parachain requires a deposit {{ rpc("kusama", "Registrar", "DataDepositPerByte", 0, is_constant=true, readable="human_readable_kusama") }} per byte.
+    Registering the genesis state and Wasm code of a Kusama parachain requires a deposit {{ rpc("kusama", "Registrar", "DataDepositPerByte", 0, is_constant=true, readable="human_readable_kusama") }} per byte.
 
     #### Proxy Deposits
 

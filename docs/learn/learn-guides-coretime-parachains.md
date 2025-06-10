@@ -89,7 +89,7 @@ would work as well.
 
 <!-- prettier-ignore -->
 <!-- !!!info
-    Registering the genesis state and WASM code of the parachain requires a [deposit](../general/chain-state-values.md#genesis-state-registration-deposit) that is computed based on the size (a deposit is paid per byte uploaded).
+    Registering the genesis state and Wasm code of the parachain requires a [deposit](../general/chain-state-values.md#genesis-state-registration-deposit) that is computed based on the size (a deposit is paid per byte uploaded).
 
 <!-- The deposit used for registering `ParaID` is already counted in for this deposit, the total deposit requirement for registering `ParaID`, state and code for `adder-collator` is around 46 KSM on Kusama and 116 DOT on Polkadot. -->
 

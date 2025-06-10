@@ -488,7 +488,7 @@ JSON.stringify(localStorage)
    beginning and end.
 6. Save and send that file with the copied string to the new computer.
 7. On the new computer, go to Polkadot-JS Apps
-8. Open the Javascript console on the browser (Available in Developer Tools)
+8. Open the JavaScript console on the browser (Available in Developer Tools)
 9. Set a variable raw equal to the string from the text file
 
 ```

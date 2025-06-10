@@ -214,12 +214,12 @@ The PVM itself embodies simplicity and security, being sandboxable and offering 
 guarantees. It is deterministic, consensus-sensitive, and friendly to metering. Unlike other VMs,
 the PVM lacks complexity and excessive opinionation.
 
-WASM, while optimized for web use cases, presents challenges with stack management, particularly in
+Wasm, while optimized for web use cases, presents challenges with stack management, particularly in
 handling continuations. RISC-V addresses this issue by placing the stack in memory, facilitating
 continuations handling naturally without additional complexity.
 
 Additionally, the PVM demonstrates exceptional execution speeds, especially when run on conventional
-hardware like X64 and ARM, offering advantages such as free metering compared to WASM.
+hardware like X64 and ARM, offering advantages such as free metering compared to Wasm.
 
 The incorporation of RISC-V-enabled continuations is poised to establish a new standard for scalable
 coding across multi-core platforms like JAM. Asynchronous, parallelized architectures are
@@ -280,7 +280,7 @@ current setup.
 
 One of the architectural distinctions between JAM and the relay chain lies in the degree to which
 functionality is fixed. While the relay chain fixes certain elements, such as the language used to
-define the protocol (WASM), JAM goes further in this regard. For instance, it dictates the type used
+define the protocol (Wasm), JAM goes further in this regard. For instance, it dictates the type used
 for encoding the block header and the hashing scheme, making alterations to these aspects
 challenging.
 
