@@ -1,4 +1,4 @@
----
+--- 
 title: Glossary
 description: Definitions of common terms and concepts in the Polkadot ecosystem.
 ---
@@ -176,7 +176,8 @@ after the lease period was over or the crowdloan period ended.
 A person, group, or other entity charged with judging and verifying the successful completion of a
 Bounty.
 
-## Dapps
+
+## DApp
 
 A generic term for a decentralized application, that is, one that runs as part of a distributed
 network as opposed to being run on a specific system or set of systems.
@@ -395,7 +396,7 @@ Accounts that select a set of validators to nominate by bonding their tokens. No
 some of the validators' rewards, but are also liable for slashing if their nominated validators
 misbehave.
 
-## Non-fungible Token (NFT)
+## NFT
 
 A non-fungible token is a token that does not hold the property of fungibility, which, in turn,
 means that it cannot be interchangeable and indistinguishable from other tokens. NFTs allow the
@@ -468,27 +469,20 @@ Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for open-s
 [referendum #94](https://polkadot-old.polkassembly.io/referendum/94). It aims to support development
 standards and expose bad actors within the ecosystems of Polkadot.
 
-## Host
+## Polkadot SDK
 
-The environment in which a runtime module can be executed. Parachains must support the network
-Host - external chains that do not will have to use a bridge. Previously known as the Polkadot
-Runtime Environment.
+A modular framework for building blockchains. Polkadot is built using
+[Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate). Chains built with Substrate will be easy to connect as
+parachains. For developers, see the
+[Substrate GitHub repository](https://github.com/paritytech/polkadot-sdk/tree/master/substrate).
 
-## Runtime Environment
+## Polkadot-JS
 
-The previous name for the Polkadot [Host](#host).
-
-## Paseo
-
-Paseo [testnet](#testnet) provisions testing on Polkadot's "production" runtime, which means less
-chance of feature/code mismatch when developing parachain apps. Specifically, after the
-[Polkadot Technical fellowship](#technical-fellowship) proposes a runtime upgrade for Polkadot, this
-testnet is updated, giving a period where the testnet will be ahead of Polkadot to allow for
-testing.
+The JavaScript API for interacting with Polkadot.
 
 ## Preimage
 
-The on-chain proposals do not require the entire image of extrinsics and data (for instance the WASM
+The on-chain proposals do not require the entire image of extrinsics and data (for instance the Wasm
 code, in case of upgrades) to be submitted, but would rather just need that image's hash. That
 **preimage** can be submitted and stored on-chain against the hash later, upon the proposal's
 dispatch.
@@ -645,6 +639,10 @@ the network.
 A function that describes how the state of a blockchain can be transformed. For example, it may
 describe how tokens can be transferred from one account to another.
 
+## Subscan
+
+A block explorer and analytics platform for Polkadot, Kusama, and related networks.
+
 ## Substrate
 
 A modular framework for building blockchains. Polkadot is built using
@@ -782,3 +780,7 @@ Cryptographic proof statements of data validity.
 Allows one [Origin ](#origin) to escalate the privilege level of another Origin for a certain
 operation. In terms of OpenGov, it allows the [Fellowship](#technical-fellowship) to authorise a new origin
 (which we will call Whitelisted-Root) to be executed with Root-level privileges.
+
+## Zombienet
+
+A tool for running local Polkadot and Substrate testnets.
