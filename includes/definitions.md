@@ -62,6 +62,7 @@
 *[On-chain Governance]: Governance controlled transparently on the blockchain.
 *[Parachain]: A layer-one blockchain running on a Polkadot virtual core (in parallel to the relay chain).
 *[Parity Technologies]: The company that was commissioned to launch Polkadot, and that is currently behind the Polkadot SDK.
+*[Paseo]: A testnet that mirrors Polkadot's runtime.
 *[Polkadot]: A service provider for secure and resilient computation and blockchain interoperability.
 *[Polkadot Alliance]: An on-chain collective promoting development standards.
 *[Preimage]: A hash-linked submission storing extrinsic or data details.
