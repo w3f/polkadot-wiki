@@ -641,7 +641,7 @@ describe how tokens can be transferred from one account to another.
 
 ## Subscan
 
-A block explorer and analytics platform for Polkadot, Kusama, and related networks.
+A block explorer and analytics platform for Polkadot, Kusama, and Substrate-based chains.
 
 ## Substrate
 
