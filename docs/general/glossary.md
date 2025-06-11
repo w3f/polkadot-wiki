@@ -398,7 +398,7 @@ misbehave.
 
 ## NFT
 
-A non-fungible token is a token that does not hold the property of fungibility, which, in turn,
+An NFT (non-fungible token) is a token that does not hold the property of fungibility, which, in turn,
 means that it cannot be interchangeable and indistinguishable from other tokens. NFTs allow the
 tokenization of unique items and provide exclusive ownership for those tokens.
 
