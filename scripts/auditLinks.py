@@ -1,6 +1,6 @@
 import os
 import re
-import requests
+import urllib.request
 
 Root = "./docs"
 PolkadotUrl = "https://wiki.polkadot.network/docs/"
@@ -25,11 +25,24 @@ def testLink(link):
     result = [False, 404]
     try:
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
         }
-        results = requests.get(link, headers=headers, allow_redirects=True)
-        code = results.status_code
-        result = [code == 200, code]
+        # For GitHub blob/line or blob links, only check the base file URL (ignore #Lxxx or fragments)
+        if "github.com" in link and "/blob/" in link:
+            base_link = link.split("#")[0]
+            req = urllib.request.Request(base_link, headers=headers)
+        else:
+            req = urllib.request.Request(link, headers=headers)
+        opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler)
+        try:
+            response = opener.open(req)
+            code = response.getcode()
+            # Accept 200 and 3xx (redirects) as valid
+            result = [200 <= code < 400, code]
+        except urllib.error.HTTPError as e:
+            result = [False, e.code]
+        except urllib.error.URLError:
+            pass
     except Exception:
         pass
     return result
@@ -90,6 +103,9 @@ def main():
                         else:
                             log += f"|[{shortPath}]({ReporUrl}{shortPath})|no local file|{key}|{url}|\n"
                     elif url.endswith((".png", ".jpg")) or "mailto:" in url:
+                        continue
+                    elif url.startswith(".") or url.startswith("/"):
+                        # Ignore relative URLs
                         continue
                     else:
                         test = testLink(PolkadotUrl + url)
