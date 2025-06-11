@@ -115,6 +115,7 @@ nav:
       - Web3 and Polkadot: general/web3-and-polkadot.md
       - Polkadot Vision:
               - Polkadot 1.0: general/polkadot-v1.md
+              - Polkadot 2.0: general/polkadot-v2.md
               - Polkadot Direction: general/polkadot-direction.md
       - Hardware Wallets:
           - Ledger: general/ledger.md

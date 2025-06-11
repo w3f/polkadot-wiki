@@ -14,23 +14,20 @@ Polkadot 1.0 reflected the status of Polkadot in 2023 at the time of the release
 [Polkadot runtime v1.0.0](https://github.com/paritytech/polkadot/releases/tag/v1.0.0). This section
 focuses on Polkadot 1.0 and some philosophical digressions about network resilience and blockspace.
 
-Polkadot is a Layer-0 blockchain that brings to the multi-chain vision the following innovations and
-initiatives:
+Polkadot is a blockchain-based decentralized computer that brings to the multi-chain vision the following innovations:
 
-- **Application-specific Layer-1 (L1) blockchains (or parachains).** Polkadot is a sharded network
-  where transactions are processed in parallel with each shard. Polkadot shards can be heterogeneous
-  (i.e. they do not need the same state transition function as in the proposed Ethereum sharding
-  architecture). This allows to build L1 chains designed explicitly around their application and
-  value proposition.
+- **Application-specific blockchains (parachains or rollup chains).** Polkadot is a sharded network
+  where transactions are processed in parallel within each shard. Polkadot shards can be heterogeneous
+  (i.e. they do not need the same state transition function). This allows to build Layer-1 (L1) blockchains designed explicitly around their application and value proposition.
 - **Shared security and financial scalability of L1 chains**. Any L1 chain attached to a Polkadot
-  core can benefit from Polkadot shared security model. This means the Polkadot
+  virtual core can benefit from Polkadot shared security model. This means the Polkadot
   [Nominated-Proof-of-Stake (NPoS)](../learn/learn-staking.md#nominated-proof-of-stake-npos)
   mechanism along with its consensus mechanism, secures L1 chains out-of-the-box without having to
   bootstrap security on their own.
 - **Secure interoperability.** Any L1 chain attached to Polkadot (as well as L2 chains built on top
   of them) can benefit from Polkadot's native interoperability and will thus be able to communicate
-  and exchange value and information with other parachains.
-- **Truly resilient infrastructure.** This is achieved by keeping the network decentralized without
+  and exchange value and information with other chains.
+- **Resilient infrastructure.** This is achieved by keeping the network decentralized without
   compromising scalability and throughput, and through the on-chain
   [treasury](../learn/learn-polkadot-opengov-treasury.md) funds that can be accessed through
   governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
@@ -45,14 +42,14 @@ initiatives:
 Polkadot has a relay chain acting as the main chain of the system. The Polkadot relay chain is
 represented as a ring surrounded by multiple parachains attached to it. Based on Polkadot's design,
 as long as a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
-connect to the Polkadot network as a parachain.
+connect to the Polkadot network as a parachain or rollup chain.
 
 ![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
 
-Parachains construct and propose blocks to validators on the relay chain, where the blocks undergo
+Polkadot's rollups construct and propose blocks to validators on the relay chain, where the blocks undergo
 rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
 added to the finalized chain. As the relay chain provides the security guarantees,
-[collators](../learn/learn-collator.md) - full nodes of these parachains - do not have any security
+[collators](../learn/learn-collator.md) - full nodes of these rollup chains - do not have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
 stays up to date with the many transactions that take place.
 
@@ -61,7 +58,7 @@ messages of any type to each other. The shared security and validation logic of 
 provides the environment for trust-free message passing that opens up true interoperability.
 
 In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
+Polkadot has [trustless bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
 transactions can be made between different parachains.
 
 ### Polkadot's Additional Functionalities
@@ -71,9 +68,8 @@ chunks for a maximum of two years, and crowdloans allowed users to trustlessly l
 for lease deposits in exchange for pre-sale tokens. There was no other way you could access cores on
 Polkadot 1.0.
 
-The relay chain currently manages other tasks such as [staking](../learn/learn-staking.md),
-[accounts](./../learn/learn-accounts.md), [balances](../learn/learn-transactions.md#balance-transfers),
-and [governance](../learn/learn-polkadot-opengov.md).
+The relay chain also managed other tasks such as [staking](../learn/learn-staking.md),
+[accounts](./../learn/learn-accounts.md), [identities](../learn/learn-identity.md), [balances](../learn/learn-transactions.md#balance-transfers), and [governance](../learn/learn-polkadot-opengov.md).
 
 ### Polkadot's Resilience
 
@@ -86,11 +82,11 @@ Decentralization is a crucial aspect of blockchain networks, but there is a trad
 
 Ideally, a network should be decentralized "enough" to make it practically impossible for someone to
 exert manipulative or malicious influence on the network. So, **decentralization is a tool while the
-goal is resilience**, which is achieved by additionally providing on-chain treasury and governance
+goal is resilience**, which is achieved by additionally providing on-chain treasury and open governance
 mechanism allowing continuous incentives for the network's participants without relying on
 intermediaries or centralized entities.
 
-Currently, Polkadot 1.0 achieves resilience through the following strategies:
+Polkadot 1.0 achieved resilience through the following strategies:
 
 - Nominated Proof of Staking (NPoS) where the stake per validator is maximized and evenly
   distributed across validators.
