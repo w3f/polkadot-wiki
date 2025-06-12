@@ -398,7 +398,7 @@ misbehave.
 
 ## NFT
 
-An NFT (non-fungible token) is a token that does not hold the property of fungibility, which, in turn,
+A non-fungible token is a token that does not hold the property of fungibility, which, in turn,
 means that it cannot be interchangeable and indistinguishable from other tokens. NFTs allow the
 tokenization of unique items and provide exclusive ownership for those tokens.
 
@@ -482,7 +482,7 @@ The JavaScript API for interacting with Polkadot.
 
 ## Preimage
 
-The on-chain proposals do not require the entire image of extrinsics and data (for instance the Wasm
+The on-chain proposals do not require the entire image of extrinsics and data (for instance the WASM
 code, in case of upgrades) to be submitted, but would rather just need that image's hash. That
 **preimage** can be submitted and stored on-chain against the hash later, upon the proposal's
 dispatch.
@@ -639,10 +639,6 @@ the network.
 A function that describes how the state of a blockchain can be transformed. For example, it may
 describe how tokens can be transferred from one account to another.
 
-## Subscan
-
-A block explorer and analytics platform for Polkadot, Kusama, and Substrate-based chains.
-
 ## Substrate
 
 A modular framework for building blockchains. Polkadot is built using
@@ -766,7 +762,8 @@ execution. Checkout this section of the Substrate docs covering
 
 ## Westend
 
-The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the Paseo testnet, the Westend testnet is used by the core developers to iterate on
+The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the
+[Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on
 protocol-level features like [asynchronous backing](../learn/learn-async-backing.md), etc, that are
 not relevant for parachain developers.
 
