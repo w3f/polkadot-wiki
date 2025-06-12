@@ -3,11 +3,11 @@ import re
 import urllib.request
 
 Root = "./docs"
-PolkadotUrl = "https://wiki.polkadot.network/docs/"
-ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs/"
+PolkadotUrl = "https://wiki.polkadot.network/"
+ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs"
 
 Whitelist = [
-    "https://wiki.polkadot.network/docs/community/",
+    "https://wiki.polkadot.network/general/community/",
     "https://crates.io/crates/diener",
     "https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be",
     "https://www.linode.com/",
@@ -53,7 +53,7 @@ def logger(test, log, shortPath, links, key):
     return log
 
 def getRefSlug(fullPath):
-    if "docs/" in fullPath:
+    if "learn/" or "general/" in fullPath:
         slug = fullPath.split("docs/")[-1].replace(".md", "").replace("\\", "/")
         return slug
     return None
