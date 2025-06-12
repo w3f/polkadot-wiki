@@ -28,7 +28,9 @@ def testLink(link):
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
         }
         # For GitHub blob/line or blob links, only check the base file URL (ignore #Lxxx or fragments)
-        if "github.com" in link and "/blob/" in link:
+        from urllib.parse import urlparse
+        parsed_url = urlparse(link)
+        if parsed_url.hostname == "github.com" and "/blob/" in link:
             base_link = link.split("#")[0]
             req = urllib.request.Request(base_link, headers=headers)
         else:
