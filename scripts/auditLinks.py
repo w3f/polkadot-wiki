@@ -56,7 +56,8 @@ def logger(test, log, shortPath, links, key):
 
 def getRefSlug(fullPath):
     if "learn/" or "general/" in fullPath:
-        slug = fullPath.split("docs/")[-1].replace(".md", "").replace("\\", "/")
+        path = "learn/" if "learn/" in fullPath else "general/"
+        slug = fullPath.split(path)[-1].replace(".md", "").replace("\\", "/")
         return slug
     return None
 
@@ -88,7 +89,42 @@ def main():
                         if slug:
                             test = testLink(PolkadotUrl + slug + url)
                             log = logger(test, log, shortPath, links, key)
+                    elif url.endswith((".png", ".jpg")) or "mailto:" in url:
+                        continue
+                    elif url.startswith(".") or url.startswith("/"):
+                        # Handle local relative markdown links like "./learn-consensus.md#block-production-babe"
+                        # Remove leading "./" or "/" for consistency
+                        local_url = url.lstrip("./").lstrip("/")
+                        # Split off anchor if present
+                        if "#" in local_url:
+                            md_file, anchor = local_url.split("#", 1)
+                            fileDir = os.path.dirname(fullPath)
+                            linkedFile = os.path.join(fileDir, md_file)
+                            if os.path.isfile(linkedFile):
+                                refSlug = getRefSlug(linkedFile)
+                                if refSlug:
+                                    test = testLink(PolkadotUrl + refSlug + "#" + anchor)
+                                    log = logger(test, log, shortPath, links, key)
+                                else:
+                                    log += f"|[{shortPath}]({ReporUrl}{shortPath})|failed to get ref slug|{key}|{url}|\n"
+                            else:
+                                log += f"|[{shortPath}]({ReporUrl}{shortPath})|no local file|{key}|{url}|\n"
+                        else:
+                            # No anchor, just check the file
+                            md_file = local_url
+                            fileDir = os.path.dirname(fullPath)
+                            linkedFile = os.path.join(fileDir, md_file)
+                            if os.path.isfile(linkedFile):
+                                refSlug = getRefSlug(linkedFile)
+                                if refSlug:
+                                    test = testLink(PolkadotUrl + refSlug)
+                                    log = logger(test, log, shortPath, links, key)
+                                else:
+                                    log += f"|[{shortPath}]({ReporUrl}{shortPath})|failed to get ref slug|{key}|{url}|\n"
+                            else:
+                                log += f"|[{shortPath}]({ReporUrl}{shortPath})|no local file|{key}|{url}|\n"
                     elif ".md" in url:
+                        # Handle non-relative markdown links (should be rare, but for completeness)
                         fileDir = os.path.dirname(fullPath)
                         linkedFile = os.path.join(fileDir, url.split("#")[0].rstrip("/"))
                         if os.path.isfile(linkedFile):
@@ -104,11 +140,6 @@ def main():
                                 log += f"|[{shortPath}]({ReporUrl}{shortPath})|failed to get ref slug|{key}|{url}|\n"
                         else:
                             log += f"|[{shortPath}]({ReporUrl}{shortPath})|no local file|{key}|{url}|\n"
-                    elif url.endswith((".png", ".jpg")) or "mailto:" in url:
-                        continue
-                    elif url.startswith(".") or url.startswith("/"):
-                        # Ignore relative URLs
-                        continue
                     else:
                         test = testLink(PolkadotUrl + url)
                         log = logger(test, log, shortPath, links, key)
