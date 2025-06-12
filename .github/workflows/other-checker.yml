@@ -9,5 +9,4 @@ jobs:
     - uses: actions/checkout@master
     - uses: byrnereese/github-action-mkdocs-link-check@1.0
       with:
-         use-verbose-mode: 'yes'
          folder-path: 'docs/'
