@@ -284,7 +284,7 @@
 .md-header__button.md-logo img {
   height: auto;
   width: 140px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.15s ease;
 }
 
 .md-header__button.md-tabs__link {

@@ -57,14 +57,6 @@
         const checkedInput = document.querySelector('input[name="__palette"]:checked');
         const checkedScheme = checkedInput ? checkedInput.getAttribute('data-md-color-scheme') : null;
         
-        console.log('Theme detection debug:', {
-            htmlScheme,
-            bodyScheme,
-            htmlClasses,
-            bodyClasses,
-            checkedScheme,
-            checkedInput
-        });
         
         // Determine theme from multiple sources
         let scheme = htmlScheme || bodyScheme || checkedScheme || 'default';
@@ -77,7 +69,6 @@
             // If background is dark, we're probably in dark mode
             if (bgColor && (bgColor === '#1a1a1a' || bgColor.includes('1a1a1a'))) {
                 scheme = 'slate';
-                console.log('Theme detected via CSS variables: dark');
             }
         }
         
@@ -95,38 +86,30 @@
                     
                     if (brightness < 128) {
                         scheme = 'slate';
-                        console.log('Theme detected via body background color: dark');
                     }
                 }
             }
         }
-        
-        console.log('Final determined scheme:', scheme);
         return scheme === 'slate' ? 'dark' : 'light';
     }
 
     // Update the logo based on current theme
     function updateLogo() {
         const logoPaths = updateLogoPaths();
-        console.log('Logo paths:', logoPaths);
         
         // Always use light logo on homepage
         if (isHomePage()) {
-            console.log('Homepage detected, using light logo');
             setLogo(logoPaths.light);
             return;
         }
 
         const theme = getCurrentTheme();
         const logoPath = theme === 'dark' ? logoPaths.dark : logoPaths.light;
-        console.log('Theme:', theme, 'Selected logo path:', logoPath);
         setLogo(logoPath);
     }
 
     // Set the logo image source
     function setLogo(logoPath) {
-        console.log('Setting logo to:', logoPath);
-        
         // Target all possible logo locations
         const selectors = [
             '.md-header__button.md-logo img',
@@ -137,21 +120,15 @@
             'img[src*="logo"]'
         ];
         
-        let logoCount = 0;
         selectors.forEach(selector => {
             const logoElements = document.querySelectorAll(selector);
-            console.log(`Found ${logoElements.length} elements for selector: ${selector}`);
             
             logoElements.forEach(logo => {
                 if (logo && isLogoElement(logo)) {
-                    console.log('Updating logo element:', logo, 'current src:', logo.src);
                     updateLogoElement(logo, logoPath);
-                    logoCount++;
                 }
             });
         });
-        
-        console.log(`Updated ${logoCount} logo elements`);
     }
     
     // Check if element is a logo
@@ -173,14 +150,13 @@
         
         // Only update if we're switching to a different logo
         if (!currentSrc.includes(targetFilename)) {
-            // Add smooth transition effect
-            logo.style.opacity = '0.7';
+            // Add fast transition effect
+            logo.style.opacity = '0.8';
             
             setTimeout(() => {
                 logo.src = logoPath;
                 logo.style.opacity = '1';
-                console.log('Logo updated to:', logoPath, 'for element:', logo);
-            }, 150);
+            }, 50);
         }
     }
 
@@ -191,10 +167,8 @@
                 if (mutation.type === 'attributes' && 
                     mutation.attributeName === 'data-md-color-scheme') {
                     
-                    console.log('Theme change detected:', mutation.attributeName, 'new value:', mutation.target.getAttribute(mutation.attributeName));
-                    
-                    // Update logo when theme changes
-                    setTimeout(updateLogo, 50);
+                    // Update logo when theme changes - fast response
+                    setTimeout(updateLogo, 25);
                 }
             });
         });
@@ -208,8 +182,8 @@
 
     // Initialize logo switcher
     function init() {
-        // Set initial logo with a slight delay to ensure DOM is ready
-        setTimeout(updateLogo, 100);
+        // Set initial logo quickly
+        setTimeout(updateLogo, 50);
         
         // Watch for theme changes
         watchThemeChanges();
@@ -231,7 +205,7 @@
             });
             
             if (shouldUpdate) {
-                setTimeout(updateLogo, 200);
+                setTimeout(updateLogo, 100);
             }
         });
         
@@ -244,8 +218,7 @@
         const paletteForm = document.querySelector('form[data-md-component="palette"]');
         if (paletteForm) {
             paletteForm.addEventListener('change', function(e) {
-                console.log('Palette form changed:', e.target);
-                setTimeout(updateLogo, 150);
+                setTimeout(updateLogo, 75);
             });
         }
         
@@ -253,8 +226,7 @@
         const paletteInputs = document.querySelectorAll('input[name="__palette"]');
         paletteInputs.forEach(input => {
             input.addEventListener('change', function(e) {
-                console.log('Palette input changed:', e.target.getAttribute('data-md-color-scheme'));
-                setTimeout(updateLogo, 100);
+                setTimeout(updateLogo, 50);
             });
         });
         
@@ -262,8 +234,7 @@
         const paletteLabels = document.querySelectorAll('label[for^="__palette"]');
         paletteLabels.forEach(label => {
             label.addEventListener('click', function(e) {
-                console.log('Palette label clicked');
-                setTimeout(updateLogo, 200);
+                setTimeout(updateLogo, 100);
             });
         });
 
@@ -271,7 +242,7 @@
         if (window.matchMedia) {
             const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
             mediaQuery.addEventListener('change', function() {
-                setTimeout(updateLogo, 100);
+                setTimeout(updateLogo, 50);
             });
         }
 
@@ -286,13 +257,11 @@
             const logoElements = document.querySelectorAll('.md-header__button.md-logo img, .md-logo img, .md-footer-meta img');
             logoElements.forEach(logo => {
                 if (logo && isLogoElement(logo) && !logo.src.includes(expectedFilename)) {
-                    console.log('Fallback: updating logo that was missed');
                     updateLogo();
                 }
             });
-        }, 2000);
+        }, 1000);
 
-        console.log('Dynamic logo switcher initialized');
     }
 
     // Run initialization when DOM is ready
@@ -304,68 +273,7 @@
 
     // Also run when the page loads completely
     window.addEventListener('load', function() {
-        setTimeout(updateLogo, 200);
+        setTimeout(updateLogo, 100);
     });
-
-    // Debug function to inspect theme configuration
-    function debugThemeState() {
-        console.log('=== Theme Debug Information ===');
-        console.log('Document element attributes:', {
-            'data-md-color-scheme': document.documentElement.getAttribute('data-md-color-scheme'),
-            'data-md-color-media': document.documentElement.getAttribute('data-md-color-media'),
-            'data-md-color-primary': document.documentElement.getAttribute('data-md-color-primary'),
-            'data-md-color-accent': document.documentElement.getAttribute('data-md-color-accent')
-        });
-        
-        console.log('Body attributes:', {
-            'data-md-color-scheme': document.body.getAttribute('data-md-color-scheme'),
-            'class': document.body.className
-        });
-        
-        console.log('Palette inputs:');
-        const inputs = document.querySelectorAll('input[name="__palette"]');
-        inputs.forEach((input, index) => {
-            console.log(`Input ${index}:`, {
-                id: input.id,
-                checked: input.checked,
-                'data-md-color-scheme': input.getAttribute('data-md-color-scheme'),
-                'data-md-color-media': input.getAttribute('data-md-color-media')
-            });
-        });
-        
-        console.log('Current theme result:', getCurrentTheme());
-        console.log('===============================');
-    }
-    
-    // Test function to manually force logo changes
-    function testLogoSwitching() {
-        const logoPaths = updateLogoPaths();
-        console.log('Testing logo switching...');
-        console.log('Available paths:', logoPaths);
-        
-        console.log('Setting to light logo...');
-        setLogo(logoPaths.light);
-        
-        setTimeout(() => {
-            console.log('Setting to dark logo...');
-            setLogo(logoPaths.dark);
-        }, 2000);
-        
-        setTimeout(() => {
-            console.log('Reverting to theme-appropriate logo...');
-            updateLogo();
-        }, 4000);
-    }
-
-    // Expose debug functions globally for testing
-    window.debugLogoSwitcher = {
-        updateLogo: updateLogo,
-        getCurrentTheme: getCurrentTheme,
-        updateLogoPaths: updateLogoPaths,
-        setLogo: setLogo,
-        isHomePage: isHomePage,
-        debugThemeState: debugThemeState,
-        testLogoSwitching: testLogoSwitching
-    };
 
 })();
