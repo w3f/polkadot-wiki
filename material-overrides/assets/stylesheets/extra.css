@@ -58,6 +58,13 @@
     color: inherit;
 }
 
+/* Dark mode card container */
+[data-md-color-scheme='slate'] .card-container {
+    background-color: #3a3a3a;
+    border: 1px solid #4a4a4a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 .card-title {
     font-size: 18px;
     font-weight: normal;
@@ -69,6 +76,11 @@
                 0 0 15px rgba(255, 182, 193, 0.5); /* Enhanced glow */
     background-color: #f4f4f4;
     /* Optional: Slight color change on hover */
+}
+
+/* Dark mode card hover */
+[data-md-color-scheme='slate'] .card-container:hover {
+    background-color: #454545;
 }
 
 /* Image inside the card */
@@ -91,6 +103,11 @@
     text-align: center;
 }
 
+/* Dark mode card title */
+[data-md-color-scheme='slate'] .card-title {
+    color: #c6cfdb;
+}
+
 .title {
     font-size: 25px;
 }
@@ -103,6 +120,11 @@
     margin-top: 5px;
     line-height: 1.4;
     /* Better spacing for multi-line descriptions */
+}
+
+/* Dark mode card description */
+[data-md-color-scheme='slate'] .card-description {
+    color: #9ca3af;
 }
 
 .md-search-result__meta {

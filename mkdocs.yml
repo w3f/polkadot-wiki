@@ -10,6 +10,7 @@ extra_javascript:
   - js/search-bar-results.js
   - js/header-scroll.js
   - js/homepage-light-mode.js
+  - js/dynamic-logo.js
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/MessageBox.css
