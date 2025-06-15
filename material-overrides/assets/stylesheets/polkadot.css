@@ -92,6 +92,76 @@
   --md-code-admo-title-bg: #64dd171a;
 }
 
+/* Dark mode theme */
+[data-md-color-scheme='slate'] {
+  --md-default-fg-color: #c6cfdb;
+  --md-default-bg-color: #1a1a1a;
+
+  --md-primary-fg-color: #2a2a2a;
+  --md-accent-fg-color: var(--pink);
+  --md-accent-fg-color--transparent: #3a3a3a;
+
+  --md-typeset-a-color: #c6cfdb;
+
+  --md-footer-fg-color: #c6cfdb;
+  --md-footer-fg-color--light: #c6cfdb;
+  --md-footer-bg-color: #1a1a1a;
+  --md-footer-bg-color--dark: #1a1a1a;
+
+  /** Dark mode code snippets **/
+  --md-code-fg-color: #e0e0e0;
+  --md-code-bg-color: #2a2a2a;
+  /** Code highlighting color shades for dark mode **/
+  /* Numbers */
+  --md-code-hl-number-color: #7dd3fc;
+  /* Python function names */
+  --md-code-hl-function-color: #e0e0e0;
+  /* JavaScript booleans, Python variable names */
+  --md-code-hl-name-color: #c084fc;
+  /* Strings */
+  --md-code-hl-string-color: #fca5a5;
+  /* Python print */
+  --md-code-hl-constant-color: #93c5fd;
+  /* Imports, const, let, var, async, await, function, etc. */
+  --md-code-hl-keyword-color: #93c5fd;
+  /* Comments */
+  --md-code-hl-comment-color: #6b7280;
+
+  /** Dark mode Mermaid Flowchart Diagrams **/
+  --md-mermaid-font-family: var(--md-text-font-family), sans-serif;
+  --md-mermaid-edge-color: var(--md-code-fg-color);
+  --md-mermaid-node-bg-color: #3a3a3a;
+  --md-mermaid-node-fg-color: var(--md-accent-fg-color);
+  --md-mermaid-label-bg-color: var(--md-default-bg-color);
+  --md-mermaid-label-fg-color: var(--md-code-fg-color);
+
+  /** Dark mode Mermaid Sequence Diagrams **/
+  --md-mermaid-sequence-actor-bg-color: var(--md-mermaid-label-bg-color);
+  --md-mermaid-sequence-actor-fg-color: var(--md-mermaid-label-fg-color);
+  --md-mermaid-sequence-actor-border-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-actor-line-color: #6b7280;
+  --md-mermaid-sequence-actorman-bg-color: var(--md-mermaid-label-bg-color);
+  --md-mermaid-sequence-actorman-line-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-box-bg-color: var(--md-mermaid-node-bg-color);
+  --md-mermaid-sequence-box-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-label-bg-color: var(--md-mermaid-node-bg-color);
+  --md-mermaid-sequence-label-fg-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-loop-bg-color: var(--md-mermaid-node-bg-color);
+  --md-mermaid-sequence-loop-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-loop-border-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-message-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-message-line-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-note-bg-color: var(--md-mermaid-label-bg-color);
+  --md-mermaid-sequence-note-fg-color: var(--md-mermaid-edge-color);
+  --md-mermaid-sequence-note-border-color: var(--md-mermaid-label-fg-color);
+  --md-mermaid-sequence-number-bg-color: var(--md-mermaid-node-fg-color);
+  --md-mermaid-sequence-number-fg-color: #1a1a1a;
+
+  /*custom code admonition colors for dark mode*/
+  --md-code-admo-border-color: #5ee20c;
+  --md-code-admo-title-bg: #64dd171a;
+}
+
 .md-grid {
   max-width: var(--max-page-width);
 }
@@ -121,6 +191,19 @@
 
 .md-typeset p {
   color: var(--storm-gray);
+}
+
+/* Dark mode font styling */
+[data-md-color-scheme='slate'] .md-typeset h1,
+[data-md-color-scheme='slate'] .md-typeset h2,
+[data-md-color-scheme='slate'] .md-typeset h3,
+[data-md-color-scheme='slate'] .md-typeset h4,
+[data-md-color-scheme='slate'] .md-typeset h5 {
+  color: #c6cfdb;
+}
+
+[data-md-color-scheme='slate'] .md-typeset p {
+  color: #c6cfdb;
 }
 
 /* Link styling */
@@ -173,6 +256,17 @@
   transition: transform 0.3s ease;
 }
 
+/* Dark mode header styling */
+[data-md-color-scheme='slate'] .md-header__inner {
+  border: 1px solid #3a3a3a;
+}
+
+[data-md-color-scheme='slate'] .md-header__inner,
+[data-md-color-scheme='slate'] .md-tabs {
+  background-color: #1a1a1a;
+  color: #c6cfdb;
+}
+
 .md-header__inner.hidden {
   transform: translateY(calc(-100% - 16px));
 }
@@ -190,6 +284,7 @@
 .md-header__button.md-logo img {
   height: auto;
   width: 140px;
+  transition: opacity 0.15s ease;
 }
 
 .md-header__button.md-tabs__link {
@@ -197,6 +292,19 @@
   font-weight: 600;
   margin: 0;
   padding: 1em 12px;
+}
+
+/* Dark mode header button styling */
+[data-md-color-scheme='slate'] .md-header__button.md-tabs__link {
+  color: #c6cfdb;
+}
+
+[data-md-color-scheme='slate'] .md-header__button {
+  color: #c6cfdb;
+}
+
+[data-md-color-scheme='slate'] .md-header__button.md-icon[for='__search'] svg {
+  fill: #c6cfdb;
 }
 
 [dir='ltr'] .md-tabs__list {
@@ -288,6 +396,11 @@
   align-content: center;
 }
 
+/* Dark mode tabs styling */
+[data-md-color-scheme='slate'] .md-tabs__item--custom {
+  color: #c6cfdb;
+}
+
 .md-tabs__item--custom:hover {
   cursor: pointer;
 }
@@ -326,6 +439,13 @@
   transform: translateZ(0);
 }
 
+/* Dark mode dropdown styling */
+[data-md-color-scheme='slate'] .md-tabs__item--custom:hover .md-tab__list {
+  background: #1a1a1a;
+  border: 0.5px solid #3a3a3a;
+  box-shadow: 0 0.2rem 0.5rem #000a, 0 0 0.05rem #000000aa;
+}
+
 .md-tabs__item {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -359,6 +479,15 @@
 /* Optionally, add right border to odd items for a two-column layout */
 .md-tab__item:nth-child(odd) {
   border-right: 1px solid var(--mystic);
+}
+
+/* Dark mode tab item borders */
+[data-md-color-scheme='slate'] .md-tab__item {
+  border-bottom: 1px solid #3a3a3a;
+}
+
+[data-md-color-scheme='slate'] .md-tab__item:nth-child(odd) {
+  border-right: 1px solid #3a3a3a;
 }
 
 .md-tab__item:hover,
@@ -427,6 +556,12 @@ input.md-search__input::placeholder {
 .md-search-result__link:focus,
 .md-search-result__link:hover {
   background-color: var(--athens-gray);
+}
+
+/* Dark mode search styling */
+[data-md-color-scheme='slate'] .md-search-result__link:focus,
+[data-md-color-scheme='slate'] .md-search-result__link:hover {
+  background-color: #2a2a2a;
 }
 
 @media screen and (min-width: 76.25em) {
@@ -522,11 +657,27 @@ input.md-search__input::placeholder {
   margin-left: -1em;
 }
 
+/* Dark mode navigation styling */
+[data-md-color-scheme='slate'] .md-nav__link > * {
+  color: #c6cfdb;
+}
+
+[data-md-color-scheme='slate'] .md-nav__link:hover,
+[data-md-color-scheme='slate'] .md-nav__link-wrapper.md-nav__item.md-nav__item--active,
+[data-md-color-scheme='slate'] .md-nav__item div.md-nav__link--active {
+  background: #2a2a2a;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-nav {
     font-size: 14px;
     margin-bottom: 0;
     color: var(--black);
+  }
+
+  /* Dark mode navigation color */
+  [data-md-color-scheme='slate'] .md-nav {
+    color: #c6cfdb;
   }
 
   [dir='ltr']
@@ -549,6 +700,14 @@ input.md-search__input::placeholder {
     margin-left: -1em;
     padding-left: 1em;
     font-weight: 600;
+  }
+
+  /* Dark mode root-level sections */
+  [data-md-color-scheme='slate'] .md-nav--lifted
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav__link:not(.md-nav__container) {
+    border-bottom: 1px solid #3a3a3a;
   }
 
   /* Ensure the root-level section doesn't get indented when on it's index page */
@@ -731,10 +890,22 @@ input.md-search__input::placeholder {
     border-bottom: 1px solid var(--mystic);
   }
 
+  /* Dark mode mobile navigation */
+  [data-md-color-scheme='slate'] .md-nav--primary .md-nav__title[for='__drawer'] {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #3a3a3a;
+  }
+
   .md-nav--primary .md-nav__link,
   .md-nav--primary a.md-nav__link {
     padding: 0.3rem 0.8rem;
     color: var(--black);
+  }
+
+  /* Dark mode mobile navigation links */
+  [data-md-color-scheme='slate'] .md-nav--primary .md-nav__link,
+  [data-md-color-scheme='slate'] .md-nav--primary a.md-nav__link {
+    color: #c6cfdb;
   }
 
   .md-nav--primary .md-nav__link .md-nav__icon:after {
@@ -762,6 +933,11 @@ input.md-search__input::placeholder {
     background-color: var(--athens-gray);
   }
 
+  /* Dark mode mobile navigation active items */
+  [data-md-color-scheme='slate'] .md-nav--primary .md-nav__item--active > .md-nav__link {
+    background-color: #2a2a2a;
+  }
+
   .md-nav__item div.md-nav__link--active {
     margin-left: 0;
   }
@@ -785,6 +961,13 @@ input.md-search__input::placeholder {
     display: flex;
     align-items: center;
     font-weight: 400;
+  }
+
+  /* Dark mode navigation title */
+  [data-md-color-scheme='slate'] .md-nav--primary .md-nav__title {
+    color: #c6cfdb;
+    background-color: #1a1a1a;
+    border: 1px solid #3a3a3a;
   }
 
   /* Remove lines between sidebar nav items*/
@@ -839,6 +1022,11 @@ input.md-search__input::placeholder {
     border-left: 1px solid var(--mystic);
   }
 
+  /* Dark mode sidebar border */
+  [data-md-color-scheme='slate'] .md-sidebar--secondary .md-sidebar__inner {
+    border-left: 1px solid #3a3a3a;
+  }
+
   .md-sidebar--secondary {
     width: 10rem;
   }
@@ -868,6 +1056,16 @@ input.md-search__input::placeholder {
 
   .md-nav--secondary .md-nav__link.md-nav__link--active > * {
     color: var(--black);
+    font-weight: 700;
+  }
+
+  /* Dark mode TOC navigation */
+  [data-md-color-scheme='slate'] .md-nav--secondary .md-nav__link > * {
+    color: #9ca3af;
+  }
+
+  [data-md-color-scheme='slate'] .md-nav--secondary .md-nav__link.md-nav__link--active > * {
+    color: #c6cfdb;
     font-weight: 700;
   }
 
@@ -1295,6 +1493,12 @@ details.interface > summary::before {
   color: var(--black);
 }
 
+/* Dark mode table styling */
+[data-md-color-scheme='slate'] .md-typeset table:not([class]) th {
+  background-color: #2a2a2a;
+  color: #c6cfdb;
+}
+
 .md-typeset table:not([class]) td {
   vertical-align: middle;
 }
@@ -1451,6 +1655,17 @@ div.mermaid {
 .md-typeset .grid.cards > ul > li:hover {
   border: 0.05rem solid var(--md-default-fg-color--lightest);
   box-shadow: unset;
+}
+
+/* Dark mode grid cards styling */
+[data-md-color-scheme='slate'] .md-typeset .grid.cards > ul > li {
+  background-color: #3a3a3a;
+  border: 1px solid #4a4a4a;
+}
+
+[data-md-color-scheme='slate'] .md-typeset .grid.cards > ul > li:hover {
+  background-color: #454545;
+  border: 0.05rem solid #6a6a6a;
 }
 
 .md-typeset .grid.cards .twemoji {
