@@ -16,3 +16,9 @@
   command = "sh scripts/deploy.sh"
   publish = "site"
   environment = { ENABLE_RPC = "false" }
+
+[[redirects]]
+  from = "https://wiki.polkadot.network/*"
+  to = "https://wiki.polkadot.com/:splat"
+  status = 301
+  force = true
