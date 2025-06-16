@@ -2,7 +2,7 @@ import os
 import re
 import requests
 
-Root = "./docs/kusama"
+Root = "./docs"
 PolkadotUrl = "https://wiki.polkadot.network/"
 ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs/"
 
