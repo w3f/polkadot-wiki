@@ -16,55 +16,54 @@ focuses on Polkadot 1.0 and some philosophical digressions about network resilie
 
 Polkadot is a blockchain-based decentralized computer that brings to the multi-chain vision the following innovations:
 
-- **Application-specific blockchains (parachains or rollup chains).** Polkadot is a sharded network
-  where transactions are processed in parallel within each shard. Polkadot shards can be heterogeneous
-  (i.e. they do not need the same state transition function). This allows to build Layer-1 (L1) blockchains designed explicitly around their application and value proposition.
-- **Shared security and financial scalability of L1 chains**. Any L1 chain attached to a Polkadot
-  virtual core can benefit from Polkadot shared security model. This means the Polkadot
+- **Rollup Chains (parachains).** These are application-specific chains connected to Polkadot. Polkadot is a sharded network
+  where transactions are processed in parallel within each shard. Continuing the comparison of Polkadot being a decentralized computer, Polkadot has a virtual CPU with virtual cores (i.e., shards). Polkadot cores are the gateway for applications such as rollup chains to use Polkadot as a service.
+
+    !!!info "Rollup chains where named parachains"
+        Polkadot rollup chains were named parachains. This reflected the technical nature of parachains, which are blockchains running in parallel on Polkadot shards. Due to the broad industry acceptance of the term "rollup", parachains are, in a way, rollup chains: fully-fledged blockchains sending data to Polkadot for security guarantees. A comparison between Polkadot rollups and other rollups is available [here](../learn/learn-comparisons-rollups.md#rollup-comparison-table).
+  
+- **Shared security**. Any rollup chain attached to a Polkadot
+  virtual core can benefit from Polkadot's shared security and interoperability model. This means the Polkadot
   [Nominated-Proof-of-Stake (NPoS)](../learn/learn-staking.md#nominated-proof-of-stake-npos)
-  mechanism along with its consensus mechanism, secures L1 chains out-of-the-box without having to
-  bootstrap security on their own.
-- **Secure interoperability.** Any L1 chain attached to Polkadot (as well as L2 chains built on top
-  of them) can benefit from Polkadot's native interoperability and will thus be able to communicate
-  and exchange value and information with other chains.
+  mechanism along with its [protocol ELVES](../learn/learn-parachains-protocol.md), can secure fully-fledged blockchains out-of-the-box without having to bootstrap security on their own.
+- **Secure interoperability.** Any rollup chain chain attached to a Polkadot core (as well as Layer-two chains built on top
+  of them) can benefit from Polkadot's native interoperability via [XCM](../learn/learn-xcm.md) and can thus communicate and exchange value and information with other Polkadot rollup chains.
 - **Resilient infrastructure.** This is achieved by keeping the network decentralized without
   compromising scalability and throughput, and through the on-chain
   [treasury](../learn/learn-polkadot-opengov-treasury.md) funds that can be accessed through
-  governance referendum. Those funds guarantee constant sponsorship for events, initiatives,
-  educational material, education, software development, etc.
-- **Fast development and deployment of L1 chains.** This is achieved through the modular and
-  flexible [Polkadot SDK Substrate](./glossary.md#substrate).
+  [OpenGov](../learn/learn-polkadot-opengov.md) referendum. Those funds guarantee constant sponsorship for network upgrades, educational material, software development, events, and initiatives.
+- **Fast blockchain development.** This is achieved through the modular and
+  flexible [Polkadot SDK Substrate](./glossary.md#substrate).  Builders can create fully-fledged blockchains designed explicitly around their application and value proposition, while Polkadot takes care of security and interoperability.
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
   such as [the Polkadot Blockchain Academy](https://polkadot.network/development/academy/) and [Polkadot Alpha Program](./alpha-program.md).
 
 ### Polkadot's Representation
 
 Polkadot has a relay chain acting as the main chain of the system. The Polkadot relay chain is
-represented as a ring surrounded by multiple parachains attached to it. Based on Polkadot's design,
-as long as a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
-connect to the Polkadot network as a parachain or rollup chain.
+represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design,
+if a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
+connect to the Polkadot network as a rollup chain.
 
 ![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
 
-Polkadot's rollups construct and propose blocks to validators on the relay chain, where the blocks undergo
+Polkadot's rollup chains construct and propose blocks to validators on the relay chain, where the blocks undergo
 rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
 added to the finalized chain. As the relay chain provides the security guarantees,
-[collators](../learn/learn-collator.md) - full nodes of these rollup chains - do not have any security
+[collators](../learn/learn-collator.md), full nodes of these rollup chains, do not have any security
 responsibilities, and thus do not require a robust incentive system. This is how the entire network
-stays up to date with the many transactions that take place.
+stays up to date with the many transactions.
 
-The [Cross-Consensus Messaging Format (XCM)](../learn/learn-xcm.md) allows parachains to send
-messages of any type to each other. The shared security and validation logic of the relay chain
-provides the environment for trust-free message passing that opens up true interoperability.
+The [Cross-Consensus Messaging Format (XCM)](../learn/learn-xcm.md) allows rollup chains to send
+messages of any type to each other. The relay chain's shared security and validation logic 
+provides the environment for trust-free message passing that opens up trustless interoperability.
 
-In order to interact with chains that want to use their own finalization process (e.g. Bitcoin),
-Polkadot has [trustless bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that
-transactions can be made between different parachains.
+To interact with chains that want to use their finalization process (e.g., Bitcoin),
+Polkadot has [trustless bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that transactions can happen between Polkadot and other ecosystems without relying on centralized parties.
 
 ### Polkadot's Additional Functionalities
 
-The Polkadot relay chain managed parachains' crowdloans and auctions. Relay chain cores were leased via auctions in 3-month
-chunks for a maximum of two years, and crowdloans allowed users to trustlessly loan funds to teams
+The Polkadot relay chain managed parachains' crowdloans and auctions. Relay chain virtual cores were leased via auctions in 3-month
+chunks for a maximum of two years, and crowdloans allowed users to loan funds to teams
 for lease deposits in exchange for pre-sale tokens. There was no other way you could access cores on
 Polkadot 1.0.
 
@@ -88,64 +87,67 @@ intermediaries or centralized entities.
 
 Polkadot 1.0 achieved resilience through the following strategies:
 
-- Nominated Proof of Staking (NPoS) where the stake per validator is maximized and evenly
-  distributed across validators.
-- The [Decentralized Nodes Program](https://nodes.web3.foundation/) aims to incentivize new operators to
+- **Nominated Proof-of-Stake (NPoS)** where the stake per validator is maximized and evenly
+  distributed across validators, and participation in native staking is decentralized and democratized as much as possible.
+- [**ELVES protocol**](../learn/learn-parachains-protocol.md) allows for the shared security system and the "pessimistic" rollup system, where everything coming through Polkadot's virtual cores passes rigorous checking.
+- The [**Decentralized Nodes Program**](https://nodes.web3.foundation/) aims to incentivize new operators to
   become network participants and further increase physical (how many validator nodes per service
   provider) and social decentralization (how many validator nodes per operator). Those can be
   explored with the [Polkawatch App](https://polkadot.polkawatch.app/).
-- An on-chain treasury and governance (see: [OpenGov](../learn/learn-polkadot-opengov.md)) where
-  every decision goes through public referenda and any token holder can cast a vote.
+- An **on-chain treasury and governance** (see: [OpenGov](../learn/learn-polkadot-opengov.md)) where
+  every decision goes through public referenda, and any token holder can cast a vote.
 
 ### Polkadot's Blockspace
 
-The design and realization of Polkadot 1.0 allowed its creators to enable commoditization of
+The design and realization of Polkadot 1.0 allowed its creators to enable the commoditization of
 blockspace.
 
 A blockchain is a way to store data. The storage unit is the block, and once a block is finalized
 onto the chain, it is practically impossible to modify the data within that block. In addition to
-being tamper-proof, public permissionless blockchains like Polkadot store data that are visible to
-everybody (i.e. public), and anybody can become a network participant permissionlessly.
+being tamper-proof, public permissionless blockchains like Polkadot store data visible to
+everybody (i.e., public), and anybody can become a network participant permissionlessly.
 
 **Blockspace** is the capacity of a blockchain to finalize and commit operations. It represents a
-blockchain's security, computing, and storage capability as an end product. Blockspace produced by
+blockchain's security, computing, and storage capabilities as an end product. Blockspace produced by
 different blockchains can vary in security, flexibility, and availability.
 
-- **Security**, intended as how secure the blockspace is. In Proof-of-Stake (PoS) networks, this is
+- **Security** is intended to show how secure blockspace is. In Proof-of-Stake (PoS) networks, this is
   directly related to how much stake is locked on validator nodes, how much variance in stake there
-  is between validators (i.e. how easy it is to attack a single validator), and how many validators
-  there are securing the network (i.e. how easy it is for colluding validators to exert influence on
+  is between validators (i.e., how easy it is to attack a single validator), and how many validators
+  there are securing the network (i.e., how easy it is for colluding validators to exert influence on
   the network). Additionally, it is also important to look at how many validators are owned by
   single operators (this will determine the degree of social centralization of the network), and how
   many validators run on the same service provider (this will determine the degree of physical
   centralization of the network).
 - **Flexibility**, intended as how flexible the blockspace is, what can be done with it, and what
   type of data can be stored. Data quality plays an important role depending on the type of network.
-  One might avoid having situations in which poor quality data floods blockspace hindering the prompt
+  One might avoid having situations in which poor quality data floods blockspace, hindering the prompt
   execution of vital processes.
-- **Availability**, intended as how available blockspace is and how difficult it is to access it. It
+- **Availability**, intended to show how available blockspace is and how difficult it is to access it. It
   should not be too difficult to get your hands on it so that any business model can thrive using
   it. Ideally, a marketplace must drive the blockspace price based on demand, with secondary market
   options to ensure the usage of "second-hand" blockspace.
 
+!!!info "Blockspace is an umbrella term"
+     Blockspace is not measured the same on any chain; there is no standard unit for blockspace. In Bitcoin, blockspace is based on transaction size, in Ethereum, on how much computation is used (gas), and in Polkadot, on how much time is taken to execute a task on a virtual core (coretime).
+
 Polkadot has been designed around those core blockspace principles. However, its design can be
 further improved such that the tasks which are currently managed on the relay chain, such as
 balances transfers, staking, and governance, can be delegated to
-[system parachains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
+[system chains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
 the relay chain to provide shared security and interoperability. Blockspace is only accessible
-through auctions, but an auction winner has access to a "freighter of blocks" regardless it is
-needed or not. This creates high entry barriers and it can lead to waste of energy and resources.
+through auctions, but an auction winner can access a "freighter of blocks" regardless of their need. This creates high entry barriers and can lead to energy and resource waste.
 
-For more information about blockspace see [this interview](https://youtu.be/e1vISppPwe4) with Robert
+For more information about blockspace, see [this interview](https://youtu.be/e1vISppPwe4) with Robert
 Habermeier as well as [this article](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/) by
 him.
 
 ### A Perspective Shift: Upcoming Polkadot Features
 
 As with many other projects before Polkadot, at some point in time after achieving the
-initially-planned goals, a perspective shift allows you to understand better what your project is
-about and what you actually have built. This allows you to "run the extra mile" and achieve more
-than what was originally planned.
+initially planned goals, a perspective shift allows you to understand better what your project is
+about and what you have built. This allows you to "run the extra mile" and achieve more
+than initially planned.
 
 The quote below by [Marcel Proust](https://en.wikipedia.org/wiki/Marcel_Proust) must remind us that
 sometimes a perspective shift is crucial in _understanding_ the world, and perhaps it is more
@@ -154,7 +156,7 @@ important than _seeing more_ of the world.
 _The only true voyage of discovery, the only fountain of Eternal Youth, would be not to visit
 strange lands but to possess other eyes._
 
-Thus, if we start to see Polkadot with _other eyes_ we can truly envision its potential and what it
+Thus, if we start to see Polkadot with _other eyes_, we can truly envision its potential and what it
 could become.
 
 Polkadot is perfecting its implementation through [RFCs](https://github.com/polkadot-fellows/RFCs)
