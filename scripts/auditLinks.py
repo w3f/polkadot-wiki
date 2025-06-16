@@ -40,7 +40,7 @@ def logger(test, log, shortPath, links, key):
     return log
 
 def getRefSlug(fullPath):
-    subPath = "general/" if "general/" in fullPath else "learn/" if "learn/" in fullPath else "kusama/" if "kusama/" in fullPath else None
+    subPath = "general/" if "general/" in fullPath else "learn/" if "learn/" in fullPath else "kusama/" if "kusama/" in fullPath else ""
     print("full path", fullPath, "sub path", subPath)
     if subPath in fullPath:
         fullPath = fullPath.replace("general/", "docs/").replace("learn/", "docs/").replace("kusama/", "docs/")
