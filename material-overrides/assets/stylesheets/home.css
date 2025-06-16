@@ -15,6 +15,8 @@
   gap: var(--adjust-header-height);
 }
 
+/* Homepage is excluded from dark mode via JavaScript - no CSS overrides needed */
+
 .md-main,
 .md-container {
   padding: 0;
