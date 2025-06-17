@@ -1,10 +1,10 @@
 import os
 import re
-import requests
+import urllib.request
 
 Root = "./docs"
 PolkadotUrl = "https://wiki.polkadot.network/"
-ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs/"
+ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs"
 
 Whitelist = [
     "https://wiki.polkadot.network/docs/community/",
@@ -27,8 +27,9 @@ def testLink(link):
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
         }
-        results = requests.get(link, headers=headers, allow_redirects=True)
-        code = results.status_code
+        req = urllib.request.Request(link, headers=headers)
+        results = urllib.request.urlopen(req)
+        code = results.getcode()
         result = [code == 200, code]
     except Exception:
         pass
@@ -41,7 +42,6 @@ def logger(test, log, shortPath, links, key):
 
 def getRefSlug(fullPath):
     subPath = "general/" if "general/" in fullPath else "learn/" if "learn/" in fullPath else "kusama/" if "kusama/" in fullPath else "general/"
-    print("full path", fullPath, "sub path", subPath)
     if subPath in fullPath:
         fullPath = fullPath.replace("general/", "docs/").replace("learn/", "docs/").replace("kusama/", "docs/")
         slug = fullPath.split(subPath)[-1].replace(".md", "").replace("\\", "/")
@@ -73,18 +73,21 @@ def main():
                             test = testLink(url)
                             log = logger(test, log, shortPath, links, key)
                     elif url.startswith("#"):
-                        if slug:
-                            test = testLink(PolkadotUrl + slug + url)
-                            log = logger(test, log, shortPath, links, key)
-                    elif ".md" in url:
+                        # Ignore pure anchor links like #ideal-staking-rate
+                        continue
+                    elif url.endswith((".png", ".jpg")) or "mailto:" in url:
+                        continue
+                    elif url.endswith(".md") or ".md#" in url:
+                        # Handle relative markdown links like ../learn/learn-polkadot-opengov.md or ../learn/learn-polkadot-opengov.md#section
                         fileDir = os.path.dirname(fullPath)
-                        linkedFile = os.path.join(fileDir, url.split("#")[0].rstrip("/"))
+                        md_path = url.split("#")[0].rstrip("/")
+                        linkedFile = os.path.normpath(os.path.join(fileDir, md_path))
                         if os.path.isfile(linkedFile):
                             refSlug = getRefSlug(linkedFile)
                             if refSlug:
                                 if "#" in url:
-                                    keyAfterHash = url.split("#", 1)[-1]
-                                    test = testLink(PolkadotUrl + refSlug + "#" + keyAfterHash)
+                                    anchor = url.split("#", 1)[-1]
+                                    test = testLink(PolkadotUrl + refSlug + "#" + anchor)
                                 else:
                                     test = testLink(PolkadotUrl + refSlug)
                                 log = logger(test, log, shortPath, links, key)
@@ -92,8 +95,6 @@ def main():
                                 log += f"|[{shortPath}]({ReporUrl}{shortPath})|failed to get ref slug|{key}|{url}|\n"
                         else:
                             log += f"|[{shortPath}]({ReporUrl}{shortPath})|no local file|{key}|{url}|\n"
-                    elif url.endswith((".png", ".jpg")) or "mailto:" in url:
-                        continue
                     else:
                         test = testLink(PolkadotUrl + url)
                         log = logger(test, log, shortPath, links, key)
