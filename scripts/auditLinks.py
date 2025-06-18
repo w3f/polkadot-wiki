@@ -1,8 +1,8 @@
 import os
 import re
-import urllib.request
+import urllib3
 
-Root = "./docs"
+Root = "./docs/kusama"
 PolkadotUrl = "https://wiki.polkadot.network/"
 ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs"
 
@@ -14,6 +14,8 @@ Whitelist = [
     "https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598",
 ]
 
+http = urllib3.PoolManager()
+
 def parseMarkdown(fullPath):
     linkRegEx = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
     with open(fullPath) as f:
@@ -24,12 +26,11 @@ def parseMarkdown(fullPath):
 def testLink(link):
     result = [False, 404]
     try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
-        }
-        req = urllib.request.Request(link, headers=headers)
-        results = urllib.request.urlopen(req)
-        code = results.getcode()
+        # Create an HTTPHeaderDict and add headers
+        headers = urllib3.HTTPHeaderDict()
+        headers.add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36")
+        results = http.request("GET", link, headers=headers)
+        code = results.status
         result = [code == 200, code]
     except Exception:
         pass
