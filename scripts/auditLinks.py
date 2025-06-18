@@ -1,6 +1,8 @@
 import os
 import re
 import urllib3
+import time
+import random
 
 Root = "./docs"
 PolkadotUrl = "https://wiki.polkadot.network/"
@@ -23,17 +25,25 @@ def parseMarkdown(fullPath):
         links = dict(linkRegEx.findall(md))
     return [links]
 
-def testLink(link):
+def testLink(link, max_retries=3):
     result = [False, 404]
-    try:
-        # Create an HTTPHeaderDict and add headers
-        headers = urllib3.HTTPHeaderDict()
-        headers.add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36")
-        results = http.request("GET", link, headers=headers)
-        code = results.status
-        result = [code == 200, code]
-    except Exception:
-        pass
+    delay = 1
+    for attempt in range(max_retries):
+        try:
+            # Create an HTTPHeaderDict and add headers
+            headers = urllib3.HTTPHeaderDict()
+            headers.add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36")
+            results = http.request("GET", link, headers=headers)
+            code = results.status
+            if code == 403 and attempt < max_retries - 1:
+                # Exponential backoff with jitter
+                time.sleep(delay + random.uniform(0, 1))
+                delay *= 2
+                continue
+            result = [code == 200, code]
+            break
+        except Exception:
+            pass
     return result
 
 def logger(test, log, shortPath, links, key):
@@ -73,6 +83,8 @@ def main():
                         if url not in Whitelist:
                             test = testLink(url)
                             log = logger(test, log, shortPath, links, key)
+                            # Add a small random sleep to reduce rate limiting
+                            time.sleep(0.5 + random.uniform(0, 1))
                     elif url.startswith("#"):
                         # Ignore pure anchor links like #ideal-staking-rate
                         continue
@@ -92,6 +104,7 @@ def main():
                                 else:
                                     test = testLink(PolkadotUrl + refSlug)
                                 log = logger(test, log, shortPath, links, key)
+                                time.sleep(0.5 + random.uniform(0, 1))
                             else:
                                 log += f"|[{shortPath}]({ReporUrl}{shortPath})|failed to get ref slug|{key}|{url}|\n"
                         else:
@@ -99,6 +112,7 @@ def main():
                     else:
                         test = testLink(PolkadotUrl + url)
                         log = logger(test, log, shortPath, links, key)
+                        time.sleep(0.5 + random.uniform(0, 1))
 
     print("\nAudit Complete.\n\nResults:\n")
     print(log)
