@@ -14,6 +14,7 @@ Whitelist = [
     "https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be",
     "https://www.linode.com/",
     "https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598",
+    "https://dune.com"
 ]
 
 http = urllib3.PoolManager()
@@ -80,7 +81,7 @@ def main():
                     if url.startswith("<"):
                         continue
                     elif url.startswith("http"):
-                        if url not in Whitelist:
+                        if url not in Whitelist or url.startswith(Whitelist[5]):
                             test = testLink(url)
                             log = logger(test, log, shortPath, links, key)
                             # Add a small random sleep to reduce rate limiting
