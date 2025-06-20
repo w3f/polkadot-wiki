@@ -1,0 +1,32 @@
+name: PaperMoon
+description: "Custom style guide for enforcing PaperMoon standards."
+version: 0.1.0
+rules:
+
+  ### ALERT Level = Error ###
+
+  # Extends Vale dictionary to reference ignore files for customization
+  CustomDictionary: error
+  # Enforces links will open in new tab
+  LinkTarget: error
+  # Enforces headings use Chicago Style title case
+  Titlecase.yml: error
+
+
+  ### ALERT Level = Warning ###
+
+  # Enforces custom version of Google.WordList
+  WordSwapList.yml: warning
+
+
+  ### ALERT Level = Suggestion ###
+
+  # Prompts user to spell out unfamiliar acronyms first time they are used
+  # Includes exception list to specify acronyms this rule will ignore
+  Acronyms: suggestion
+
+  # Suggests replacing 'not' phrases with contraction for clarity
+  NotContractions: suggestion
+  
+  
+  
