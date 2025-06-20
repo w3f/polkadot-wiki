@@ -191,7 +191,7 @@
 /docs/build-hrmp-channels    https://docs.polkadot.com/tutorials/interoperability/xcm-channels    301
 /docs/build-data    https://docs.polkadot.com/develop/toolkit/integrations/indexers    301
 /docs/build-integration    https://docs.polkadot.com/develop/toolkit/integrations/    301
-/docs/build-node-management    https://docs.polkadot.com/running-a-validator/operational-tasks/general-management    301
+/docs/build-node-management    https://docs.polkadot.com/infrastructure/running-a-validator/    301
 /docs/build-guides-install-deps    https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/    301
 /docs/build-guides-template-basic    https://docs.polkadot.com/tutorials/polkadot-sdk/parachains/zero-to-hero    301
 /docs/build-guides-coretime-troubleshoot    https://docs.polkadot.com/develop/parachains/deployment/obtain-coretime    301
