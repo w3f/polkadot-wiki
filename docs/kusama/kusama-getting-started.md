@@ -59,4 +59,4 @@ Kusama Gifts provide an easy way to:
 Learn more about how you can create and send Kusama Gifts
 [here](https://polkadot.com/blog/introducing-polkadot-kusama-gifts).
 
-While Kusama does not support smart contracts natively, building apps on it is possible (e.g. [RMRK.app](https://rmrk.app)).
+While Kusama does not support smart contracts natively, building apps on it is possible (e.g. [RMRK.app](https://rmrk.app/)).
