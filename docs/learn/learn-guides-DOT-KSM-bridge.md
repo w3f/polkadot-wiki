@@ -175,8 +175,9 @@ There are several requirements for an arbitrary token to be transferable between
 - The destination account should exist on the destination chain (and hold a sufficient asset).
 - The asset transferred needs to be larger than the minimum balance specified by the asset.
 - The fee asset transferred needs to be larger than the minimum balance specified by the asset. For example, if DOT is
-used as fee asset from Polkadot Asset Hub to Kusama Asset Hub, the excess DOT will be deposited on Kusama Asset Hub.
-However, if the DOT is less that the minimum balance of DOT on Kusama Asset Hub, the transfer might fail.
+used as fee asset from Polkadot Asset Hub to Kusama Asset Hub, the excess DOT will be deposited to the beneficiary
+on Kusama Asset Hub. However, if the DOT is less that the minimum balance of DOT on Kusama Asset Hub, the transfer 
+might fail.
 - The destination account should hold less assets that the maximum amount of assets held setting.
 
 !!!caution "Avoid Asset Traps"
