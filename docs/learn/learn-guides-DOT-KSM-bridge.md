@@ -169,7 +169,7 @@ and submitted successfully, and the destination account on Kusama Asset Hub rece
 
 ## Transfer of arbitrary assets between Polkadot Asset Hub and Kusama Asset Hub
 
-There are several requirements for an arbitrary token to be transferable between Asset Hubs:
+There are several requirements for an arbitrary token to be transferable between Polkadot and Kusama Asset Hub:
 
 - The asset must already be registered on each Asset Hub.
 - The destination account should exist on the destination chain (and hold a sufficient asset).
