@@ -1,5 +1,5 @@
-name: PaperMoon
-description: "Custom style guide for enforcing PaperMoon standards."
+name: Polkadot Wiki
+description: "Custom style guide for enforcing Polkadot Wiki standards."
 version: 0.1.0
 rules:
 
@@ -27,6 +27,3 @@ rules:
 
   # Suggests replacing 'not' phrases with contraction for clarity
   NotContractions: suggestion
-  
-  
-  
