@@ -178,7 +178,7 @@ There are several requirements for an arbitrary token to be transferable between
 used as fee asset from Polkadot Asset Hub to Kusama Asset Hub, the excess DOT will be deposited to the beneficiary
 on Kusama Asset Hub. However, if the DOT is less that the minimum balance of DOT on Kusama Asset Hub, the transfer 
 might fail.
-- The destination account should hold less assets that the maximum amount of assets held setting.
+- The destination account must hold fewer assets than the maximum number of assets allowed per account.
 
 !!!caution "Avoid Asset Traps"
 To avoid issues on the receiving side for non-sufficient assets, make sure to call [pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531) or 
