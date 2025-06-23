@@ -146,7 +146,7 @@ primaries at the time of evaluation than the one below it.
 
 ## Comparisons
 
-### Nakamoto consensus
+### Nakamoto Consensus
 
 Nakamoto consensus consists of the longest chain rule using proof of work as its Sybil resistance
 mechanism and leader election.

@@ -16,9 +16,9 @@ description: Learn about offenses, slashes, and penalties in the Polkadot ecosys
 </div>
 
 !!!info "Disclaimer"
-    Various parachains or applications living on top of Polkadot might add various economic schemes and include slashes, but they are unrelated to the slashes described here as they only refer to the staked tokens via [Nominated Proof-of-Stake](./learn-staking.md#nominated-proof-of-stake-npos).
+    Various parachains or applications living on Polkadot might add various economic schemes and include slashes, but they are unrelated to the slashes described here as they only refer to the staked tokens via [Nominated Proof-of-Stake](./learn-staking.md#nominated-proof-of-stake-npos).
 
-Polkadot is a public permissionless network. As such, it has a mechanism to disincentivize offenses
+Polkadot is a public permissionless network. As such, it has mechanisms to disincentivize offenses
 and incentivize good behavior. Below, you can find a summary of punishments for specific offenses:
 
 |               Offense                | [Slash (%)](#slashing) | [On-chain Disabling](#disabling) | Off-chain Disabling | [Reputational Changes](#reputation-changes) |
@@ -57,9 +57,9 @@ On Polkadot, there are six main validator offenses as shown below.
   block as backers can back blocks "into the future" optimistically. See
   [this page](https://paritytech.github.io/polkadot-sdk/book/node/backing/statement-distribution.html#seconding-limit)
   for more information.
-- **Seconded + Valid Equivocation:** This happens when a malicious node first seconds something
+- **Seconded + Valid Equivocation:** Occurs when a malicious node first seconds something
   (takes absolute responsibility for it), and then only pretends to be someone who just said it is
-  correct after someone else takes responsibility. That is a straight-up lie (equivocation). A node
+  correct after another node takes responsibility. This behavior is a clear case of equivocation, as the node presents two conflicting stances. A node
   could use that tactic to escape responsibility, but once the system notices the two conflicting
   votes, the offense is reported.
 
@@ -87,13 +87,12 @@ main punishments: slashing, disabling, and reputation changes.
 ### Slashing
 
 **Slashing** will happen if a validator misbehaves in the network. They and their nominators will
-get slashed by losing a percentage of their staked tokens, from as little as 0.01% up to 100%.
+be slashed by losing a percentage of their staked tokens, from as little as 0.01% up to 100%.
 
-Any slashed token will be added to the [Treasury](./learn-polkadot-opengov-treasury.md). The rationale for
+Any slashed token will go to the [Treasury](./learn-polkadot-opengov-treasury.md). The rationale for
 this (rather than burning or distributing them as rewards) is that slashes may be reverted by simply
 paying out from the Treasury. This would be useful in situations such as faulty slashes. In the case
-of legitimate slashing, tokens are moved away from malicious validators to those building the
-ecosystem through the normal Treasury process.
+of legitimate slashing, tokens are reallocated from malicious validators to contributors who support and strengthen the ecosystem, in accordance with the Treasury process.
 
 Slashing only occurs for active validations for a given nominator, and slashes are not mitigated by
 having other inactive or waiting nominations. They are also not mitigated by the validator operator
@@ -102,7 +101,7 @@ running separate nodes; each node is considered its own entity for slashing purp
 !!!info "Multiple Active Nominations"
     In rare instances, with very large bonds, a nominator may actively nominate several validators in a single era. In this case, the slash is proportionate to the amount staked to that specific validator. Note that you cannot control the percentage of stake allocated to each validator or choose who your active validator will be (except in the trivial case of nominating a single validator). Staking allocations are controlled by the [Phragmén algorithm](learn-phragmen.md).
 
-Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
+Once a validator is slashed, it is saved into the state as an "unapplied slash". You can check this
 via
 [Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator, followed by all the affected nominators and the amounts. While
@@ -144,8 +143,8 @@ The following are scenarios that build towards slashes under equivocation:
     reputational damage.
 
 See the next section to understand how slash amounts for equivocations are calculated. If you want
-to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
+to know more about slashing, please look at the
+[slashing research page](https://research.web3.foundation/Polkadot/security/slashing/amounts).
 
 #### Slash Calculation for Equivocation
 

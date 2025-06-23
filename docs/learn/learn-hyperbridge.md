@@ -69,7 +69,7 @@ In addition to facilitating cross-chain message passing among connected chains, 
 a synchronization primitive across Hyperbridge's internal state machines. This enables its parachain
 cores to communicate with each other and delegate tasks.
 
-### Underlying technologies
+### Underlying Technologies
 
 The underlying technologies of the Hyperbridge are integrated with:
 

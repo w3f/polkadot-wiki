@@ -79,7 +79,7 @@ Kusama), you are eligible to perform fast unstaking. The
 qualify. For more information, visit the
 ["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
 
-## Setting-up Accounts
+## Setting up Accounts
 
 ### Stash & Staking Proxy
 

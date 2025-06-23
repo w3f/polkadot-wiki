@@ -79,9 +79,9 @@ Likewise, it should be easy for them to recognize when it's safe to restart bloc
 perhaps based on finality delay, validator set size or some other factor that is yet to be decided
 within [Cumulus](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus).
 
-### Parachain Development Kits (PDKs)
+### Polkadot SDK
 
-Parachain Development Kits are a set of tools that enable developers to create their own
+Polkadot SDK is a set of tools that enable developers to build their own
 applications as parachains. For more information, see the [Parachain Development page](https://docs.polkadot.com/develop/parachains/).
 
 ## Security
@@ -97,7 +97,7 @@ nominators, the higher the minimum amount of DOT an attacker would need to acqui
 
 ### In what scenarios do parachains need their own security?
 
-Most parachains will not need to worry about their own security, since all state transitions will be
+Most parachains do not need to worry about their own security, since all state transitions are
 secured by the Polkadot relay chain validator set. However, in some cases (which are considered more
 experimental), parachains may require their own security. In general, these cases will revolve
 around lack of data available to relay chain validators.

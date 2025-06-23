@@ -32,7 +32,7 @@ Ledger accounts to the Polkadot Extension read through
 while if you want to import Ledger accounts to the Polkadot-JS UI, you can consult
 [this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
 
-### Derivation paths
+### Derivation Paths
 
 When adding a Ledger account using the extension or the UI, you will be asked to select an
 `account type` and an `account index`. The first lets you select an account, while the second lets

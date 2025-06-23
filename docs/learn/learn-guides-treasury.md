@@ -49,7 +49,7 @@ Unlike `treasury.spendLocal`, `treasury.spend` is **not** bound by a spend perio
 claimed manually via the `treasury.payout` extrinsic. `treasuy.spendLocal` behavior remains
 unchanged.
 
-### Submit Treasury Proposal Preimage
+### Submitting Treasury Proposal Preimage
 
 The example below shows how to create a [preimage](../general/glossary.md#preimage) for a
 transaction that requests 100 DOT from Treasury.
@@ -79,7 +79,7 @@ the image below). Take a note of this preimage hash, which is required to submit
 
 ![Treasury Preimage Hash](../assets/treasury/treasury-preimage-hash.png)
 
-### Submit a Treasury Track Referendum
+### Submitting a Treasury Track Referendum
 
 The example below shows how to submit a Treasury track referendum.
 
@@ -97,7 +97,7 @@ The example below shows how to submit a Treasury track referendum.
 Once your submission is executed, your referendum will appear under your chosen track on the
 Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
 
-### Place a Decision Deposit for the Treasury Track Referendum
+### Placing a Decision Deposit for the Treasury Track Referendum
 
 For the referendum to move from preparing phase to the deciding phase, a decision deposit needs to
 be placed. The decision deposit values for each individual
