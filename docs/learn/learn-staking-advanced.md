@@ -4,9 +4,9 @@ description: Explore advanced staking concepts in Polkadot, including staking pr
 ---
 
 !!!tip "New to Staking?"
-      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
-This page is meant to be an advanced guide to staking with the relay chain. For a more general
+This page is meant to provide advanced information about staking on Polkadot. For a more general
 introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
 
 ## Staking Proxies
@@ -52,7 +52,7 @@ Note that to change the staking proxy you will need to sign with the stash or an
 
 For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
-In Polkadot's NPoS nomination intents are placed in a semi-sorted list called
+In Polkadot's [Nominated Proof-of-Stake (NPoS)](../learn/learn-consensus.md#nominated-proof-of-stake), nomination intents are placed in a semi-sorted list called
 [bags-list](https://github.com/paritytech/substrate/pull/9507). The Bags-List substrate pallet is
 designed to be self-maintaining, with minimal effort from the blockchain, making it extremely
 scalable. The bags list has two primary components, bags and nodes (or nominators' accounts), with
