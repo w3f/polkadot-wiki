@@ -27,7 +27,7 @@ For more information on the Polkadot roadmap please visit the
 
 ### Polkadot Launch
 
-The Genesis block of the Polkadot network was launched on May 26, 2020 at 15:36:21 UTC, as a Proof
+The Genesis block of the Polkadot network was produced on May 26, 2020 at 15:36:21 UTC, as a Proof
 of Authority (PoA) network, with governance controlled by the single Sudo (super-user) account.
 During this time, validators started joining the network and signaling their intention to
 participate in consensus.
@@ -46,9 +46,9 @@ DOT.
 
 ### Why Polkadot targets 1000 validators while other projects have hundreds of thousands?
 
-Polkadot's goal to have 1000 validators is set to be something that is practically achievable with high confidence of good performance in a live environment. Furthermore, validators in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible on Polkadot the number can scale up to hundreds of thousands. Since validators are performing critical consensus work to maintain the security of the chain including all of its shards, a more modest number of validators is estimated to start. Upon improvements, such as implementing signature aggregation for finalization messages, the number of validators can reasonably scale up.
+Polkadot's goal to have 1000 validators is set to be something that is practically achievable with high confidence of good performance in a live environment. Furthermore, validators in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible on Polkadot the number can scale up to hundreds of thousands.  Upon improvements, such as implementing signature aggregation for finalization messages, the number of validators can reasonably scale up.
 
-Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator is running their own validating node and performing full verification of the Relay Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
+Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator runs their own validating node and verifies the relay chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
 Finally, individuals may participate in the block production process indirectly by
 [nominating](../learn/learn-nominator.md) validators. In this way, individuals who are not running a
@@ -59,10 +59,10 @@ node can still share in staking rewards.
 Both the Kusama and Polkadot networks are currently operating at a rate of one block every six
 seconds.
 
-### Does Polkadot have smart contracts?
+### Does Polkadot support smart contracts?
 
 While the Polkadot relay chain does not implement smart contracts directly, [there are numerous
-parachains that do](). It's possible for parachains to enable smart contract functionality and then
+ It's possible for parachains to enable smart contract functionality and then
 benefit from the security and interoperability features of Polkadot. Additionally, existing smart
 contract chains can connect to Polkadot as a parachain, or via a bridge.
 
