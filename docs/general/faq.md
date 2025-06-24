@@ -4,12 +4,28 @@ description: Find answers to common questions about Polkadot and its ecosystem.
 ---
 
 !!!info
-    This FAQ focuses on technical questions for users interested in developing applications for
-    Polkadot. If you have a more general question, you may wish to search for the answer on our support
+    This FAQ focuses on technically oriented questions for users interested in certain aspects of
+    Polkadot. If you have a more general question related to usage, you may search for the answer on our support
     [Knowledge Base](https://support.polkadot.network/support/home) or the main
     [Polkadot network FAQ](https://polkadot.network/faq).
 
-## Polkadot Launch
+
+!!!info "JAM FAQ"
+    For questions regarding JAM and its relation to Polkadot, visit the [JAM FAQ](../learn/learn-jam-faq.md)
+
+
+## Polkadot
+
+### What is the minimum amount of KSM / DOT I can have in my account?
+
+Please see information about [Existential Deposits](../learn/learn-accounts.md#existential-deposit-and-reaping).
+
+### Polkadot Roadmap
+
+For more information on the Polkadot roadmap please visit the
+[official Polkadot website](https://www.opengov.watch/polkadot-roadmap).
+
+### Polkadot Launch
 
 The Genesis block of the Polkadot network was launched on May 26, 2020 at 15:36:21 UTC, as a Proof
 of Authority (PoA) network, with governance controlled by the single Sudo (super-user) account.
@@ -28,10 +44,76 @@ UTC.
 On August 21, 2020, Redenomination of DOT occurred. From this date, one DOT (old) equals 100 new
 DOT.
 
-## Polkadot Roadmap
+### Why Polkadot targets 1000 validators while other projects have hundreds of thousands?
 
-For more information on the Polkadot roadmap please visit the
-[official Polkadot website](https://www.opengov.watch/polkadot-roadmap).
+Polkadot's goal to have 1000 validators is set to be something that is practically achievable with high confidence of good performance in a live environment. Furthermore, validators in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible on Polkadot the number can scale up to hundreds of thousands. Since validators are performing critical consensus work to maintain the security of the chain including all of its shards, a more modest number of validators is estimated to start. Upon improvements, such as implementing signature aggregation for finalization messages, the number of validators can reasonably scale up.
+
+Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator is running their own validating node and performing full verification of the Relay Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
+
+Finally, individuals may participate in the block production process indirectly by
+[nominating](../learn/learn-nominator.md) validators. In this way, individuals who are not running a
+node can still share in staking rewards.
+
+### What is the block time of the relay chain?
+
+Both the Kusama and Polkadot networks are currently operating at a rate of one block every six
+seconds.
+
+### Does Polkadot have smart contracts?
+
+While the Polkadot relay chain does not implement smart contracts directly, [there are numerous
+parachains that do](). It's possible for parachains to enable smart contract functionality and then
+benefit from the security and interoperability features of Polkadot. Additionally, existing smart
+contract chains can connect to Polkadot as a parachain, or via a bridge.
+
+### How does the Polkadot relay chain connect to external chains in the ecosystem?
+
+One of the cornerstone interoperability technologies being researched and developed for deployment
+on Polkadot is cross-chain [bridges](../learn/learn-bridges.md). Bridges come in a variety of
+flavors with varying levels of trust associated with them. Polkadot is predominantly researching the
+trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore
+makes it economically secure. Bridge efforts are being worked on in concert with other projects in
+the ecosystem.
+
+### What is Polkadot's Transactions Per Second (TPS)?
+
+Polkadot is a heterogeneous sharded network comprising a relay chain and numerous parachains, which
+are all individual blockchains built on [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) executing in parallel.
+Hence, the Transactions Per Second (TPS) of Polkadot is a number that encompasses all the
+transactions on the relay chain as well as parachains. As the transactions on these Substrate-based
+blockchains are [weights based](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#transactions-weights-and-fees), it makes sense to
+use TPS as a measure for the network performance if all the transactions carry the same weight.
+A performance benchmark test performed in 2024 (dubbed ["The Spammening"](https://polkadot.com/spammening/)) demonstrated that Polkadot is capable of at least 623,000 TPS. The test delivered 143,000 TPS when utilizing only 23% of network cores on Kusama, Polkadot's live sister network that shares its codebase.
+
+It is essential to realize that TPS is inherently a subjective measurement with numerous factors
+that can contribute to it. It's hard to gauge the usefulness of TPS in isolation (when compared to
+other chains), as it depends on what a transaction does for a particular network. To view how
+Polkadot measures TPS see the Polkadot sTPS
+([Standard Transaction Per Second](https://github.com/paritytech/polkadot-stps/blob/main/docs/introduction.md))
+to consider precisely how benchmarking was performed for Polkadot.
+
+### What is the inflation rate of the DOT?
+
+The inflation rate is approximately 120,000,000 DOT per year.
+
+The 85% of inflation is rewarded to validators for performing their duties, while the 15% goes to
+the treasury. Please see the article on [inflation](../learn/learn-DOT.md#dot-inflation) for more
+information.
+
+### Transfer Fees
+
+It is important to note that the cost of transferring DOT is dynamic. Specifically, fee calculation follows
+the following formula:
+
+```
+base_fee + (tx_length * length_fee) + WeightToFee(weight)
+```
+
+The base fee for Polkadot is 0.001 DOT.
+
+Please see the
+[fee calculation](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#how-fees-are-calculated) page in
+the Polkadot Developer documentation for more detailed information.
 
 ## Consensus
 
@@ -113,115 +195,12 @@ You can also use some tools some to perform estimations.
 - [Validator stats script](https://github.com/w3f/validator-stats) can give you an estimate that is
   based on the currently elected set, as well as some statistics about Kusama validators.
 
-### Why Polkadot targets 1000 validators while other projects have hundreds of thousands?
-
-Polkadot's goal to have 1000 validators is set to be something that is practically achievable in the
-short term with high confidence of good performance in a live environment. Furthermore, validators
-in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible
-on Polkadot the number can scale up to hundreds of thousands. Since validators are performing
-critical consensus work to maintain the security of the chain including all of its shards, a more
-modest number of validators is estimated to start. Upon later improvements, such as implementing
-signature aggregation for finalization messages, the number of validators could reasonably scale up.
-However, increasing validators above one thousand remains a goal for later iterations of Polkadot.
-
-Additionally, other projects sometimes have a different definition of _validator_ that approximates
-more closely to remote signing keys without the full operation of a validating node. On Polkadot,
-each validator is running their own validating node and performing full verification of the Relay
-Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state
-transitions. Other projects may consider validators and "validating nodes" as separate entities.
-
-Finally, individuals may participate in the block production process indirectly by
-[nominating](../learn/learn-nominator.md) validators. In this way, individuals who are not running a
-node can still share in staking rewards.
-
-## Relay Chain
-
-### What is the block time of the relay chain?
-
-Both the Kusama and Polkadot networks are currently operating at a rate of one block every six
-seconds.
-
-This may be changed in the future. It may go as low as two to three seconds after optimizations, or
-potentially increase in order to handle the capacity of the parachain networking in a live
-environment.
-
-### Does Polkadot have smart contracts?
-
-No - and yes. The Polkadot relay chain does not implement smart contracts natively. The reason for
-not having smart contracts on the relay chain is part of the design philosophy for Polkadot that
-dictates that the relay chain should be the minimal logic required to accomplish its job.
-
-While the Polkadot relay chain does not implement smart contracts directly, there are numerous
-parachains that do. It's possible for parachains to enable smart contract functionality and then
-benefit from the security and interoperability features of Polkadot. Additionally, existing smart
-contract chains can connect to Polkadot as a parachain, or via a bridge.
-
-So it's better to say that the Polkadot _ecosystem_ has smart contracts versus "Polkadot has smart
-contracts."
-
-### How does the Polkadot relay chain connect to external chains in the ecosystem?
-
-One of the cornerstone interoperability technologies being researched and developed for deployment
-on Polkadot is cross-chain [bridges](../learn/learn-bridges.md). Bridges come in a variety of
-flavors with varying levels of trust associated with them. Polkadot is predominantly researching the
-trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore
-makes it economically secure. Bridge efforts are being worked on in concert with other projects in
-the ecosystem.
-
-### What is Polkadot's Transactions Per Second (TPS)?
-
-Polkadot is a heterogeneous sharded network comprising a relay chain and numerous parachains, which
-are all individual blockchains built on [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) executing in parallel.
-Hence, the Transactions Per Second (TPS) of Polkadot is a number that encompasses all the
-transactions on the relay chain as well as parachains. As the transactions on these Substrate-based
-blockchains are [weights based](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#transactions-weights-and-fees), it makes sense to
-use TPS as a measure for the network performance if all the transactions carry the same weight.
-A performance benchmark test performed in 2024 (dubbed ["The Spammening"](https://polkadot.com/spammening/)) demonstrated that Polkadot is capable of at least 623,000 TPS. The test delivered 143,000 TPS when utilizing only 23% of network cores on Kusama, Polkadot's live sister network that shares its codebase.
-
-It is essential to realize that TPS is inherently a subjective measurement with numerous factors
-that can contribute to it. It's hard to gauge the usefulness of TPS in isolation (when compared to
-other chains), as it depends on what a transaction does for a particular network. To view how
-Polkadot measures TPS see the Polkadot sTPS
-([Standard Transaction Per Second](https://github.com/paritytech/polkadot-stps/blob/main/docs/introduction.md))
-to consider precisely how benchmarking was performed for Polkadot.
-
-## DOT
-
-### What is the difference between old DOT and new DOT?
-
-The DOT (old) unit on Polkadot was at twelve decimal places, otherwise known as 1e12 Plancks. On 21
-August, 2020, Denomination Day, the DOT (old) value was redenominated to 1e10 (10_000_000_000, or
-ten billion) Plancks, meaning that the new DOT was valued at ten decimal places.
-
-### What is the inflation rate of the DOT?
-
-The inflation rate is approximately 120,000,000 DOT per year.
-
-The 85% of inflation is rewarded to validators for performing their duties, while the 15% goes to
-the treasury. Please see the article on [inflation](../learn/learn-DOT.md#dot-inflation) for more
-information.
-
-### Why can't crowdloaned DOT be staked?
-
-DOTs contributed to a successful crowdloan campaign by a parachain are bonded for the entire lease
-period, which is two years on Polkadot. The crowdloaned DOT cannot be used for any other DOT utility
-functionalities like staking and democracy. In exchange to the lost staking rewards or liquidity of
-DOTs, the parachain team may offer rewards to the contributor.
-
-The utility of crowdloaned DOT is to provide a lease for a parachain. The utility of staked DOT is
-to secure the network through a reward/[slash](../learn/learn-offenses.md) mechanism. Allowing
-crowdloaned DOT to be staked results in complex consequences like applying a slash on crowdloaned
-DOT that was meant to be bonded for the entire lease period of a parachain. In a way, the
-inaccessibility of crowdloaned DOTs and the lack of staking rewards for the entire lease duration
-encourages the contributors to back projects that are valuable to the ecosystem.
-
 ## Governance
 
 ### What prevents Polkadot governance from failing?
 
-Polkadot's governance has already been shown to work. Examples can be found in the runtime upgrades
-that have successfully taken place through on the testnets as well as in a real economic environment
-on [Kusama](https://guide.kusama.network) and Polkadot itself.
+Examples of [Polkadot's governance](../learn/learn-polkadot-opengov.md) can be found in the runtime upgrades
+that have successfully taken place through on the testnets, Kusama, and Polkadot itself.
 
 It is fair to say that the field of on-chain blockchain governance is still new, and no one can
 claim to know exactly what the optimal version of on-chain governance is yet. However, Polkadot
@@ -277,67 +256,6 @@ other option is run as an on-demand parachain, and purchase coretime to produce 
 On-demand parachains are still secured by the relay chain but don't need to hold a core and can
 produce a block when it's economically feasible for them. For more information, please refer to the
 [parachains page](../learn/learn-parachains.md#parachains-vs-on-demand-parachains).
-
-## Networking
-
-### What is libp2p?
-
-[Libp2p](https://libp2p.io) is a modular and extensible networking stack that is used by IPFS,
-Substrate, and many other projects. It is a collection of peer-to-peer protocols for finding peers
-and connecting to them. Its modules have logic for content routing, peer routing, peer discovery,
-different transports, and NAT traversals. It is intended to be used by applications for building
-large scale peer-to-peer networks by only selecting the parts of the protocol suite that are needed.
-
-The Rust implementation of the specification was built and primarily maintained by a team of
-contributors at Parity Technologies. The Go and JavaScript versions are maintained by Protocol Labs
-as well as community contributors. A [Nim](https://github.com/status-im/nim-libp2p) version of the
-library also exists. Libp2p as a whole is an open source project that is actively developed and
-expanded on various code repositories hosted on [their GitHub](https://github.com/libp2p).
-
-### Does Polkadot use libp2p?
-
-Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol that is based on
-libp2p (specifically the Rust libp2p library). However, Substrate uses a mix of standard libp2p
-protocols and protocols that are homegrown and not official libp2p standards. Of the standards
-protocols, those which are shared with other implementations of libp2p such as IPFS, are
-connection-checking (ping), asking for information on a peer (identity), and Kademlia random walks
-(kad).
-
-Of the protocols that are custom to Substrate, there are the legacy Substrate stream, a
-request-response for getting information on blocks (sync), a light client protocol, a notification
-protocol for transactions, and block announcement. For detailed information on how Substrate uses
-libp2p and the standard and custom protocols, please see the
-[networking documentation](https://paritytech.github.io/substrate/master/sc_network/index.html).
-
-### How does libp2p differ from IPFS?
-
-The [Interplanetary File System](https://ipfs.tech/) (IPFS) is a peer-to-peer hypermedia protocol
-used primarily for storage of files. It allows one to upload a file onto the network and share it
-with its content addressable URI. IPFS, like Substrate, is an application of libp2p and exists
-higher on the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that
-Substrate "uses" IPFS since besides sharing the underlying library for networking there is no native
-integration between the two applications.
-
-## Kusama
-
-### What is the minimum amount of KSM / DOT I can have in my account?
-
-Please see information about [Existential Deposits](../learn/learn-accounts.md#existential-deposit-and-reaping).
-
-### What are the transfer fees for Kusama?
-
-It is important to note that the cost of transferring KSM is dynamic. Currently, the minimum cost of
-transferring KSM is 0.01 KSM (the base fee), although this can be changed via governance. However,
-actual transaction fees vary based on a variety of factors. Specifically, fee calculation follows
-the following formula:
-
-```
-base_fee + (tx_length * length_fee) + WeightToFee(weight)
-```
-
-Please see the
-[fee calculation](https://docs.polkadot.com/polkadot-protocol/basics/blocks-transactions-fees/fees/#how-fees-are-calculated) page in
-the Substrate documentation for more detailed information.
 
 ## Answered by Gav series
 
