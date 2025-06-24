@@ -44,7 +44,7 @@ flowchart LR
     click J "https://wiki.polkadot.network/general/ecosystem-funds/" _blank
 ```
 
-For more information about funding in the Polkadot ecosystem, see [the Web3 Foundation funding support page](https://web3.foundation/funding-support/).
+For more information about funding options and initiatives in the Polkadot ecosystem, see [the Web3 Foundation Funding & Support page](https://web3.foundation/funding-support/).
 
 ## Funding FAQ
 
