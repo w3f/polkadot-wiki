@@ -44,6 +44,8 @@ flowchart LR
     click J "https://wiki.polkadot.network/general/ecosystem-funds/" _blank
 ```
 
+For more information about founding in the Polkadot ecosystem, see [the Web3 Foundation founding support page](https://web3.foundation/funding-support/).
+
 ## Funding FAQ
 
 1. _Will the grant be awarded to those delivering a complete product that everyone in the ecosystem
