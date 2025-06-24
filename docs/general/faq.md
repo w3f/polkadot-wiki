@@ -61,7 +61,7 @@ seconds.
 
 ### Does Polkadot support smart contracts?
 
-While the Polkadot relay chain does not implement smart contracts directly, [there are numerous
+Polkadot will support Solidity smart contracts by late 2025. Smart contracts deployment is already possible on Kusama and testnets. There are also numerous parachains that support EVM and Wasm smart contracts.
  It's possible for parachains to enable smart contract functionality and then
 benefit from the security and interoperability features of Polkadot. Additionally, existing smart
 contract chains can connect to Polkadot as a parachain, or via a bridge.
