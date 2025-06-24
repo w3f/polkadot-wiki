@@ -196,13 +196,13 @@ a trait is a combination of the metrics above). Available filters are:
 !!!warning "Single Operators with Multiple Validators"
     Recall that [slashing](./learn-offenses.md) is an additive function; the more validators equivocating in a given session, the harsher the penalties. Since validators that are controlled by a single operator are more at risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of others in many ways (different hardware, geographic location, owner, etc.).
 
-### Bags-list
+### Bags List
 
 !!!info
-    On Polkadot and Kusama, the instance of the pallet [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as `voterList`.
+    On Polkadot and Kusama, the instance of the pallet [Bags List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as `voterList`.
 
-Nominating accounts are placed in a semi-sorted list called bags-list. This sorting functionality is
-extremely important for the long-term improvements of the staking/election system. Bags-list allows
+Nominating accounts are placed in a semi-sorted list called bags list. This sorting functionality is
+extremely important for the long-term improvements of the staking/election system. The bags list allows
 an unlimited number nominators to set their intention to nominate, of which only a portion of it
 (currently 22500) is considered for [electing set](#staking-election-stages) that eventually
 determines the active validators.
@@ -260,7 +260,7 @@ The staking election system has three stages for both validators and nominators,
   simply a "nominator".
 - **electing nominator:** a nominator who is selected to be a part of the input to the
   [NPoS election algorithm](learn-phragmen.md). This selection is based on stake and is made using
-  the [bags-list](./learn-staking-advanced.md#bags-list).
+  the [bags list](./learn-staking-advanced.md#bags-list).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
   validator. When slashing occurs, all the active nominators backing the validator get slashed.
 
