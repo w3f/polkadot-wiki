@@ -26,6 +26,10 @@ Polkadot 1.0 is:
 From now on _application_ will be used as a general term to describe anything that can use a
 Polkadot core to access secure and decentralized computation.
 
+## Polkadot 2.0 Definition
+
+The Polkadot community [voted on a Wish for Change proposal](https://polkadot.polkassembly.io/referenda/747) stating that Polkadot 2.0 includes the following major technical upgrades: [asnychronous backing](../learn/learn-async-backing.md), [agile coretime](../learn/learn-agile-coretime.md), and [elastic scaling](../learn/learn-elastic-scaling.md).
+
 ## From Chain-centricity to Application-centricity
 
 If we see Polkadot as a service provider of trustless and resilient computation through cores as
@@ -42,16 +46,9 @@ A paradigm shift from:
   applications.
 
 Previously, securing a core was a competitive process through an
-candle auction mechanism. With Agile Coretime, there is no need for
+candle auction mechanism. With [coretime](#agile-coretime-allocation), there is no need for
 auctions anymore. Teams can purchase on-demand coretime or reserve bulk coretime as required. This
-greatly decreases the barrier-to-entry for software tinkerers and parachain teams.
-
-On top of those main changes, [agile core usage](#agile-core-usage) and
-[coretime allocation](#agile-coretime-allocation) will allow any application to access Polkadot's
-computation based on their needs without wasting valuable blockspace. [Accords](#xcm-and-accords)
-will improve cross-chain communication and the security guarantees of XCM messages. Finally,
-Polkadot will scale by moving on-chain logic into its system parachains, allowing it to have more
-bandwidth for the [parachains protocol](../learn/learn-parachains-protocol.md) and accords.
+greatly decreases the barrier-to-entry for software tinkerers and parachain teams. Coretime will also allow any application to access Polkadot's computation based on their needs maximizing the use of valuable blockspace.
 
 ## From Slot Auctions to Coretime Marketplace
 
@@ -114,9 +111,9 @@ another core C2. Some applications might stop running for some time and resume l
 
 ![core-usage-agile-rangeSplit](../assets/core-usage-agile-rangeSplit.png)
 
-### Strided Coretime
+### Interlaced Coretime
 
-Ranges can be strided (i.e., applications can take turns on a core) to share costs or decrease block
+Ranges can be interlaced (i.e., applications can take turns on a core) to share costs or decrease block
 production rate, for example.
 
 ![core-usage-agile-rangeStrided](../assets/core-usage-agile-rangeStrided.png)

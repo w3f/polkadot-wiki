@@ -6,8 +6,7 @@ description: Learn about Polkadot's future direction as a decentralized, secure,
 !!!info
     The material on this page is based on [Gavin Wood's talk at Polkadot Decoded 2023](https://www.youtube.com/watch?v=GIB1WeVuJD0).
 
-Understanding what [Polkadot 2.0](./polkadot-v2.md) is about and the philosophy behind it will help
-us envision the future direction of the Polkadot ecosystem toward abstraction and generalization.
+Understanding what [Polkadot 2.0](./polkadot-v2.md) will help us envision the future direction of the Polkadot ecosystem toward abstraction and generalization.
 
 ## Offloading Tasks to System Chains
 
