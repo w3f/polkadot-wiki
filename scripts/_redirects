@@ -209,7 +209,7 @@
 /docs/maintain-archive    https://docs.polkadot.com/infrastructure   301
 /docs/maintain/maintain-guides-how-to-vote-councillor    https://polkadot.com/    301
 /docs/maintain/maintain-guides-democracy    /learn/learn-guides-polkadot-opengov/    301
-/docs/maintain-guides-how-to-validate-polkadot    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator     301
+/*/maintain-guides-how-to-validate-polkadot    https://docs.polkadot.com/infrastructure/running-a-validator/onboarding-and-offboarding/set-up-validator     301
 /docs/maintain-guides-secure-validator    https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/general-management/#secure-your-validator    301
 /docs/maintain-endpoints    https://docs.polkadot.com/develop/networks/    301
 /docs/maintain-sync    https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node   301
