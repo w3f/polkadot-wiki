@@ -1,0 +1,15 @@
+# This style tells Vale.Spelling where to find ignore files
+# Ignore files list words to be ignored during spell check (one case-insensitive entry per line)
+extends: spelling
+message: "Did you really mean '%s'?"
+level: error
+vocab: true
+ignore:
+  # Reference file location relative to styles/config/ignore directory
+    # custom dictionary of cyrpto brands and token names/symbols
+  - brand-token-ignore.txt
+    # custom dictionary of blockchain/swe terms
+  - industry-ignore.txt
+    # custom dictionary of Polkadot related terms
+  - polkadot-ignore.txt
+    
