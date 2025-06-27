@@ -19,7 +19,7 @@ Polkadot is a blockchain-based decentralized computer that brings to the multi-c
 - **Rollup Chains (parachains).** These are application-specific chains connected to Polkadot. Polkadot is a sharded network
   where transactions are processed in parallel within each shard. Continuing the comparison of Polkadot being a decentralized computer, Polkadot has a virtual CPU with virtual cores (i.e., shards). Polkadot cores are the gateway for applications such as rollup chains to use Polkadot as a service.
 
-    !!!info "Rollup chains where named parachains"
+    !!!info "Rollups or Parachains?"
         Polkadot rollup chains were named parachains. This reflected the technical nature of parachains, which are blockchains running in parallel on Polkadot shards. Due to the broad industry acceptance of the term "rollup", parachains are, in a way, rollup chains: fully-fledged blockchains sending data to Polkadot for security guarantees. A comparison between Polkadot rollups and other rollups is available [here](../learn/learn-comparisons-rollups.md#rollup-comparison-table).
   
 - **Shared security**. Any rollup chain attached to a Polkadot
