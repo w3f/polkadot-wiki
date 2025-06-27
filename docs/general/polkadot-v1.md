@@ -33,7 +33,7 @@ Polkadot is a blockchain-based decentralized computer that brings to the multi-c
   [treasury](../learn/learn-polkadot-opengov-treasury.md) funds that can be accessed through
   [OpenGov](../learn/learn-polkadot-opengov.md) referendum. Those funds guarantee constant sponsorship for network upgrades, educational material, software development, events, and initiatives.
 - **Fast blockchain development.** This is achieved through the modular and
-  flexible [Polkadot SDK Substrate](./glossary.md#substrate).  Builders can create fully-fledged blockchains designed explicitly around their application and value proposition, while Polkadot takes care of security and interoperability.
+  flexible [Substrate, located within the Polkadot SDK](./glossary.md#substrate).  Builders can create fully-fledged blockchains designed explicitly around their application and value proposition, while Polkadot takes care of security and interoperability.
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
   such as [the Polkadot Blockchain Academy](https://polkadot.network/development/academy/) and [Polkadot Alpha Program](./alpha-program.md).
 
