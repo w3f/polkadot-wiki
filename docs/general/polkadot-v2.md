@@ -63,7 +63,7 @@ follows that the procurement of those cores must be agile as well.
 The auction mechanism is not agile, creates high entry barriers, and is designed for long-running
 single applications (i.e., the original Polkadot vision proposed in the whitepaper).
 
-We depart from the classic lease auctions and propose an agile marketplace for coretime, where
+Thus, classic lease auctions were deprecated, instead an agile marketplace for coretime was born, where
 essentially **coretime becomes a commodity that can be tokenized, sold, and traded**. This setup
 maximizes the agility of Polkadot and lets the market figure out the best solution needed for
 applications to be successful.
