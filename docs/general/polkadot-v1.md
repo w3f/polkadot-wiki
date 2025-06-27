@@ -80,7 +80,7 @@ Decentralization is a crucial aspect of blockchain networks, but there is a trad
 
 Ideally, a network should be decentralized "enough" to make it practically impossible for someone to
 exert manipulative or malicious influence on the network. So, **decentralization is a tool while the
-goal is resilience**, which is achieved by additionally providing on-chain treasury and open governance
+goal is resilience**, which is achieved by additionally providing an on-chain treasury and open governance
 mechanism allowing continuous incentives for the network's participants without relying on
 intermediaries or centralized entities.
 
