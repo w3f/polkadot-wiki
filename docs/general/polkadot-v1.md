@@ -39,7 +39,6 @@ Polkadot is a blockchain-based decentralized computer that brings to the multi-c
 
 ### Polkadot's Representation
 
-Polkadot has a relay chain acting as the main chain of the system. The Polkadot relay chain is
 represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design,
 if a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
 connect to the Polkadot network as a rollup chain.
