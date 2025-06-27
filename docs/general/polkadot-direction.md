@@ -10,7 +10,7 @@ Understanding what [Polkadot 2.0](./polkadot-v2.md) will help us envision the fu
 
 ## Offloading Tasks to System Chains
 
-Polkadot 1.0 was a chain-centric paradigm consisting of isolated chains able to exchange messages.
+Polkadot 1.0 was a chain-centric paradigm comprising domain-specific rollups that could exchange messages.
 This was not fundamentally different from having completely different chains connected to bridges,
 with the only difference of having the relay chain securing the network, providing message-passing
 capability, and doing some extra tasks such as [staking](../learn/learn-staking.md),
