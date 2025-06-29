@@ -14,7 +14,7 @@ Smart contracts are self-executing, sandboxed programs that run deterministicall
 Polkadot offers two primary ways to build decentralized applications:
 
 - **Smart Contracts** - Deployed on existing blockchains, they are easier to develop but have limited flexibility in terms of governance and consensus.
-- **Parachains** - Independent blockchains connected to Polkadot, allowing full customization of business logic, consensus, and governance.
+- **Rollups** - Independent blockchains connected to and secured by Polkadot, allowing full customization of business logic, consensus, and governance. They are also known as _parachains_.
 
 For a deeper comparison, read:  
 [Smart Contracts vs. Parachain Development](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/runtime_vs_smart_contract/index.html)
