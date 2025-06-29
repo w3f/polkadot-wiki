@@ -33,7 +33,7 @@ While WebAssembly (Wasm) is widely used in blockchain, it has limitations:
 1. **Non-deterministic execution** - The slight variations between Wasm binaries present a hurdle for blockchain protocols, which must achieve an identical state for consensus. While tools within the Polkadot ecosystem exist to address this, it remains an underlying limitation.
 2. **High computational cost** - Translating Wasm bytecode to machine code is computationally expensive. Wasm instructions are stack-based, while most hardware architecture is register-based with finite number of registers. Register allocation is a known [NP problem](https://en.wikipedia.org/wiki/Register_allocation#Common_problems_raised_in_register_allocation). 
 
-PVM bytecode solves both problems. 
+The Polkadot Virtual Machine (PVM) solves both of these problems by using the RISC-V architecture, which is a very common and well-supported standard.
 
 
 ###  RISC-V & PVM
