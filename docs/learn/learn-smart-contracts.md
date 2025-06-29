@@ -4,7 +4,7 @@ description: Learn about Ethereum-compatible smart contracts n Polkadot
 ---
 
 
-Smart contracts are self-executing programs that run deterministically on a blockchain, enabling decentralized applications (dApps) without intermediaries. Polkadot natively supports smart contracts written in Ethereum-compatible languages like Solidity or Vyper, as well as Rust. Additionally, the underlying Polkadot Virtual Machine allows any smart contract that compiles to RISC-V to run on its network.
+Smart contracts are self-executing, sandboxed programs that run deterministically on a blockchain, enabling decentralized applications (dApps) without intermediaries. Polkadot natively supports smart contracts written in Ethereum-compatible languages like Solidity or Vyper, as well as Rust. Additionally, the underlying Polkadot Virtual Machine allows any smart contract that compiles to RISC-V to run on its network.
 
 !!!info "Smart Contracts Documentation"
     For detailed guides on writing and deploying smart contracts on Polkadot, refer to the official [Polkadot Developer Docs](https://docs.polkadot.com/develop/). Note that PolkaVM is under active development.
