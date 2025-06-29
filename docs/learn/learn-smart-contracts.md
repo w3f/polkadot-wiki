@@ -30,7 +30,7 @@ Polkadot smart contracts will reside on the **Asset Hub**. When we talk about sm
 ## Wasm vs. PVM
 
 While WebAssembly (Wasm) is widely used in blockchain, it has limitations:
-1. **Non-deterministic execution** - Compiled Wasm binaries are not always exactly the same, which is a problem for blockchain nodes that have to come to the exactly the same state. Although there are tools in the Polkadot ecosystem that solve this problem, this is still a fundamental limitation. 
+1. **Non-deterministic execution** - The slight variations between Wasm binaries present a hurdle for blockchain protocols, which must achieve an identical state for consensus. While tools within the Polkadot ecosystem exist to address this, it remains an underlying limitation.
 2. **High computational cost** - Translating Wasm bytecode to machine code is computationally expensive. Wasm instructions are stack-based, while most hardware architecture is register-based with finite number of registers. Register allocation is a known [NP problem](https://en.wikipedia.org/wiki/Register_allocation#Common_problems_raised_in_register_allocation). 
 
 PVM bytecode solves both problems. 
