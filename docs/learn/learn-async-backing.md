@@ -18,7 +18,7 @@ description: Understand how asynchronous backing improves scalability and throug
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-[Pipelining](https://en.wikipedia.org/wiki/Pipeline_(computing))) is a technique for processing
+[Pipelining](https://en.wikipedia.org/wiki/Pipeline_(computing)) is a technique for processing
 multiple stages of a task simultaneously by breaking it into smaller steps. This allows the next
 step to start before the previous one is completely finished. This is often used in processors and
 computer architectures to increase throughput.
