@@ -185,7 +185,7 @@ takes >2 seconds, the unincluded segment will shrink (less unincluded parablocks
 included). Such flexibility from the parachain side will be possible when, on the relay chain side,
 there will be elastic scaling (i.e.,
 [agile core usage](../general/polkadot-direction.md#agile-core-usage) and
-[coretime allocation](../general/polkadot-direction.md#agile-coretime-allocation)).
+[coretime allocation](../general/polkadot-v2.md#coretime-allocation)).
 
 ## Terminology
 
