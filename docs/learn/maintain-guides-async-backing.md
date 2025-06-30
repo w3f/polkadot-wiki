@@ -24,8 +24,7 @@ to set the stage.
 
 Pull the latest version of Cumulus for use with your parachain. It contains necessary changes for
 async backing compatibility. Latest on master branch of
-[Polkadot-SDK](https://github.com/paritytech/polkadot-sdk) is currently sufficient. Any 2024 release
-will work as well.
+[Polkadot-SDK](https://github.com/paritytech/polkadot-sdk) is should work as well as any 2024 release.
 
 ## Async Backing Terminology and Parameters
 

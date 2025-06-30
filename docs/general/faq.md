@@ -56,7 +56,7 @@ node can still share in staking rewards.
 
 ### What is the block time of the relay chain?
 
-Both the Kusama and Polkadot networks are currently operating at a rate of one block every six
+Both the Kusama and Polkadot networks are operating at a rate of one block every six
 seconds.
 
 ### Does Polkadot support smart contracts?

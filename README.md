@@ -132,9 +132,6 @@ def rpc(network, module, call, default_value, is_constant=False, readable="")
     * Blocks to days (converts blocks to days)
     * Precise DOT / KSM (returns an unrounded number with full precision)
 
-## Internationalization
-
-| ❗ The Wiki is currently being reorganized and updated. Work will resume on translations after the Wiki revamp is completed. |
 | ---------------------------------------------------------------------------------------------------------------------------- |
 
 ## License

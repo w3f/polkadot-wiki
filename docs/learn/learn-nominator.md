@@ -118,7 +118,7 @@ stash account, set one up. Note that setting an exchange address as the recipien
 rewards is extremely unsafe.
 
 !!!info
-    Being a nominator is made simpler by using the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step through specifying rewards destination and bonded amount, and nominating validators (more on this below). Note that staking proxies are not currently supported on the dashboard.
+    Being a nominator is made simpler by using the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step through specifying rewards destination and bonded amount, and nominating validators (more on this below).
 
 ## Nominating with the Polkadot-JS UI
 
@@ -203,8 +203,7 @@ a trait is a combination of the metrics above). Available filters are:
 
 Nominating accounts are placed in a semi-sorted list called bags list. This sorting functionality is
 extremely important for the long-term improvements of the staking/election system. The bags list allows
-an unlimited number nominators to set their intention to nominate, of which only a portion of it
-(currently 22500) is considered for [electing set](#staking-election-stages) that eventually
+an unlimited number nominators to set their intention to nominate, of which 22500 are considered for the [electing set](#staking-election-stages) that eventually
 determines the active validators.
 
 The nominator accounts in a bag are sorted based on their insertion order, not by their nomination
@@ -271,8 +270,7 @@ The staking election system has three stages for both validators and nominators,
 Determining which validators are in the active set and which nominators are nominating them creates
 a very large graph mapping nominators to their respective validators. This "solution set" is
 computed off-chain and submitted to the chain, which means it must fit in a single block. If there
-are a large number of nominators, this means that some nominators must be eliminated. Currently,
-nominators are sorted by the amount of DOT staked, and those with more DOT are prioritized. This
+are a large number of nominators, this means that some nominators must be eliminated. Nominators are sorted by the amount of DOT staked, and those with more DOT are prioritized. This
 means that you may not receive rewards if you are staking with a small amount of DOT. This minimal
 amount is dynamic based on the number of validators, nominators, amount nominated, and other
 factors.

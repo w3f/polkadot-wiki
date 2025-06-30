@@ -195,7 +195,7 @@ need to use those funds to issue transactions on the parachain's behalf.
 ## Block Limits and Transaction Priority
 
 Relay chain blocks have both a maximum length (in bytes) and a maximum weight. Block producers will
-fill blocks with transactions up to these limits. A portion of each block - currently 25% - is
+fill blocks with transactions up to these limits. The 25% of block capacity is
 reserved for critical transactions that are related to the chain's operation. Block producers will
 only fill up to 75% of a block with normal transactions. Some examples of operational transactions:
 

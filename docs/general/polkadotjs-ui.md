@@ -60,8 +60,7 @@ In this section of the UI, you can participate in [**staking**](../learn/learn-s
 Staking menu you can access:
 
 - The **Overview** tab showing active or waiting validators.
-- The **Accounts** tab (visible only if you added an account) showing accounts that are currently
-  used for staking
+- The **Accounts** tab (visible only if you added an account) showing accounts that are used for staking
   ([**stash and staking proxy**](../learn/learn-staking.md#stash-account-and-staking-proxy)), bonded
   amount, and nominations. In this tab, you can do staking-related transactions such as bonding more
   funds or changing nominations. If you have

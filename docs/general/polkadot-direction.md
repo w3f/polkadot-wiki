@@ -107,7 +107,7 @@ are breakable and prone to cyber-attacks. Polkadot is basing its resilience on d
   [Smoldot](https://github.com/smol-dot/smoldot).
 - **Zero-Knowledge (ZK) Primitives:** They can have a problematic effect on censorship and
   centralization as having a big state transition function boiled down to a single proof of correct
-  execution is not currently a scaling solution to build resilient systems. However, a library of
+  execution. However, a library of
   richly featured and high-performance ZK primitives ready for specific use cases is being built.
   The first use-case will be used to improve privacy for on-chain collectives such as
   [the Polkadot Technical Fellowship](../learn/learn-polkadot-technical-fellowship.md).

@@ -3,7 +3,7 @@ title: Decentralized Futures Program
 description: Learn about the Decentralized Futures Program and its funding for Polkadot ecosystem growth.
 ---
 
-The new [Decentralized Futures Program](https://futures.web3.foundation/) supplements the Grants
+The [Decentralized Futures Program](https://futures.web3.foundation/) supplements the Grants
 Program, and (as the name suggests) it strengthens the decentralization of the Polkadot ecosystem.
 
 ## Overview
