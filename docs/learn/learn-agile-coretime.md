@@ -14,7 +14,7 @@ was initially proposed and envisioned in its
 [whitepaper](https://polkadot.com/papers/). The introduction of coretime
 enables multi-threading.
 
-[Multi-threading](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) is a
+[Multi-threading](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture))) is a
 programming model where multiple threads (smaller sequences of programmed instructions) are created
 within a single process to perform multiple tasks at once. Multi-threading is commonly used to
 improve the performance of applications by executing different parts of a program concurrently.

@@ -93,7 +93,7 @@ features of the Delegation Dashboard and shows how to perform multi-role delegat
 </div>
 
 For detailed instructions on how to delegate your voting power using dashboard, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184123-polkadot-opengov-how-to-delegate-your-voting-power).
+[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
 
 **If you become a nomination pool member or a pool admin, you cannot participate in Governance with
 the bonded tokens in the pool, as they are held in a
