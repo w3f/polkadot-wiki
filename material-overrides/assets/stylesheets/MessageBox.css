@@ -49,3 +49,25 @@
   transform: translateY(20px);
   pointer-events: none;
 }
+
+/* Force message box to always use light mode styling regardless of theme */
+[data-md-color-scheme='slate'] .floating-message-box {
+  background: pink !important;
+  color: inherit !important;
+}
+
+[data-md-color-scheme='slate'] .floating-message-box p {
+  color: #333 !important;
+}
+
+[data-md-color-scheme='slate'] .floating-message-box a {
+  color: #0078d4 !important;
+}
+
+[data-md-color-scheme='slate'] .floating-message-box .close-messagebox {
+  color: #333 !important;
+}
+
+[data-md-color-scheme='slate'] .floating-message-box .close-messagebox:hover {
+  color: #d9534f !important;
+}

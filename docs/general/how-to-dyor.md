@@ -281,7 +281,7 @@ communication is authentic (but look out for spoofed emails!). On the other hand
 through personal emails or using a public email provider, like Google or Yahoo, might indicate a
 less serious team or one that is spread too thin.
 
-### Additional material
+### Additional Material
 
 Fact-checking is a skill necessary not only for DYOR but also for filtering out the plethora of
 information that we come across on the internet on a daily basis. If you are interested in learning
@@ -297,7 +297,7 @@ Finally, you should also check our complementary guide on [how to identify scams
 explains how to identify outright scams and avoid them, as well as how to protect your sensitive
 information.
 
-### One last piece of advice
+### One Last Piece of Advice
 
 Once you have read through this material and have done your research and have identified a project
 as legitimate, it is also imperative that you understand what the project does and what novelty it

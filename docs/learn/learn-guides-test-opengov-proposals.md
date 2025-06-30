@@ -44,7 +44,7 @@ does not produce any blocks by default. You will notice a few test accounts with
 can interact with the network and test out Polkadot protocol features accessible through regular
 accounts. However, the treasury spend call cannot be submitted through a signed account origin, so
 it has to be tested with a treasury track origin. It can be tested by navigating to Developer >
-Javascript tab on Polkadot JS UI, which dispatches the call on the next block via the scheduler with
+JavaScript tab on Polkadot JS UI, which dispatches the call on the next block via the scheduler with
 the specified origin.
 
 ```
@@ -72,7 +72,7 @@ await api.rpc('dev_newBlock')
 
 ![polkadot-chopstciks-call](../assets/governance/polkadot-chopsticks-call.png)
 
-After clicking the play button in the Javascript console, the block number visible on the top left
+After clicking the play button in the JavaScript console, the block number visible on the top left
 of the Polkadot JS UI should be incremented by 1. You can navigate to Polkadot JS UI Network >
 Explorer to check the emitted events and see if the call was executed successfully. You should see
 the errors displayed here if the call is unsuccessful.
@@ -102,7 +102,7 @@ No fee payment is required for an XCM call dispatched through OpenGov. The Colle
 
 ![unpaid-execution-xcm-call](../assets/governance/collectives-remove-xcm-call.png)
 
-### Cross-chain Testing setup using Chopsticks
+### Cross-chain Testing Setup using Chopsticks
 
 Testing this cross-chain call by [forking locally](#fork-a-network-locally-using-chopsticks) will
 only perform the required checks on the sending chain, not the receiving chain. To do cross-chain
@@ -118,7 +118,7 @@ Polkadot JS UI as shown in the picture below and click on Switch button at the t
 
 ![polkadot-js-local](../assets/governance/polkadot-js-local-node.png)
 
-Navigate to the Polkadot instance and open Javascript console to run the code below.
+Navigate to the Polkadot instance and open JavaScript console to run the code below.
 
 ```
 const number = (await api.rpc.chain.getHeader()).number.toNumber()
@@ -145,7 +145,7 @@ await api.rpc('dev_newBlock')
 
 ![javascript-fellowship-admin](../assets/governance/javascript-console-fellowship-admin-call.png)
 
-After clicking on the play button in the Javascript console, the block number visible on the top
+After clicking on the play button in the JavaScript console, the block number visible on the top
 left of the Polkadot JS UI should be incremented by 1. You can navigate to Polkadot JS UI Network >
 Explorer to check the emitted events and see if the call got executed successfully. If the call is
 unsuccessful, you should see the respective errors displayed here.
@@ -163,7 +163,7 @@ executed as expected.
 
 Now, take the example of [Referendum 1247](https://polkadot.subsquare.io/referenda/1247) which
 executes a call that tries to remove 19 ambassadors from the collective at once. This is a very long
-call and exceeds the Javascript console `inLine` character limit. In that case, the code can be
+call and exceeds the JavaScript console `inLine` character limit. In that case, the code can be
 modified instead to lookup the preimage of call with the specified length and check if it is
 successfully executes.
 

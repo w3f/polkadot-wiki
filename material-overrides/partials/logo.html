@@ -1,0 +1,9 @@
+{#-
+  Custom logo partial with dynamic theme support
+-#}
+{% if config.theme.logo %}
+  <img src="{{ config.theme.logo | url }}" alt="logo" class="theme-logo">
+{% else %}
+  {% set icon = config.theme.icon.logo or "material/library" %}
+  {% include ".icons/" ~ icon ~ ".svg" %}
+{% endif %}

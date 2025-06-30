@@ -14,7 +14,7 @@ reason, implementation teams can build an alternative implementation of the Polk
 treating the Polkadot runtime as a black box. For more details of the interactions between the host
 and the runtime, please see the [specification](https://spec.polkadot.network/).
 
-## Components of the Polkadot host
+## Components of the Polkadot Host
 
 - Networking components such as `Libp2p` that facilitates network interactions.
 - State storage and the storage trie along with the database layer.

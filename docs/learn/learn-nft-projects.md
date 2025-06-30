@@ -110,7 +110,7 @@ KodaDot began as the first
 [contributing to RMRK protocol](https://github.com/rmrk-team/rmrk-spec/issues/10). It later
 [received Kusama Treasury funding](https://kusama.polkassembly.io/motion/349), which propelled the
 team to create
-[great end-user experience on the Asset hub](https://kusama.polkassembly.io/motion/349).
+[great end-user experience on the Asset Hub](https://kusama.polkassembly.io/motion/349).
 
 In the summer of 2022, KodaDot won the first prize at the
 [Polkadot North American event](https://devpost.com/software/kodadot-moonsama) for implementing

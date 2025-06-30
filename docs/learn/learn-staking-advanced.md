@@ -48,12 +48,12 @@ Note that to change the staking proxy you will need to sign with the stash or an
 ## Bags List
 
 !!!info
-    On Polkadot and Kusama, the instance of the pallet [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'.
+    On Polkadot and Kusama, the instance of the pallet [Bags List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'.
 
 For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 In Polkadot's NPoS nomination intents are placed in a semi-sorted list called
-[bags-list](https://github.com/paritytech/substrate/pull/9507). The Bags-List substrate pallet is
+[bags list](https://github.com/paritytech/substrate/pull/9507). The Bags-List substrate pallet is
 designed to be self-maintaining, with minimal effort from the blockchain, making it extremely
 scalable. The bags list has two primary components, bags and nodes (or nominators' accounts), with
 bags containing the nodes with bonded balance within a specific range. In the figure below the 1st
@@ -93,10 +93,10 @@ be placed in the right bag. To address this issue, any account on-chain can subm
 permissionless extrinsic `rebag` within the `voterList` pallet instance to update the positions of
 the nodes that do not belong to their bag and place them in the correct one. To reiterate, actions
 like bonding/unbonding tokens automatically rebag the nominator node, but events like staking
-rewards/slashing do not. See the [bags-list](learn-nominator.md#bags-list) section for more
+rewards/slashing do not. See the [bags list](learn-nominator.md#bags-list) section for more
 information.
 
-The bags-list is capable of including an unlimited number of nodes, subject to the chain's runtime
+The bags list is capable of including an unlimited number of nodes, subject to the chain's runtime
 storage. In the current staking system configuration, at most 22500 nominators in the bags-list
 (12500 on Kusama) come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.

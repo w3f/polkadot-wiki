@@ -507,7 +507,7 @@ entities.
 - [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
 - [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io)
 - [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io)
-- [PolkAssembly](https://polkadot.polkassembly.io/)
+- [Polkassembly](https://polkadot.polkassembly.io/)
 
 ---
 

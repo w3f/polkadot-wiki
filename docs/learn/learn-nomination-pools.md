@@ -69,7 +69,7 @@ applied proportionally to members who may have been actively bonded.
 
 ## For Pool Members
 
-### Join a pool
+### Join a Pool
 
 !!!note "Ledger users"
     Joining a nomination pool is possible only with the XL version of the Polkadot Ledger App. This should be installed by default on Ledger Nano X and S Plus, but not on the Nano S.
@@ -95,7 +95,7 @@ Check the "How to join a pool" section in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
 for guidelines.
 
-### Claim rewards
+### Claim Rewards
 
 The member can claim their portion of any rewards that have accumulated since the previous time they
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
@@ -129,7 +129,7 @@ Nomination pool members can vote in Polkadot OpenGov with funds they delegated t
 !!!info "Dual Staking"
     For pool members who were dual staking (i.e., pool members and nominators) before the introduction of delegation staking, follow [**these guides**](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) to migrate manually to the new system. 
 
-### Unbond and withdraw funds
+### Unbond and withdraw Funds
 
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the

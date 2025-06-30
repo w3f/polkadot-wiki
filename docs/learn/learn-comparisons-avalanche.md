@@ -48,7 +48,7 @@ Avalanche uses virtual machines (VMs) as blueprints for defining blockchain beha
 
 Avalanche allows developers to build custom VMs for advanced use cases. These VMs can be implemented in any programming language and communicate with Avalanche using a language-agnostic RPC protocol. However, developers can also use prebuilt runtimes, such as Subnet-EVM for quick deployment of Solidity-based blockchains.
 
-In contrast, Polkadot developers use the Polkadot SDK to build customized blockchain runtimes. Polkadot SDK compiles runtimes to WASM, which the relay chain uses to verify state changes from parachains or rollups. Polkadot does not have a native smart contract layer; instead, EVM and WASM smart contract capabilities are implemented on parachains.
+In contrast, Polkadot developers use the Polkadot SDK to build customized blockchain runtimes. Polkadot SDK compiles runtimes to Wasm, which the relay chain uses to verify state changes from parachains or rollups. Polkadot does not have a native smart contract layer; instead, EVM and Wasm smart contract capabilities are implemented on parachains.
 
 This distinction highlights Avalanche's focus on VM-based blockchain customization and Polkadot's emphasis on shared security and modular runtime development.
 

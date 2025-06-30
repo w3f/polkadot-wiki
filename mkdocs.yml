@@ -9,6 +9,8 @@ extra_javascript:
   - js/root-level-sections.js
   - js/search-bar-results.js
   - js/header-scroll.js
+  - js/homepage-light-mode.js
+  - js/dynamic-logo.js
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/MessageBox.css
@@ -32,6 +34,23 @@ theme:
       code: material/code-tags
   font:
     text: Manrope
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - content.code.annotate # Adds annotations to code blocks
     - content.code.copy # Adds copy to clipboard button to code snippets
@@ -115,7 +134,6 @@ nav:
       - Web3 and Polkadot: general/web3-and-polkadot.md
       - Polkadot Vision:
               - Polkadot 1.0: general/polkadot-v1.md
-              - Polkadot 2.0: general/polkadot-v2.md
               - Polkadot Direction: general/polkadot-direction.md
       - Hardware Wallets:
           - Ledger: general/ledger.md

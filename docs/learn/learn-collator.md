@@ -9,8 +9,7 @@ description: Understand the role of collators in Polkadot, including block produ
 ## Collators' Role
 
 Collators maintain parachains by collecting parachain transactions from users and producing state
-transition proofs for relay chain validators. In other words, collators maintain parachains by
-aggregating parachain transactions into parachain block candidates and producing state transition
+transition proofs for relay chain validators. In other words, collators aggregate parachain transactions into parachain block candidates and produce state transition
 proofs (Proof-of-Validity, PoV) for validators.
 
 Collators maintain a full node for the relay chain and a full node for their particular parachain;

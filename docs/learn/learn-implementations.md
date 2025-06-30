@@ -81,5 +81,5 @@ collection of tools, interfaces, and libraries for Polkadot and Substrate.
 - [Polkadot in Java](https://github.com/polkadot-java)
 
 While the ecosystem continues to grow rapidly, the continued development of alternative
-implementations will only make Polkadot stronger. Consider becoming a contributor to the ecosystem,
+implementations will only strengthen Polkadot. Consider becoming a contributor to the ecosystem,
 and learn about the how you can receive a [grant](../general/grants.md) for your development.
