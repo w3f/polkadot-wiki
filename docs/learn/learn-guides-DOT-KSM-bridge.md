@@ -169,12 +169,33 @@ and submitted successfully, and the destination account on Kusama Asset Hub rece
 
 ## Transfer of arbitrary assets between Polkadot Asset Hub and Kusama Asset Hub
 
-Transfer functionality of assets other than DOT and KSM between Asset Hubs is yet to be enabled.
-Once this functionality is enabled, assets which are sufficient or non-sufficient on the Asset Hubs
-can be bridged.
+There are several requirements for an arbitrary token to be transferable between Polkadot and Kusama Asset Hub:
+
+- The asset must already be registered on each Asset Hub.
+- The destination account should exist on the destination chain (and hold a sufficient asset).
+- The asset transferred needs to be larger than the minimum balance specified by the asset.
+- The fee asset transferred needs to be larger than the minimum balance specified by the asset. For example, if DOT is
+used as fee asset from Polkadot Asset Hub to Kusama Asset Hub, the excess DOT will be deposited to the beneficiary
+on Kusama Asset Hub. However, if the DOT is less that the minimum balance of DOT on Kusama Asset Hub, the transfer 
+might fail.
+- The destination account must hold fewer assets than the maximum number of assets allowed per account.
 
 !!!caution "Avoid Asset Traps"
-    To avoid issues on the receiving side for non-sufficient assets, make sure to call [pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531) or [pallet_assets::touch_other()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1616) effectively guaranteeing the ability to successfully receive and accept the bridged assets in your account on the destination chain. This eliminates issues like your account on destination not existing or not having enough ED or having reached the maximum limit of different assets it can hold. Without this sanity step, you risk that the bridged assets will make their way to the destination chain but will not be accepted by your account, and instead get trapped in the Asset Trap on the destination chain.
+To avoid issues on the receiving side for non-sufficient assets, make sure to call [pallet_assets::touch()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1531) or 
+[pallet_assets::touch_other()](https://github.com/paritytech/polkadot-sdk/blob/0ef37c75401b78b61ed35ce27af8b964da27bb3c/substrate/frame/assets/src/lib.rs#L1616) effectively guaranteeing the ability to successfully receive and accept the bridged 
+assets in your account on the destination chain. This eliminates issues like your account on destination not existing 
+or not having enough ED or having reached the maximum limit of different assets it can hold. Without this sanity step, 
+you risk that the bridged assets will make their way to the destination chain but will not be accepted by your account, 
+and instead get trapped in the Asset Trap on the destination chain. Technical users should dry run their transfer on
+the destination chain to ensure a successful transfer.
 
-Once arbitrary asset transfers are enabled by the Asset Hubs, a guide will be posted to this Wiki
-page.
+### Transfer of ERC-20 assets between Polkadot Asset Hub and Kusama Asset Hub
+
+ERC-20 token transfers are supported between Polkadot Asset Hub and Kusama Asset Hub.
+
+Users can use the [Snowbridge UI](https://app.snowbridge.network/kusama) to transfer ERC-20 tokens from Polkadot Asset 
+Hub to Kusama Asset Hub and vice versa. The fee asset is the native token of the source chain (DOT from Polkadot Asset 
+Hub to Kusama Asset Hub and KSM from Kusama Asset Hub to Polkadot Asset Hub). The Snowbridge UI does all the necessary 
+checks and dry runs the transfer to ensure a successful transfer.
+
+

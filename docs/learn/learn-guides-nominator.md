@@ -23,7 +23,7 @@ See [this page](./learn-staking.md) to learn about staking.
     - [Staking with a Ledger device and Polkadot-JS](https://youtu.be/7VlTncHCGPc)
     - [Staking with a Ledger device and Ledger Live](https://www.youtube.com/watch?v=jL-N_IWiYVA)
 
-### Bond your tokens
+### Bond your Tokens
 
 !!!info "Support Article"
     Read the support article about [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-).
@@ -77,7 +77,7 @@ earn compound interest.
 
 ![Payout account selection dropdown with the custom account option highlighted](../assets/payout/01.png)
 
-### Nominate a validator
+### Nominate a Validator
 
 !!!info "Support Article"
     Read the support article about [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-).
@@ -106,7 +106,7 @@ initiate a claim. This is to help optimize the effectiveness and storage of payo
 the [Claiming Rewards](./learn-staking.md#claiming-staking-rewards) section of the Staking wiki page for
 more details.
 
-### Stop nominating
+### Stop Nominating
 
 !!!info "Support Article"
     Read the support article about [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-). See also the support article about [How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period).
@@ -202,7 +202,7 @@ You can check the transaction status by using the value of the `InBlock` in
 [Subscan](https://www.subscan.io/). Also, you can verify the bonding state under the
 [Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS UI.
 
-### Step 3: Nominate a validator
+### Step 3: Nominate a Validator
 
 To nominate a validator, you can execute the following command:
 

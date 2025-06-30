@@ -23,7 +23,7 @@ transaction throughput (these are the same on both networks), but that there's a
 time between governance events such as proposing new referenda, voting, and enacting approved
 upgrades. This allows Kusama to adapt and evolve faster than Polkadot.
 
-## Canary network
+## Canary Network
 
 The initial use case for Kusama was as a pre-production environment, a “canary network”.
 
@@ -62,9 +62,9 @@ and features will perform under real-world conditions before bringing them to Po
 who have deployed to both networks will also get an advanced look at how their own technology will
 perform under those upgrades.
 
-## Going forward
+## Going Forward
 
-Ultimately, Kusama and Polkadot will live on as independent, standalone networks with their own
+Ultimately, Kusama and Polkadot are independent, standalone networks with their own
 communities, their own governance, and their own complementary use cases, though they will continue
 to maintain a close relationship, with many teams likely deploying applications to both networks.
 Web3 Foundation remains committed to both networks going forward, providing crucial support and

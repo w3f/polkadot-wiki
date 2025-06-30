@@ -31,10 +31,8 @@ Both protocols have fundamentally different goals:
   specialized towards a specific focus and optimized towards that goal. Parachains must abide by the
   [Parachains Protocol](./learn-parachains-protocol.md).
 
-Polkadot _does not_ directly run a virtual machine for smart contracts, as Polkadot's primary
-purpose is to validate the protocols that operate under it.
-
-However, several parachains provide
+Although Polkadot's primary
+purpose is to validate the protocols that operate under it, it also supports smart contract deployments. Additionaly, several parachains provide
 [smart contract functionality](https://docs.polkadot.com/develop/smart-contracts/evm/).
 Parachains on Polkadot can even run an EVM for executing smart contracts written in Solidity using
 [Frontier, an Ethereum compatibility layer for Substrate](https://github.com/polkadot-evm/frontier).

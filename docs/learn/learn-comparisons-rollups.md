@@ -108,7 +108,7 @@ and [Arbitrium](https://bridge.arbitrum.io/) are an example of optimistic EVM-ba
 
 Polkadot Rollups work similarly to optimistic rollups. They are an interactive method with fraud
 proof mechanism. Like optimistic rollups and zk rollups are secured by Ethereum, Polkadot rollups
-are secured by the Polkadot Relay Chain. The checking and fraud-proof mechanics are natively
+are secured by the Polkadot relay chain. The checking and fraud-proof mechanics are natively
 implemented in Polkadot. [Collators](./learn-collator.md) are in principle similar to sequencers, as
 they pass data with a proof-of-validity (PoV) function for liveness and communication with the Relay
 Chain.

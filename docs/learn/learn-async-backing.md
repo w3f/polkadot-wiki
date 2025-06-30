@@ -18,7 +18,7 @@ description: Understand how asynchronous backing improves scalability and throug
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-[Pipelining](<https://en.wikipedia.org/wiki/Pipeline_(computing)>) is a technique for processing
+[Pipelining](https://en.wikipedia.org/wiki/Pipeline_(computing)) is a technique for processing
 multiple stages of a task simultaneously by breaking it into smaller steps. This allows the next
 step to start before the previous one is completely finished. This is often used in processors and
 computer architectures to increase throughput.
@@ -185,7 +185,7 @@ takes >2 seconds, the unincluded segment will shrink (less unincluded parablocks
 included). Such flexibility from the parachain side will be possible when, on the relay chain side,
 there will be elastic scaling (i.e.,
 [agile core usage](../general/polkadot-direction.md#agile-core-usage) and
-[coretime allocation](../general/polkadot-direction.md#agile-coretime-allocation)).
+[coretime allocation](../general/polkadot-v2.md#coretime-allocation)).
 
 ## Terminology
 

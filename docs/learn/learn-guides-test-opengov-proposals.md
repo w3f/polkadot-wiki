@@ -102,7 +102,7 @@ No fee payment is required for an XCM call dispatched through OpenGov. The Colle
 
 ![unpaid-execution-xcm-call](../assets/governance/collectives-remove-xcm-call.png)
 
-### Cross-chain Testing setup using Chopsticks
+### Cross-chain Testing Setup using Chopsticks
 
 Testing this cross-chain call by [forking locally](#fork-a-network-locally-using-chopsticks) will
 only perform the required checks on the sending chain, not the receiving chain. To do cross-chain
