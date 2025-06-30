@@ -30,8 +30,9 @@ Polkadot smart contracts will reside on the **Asset Hub**. When we talk about sm
 ## Wasm vs. PVM
 
 While WebAssembly (Wasm) is widely used in blockchain, it has limitations:
-1. **Non-deterministic execution** - The slight variations between Wasm binaries present a hurdle for blockchain protocols, which must achieve an identical state for consensus. While tools within the Polkadot ecosystem exist to address this, it remains an underlying limitation.
-2. **High computational cost** - Translating Wasm bytecode to machine code is computationally expensive. Wasm instructions are stack-based, while most hardware architecture is register-based with finite number of registers. Register allocation is a known [NP problem](https://en.wikipedia.org/wiki/Register_allocation#Common_problems_raised_in_register_allocation). 
+    
+- **Non-deterministic execution** - The slight variations between Wasm binaries present a hurdle for blockchain protocols, which must achieve an identical state for consensus. While tools within the Polkadot ecosystem exist to address this, it remains an underlying limitation.
+- **High computational cost** - Translating Wasm bytecode to machine code is computationally expensive. Wasm instructions are stack-based, while most hardware architecture is register-based with finite number of registers. Register allocation is a known [NP problem](https://en.wikipedia.org/wiki/Register_allocation#Common_problems_raised_in_register_allocation). 
 
 The Polkadot Virtual Machine (PVM) solves both of these problems by using the RISC-V architecture, which is a very common and well-supported standard.
 
@@ -50,8 +51,6 @@ It is important to note that while Polkadot will support Ethereum-compatible sma
 Like Wasm, EVM is stack-based, resulting in slower execution time. EVM also uses a 256-bit word size, requiring all arithmetic operations to handle these large numbers. This design choice impacts performance, as each operation must be broken down into multiple native machine instructions. PolkaVM improves efficiency using a 64-bit word size that matches modern hardware capabilities. However, when compiling Solidity contracts through YUL (via Revive), operations remain at 256-bit precision since YUL operates at too low a level to optimize integer types automatically. EVM code can only be interpreted, while PVM code can be interpreted and compiled, which is optimal for larger multi-contract projects. EVM is also limited to Solidity, Vyper, and other languages explicitly developed for EVM, while PolkaVM supports any language that can be compiled to RISC-V, including Rust and C++. 
 
 Some parachains support EVM smart contracts. 
-
-
 
 ## Revive: Solidity to PolkaVM Recompiler
 
@@ -72,9 +71,7 @@ This workflow ensures **deterministic**, **efficient** execution on Polkadot.
 
 To learn more about development of  Solidity contracts for PolkaVM, refer to the official [Polkadot developer documentation](https://docs.polkadot.com/develop/). 
 
-
-
 ## Resources
 - [Polkadot Developer Docs](https://docs.polkadot.com/develop/)
 - [Revive Compiler](https://github.com/revive)
--  [Smart contracts roadmap discussion](https://forum.polkadot.network/t/contracts-on-assethub-roadmap/9513)
+- [Smart contracts roadmap discussion](https://forum.polkadot.network/t/contracts-on-assethub-roadmap/9513)
