@@ -3,7 +3,7 @@ title: Agile Coretime (Scheduling)
 description: Learn how Polkadot enables efficient resource utilization, economic flexibility, and multi-threading for parachains.
 ---
 
-[Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing)) is the process of assigning
+[Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing))) is the process of assigning
 tasks or jobs to resources (like CPU cores) at specific times or under certain conditions. Effective
 scheduling ensures that resources are used efficiently and that tasks are completed in a timely
 manner.
@@ -14,11 +14,11 @@ was initially proposed and envisioned in its
 [whitepaper](https://polkadot.com/papers/). The introduction of coretime
 enables multi-threading.
 
-[Multi-threading](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) is a
+[Multi-threading](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture))) is a
 programming model where multiple threads (smaller sequences of programmed instructions) are created
 within a single process to perform multiple tasks at once. Multi-threading is commonly used to
 improve the performance of applications by executing different parts of a program concurrently.
-[Concurrency](https://en.wikipedia.org/wiki/Concurrency_(computer_science)) does not imply
+[Concurrency](	https://en.wikipedia.org/wiki/Concurrency_(computer_science))) does not imply
 parallel execution; rather, it enables a system to manage multiple processes by quickly switching
 among them.
 

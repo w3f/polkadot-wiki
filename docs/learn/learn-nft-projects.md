@@ -101,7 +101,7 @@ KodaDot.
 </div>
 
 For more information about minting using KodaDot see
-[this step-by-step tutorial](https://hello.kodadot.xyz/tutorial/minting/how-to-mint-nfts-on-polkadot-asset-hub-using-kodadot).
+[this step-by-step tutorial](https://hello.kodadot.xyz/tutorial/minting).
 
 ### History of KodaDot
 
