@@ -49,7 +49,7 @@ Note that to change the staking proxy, you must sign with the stash or an _any_ 
 !!!info
     On Polkadot and Kusama, the instance of the pallet [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'.
     
-    For a bags list demo, see [this video tutorial](https://youtu.be/hIIZRJLrBZA)
+    For a bags list demo, see [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 In Polkadot's [Nominated Proof-of-Stake (NPoS)](../learn/learn-consensus.md#nominated-proof-of-stake), nomination intents are placed in a semi-sorted list called the bags list. The [Bags-List pallet](https://paritytech.github.io/polkadot-sdk/master/pallet_bags_list/index.html) in the Polkadot SDK is
 designed to be self-maintaining, with minimal effort from the blockchain, making it highly
@@ -73,7 +73,7 @@ with a lesser stake requires an additional step (more on this later).
 ![bags list example 1](../assets/bags-list-example-1.png)
 
 The mentioned two nodes (19 DOT and 8 DOT) can move up in their respective bags,
-putting them in front of the nodes with less stake than them (see figure below). This action
+putting them in front of the nodes with less stake (see figure below). This action
 must be done manually by submitting the **`putInFrontOf`** extrinsic within the `voterList` pallet
 instance. Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put
 automatically in the 1st bag (i.e., automatic `rebag`) because the total number of bonded tokens will
@@ -84,7 +84,7 @@ now be within the range of the 1st bag. That node with now 21 DOT will be put at
 ![bags list example 2](../assets/bags-list-example-2.png)
 
 If one decides to send staking rewards to the stash account and automatically bond them (i.e.
-compounding the staking rewards), the position within a bag does not change automatically. The same
+compounding the staking rewards), the position within a bag does not change. The same
 scenario applies to a slashing event, i.e., when a nominator gets slashed, their position within a
 bag does not change. This might result in a scenario where the node is in the wrong bag and needs to
 be placed in the right bag. To address this issue, any account on-chain can submit the
@@ -95,22 +95,19 @@ information.
 !!!info "Important Notes"
       The `putInFrontOf` extrinsic does not check which account is the lightest (i.e., the account with the least tokens where you can move in front of), as opposed to `rebag`, which automatically puts you in the right bag. Suppose you have the account with 7 DOT and your bag configuration is 8 3 4 9 1 7 5. You can move in front of 1 or 4 (i.e., lighter accounts) or in front of 3 (i.e., lightest account). Ideally, you need to find the lightest account and give it as an argument to the extrinsic. This is what Polkadot-JS UI does for you: it finds the "lightest" account in the bag and puts you in front of it.
 
-      If you want to have the best placement in the bags list, the recommended order of actions is to first rebag yourself (if possible) and then issue the `putInFrontOf` extrinsic.
+      If you want the best placement in the bags list, the recommended order of actions is first to rebag yourself (if possible) and then issue the `putInFrontOf` extrinsic.
 
-      `Rebagging` and `putInFrontOf` only matter if you are in the last bag (i.e., close to the minimum active bond). You do not need to issue those extrinsics if you bond way above that value.
+      `Rebagging` and `putInFrontOf` only matter if you are in the last bag, close to the minimum active bond. If you bond way above that value, you do not need to issue those extrinsics.
 
 The bags list can include unlimited nodes, subject to the chain's runtime
-storage. In the current staking system configuration, at most 22500 nominators in the bags list
-(12500 on Kusama) come out as the electing nominators. See
+storage. In the current staking system configuration, at most 22500 nominators in the bags list (12500 on Kusama) come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 This means that only a portion of the nomination intents is kept. Once the nomination period ends,
-the NPoS election system takes all nomination intents and their associated votes as input and 
-outputs a set of validators. The bags are iterated from the most staked to the least staked. If the
-accounts are not appropriately sorted, the last touched bag could only be partially
-iterated. Thus, within the last bag containing the last nomination intents, the order of the members is important. Continuing
-with the example used in the previous figures, there are 8 nomination intents of which only 7 will
-be kept. If the bags list stays semi-sorted (i.e., no accounts call the `putInFrontOf` and `rebag`
+the NPoS election system inputs all nomination intents and associated votes and 
+outputs a set of validators. The bags are iterated from the most staked to the least staked. The algorithm will stop once it has selected 22500 nodes, so the last touched bag will probably be only partially iterated. As such, the order in the last bag matters.
+
+Continuing with the example used in the previous figures, there are 8 nomination intents of which only 7 will be kept. If the bags list stays semi-sorted (i.e., no accounts call the `putInFrontOf` and `rebag`
 extrinsics), the nomination of the node with 8 DOT in the 3rd bag will not be considered, while that
 of the preceding node with 5 DOT will be. Nomination of the node with 8 DOT will be kept only if it
 puts itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in the
