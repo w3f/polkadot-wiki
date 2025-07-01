@@ -4,7 +4,7 @@ description: Overview of Snowbridge, a trustless bridge enabling token transfers
 ---
 
 !!!info "Using Snowbridge"
-    Snowbridge can be accessed through [the web app](https://app.snowbridge.network/), where you may track [recent transfers](https://app.snowbridge.network/history), and other information about the bridge's overall status.
+    Snowbridge can be accessed through [the Snowbridge web app](https://app.snowbridge.network/) or [the Turtle app](https://app.turtle.cool/), which also displays transfer time estimates.
 
 Snowbridge by [Snowfork](https://snowfork.com/) is a general-purpose, trustless bridge between
 Polkadot and Ethereum. It utilizes the
