@@ -13,7 +13,7 @@ used most of the time to perform actions on behalf of the primary account.
 
 ![pure proxies](../assets/proxy-vs-anon.png)
 
-Pure proxies are new accounts that are _created_ (not assigned) by a primary account. That primary
+Pure proxies are accounts that are _created_ (not assigned) by a primary account. That primary
 account then acts as _any_ proxy on behalf of the pure proxy. Pure proxies are **keyless
 non-deterministic accounts** as they do not have a private key (keyless), but they have a
 randomly generated address (non-deterministic). Also, nobody owns a pure proxy, as nobody has a private key to control them.

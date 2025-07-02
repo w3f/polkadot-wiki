@@ -25,7 +25,7 @@ Below are the introductory technical descriptions of the two main pallets \- NFT
 
 NFTs is a
 [FRAME pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/nfts#readme)
-that provides a multitude of functions to interact with NFTs.
+that provides a multitude of functions to interact with NFTs and configure them.
 
 The pallet comes with a new way to configure NFTs, as well as configure collections and items.
 Pallet-level [feature flags](https://github.com/paritytech/substrate/pull/12367) allow disabling

@@ -6,7 +6,7 @@ description: Understand the role of nominators in Polkadot's staking ecosystem, 
 !!!tip "New to Staking?"
     Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by reading [this dedicated page](../learn/learn-staking.md).
     
-    Discover the new [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started.
+    Discover the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started.
     
     You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
