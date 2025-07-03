@@ -138,7 +138,7 @@ Blockspace produced by different blockchains can vary in security, flexibility, 
   options to ensure the usage of "second-hand" blockspace.
 
 Polkadot has been designed around those core blockspace principles. However, its design can be
-further improved such that the tasks which are currently managed on the relay chain, such as
+further improved such that the tasks managed on the relay chain, such as
 balances transfers, staking, and governance, can be delegated to
 [system chains](../learn/learn-system-chains.md) to increase flexibility and to focus the use of
 the relay chain to provide shared security and interoperability. Blockspace is only accessible

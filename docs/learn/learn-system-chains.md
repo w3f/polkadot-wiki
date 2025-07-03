@@ -46,8 +46,7 @@ KSM. In fact, there will likely be a system parachain specifically for network g
     transact, to mint and burn, to manage the on-chain asset.
 
     The Asset Hub also supports non-fungible assets (NFTs) via the
-    [Uniques pallet](https://polkadot.js.org/docs/substrate/extrinsics#uniques) and the new
-    [nfts pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts). For more information about
+    [Uniques pallet](https://polkadot.js.org/docs/substrate/extrinsics#uniques) and the [nfts pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts). For more information about
     NFTs see the [dedicated wiki page](./learn-nft-pallets.md).
 
     This logic for asset management is not encoded in smart contracts, but rather directly in the

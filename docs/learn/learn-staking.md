@@ -289,7 +289,7 @@ derivation, all derived accounts are compromised. More information about account
 found [here](./learn-account-advanced.md#derivation-paths).
 
 !!!info
-    For Ledger users staking directly on Ledger Live, currently, there is no option to use separate stash and staking proxy accounts.
+    For Ledger users staking directly on Ledger Live, there is no option to use separate stash and staking proxy accounts.
 
 Ledger devices are now supported in [SubWallet](https://www.subwallet.app/download.html),
 [Talisman](https://talisman.xyz/), and [PolkaGate](https://polkagate.xyz/) extension. Users can

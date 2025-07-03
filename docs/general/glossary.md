@@ -75,7 +75,7 @@ An application that allows a user to explore the different blocks on a blockchai
 
 ## Blocks Nominations
 
-This indicates that a validator does not currently allow any more nominations. This is controlled by
+This indicates that a validator does not allow any more nominations. This is controlled by
 the validator.
 
 ## BLS

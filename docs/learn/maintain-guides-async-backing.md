@@ -13,7 +13,7 @@ description: Steps to upgrade a parachain for compatibility with the relay chain
       [`cumulus/parachain-template`](https://github.com/paritytech/polkadot-sdk/tree/master/templates/parachain).
 
 The rollout process for Async Backing has three phases. Phases 1 and 2 below put new infrastructure
-in place. Then we can simply turn on async backing in phase 3. But first, some pre-reqs and context
+in place. Then we can simply turn on async backing in phase 3. But first, some pre-requisites and context
 to set the stage.
 
 ## Async Backing Prerequisites
@@ -24,8 +24,7 @@ to set the stage.
 
 Pull the latest version of Cumulus for use with your parachain. It contains necessary changes for
 async backing compatibility. Latest on master branch of
-[Polkadot-SDK](https://github.com/paritytech/polkadot-sdk) is currently sufficient. Any 2024 release
-will work as well.
+[Polkadot-SDK](https://github.com/paritytech/polkadot-sdk) is should work as well as any 2024 release.
 
 ## Async Backing Terminology and Parameters
 

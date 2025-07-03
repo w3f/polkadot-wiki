@@ -76,7 +76,7 @@ needs. Since then, the scope has been broadened to share data intitiatives and l
 wider community. The plan is to progressively make datasets available to the public, alongside
 dashboards, metrics, code, and best practices employed to ingest and decode Substrate data.
 
-DotLake currently consists of 80+ Polkadot, Kusama, solo-chains and test-nets with their full
+DotLake consists of Polkadot, Kusama, solo-chains and test-nets with their full
 history and is continuously expanding.
 
 **DotLake Batch Architecture**

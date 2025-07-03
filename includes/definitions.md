@@ -48,7 +48,7 @@
 *[Nominated Proof of Stake (NPoS)]: A staking system where nominators back validators.
 *[On-chain Governance]: Governance controlled transparently on the blockchain.
 *[Parachain]: A layer-one blockchain running on a Polkadot virtual core (in parallel to the relay chain).
-*[Parity Technologies]: The company that was commissioned to launch Polkadot, and that is currently behind the Polkadot SDK.
+*[Parity Technologies]: The company that was commissioned to launch Polkadot, and that developed the Polkadot SDK.
 *[Preimage]: A hash-linked submission storing extrinsic or data details.
 *[Proof of Stake (PoS)]: A consensus system selecting participants based on staked tokens.
 *[Proof of Validity]: A proof verifying parachain state transitions.
@@ -66,5 +66,5 @@
 *[System Parachains]: Parachains forming part of Polkadot's core protocol.
 *[Technical Committee]: Together with the Council, it was one of the two chambers in the Polkadot Governance V1 model. It was a technocratic committee to manage upgrade timelines.
 *[Teleport]: Sending assets between chains by burning and minting.
-*[Thousand Validators Program]: Previous iteration of the currently run Decentralized Nodes Program.
+*[Thousand Validators Program]: Previous iteration of the Decentralized Nodes Program.
 *[total issuance]: The total number of tokens in existence.

@@ -5,7 +5,7 @@ description: Learn how to contribute to the Polkadot Wiki and help expand its kn
 
 The wiki was started and is maintained by [the Web3 Foundation Technical Education Team](./contributors.md). It is an open-source project and aims
 to be the most extensive knowledge resource on the Polkadot and Kusama ecosystems. Much of the
-material currently focuses on Polkadot and Kusama directly, but is open to covering informational
+material focuses on Polkadot and Kusama directly, but is open to covering informational
 material for community projects.
 
 !!!caution "Marketing Material"

@@ -35,7 +35,7 @@ Unlike Web2 which is driven by email IDs, phone numbers, and passwords, users on
 just need to generate a key pair. The public key can be the identity that can be shared with anybody
 to send you messages or assets, while the private key is used to access your account, sign messages,
 transfer funds, edit identity details, etc. [Keeping your private key secure](./scams.md) is
-essential to avoid identity theft or consequent loss of funds. Currently, scams are one of the main
+essential to avoid identity theft or consequent loss of funds. Scams are one of the main
 factors hindering web3 adoption. No legitimate person or entity will ever ask you to share your
 private key, and those who attempt to do so are likely trying to steal your digital identity and
 anything you own related to it.
