@@ -11,7 +11,7 @@ extra_javascript:
   - js/homepage-light-mode.js
   - js/dynamic-logo.js
   - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js
-  - js/klaro-config.js
+  - js/cookies-config.js
 extra_css:
   - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css
   - assets/stylesheets/extra.css
