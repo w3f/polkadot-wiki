@@ -99,7 +99,6 @@
         
         // Always use light logo on homepage
         if (isHomePage()) {
-            setLogo(logoPaths.light);
             return;
         }
 
