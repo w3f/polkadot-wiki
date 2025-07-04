@@ -12,6 +12,7 @@ extra_javascript:
   - js/dynamic-logo.js
   - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js
   - js/cookies-config.js
+  - js/simple-analytics.js
 extra_css:
   - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css
   - assets/stylesheets/extra.css

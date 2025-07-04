@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     },
     type: "opt-in",
     content: {
-      message: "The Polkadot Wiki site uses reCAPTCHA cookies for the AI chatbot. Accepting these cookies will enable the AI chatbot.",
+      message: "We use cookies to enable the AI chatbot on this site. These cookies help protect the chatbot from spam and abuse. By accepting, you can ask questions using the Polkadot AI assistant.",
       dismiss: "Accept",
       deny: "Decline",
       link: "See the Privacy Policy.",
