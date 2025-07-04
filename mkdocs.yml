@@ -5,13 +5,16 @@ site_author: Web3 Foundation Technologies
 copyright: Copyright &copy; 2025 Web3 Foundation
 extra_javascript:
   - js/MessageBox.js
-  - js/simple-analytics.js
   - js/root-level-sections.js
   - js/search-bar-results.js
   - js/header-scroll.js
   - js/homepage-light-mode.js
   - js/dynamic-logo.js
+  - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js
+  - js/cookies-config.js
+  - js/simple-analytics.js
 extra_css:
+  - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css
   - assets/stylesheets/extra.css
   - assets/stylesheets/MessageBox.css
   - assets/stylesheets/announcement-bar.css
