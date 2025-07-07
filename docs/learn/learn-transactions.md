@@ -90,12 +90,12 @@ Vesting funds are on a release schedule that unlocks a constant number of tokens
 (**linear vesting**) or the full amount after a specific block number (**cliff vesting**). In all
 vesting cases, the lock decreases over time until all the funds are transferable.
 
-### Batch Transfers
+### Batch Transactions
 
 Batch transfers are transfers that "batch together" multiple calls. The `utility` pallet is used to dispatch batched calls, and there are three types of batch calls:
 - `utility.batch()`: stops execution if it encounters an error and emits an event with the number of executed calls and the error of the failed call.
-- `utility.batchAll()`: atomic batch execution, meaning that if a call within the batch fails, everything is rolled back as if nothing happened.
-- `utility.forceBatch()`: All calls before and after one fails will be executed.
+- `utility.batchAll()`: atomic batch execution, meaning that if any call within the batch fails, everything is rolled back as if nothing happened.
+- `utility.forceBatch()`: If any transaction fails, it is ignored, and the rest of the transactions are executed.
 
 | Function | Stops on Error | Atomic | Events for Debugging |
 |--------|--------|--------|--------|
