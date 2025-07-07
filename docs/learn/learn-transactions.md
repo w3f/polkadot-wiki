@@ -100,7 +100,7 @@ Batch transfers are transfers that "batch together" multiple calls. The `utility
 | Function | Stops on Error | Atomic | Events for Debugging |
 |--------|--------|--------|--------|
 | `batch`| Yes | No | Yes |
-| `batchAll`| Yes | Yes | Not needed |
+| `batchAll`| Yes | Yes | No |
 |`forceBatch`| No | No | No |
 
 For more detailed information about the arguments accepted by each of these calls, see [the Metadata Explorer](../general/metadata.md).
