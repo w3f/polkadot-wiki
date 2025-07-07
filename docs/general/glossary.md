@@ -762,8 +762,7 @@ execution. Checkout this section of the Substrate docs covering
 
 ## Westend
 
-The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the
-[Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on
+The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the Paseo testnet, the Westend testnet is used by the core developers to iterate on
 protocol-level features like [asynchronous backing](../learn/learn-async-backing.md), etc, that are
 not relevant for parachain developers.
 
