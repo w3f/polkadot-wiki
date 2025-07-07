@@ -94,7 +94,7 @@ vesting cases, the lock decreases over time until all the funds are transferable
 
 Batch transactions are single transactions that "batch together" multiple calls. The `utility` pallet is used to dispatch batched calls, and there are three types of batch calls:
 - `utility.batch()`: Stops execution if it encounters an error and emits an event with the number of executed calls and the error of the failed call.
-- `utility.batchAll()`: atomic batch execution, meaning that if any call within the batch fails, everything is rolled back as if nothing happened.
+- `utility.batchAll()`: Atomic batch execution, meaning that if any call within the batch fails, everything is rolled back as if nothing happened.
 - `utility.forceBatch()`: If any transaction fails, it is ignored, and the rest of the transactions are executed.
 
 | Function | Stops on Error | Atomic | Events for Debugging |
