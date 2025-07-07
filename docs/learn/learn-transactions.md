@@ -97,13 +97,22 @@ Batch transactions are single transactions that "batch together" multiple calls.
 - `utility.batchAll()`: Atomic batch execution, meaning that if any call within the batch fails, everything is rolled back as if nothing happened.
 - `utility.forceBatch()`: If any transaction fails, it is ignored, and the rest of the transactions are executed.
 
-| Function | Stops on Error | Atomic | Events for Debugging |
-|--------|--------|--------|--------|
-| `batch`| Yes | No | Yes |
-| `batchAll`| Yes | Yes | No |
-|`forceBatch`| No | No | No |
+| Function | Stops on Error | Atomic |
+|--------|--------|--------|
+| `batch` | Yes | No | 
+| `batchAll` | Yes | Yes |
+| `forceBatch` | No | No |
 
-For more detailed information about the arguments accepted by each of these calls, see [the Metadata Explorer](../general/metadata.md).
+For more detailed information about the arguments accepted by each of these calls, see [the Metadata Explorer](../general/metadata.md). The emitted events for each call are summarized below:
+
+| Event | Emitted When | part of `batch` | part of `batchAll` | art of `forceBatch` |
+|--------|--------|--------|--------|--------|
+| `ItemCompleted` | After each call succeeds | Yes | Yes | Yes |
+| `ItemFailed` | When a call fails | No | No | Yes |
+| `BatchCompleted` | After all calls succeed | Yes | Yes | Yes |
+| `BatchCompletedWithErrors` | After all calls succeed | No | No | Yes |
+| `BatchInterrupted` | When a batch fails and remaining calls are skipped | Yes | No | No |
+
 
 ## Verifying Extrinsics
 
