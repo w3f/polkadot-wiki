@@ -188,6 +188,10 @@ until place is available to enter the decision period.
 
 For examples of collectives, see the [Polkadot Alliance](https://polkadot-old.polkassembly.io/referendum/94) and the [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md).
 
+### OpenGov Deposits
+
+A submission deposit is needed to store a proposal's preimage. On Polkadot, the submission deposit is around [42 DOT](https://polkadot.js.org/apps/#/preimages). An origin-dependent decision deposit is also needed to enter the decision period of a particular referendum (see below). See how you can claim back your deposits [here](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits).
+
 ### Origins and Tracks
 
 An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
