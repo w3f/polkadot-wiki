@@ -17,10 +17,10 @@ Collators maintain a full node for the relay chain and a full node for their par
 will collate and execute transactions to create an unsealed block and provide it with a PoV to one or more validators on a Polkadot core.
 
 Collators are similar to validators on any other blockchain. Still, they do not need to provide security
-guarantees because the relay chain provides those as a service to them via coretime. If a parachain block is invalid, it will get
+guarantees because the relay chain provides those as a service to them via [coretime](./learn-agile-coretime.md). If a parachain block is invalid, it will get
 rejected by validators. The validators are required to check the validity of submitted candidates,
 followed by issuing and collecting statements about the validity of candidates to other validators.
-This process is known as **candidate backing**. Validators receive an arbitrary number of parachain
+This process is known as **candidate backing** and it is described on [the Polkadot's Security Protocol page](./learn-parachains-protocol.md). Validators receive an arbitrary number of parachain
 candidates with associated PoV from untrusted collators. A candidate is considered _backable_ when
 at least 2/3 of all assigned validators have issued a valid statement about that candidate.
 
@@ -38,7 +38,7 @@ chain block. We say the candidate blocks are _backed_.
 
 ### Rollup Censorship
 
-The assumption that having more collators is better or more secure is incorrect. On the contrary, too many collators may slow down the network. The only power collators have is transaction censorship. To prevent censorship, a parachain only needs to ensure the collators set is sufficiently decentralized and that there are some neutral
+The assumption that having more collators is better or more secure is incorrect. On the contrary, too many collators may slow down the network. The only power collators have is transaction censorship. To prevent censorship, a parachain only needs to ensure the collators set is [sufficiently decentralized](../general/web3-and-polkadot.md#decentralization) and that there are some neutral
 collators, but not necessarily a majority. Theoretically, the censorship problem is solved by
 having just one honest collator.
 
@@ -48,16 +48,14 @@ Collators are a key element of the [XCM (Cross-Consensus Message Passing Format)
 being full nodes of the relay chain, they are all aware of each other as peers. This makes it
 possible for them to send messages from parachain A to parachain B.
 
-## Taking the Case for One Parachain
+## Path of a Parachain Block
 
 The start of a new block candidate is initiated with a block creation time. The collator aggregates
-all new transactions at the end of the process. When doing so, the collator signs the _parachain
-block candidate_ and produces state transition proofs (Proof-of-Validity, PoV), a summary
+all new transactions at the end of the process. When doing so, the collator signs the _parachain block candidate_ and produces state transition proofs (Proof-of-Validity, PoV), a summary
 of the final account balances caused by the transactions in the candidate block. The collator sends
-the candidate block and PoV to the parachain validators, so-called para-validators. The
+the candidate block and PoV to the parachain validators, so-called para-validators on a Polkadot core. The
 para-validators verify the transactions within the parachain block candidate. Upon verification, and
-if all is well, the candidate becomes _backable_ and a para-validator shares the candidate block
-with the relay chain.
+if all is well, the candidate becomes _backable_ and a para-validator shares the candidate block with other validators for additional checking. The parachain block can be included in the relay chain if no disputes arise.
 
 ![parachain candidate block diagram](../assets/polkadot-consensus-example-1.png)
 
