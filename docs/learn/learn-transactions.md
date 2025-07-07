@@ -93,7 +93,8 @@ vesting cases, the lock decreases over time until all the funds are transferable
 ### Batch Transactions
 
 Batch transactions are single transactions that "batch together" multiple calls. The `utility` pallet is used to dispatch batched calls, and there are three types of batch calls:
-- `utility.batch()`: Stops execution if it encounters an error and emits an event with the number of executed calls and the error of the failed call.
+
+- `utility.batch()`: Stops execution if it encounters an error.
 - `utility.batchAll()`: Atomic batch execution, meaning that if any call within the batch fails, everything is rolled back as if nothing happened.
 - `utility.forceBatch()`: If any transaction fails, it is ignored, and the rest of the transactions are executed.
 
@@ -105,13 +106,13 @@ Batch transactions are single transactions that "batch together" multiple calls.
 
 For more detailed information about the arguments accepted by each of these calls, see [the Metadata Explorer](../general/metadata.md). The emitted events for each call are summarized below:
 
-| Event | Emitted When | part of `batch` | part of `batchAll` | art of `forceBatch` |
+| Event | Emitted When | part of `batch` | part of `batchAll` | part of `forceBatch` |
 |--------|--------|--------|--------|--------|
-| `ItemCompleted` | After each call succeeds | Yes | Yes | Yes |
-| `ItemFailed` | When a call fails | No | No | Yes |
-| `BatchCompleted` | After all calls succeed | Yes | Yes | Yes |
-| `BatchCompletedWithErrors` | After all calls succeed | No | No | Yes |
-| `BatchInterrupted` | When a batch fails and remaining calls are skipped | Yes | No | No |
+| `ItemCompleted` | After each batched call succeeds | Yes | Yes | Yes |
+| `ItemFailed` | When a batched call fails | No | No | Yes |
+| `BatchCompleted` | After all batched calls succeed | Yes | Yes | Yes |
+| `BatchCompletedWithErrors` | After all batched calls have been executed, but some were not successful | No | No | Yes |
+| `BatchInterrupted` | When a batched call fails and remaining calls are skipped | Yes | No | No |
 
 
 ## Verifying Extrinsics
