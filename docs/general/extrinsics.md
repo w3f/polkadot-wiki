@@ -7,9 +7,9 @@ description: Learn about blockchain bridges, their role in cross-chain communica
 !!!warning "Developer-oriented content"
     The following content is meant for technical / development purposes.
 
-The following sections contain Extrinsics methods are part of the default Substrate runtime. On the api, these are exposed via `api.tx.<module>.<method>`. 
+The following sections contain Extrinsics methods that are part of the default Substrate runtime. On the api, these are exposed via `api.tx.<module>.<method>`. 
 
-(NOTE: These were generated from a static/snapshot view of a recent default Substrate runtime. Some items may not be available in older nodes, or in any customized implementations.)
+NOTE: These sections were generated from a static snapshot of a recent default Substrate runtime. Some items may not be available in older nodes or customized implementations.
 
 ---
 
@@ -1699,7 +1699,7 @@ ___
 
    If the code does not already exist a deposit is reserved from the caller  and unreserved only when [`Self::remove_code`] is called. The size of the reserve  depends on the size of the supplied `code`. 
 
-   If the code already exists in storage it will still return `Ok` and upgrades  the in storage version to the current  [`InstructionWeights::version`](InstructionWeights). 
+   If the code already exists in storage it will still return `Ok` and upgrades  the in storage version to the current `InstructionWeights::version`. 
 
    - `determinism`: If this is set to any other value but [`Determinism::Enforced`] then  the only way to use this code is to delegate call into it from an offchain execution.  Set to [`Determinism::Enforced`] if in doubt. 
 
