@@ -46,8 +46,7 @@ grants for projects to build on or expand their project. These are also indicato
 committed to building on the broader Polkadot ecosystem.
 
 Receiving funding from reputable VCs and are known to be involved with other reputable Polkadot
-projects can also be a good indicator. Or participating in the
-[Polkadot Alpha Program](https://polkadot.network/development/alpha/).
+projects can also be a good indicator.
 
 **However**, claiming such associations and having them is not always the same thing. **You always
 need to verify any claims a project makes**, and that is probably the most critical takeaway from
