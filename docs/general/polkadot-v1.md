@@ -50,11 +50,11 @@ Polkadot is a blockchain-based decentralized computer that brings to the blockch
 ### Polkadot's Representation
 
 Polkadot is represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design, if a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
-connect to the Polkadot network as a rollup chain.
+connect to the Polkadot network as a rollup chain. The figure below shows the Polkadot relay chain (circle) with rollup chains attached to the virtual cores (open squares within the circle). A zoomed-in view shows Polkadot's validators (PC icons) guarding two cores. In-core validators will check incoming rollup data following [the ELVES protocol](../learn/learn-parachains-protocol.md).
 
-![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
+<div align="center"> <img src="../../assets/polkadot-relay-chain.png" style="width:400px;" alt="Polkadot Relay Chain Diagram"> </div>
 
-Polkadot's rollup chains construct and propose blocks to validators on the relay chain, where the blocks undergo
+Polkadot's rollup chains construct and propose blocks to in-core validators on the relay chain, where the blocks undergo
 rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
 added to the finalized chain. As the relay chain provides the security guarantees,
 [collators](../learn/learn-collator.md), full nodes of these rollup chains, do not have any security
@@ -67,12 +67,15 @@ provides the environment for trust-free message passing that opens up trustless 
 To interact with chains that want to use their finalization process (e.g., Bitcoin),
 Polkadot has [trustless bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that transactions can happen between Polkadot and other ecosystems without relying on centralized parties.
 
-### Polkadot's Additional Functionalities
+### Polkadot 1.0 Core Usage and Functionalities
 
-The Polkadot relay chain managed parachains' crowdloans and auctions (replaced by [the coretime marketplace](../learn/learn-agile-coretime.md)). Relay chain virtual cores were leased via auctions in 3-month
+The Polkadot relay chain managed parachains' crowdloans and auctions (replaced by [the coretime marketplace](../learn/learn-agile-coretime.md)). Polkadot's virtual cores were leased via auctions in 3-month
 chunks for a maximum of two years, and crowdloans allowed users to loan funds to teams
-for lease deposits in exchange for pre-sale tokens. There was no other way you could access cores on
-Polkadot 1.0.
+for lease deposits in exchange for pre-sale tokens. There was no other way you could access and use cores on Polkadot 1.0.
+
+Below is an example of two rollup chains accessing two separate Polkadot cores. The CPU load diagram shows that Chain 1 uses Core 1 computation at 50% while Chain 2 uses Core 2 at 25%. We will see how in [Polkadot 2.0](./polkadot-v2.md) in-core computation is used more efficiently.
+
+<div align="center"> <img src="../../assets/two-cores.png" style="width:400px;" alt="Two Cores Diagram"> </div>
 
 The relay chain also managed other tasks such as [staking](../learn/learn-staking.md),
 [accounts](./../learn/learn-accounts.md), [identities](../learn/learn-identity.md), [balances](../learn/learn-transactions.md#balance-transfers), and [governance](../learn/learn-polkadot-opengov.md).
