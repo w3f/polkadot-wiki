@@ -45,7 +45,7 @@ Polkadot is a blockchain-based decentralized computer that brings to the blockch
   flexible [Substrate, located within the Polkadot SDK](./glossary.md#substrate).  Builders can create fully-fledged blockchains designed explicitly around their application and value proposition, while Polkadot takes care of security and interoperability.
 
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
-  such as [the Polkadot Blockchain Academy](https://polkadot.network/development/academy/) and [Polkadot Alpha Program](./alpha-program.md).
+  such as [the Polkadot Blockchain Academy](https://polkadot.network/development/academy/).
 
 ### Polkadot's Representation
 
