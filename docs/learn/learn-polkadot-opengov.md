@@ -463,13 +463,6 @@ Below is a comparison table between the first iteration of Polkadot governance (
 | Only _aye_ or _nay_ votes possible.                                                                                                                                                                                                                                                                                                                    | Voters can have the additional voting options of abstaining or splitting votes.                                                                                                                                                                        | More ways to engage in voting and increase turnout.                                                                                                                |
 | Voters can decide to delegate votes to another account.                                                                                                                                                                                                                                                                                                | Voters can use [multirole delegations](#multirole-delegation) and delegate votes to different accounts depending on origins.                                                                                                                           | More agile delegations tailored by expertise.                                                                                                                      |
 
-## Resources
-
-- [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
-- [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
-- [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io)
-- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io)
-- [Polkassembly](https://polkadot.polkassembly.io/)
 
 ---
 
