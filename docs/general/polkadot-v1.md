@@ -50,11 +50,11 @@ Polkadot is a blockchain-based decentralized computer that brings to the blockch
 ### Polkadot's Representation
 
 Polkadot is represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design, if a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
-connect to the Polkadot network as a rollup chain.
+connect to the Polkadot network as a rollup chain. The figure below shows the Polkadot relay chain (circle) with rollup chains attached to the virtual cores (open squares within the circle). A zoomed-in view shows Polkadot's validators (PC icons) guarding two cores. In-core validators will check incoming rollup data following [the ELVES protocol](../learn/learn-parachains-protocol.md).
 
-![polkadot-relay-chain](../assets/polkadot_relay_chain.png)
+<div align="center"> <img src="../../assets/polkadot-relay-chain.png" style="width:400px;" alt="Polkadot Relay Chain Diagram"> </div>
 
-Polkadot's rollup chains construct and propose blocks to validators on the relay chain, where the blocks undergo
+Polkadot's rollup chains construct and propose blocks to in-core validators on the relay chain, where the blocks undergo
 rigorous [availability and validity](../learn/learn-parachains-protocol.md) checks before being
 added to the finalized chain. As the relay chain provides the security guarantees,
 [collators](../learn/learn-collator.md), full nodes of these rollup chains, do not have any security
