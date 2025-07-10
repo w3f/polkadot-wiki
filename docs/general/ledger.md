@@ -24,7 +24,7 @@ description: Use the Polkadot Ledger Application.
 
     Using the Polkadot Ledger app on a Nano S will not allow you to install any other Ledger application on your device, and add Polkadot accounts to the Ledger Live App. But you will be able to add them to wallets and extensions that support Ledger devices.
     
-    For more information about Ledger Nano S limitations, see [this support page](https://support.ledger.com/article/Ledger-Nano-S-Limitations). If you are unsure which Ledger device best suits your needs, see [this comparison documentation](https://shop.ledger.com/pages/hardware-wallets-comparison).
+    For more information about Ledger Nano S limitations, see [this support page](https://support.ledger.com/article/Ledger-Nano-S-Limitations). You can migrate your wallet from a Nano S to a newer device with your 24-word seed phrase. If you are unsure which Ledger device best suits your needs, see [this comparison documentation](https://shop.ledger.com/pages/hardware-wallets-comparison).
 
 The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S Plus, Nano X, Stax, Flex and newer devices. Ledger devices are hardware wallets that keep your secret key secured on a
 physical device that does not expose it to your computer or the internet. The private keys will not
