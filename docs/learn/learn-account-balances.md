@@ -30,7 +30,7 @@ The spendable balance is calculated as follows:
 spendable = free - max(frozen - on_hold, ED)
 ```
 
-where `free`, `frozen` and `on_hold` are defined above. The `ED` is the the
+where `free`, `frozen` and `on_hold` are defined above. The `ED` is the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping).
 
 **Wallet providers might show you the spendable, locked, and reserved balance.**
