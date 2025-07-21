@@ -128,7 +128,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Staking Miner Deposit and Reward
 
-    Staking miners on Polkadot are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedDepositBase", 0, is_constant=true, readable="human_readable") }}, a **signed deposit per byte** of {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedDepositByte", 0, is_constant=true, readable="human_readable") }} (a solution weighing 200KB would yield 200 x 0.0000097656 = 0.00195312 DOT), and a **signed deposit weight** set to 0.
+    Staking miners on Polkadot are required to reserve a deposit to submit their solutions. The deposit is the sum of a **signed deposit base** of {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedDepositBase", 0, is_constant=true, readable="human_readable") }}, a **signed deposit per byte** of {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedDepositByte", 0, is_constant=true, readable="human_readable") }} (a solution weighing 200KB would yield 200 x 0.0000097656 = 0.00195312 DOT), and a **signed deposit weight** set to 0.
 
     The **signed reward base** on Polkadot is {{ rpc("polkadot", "ElectionProviderMultiPhase", "SignedRewardBase", 0, is_constant=true, readable="human_readable") }} which is a fixed amount.
 
@@ -284,7 +284,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Staking Miner Deposit and Reward
 
-    Staking miners on Kusama are required to reserve a deposit to submit their solutions. The the deposit is the sum of a **signed deposit base** of {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedDepositBase", 0, is_constant=true, readable="human_readable_kusama") }}, a **signed deposit per byte** of {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedDepositByte", 0, is_constant=true, readable="human_readable_kusama") }} (a solution weighing 200KB would yield 200 x 0.00000032551 = 0.000065102), and a **signed deposit weight** set to 0 and has no effect.
+    Staking miners on Kusama are required to reserve a deposit to submit their solutions. The deposit is the sum of a **signed deposit base** of {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedDepositBase", 0, is_constant=true, readable="human_readable_kusama") }}, a **signed deposit per byte** of {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedDepositByte", 0, is_constant=true, readable="human_readable_kusama") }} (a solution weighing 200KB would yield 200 x 0.00000032551 = 0.000065102), and a **signed deposit weight** set to 0 and has no effect.
 
     The **signed reward base** on Kusama is {{ rpc("kusama", "ElectionProviderMultiPhase", "SignedRewardBase", 0, is_constant=true, readable="human_readable_kusama") }} which is a fixed amount.
 
