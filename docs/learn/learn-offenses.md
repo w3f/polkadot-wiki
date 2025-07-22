@@ -24,8 +24,8 @@ and incentivize good behavior. Below, you can find a summary of punishments for 
 |               Offense                | [Slash (%)](#slashing) | [On-chain Disabling](#disabling) | Off-chain Disabling | [Reputational Changes](#reputation-changes) |
 | :----------------------------------: | :--------------------: | :------------------------------: | :-----------------: | :-----------------------------------------: |
 |           Backing Invalid            |          100%          |               Yes                | Yes (High Priority) |                     No                      |
-|           ForInvalid Vote            |           -            |                No                | Yes (Mid Priority)  |                     No                      |
-|          AgainstValid Vote           |           -            |                No                | Yes (Low Priority)  |                     No                      |
+|           ForInvalid Vote            |           2%            |                Yes                | Yes (Mid Priority)  |                     No                      |
+|          AgainstValid Vote           |           0%            |                Yes                | Yes (Low Priority)  |                     No                      |
 | GRANDPA / BABE / BEEFY Equivocations |       0.01-100%        |               Yes                |         No          |                     No                      |
 |    Seconded + Valid Equivocation     |           -            |                No                |         No          |                     No                      |
 |     Double Seconded Equivocation     |           -            |                No                |         No          |                     Yes                     |
