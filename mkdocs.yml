@@ -224,8 +224,8 @@ nav:
      - learn/learn-architecture.md
      - Network Participants:
          - Collator: learn/learn-collator.md
-         - Nominator: learn/learn-nominator.md
          - Validator: learn/learn-validator.md
+         - Nominator: learn/learn-nominator.md
          - Offenses: learn/learn-offenses.md
      - Decentralized Computer:
          - ELVES Protocol: learn/learn-parachains-protocol.md
