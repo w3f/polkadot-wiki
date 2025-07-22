@@ -6,8 +6,8 @@ description: Learn about offenses, slashes, and penalties in the Polkadot ecosys
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    The material provided here is based on the changes introduced by Step 2 of the Disabling feature. See
-    <a href="https://github.com/orgs/paritytech/projects/119/views/15?pane=issue&itemId=61684472" target="_blank" rel="noopener noreferrer">
+    The material provided here is based on the changes introduced by Step 4 of the Disabling feature. See
+    <a href="https://github.com/paritytech/polkadot-sdk/issues/4359" target="_blank" rel="noopener noreferrer">
       this page
     </a>
     for more information.
@@ -23,10 +23,10 @@ and incentivize good behavior. Below, you can find a summary of punishments for 
 
 |               Offense                | [Slash (%)](#slashing) | [On-chain Disabling](#disabling) | Off-chain Disabling | [Reputational Changes](#reputation-changes) |
 | :----------------------------------: | :--------------------: | :------------------------------: | :-----------------: | :-----------------------------------------: |
-|           Backing Invalid            |          100%          |               Yes                | Yes (High Priority) |                     No                      |
-|           ForInvalid Vote            |           -            |                No                | Yes (Mid Priority)  |                     No                      |
-|          AgainstValid Vote           |           -            |                No                | Yes (Low Priority)  |                     No                      |
-| GRANDPA / BABE / BEEFY Equivocations |       0.01-100%        |               Yes                |         No          |                     No                      |
+|           Backing Invalid            |          100%          |               Yes (High Priority)                | Yes (High Priority) |                     No                      |
+|           ForInvalid Vote            |           2%            |                Yes (Mid Priority)                | Yes (Mid Priority)  |                     No                      |
+|          AgainstValid Vote           |           0%            |                Yes (Low Priority)                | Yes (Low Priority)  |                     No                      |
+| GRANDPA / BABE / BEEFY Equivocations |       0.01-100%        |               Yes (Varying Priority)                |         No          |                     No                      |
 |    Seconded + Valid Equivocation     |           -            |                No                |         No          |                     No                      |
 |     Double Seconded Equivocation     |           -            |                No                |         No          |                     Yes                     |
 
