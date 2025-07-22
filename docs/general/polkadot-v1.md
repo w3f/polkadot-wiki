@@ -69,9 +69,16 @@ Polkadot has [trustless bridges](../learn/learn-bridges.md) that offer two-way c
 
 ### Polkadot 1.0 Core Usage and Functionalities
 
-The Polkadot relay chain managed parachains' crowdloans and auctions (replaced by [the coretime marketplace](../learn/learn-agile-coretime.md)). Polkadot's virtual cores were leased via auctions in 3-month
-chunks for a maximum of two years, and crowdloans allowed users to loan funds to teams
-for lease deposits in exchange for pre-sale tokens. There was no other way you could access and use cores on Polkadot 1.0.
+The Polkadot relay chain managed parachains' crowdloans and auctions (replaced by [the coretime marketplace](../learn/learn-agile-coretime.md)). Polkadot's virtual cores were leased via auctions in 3-month chunks for a maximum of two years, and crowdloans allowed users to loan funds to teams for lease deposits in exchange for pre-sale tokens. There was no other way you could access and use cores on Polkadot 1.0.
+
+In Polkadot 1.0, rollup chains produced blocks at a fixed rate of 12 seconds, whether needed or not. This led to inefficient energy allocation for computation and economic incentives for producing full blocks under heavy traffic and empty blocks under light traffic.
+
+The figure below shows the core usage for Polkadot 1.0, where the horizontal axis is time, and each
+row represents a virtual core. Colors show different rollup chains, each using one core (i.e., one rollup, one core formula).
+
+<div align="center"> <img src="../../assets/polkadot-v1-cores.png" style="width:600px;" alt="V1 Cores Scheme"> </div>
+
+The above setup allowed a **simple and secure, sharded execution environment**.
 
 Below is an example of two rollup chains accessing two separate Polkadot cores. The CPU load diagram shows that Chain 1 uses Core 1 computation at 50% while Chain 2 uses Core 2 at 25%. We will see how in [Polkadot 2.0](./polkadot-v2.md) in-core computation is used more efficiently.
 

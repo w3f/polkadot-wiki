@@ -8,6 +8,14 @@ description: Learn about Polkadot's future direction as a decentralized, secure,
 
 Understanding what [Polkadot 2.0](./polkadot-v2.md) will help us envision the future direction of the Polkadot ecosystem toward abstraction and generalization.
 
+Fundamentally, Polkadot was a platform to host just chains, and so far, chains have happened to be one way to build applications and grow Polkadot's utility.
+
+## From Chain-centricity to Application-centricity
+
+Polkadot has been abstracted and generalized beyond what was originally proposed and envisioned in the [Polkadot whitepaper](https://polkadot.network/whitepaper/).
+
+If we see Polkadot as a service provider of trustless, resilient and verifiable computation through cores as well as secure interoperability between core-secured rollup chains, the future development of Polkadot can be directed towards the following paradigm shift: from being an chain-focused ecosystem to being an application-focused ecosystem that is not only about blockchains.
+
 ## Offloading Tasks to System Chains
 
 Polkadot 1.0 was a chain-centric paradigm comprising domain-specific rollups that could exchange messages. Trusted communication channels are ensured via a shared security mechanism provided by the ELVES protocol, Polkadot's rollup technology. Polkadot not only provides message-passing
