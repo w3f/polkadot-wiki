@@ -36,8 +36,8 @@ The in-core validator must successfully verify the following conditions in the f
 
 3. Validate the candidate by executing the rollup runtime stored on the relay chain.
 
-Once a rollup block candidate meets the criteria for inclusion, the selected relay chain block author
-chooses any backable candidates for each rollup chain and includes them in the relay
+Once a rollup block candidate meets the criteria for backing, the selected relay chain block author
+chooses any backable candidates for each rollup chain and adds them to the relay
 chain block. We say the candidate blocks are _backed_.
 
 ## Block Authors
@@ -45,8 +45,7 @@ chain block. We say the candidate blocks are _backed_.
 There are validators on the relay chain who participate in the consensus mechanism to produce the
 relay chain blocks based on validity statements from other validators. These validators are called
 block authors. They are selected by [BABE](./learn-consensus.md#block-production-babe) and can note
-up to one backable candidate for each rollup chain to include in the relay chain. A backable candidate
-included in the relay chain is considered _backed_ in that chain fork.
+up to one backable candidate for each rollup chain to include in the relay chain. A backable candidate added to a relay chain block is considered _backed_ in that chain fork.
 
 In a relay chain block, block authors will only include
 [candidate receipts](./learn-parachains-protocol.md#candidate-receipts) that have a parent candidate
@@ -60,14 +59,14 @@ Once the
 candidate is backed in a fork of the relay chain, it is still _pending availability_, i.e., it is not
 fully included (only tentatively included) as part of the relay chain until it is proven available
 (together with the PoV). Validators also contribute to the so-called **availability distribution**. The data availability scheme consists in the distribution by in-core validators of the candidate block information in the form of erasure codes. Information regarding the candidate's availability will be noted in
-the following relay chain blocks. Only when there is enough information the candidate is considered available and can proceed to secondary checks.
+the following relay chain blocks. Only when there is enough information the candidate is considered available and can be included.
 
 ## Secondary Checkers
 
 Validators also participate in the so-called
 [**approval process**](./learn-parachains-protocol.md#approval-process). Once the parablock is
-considered available and part of the rollup chain, it is still _pending approval_. Because
-in-core validators are a small subset of all validators, there is a risk that the majority of those validators assigned to a core might be dishonest by chance. It is thus necessary to run a secondary verification of the rollup block before it can be considered approved. Having a secondary verification step avoids the allocation of more in-core validators that will ultimately reduce the system's throughput. If no disputes arise, the candidate block can be included in a fork on the relay chain.
+considered available and included, it is still _pending approval_. Because
+in-core validators are a small subset of all validators, there is a risk that the majority of those validators assigned to a core might be dishonest by chance. It is thus necessary to run a secondary verification of the rollup block before it can be considered **approved**. Having a secondary verification step avoids the allocation of more in-core validators that will ultimately reduce the system's throughput. If no disputes arise, the candidate block will be approved.
 
 ## Disputes
 
