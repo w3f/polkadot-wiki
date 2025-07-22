@@ -7,9 +7,6 @@ In the Polkadot ecosystem, there are different types of balances depending on th
 Different balance types dictate whether your balance can be used for transfers, to pay fees, or must
 remain frozen and unused due to an on-chain requirement.
 
-!!!info "A more efficient distribution of account balance types"
-    Soon, pallets on Polkadot SDK will be implementing the _fungible_ trait (see [the tracking issue](https://github.com/paritytech/polkadot-sdk/issues/226) for more info). This new logic will allow for more efficient use of your account balance. Specifically, the [fungible trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) will allow using the `free` balance for on-chain activity like setting proxies and identities.
-
 There are 5 types of account balances:
 
 - **Free** is the balance that can be used for on-chain activity like staking, participating in
