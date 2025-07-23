@@ -4,7 +4,7 @@ description: Understand the role of collators in Polkadot, including block produ
 ---
 
 !!!info
-    This page provides a general overview of the role of collators' in the Polkadot ecosystem. For more detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
+    This page provides a general overview of the role of collators in the Polkadot ecosystem. For more detailed information, read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 ## Collators' Role
 
@@ -16,17 +16,13 @@ proofs (Proof-of-Validity, PoV) for validators.
 Collators maintain a full node for the relay chain and a full node for their particular parachain, meaning they retain all necessary information to author new parablocks and execute transactions like miners do on PoW blockchains. Under normal circumstances, they
 will collate and execute transactions to create an unsealed block and provide it with a PoV to one or more validators on a Polkadot core.
 
-Collators are similar to validators on any other blockchain. Still, they do not need to provide security
-guarantees because the relay chain provides those as a service to them via [coretime](./learn-agile-coretime.md). If a parachain block is invalid, it will get
-rejected by validators.
+Collators are similar to validators on any other blockchain. Still, they do not need to provide security guarantees because the relay chain provides those as a service via [the ELVES protocol](https://eprint.iacr.org/2024/961). If a parachain block is invalid, validators will reject it.
 
-### Rollup Censorship
+### Rollup Liveness and Censorship
 
-The assumption that having more collators is better or more secure is incorrect. On the contrary, too many collators may slow down the network. The only power collators have is transaction censorship. To prevent censorship, a parachain only needs to ensure the collators set is [sufficiently decentralized](../general/web3-and-polkadot.md#decentralization) and that there are some neutral
-collators, but not necessarily a majority. Theoretically, the censorship problem is solved by
-having just one honest collator.
+Rollup safety (i.e., the insurance that invalid transactions are not included on the rollup) is achieved through validators on the relay chain implementing the ELVES protocol. But the onus of liveness (i.e., new blocks are eventually produced) and censorship resistance on the rollup is the responsibility of the collators. Hence, a sufficiently [decentralised collator](../general/web3-and-polkadot.md#decentralization) set ensures liveness and mitigates censorship resistance. Theoretically, a single honest collator can ensure liveness but with reduced throughput.
 
-### Cross-consenus Messaging
+### Cross-consensus Messaging
 
 Collators are a key element of the [XCM (Cross-Consensus Message Passing Format)](learn-xcm.md). By
 being full nodes of the relay chain, they are all aware of each other as peers. This makes it
@@ -34,7 +30,7 @@ possible for them to send messages from parachain A to parachain B.
 
 ## Collators in the Wild
 
-Blockchains built using Substrate cannot hook onto the relay chain on their own. The
+Blockchains built using Substrate cannot hook onto the relay chain independently. The
 Parity team built the
 [Cumulus library](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus/) to address this.
 Collators are being used on the [Paseo](https://docs.polkadot.com/develop/parachains/testing/) testnet,
