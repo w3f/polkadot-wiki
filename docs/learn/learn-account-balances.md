@@ -12,16 +12,10 @@ remain frozen and unused due to an on-chain requirement.
 
 There are 5 types of account balances:
 
-- **Free** is the balance that can be used for on-chain activity like participating in
-  governance etc. This represents your spendable/transferrable balance when you have no active staking positions. However, since the runtime upgrade [v1.6.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.6.0) when you stake tokens, the bonded amount moves from free balance to reserved balance.
-- **Frozen** is the free balance locked for [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers)
-  (also called locked balance)
-- **On hold** is used for [staking](./learn-staking.md), [identities](./learn-identity.md), [proxies](./learn-proxies.md),
-  [OpenGov preimages and deposits](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits),
-  and it is no longer free (also called reserved balance). So, reserved balance includes bonded tokens (staking) as well as reserves from other pallets.
-- **Spendable** is the free balance that can be spent
-- **Untouchable** is the portion of the free balance that cannot be moved (i.e., not spendable) but
-  can still be used for on-chain activity
+- **Free** is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), deposits) as long as your total balance (free + reserved) remains above the maximum of frozen balance and existential deposit.
+- **Frozen** (also called locks) is a balance that overlaps across pallets. Example: If governance freezes 100 DOT and vesting freezes 120 DOT, total frozen = 120 DOT (not 220 DOT).
+- **Reserved** (also called holds) is the balance removed from free and doesn't overlap. Used by nomination pools, [staking](./learn-staking.md), etc. Can still be used for governance voting but not for transfers or fees.
+- **Spendable** is the portion of free balance available for transaction fees and creating new holds.
 
 The spendable balance is calculated as follows:
 
