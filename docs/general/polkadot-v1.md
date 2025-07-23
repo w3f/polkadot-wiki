@@ -20,19 +20,19 @@ Polkadot is a blockchain-based decentralized computer that brings to the blockch
   where transactions are processed in parallel within each shard. Continuing the comparison of Polkadot being a decentralized computer, Polkadot has a virtual CPU with virtual cores (shards). Polkadot cores are the gateway for rollup chains to use Polkadot as a service for shared security and interoperability (see below).
 
     !!!info "Rollups or Parachains?"
-        Polkadot rollups used to be referred to as parachains in the past. This reflected the technical nature of parachains, which are blockchains running in parallel as Polkadot shards. However, the technological nature of parachains are akin to a rollup protocol. Due to the broad industry acceptance of the term "rollup", parachains are, in a way, rollup chains: fully-fledged blockchains utilizing Polkadot's rollup mechanism for security guarantees. A comparison between Polkadot rollups and other rollup technologies is available [here](../learn/learn-comparisons-rollups.md#rollup-comparison-table).
+        Polkadot rollups used to be referred to as parachains in the past. This reflected the technical nature of parachains, blockchains running in parallel as Polkadot shards. However, the technological nature of parachains is akin to a rollup protocol. Due to the broad industry acceptance of the term "rollup", parachains are, in a way, rollup chains: fully-fledged blockchains utilizing Polkadot's rollup mechanism for security guarantees. A comparison between Polkadot rollups and other rollup technologies is available [here](../learn/learn-comparisons-rollups.md#rollup-comparison-table).
 
-- **Execution sharding.** Polkadot introduced execution sharding on top of data sharding. Data sharding essentially refers to rollup data living in each shard (rollup chain), and being permanently fragmented (more on this later). Polkadot also introduced [the ELVES security protocol](../learn/learn-parachains-protocol.md), in which a subset of validators is assigned to each Polkadot virtual core to check incoming data from each rollup. Secondary checks and dispute-driven escalation effects ensure the system stays secure, and eventually, all validators will be engaged in critical situations. Execution sharding is at the core of Polkadot's scalability because:
+- **Execution sharding.** Polkadot introduced execution sharding on top of data sharding. Data sharding essentially refers to rollup data living in each shard (rollup chain), and being permanently fragmented (more on this later). Polkadot also introduced [the ELVES security protocol](../learn/learn-parachains-protocol.md), assigning a subset of validators to each Polkadot virtual core to check incoming data from each rollup. Secondary checks and dispute-driven escalation effects ensure the system stays secure, and eventually, all validators will be engaged in critical situations. Execution sharding is at the core of Polkadot's scalability because:
 
     - Not all validators always check everything
-    - Validators feature an in-core/on-chain dualism: they not only commit to the state of the blockchain but also participate in data availability as well as re-executing and checking data coming through Polkadot's virtual cores.
+    Validators feature an in-core/on-chain dualism: they not only commit to the blockchain's state but also participate in data availability, re-executing, and checking data coming through Polkadot's virtual cores.
 
     This system allows Polkadot to have many virtual cores and process data coming through those cores simultaneously, natively, and without compromising security.
 
 - **Shared security**. Any rollup chain attached to a Polkadot
   virtual core can benefit from Polkadot's shared security and interoperability model. This means the Polkadot
   [Nominated-Proof-of-Stake (NPoS)](../learn/learn-staking.md#nominated-proof-of-stake-npos)
-  mechanism along with ELVES, can secure fully-fledged blockchains out-of-the-box without having to bootstrap security on their own.
+  mechanism along with ELVES, can secure fully-fledged blockchains out-of-the-box without bootstrap security.
 
 - **Secure interoperability.** Any rollup chain attached to a Polkadot core, as well as Layer-two (L2) chains built on top of them, can benefit from Polkadot's native interoperability via [XCM](../learn/learn-xcm.md) and can thus communicate and exchange value and information with other Polkadot rollup chains. Examples of L2 can be dApps deployed as smart contracts on Moonbeam or Astar.
 
@@ -49,7 +49,7 @@ Polkadot is a blockchain-based decentralized computer that brings to the blockch
 
 ## Polkadot's Representation
 
-Polkadot is represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design, if a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
+Polkadot is represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design, if a chain's logic can compile to Wasm and adhere to the relay chain API, it can
 connect to the Polkadot network as a rollup chain. The figure below shows the Polkadot relay chain (circle) with rollup chains attached to the virtual cores (open squares within the circle). A zoomed-in view shows Polkadot's validators (PC icons) guarding two cores. In-core validators will check incoming rollup data following [the ELVES protocol](../learn/learn-parachains-protocol.md).
 
 <div align="center"> <img src="../../assets/polkadot-relay-chain.png" style="width:400px;" alt="Polkadot Relay Chain Diagram"> </div>
@@ -91,21 +91,19 @@ The relay chain also managed other tasks such as [staking](../learn/learn-stakin
 
 Decentralization is a crucial aspect of blockchain networks, but there is a trade-off between:
 
-- having an over-decentralized network that struggles to reach consensus and consumes a lot of
-  energy to operate, and
+- having an over-decentralized network that struggles to reach consensus and consumes a lot of energy to operate, and
 - having a network that reaches consensus fast at the expense of being centralized, making it
   trivial to manipulate or attack.
 
 Ideally, a network should be decentralized "enough" to make it practically impossible for someone to
-exert manipulative or malicious influence on the network. So, **decentralization is a tool while the
+exert manipulative or malicious influence on the network. So, **decentralization is a tool, while the
 goal is resilience**, which is achieved by additionally providing an on-chain treasury and open governance
 mechanism allowing continuous incentives for the network's participants without relying on
 intermediaries or centralized entities.
 
 Polkadot 1.0 achieved resilience through the following strategies:
 
-- **Nominated Proof-of-Stake (NPoS)** where the stake per validator is maximized and evenly
-  distributed across validators, and participation in native staking is decentralized and democratized as much as possible.
+- **Nominated Proof-of-Stake (NPoS)** where the stake per validator is maximized and evenly distributed across validators, and participation in native staking is decentralized and democratized as much as possible.
 - [**ELVES protocol**](../learn/learn-parachains-protocol.md) allows for the shared security system, where everything coming through Polkadot's virtual cores passes rigorous checking. See [this page](../learn/learn-comparisons-rollups.md#rollup-comparison-table) to explore how Polkadot's rollup technology differs from optimistic and ZK rollups.
 - The [**Decentralized Nodes Program**](https://nodes.web3.foundation/) aims to incentivize new operators to
   become network participants and further increase physical (how many validator nodes per service
@@ -116,7 +114,7 @@ Polkadot 1.0 achieved resilience through the following strategies:
 
 ## Polkadot's Blockspace
 
-A blockchain is a way to permanently store data and make them verifiable. The storage unit is the block (i.e., blockspace), and once a block is finalized
+A blockchain is a way to permanently store data and make it verifiable. The storage unit is the block (i.e., blockspace), and once a block is finalized
 onto the chain, it is practically impossible to modify the data within that block. In addition to
 being tamper-proof, public permissionless blockchains like Polkadot store data visible to
 everybody (i.e., public), and everybody can cryptographically verify the correctness of such data.
@@ -128,7 +126,7 @@ blockspace.
     Blockspace is the capacity of a blockchain to finalize and commit operations. It represents a
     blockchain's security, computing, and storage capabilities as an end product. Blockspace is not measured the same on any chain; there is no standard unit for blockspace. In Bitcoin, blockspace is based on transaction size, in Ethereum, on how much computation is used (gas), and in Polkadot, on how much time is taken to execute a task on a virtual core (coretime).
 
-Blockspace produced by different blockchains can vary in security, flexibility, and availability.
+Blockspace produced by blockchains can vary in security, flexibility, and availability.
 
 - **Security** is intended to show how secure blockspace is. In Proof-of-Stake (PoS) networks, this is
   directly related to how much stake is locked on validator nodes, how much variance in stake there
@@ -155,7 +153,7 @@ the relay chain to provide shared security and interoperability. Blockspace is o
 through auctions, but an auction winner can access a "freighter of blocks" regardless of their need. This creates high entry barriers and can lead to energy and resource waste.
 
 For more information about blockspace, see [this interview](https://youtu.be/e1vISppPwe4) with Robert
-Habermeier as well as [this article](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/) by
+Habermeier, as well as [this article](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/) by
 him.
 
 ## A Perspective Shift: Upcoming Polkadot Features
@@ -172,8 +170,7 @@ important than _seeing more_ of the world.
 _The only true voyage of discovery, the only fountain of Eternal Youth, would be not to visit
 strange lands but to possess other eyes._
 
-Thus, if we start to see Polkadot with _other eyes_, we can truly envision its potential and what it
-could become.
+Thus, if we start to see Polkadot with _other eyes_, we can truly envision its potential and what it could become.
 
 Polkadot is perfecting its implementation through [RFCs](#requests-for-comment-rfcs)
 to continue being a decentralized, secure, ubiquitous computing engine to power the next generation of [Web3](./web3-and-polkadot.md) applications.
@@ -195,7 +192,7 @@ parachain, where `xxxx` is the RFC number and `h` is the hash of the raw proposa
 
 For example, the first RFC [RFC-1](https://github.com/polkadot-fellows/RFCs/pull/1) about Agile
 Coretime was proposed by Gavin Wood on the 30th of June 2023 and merged on the 12th of August 2023.
-Subsequently, the code for the Agile Coretime Broker pallet was added to the Substrate FRAME system.
+Subsequently, the Agile Coretime Broker pallet code was added to the Substrate FRAME system.
 
 In general, the workflow from RFC write-up submission to its implementation follows the timeline
 below:
@@ -209,7 +206,7 @@ below:
 - If the changes requested through the RFC require a broader consensus of DOT holders, an OpenGov
   referendum may be created. For instance,
   [adding a new system collective](https://github.com/polkadot-fellows/RFCs/blob/main/text/0012-process-for-adding-new-collectives.md)
-  or making changes to network parameters like inflation rate, treasury inflow etc.
+  or making changes to network parameters like inflation rate, treasury inflow, etc.
 
 !!!note "Polkadot Runtime Code Changes through Root track"
     Although the Technical Fellowship maintains the [runtimes of Polkadot and Kusama](https://github.com/polkadot-fellows/runtimes), changes to the network protocol are not gated by the fellowship. Any DOT holder can submit a referendum on [the Polkadot OpenGov Root track](../learn/learn-polkadot-opengov-origins.md#root) to set the runtime code with the proposed changes.
