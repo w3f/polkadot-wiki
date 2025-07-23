@@ -64,7 +64,7 @@ An application can be assigned to multiple cores simultaneously. Some applicatio
 permanent core assignment and an intermittent one, for example, in a period of high demand to send
 multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime across multiple cores is achieved through [elastic scaling](../learn/learn-elastic-scaling.md).
 
-Below is an example of two rollup chains accessing two separate Polkadot cores. The CPU load diagram shows that Chain 1 uses Core 1 computation at 100% while Chain 2 uses Core 2 at 25%.
+Below is an example of two rollup chains accessing two separate Polkadot cores. The CPU load diagram shows that Chain 1 uses Core 1 computation at 100% while Chain 2 uses Core 2 at 25%. Rollups produce blocks every 6 seconds using the pipelining feature (i.e. asynchronous backing).
 
 <div align="center"> <img src="../../assets/one-core-full.png" style="width:400px;" alt="Two Cores Diagram"> </div>
 
@@ -72,7 +72,7 @@ Chain 1 uses Core 1 to its maximum capacity and needs more computation from Polk
 
 <div align="center"> <img src="../../assets/two-cores-elastic-scaling.png" style="width:400px;" alt="Two Cores Diagram"> </div>
 
-Chain 1 uses elastic scaling by parallelizing computation on two cores. Note how Chain 2 now uses Core 2 at 50% because it sends information to the core less often.
+Chain 1 uses elastic scaling by parallelizing computation on two cores. Note how Chain 2 now uses Core 2 at 50% because it produces blocks every 12 seconds, but now those blocks contain twice the transactions as before. 
 
 
 
