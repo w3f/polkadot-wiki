@@ -85,7 +85,7 @@ bandwidth for the fixed price of opening and closing a block.
 ### Shared Cores
 
 Sharing cores with other applications to share costs but with no reduction in latency. Note that
-this is different from the [split coretime](./polkadot-v2.md#split-coretime) where one core is used by multiple
+this is different from the [split coretime](./polkadot-v2.md#polkadot-20-core-usage-and-functionalities) where one core is used by multiple
 application at different times to share costs at the expense of higher latency. Shared cores will be
 enabled with [JAM](../learn/learn-jam-chain.md), a semi-coherent system in which data from different
 shards can be scheduled within the same core.
@@ -94,7 +94,7 @@ shards can be scheduled within the same core.
 
 ## Agile Composable Computer
 
-All the options of agile [coretime allocation](./polkadot-v2.md#coretime-allocation) and
+All the options of agile [coretime allocation](./polkadot-v2.md#polkadot-20-core-usage-and-functionalities) and
 [core usage](#agile-core-usage) can be composable and enable the creation of an agile decentralized
 global computing system.
 

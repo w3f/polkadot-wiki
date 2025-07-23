@@ -36,10 +36,9 @@ The entry points to access Polkadot's computation are the virtual cores. Thus, r
 
 Thus, classic lease auctions were deprecated to make place for an agile marketplace for [coretime], where coretime becomes a commodity that can be tokenized, sold, and traded. Rollup chains can purchase:
 
-- **bulk coretime**: a standard rental of coretime through [the Coretime System Chain](../learn/learn-system-chains.md#existing-system-chains) at a fixed
-price for a fixed period of time.
-- **on-demand coretime**: On-demand coretime rental is available through ongoing sale
-of coretime for immediate use at a spot price.
+- **bulk coretime**: a standard purchase of coretime through [the Coretime System Chain](../learn/learn-system-chains.md#existing-system-chains) at a fixed
+price for a fixed period of time, with predictable renewal price.
+- **on-demand coretime**: On-demand purchase of coretime available through ongoing sale for immediate use at a spot price.
 
 This greatly decreases the barrier-to-entry for software tinkerers and rollup teams. Coretime will allow any rollup chain to access Polkadot's computation based on their needs maximizing the use of valuable computation. This setup
 maximizes the agility of Polkadot and lets the market figure out the best solution needed for rollup chains to be successful.
@@ -52,31 +51,29 @@ We have seen how in Polkadot 1.0 one rollup chain has a specific core at all tim
 
 Polkadot 2.0 generalizes core usage to meet different rollup needs. For more information about coretime, see the [agile coretime documentation](../learn/learn-agile-coretime.md).
 
+The figure below shows the core usage for Polkadot 2.0, where the horizontal axis is time, and each row represents a virtual core. Colors show different rollup chains.
+
 <div align="center"> <img src="../../assets/polkadot-v2-cores.png" style="width:600px;" alt="V1 Cores Scheme"> </div>
 
-### Split Coretime
+As shown above, coretime can be:
 
-Owners of coretime can split or trade it. An application A1 can run on core C1 for a finite period
-and then another application A2 can run on that core, or application A1 can continue running on
-another core C2. Some applications might stop running for some time and resume later on.
-
-![core-usage-agile-rangeSplit](../assets/core-usage-agile-rangeSplit.png)
-
-### Interlaced Coretime
-
-Ranges can be interlaced (i.e., applications can take turns on a core) to share costs or decrease block
-production rate, for example.
-
-![core-usage-agile-rangeStrided](../assets/core-usage-agile-rangeStrided.png)
-
-### Agile Coretime
+- **split**: Owners of coretime can split or trade it. An rollup R1 can run on Core 1 for a finite period
+and then another rollup R2 can run on that core, or R1 can continue running on another core. Some applications might stop running for some time and resume later on. Note that there is no rollup affinity for cores.
+- **interlaced**: Cores can be accessed concurrently, meaning that applications can take turns on a core to share costs or decrease block production rate, for example.
 
 An application can be assigned to multiple cores simultaneously. Some applications can have a
 permanent core assignment and an intermittent one, for example, in a period of high demand to send
-multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime in
-this manner is achieved through [elastic scaling](../learn/learn-elastic-scaling.md).
+multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime in this manner is achieved through [elastic scaling](../learn/learn-elastic-scaling.md).
 
-![core-usage-agile-combined](../assets/core-usage-agile-combined.png)
+Below is an example of two rollup chains accessing two separate Polkadot cores. The CPU load diagram shows that Chain 1 uses Core 1 computation at 100% while Chain 2 uses Core 2 at 25%.
 
-One core can be reserved for one single chain in-bulk or on-demand. On-demand cores can be accessed by multiple chains at different periods (that is, concurrently, see the [coretime page](../learn/learn-agile-coretime.md)).
+<div align="center"> <img src="../../assets/one-core-full.png" style="width:400px;" alt="Two Cores Diagram"> </div>
+
+Chain 1 is using Core 1 to the maximum of capacity and needs more computation from Polkadot to secure additional rollup blocks. Chain 2 can interlace its coretime so that both chains can access Polkadot secure computation concurrently via Core 2.
+
+<div align="center"> <img src="../../assets/two-cores-elastic-scaling.png" style="width:400px;" alt="Two Cores Diagram"> </div>
+
+Chain 1 uses elastic scaling by parallelizing computation on two cores.
+
+
 
