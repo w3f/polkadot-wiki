@@ -47,7 +47,7 @@ Coretime sales are burned and contribute to the protocol's revenue by adding def
 
 ## Polkadot 2.0 Core Usage and Functionalities
 
-We have seen how in Polkadot 1.0, one rollup chain has a specific core at all times for a fixed two-year period, whether they needed it or not. However, blocks must be produced when required to achieve full efficiency, and the system must target full block capacity, lowering the probability of incentivizing validators to build blocks half full or, worse, empty.
+We have seen how in [Polkadot 1.0](./polkadot-v1.md#polkadot-10-core-usage-and-functionalities), one rollup chain has a specific core at all times for a fixed two-year period, whether they needed it or not. However, blocks must be produced when required to achieve full efficiency, and the system must target full block capacity, lowering the probability of incentivizing validators to build blocks half full or, worse, empty.
 
 Polkadot 2.0 generalizes core usage to meet different rollup needs. For more information about coretime, see the [agile coretime documentation](../learn/learn-agile-coretime.md).
 
