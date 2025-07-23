@@ -12,14 +12,13 @@ remain frozen and unused due to an on-chain requirement.
 
 There are 5 types of account balances:
 
-- **Free** is the balance that can be used for on-chain activity like staking, participating in
-  governance etc. but is not necessarily spendable (or transferrable)
-- **Frozen** is the free balance locked for [staking](./learn-staking.md),
-  [governance](./learn-polkadot-opengov.md), and [vesting](./learn-transactions.md#vested-transfers)
+- **Free** is the balance that can be used for on-chain activity like participating in
+  governance etc. This represents your spendable/transferrable balance when you have no active staking positions. However, since the runtime upgrade [v1.6.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.6.0) when you stake tokens, the bonded amount moves from free balance to reserved balance.
+- **Frozen** is the free balance locked for [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers)
   (also called locked balance)
-- **On hold** is used for [identities](./learn-identity.md), [proxies](./learn-proxies.md),
+- **On hold** is used for [staking](./learn-staking.md), [identities](./learn-identity.md), [proxies](./learn-proxies.md),
   [OpenGov preimages and deposits](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits),
-  and it is no longer free (also called reserved balance)
+  and it is no longer free (also called reserved balance). So, reserved balance includes bonded tokens (staking) as well as reserves from other pallets.
 - **Spendable** is the free balance that can be spent
 - **Untouchable** is the portion of the free balance that cannot be moved (i.e., not spendable) but
   can still be used for on-chain activity
