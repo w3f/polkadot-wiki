@@ -8,6 +8,14 @@ description: Learn about Polkadot's future direction as a decentralized, secure,
 
 Understanding what [Polkadot 2.0](./polkadot-v2.md) will help us envision the future direction of the Polkadot ecosystem toward abstraction and generalization.
 
+Fundamentally, Polkadot was a platform to host just chains, and so far, chains have happened to be one way to build applications and grow Polkadot's utility.
+
+## From Chain-centricity to Application-centricity
+
+Polkadot has been abstracted and generalized beyond what was originally proposed and envisioned in the [Polkadot whitepaper](https://polkadot.network/whitepaper/).
+
+If we see Polkadot as a service provider of trustless, resilient and verifiable computation through cores as well as secure interoperability between core-secured rollup chains, the future development of Polkadot can be directed towards the following paradigm shift: from being an chain-focused ecosystem to being an application-focused ecosystem, where applications are not only blockchains.
+
 ## Offloading Tasks to System Chains
 
 Polkadot 1.0 was a chain-centric paradigm comprising domain-specific rollups that could exchange messages. Trusted communication channels are ensured via a shared security mechanism provided by the ELVES protocol, Polkadot's rollup technology. Polkadot not only provides message-passing
@@ -77,7 +85,7 @@ bandwidth for the fixed price of opening and closing a block.
 ### Shared Cores
 
 Sharing cores with other applications to share costs but with no reduction in latency. Note that
-this is different from the [split coretime](./polkadot-v2.md#split-coretime) where one core is used by multiple
+this is different from the [split coretime](./polkadot-v2.md#polkadot-20-core-usage-and-functionalities) where one core is used by multiple
 application at different times to share costs at the expense of higher latency. Shared cores will be
 enabled with [JAM](../learn/learn-jam-chain.md), a semi-coherent system in which data from different
 shards can be scheduled within the same core.
@@ -86,7 +94,7 @@ shards can be scheduled within the same core.
 
 ## Agile Composable Computer
 
-All the options of agile [coretime allocation](./polkadot-v2.md#coretime-allocation) and
+All the options of agile [coretime allocation](./polkadot-v2.md#polkadot-20-core-usage-and-functionalities) and
 [core usage](#agile-core-usage) can be composable and enable the creation of an agile decentralized
 global computing system.
 

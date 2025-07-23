@@ -267,7 +267,6 @@ nav:
           - Safrole: learn/learn-safrole.md
           - JAM Chain: learn/learn-jam-chain.md
           - JAM FAQ: learn/learn-jam-faq.md
-     - Start Building: general/start-building.md
   - Analytics:
      - Parity Data Dashboards: general/dashboards/parity-data-dashboards.md
      - Dune Analytics:

@@ -102,7 +102,7 @@ much simpler to write a program that can run on top of a (decentralized) blockch
 ## How can developers get involved with JAM?
 
 Developers interested in JAM can explore and participate once the
-[RFC](../general/start-building.md#requests-for-comment-rfcs) is out. Additionally, they can stay
+[RFC](../general/polkadot-v1.md#requests-for-comment-rfcs) is out. Additionally, they can stay
 updated on announcements and events related to JAM and its integration with other technologies via
 Parity’s communication channels.
 
