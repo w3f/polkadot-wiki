@@ -43,7 +43,7 @@
 /docs/community    /general/community    301
 /docs/polkadot-vision-index    /general/polkadot-v1/    301
 /docs/stay-safe-index    /general/stay-safe    301
-/docs/start-building    /general/start-building    301
+/*/start-building    https://docs.polkadot.com/develop/    301
 /docs/faq    /general/faq    301
 /docs/glossary    /general/glossary    301
 /docs/learn-scams   /general/scams/    301
@@ -197,7 +197,7 @@
 /docs/build-guides-coretime-troubleshoot    https://docs.polkadot.com/develop/parachains/deployment/obtain-coretime    301
 /docs/learn-guides-coretime-swap    /learn/learn-guides-coretime-swap    301
 /docs/build-oracle   https://docs.polkadot.com/develop/toolkit/integrations/oracles/    301
-/docs/build-guide   https://docs.polkadot.com/develop/    301
+/*/build-guide   https://docs.polkadot.com/develop/    301
 /docs/build-parachains    https://docs.polkadot.com/develop/parachains/    301
 
 # Maintain Section

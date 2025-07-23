@@ -13,8 +13,8 @@ Polkadot is **a multi-core decentralized computer** providing resilient and veri
 The Polkadot community [voted on a Wish for Change proposal](https://polkadot.polkassembly.io/referenda/747) stating that Polkadot 2.0 includes the following major technical upgrades:
 
 - [asnychronous backing](../learn/learn-async-backing.md) allowing pipelining and thus a more efficient rollup system that grant rollups more throughput without compromising security.
-- [coretime](../learn/learn-agile-coretime.md) allowing agile allocation of cores.
-- [elastic scaling](../learn/learn-elastic-scaling.md) allowing the use of multiple cores simultaneously by the same rollup chain.
+- [coretime](../learn/learn-agile-coretime.md) allowing agile allocation of cores and thus execution on the Polkadot decentralized computer.
+- [elastic scaling](../learn/learn-elastic-scaling.md) allowing the use of multiple cores simultaneously by the same rollup chain for a boost in throughput.
 
 These technical upgrades allowed to make the Polkadot decentralized computer more efficient, powerful, and accessible for anyone to use.
 
@@ -22,36 +22,33 @@ These technical upgrades allowed to make the Polkadot decentralized computer mor
 
 Polkadot 1.0 has been abstracted and generalized beyond what was originally proposed and envisioned in the [Polkadot whitepaper](https://polkadot.network/whitepaper/).
 
-If we see Polkadot as a service provider of trustless, resilient and verifiable computation through cores as well as secure interoperability between core-secured rollup chains, the future development of Polkadot can be directed towards the following paradigm shift:
+If we see Polkadot as a service provider of trustless, resilient and verifiable computation via cores as well as secure interoperability between core-secured rollup chains, the future development of Polkadot can be directed towards the following paradigm shift:
 
 - from being an ecosystem where each rollup chain owned an execution core at all times
-  (acquired through an auction), which allowed a simple and secure, sharded execution
-  environment
+  (acquired through a candle auction mechanism), which allowed a simple and secure, sharded execution environment
 - to being an ecosystem where we remove the assumption that each rollup chain
-  owns a core, and instead that all cores are a resource to be consumed and used as needed by all rollups.
+  owns a core, and instead that all execution cores are a resource to be used as needed by all rollup chains.
 
-Previously, securing a core was a competitive process through an
-candle auction mechanism. With [coretime](#coretime-allocation), there is no need for
-auctions anymore. Rollup chains can purchase on-demand coretime or reserve bulk coretime as required. This greatly decreases the barrier-to-entry for software tinkerers and rollup teams. Coretime will allow any rollup chain to access Polkadot's computation based on their needs maximizing the use of valuable computation.
+The previously-used candle auction mechanism was not agile, made the access to blockspace competitive, created high entry barriers, and was designed for long-running single blockchains (i.e., the original vision proposed in the Polkadot whitepaper).
 
-The end product of a blockchain is [**blockspace**](./polkadot-v1.md#polkadots-blockspace). In the Polkadot context, blockspace is better described by secure computation provided by the [ELVES protocol](../learn/learn-parachains-protocol.md).
-The entry points to access Polkadot's computation are the virtual cores. Thus, rollups need to reserve time on Polkadot's cores (or **Coretime**) to gain the right to access Polkadot's secure computation and interoperability for a finite period.
+The end product of a blockchain is [**blockspace**](./polkadot-v1.md#polkadots-blockspace). In the Polkadot context, blockspace is better described by computation provided by validators and secured via the [ELVES protocol](../learn/learn-parachains-protocol.md).
+The entry points to access Polkadot's computation are the virtual cores. Thus, rollups need to reserve time on Polkadot's cores (or **coretime**) to gain the right to access Polkadot's secure computation and interoperability for a finite period.
 
-Core scheduling is agile and generalized: cores can change what rollup runtime they execute as easily as a modern CPU changes tasks.
+Thus, classic lease auctions were deprecated to make place for an agile marketplace for [coretime], where coretime becomes a commodity that can be tokenized, sold, and traded. Rollup chains can purchase:
 
-The previously-used candle auction mechanism was not agile, created high entry barriers, and was designed for long-running single blockchains (i.e., the original Polkadot vision proposed in the whitepaper). Thus, classic lease auctions were deprecated to make place for an agile marketplace for coretime, where **coretime becomes a commodity that can be tokenized, sold, and traded**. This setup
-maximizes the agility of Polkadot and lets the market figure out the best solution needed for
-rollup chains to be successful.
+- **bulk coretime**: a standard rental of coretime through [the Coretime System Chain](../learn/learn-system-chains.md#existing-system-chains) at a fixed
+price for a fixed period of time.
+- **on-demand coretime**: On-demand coretime rental is available through ongoing sale
+of coretime for immediate use at a spot price.
 
-Applications can reserve **bulk coretime** and **on-demand coretime** depending on their needs. Bulk
-coretime rental is a standard rental of coretime through [the Coretime System Chain](../learn/learn-system-chains.md#existing-system-chains) at a fixed
-price for a fixed period of time. On-demand coretime rental is available through ongoing sale
-of coretime for immediate use at a spot price. This system lowers the barrier to entry for
-prospective builders. Coretime sales are burned and participate to the protocol's revenue by adding a deflationary pressure on the DOT token.
+This greatly decreases the barrier-to-entry for software tinkerers and rollup teams. Coretime will allow any rollup chain to access Polkadot's computation based on their needs maximizing the use of valuable computation. This setup
+maximizes the agility of Polkadot and lets the market figure out the best solution needed for rollup chains to be successful.
+
+Coretime sales are burned and participate to the protocol's revenue by adding a deflationary pressure on the DOT token.
 
 ## Polkadot 2.0 Core Usage and Functionalities
 
-We have see how in Polkadot 1.0 one rollup chain has a specific core at all time for a fixed two-year period whether they needed it or not. However, to achieve full efficiency, blocks must be produced when needed, and the system must target full block capacity, lowering the probability of incentivizing validators to build blocks half full or, worse, empty.
+We have seen how in Polkadot 1.0 one rollup chain has a specific core at all time for a fixed two-year period whether they needed it or not. However, to achieve full efficiency, blocks must be produced when needed, and the system must target full block capacity, lowering the probability of incentivizing validators to build blocks half full or, worse, empty.
 
 Polkadot 2.0 generalizes core usage to meet different rollup needs. For more information about coretime, see the [agile coretime documentation](../learn/learn-agile-coretime.md).
 

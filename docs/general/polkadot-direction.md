@@ -14,7 +14,7 @@ Fundamentally, Polkadot was a platform to host just chains, and so far, chains h
 
 Polkadot has been abstracted and generalized beyond what was originally proposed and envisioned in the [Polkadot whitepaper](https://polkadot.network/whitepaper/).
 
-If we see Polkadot as a service provider of trustless, resilient and verifiable computation through cores as well as secure interoperability between core-secured rollup chains, the future development of Polkadot can be directed towards the following paradigm shift: from being an chain-focused ecosystem to being an application-focused ecosystem that is not only about blockchains.
+If we see Polkadot as a service provider of trustless, resilient and verifiable computation through cores as well as secure interoperability between core-secured rollup chains, the future development of Polkadot can be directed towards the following paradigm shift: from being an chain-focused ecosystem to being an application-focused ecosystem, where applications are not only blockchains.
 
 ## Offloading Tasks to System Chains
 

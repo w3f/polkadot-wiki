@@ -47,7 +47,7 @@ Polkadot is a blockchain-based decentralized computer that brings to the blockch
 - **Fostering next-gen of Web3 core developers.** This is achieved through different initiatives
   such as [the Polkadot Blockchain Academy](https://polkadot.network/development/academy/).
 
-### Polkadot's Representation
+## Polkadot's Representation
 
 Polkadot is represented as a ring surrounded by multiple blockchains attached to it. Based on Polkadot's design, if a chain's logic can compile to Wasm and adheres to the relay chain API, then it can
 connect to the Polkadot network as a rollup chain. The figure below shows the Polkadot relay chain (circle) with rollup chains attached to the virtual cores (open squares within the circle). A zoomed-in view shows Polkadot's validators (PC icons) guarding two cores. In-core validators will check incoming rollup data following [the ELVES protocol](../learn/learn-parachains-protocol.md).
@@ -67,7 +67,7 @@ provides the environment for trust-free message passing that opens up trustless 
 To interact with chains that want to use their finalization process (e.g., Bitcoin),
 Polkadot has [trustless bridges](../learn/learn-bridges.md) that offer two-way compatibility, meaning that transactions can happen between Polkadot and other ecosystems without relying on centralized parties.
 
-### Polkadot 1.0 Core Usage and Functionalities
+## Polkadot 1.0 Core Usage and Functionalities
 
 The Polkadot relay chain managed parachains' crowdloans and auctions (replaced by [the coretime marketplace](../learn/learn-agile-coretime.md)). Polkadot's virtual cores were leased via auctions in 3-month chunks for a maximum of two years, and crowdloans allowed users to loan funds to teams for lease deposits in exchange for pre-sale tokens. There was no other way you could access and use cores on Polkadot 1.0.
 
@@ -87,7 +87,7 @@ Below is an example of two rollup chains accessing two separate Polkadot cores. 
 The relay chain also managed other tasks such as [staking](../learn/learn-staking.md),
 [accounts](./../learn/learn-accounts.md), [identities](../learn/learn-identity.md), [balances](../learn/learn-transactions.md#balance-transfers), and [governance](../learn/learn-polkadot-opengov.md).
 
-### Polkadot's Resilience
+## Polkadot's Resilience
 
 Decentralization is a crucial aspect of blockchain networks, but there is a trade-off between:
 
@@ -114,7 +114,7 @@ Polkadot 1.0 achieved resilience through the following strategies:
 - An **on-chain treasury and governance** (see: [OpenGov](../learn/learn-polkadot-opengov.md)) where
   every decision goes through public referenda, and any token holder can cast a vote. Treasury proposals can tap into the treasury funds to fund various initiatives the DOT community deems reasonable.
 
-### Polkadot's Blockspace
+## Polkadot's Blockspace
 
 A blockchain is a way to permanently store data and make them verifiable. The storage unit is the block (i.e., blockspace), and once a block is finalized
 onto the chain, it is practically impossible to modify the data within that block. In addition to
@@ -158,7 +158,7 @@ For more information about blockspace, see [this interview](https://youtu.be/e1v
 Habermeier as well as [this article](https://www.rob.tech/blog/polkadot-blockspace-over-blockchains/) by
 him.
 
-### A Perspective Shift: Upcoming Polkadot Features
+## A Perspective Shift: Upcoming Polkadot Features
 
 As with many other projects before Polkadot, at some point in time after achieving the
 initially planned goals, a perspective shift allows you to understand better what your project is
@@ -175,6 +175,46 @@ strange lands but to possess other eyes._
 Thus, if we start to see Polkadot with _other eyes_, we can truly envision its potential and what it
 could become.
 
-Polkadot is perfecting its implementation through [RFCs](https://github.com/polkadot-fellows/RFCs)
-to continue being a decentralized, secure, ubiquitous computing engine to power the next generation
-of [Web3](./web3-and-polkadot.md) applications.
+Polkadot is perfecting its implementation through [RFCs](#requests-for-comment-rfcs)
+to continue being a decentralized, secure, ubiquitous computing engine to power the next generation of [Web3](./web3-and-polkadot.md) applications.
+
+### Requests for Comment (RFCs)
+
+With the release of [Polkadot runtime 1.0](./polkadot-v1.md), Polkadot's codebase is in the hands of
+the community. Anyone can open a
+[Request for Comment (RFC)](https://github.com/polkadot-fellows/RFCs) to propose and discuss changes
+to the network protocol, runtime logic, public interfaces, and other technical matters.
+
+To submit an RFC, follow the instructions [here](https://github.com/polkadot-fellows/RFCs#process).
+
+RFCs can only be approved and merged by III-Dan members of
+[Polkadot Technical Fellowship](../learn/learn-polkadot-technical-fellowship.md) via on-chain voting
+mechanism. Definitive approval or rejection is done by issuing the `RFC_APPROVE(xxxx, h)` or
+`RFC_REJECT(xxxx, h)` on-chain remark from the Fellowship origin on the Polkadot Collectives
+parachain, where `xxxx` is the RFC number and `h` is the hash of the raw proposal text.
+
+For example, the first RFC [RFC-1](https://github.com/polkadot-fellows/RFCs/pull/1) about Agile
+Coretime was proposed by Gavin Wood on the 30th of June 2023 and merged on the 12th of August 2023.
+Subsequently, the code for the Agile Coretime Broker pallet was added to the Substrate FRAME system.
+
+In general, the workflow from RFC write-up submission to its implementation follows the timeline
+below:
+
+- RFC submitted by following the [instructions](https://github.com/polkadot-fellows/RFCs#process).
+- RFC review by the Technical Fellowship [via GitHub](https://github.com/polkadot-fellows/RFCs)
+- Polkadot Technical Fellowship Referendum of the RFC submitted to the Track `3 / Fellows` by
+  members with a rank greater than or equal to 3.
+- If the Referendum is approved through on-chain vote by the Technical Fellowship, changes discussed
+  in the RFC will be implemented.
+- If the changes requested through the RFC require a broader consensus of DOT holders, an OpenGov
+  referendum may be created. For instance,
+  [adding a new system collective](https://github.com/polkadot-fellows/RFCs/blob/main/text/0012-process-for-adding-new-collectives.md)
+  or making changes to network parameters like inflation rate, treasury inflow etc.
+
+!!!note "Polkadot Runtime Code Changes through Root track"
+    Although the Technical Fellowship maintains the [runtimes of Polkadot and Kusama](https://github.com/polkadot-fellows/runtimes), changes to the network protocol are not gated by the fellowship. Any DOT holder can submit a referendum on [the Polkadot OpenGov Root track](../learn/learn-polkadot-opengov-origins.md#root) to set the runtime code with the proposed changes.
+
+For more information about the adoption of RFCs within the Polkadot ecosystem, see
+[this Medium article](https://www.polkadotphilosophy.com/polkadots-strategic-adoption-of-rfcs-pioneering-a-collaborative-future-in-blockchain-3330843cfd4f)
+and the
+[original Polkadot Forum post](https://forum.polkadot.network/t/polkadot-protocol-proposals-rfc-process/1421/1).
