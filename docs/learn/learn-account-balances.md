@@ -51,8 +51,8 @@ balance structure:
 
 ```
 Free: 100 DOT
-Frozen : 80 DOT
-Reserved: 0 DOT
+Frozen : 0 DOT
+Reserved: 80 DOT
 Spendable: 20 DOT
 Untouchable: 80 DOT
 ```
@@ -62,7 +62,7 @@ Untouchable: 80 DOT
 The spendable balance would be 20 DOT (which would also include fees for future transactions from
 this account).
 
-Note how the account cannot be reaped from the state while it has a frozen balance, or in general
+Note how the account cannot be reaped from the state while it has a reserved balance, or in general
 any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
 Those references determine if an account can be reaped, usually because other accounts depend on the
 existence of such an account). For example, the existential deposit adds a provider reference simply
@@ -78,25 +78,25 @@ If the account creates a proxy, it will use the `free` balance as shown below.
 
 ```
 Free: 80 DOT
-Frozen : 80 DOT
-Reserved: 20 DOT
+Frozen : 0 DOT
+Reserved: 100 DOT
 Spendable: 20 DOT
 Untouchable: 60 DOT
 ```
 
 ![balance-example-3](../assets/balance-example-3.png)
 
-**Note how, through the fungible trait, the system uses the `balance` that is frozen instead of the
+**Note how, through the fungible trait, the system uses the `balance` that is reserved instead of the
 `free` balance that is spendable (present configuration on-chain).** In other words, holds are
-subtracted from free balance but overlap with the frozen balance. The free portion shrinks from 100
-to 80 DOT, and the `reserved` portion increases from 0 to 20 DOT. The creation of an identity will
-grow the `reserved` portion to 40 DOT, and shrink further the `free` from 80 to 60 DOT. Note how the
+subtracted from free balance but overlap with the reserved balance. The free portion shrinks from 100
+to 80 DOT, and the `reserved` portion increases from 80 to 100 DOT. The creation of an identity will
+grow the `reserved` portion to 120 DOT, and shrink further the `free` from 80 to 60 DOT. Note how the
 spendable balance stays the same in the process.
 
 ```
 Free: 60 DOT
-Frozen: 80 DOT
-Reserved: 40 DOT
+Frozen: 0 DOT
+Reserved: 120 DOT
 Spendable: 20 DOT
 Untouchable: 40 DOT
 ```
@@ -114,11 +114,10 @@ balance getting reduced because your governance deposit for a proposal was slash
 
 Locks are abstractions over an account's free balance, preventing it from being spent. Several locks
 can overlap on the same account balance instead of being stacked on top of one another. Locks are
-automatically added onto accounts when the account participates in activities on-chain (staking,
-voting, etc.), but these are not customizable.
+automatically added onto accounts when the account participates in activities on-chain (voting, etc.), but these are not customizable.
 
 Locks are accounted for within the `frozen` balance of the account. This is the balance that can be
-`free` but not transferrable, and locked in [staking](./learn-staking.md),
+`free` but not transferrable, and locked in
 [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers).
 
 Locks overlap (in both amount and duration), and the general rule is that:
@@ -128,10 +127,10 @@ Locks overlap (in both amount and duration), and the general rule is that:
 - If you have multiple locks of the same amount of tokens, the lock with the longest duration
   decides when those tokens can be unlocked
 
-Let's take, for example, 80 DOT as a `frozen` balance. These 80 DOT are currently used in staking
+Let's take, for example, 80 DOT as a `frozen` balance. These 80 DOT are currently used in vesting
 and governance as follows:
 
-- 80 DOT Staking (just unbonded) -> lock 28 days
+- 80 DOT Vesting (just unbonded) -> lock 28 days
 - 24 DOT OpenGov 1x conviction (referendum just ended, winning side) -> lock 7 days
 - 4 DOT OpenGov 6x conviction (referendum just ended, winning side) -> lock 224 days
 
@@ -139,7 +138,7 @@ and governance as follows:
 
 The 1 DOT ED is the existential deposit. The locked amount is 80 DOT (not 108 DOT). But those 80 DOT
 will be available for unlock at different times. You will first need to remove the governance lock
-on the 24 DOT after 7 days, then remove the staking lock for the 80 DOT after 28 days, and finally,
+on the 24 DOT after 7 days, then remove the vesting lock for the 80 DOT after 28 days, and finally,
 after 224 days, you will be able to remove the second governance lock.
 
 ![locks-example-2](../assets/locks-example-2.png)
