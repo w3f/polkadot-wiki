@@ -23,7 +23,7 @@ The spendable balance is calculated as follows:
 spendable = free - max(frozen - reserved, ED)
 ```
 
-where `free`, `frozen` and `on_hold` are defined above. The `ED` is the
+where `free`, `frozen` and `reserved` are defined above. The `ED` is the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping).
 
 **Wallet providers might show you the spendable, locked, and reserved balance.**
@@ -38,7 +38,7 @@ is used for account balances. Let’s take, for example, an account with 100 DOT
 ```
 Free: 100 DOT
 Frozen: 0 DOT
-On hold: 0 DOT
+Reserved: 0 DOT
 Spendable: 99 DOT
 Untouchable: 1 DOT (ED)
 ```
@@ -52,7 +52,7 @@ balance structure:
 ```
 Free: 100 DOT
 Frozen : 80 DOT
-Onhold: 0 DOT
+Reserved: 0 DOT
 Spendable: 20 DOT
 Untouchable: 80 DOT
 ```
@@ -79,7 +79,7 @@ If the account creates a proxy, it will use the `free` balance as shown below.
 ```
 Free: 80 DOT
 Frozen : 80 DOT
-Onhold: 20 DOT
+Reserved: 20 DOT
 Spendable: 20 DOT
 Untouchable: 60 DOT
 ```
@@ -89,14 +89,14 @@ Untouchable: 60 DOT
 **Note how, through the fungible trait, the system uses the `balance` that is frozen instead of the
 `free` balance that is spendable (present configuration on-chain).** In other words, holds are
 subtracted from free balance but overlap with the frozen balance. The free portion shrinks from 100
-to 80 DOT, and the `on_hold` portion increases from 0 to 20 DOT. The creation of an identity will
-grow the `on_hold` portion to 40 DOT, and shrink further the `free` from 80 to 60 DOT. Note how the
+to 80 DOT, and the `reserved` portion increases from 0 to 20 DOT. The creation of an identity will
+grow the `reserved` portion to 40 DOT, and shrink further the `free` from 80 to 60 DOT. Note how the
 spendable balance stays the same in the process.
 
 ```
 Free: 60 DOT
 Frozen: 80 DOT
-Onhold: 40 DOT
+Reserved: 40 DOT
 Spendable: 20 DOT
 Untouchable: 40 DOT
 ```
