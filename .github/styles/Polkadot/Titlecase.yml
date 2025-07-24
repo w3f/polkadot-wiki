@@ -1,0 +1,13 @@
+# This rule enforces headings should be in title case
+# Will ignore {: anchor-tag-text } 
+extends: capitalization
+message: "'%s' should be in title case"
+level: error
+scope: heading
+match: '^(.*?)(\s*\{\:\s?#.*\})?$'
+style: Chicago
+
+exceptions:
+  - ABC
+
+  
