@@ -14,7 +14,6 @@ Whitelist = [
     "https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be",
     "https://www.linode.com/",
     "https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598",
-    "https://dune.com"
 ]
 
 http = urllib3.PoolManager()
