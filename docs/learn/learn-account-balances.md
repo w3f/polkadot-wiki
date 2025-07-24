@@ -20,7 +20,7 @@ There are 4 types of account balances:
 The spendable balance is calculated as follows:
 
 ```
-spendable = free - max(frozen - on_hold, ED)
+spendable = free - max(frozen - reserved, ED)
 ```
 
 where `free`, `frozen` and `on_hold` are defined above. The `ED` is the
