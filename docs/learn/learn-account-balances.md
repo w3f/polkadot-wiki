@@ -8,19 +8,21 @@ Different balance types dictate whether your balance can be used for transfers, 
 
 There are four types of account balances:
 
-- **Free Balance** is a portion of an account's total balance that is not held (see below). It is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), and deposits) as long as the total balance (free + reserved) remains above the maximum of frozen balance and existential deposit.
+- **Free Balance** is a portion of an account's total balance that is not held (see below). It is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), and deposits) as long as the total balance (free + reserved) remains above the maximum of frozen balance and [existential deposit (ED)](./learn-accounts.md#existential-deposit-and-reaping).
 
 - **Reserved Balance** (also called holds, or held balance) is the balance removed from free and does not overlay. It can be slashed, but only after all the free balance has been slashed. Reserved balance is used for:
     - native [staking](./learn-staking.md) on the relay chain or via nomination pools
     - deposits such as [governance](./learn-polkadot-opengov.md) decision and submission deposits, [identity](./learn-identity.md) deposits, and [proxy](./learn-proxies.md) and [multi-signature](./learn-account-multisig.md) accounts deposits. It cannot be used for transfers or paying fees.
 
-- **Frozen Balance** (also called locks, or locked balance) is a balance that overlays. The frozen balance can exceed the total balance. Frozen balance is used for:
+- **Frozen Balance** (also called locks, or locked balance) is simply the minimum total balance the user needs to maintain (inclusive of reserves). Frozen balance is used for:
     - [vested transfers](./learn-transactions.md#vested-transfers)
-    - governance locks
+    - governance votes
 
-    Locks overlay with themselves and with holds, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will put a lock on 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
+    Freezes overlay with themselves and with reserves, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will put a freeze on 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
 
-- **Spendable Balance** is the portion of free balance that can be transferred and it is also available for transaction fees and creating new holds.
+    !!!info "In case of slashes, the frozen balance could exceed the total balance."
+
+- **Spendable Balance** is the portion of free balance that can be transferred and it is also available for transaction fees and creating new reserves.
 
 The spendable balance is calculated as follows:
 
@@ -49,7 +51,7 @@ Untouchable: 1 DOT (ED)
 ![balance-example-1](../assets/balance-example-1.png)
 
 The untouchable balance is part of the free balance that cannot be spent due to ED or freezes. In this case, the existential deposit of 1 DOT is untouchable (meaning you can’t touch it if the
-account can’t or shouldn’t get reaped). The untouchable balance can also be defined as the frozen balance in excess of holds (see [here](https://github.com/paritytech/polkadot-sdk/issues/1833#issuecomment-1805764506) for a visual aid). 
+account can’t or shouldn’t get reaped). The untouchable balance can also be defined as the frozen balance in excess of reserved balance (see [here](https://github.com/paritytech/polkadot-sdk/issues/1833#issuecomment-1805764506) for a visual aid). 
 
 If 60 DOT from the account is staked, we get the following balance structure:
 
@@ -102,8 +104,8 @@ Untouchable: 1 DOT (ED)
 
 ![balance-example-4](../assets/balance-example-4.png)
 
-Note how, through the fungible trait, the system uses the reserved balance. Locks are
-imposed on the total balance, they overlap with the reserved balance, and with themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance lock. The untouchable balance remains 1 DOT as it is defined as the frozen balance in excess of any holds (in this case frozen < holds, so only the ED is untouchable).
+Note how, through the fungible trait, the system uses the reserved balance. Freezes are
+imposed on the total balance, they overlap with the reserved balance, and with themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance vote. The untouchable balance remains 1 DOT as it is defined as the frozen balance in excess of any reserves (in this case frozen < reserved, so only the ED is untouchable).
 
 If the account votes on another governance proposal with 85 DOT (assuming the previous proposal is still ongoing or that it ended on the winning side with a lock), the frozen balance will increase to 85 DOT and the untouchable balance to 6 DOT, using the already frozen 20 DOT plus an additional 60 DOT from the reserved balance and 5 DOT from the free balance, in excess of the reserved balance.
 
@@ -119,7 +121,7 @@ Untouchable: 6 DOT (ED + frozen in excess of reserved)
 ![balance-example-5](../assets/balance-example-5.png)
 
 This update uses the fungible trait to allow the use of the reserved balance for on-chain activity like voting in governance and vesting. Note that
-[holds are slashable](https://github.com/paritytech/substrate/pull/12951), and the pallet
+[reserves are slashable](https://github.com/paritytech/substrate/pull/12951), and the pallet
 [migrations](https://github.com/paritytech/polkadot-sdk/issues/226) need to take that into account.
 This means that freezes should account for hold being slashed (for example, your stash account
 balance getting reduced because your governance deposit for a proposal was slashed).
