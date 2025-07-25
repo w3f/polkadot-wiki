@@ -114,8 +114,8 @@ If the account votes on another governance proposal with 85 DOT (assuming the pr
 Free: 20 DOT
 Frozen (locked): 85 DOT
 Reserved (held): 80 DOT
-Spendable: 14 DOT (Free - untouchable)
-Untouchable: 6 DOT (ED + frozen in excess of reserved)
+Spendable: 15 DOT (Free - untouchable)
+Untouchable: 5 DOT (frozen in excess of reserved, and ED overlays with frozen but not reserved)
 ```
 
 ![balance-example-5](../assets/balance-example-5.png)
