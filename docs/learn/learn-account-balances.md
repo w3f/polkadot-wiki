@@ -20,7 +20,7 @@ There are four types of account balances:
 
     Locks overlay with themselves and with holds, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will put a lock on 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
 
-- **Spendable Balance** is the portion of free balance available for transaction fees and creating new holds.
+- **Spendable Balance** is the portion of free balance that can be transferred and it is also available for transaction fees and creating new holds.
 
 The spendable balance is calculated as follows:
 
@@ -97,24 +97,23 @@ Free: 20 DOT
 Frozen (locked): 20 DOT
 Reserved (held): 80 DOT
 Spendable: 19 DOT (Free - ED)
-Untouchable: 21 DOT (ED)
+Untouchable: 1 DOT (ED)
 ```
 
 ![balance-example-4](../assets/balance-example-4.png)
 
-Note how, through the fungible trait, the system uses the reserved balance. In other words, locks are
-subtracted from the free balance but overlap with the reserved balance, and with themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance lock, and the untouchable balance would thus be 21 DOT.
+Note how, through the fungible trait, the system uses the reserved balance. Locks are
+imposed on the total balance, they overlap with the reserved balance, and with themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance lock. The untouchable balance remains 1 DOT as it is defined as the frozen balance in excess of any holds (in this case frozen < holds, so only the ED is untouchable).
 
-A vested transfer of 50 DOT will
-grow the frozen balance to 50 DOT and the untouchable balance to 51 DOT, using the already frozen 20 DOT plus an additional 30 DOT from the reserved balance without touching the free and spendable balances.
+If the account votes on another governance proposal with 85 DOT (assuming the previous proposal is still ongoing or that it ended on the winning side with a lock), the frozen balance will increase to 85 DOT and the untouchable balance to 6 DOT, using the already frozen 20 DOT plus an additional 60 DOT from the reserved balance and 5 DOT from the free balance, in excess of the reserved balance.
 
 
 ```
 Free: 20 DOT
-Frozen (locked): 50 DOT
+Frozen (locked): 85 DOT
 Reserved (held): 80 DOT
-Spendable: 19 DOT (Free - ED)
-Untouchable: 51 DOT (ED)
+Spendable: 14 DOT (Free - untouchable)
+Untouchable: 6 DOT (ED + frozen in excess of reserved)
 ```
 
 ![balance-example-5](../assets/balance-example-5.png)
@@ -145,7 +144,7 @@ Locks overlap (in both amount and duration), and the general rule is that:
 Let's take, for example, 80 DOT as a `frozen` balance. These 80 DOT are currently used in vesting
 and governance as follows:
 
-- 80 DOT Vesting (just unbonded) -> lock 28 days
+- 80 DOT vesting that become fully vested in 28 days
 - 24 DOT OpenGov 1x conviction (referendum just ended, winning side) -> lock 7 days
 - 4 DOT OpenGov 6x conviction (referendum just ended, winning side) -> lock 224 days
 
