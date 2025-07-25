@@ -3,19 +3,24 @@ title: Account Balances
 description: Discover the different types of account balances in Polkadot and Kusama, including free, frozen, and spendable balances.
 ---
 
-In the Polkadot ecosystem, there are different types of balances depending on the account activity.
-Different balance types dictate whether your balance can be used for transfers, to pay fees, or must
-remain frozen and unused due to an on-chain requirement.
+In the Polkadot ecosystem, different types of balances depend on the account activity.
+Different balance types dictate whether your balance can be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
 
-!!!info "A more efficient distribution of account balance types"
-    Soon, pallets on Polkadot SDK will be implementing the _fungible_ trait (see [the tracking issue](https://github.com/paritytech/polkadot-sdk/issues/226) for more info). This new logic will allow for more efficient use of your account balance. Specifically, the [fungible trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) will allow using the `free` balance for on-chain activity like setting proxies and identities.
+There are four types of account balances:
 
-There are 4 types of account balances:
+- **Free Balance** is a portion of an account's total balance that is not held (see below). It is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), and deposits) as long as the total balance (free + reserved) remains above the maximum of frozen balance and existential deposit.
 
-- **Free** is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), deposits) as long as your total balance (free + reserved) remains above the maximum of frozen balance and existential deposit.
-- **Frozen** (also called locks) is a balance that overlaps across pallets. Example: If governance freezes 100 DOT and vesting freezes 120 DOT, total frozen = 120 DOT (not 220 DOT).
-- **Reserved** (also called holds) is the balance removed from free and doesn't overlap. Used by nomination pools, [staking](./learn-staking.md), etc. Can still be used for governance voting but not for transfers or fees.
-- **Spendable** is the portion of free balance available for transaction fees and creating new holds.
+- **Reserved Balance** (also called holds, or held balance) is the balance removed from free and does not overlay. It can be slashed, but only after all the free balance has been slashed. Reserved balance is used for:
+    - native [staking](./learn-staking.md) on the relay chain or via nomination pools
+    - deposits such as [governance](./learn-polkadot-opengov.md) decision and submission deposits, [identity](./learn-identity.md) deposits, and [proxy](./learn-proxies.md) and [multi-signature](./learn-account-multisig.md) accounts deposits. It cannot be used for transfers or paying fees.
+
+- **Frozen Balance** (also called locks, or locked balance) is a balance that overlays. The frozen balance can exceed the total balance. Frozen balance is used for:
+    - [vested transfers](./learn-transactions.md#vested-transfers)
+    - governance locks
+
+    Locks overlay with themselves and with holds, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will put a lock on 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
+
+- **Spendable Balance** is the portion of free balance available for transaction fees and creating new holds.
 
 The spendable balance is calculated as follows:
 
@@ -23,88 +28,98 @@ The spendable balance is calculated as follows:
 spendable = free - max(frozen - reserved, ED)
 ```
 
-where `free`, `frozen` and `reserved` are defined above. The `ED` is the
+Where `free`, `frozen`, and `reserved` are defined above. The `ED` is the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping).
 
-**Wallet providers might show you the spendable, locked, and reserved balance.**
+**Wallet providers might show you the spendable, frozen, and reserved balance.**
 
 ## Example of Account Balance Types
 
 Below is an in-depth example of how an account balance composition changes depending on user actions
-once
-[the _fungible_ trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html)
-is used for account balances. Let’s take, for example, an account with 100 DOT.
+**once [the _fungible_ trait](https://paritytech.github.io/polkadot-sdk/master/frame_support/traits/tokens/fungible/index.html) is implemented by all Substrate pallets**. Let’s take, for example, an account with 100 DOT.
 
 ```
 Free: 100 DOT
-Frozen: 0 DOT
-Reserved: 0 DOT
+Frozen (locked): 0 DOT
+Reserved (held): 0 DOT
 Spendable: 99 DOT
 Untouchable: 1 DOT (ED)
 ```
 
 ![balance-example-1](../assets/balance-example-1.png)
 
-In this case, the existential deposit of 1 DOT is untouchable (meaning you can’t touch it if the
-account can’t or shouldn’t get reaped). If 80 DOT from the account is staked, we get the following
-balance structure:
+The untouchable balance is part of the free balance that cannot be spent due to ED or freezes. In this case, the existential deposit of 1 DOT is untouchable (meaning you can’t touch it if the
+account can’t or shouldn’t get reaped). The untouchable balance can also be defined as the frozen balance in excess of holds (see [here](https://github.com/paritytech/polkadot-sdk/issues/1833#issuecomment-1805764506) for a visual aid). 
+
+If 60 DOT from the account is staked, we get the following balance structure:
 
 ```
-Free: 100 DOT
-Frozen : 0 DOT
-Reserved: 80 DOT
-Spendable: 20 DOT
-Untouchable: 80 DOT
+Free: 40 DOT
+Frozen (locked) : 0 DOT
+Reserved (held): 60 DOT
+Spendable: 39 DOT (Free - ED)
+Untouchable: 1 DOT (ED)
 ```
 
 ![balance-example-2](../assets/balance-example-2.png)
 
-The spendable balance would be 20 DOT (which would also include fees for future transactions from
+The spendable balance would be 39 DOT (which would also include fees for future transactions from
 this account).
 
-Note how the account cannot be reaped from the state while it has a reserved balance, or in general
+Note how the account cannot be reaped from the state while it has a reserved balance, or in general,
 any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
 Those references determine if an account can be reaped, usually because other accounts depend on the
-existence of such an account). For example, the existential deposit adds a provider reference simply
+existence of such an account. For example, the existential deposit adds a provider reference simply
 because the account exists, while a proxy account adds a consumer reference (the proxy existence
 depends on the proxied account; the proxy is the consumer). **Because the existential deposit is
 part of the untouchable balance, the user can use all the spendable balance (there is no need to
 keep 1 DOT as spendable).**
 
-!!!info
-    The use of the _free_ balance as shown in the following figures will be possible once the _fungible_ trait is implemented for account balances.
 
-If the account creates a proxy, it will use the `free` balance as shown below.
+If the account creates a proxy, it will use the reserved balance as follows:
 
 ```
-Free: 80 DOT
-Frozen : 0 DOT
-Reserved: 100 DOT
-Spendable: 20 DOT
-Untouchable: 60 DOT
+Free: 20 DOT
+Frozen (locked) : 0 DOT
+Reserved (held): 80 DOT
+Spendable: 19 DOT (Free - ED)
+Untouchable: 1 DOT (ED)
 ```
 
 ![balance-example-3](../assets/balance-example-3.png)
 
-**Note how, through the fungible trait, the system uses the `balance` that is reserved instead of the
-`free` balance that is spendable (present configuration on-chain).** In other words, holds are
-subtracted from free balance but overlap with the reserved balance. The free portion shrinks from 100
-to 80 DOT, and the `reserved` portion increases from 80 to 100 DOT. The creation of an identity will
-grow the `reserved` portion to 120 DOT, and shrink further the `free` from 80 to 60 DOT. Note how the
-spendable balance stays the same in the process.
+The reserved balance for the proxy deposit increases the total held balance to 80 DOT while the free balance decreases to 20 DOT.
+
+If the account votes for a governance proposal with 20 DOT, the situation would be as follows:
 
 ```
-Free: 60 DOT
-Frozen: 0 DOT
-Reserved: 120 DOT
-Spendable: 20 DOT
-Untouchable: 40 DOT
+Free: 20 DOT
+Frozen (locked): 20 DOT
+Reserved (held): 80 DOT
+Spendable: 19 DOT (Free - ED)
+Untouchable: 21 DOT (ED)
 ```
 
 ![balance-example-4](../assets/balance-example-4.png)
 
-This update using the fungible trait allows the use of the frozen balance for on-chain activity like
-setting up proxies and identities. Note that
+Note how, through the fungible trait, the system uses the reserved balance. In other words, locks are
+subtracted from the free balance but overlap with the reserved balance, and with themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance lock, and the untouchable balance would thus be 21 DOT.
+
+A vested transfer of 50 DOT will
+grow the frozen balance to 50 DOT and the untouchable balance to 51 DOT, using the already frozen 20 DOT plus an additional 30 DOT from the reserved balance without touching the free and spendable balances.
+
+
+```
+Free: 20 DOT
+Frozen (locked): 50 DOT
+Reserved (held): 80 DOT
+Spendable: 19 DOT (Free - ED)
+Untouchable: 51 DOT (ED)
+```
+
+![balance-example-5](../assets/balance-example-5.png)
+
+This update uses the fungible trait to allow the use of the reserved balance for on-chain activity like voting in governance and vesting. Note that
 [holds are slashable](https://github.com/paritytech/substrate/pull/12951), and the pallet
 [migrations](https://github.com/paritytech/polkadot-sdk/issues/226) need to take that into account.
 This means that freezes should account for hold being slashed (for example, your stash account
@@ -114,7 +129,7 @@ balance getting reduced because your governance deposit for a proposal was slash
 
 Locks are abstractions over an account's free balance, preventing it from being spent. Several locks
 can overlap on the same account balance instead of being stacked on top of one another. Locks are
-automatically added onto accounts when the account participates in activities on-chain (voting, etc.), but these are not customizable.
+automatically added to accounts when the account participates in activities on-chain (voting, etc.), but these are not customizable.
 
 Locks are accounted for within the `frozen` balance of the account. This is the balance that can be
 `free` but not transferrable, and locked in
@@ -152,9 +167,9 @@ have ongoing locks.
 
 Following the previous example, if you:
 
-- undelegate a 1x conviction delegation of 24 DOT, you will get a 7-day lock on 24 DOT
-- delegate 4 DOT with 6x conviction
-- undelegate again before the 1x conviction lock is removed
+- Undelegate a 1x conviction delegation of 24 DOT, you will get a 7-day lock on 24 DOT
+- Delegate 4 DOT with 6x conviction
+- Undelegate again before the 1x conviction lock is removed
 
 You will get a 6x conviction for 24 DOT! See
 [here](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
@@ -178,16 +193,16 @@ types are the same for a Polkadot account).
   schedule. The account owns the tokens, but they are _locked_ and become available for transfer
   after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
 - The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
-  to staking. In the example, the bonded balance is 0.4 KSM.
+  in staking. In the example, the bonded balance is 0.4 KSM.
 - The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
   participation in democracy (i.e., voting for referenda and council). In the example, the democracy
   balance is 0.4 KSM.
 - The **redeemable** balance indicates the number of tokens ready to be unlocked to become
-  transferrable again. Those tokens already went through the unbonding period. In this case, the
+  transferrable again. Those tokens have already gone through the unbonding period. In this case, the
   redeemable balance is 0.1 KSM.
-- The **locked** balance indicates the number of frozen tokens for on-chain participation to staking
+- The **locked** balance indicates the number of frozen tokens for on-chain participation in staking
   and democracy or for vested transfers. **Locks do not stack**, which means that if you have
-  different locks, the total locked balance is not the addition of the individual locks. Instead,
+  different locks, the total locked balance is not the sum of the individual locks. Instead,
   **the biggest lock decides the total locked balance**. In the example, the locked balance is 0.55
   KSM because the biggest lock is on democracy (0.55 KSM).
 - The **reserved** balance indicates the number of frozen tokens for on-chain activity other than
