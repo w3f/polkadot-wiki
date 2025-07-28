@@ -193,9 +193,9 @@ nav:
          - Pure Proxies: learn/learn-proxies-pure.md
          - Accounts (advanced): learn/learn-account-advanced.md
       - Balances and Transactions:
-         - Account Balances: learn/learn-account-balances.md
          - Transactions: learn/learn-transactions.md
          - Teleport: learn/learn-teleport.md
+         - Account Balances: learn/learn-account-balances.md
       - Staking:
          - learn/learn-staking.md
          - Nomination Pools: learn/learn-nomination-pools.md

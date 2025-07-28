@@ -61,7 +61,7 @@ for information.
 Once you have loaded your account on the “Accounts” tab, it should show a row with your Ledger
 account. Your account’s DOT balance is on the row’s far right. Expanding the balance arrow will show
 your balance details, such as locks or reserved amounts. For more information about the type of
-balances, visit the [balances page](./learn-account-balances.md#balance-types-on-polkadot-js).
+balances, visit the [balances page](./learn-account-balances.md).
 
 ## Sending a Transfer with Ledger Devices
 
