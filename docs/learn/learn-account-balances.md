@@ -18,11 +18,11 @@ There are four types of account balances:
     - [vested transfers](./learn-transactions.md#vested-transfers)
     - governance votes (that can use the total balance, including non-staking holds like proxy deposits)
 
-    Freezes overlay with themselves and with reserves, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will put a freeze on 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
+    Freezes overlay with themselves and with reserves, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will freeze 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
 
     !!!info "In case of slashes, the frozen balance could exceed the total balance."
 
-- **Spendable Balance** is the portion of free balance that can be transferred and it is also available for transaction fees and creating new reserves.
+**Spendable Balance** is the portion of the free balance that can be transferred. It is also available for transaction fees and creating new reserves.
 
 The spendable balance is calculated as follows:
 
@@ -42,10 +42,10 @@ existence of such an account. For example, the existential deposit adds a provid
 because the account exists, while a proxy account adds a consumer reference (the proxy existence
 depends on the proxied account; the proxy is the consumer). 
 
-If an account’s free balance falls below this threshold and it has no providers or consumers, it is reaped, meaning all its data is deleted to conserve state space. However, the ED rules are more nuanced than they may appear:
+If an account’s free balance falls below this threshold and has no providers or consumers, it is reaped, meaning all its data is deleted to conserve state space. However, the ED rules are more nuanced than they may appear:
 
 - Reserved balances do not count as spendable, but they do add a provider reference to the account.
-- If an account has any provider references (e.g., via reserved balance or staking), it will not be reaped even if its free balance drops below the ED. In such cases, the ED is not untouchable: the free balance can be fully spent, and the account will remain alive.
+- If an account has any provider references (e.g., via reserved balance or staking), it will not be reaped even if its free balance drops below the ED. In such cases, the ED is not untouchable: the free balance can be entirely spent, and the account will remain alive.
 - Conversely, if an account has consumers (such as active locks or dependencies) but only one or zero providers, then the ED must be preserved, or the account may be reaped once the last consumer or provider is removed.
 
 ## Example of Account Balance Types
@@ -64,7 +64,7 @@ Untouchable: 1 DOT (ED)
 ![balance-example-1](../assets/balance-example-1.png)
 
 The untouchable balance is part of the free balance that cannot be spent due to ED or freezes. In this case, the existential deposit of 1 DOT is untouchable (meaning you can’t touch it if the
-account can’t or shouldn’t get reaped). The untouchable balance can also be defined as the frozen balance in excess of reserved balance (see [here](https://github.com/paritytech/polkadot-sdk/issues/1833#issuecomment-1805764506) for a visual aid). 
+account can’t or shouldn’t get reaped). The untouchable balance can also be defined as the frozen balance in excess of the reserved balance (see [here](https://github.com/paritytech/polkadot-sdk/issues/1833#issuecomment-1805764506) for a visual aid). 
 
 If 60 DOT from the account is staked, we get the following balance structure:
 
@@ -111,7 +111,7 @@ Untouchable: 1 DOT (ED)
 ![balance-example-4](../assets/balance-example-4.png)
 
 Note how, through the fungible trait, the system uses the reserved balance. Freezes are
-imposed on the total balance, they overlap with the reserved balance, and with themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance vote. The untouchable balance remains 1 DOT as it is defined as the frozen balance in excess of any reserves (in this case frozen < reserved, so only the ED is untouchable).
+imposed on the total balance, overlapping with the reserved balance and themselves (see below). The free and reserved portions remain 20 DOT and 80 DOT, respectively. We also have 20 DOT as a frozen balance because of the governance vote. The untouchable balance remains 1 DOT, defined as the frozen balance in excess of any reserves (in this case, frozen < reserved, so only the ED is untouchable).
 
 If the account votes on another governance proposal with 85 DOT (assuming the previous proposal is still ongoing or that it ended on the winning side with a lock), the frozen balance will increase to 85 DOT and the untouchable balance to 6 DOT, using the already frozen 20 DOT plus an additional 60 DOT from the reserved balance and 5 DOT from the free balance, in excess of the reserved balance.
 
