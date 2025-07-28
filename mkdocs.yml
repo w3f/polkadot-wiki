@@ -193,8 +193,8 @@ nav:
          - Pure Proxies: learn/learn-proxies-pure.md
          - Accounts (advanced): learn/learn-account-advanced.md
       - Balances and Transactions:
-         - Account Balances: learn/learn-account-balances.md
          - Transactions: learn/learn-transactions.md
+         - Account Balances: learn/learn-account-balances.md
          - Teleport: learn/learn-teleport.md
       - Staking:
          - learn/learn-staking.md
