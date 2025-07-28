@@ -194,8 +194,8 @@ nav:
          - Accounts (advanced): learn/learn-account-advanced.md
       - Balances and Transactions:
          - Transactions: learn/learn-transactions.md
-         - Account Balances: learn/learn-account-balances.md
          - Teleport: learn/learn-teleport.md
+         - Account Balances: learn/learn-account-balances.md
       - Staking:
          - learn/learn-staking.md
          - Nomination Pools: learn/learn-nomination-pools.md
