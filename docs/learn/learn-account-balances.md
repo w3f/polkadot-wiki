@@ -16,7 +16,7 @@ There are four types of account balances:
 
 - **Frozen Balance** (also called locks, or locked balance) is simply the minimum total balance the user needs to maintain (inclusive of reserves). Frozen balance is used for:
     - [vested transfers](./learn-transactions.md#vested-transfers)
-    - governance votes
+    - governance votes (that can use the total balance, including non-staking holds like proxy deposits)
 
     Freezes overlay with themselves and with reserves, meaning that if staking reserves 60 DOT, voting for a governance proposal with 20 DOT will put a freeze on 20 out of 60 reserved DOT. If a governance vote freezes 20 DOT and vesting freezes 120 DOT, the total frozen balance is 120 DOT (not 140 DOT).
 
@@ -33,7 +33,20 @@ spendable = free - max(frozen - reserved, ED)
 Where `free`, `frozen`, and `reserved` are defined above. The `ED` is the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping).
 
-**Wallet providers might show you the spendable, frozen, and reserved balance.**
+### Consumer and Provider References
+
+In Polkadot and Substrate-based chains, each account must maintain a minimum free balance called the Existential Deposit (ED) to remain alive. An account cannot be reaped from the state while it has a reserved balance, or in general,
+any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
+Those references determine if an account can be reaped, usually because other accounts depend on the
+existence of such an account. For example, the existential deposit adds a provider reference simply
+because the account exists, while a proxy account adds a consumer reference (the proxy existence
+depends on the proxied account; the proxy is the consumer). 
+
+If an account’s free balance falls below this threshold and it has no providers or consumers, it is reaped, meaning all its data is deleted to conserve state space. However, the ED rules are more nuanced than they may appear:
+
+- Reserved balances do not count as spendable, but they do add a provider reference to the account.
+- If an account has any provider references (e.g., via reserved balance or staking), it will not be reaped even if its free balance drops below the ED. In such cases, the ED is not untouchable: the free balance can be fully spent, and the account will remain alive.
+- Conversely, if an account has consumers (such as active locks or dependencies) but only one or zero providers, then the ED must be preserved, or the account may be reaped once the last consumer or provider is removed.
 
 ## Example of Account Balance Types
 
@@ -66,16 +79,9 @@ Untouchable: 1 DOT (ED)
 ![balance-example-2](../assets/balance-example-2.png)
 
 The spendable balance would be 39 DOT (which would also include fees for future transactions from
-this account).
-
-Note how the account cannot be reaped from the state while it has a reserved balance, or in general,
-any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
-Those references determine if an account can be reaped, usually because other accounts depend on the
-existence of such an account. For example, the existential deposit adds a provider reference simply
-because the account exists, while a proxy account adds a consumer reference (the proxy existence
-depends on the proxied account; the proxy is the consumer). **Because the existential deposit is
+this account). Because the existential deposit is
 part of the untouchable balance, the user can use all the spendable balance (there is no need to
-keep 1 DOT as spendable).**
+keep 1 DOT as spendable).
 
 
 If the account creates a proxy, it will use the reserved balance as follows:
