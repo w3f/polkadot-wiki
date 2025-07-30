@@ -1,6 +1,6 @@
 ---
-title: Legal Disclosures
-description: Legal disclosures for using the AI Chatbot.
+title: Chatbot Terms and Conditions
+description: Terms and Conditions for using the AI Chatbot.
 ---
 
 ## Please Read This First!
