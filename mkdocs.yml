@@ -70,13 +70,15 @@ theme:
 # Plugins
 plugins:
   - search
+  - social:
+      cards_layout_options:
+          background_color: "#ff1493"
   - awesome-pages
   - macros:
       module_name: macros/rpc
 
 # Additional configuration
 extra:
-  social_image: assets/social-card.png
   social:
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/Polkadot
