@@ -72,9 +72,9 @@ plugins:
   - search
   - social:
       cards_layout_options:
-          background_image: layouts/home-card-2.webp
-          background_color: transparent
-          logo: material-overrides/assets/images/logo-white.png
+          font_family: Unbounded
+          background_color: "#b8ffce"
+          color: "#000000"
   - macros:
       module_name: macros/rpc
 
