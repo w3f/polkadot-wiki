@@ -72,7 +72,8 @@ plugins:
   - search
   - social:
       cards_layout_options:
-          background_color: "#ff1493"
+          background_image: assets/social-card.png
+          background_color: transparent
   - awesome-pages
   - macros:
       module_name: macros/rpc
