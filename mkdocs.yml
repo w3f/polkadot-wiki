@@ -76,6 +76,7 @@ plugins:
 
 # Additional configuration
 extra:
+  social_image: assets/social-card.png
   social:
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/Polkadot
