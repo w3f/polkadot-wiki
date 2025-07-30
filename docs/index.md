@@ -1,6 +1,6 @@
 ---
-title: Welcome to the Polkadot Wiki
-description: Home Page
+title: ""
+description: Your Best Companion for Everything Polkadot.
 hide:
 - footer
 - toc
