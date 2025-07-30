@@ -72,9 +72,9 @@ plugins:
   - search
   - social:
       cards_layout_options:
-          background_image: layouts/social-card.png
-          background_color: "#ff149300"
-  - awesome-pages
+          background_image: layouts/home-card-2.webp
+          background_color: transparent
+          logo: material-overrides/assets/images/logo-white.png
   - macros:
       module_name: macros/rpc
 
