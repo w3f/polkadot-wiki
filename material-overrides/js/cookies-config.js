@@ -21,7 +21,11 @@ window.addEventListener("load", function () {
     },
     onStatusChange: function (status) {
       if (status === 'allow') {
-        loadKapaWidget();
+        if (!window.kapaWidgetLoaded) {
+          location.reload();
+        } else {
+          loadKapaWidget();
+        }
       } else {
         disableKapaWidget();
       }
@@ -29,12 +33,19 @@ window.addEventListener("load", function () {
   });
 
   function loadKapaWidget() {
-    if (window.kapaWidgetLoaded) return; // prevent multiple loads
-    window.kapaWidgetLoaded = true;
+    // Remove any existing widget script first
+    const oldScript = document.querySelector('script[data-kapa="true"]');
+    if (oldScript) oldScript.remove();
 
+    // Also remove existing container
+    const container = document.getElementById('kapa-widget-container');
+    if (container) container.remove();
+
+    // Create a new script with a cache-busting URL
     const script = document.createElement('script');
     script.defer = true;
-    script.src = 'https://widget.kapa.ai/kapa-widget.bundle.js';
+    script.src = 'https://widget.kapa.ai/kapa-widget.bundle.js?ts=' + Date.now();
+    script.setAttribute('data-kapa', 'true');
     
     // replicate all your data-* attributes here:
     script.setAttribute('data-website-id', 'f4bbad14-cc24-471c-8b7d-3267eafc6dc2');
@@ -71,19 +82,21 @@ window.addEventListener("load", function () {
     script.setAttribute('data-button-position-right', '0px');
     script.setAttribute('data-user-analytics-cookie-enabled', 'false');
 
+    // Reset global state
+    window.kapaWidgetLoaded = true;
+
     document.head.appendChild(script);
   }
 
   function disableKapaWidget() {
-    // Remove the container if it exists
     const container = document.getElementById('kapa-widget-container');
     if (container) container.remove();
 
-    // Also, remove the Kapa script tag if needed
-    const scripts = document.querySelectorAll('script[src="https://widget.kapa.ai/kapa-widget.bundle.js"]');
-    scripts.forEach(script => script.remove());
+    const script = document.querySelector('script[data-kapa="true"]');
+    if (script) script.remove();
 
-    // Reset flag so widget can be reloaded later if needed
+    // Optional: also delete global kapa variables if they exist
+    delete window.kapa;
     window.kapaWidgetLoaded = false;
   }
   
