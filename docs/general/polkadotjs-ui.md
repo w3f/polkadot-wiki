@@ -20,7 +20,7 @@ moving parts of [**Polkadot-JS tool collection**](./polkadotjs.md), and its func
 beyond normal wallet functionalities such as transfers.
 
 > Note that the UI may not precisely align with the functionality of individual parachains. For more
-> information see the [**Polkadot-JS Page**](./polkadotjs.md#polkadot-js-api).
+> information see the [**Polkadot-JS Page**](./polkadotjs.md).
 
 ## Main Functionalities
 
