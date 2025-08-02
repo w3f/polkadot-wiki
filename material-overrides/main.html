@@ -17,6 +17,90 @@
 {% block styles %}
 	{{ super() }}
   <link rel="stylesheet" href="{{ 'assets/stylesheets/polkadot.css' | url }}">
+  
+  <style id="css-first-flash-prevention">
+    /* CSS-FIRST FLASH PREVENTION - Temporary styles */
+    /* These styles prevent white flash but will be removed to allow Material theme switching */
+    
+    /* Apply dark theme by default for non-homepage pages ONLY if not force-light */
+    html:not(.homepage):not(.force-light):not(.css-ready) {
+      background: #1a1a1a !important;
+    }
+    
+    html:not(.homepage):not(.force-light):not(.css-ready) body {
+      background: #1a1a1a !important;
+      color: #c6cfdb !important;
+    }
+    
+    /* Fix specific navigation elements that flash white - ONLY for dark mode */
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-nav__title,
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-nav__item,
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-nav__link,
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-header,
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-sidebar,
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-content,
+    html:not(.homepage):not(.force-light):not(.css-ready) .md-footer {
+      background: #1a1a1a !important;
+      color: #c6cfdb !important;
+    }
+    
+    /* Homepage should always be light */
+    html.homepage {
+      background: white !important;
+    }
+    
+    html.homepage body {
+      background: white !important;
+      color: rgba(0,0,0,0.87) !important;
+    }
+    
+    /* Override for light mode users - also temporary */
+    html.force-light:not(.css-ready) {
+      background: white !important;
+    }
+    
+    html.force-light:not(.css-ready) body {
+      background: white !important;
+      color: rgba(0,0,0,0.87) !important;
+    }
+  </style>
+  
+  <script>
+    /* CSS-FIRST: Immediate theme detection in <head> */
+    (function() {
+      // Mark homepage immediately
+      if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        document.documentElement.classList.add('homepage');
+        return;
+      }
+      
+      // For non-homepage, check if we should use light mode instead
+      var shouldUseLightMode = false;
+      
+      try {
+        // Quick localStorage check for light mode preference
+        var keys = ["/.__palette", window.location.pathname + ".__palette"];
+        for (var i = 0; i < keys.length; i++) {
+          var stored = localStorage.getItem(keys[i]);
+          if (stored) {
+            var data = JSON.parse(stored);
+            if (data && data.index === 0) {
+              shouldUseLightMode = true;
+              break;
+            }
+          }
+        }
+      } catch (e) {}
+      
+      // Apply the appropriate class and scheme
+      if (shouldUseLightMode) {
+        document.documentElement.classList.add('force-light');
+        document.documentElement.setAttribute('data-md-color-scheme', 'default');
+      } else {
+        document.documentElement.setAttribute('data-md-color-scheme', 'slate');
+      }
+    })();
+  </script>
 {% endblock %}
 
 {% block fonts %}
@@ -87,4 +171,67 @@
       {% endblock %}
     </article>
   </div>
-{%- endblock -%} 
+{%- endblock -%}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    // CSS-FIRST THEME COORDINATION
+    // CSS handles flash prevention, JS handles theme switching
+    
+    (function() {
+      'use strict';
+      
+      // Skip homepage - it has its own theme logic
+      var isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+      if (isHomepage) return;
+      
+      // Get current theme from DOM
+      function getCurrentTheme() {
+        var scheme = document.documentElement.getAttribute('data-md-color-scheme');
+        return scheme === 'slate' ? 'dark' : 'light';
+      }
+      
+      var currentTheme = getCurrentTheme();
+      
+      // Remove temporary flash prevention CSS after Material loads
+      setTimeout(function() {
+        document.documentElement.classList.add('css-ready');
+        var flashPreventionCSS = document.getElementById('css-first-flash-prevention');
+        if (flashPreventionCSS) {
+          flashPreventionCSS.remove();
+        }
+      }, 300);
+      
+      // Check if we just reloaded from a theme switch
+      var justReloaded = sessionStorage.getItem('theme-switch-reload');
+      if (justReloaded) {
+        sessionStorage.removeItem('theme-switch-reload');
+      }
+      
+      // Listen for palette form changes and reload page for clean theme state
+      document.addEventListener('change', function(e) {
+        if (e.target && e.target.name === '__palette') {
+          sessionStorage.setItem('theme-switch-reload', 'true');
+          window.location.reload();
+        }
+      });
+      
+      // Listen for clicks on palette labels  
+      document.addEventListener('click', function(e) {
+        if (e.target && e.target.getAttribute('for') && e.target.getAttribute('for').includes('__palette')) {
+          sessionStorage.setItem('theme-switch-reload', 'true');
+          window.location.reload();
+        }
+      });
+      
+      // Make available globally
+      window.CSSTheme = {
+        currentTheme: currentTheme,
+        getCurrentTheme: getCurrentTheme
+      };
+      
+      
+    })();
+  </script>
+{% endblock %} 

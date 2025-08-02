@@ -1,8 +1,40 @@
 {#-
-  Custom logo partial with dynamic theme support
+  Custom logo partial with CSS-first theme support
 -#}
 {% if config.theme.logo %}
-  <img src="{{ config.theme.logo | url }}" alt="logo" class="theme-logo">
+  <script>
+    (function() {
+      // CSS-first logo detection - works with initial CSS theme
+      function getInitialLogo() {
+        // Homepage always uses light logo
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+          return '{{ config.theme.logo | url }}';
+        }
+        
+        // Check for force-light class (light mode override)
+        if (document.documentElement.classList.contains('force-light')) {
+          return '{{ config.theme.logo | url }}';
+        }
+        
+        // Check for homepage class
+        if (document.documentElement.classList.contains('homepage')) {
+          return '{{ config.theme.logo | url }}';
+        }
+        
+        // Default to dark logo for non-homepage (CSS-first sets dark by default)
+        var segments = window.location.pathname.split('/').filter(s => s.length > 0);
+        var depth = segments.length > 0 ? segments.length : 0;
+        var prefix = depth > 0 ? '../'.repeat(depth) : '';
+        return prefix + 'assets/images/logo-white.png';
+      }
+      
+      var logoSrc = getInitialLogo();
+      document.write('<img src="' + logoSrc + '" alt="logo" class="theme-logo">');
+    })();
+  </script>
+  <noscript>
+    <img src="{{ config.theme.logo | url }}" alt="logo" class="theme-logo">
+  </noscript>
 {% else %}
   {% set icon = config.theme.icon.logo or "material/library" %}
   {% include ".icons/" ~ icon ~ ".svg" %}
