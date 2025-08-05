@@ -42,6 +42,8 @@ Here below there links to useful tools about Polkadot OpenGov.
   
 </div>
 
+See also [Polkadot-JS OpenGov Guides](/learn/learn-guides-polkadot-opengov/).
+
 ## Summary
 
 In Polkadot OpenGov, all the proposals are initiated by the public. The proposal will enter a
