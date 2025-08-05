@@ -6,11 +6,11 @@ window.addEventListener("load", function () {
     },
     type: "opt-in",
     content: {
-      message: "We use cookies to enable the AI chatbot on this site. These cookies help protect the chatbot from spam and abuse. By accepting, you can ask questions using the Polkadot AI assistant.",
+      message: "This website uses cookies to facilitate the operation of the Kapa AI Chatbot and to enhance user experience through anonymous analytics. By selection 'Allow', you consent to the placement of functional cookies necessary for enabling the chatbot. If you select 'Decline', the chatbot will be disabled and unavailable to you. For more information, please refer to our ",
       dismiss: "Accept",
       deny: "Decline",
-      link: "See the Chatbot Terms and Conditions.",
-      href: "/policies/chatbot-terms",
+      link: "Privacy Policy.",
+      href: "https://web3.foundation/legal-disclosures/",
     },
     onInitialise: function (status) {
       if (status === 'allow') {
