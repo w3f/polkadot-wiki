@@ -1,6 +1,6 @@
 # Project information
 site_name: Polkadot Wiki
-site_url: https://wiki.polkadot.network
+site_url: https://wiki.polkadot.com
 site_author: Web3 Foundation Technologies
 copyright: Copyright &copy; 2025 Web3 Foundation
 extra_javascript:
@@ -80,6 +80,8 @@ plugins:
 
 # Additional configuration
 extra:
+  home_url: /
+  home_name: Home
   social:
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/Polkadot
