@@ -1,5 +1,5 @@
 ---
-title: Transfer Guides for Polkadot-JS
+title: Polkadot-JS Transfer Guides
 description: Step-by-step guides for transferring balances, verifying extrinsics, and calculating fees using Polkadot-JS.
 ---
 

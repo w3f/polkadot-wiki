@@ -1,5 +1,5 @@
 ---
-title: Proxy Account Guides
+title: Polkadot-JS Proxy Guides
 description: Learn how to create, manage, and use proxy accounts on Polkadot-JS for enhanced security and flexibility.
 ---
 

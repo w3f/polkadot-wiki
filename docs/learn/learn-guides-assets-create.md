@@ -1,4 +1,5 @@
-title: Create Assets with Polkadot-JS
+---
+title: Polkadot-JS Asset Creation Guides
 description: Learn how to create fungible and non-fungible assets on the Asset Hub using Polkadot-JS UI.
 ---
 <!-- MessageBox -->

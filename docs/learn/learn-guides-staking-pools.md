@@ -1,5 +1,7 @@
-title: Nomination Pool Guides
+---
+title: Polkadot-JS Nomination Pool Guides
 description: Detailed guides for creating, managing, and destroying nomination pools using Polkadot-JS.
+---
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">

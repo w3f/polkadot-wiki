@@ -1,10 +1,7 @@
 ---
-id: learn-guides-bounties
-title: Bounty Management Guide
+title: Polkadot-JS Bounty Management Guide
 description: Learn how to submit, manage, and claim bounties using Polkadot-JS UI.
-sidebar_label: Bounty Guides
 keyword: [treasury, bounties, guides, child bounty, polkadot-js]
-slug: ../learn-guides-bounties
 ---
 
 <!-- MessageBox -->

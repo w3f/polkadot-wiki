@@ -42,7 +42,7 @@ Here below there links to useful tools about Polkadot OpenGov.
   
 </div>
 
-See also [Polkadot-JS OpenGov Guides](/learn/learn-guides-polkadot-opengov/).
+See also [Polkadot-JS OpenGov Guides](./learn-guides-polkadot-opengov.md).
 
 ## Summary
 
