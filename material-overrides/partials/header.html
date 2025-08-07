@@ -15,7 +15,7 @@
       </label>
       <div class="md-header__title" data-md-component="header-title">
         <div class="md-header__ellipsis">
-          <a href="{{ config.home_url }}" title="{{ config.home_name | e }}" class="md-header__button md-logo" aria-label="{{ config.home_name }}" data-md-component="logo">
+          <a href="{{ config.extra.home_url | default('/') }}" title="{{ config.extra.home_name | default('Home') }}" class="md-header__button md-logo">
             {% include "partials/logo.html" %}
           </a>
         </div>
