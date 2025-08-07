@@ -1,5 +1,5 @@
 ---
-title: Treasury Guides for Polkadot-JS
+title: Polkadot-JS Treasury Guides
 description: Learn how to create treasury proposals, submit referenda, and manage funds using Polkadot-JS.
 ---
 

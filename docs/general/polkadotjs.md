@@ -1,5 +1,5 @@
 ---
-title: Polkadot-JS Tooling
+title: Polkadot-JS Guides
 description: Discover Polkadot-JS tools for developers and power users, including UI, extension, API, and phishing protection.
 ---
 
@@ -21,7 +21,9 @@ description: Discover Polkadot-JS tools for developers and power users, includin
 !!!info
     We support only the use of the [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) together with the [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/), [**Ledger**](https://www.ledger.com/ledger-live) and [**Polkadot Vault**](https://www.parity.io/technologies/signer/) for signing transactions. We do not provide support for third party applications.
 
-This section of the Polkadot Wiki is dedicated to advanced guides for [the Polkadot-JS tooling](../general/polkadotjs.md). [**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with Relay Chains and parachains in a granular way. The tools include:
+This section of the Polkadot Wiki is dedicated to advanced guides for the Polkadot-JS tooling. 
+
+[**Polkadot-JS**](https://polkadot.js.org/) is a collection of tools that interfaces with Relay Chains and parachains in a granular way. The tools include:
 
 - [The Polkadot-JS UI](#polkadot-js-ui)
 - [The Polkadot-JS Browser Extension](#polkadot-js-extension)

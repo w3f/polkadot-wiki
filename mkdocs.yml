@@ -280,32 +280,36 @@ nav:
                   - Onboarding Status and Key Dashboards: general/dashboards/dune-analytics/onboarding-status-and-key-dashboards.md
                   - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
   - Guides:
-      - Polkadot-JS: general/polkadotjs.md
+    - Polkadot-JS Guides:
+      - general/polkadotjs.md
       - Polkadot-JS UI: general/polkadotjs-ui.md
-      - Async Backing Conversion: learn/maintain-guides-async-backing.md
-      - Account Guides:
-                      - Accounts Guides: learn/learn-guides-accounts.md
-                      - Accounts Multisig: learn/learn-guides-accounts-multisig.md
-                      - Accounts Proxy: learn/learn-guides-accounts-proxy.md
-                      - Accounts Proxy Pure: learn/learn-guides-accounts-proxy-pure.md
-                      - Transfers: learn/learn-guides-transfers.md
-                      - Identity: learn/learn-guides-identity.md
-                      - Ledger: learn/learn-guides-ledger.md
-                      - Vault: learn/learn-guides-vault.md
-                      - Transaction Construction: learn/learn-transaction-construction.md
-      - Staking Guides:
-                      - Nominator: learn/learn-guides-nominator.md
-                      - Staking Pools: learn/learn-guides-staking-pools.md
-      - Coretime Guides:
-                      - Coretime Swap: learn/learn-guides-coretime-swap.md
-      - OpenGov Guides:
-                      - Polkadot OpenGov: learn/learn-guides-polkadot-opengov.md
-                      - Test OpenGov Proposals: learn/learn-guides-test-opengov-proposals.md
-                      - Treasury: learn/learn-guides-treasury.md
-                      - Bounties: learn/learn-guides-bounties.md
-      - Asset Hub Guides:
-                      - Create Assets on Polkadot: learn/learn-guides-assets-create.md
-                      - Asset Conversion: learn/learn-guides-asset-conversion.md
-      - Bridge Hub Guides:
-                      - DOT-KSM Bridge: learn/learn-guides-DOT-KSM-bridge.md
-      - Claims: learn/learn-guides-claims.md
+      - Polkadot-JS Account Guides:
+        - learn/learn-guides-accounts.md
+        - learn/learn-guides-accounts-multisig.md
+        - learn/learn-guides-accounts-proxy.md
+        - learn/learn-guides-accounts-proxy-pure.md
+        - learn/learn-guides-transfers.md
+        - learn/learn-guides-identity.md
+      - Polkadot-JS Staking Guides:
+        - learn/learn-guides-nominator.md
+        - learn/learn-guides-staking-pools.md
+      - Polkadot-JS Coretime Guides:
+        - learn/learn-guides-coretime-swap.md
+      - Polkadot-JS OpenGov Guides:
+        - learn/learn-guides-polkadot-opengov.md
+        - learn/learn-guides-test-opengov-proposals.md
+        - learn/learn-guides-treasury.md
+        - learn/learn-guides-bounties.md
+      - Polkadot-JS Asset Hub Guides:
+        - learn/learn-guides-assets-create.md
+        - learn/learn-guides-asset-conversion.md
+      - Polkadot-JS Bridge Hub Guides:
+        - learn/learn-guides-DOT-KSM-bridge.md
+      - Polkadot-JS Claims Guides: learn/learn-guides-claims.md
+    - Other Guides:
+      - learn/learn-guides-ledger.md
+      - learn/learn-guides-vault.md
+      - Async Backing Conversion Guides: learn/maintain-guides-async-backing.md
+      - Transaction Construction Guides: learn/learn-transaction-construction.md
+    
+    

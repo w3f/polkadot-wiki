@@ -1,5 +1,5 @@
 ---
-title: Coretime Lease Swap Guide
+title: Polkadot-JS Coretime Lease Swap Guides
 description: Learn how to swap leases between parachains using the coretime swap functionality.
 ---
 
