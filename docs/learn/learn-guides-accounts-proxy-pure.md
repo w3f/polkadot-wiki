@@ -1,5 +1,5 @@
 ---
-title: Pure Proxy Account Guides
+title: Polkadot-JS Pure Proxy Guides
 description: Detailed guides on creating and managing pure proxy accounts for advanced account setups on Polkadot-JS.
 ---
 

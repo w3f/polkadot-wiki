@@ -1,5 +1,5 @@
 ---
-title: Polkadot Vault Guides
+title: Polkadot Vault App Guides
 description: Comprehensive guides for using the Polkadot Vault app, including sending transfers, importing accounts, and updating metadata.
 ---
 
@@ -14,7 +14,7 @@ description: Comprehensive guides for using the Polkadot Vault app, including se
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-!!!info These guides apply to both Parity Signer and Polkadot Vault apps.
+!!!info "These guides apply to both Parity Signer and Polkadot Vault apps."
 
 ## Sending a Transfer with the Vault App
 

@@ -1,5 +1,7 @@
-title: Polkadot-JS Ledger Guides
+---
+title: Ledger Guides
 description: Learn how to use Ledger devices with Polkadot-JS for managing accounts, sending transfers, staking, and more.
+---
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">

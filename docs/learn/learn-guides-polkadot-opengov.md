@@ -1,5 +1,5 @@
 ---
-title: OpenGov Guides for Polkadot-JS
+title: Polkadot-JS OpenGov Guides
 description: Learn how to propose, vote, and manage referenda in Polkadot OpenGov using Polkadot-JS.
 ---
 
@@ -14,7 +14,7 @@ description: Learn how to propose, vote, and manage referenda in Polkadot OpenGo
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-See [this page](./learn-polkadot-opengov.md) to learn about Polkadot OpenGov.
+See also [Polkadot OpenGov](./learn-polkadot-opengov.md).
 
 This guide will instruct token holders how to propose and vote on public referenda using the
 Referenda module (OpenGov). Below are a few links to stay informed and directly engage with the
