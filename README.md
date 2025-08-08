@@ -41,12 +41,14 @@
 
 ## Contributing to Documentation
 
-[The Technical Education team](https://wiki.polkadot.network/docs/contributors) at Web3 Foundation
+[The Technical Education team](https://wiki.polkadot.com/general/contributors/) at Web3 Foundation
 are the primary maintainers of the Wiki and will review all issues and pull requests created on this
 repository. If you notice typos or grammatical errors, please feel free to create pull requests with
 these corrections directly. Larger contributions may start as issues to test the waters on the
 subject with the maintainers. It is generally preferable to create a pull request over an issue to
 propose a change to the Wiki content.
+
+Learn more about [contributing](https://wiki.polkadot.com/general/contributing/).
 
 ## Running Locally
 
