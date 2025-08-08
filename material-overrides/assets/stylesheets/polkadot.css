@@ -193,6 +193,10 @@
   color: var(--storm-gray);
 }
 
+.md-typeset ul {
+  color: var(--storm-gray);
+}
+
 /* Dark mode font styling */
 [data-md-color-scheme='slate'] .md-typeset h1,
 [data-md-color-scheme='slate'] .md-typeset h2,
@@ -203,6 +207,10 @@
 }
 
 [data-md-color-scheme='slate'] .md-typeset p {
+  color: #c6cfdb;
+}
+
+[data-md-color-scheme='slate'] .md-typeset ul {
   color: #c6cfdb;
 }
 
@@ -1305,11 +1313,7 @@ html .md-footer-meta.md-typeset a:hover {
 
 /** API styling **/
 /* Remove inline code background */
-.md-typeset li,
-.md-typeset li,
-.md-typeset li p {
-    color: var(--md-typeset-color);
-}
+.md-typeset li > code,
 .md-typeset strong > code,
 .md-typeset a code,
 .md-typeset a:hover code,
