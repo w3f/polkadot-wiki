@@ -3,6 +3,8 @@ title: Glossary
 description: Definitions of common terms and concepts in the Polkadot ecosystem.
 ---
 
+# Polkadot Wiki Glossary
+
 ## Active Nomination
 
 A validator (or validators) that a nominator has selected to nominate and is actively validating
@@ -779,3 +781,11 @@ operation. In terms of OpenGov, it allows the [Fellowship](#technical-fellowship
 ## Zombienet
 
 A tool for running local Polkadot and Substrate testnets.
+
+
+# Other Glossaries
+
+See below other glossaries about the Polkadot Ecosystem.
+
+- [Polkadot Glossary by UX Bounty](https://polkadot-ux-bounty.notion.site/UX-Glossary-v01-1a4e1c2781f3809c9292c6764804fa74)
+- [Glossary by Polkadot Support](https://support.polkadot.network/support/solutions/articles/65000110873-glossary)
