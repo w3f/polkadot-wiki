@@ -38,7 +38,7 @@ theme:
   font:
     text: Manrope
   palette:
-    # Palette toggle for light mode
+    # Light mode (default fallback)
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: custom
@@ -46,7 +46,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
+    # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
