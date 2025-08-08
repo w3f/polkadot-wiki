@@ -26,7 +26,7 @@
         return prefix + 'assets/images/' + filename;
     }
     
-    // Update logo paths whenever we navigate
+    // Update the logo paths whenever we navigate
     function updateLogoPaths() {
         return {
             light: getLogoPath('logo.webp'),
