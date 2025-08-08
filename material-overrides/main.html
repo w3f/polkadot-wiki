@@ -193,23 +193,68 @@
         if (themeToggling) return;
         themeToggling = true;
         
-        // Hide page with overlay immediately
+        var currentScheme = document.documentElement.getAttribute('data-md-color-scheme');
+        var isDarkMode = currentScheme === 'slate';
+        var currentBg = isDarkMode ? '#1a1a1a' : 'white';
+        var targetBg = isDarkMode ? 'white' : '#1a1a1a';
+        var targetColor = isDarkMode ? 'rgba(0,0,0,0.87)' : '#c6cfdb';
+        
+        // Create smooth transition overlay
         var overlay = document.createElement('div');
-        overlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: var(--theme-bg); z-index: 99999; opacity: 1;';
+        overlay.style.cssText = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: ' + currentBg + '; z-index: 99999; transition: background-color 0.4s ease-in-out; display: flex; align-items: center; justify-content: center;';
+        
+        // Create loading icon
+        var loadingIcon = document.createElement('div');
+        loadingIcon.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <div style="
+              width: 24px; 
+              height: 24px; 
+              border: 2px solid ${isDarkMode ? '#c6cfdb' : 'rgba(0,0,0,0.2)'}; 
+              border-top: 2px solid ${isDarkMode ? 'rgba(198, 207, 219, 0.3)' : 'rgba(0,0,0,0.6)'}; 
+              border-radius: 50%; 
+              animation: spin 1s linear infinite;
+            "></div>
+            <span style="color: ${isDarkMode ? '#c6cfdb' : 'rgba(0,0,0,0.87)'}; font-size: 14px; font-weight: 500;">
+              Switching to ${isDarkMode ? 'light' : 'dark'} mode...
+            </span>
+          </div>
+          <style>
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          </style>
+        `;
+        
+        overlay.appendChild(loadingIcon);
         document.body.appendChild(overlay);
         
-        // Toggle theme and reload
+        // Start color transition
         setTimeout(function() {
-          var currentScheme = document.documentElement.getAttribute('data-md-color-scheme');
+          overlay.style.backgroundColor = targetBg;
+          // Update loading text color during transition
+          var textSpan = loadingIcon.querySelector('span');
+          var spinner = loadingIcon.querySelector('div > div');
+          if (textSpan) {
+            textSpan.style.color = targetColor;
+            textSpan.style.transition = 'color 0.4s ease-in-out';
+          }
+          if (spinner) {
+            spinner.style.borderColor = isDarkMode ? 'rgba(0,0,0,0.2)' : '#c6cfdb';
+            spinner.style.borderTopColor = isDarkMode ? 'rgba(0,0,0,0.6)' : 'rgba(198, 207, 219, 0.3)';
+            spinner.style.transition = 'border-color 0.4s ease-in-out';
+          }
+        }, 50);
+        
+        // Save preference and reload after transition
+        setTimeout(function() {
           var newScheme = currentScheme === 'slate' ? 'default' : 'slate';
           var newIndex = newScheme === 'default' ? 0 : 1;
           
-          // Save to localStorage
           localStorage.setItem('/.__palette', JSON.stringify({index: newIndex}));
-          
-          // Reload page
           window.location.reload();
-        }, 50);
+        }, 500);
       }
       
       // Listen for clicks on theme toggle elements
