@@ -1305,7 +1305,11 @@ html .md-footer-meta.md-typeset a:hover {
 
 /** API styling **/
 /* Remove inline code background */
-.md-typeset li > code,
+.md-typeset li,
+.md-typeset li,
+.md-typeset li p {
+    color: var(--md-typeset-color);
+}
 .md-typeset strong > code,
 .md-typeset a code,
 .md-typeset a:hover code,
