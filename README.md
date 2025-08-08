@@ -48,7 +48,7 @@ these corrections directly. Larger contributions may start as issues to test the
 subject with the maintainers. It is generally preferable to create a pull request over an issue to
 propose a change to the Wiki content.
 
-Learn [more about contributing](https://wiki.polkadot.com/general/contributing/).
+Learn more about [contributing](https://wiki.polkadot.com/general/contributing/).
 
 ## Running Locally
 
