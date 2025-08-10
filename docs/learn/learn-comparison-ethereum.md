@@ -23,7 +23,7 @@ Both protocols have fundamentally different goals:
 - Ethereum is a general-purpose blockchain based on the Ethereum Virtual Machine (EVM). Ethereum is
   not specialized nor optimized for any particular application. Instead, its primary focus is the
   Ethereum Virtual Machine for executing smart contracts. Ethereum achieves scalability via
-  [**rollups**](./learn-comparisons-rollups.md#rollup-comparison) are secondary protocols that utilize Ethereum
+  [**rollups**](./learn-comparisons-rollups.md#rollup-comparison), that are secondary protocols that utilize Ethereum
   as a settlement layer.
 
 - Polkadot is a multi-chain protocol that provides shared security and secure interoperability for
