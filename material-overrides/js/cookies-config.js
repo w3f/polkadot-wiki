@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
       dismiss: "Accept",
       deny: "Decline",
       link: "Privacy Policy.",
-      href: "https://web3.foundation/legal-disclosures/",
+      href: "https://web3.foundation/privacy-and-cookies/",
     },
     onInitialise: function (status) {
       if (status === 'allow') {
