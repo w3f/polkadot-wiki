@@ -291,3 +291,5 @@
 /*/build-*    https://docs.polkadot.com/develop/    301
 /*/maintain-*   https://docs.polkadot.com/infrastructure/    301
 /*/maintain#   https://docs.polkadot.com/infrastructure/    301
+/*/maintain  https://docs.polkadot.com/infrastructure   301
+/*/general  /general/web3-and-polkadot  301
