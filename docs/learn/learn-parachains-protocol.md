@@ -1,4 +1,4 @@
----
+∂---
 title: Security Protocol Overview
 description: Overview of actors and protocols ensuring Polkadot and its parachains' block finality and security.
 ---
@@ -370,7 +370,8 @@ requiring all validators to keep tabs on all the parachains. Instead, validators
 pieces of the data and can later reconstruct the entire data under the assumption that 1/3+1 of the
 validators can provide their pieces of the data.
 
-!!!note The 1/3+1 threshold of validators that must be responsive to construct the full parachain state data corresponds to Polkadot's security assumption about Byzantine nodes.
+!!!note
+    The 1/3+1 threshold of validators that must be responsive to construct the full parachain state data corresponds to Polkadot's security assumption about Byzantine nodes.
 
 ## Disputes
 
