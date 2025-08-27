@@ -117,7 +117,7 @@ Coretime is managed through the
 which is deployed on the Coretime Chain. In theory, the Polkadot relay chain can support around a
 hundred cores seamlessly and can support over a few hundred cores through optimizations. Preliminary
 tests ran successfully with 80 cores with 12-second block times.
-[**Coretime revenue sales are burned**](https://app.regionx.tech/?network=polkadot).
+[**Coretime revenue sales are burned**](https://hub.regionx.tech/?network=polkadot).
 
 ### Coretime Sales
 
@@ -182,7 +182,7 @@ These features are still under development and will be rolled out in later relea
 #### What is currently being developed in the ecosystem to support Agile Coretime?
 
 There are several ecosystem projects in the making, such as the secondary markets for coretime,
-[Lastic](https://www.lastic.xyz/), and [RegionX](https://app.regionx.tech/).
+[Lastic](https://www.lastic.xyz/), and [RegionX](https://hub.regionx.tech/).
 
 Always do your own research. If you feel your project should be listed on the Wiki, please follow
 the [contributor's guide](../general/contributing.md).
@@ -222,8 +222,7 @@ better use of the existing cores).
 
 #### Is there a UI for the Coretime Chain?
 
-Teams in the ecosystem are working on a UI. RegionX has released an app for testing on
-Paseo: https://app.regionx.tech/. Without the UI, this would be automated from the parachains’
+Teams in the ecosystem are working on a UI. RegionX has released [RegionX Hub](https://hub.regionx.tech/). Without the UI, this would be automated from the parachains’
 runtimes or manually with Coretime Chain extrinsics via Polkadot-JS.
 
 ### Coretime Pricing and Purchasing
