@@ -1,4 +1,4 @@
-∂---
+---
 title: Security Protocol Overview
 description: Overview of actors and protocols ensuring Polkadot and its parachains' block finality and security.
 ---
