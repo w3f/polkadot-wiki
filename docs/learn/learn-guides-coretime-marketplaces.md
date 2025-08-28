@@ -29,9 +29,9 @@ RegionX Hub so the UI is dynamic and adapts to different use cases.
 
 ### RegionX Hub Overview
 
-RegionX provides different dashboard for different use cases. Currently it has different dashboards for the fullowing use cases:
-- [Overview](https://hub.regionx.tech/?dashboard=overview&network=polkadot): The overview dashboard is for anyone who wants an overview of Coretime data and access to almost all functionality from a single page. It is great for exploring Coretime or for collecting data on the system.
-- [Deploying new project](https://hub.regionx.tech/?dashboard=deploying-new-project&network=polkadot): The dashboard is designed to show only the information relevant for teams deploying a new project on Polkadot.
+RegionX provides a different dashboard for different use cases:
+- [Overview](https://hub.regionx.tech/?dashboard=overview&network=polkadot): The overview dashboard is for anyone who wants an overview of Coretime data and access to most functionalities from a single page.
+- [Deploying a new project](https://hub.regionx.tech/?dashboard=deploying-new-project&network=polkadot): The dashboard is designed to show only the information relevant for teams deploying a new project on Polkadot.
 - [Managing existing project](https://hub.regionx.tech/?dashboard=managing-existing-project&network=polkadot): Once a project is up and running on Polkadot, RegionX Hub provides a dashboard where teams can track their renewal status and compare the cost of renewing their core versus buying a new one in the sale.
 
 ### Purchasing Cores on RegionX Hub
