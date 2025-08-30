@@ -40,30 +40,30 @@ Setting up a collection implies different roles with different permissions:
 
 - Owner:
 
-  - destroy collection (to destroy the collection, there should be 0 items left).
-  - redeposit: re-evaluate the deposit on some items.
-  - set team: change the collection’s Issuer, Admin, Freezer.
-  - set collection max supply: set the maximum number of items for a collection.
-  - lock collection: this can include making a collection’s items non-transferable, fixing its max
+    - destroy collection (to destroy the collection, there should be 0 items left).
+    - redeposit: re-evaluate the deposit on some items.
+    - set team: change the collection’s Issuer, Admin, Freezer.
+    - set collection max supply: set the maximum number of items for a collection.
+    - lock collection: this can include making a collection’s items non-transferable, fixing its max
     supply, and locking collection metadata and attributes.
 
 - Admin:
 
-  - set attributes and metadata of a collection.
-  - set attributes pre-signed: set attributes for an item by providing the Admin pre-signed
+    - set attributes and metadata of a collection.
+    - set attributes pre-signed: set attributes for an item by providing the Admin pre-signed
     approval.
-  - lock item properties: lock item metadata and [attributes](#attributes).
+    - lock item properties: lock item metadata and [attributes](#attributes).
 
 - Freezer:
 
-  - lock item transfer: disallow further item transfers.
-  - unlock item transfer: lift a previous lock to transfer an item.
+    - lock item transfer: disallow further item transfers.
+    - unlock item transfer: lift a previous lock to transfer an item.
 
 - Issuer
-  - mint
-  - force mint (with custom item configuration).
-  - mint pre-signed: mint an item by providing the Issuer pre-signed approval.
-  - update mint settings.
+    - mint
+    - force mint (with custom item configuration).
+    - mint pre-signed: mint an item by providing the Issuer pre-signed approval.
+    - update mint settings.
 
 Those roles can also be set to `none` without the ability to change them back. This is useful when a
 collection is created and all the items are minted. Now, by setting roles to `none` we remove the
