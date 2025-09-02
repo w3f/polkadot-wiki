@@ -12,49 +12,39 @@
 {%- block container -%} 
   {% block content %}
     <div class="home-container md-typeset">
-
-      <div class="feature-intro">
-        </div>
-    
-    <div class="feature-section">
-      <div class="feature-intro">
-          <div>
-            <h1>Your Best Companion for Everything Polkadot.</h1>
-            <p>Since 2019, the Polkadot Wiki has been the source of truth for the Polkadot ecosystem. 
-          It has been built for the curious, the enthusiasts, and the developers seeking the truth about Polkadot.</p>
+        <div class="hero-section">
+          <div class="column hero-content">
+            <div>
+              <h1>
+                Welcome to the Polkadot Wiki
+              </h1>
+              <h2>Your Best Companion for Everything Polkadot</h2>
+              <p>Since 2019, the Polkadot Wiki has been the source of truth for the Polkadot ecosystem. It has been built for the curious, the enthusiasts, and the developers seeking the truth about Polkadot.
+              </p>
+            </div>
+          </div>
+          <div class="column tutorial-cards">
+            <a class="tutorial-card" href="./general/getting-started">
+              <img src="./assets/home/Explore.png" alt="Alt text" class="tutorial-card-image" />
+              <h3>Explore</h3>
+              <p>Explore Wallets, Applications and Programs.</p>
+            </a>
+            <a class="tutorial-card" href="./general/fundamentals">
+              <img src="./assets/home/Learn.png" alt="Alt text" class="tutorial-card-image" />
+              <h3>Fundamentals</h3>
+              <p>Learn about how to interact with Polkadot.</p>
+            </a>
+            <a class="tutorial-card" href="./learn/learn-architecture">
+              <img src="./assets/Architecture.png" alt="Alt text" class="tutorial-card-image" />
+              <h3>Architecture</h3>
+              <p>Learn about Polkadot's core architecture.</p>
+            </a>
           </div>
         </div>
       
-      </br>
-      
-        <div class="row">
-    <!-- Card 1 -->
-    <a href="./general/getting-started" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 350px; height: 450px;">
-        <img src="./assets/home/Explore.png" class="card-image" alt="OpenGov" style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 1rem;"/>
-        <h2>Explore</h2>
-        <p>Explore Wallets, Applications and Programs in the Polkadot Ecosystem.</p>
-    </a>
-
-    <!-- Card 2 -->
-    <a href="../../general/funding" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 350px; height: 450px;">
-        <img src="./assets/home/Learn.png" class="card-image" alt="Proxies" style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 1rem;"/>
-        <h2>Fundamentals</h2>
-        <p>Learn about Polkadot Accounts, Staking, OpenGov and more.</p>
-    </a>
-
-    <!-- Card 3 -->
-    <a href="./learn/learn-architecture" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 350px; height: 450px;">
-        <img src="./assets/Architecture.png" class="card-image" alt="Identity" style="width: 100%; height: 200px; object-fit: contain; margin-bottom: 1rem;"/>
-        <h2>Architecture</h2>
-        <p>Learn about the Architecture of Polkadot's Decentralized Computer.</p>
-    </a>
-</div>
-
+        <div class="cta-section">
+          
     </div>
-
-    </div>
+  </div>
   {% endblock %}
 {%- endblock -%} 
