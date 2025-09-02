@@ -29,8 +29,8 @@
     // Update the logo paths whenever we navigate
     function updateLogoPaths() {
         return {
-            light: getLogoPath('logo.webp'),
-            dark: getLogoPath('logo-white.png')
+            light: getLogoPath('wiki-logo.svg'),
+            dark: getLogoPath('wiki-logo-white-dark.svg')
         };
     }
 
