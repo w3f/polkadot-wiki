@@ -73,6 +73,7 @@
 .hero-content {
   max-width: 40%;
   padding-right: 50px;
+  padding-top: 50px;
 }
 
 .md-typeset .hero-content h1 {
