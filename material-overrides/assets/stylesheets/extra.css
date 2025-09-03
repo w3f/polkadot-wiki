@@ -144,3 +144,13 @@
         width: 500px;
     }
 }
+
+.announcement-text {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;                    
+}
+
+.announcement-link {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+}
