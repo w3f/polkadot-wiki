@@ -93,7 +93,7 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
 - EdX Courses
     - [Introduction to blockchain and Web3](https://www.edx.org/learn/blockchain/web3-foundation-introduction-to-blockchain-and-web3): this course introduces the fundamental concepts of Blockchain technology and Web3.
     - [Introduction to Polkadot](https://www.edx.org/learn/computer-programming/web3-foundation-introduction-to-polkadot): this course provides a comprehensive overview of Polkadot Network, its technology and ecosystem.
-- [The Polkadot Blockchain Academy X (PBA-X)](https://pbax.polkadot.academy/): an online course about cryptography, blockchain, crypto-economics, the Polkadot protocol and Polkadot SDK.
+- [The Polkadot Blockchain Academy X (PBA-X)](https://pbax.polkadot.academy/): an online course about cryptography, blockchain, crypto-economics, the Polkadot protocol and Polkadot SDK. See the previous course material [here](https://polkadot-blockchain-academy.github.io/pba-content/).
 - [The Polkadot Blockchain Academy Campus (PBA Campus)](https://polkadot.academy/pba-campus/): a three-week intensive course that will make you a blockchain core developer or a dApp developer.
 
 ## Tutorials for Developers
@@ -106,3 +106,7 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
   [Substrate in Bits](https://polkadot.study/tutorials/substrate-in-bits/), a technical content
   series aimed at solving the pain points of developers building with
   [Polkadot SDK (Substrate)](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate) and [Rust](https://www.rust-lang.org/).
+
+## Hackathon Guides
+
+The [Polkadot Hackathon Guide](https://github.com/polkadot-developers/hackathon-guide) provides essential info, tips, and resources to help you in your journey building on Polkadot.
