@@ -32,7 +32,7 @@ There are four types of account balances:
 
 **Spendable Balance** is the portion of the free balance that can be transferred. It is also available for transaction fees and creating new reserves.
 
-The spendable balance is calculated as follows:
+In the usual case when ED is untouchable the spendable balance is calculated as follows:
 
 ```
 spendable = free - max(frozen - reserved, ED)
@@ -41,9 +41,15 @@ spendable = free - max(frozen - reserved, ED)
 Where `free`, `frozen`, and `reserved` are defined above. The `ED` is the
 [existential deposit](./learn-accounts.md#existential-deposit-and-reaping).
 
+If an account has any other provider references then the spendable amount is:
+
+```
+spendable = free - max(frozen - reserved)
+```
+
 ### Consumer and Provider References
 
-In Polkadot and Substrate-based chains, each account must maintain a minimum free balance called the Existential Deposit (ED) to remain alive. An account cannot be reaped from the state while it has a reserved balance, or in general,
+In Polkadot and Substrate-based chains, each account must maintain a minimum total balance called the Existential Deposit (ED) to remain alive. An account cannot be reaped from the state while it has a reserved balance, or in general,
 any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
 Those references determine if an account can be reaped, usually because other pallets depend on the
 existence of such an account. For example, the existential deposit adds a provider reference simply
@@ -52,8 +58,8 @@ depends on the proxied account; the proxy is the consumer).
 
 If an account’s free balance falls below this threshold and has no providers or consumers, it is reaped, meaning all its data is deleted to conserve state space. However, the ED rules are more nuanced than they may appear:
 
-- Reserved balances do not count as spendable, but they do add a provider reference to the account.
-- If an account has any provider references (e.g., via reserved balance or staking), it will not be reaped even if its free balance drops below the ED. In such cases, the ED is not untouchable: the free balance can be entirely spent, and the account will remain alive. In other words, the account is "dusted", which happens when its free balance drops below ED. Then the "dust" is deleted, but the account can still be alive, for example, because it has a provider reference.
+- Reserved balances do not count as spendable, but they do add a provider reference to the account. (No they don't? otherwise ED would not be untouchable after having more than ED on hold. and ED is untouchable even when having more than ED on hold)
+- If an account has any provider references (e.g., via staking), it will not be reaped even if its total balance drops below the ED. In such cases, the ED is not untouchable: the total balance can be entirely spent, and the account will remain alive. In other words, the account is "dusted", which happens when its total balance drops below ED. Then the "dust" is deleted, but the account can still be alive, for example, because it has a provider reference.
 - Conversely, if an account has consumers (such as active locks or dependencies) but only one or zero providers, then the ED must be preserved, or the account may be reaped once the last consumer or provider is removed.
 
 ## Example of Account Balance Types
