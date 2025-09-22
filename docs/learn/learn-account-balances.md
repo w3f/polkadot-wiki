@@ -59,7 +59,7 @@ depends on the proxied account; the proxy is the consumer).
 If an account’s free balance falls below this threshold and has no providers or consumers, it is reaped, meaning all its data is deleted to conserve state space. However, the ED rules are more nuanced than they may appear:
 
 - Reserved balances do not count as spendable.
-- If an account has any provider references (e.g., via staking), it will not be reaped even if its total balance drops below the ED. In such cases, the ED is not untouchable: the total balance can be entirely spent, and the account will remain alive. In other words, the account is "dusted", which happens when its total balance drops below ED. Then the "dust" is deleted, but the account can still be alive, for example, because it has a provider reference.
+- If an account has any provider references (e.g., via staking), it will not be reaped even if its free balance drops below the ED. In such cases, the ED is not untouchable: the total balance can be entirely spent, and the account will remain alive. In other words, the account may be "dusted", which happens ?sometimes? when its free balance drops below ED. Then the "dust" is deleted, but the account can still be alive, for example, because it has a provider reference.
 - Conversely, if an account has consumers (such as active locks or dependencies) but only one or zero providers, then the ED must be preserved, or the account may be reaped once the last consumer or provider is removed.
 
 ## Example of Account Balance Types
