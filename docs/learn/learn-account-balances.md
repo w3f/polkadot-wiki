@@ -49,7 +49,7 @@ spendable = free - max(frozen - reserved)
 
 ### Consumer and Provider References
 
-In Polkadot and Substrate-based chains, each account must maintain a minimum total balance called the Existential Deposit (ED) to remain alive. An account cannot be reaped from the state while it has a reserved balance, or in general,
+In Polkadot and Substrate-based chains, each account must maintain a minimum free balance called the Existential Deposit (ED) to remain alive (or have another provider see later). An account cannot be reaped from the state while it has a reserved balance, or in general,
 any [consumer and provider reference](./learn-guides-accounts.md#query-account-data-in-polkadot-js).
 Those references determine if an account can be reaped, usually because other pallets depend on the
 existence of such an account. For example, the existential deposit adds a provider reference simply
