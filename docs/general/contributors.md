@@ -121,14 +121,9 @@ and blockchain classes at General Assembly, Code Fellows, and Columbia Universit
 
 ### Danny Salman
 
-- email: [danny.f.salman@gmail.com](mailto:danny.f.salman@gmail.com)
-- matrix: [@dannysalman:matrix.org](https://matrix.to/#/@dannysalman:matrix.org)
-- telegram: [@dannysalman](https://t.me/dannysalman)
-- twitter: [@dannysalman\_](https://twitter.com/dannysalman_)
-
-Danny was a Technical Educator at Web3 Foundation who has a keen interest in blockchain and
-trust-free technologies. As a Technical Educator, Danny taught and documented Polkadot. He has a
-Bachelor of Engineering in Computer Engineering and a background in philosophy & politics.
+Danny was a Technical Educator at the Web3 Foundation, teaching and documenting Polkadot and Web3. 
+His interests center on blockchain and trust-minimized technologies. He has a background in computer 
+engineering, full-stack development, philosophy, and public policy and governance.
 
 ### Alex Chau
 
