@@ -1,9 +1,0 @@
-repos:
--   repo: local
-    hooks:
-    -   id: vale
-        name: vale
-        entry: vale docs/*/**.md
-        language: system
-        types: [text, markdown]
-        files: \.(md|markdown|rst|txt)$
