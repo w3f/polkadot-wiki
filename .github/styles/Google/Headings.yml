@@ -15,6 +15,7 @@ exceptions:
   - gRPC
   - I
   - Kubernetes
+  - Kusama
   - Linux
   - macOS
   - Marketplace
