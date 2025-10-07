@@ -34,7 +34,7 @@ swap:
   police(?:m[ae]n|wom[ae]n): police officer(s)
   repair(?:m[ae]n|wom[ae]n): technician(s)
   sales(?:m[ae]n|wom[ae]n): salesperson or sales people
-  service(?:m[ae]n|wom[ae]n): soldier(s)
+ 
   steward(?:ess)?: flight attendant
   tribes(?:m[ae]n|wom[ae]n): tribe member(s)
   waitress: waiter
