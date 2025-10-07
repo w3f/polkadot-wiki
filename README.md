@@ -17,8 +17,12 @@
 - [Contributing to Documentation](#contributing-to-documentation)
 - [Running Locally](#running-locally)
   - [Build](#build)
-- [Style and Configuration Guide](#style-and-configuration-guide)
   - [Formatting](#formatting)
+  - [Vale - Writing Style Linter](#vale---writing-style-linter)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Configuration](#configuration)
+    - [Adding Custom Terms](#adding-custom-terms)
   - [Automation](#automation)
     - [Deployments](#deployments)
     - [GitHub Actions](#github-actions)
@@ -81,6 +85,50 @@ ENABLE_RPC=false mkdocs build
 See the [Conditional Rendering](#conditional-rendering) and
 [Mkdocs Macros](#mkdocs-macros) sections for additional details regarding how to
 properly format syntax for elements outside of the standard markdown library.
+
+### Vale - Writing Style Linter
+
+Vale is configured to help maintain consistent writing style across the Wiki. It uses Google style guidelines along with Polkadot-specific terminology and rules.
+
+#### Installation
+
+Install Vale via your package manager or download from [GitHub releases](https://github.com/errata-ai/vale/releases):
+
+```bash
+# macOS (using Homebrew)
+brew install vale
+
+# Linux/Windows - Download from releases or use package manager
+```
+
+#### Usage
+
+Run Vale on specific files or directories:
+
+```bash
+# Check a single file
+vale docs/general/contributing.md
+
+# Check all markdown files in docs directory
+vale docs/
+
+# Check all files (respects .vale.ini configuration)
+vale .
+```
+
+#### Configuration
+
+The Wiki's Vale configuration (`.vale.ini`) includes:
+- **Google Style Guide** rules for general writing quality
+- **Polkadot-specific vocabulary** and terminology
+- **Custom rules** for acronyms, contractions, and Polkadot ecosystem terms
+- **Industry vocabulary** for blockchain and technical terms
+
+#### Adding Custom Terms
+
+To add new accepted terms to the vocabulary:
+1. Edit `.github/styles/config/vocabularies/Polkadot/accept.txt` for Polkadot-specific terms
+2. Edit `.github/styles/config/vocabularies/Industry/accept.txt` for general blockchain terms
 
 ### Automation
 
