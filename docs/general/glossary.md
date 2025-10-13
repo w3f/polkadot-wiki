@@ -3,6 +3,8 @@ title: Glossary
 description: Definitions of common terms and concepts in the Polkadot ecosystem.
 ---
 
+# Polkadot Wiki Glossary
+
 ## Active Nomination
 
 A validator (or validators) that a nominator has selected to nominate and is actively validating
@@ -75,7 +77,7 @@ An application that allows a user to explore the different blocks on a blockchai
 
 ## Blocks Nominations
 
-This indicates that a validator does not currently allow any more nominations. This is controlled by
+This indicates that a validator does not allow any more nominations. This is controlled by
 the validator.
 
 ## BLS
@@ -762,8 +764,7 @@ execution. Checkout this section of the Substrate docs covering
 
 ## Westend
 
-The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the
-[Paseo testnet](#paseo), the Westend testnet is used by the core developers to iterate on
+The [testnet](#testnet) is set aside for testing the Polkadot relay chain. Contrary to the Paseo testnet, the Westend testnet is used by the core developers to iterate on
 protocol-level features like [asynchronous backing](../learn/learn-async-backing.md), etc, that are
 not relevant for parachain developers.
 
@@ -780,3 +781,11 @@ operation. In terms of OpenGov, it allows the [Fellowship](#technical-fellowship
 ## Zombienet
 
 A tool for running local Polkadot and Substrate testnets.
+
+
+# Other Glossaries
+
+See below other glossaries about the Polkadot Ecosystem.
+
+- [Polkadot Glossary by UX Bounty](https://polkadot-ux-bounty.notion.site/UX-Glossary-v01-1a4e1c2781f3809c9292c6764804fa74)
+- [Glossary by Polkadot Support](https://support.polkadot.network/support/solutions/articles/65000110873-glossary)

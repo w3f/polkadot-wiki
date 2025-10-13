@@ -1,5 +1,5 @@
 ---
-title: Multisig Account Guides
+title: Polkadot-JS Multisig Guides
 description: Learn how to create and manage multisig accounts for secure and collaborative transactions on Polkadot-JS.
 ---
 

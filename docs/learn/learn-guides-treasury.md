@@ -1,5 +1,5 @@
 ---
-title: Treasury Guides for Polkadot-JS
+title: Polkadot-JS Treasury Guides
 description: Learn how to create treasury proposals, submit referenda, and manage funds using Polkadot-JS.
 ---
 
@@ -229,8 +229,8 @@ The next steps are to:
 - Sign and submit the preimage
 
 Once this is finished, one may submit a proposal
-[as stated above](#submit-a-treasury-track-referendum). Keep in mind one will also need to
-[provide the decision deposit as well](#place-a-decision-deposit-for-the-treasury-track-referendum).
+as described [here](./learn-guides-treasury.md#submitting-a-treasury-track-referendum). Keep in mind one will also need to
+[provide the decision deposit as well](./learn-guides-treasury.md#placing-a-decision-deposit-for-the-treasury-track-referendum).
 
 ### Manually Claiming Payouts
 

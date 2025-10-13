@@ -10,14 +10,13 @@ description: Dive into Polkadot OpenGov, its decentralized governance model, ref
     <a href="./learn-account-balances#locks" target="_blank" rel="noopener noreferrer">
       balances and locks.
     </a>
+    For additional support about Polkadot OpenGov, see the
+    <a href="https://support.polkadot.network/support/solutions/65000105211" target="_blank" rel="noopener noreferrer">
+      dedicated support pages.
+    </a>
   </p>
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
-
-!!!caution "The content in this document is subject to change"
-    The governance protocol has already undergone iterations. Governance is a constantly evolving protocol.
-    
-    For additional support about Polkadot OpenGov, see the [dedicated support pages](https://support.polkadot.network/support/solutions/65000105211).
 
 Polkadot uses a sophisticated governance mechanism that allows it to evolve gracefully overtime at
 the ultimate behest of its assembled stakeholders. The goal is to ensure that most of the stake can
@@ -30,68 +29,38 @@ approval voting. All changes to the protocol must be agreed upon by stake-weight
 
 Here below there links to useful tools about Polkadot OpenGov.
 
-<div class="grid cards" markdown>
+<div class="grid cards cards-3" markdown>
+  
+- **[OpenGov.Watch](https://www.opengov.watch/)**  
+  🕵️ OpenGov Watch is your gateway to understanding current efforts in OpenGov. Access reports, referenda info, guides, and even book a call.
 
-- **[OpenGov.Watch](https://www.opengov.watch/)** - OpenGov Watch website.
-- **[OpenGov Tracker](https://ogtracker.io/)** - OpenGov Tracker website.
-- **[OpenGov Portal](https://opengovwatch.notion.site/Polkadot-OpenGov-Portal-f8baf91a46864144ae96c47173a10225)** - OpenGov Portal on Notion.
+- **[OpenGov Tracker](https://ogtracker.io/)**  
+  📊 Shows the status of referenda and bounties in OpenGov with beautiful visualizations.
 
+- **[OpenGov Portal](https://opengovwatch.notion.site/Polkadot-OpenGov-Portal-f8baf91a46864144ae96c47173a10225)**  
+  📚 The Notion-based OpenGov Portal helps you dive into governance areas and learn how things work.
+  
 </div>
 
-## Premise
-
-Polkadot's first governance system Governance V1 included three
-main components: the Technical Committee, the Council, the Public (i.e. all token holders).
-
-Over the first few years of operation, Governance V1 ensured the appropriate usage of treasury funds
-and enabled timely upgrades and fixes. Like most early technologies, protocols must evolve as they
-mature to improve their shortcomings and keep up with modern advancements. In Governance V1, all
-referenda carried the same weight as only one referendum could be voted on at a time (except for
-emergency proposals), and the voting period could last multiple weeks. Also, an
-alternating voting timetable allowed to vote either for a public referendum or a council motion every 28 days (7 days on Kusama). This
-resulted in the system favoring careful consideration of very few proposals instead of broad
-consideration of many.
-
-Polkadot OpenGov changes how the practical means of day-to-day decisions are made, making the
-repercussions of referenda better scoped and agile to increase the number of collective decisions
-the system can make at any given time.
-
-The following content is focused on Polkadot OpenGov, and on the main differences with previous
-governance versions.
+See also [Polkadot-JS OpenGov Guides](./learn-guides-polkadot-opengov.md).
 
 ## Summary
 
-In Governance v1, active token holders (public) and the Council administrated the network's upgrade
-decisions. Whether the public or the council initiated the proposal, it would eventually have to go
-through a referendum to let all holders (weighted by stake and conviction) make the decision.
-
-The Council fulfilled its role as the representative of the public, guardian of the treasury and
-initiator of legislation, but it was often seen as a centralized entity. To further decentralize the
-network, Polkadot OpenGov proposes the following main changes:
-
-- Migrating all responsibilities of the Council to the public via a direct democracy voting system.
-- Dissolving the Council collective
-- Allowing users to delegate voting power in more ways to community members
-- Dissolving the Technical Committee and establishing the broader [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md)
-
-The figure below shows an overview of Polkadot OpenGov's structure.
-
-![opengov-overview](../assets/opengov-overview.png)
-
 In Polkadot OpenGov, all the proposals are initiated by the public. The proposal will enter a
 Lead-in period (for more information, see [Referenda Timeline](#referenda-timeline)), after which it
-will follow a specific [Track](#origins-and-tracks) which has a dedicated Origin. There are
-[15 Origins](./learn-polkadot-opengov-origins.md#origins-and-tracks-info), each with a different
-track. The origins and tracks parameters are preset values that set the duration of a referendum as
+will follow a specific [track](#origins-and-tracks) which has a dedicated origin. There are
+[15 origins](./learn-polkadot-opengov-origins.md#origins-and-tracks-info), each with a different
+track configuration. Tracks parameters are preset values that set the duration of a referendum as
 well as how many referenda can be voted on simultaneously. For example, a treasury proposal can now
 be submitted in different tracks depending on the amount requested. A proposal for a small tip will
 need to be submitted to the Small Tipper track, while a proposal requiring substantial funds will
 need to be submitted to the Medium or Big Spender track.
 
+![opengov-overview](../assets/opengov-overview.png)
+
 The [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md) can decide to
 [whitelist](./learn-polkadot-technical-fellowship.md#whitelisting) a proposal that will be enacted through the Whitelist Caller origin.
-Those proposals will have a shorter Lead-in, Confirmation, and Enactment period when compared to the
-Root Origin track.
+Those proposals will have a shorter Lead-in, Confirmation, and Enactment period when compared to the Root origin.
 
 Each track has its own preset [Approval and Support](#approval-and-support) curves based on the
 origin's privileges. When both the approval and support criteria are satisfied for a specific period
@@ -101,7 +70,7 @@ period.
 All referenda within each track and across tracks can be voted on simultaneously (assuming the
 track's maximum capacity is not reached).
 
-Polkadot OpenGov also comes with multi-role delegations where the token holder can assign voting
+Polkadot OpenGov also comes with [multi-role delegations](#multirole-delegation) where the token holder can assign voting
 power on different tracks to different entities who are experts in judging the referenda submitted
 to those tracks. For example, suppose a token holder does not have the technical background to
 consider the merits and vote on the referenda submitted to the Root track. In that case, they can
@@ -109,29 +78,16 @@ delegate their voting power just for the Root track to a trusted expert who (acc
 in the best interest of the network protocol. In this way, token holders do not need to be
 up-to-date with governance matters and can still make their votes count through delegates.
 
-## Gov1 vs. Polkadot OpenGov
-
-| Governance V1                                                                                                                                                                                                                                                                                                                                          | Polkadot OpenGov                                                                                                                                                                                                                                       | Polkadot OpenGov Benefit                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Includes the Council, the Technical Committee, and the Public (i.e. token holders).                                                                                                                                                                      | Includes the Public and the [Technical Fellowship](./learn-polkadot-technical-fellowship.md).                                                                                                                                                          | Simpler and more decentralized structure.                                                                                                                          |
-| Referenda executed only from one origin (Root). Referenda in this origin must be carefully scrutinized. Therefore, there is only one track (i.e., only one referendum at a time can be executed).                                                                                                                                                      | Referenda executed from [multiple origins](./learn-polkadot-opengov-origins.md#origins-and-tracks-info), each with a different track that shapes proposals’ timelines. Depending on the origin, multiple referenda within the same track are possible. | Possibility to categorize proposals (based on importance and urgency) and execute them simultaneously within and between origin tracks.                            |
-| Proposals can be submitted by either the Council or the Public.                                                                                                                                                                                                                                                                                        | The public submits proposals.                                                                                                                                                                                                                          | More democratic.                                                                                                                                                   |
-| Uses Adaptive Quorum Biasing to define the approval threshold based on turnout. Given the same turnout, council-initiated referenda require fewer Aye votes to pass compared to public referenda.                                                                                             | Uses origin-specific approval and support curves defining the amount of approval and support (i.e. turnout) needed as a function of time. The same curves are applied to all referenda within the same origin track.                                   | Referenda timeline depends on the origin and not on who submitted the proposal (i.e. Council or Public). This is a more democratic and equalitarian system.        |
-| Uses alternating voting timetable allowing voters to cast votes for either council or public referenda every 28 eras.                                                                                                                                                                    | Multiple referenda can be voted at the same time.                                                                                                                                                                                                      | More flexible and agile governance system.                                                                                                                         |
-| Except for emergency proposals, all referenda have fixed voting and enactment periods of 28 eras.                                                                                                                                                                                                                                                      | Periods' length is customizable and has pre-defined limits for each origin. The same limits apply to all tracks with the same origin. For example, the track in the origin Root will be longer than the track within the Small Tipper origin.          | Referenda’s timeline is tailored to their importance and urgency. Flexible enactment period based on origin.                                                       |
-| Emergency proposals turned referenda can be simultaneously voted on and executed with other referenda and have shorter enactment periods. They must be proposed by the Technical Committee and approved by the Council.                                                                                                                                | No emergency proposals. The Technical Fellowship can whitelist proposals that will have their origin with shorter lead-in, confirmation, and enactment periods.                                                                                        | The Technical Fellowship is a more decentralized entity than the Technical Committee. Whitelisting a proposal requires a majority of approval from the fellowship. |
-| Only the most endorsed proposal is able to transit from Launch to Voting period. The time for the transition is indeterminate, and (with no possibility of canceling endorsements) proposers and endorsers might wait a long time before a referendum is tabled, and getting their deposits back. | All proposals will eventually be voted on (given track capacity and deposit are met and the Lead-in period has ended).                                                                                                                                 | It allows all proposals to get a chance to be voted on in a timely, predictive manner.                                                                             |
-| Only _aye_ or _nay_ votes possible.                                                                                                                                                                                                                                                                                                                    | Voters can have the additional voting options of abstaining or splitting votes.                                                                                                                                                                        | More ways to engage in voting and increase turnout.                                                                                                                |
-| Voters can decide to delegate votes to another account.                                                                                                                                                                                                                                                                                                | Voters can use [multirole delegations](#multirole-delegation) and delegate votes to different accounts depending on origins.                                                                                                                           | More agile delegations tailored by expertise.                                                                                                                      |
-
 ## Referenda
 
 In Polkadot OpenGov all referenda are public. Anyone can start a referendum at any time and do
-so as often as they wish. Previous features were expanded and improved, most notably
-[**Origins and Tracks**](#origins-and-tracks) help facilitate the flow and processing of the
-submitted referenda. The [Technical Fellowship](./learn-polkadot-technical-fellowship.md) has the
-option to [whitelist](./learn-polkadot-technical-fellowship.md#whitelisting) referenda that can be then proposed in the track with
-[whitelist origin](./learn-polkadot-opengov-origins.md#whitelisted-caller).
+so as often as they wish. [**Origins and Tracks**](#origins-and-tracks) help facilitate the flow and processing of the submitted referenda, while the [Technical Fellowship](./learn-polkadot-technical-fellowship.md) has the option to [whitelist](./learn-polkadot-technical-fellowship.md#whitelisting) referenda that can be then proposed in the track with [whitelist origin](./learn-polkadot-opengov-origins.md#whitelisted-caller) (sort of a fast track).
+
+### OpenGov Deposits
+
+A submission deposit is needed to store a proposal's preimage as part of the proposal creation process. On Polkadot, the submission deposit is around [42 DOT](https://polkadot.js.org/apps/#/preimages). 
+
+An origin-dependent decision deposit is also needed to enter the decision period of a particular referendum (see below). See how you can claim back your deposits [here](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits).
 
 ### Referenda Timeline
 
@@ -149,17 +105,17 @@ three criteria:
   amount of voting power might seek to have a proposal passed immediately after proposing, not
   allowing the overall voting population adequate time to consider and participate.
 - There must be enough room for the decision within the origin. Different origins have their limit
-  on the number of proposals that can be decided simultaneously. Tracks that have more potent
-  abilities will have lower limits. For example, the Root level Origin has a limit of one, implying
-  that only a single proposal may be decided on at once.
-- A decision deposit must be submitted. Creating a referendum is cheap as the deposit value consists
+  on the number of proposals that can be decided simultaneously. Origins that have more potent
+  abilities will have lower limits. For example, the Root level origin has a limit of one, implying
+  that only a single proposal may be decided on at once on its track.
+- A decision deposit must be submitted. Creating a referendum is cheap as the submission deposit value consists
   of only the value required for the on-chain storage needed to track it. But, having a referendum
   reviewed and decided upon carries the risk of using up the limited spots available in the
-  referenda queue. Having a more significant but refundable deposit requirement makes sense to help
+  referenda queue. Having a more significant but refundable deposit requirement helps
   mitigate spam. Failing to submit the decision deposit will lead to a referendum _timeout_.
 
 !!!info "Decision Deposit Amounts"
-    In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the track’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper track inflict low economic damage to the network. In contrast, malicious referenda on the Root track can inflict more significant harm, such as changing the entire network's runtime.
+    In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the origin’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper origin inflict low economic damage to the network. In contrast, malicious referenda on the Root origin can inflict more significant harm, such as changing the entire network's runtime.
 
 Until they are in the lead-in period, proposals remain undecided. Once the criteria above are met,
 the referendum moves to the _deciding_ state. The votes of the referendum are now counted towards
@@ -174,8 +130,8 @@ In (3), approved proposals will enter the **Enactment Period**, after which prop
 executed.
 
 Note how the length of the lead-in, decision, confirmation, and enactment periods vary depending on
-the track. Root origin track has more extended periods than the other tracks. Also, the number of
-referenda within each track differs, with the Root origin track only accepting one proposal at a
+the origin. Root origin has more extended periods than the other tracks. Also, the number of
+referenda within each track differs, with the Root origin only accepting one proposal at a
 time (see below).
 
 ![opengov-track-capacity](../assets/opengov-track-capacity.png)
@@ -190,13 +146,12 @@ For examples of collectives, see the [Polkadot Alliance](https://polkadot-old.po
 
 ### Origins and Tracks
 
-An **Origin** is a specific level of privilege that will determine the **Track** of all referenda
+An **Origin** is a specific level of privilege that will determine the **Track** configuration of all referenda
 executed with that origin. The track is a pipeline in which the proposal lives and proceeds,
-independent of other origins' tracks. The proposer of the referenda now selects an appropriate
-Origin for their request based on the proposal’s requirements.
+independent of other origins' tracks. The proposer of the referenda selects an appropriate
+origin for their request based on the proposal’s requirements.
 
-Although the track structure is the same for all origins, track parameters are not. Such parameters
-include:
+Although the track structure is the same for all origins, track parameters are not. Such parameters include:
 
 - **Maximum Deciding or Capacity**: the limit for the number of referenda that can be decided at
   once (i.e., the number of tracks within each origin).
@@ -234,12 +189,8 @@ For detailed information about origin and tracks, and parameter values in Kusama
 
 ### Voluntary Locking (Conviction Voting)
 
-!!!info "Conviction Voting Locks created during Gov 1"
-    Conviction voting locks in Governance v1 will not be carried over to OpenGov. Voting with conviction in OpenGov will create a new lock (as this will use the `convictionVoting` pallet), while any existing lock under Governance v1 (using the deprecated `democracy` pallet) will be left to expire. Delegations under Governance v1 will need to be re-issued under OpenGov.
-
 Polkadot utilizes an idea called voluntary locking that allows token holders to increase their
-voting power by declaring how long they are willing to lock up their tokens; hence, the number of
-votes for each token holder will be calculated by the following formula:
+voting power by declaring how long they are willing to lock up their tokens; hence, the number of votes for each token holder will be calculated by the following formula:
 
 ```
 votes = tokens * conviction_multiplier
@@ -314,6 +265,8 @@ referendum. Now, let us calculate the Approval and Support values for that refer
 !!!info "Nay votes are not counted towards Support"
     Support is a measure of voters who turned out either in favor of the referenda or consciously abstained from it. Support does not include _nay_ votes. This avoids edge situations where _nay_ votes could push a referendum into a confirming state. For example, imagine current approval is high (near 100%, way above the approval curve), and current support is just below the support curve. A _nay_ could bump support above the support curve but not reduce approval below the approval curve. Therefore, someone voting against a proposal would make it pass. Hence, a decrease in % of current approval through new votes does not directly translate into increasing support because Support needs to consider _nay_ votes.
 
+![opengov-curves-pass](../assets/opengov-curves-nopass.png)
+
 The figure above shows the following:
 
 - Even if the approval threshold is reached (i.e., % of current approval is greater than the
@@ -338,12 +291,10 @@ The figure above shows the following:
   all the active token supply has voted on a proposal, the conviction vote-weighted support should
   always be above 50% to pass.
 
-![opengov-curves-pass](../assets/opengov-curves-nopass.png)
-
 Note that support may not increase monotonically, as shown in the figure, as people might switch
 votes.
 
-Different Origins' tracks have different Confirmation Periods and requirements for approval and
+Different origins' tracks have different Confirmation Periods and requirements for approval and
 support. For additional details on the various origins and tracks, check out
 [this table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info). With proposals that use
 less privileged origins, it is far more reasonable to drop the required support to a more realistic
@@ -352,7 +303,7 @@ amount earlier than those which use highly privileged classes such as `Root`.
 ### Enactment
 
 In Polkadot OpenGov, the proposer suggests the enactment period, but there is also a minimum set for
-each Origin Track. For example, `root` Origin approvals require an extended period because of the
+each origin track. For example, `root` origin approvals require an extended period because of the
 importance of the changes they bring to the network.
 
 ### Cancelling, Killing & Blacklisting
@@ -386,8 +337,7 @@ A proposal can be blacklisted by Root Origin. A blacklisted proposal and its rel
 
 If you are a voter, it means that you will vote with your tokens on each single referendum.
 
-In Governance V1, voters could cast only an _aye_ or _nay_ vote. In Polkadot OpenGov, voters can
-additionally cast a _abstain_ and _split_ votes.
+In Polkadot OpenGov, voters can cast _aye_, _nay_, _abstain_, and _split_ votes.
 [Vote splitting](./learn-guides-polkadot-opengov.md#voting-on-referenda) allows voters to allocate
 different votes for _aye_, _nay_, and _abstain_. Voting with conviction is not possible when
 abstaining or splitting the votes.
@@ -417,8 +367,7 @@ side.
 
 If you vote without conviction, the referendum is ongoing, and you remove the vote, you can unlock
 your tokens immediately. If the referendum ended, you can remove your vote and unlock your tokens
-immediately, regardless of whether you are on the winning or losing side of the referendum. The
-governance app or interface you used for participating in Polkadot OpenGov should show an option to
+immediately, regardless of whether you are on the winning or losing side of the referendum. The interface you used for participating in Polkadot OpenGov should show an option to
 unlock your tokens.
 
 ### Voting with Conviction
@@ -452,9 +401,7 @@ on Multirole Delegation for more information.
 
 ## Multirole Delegation
 
-Polkadot OpenGov builds on the vote delegation feature from Governance v1 where a
-voter can delegate their voting power to another voter. It does so by introducing a feature known as
-**multirole delegation**, where voters can specify a different delegate for every class of
+Polkadot OpenGov introduces a feature known as **multirole delegation**, where voters can specify a different delegate for every class of
 referendum in the system. Delegation can be done per track, and accounts can choose to select
 different delegates (or no delegation) for each track.
 
@@ -501,13 +448,23 @@ knowledge to judge some referenda or might not have the time to read all referen
 allow voters to participate in OpenGov hands-free by delegating their voting power to trusted
 entities.
 
-## Resources
+## Governance V1 vs. Polkadot OpenGov
 
-- [Democracy Pallet](https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/democracy/src)
-- [Governance v2](https://medium.com/polkadot-network/gov2-polkadots-next-generation-of-decentralised-governance-4d9ef657d11b)
-- [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io)
-- [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io)
-- [Polkassembly](https://polkadot.polkassembly.io/)
+Below is a comparison table between the first iteration of Polkadot governance (Governance V1) and OpenGov. If you are curious about Governance V1, see [this documentation](https://messari.io/report/polkadot-opengov-report).
+
+| Governance V1                                                                                                                                                                                                                                                                                                                                          | Polkadot OpenGov                                                                                                                                                                                                                                       | Polkadot OpenGov Benefit                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Includes the Council, the Technical Committee, and the Public (i.e. token holders).                                                                                                                                                                      | Includes the Public and the [Technical Fellowship](./learn-polkadot-technical-fellowship.md).                                                                                                                                                          | Simpler and more decentralized structure.                                                                                                                          |
+| Referenda executed only from one origin (Root). Referenda in this origin must be carefully scrutinized. Therefore, there is only one track (i.e., only one referendum at a time can be executed).                                                                                                                                                      | Referenda executed from [multiple origins](./learn-polkadot-opengov-origins.md#origins-and-tracks-info), each with a different track that shapes proposals’ timelines. Depending on the origin, multiple referenda within the same track are possible. | Possibility to categorize proposals (based on importance and urgency) and execute them simultaneously within and between origin tracks.                            |
+| Proposals can be submitted by either the Council or the Public.                                                                                                                                                                                                                                                                                        | The public submits proposals.                                                                                                                                                                                                                          | More democratic.                                                                                                                                                   |
+| Uses Adaptive Quorum Biasing to define the approval threshold based on turnout. Given the same turnout, council-initiated referenda require fewer Aye votes to pass compared to public referenda.                                                                                             | Uses origin-specific approval and support curves defining the amount of approval and support (i.e. turnout) needed as a function of time. The same curves are applied to all referenda within the same origin track.                                   | Referenda timeline depends on the origin and not on who submitted the proposal (i.e. Council or Public). This is a more democratic and equalitarian system.        |
+| Uses alternating voting timetable allowing voters to cast votes for either council or public referenda every 28 eras.                                                                                                                                                                    | Multiple referenda can be voted at the same time.                                                                                                                                                                                                      | More flexible and agile governance system.                                                                                                                         |
+| Except for emergency proposals, all referenda have fixed voting and enactment periods of 28 eras.                                                                                                                                                                                                                                                      | Periods' length is customizable and has pre-defined limits for each origin. The same limits apply to all tracks with the same origin. For example, the track in the origin Root will be longer than the track within the Small Tipper origin.          | Referenda’s timeline is tailored to their importance and urgency. Flexible enactment period based on origin.                                                       |
+| Emergency proposals turned referenda can be simultaneously voted on and executed with other referenda and have shorter enactment periods. They must be proposed by the Technical Committee and approved by the Council.                                                                                                                                | No emergency proposals. The Technical Fellowship can whitelist proposals that will have their origin with shorter lead-in, confirmation, and enactment periods.                                                                                        | The Technical Fellowship is a more decentralized entity than the Technical Committee. Whitelisting a proposal requires a majority of approval from the fellowship. |
+| Only the most endorsed proposal is able to transit from Launch to Voting period. The time for the transition is indeterminate, and (with no possibility of canceling endorsements) proposers and endorsers might wait a long time before a referendum is tabled, and getting their deposits back. | All proposals will eventually be voted on (given track capacity and deposit are met and the Lead-in period has ended).                                                                                                                                 | It allows all proposals to get a chance to be voted on in a timely, predictive manner.                                                                             |
+| Only _aye_ or _nay_ votes possible.                                                                                                                                                                                                                                                                                                                    | Voters can have the additional voting options of abstaining or splitting votes.                                                                                                                                                                        | More ways to engage in voting and increase turnout.                                                                                                                |
+| Voters can decide to delegate votes to another account.                                                                                                                                                                                                                                                                                                | Voters can use [multirole delegations](#multirole-delegation) and delegate votes to different accounts depending on origins.                                                                                                                           | More agile delegations tailored by expertise.                                                                                                                      |
+
 
 ---
 

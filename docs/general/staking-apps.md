@@ -9,7 +9,6 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
     and add your protocol native, permissionless, non-custodial NPoS Staking app to this page.
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
-- [Sub.ID](#subid)
 - [NOMI](#nomi)
 - [SubWallet Earning](#subwallet-earning)
 
@@ -94,13 +93,6 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
     <p class="card-title">Create, Manage & Destroy Pools</p>
   </a>
 </div>
-
-## Sub.ID
-
-[Sub.ID](https://sub.id/) is a one-stop-shop for managing your Polkadot accounts, viewing your
-addresses and balances, and looking at other accounts. It features a Polkadot
-[staking page](https://sub.id/validator/polkadot), where you can easily start staking. Stakers can
-choose their preferred validators or stake with the recommended validator set.
 
 ## NOMI
 

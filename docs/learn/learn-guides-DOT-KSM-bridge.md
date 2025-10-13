@@ -1,10 +1,7 @@
 ---
-id: learn-guides-dot-ksm-bridge
-title: DOT and KSM Bridge Guide
-sidebar_label: DOT <> KSM Bridge
+title: Polkadot-JS DOT and KSM Bridge Guides
 description: Step-by-step guide to transferring assets between Polkadot and Kusama ecosystems using the bridge hub.
 keywords: [Bridge, XCM, Bridge Hub, polkadot-js]
-slug: ../learn-guides-dot-ksm-bridge
 ---
 
 <!-- MessageBox -->

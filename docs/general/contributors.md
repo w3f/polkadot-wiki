@@ -61,8 +61,7 @@ At the Web3 Foundation, Filippo contributes to this mission by educating profess
 general public about blockchain and Web3. He actively engages with the Polkadot ecosystem, regularly
 contributing to Wiki articles. He is a
 [certified blockchain analyst](https://www.credential.net/bad85935-7e6e-4b4a-9ed2-e96128bdb5e5) and
-a [PBA-X](https://pbax.polkadot.academy/) and [PBA on-chain track](https://polkadot.academy/pba-campus/) graduate. Currently, he is expanding his expertise by
-learning [Rust](https://www.rust-lang.org/) and [Substrate](https://substrate.io/).
+a [PBA-X](https://pbax.polkadot.academy/) and [PBA on-chain track](https://polkadot.academy/pba-campus/) graduate.
 
 ### Bader Youssef
 
@@ -122,14 +121,9 @@ and blockchain classes at General Assembly, Code Fellows, and Columbia Universit
 
 ### Danny Salman
 
-- email: [danny.f.salman@gmail.com](mailto:danny.f.salman@gmail.com)
-- matrix: [@dannysalman:matrix.org](https://matrix.to/#/@dannysalman:matrix.org)
-- telegram: [@dannysalman](https://t.me/dannysalman)
-- twitter: [@dannysalman\_](https://twitter.com/dannysalman_)
-
-Danny was a Technical Educator at Web3 Foundation who has a keen interest in blockchain and
-trust-free technologies. As a Technical Educator, Danny taught and documented Polkadot. He has a
-Bachelor of Engineering in Computer Engineering and a background in philosophy & politics.
+Danny was a Technical Educator at the Web3 Foundation, teaching and documenting Polkadot and Web3. 
+His interests center on blockchain and trust-minimized technologies. He has a background in computer 
+engineering, full-stack development, philosophy, and public policy and governance.
 
 ### Alex Chau
 
@@ -169,9 +163,9 @@ immutable ledgers of the present and future.
 
 In a previous life, he was a web developer and senior PHP editor at SitePoint, which culminated in a
 [book about web-dev-friendly virtual environments](https://www.amazon.com/Jump-Start-PHP-Environment-Language/dp/0994182643).
-In his [quest for developer health](https://bruno.id/an-endomorphs-journey-to-health-part-2/), he
+In his quest for developer health, he
 likes to combine fitness and gaming and can be found in VR on Oculus and Steam as TheSwader. He also
-runs a weekly newsletter covering all things Web3 at [DotLeap](https://dotleap.substack.com).
+runs a weekly newsletter covering all things Web3 at [DotLeap](https://newsletter.dotleap.com/).
 
 You can now find Bruno hacking the metaverse by leading the way at [RMRK](https://rmrk.app/) to
 create the next-generation NFT standard.

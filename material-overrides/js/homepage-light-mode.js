@@ -56,8 +56,8 @@
         const logoElements = document.querySelectorAll('.md-header__button.md-logo img, .md-logo img, .md-footer-meta img');
         logoElements.forEach(logo => {
             if (logo && (logo.src.includes('logo') || logo.closest('.md-logo') || logo.closest('.md-footer-meta'))) {
-                if (!logo.src.includes('logo.webp')) {
-                    logo.src = 'assets/images/logo.webp';
+                if (!logo.src.includes('wiki-logo.svg')) {
+                    logo.src = 'assets/images/wiki-logo.svg';
                 }
             }
         });

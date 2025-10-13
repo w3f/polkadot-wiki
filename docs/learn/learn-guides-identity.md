@@ -1,10 +1,7 @@
 ---
-id: learn-guides-identity
-title: Identity Management with Polkadot-JS
-sidebar_label: Identity Guides
+title: Polkadot-JS Identity Guides
 description: A guide to managing identities, registrars, and sub-identities using Polkadot-JS UI.
 keywords: [registrar, identity, sub-identity, polkadot-js]
-slug: ../learn-guides-identity
 ---
 
 <!-- MessageBox -->

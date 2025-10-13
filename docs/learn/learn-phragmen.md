@@ -613,7 +613,7 @@ constitutes state of the art in terms of optimization.
 
 Proportional representation is a very important property for a decentralized network to have in
 order to maintain a sufficient level of decentralization. While this is already provided by the
-currently implemented `seqPhragmen`, this new election rule provides the advantage of the added
+currently implemented `seqPhragmen`, the `Balphragmms` election rule provides the advantage of the added
 security guarantee described below. As far as we can tell, at the time of writing, Polkadot and
 Kusama are the only blockchain networks that implement an election rule that guarantees proportional
 representation.
@@ -644,7 +644,7 @@ strength deserve to have a number of representatives proportional to the group‚Ä
 _Sequential Phragm√©n_ (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve
 PJR.
 
-Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although
+Polkadot employs the `seqPhragmen` method for validator and council elections. Although
 `seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the
 maximin support problem. This is due to `seqPhramen` only performing an _approximate_ rebalancing of
 the distribution of stake.
@@ -699,10 +699,7 @@ inserts them with higher support values.
 - Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector _w_ is completely rebalanced after
   each iteration of the algorithm.
 
-The `Phragmms` election rule is currently being implemented on Polkadot. Once completed, it will
-become one of the most sophisticated election rules implemented on a blockchain. For the first time,
-this election rule will provide both fair representation (PJR) and security (constant-factor
-approximation for the maximin support objection) to a blockchain network.
+The `Phragmms` election rule is implemented on Polkadot. This election rule provides both fair representation (PJR) and security (constant-factor approximation for the maximin support objection) to a blockchain network.
 
 #### Algorithm
 

@@ -20,7 +20,7 @@ moving parts of [**Polkadot-JS tool collection**](./polkadotjs.md), and its func
 beyond normal wallet functionalities such as transfers.
 
 > Note that the UI may not precisely align with the functionality of individual parachains. For more
-> information see the [**Polkadot-JS Page**](./polkadotjs.md#polkadot-js-api).
+> information see the [**Polkadot-JS Page**](./polkadotjs.md).
 
 ## Main Functionalities
 
@@ -31,7 +31,7 @@ functionalities include account generation, balance transfers, and staking.
 
 In this section of the UI, you can see accounts injected from a browser extension, such as the
 [**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or other in-browser wallets. It is also possible to expand balance details and see different
-[**account balance types**](../learn/learn-account-balances.md#balance-types-on-polkadot-js). You
+[**account balance types**](../learn/learn-account-balances.md). You
 can also:
 
 - Add an account (this option must be enabled under [Settings](#settings)). Note that if you clear
@@ -60,8 +60,7 @@ In this section of the UI, you can participate in [**staking**](../learn/learn-s
 Staking menu you can access:
 
 - The **Overview** tab showing active or waiting validators.
-- The **Accounts** tab (visible only if you added an account) showing accounts that are currently
-  used for staking
+- The **Accounts** tab (visible only if you added an account) showing accounts that are used for staking
   ([**stash and staking proxy**](../learn/learn-staking.md#stash-account-and-staking-proxy)), bonded
   amount, and nominations. In this tab, you can do staking-related transactions such as bonding more
   funds or changing nominations. If you have

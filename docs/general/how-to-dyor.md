@@ -46,8 +46,7 @@ grants for projects to build on or expand their project. These are also indicato
 committed to building on the broader Polkadot ecosystem.
 
 Receiving funding from reputable VCs and are known to be involved with other reputable Polkadot
-projects can also be a good indicator. Or participating in the
-[Polkadot Alpha Program](https://polkadot.network/development/alpha/).
+projects can also be a good indicator.
 
 **However**, claiming such associations and having them is not always the same thing. **You always
 need to verify any claims a project makes**, and that is probably the most critical takeaway from
@@ -173,7 +172,7 @@ There are many ways for a project to build on Polkadot. Some of the most notable
 are parachains on Kusama or gearing up to become one. Parachains can purchase
 [coretime](../learn/learn-agile-coretime.md) and access a relay chain's core.
 
-Verifying which projects are currently parachains on Kusama can be quickly done by visiting the
+Verifying which projects are parachains on Kusama can be quickly done by visiting the
 [parachains](https://polkadot.js.org/apps/#/parachains) page on
 [polkadot.js.org/apps](https://polkadot.js.org/apps).
 
@@ -196,7 +195,7 @@ These plans should be evaluated in tandem with your research on the technical ex
 This is especially true for projects that are already running on another network, like on Ethereum
 or Binance Smart Chain, and have issued tokens there. Many projects do that either to raise funds
 and test their infrastructure or because they aim to build a "multi-chain" solution or both. But
-because those projects are not currently built on Substrate, the existence of a clear and robust
+because those projects are not built on Substrate, the existence of a clear and robust
 integration plan with the relay chain should be essential in your research to ensure that they will
 indeed build on it one day.
 

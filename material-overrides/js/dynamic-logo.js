@@ -26,11 +26,11 @@
         return prefix + 'assets/images/' + filename;
     }
     
-    // Update logo paths whenever we navigate
+    // Update the logo paths whenever we navigate
     function updateLogoPaths() {
         return {
-            light: getLogoPath('logo.webp'),
-            dark: getLogoPath('logo-white.png')
+            light: getLogoPath('wiki-logo.svg'),
+            dark: getLogoPath('wiki-logo-white-dark.svg')
         };
     }
 
@@ -42,55 +42,20 @@
                window.location.pathname.endsWith('/') && window.location.pathname.split('/').length <= 2;
     }
 
-    // Get the current theme
+    // Get the current theme - CSS-first approach
     function getCurrentTheme() {
-        const htmlElement = document.documentElement;
-        const bodyElement = document.body;
-        
-        // Check multiple possible locations for theme information
-        const htmlScheme = htmlElement.getAttribute('data-md-color-scheme');
-        const bodyScheme = bodyElement.getAttribute('data-md-color-scheme');
-        const htmlClasses = htmlElement.className;
-        const bodyClasses = bodyElement.className;
-        
-        // Check for checked palette input
-        const checkedInput = document.querySelector('input[name="__palette"]:checked');
-        const checkedScheme = checkedInput ? checkedInput.getAttribute('data-md-color-scheme') : null;
-        
-        
-        // Determine theme from multiple sources
-        let scheme = htmlScheme || bodyScheme || checkedScheme || 'default';
-        
-        // Fallback: check CSS custom properties
-        if (scheme === 'default' || !scheme) {
-            const computedStyle = getComputedStyle(htmlElement);
-            const bgColor = computedStyle.getPropertyValue('--md-default-bg-color').trim();
-            
-            // If background is dark, we're probably in dark mode
-            if (bgColor && (bgColor === '#1a1a1a' || bgColor.includes('1a1a1a'))) {
-                scheme = 'slate';
-            }
+        // Priority 1: Use CSS Theme system if available
+        if (window.CSSTheme && window.CSSTheme.getCurrentTheme) {
+            return window.CSSTheme.getCurrentTheme();
         }
         
-        // Additional fallback: check body background color
-        if (scheme === 'default' || !scheme) {
-            const bodyStyle = getComputedStyle(bodyElement);
-            const bodyBg = bodyStyle.backgroundColor;
-            
-            // Parse RGB values to detect dark backgrounds
-            if (bodyBg.includes('rgb')) {
-                const rgbMatch = bodyBg.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-                if (rgbMatch) {
-                    const [, r, g, b] = rgbMatch.map(Number);
-                    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-                    
-                    if (brightness < 128) {
-                        scheme = 'slate';
-                    }
-                }
-            }
-        }
-        return scheme === 'slate' ? 'dark' : 'light';
+        // Priority 2: Check DOM for Material's data attribute
+        const htmlScheme = document.documentElement.getAttribute('data-md-color-scheme');
+        if (htmlScheme === 'slate') return 'dark';
+        if (htmlScheme === 'default') return 'light';
+        
+        // Priority 3: Fallback to light theme
+        return 'light';
     }
 
     // Update the logo based on current theme
@@ -99,7 +64,6 @@
         
         // Always use light logo on homepage
         if (isHomePage()) {
-            setLogo(logoPaths.light);
             return;
         }
 
@@ -180,12 +144,17 @@
         });
     }
 
-    // Initialize logo switcher
+    // Initialize logo switcher - CSS-first approach
     function init() {
-        // Set initial logo quickly
-        setTimeout(updateLogo, 50);
+        // Update logo immediately
+        updateLogo();
         
-        // Watch for theme changes
+        // Listen for CSS theme changes
+        document.addEventListener('cssthemechange', function(event) {
+            setTimeout(updateLogo, 10);
+        });
+        
+        // Also watch for direct DOM changes (backup)
         watchThemeChanges();
         
         // Watch for new logo elements being added to DOM

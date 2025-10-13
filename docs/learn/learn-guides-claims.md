@@ -1,5 +1,5 @@
 ---
-title: Token Claims Guide
+title: Polkadot-JS Token Claims Guide
 description: Step-by-step guide to claiming your DOT and KSM tokens using Polkadot-JS UI.
 ---
 <!-- MessageBox -->

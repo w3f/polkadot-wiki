@@ -1,5 +1,5 @@
 ---
-title: Test OpenGov Referenda
+title: Polkadot-JS OpenGov Referenda Testing Guides
 description: Learn how to test Polkadot OpenGov referenda using Chopsticks to ensure successful execution before submission.
 ---
 

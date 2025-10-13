@@ -1,5 +1,5 @@
 ---
-title: Nominator Guides for Polkadot-JS
+title: Polkadot-JS Nominator Guides
 description: Learn how to bond tokens, nominate validators, and claim staking rewards using Polkadot-JS.
 ---
 

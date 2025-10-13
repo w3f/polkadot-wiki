@@ -12,27 +12,35 @@ slug: ../learn-guides-coretime-marketplaces
 
 The tutorials in this document utilize:
 
-- [CoreHub on RegionX](https://app.regionx.tech/), a user interface for purchasing and managing
+- [RegionX Hub](https://hub.regionx.tech/), a user interface for purchasing and managing
   Coretime regions.
 
 - [Lastic](https://www.lastic.xyz/), a Coretime marketplace user interface.
 
-!!!caution Both RegionX and Lastic are under active development and are released only for testing purposes.
-
 ## RegionX
 
-The RegionX CoreHub offers options to purchase and manage cores.
+The RegionX Hub is a UI developed for users to get an overview of the Agile Coretime system and interact with all its functionality.
+
+RegionX Hub so the UI is dynamic and adapts to different use cases.
+
+![RegionX-User-Specific](../assets/coretime/RegionX-user-specific-dashboards.png)
 
 ![RegionX-UI](../assets/coretime/RegionX-UI.png)
 
-### Purchasing Cores with RegionX
+### RegionX Hub Overview
 
-RegionX allows for purchasing core with accounts hosted on wallets like Subwallet, Talisman, Nova
-Wallet and Polkadot-JS Extension. Select the account to be used for the coretime purchase (displayed
-on top right) and ensure that both the relay chain and coretime chain are connected (displayed on
-bottom left). Then, click on the purchase button to sign and broadcast the transaction.
+RegionX provides a different dashboard for different use cases:
+- [Overview](https://hub.regionx.tech/?dashboard=overview&network=polkadot): The overview dashboard is for anyone who wants an overview of Coretime data and access to most functionalities from a single page.
+- [Deploying a new project](https://hub.regionx.tech/?dashboard=deploying-new-project&network=polkadot): The dashboard is designed to show only the information relevant for teams deploying a new project on Polkadot.
+- [Managing existing project](https://hub.regionx.tech/?dashboard=managing-existing-project&network=polkadot): Once a project is up and running on Polkadot, RegionX Hub provides a dashboard where teams can track their renewal status and compare the cost of renewing their core versus buying a new one in the sale.
 
-![RegionX-purchase-bulk-coretime](../assets/coretime/regionx-purchase-core.png)
+### Purchasing Cores on RegionX Hub
+
+After connecting their wallet, the user can track the current sale cycle and attempt to purchase a core.
+
+This functionality is accessible from the *overview* and *deploying a new project* dashboards.
+
+![RegionX-purchase-core](../assets/coretime/regionx-purchase-core.png)
 
 ### Managing Cores with RegionX
 

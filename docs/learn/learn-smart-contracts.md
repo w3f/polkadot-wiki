@@ -4,7 +4,7 @@ description: Learn about Ethereum-compatible smart contracts n Polkadot
 ---
 
 
-Smart contracts are self-executing programs that run deterministically on a blockchain, enabling decentralized applications (dApps) without intermediaries. Polkadot natively supports smart contracts written in Ethereum-compatible languages like Solidity or Vyper, as well as Rust. Additionally, the underlying Polkadot Virtual Machine allows any smart contract that compiles to RISC-V to run on its network.
+Smart contracts are self-executing, sandboxed programs that run deterministically on a blockchain, enabling decentralized applications (dApps) without intermediaries. Polkadot natively supports smart contracts written in Ethereum-compatible languages like Solidity or Vyper, as well as Rust. Additionally, the underlying Polkadot Virtual Machine allows any smart contract that compiles to RISC-V to run on its network.
 
 !!!info "Smart Contracts Documentation"
     For detailed guides on writing and deploying smart contracts on Polkadot, refer to the official [Polkadot Developer Docs](https://docs.polkadot.com/develop/). Note that PolkaVM is under active development.
@@ -14,10 +14,10 @@ Smart contracts are self-executing programs that run deterministically on a bloc
 Polkadot offers two primary ways to build decentralized applications:
 
 - **Smart Contracts** - Deployed on existing blockchains, they are easier to develop but have limited flexibility in terms of governance and consensus.
-- **Parachains** - Independent blockchains connected to Polkadot, allowing full customization of business logic, consensus, and governance.
+- **Rollups** - Independent blockchains connected to and secured by Polkadot, allowing full customization of business logic, consensus, and governance. They are also known as _parachains_.
 
 For a deeper comparison, read:  
-[Smart Contracts vs. Parachain Development](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/runtime_vs_smart_contract/index.html)
+[Smart Contracts vs. Rollup Development](https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/reference_docs/runtime_vs_smart_contract/index.html)
 
 ## Smart Contracts on Polkadot
 

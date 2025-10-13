@@ -18,8 +18,15 @@ description: Use the Polkadot Ledger Application.
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S,
-Nano X, and Stax devices. Ledger devices are hardware wallets that keep your secret key secured on a
+!!!warning "Support for Ledger Nano S is being phased out"
+
+    The Ledger Nano S is no longer produced, support by Ledger has been phased out, and it has limited memory that is just right to accommodate the Polkadot Ledger App.
+
+    Using the Polkadot Ledger app on a Nano S will not allow you to install any other Ledger application on your device, and add Polkadot accounts to the Ledger Live App. But you will be able to add them to wallets and extensions that support Ledger devices.
+    
+    For more information about Ledger Nano S limitations, see [this support page](https://support.ledger.com/article/Ledger-Nano-S-Limitations). You can migrate your wallet from a Nano S to a newer device with your 24-word seed phrase. If you are unsure which Ledger device best suits your needs, see [this comparison documentation](https://shop.ledger.com/pages/hardware-wallets-comparison).
+
+The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S Plus, Nano X, Stax, Flex and newer devices. Ledger devices are hardware wallets that keep your secret key secured on a
 physical device that does not expose it to your computer or the internet. The private keys will not
 be exposed even if you connect your Ledger device via USB to your computer.
 
@@ -32,39 +39,23 @@ Ledger devices are hierarchical deterministic wallets (HD wallets), where:
 
 ## Ledger Devices Compatibility
 
-|   Device    |         Platform         | Battery |            Apps            |              Security               |    Status     |
-| :---------: | :----------------------: | :-----: | :------------------------: | :---------------------------------: | :-----------: |
-|   Nano S    |      PC<sup>1</sup>      |   No    | All (lite, XL<sup>2</sup>) | Certified Secure Element (CC EAL5+) | Discontinued  |
-| Nano S Plus |            PC            |   No    |    All (lite, XL, plus)    | Certified Secure Element (CC EAL6+) | In Production |
-|   Nano X    | PC, Mobile via bluetooth |   Yes   |    All (lite, XL, plus)    | Certified Secure Element (CC EAL5+) | In Production |
-|    Stax     | PC, Mobile via bluetooth |   Yes   |         Dedicated          | Certified Secure Element (CC EAL6+) | In Production |
+|   Device    |         Platform         | Battery |               Security               | 
+| :---------: | :----------------------: | :-----: | :---------------------------------: | 
+| Nano S Plus |            PC<sup>1</sup>             |   No    |   Certified Secure Element (CC EAL6+) |
+|   Nano X    | PC, Mobile via bluetooth |   Yes   |   Certified Secure Element (CC EAL5+) |
+|    Stax     | PC, Mobile via bluetooth or NFC |   Yes   |  Certified Secure Element (CC EAL6+) |
+|    Flex     | PC, Mobile via bluetooth or NFC |   Yes   |  Certified Secure Element (CC EAL6+) |
 
 <sup>1</sup> Because of required WebUSB support, Ledger wallets currently only work on
 Chromium-based browsers like Google Chrome.<br/><br/>
-
-<sup>2</sup> The lite version of the Polkadot Ledger App that you can install by default in the
-Ledger Nano S has limited functionality. The Ledger Nano S is no longer produced and has limited
-memory that is just right to accommodate the XL version of the Polkadot Ledger App, which gives the
-user more functionalities.<br/><br/>
-
-If you do use a Nano S with the XL version, you will not be able to:
-
-- Install any other Ledger application on your device
-- Add Polkadot accounts to the Ledger Live App.
-
-But you will be able to add them to wallets and extensions that support Ledger devices.
-
-More information on Ledger device comparisons
-[here](https://shop.ledger.com/pages/hardware-wallets-comparison).
 
 ## Requirements
 
 Here is a list of what you will need before using Polkadot with Ledger:
 
-- A Ledger Nano X, Stax, or Nano S plus (recommended for the Polkadot Ledger App space requirements
-  and functionalities).
+- A Ledger Nano S Plus, Nano X, Stax, Flex, or newer device.
 - [Ledger Live](https://www.ledger.com/ledger-live) installed and up-to-date.
-- The latest firmware of the Polkadot Ledger App installed (always check for updates in Ledger Live
+- The latest firmware for your Ledger device installed (always check for updates in Ledger Live
   under the "Manager" tab; you will need to allow access with your nano).
 - A Chromium-based web browser if you use a browser extension.
 
@@ -79,9 +70,6 @@ develop such applications, enabling users to transact securely on the blockchain
 Ledger apps are developed by [Zondax](https://zondax.ch/) and are available
 [here](https://github.com/Zondax/ledger-polkadot). The Polkadot Ledger application allows you to
 manage Polkadot, Kusama and their parachains native tokens.
-
-!!! note "Ledger apps may not support all the transactions"
-    Check the [Ledger Polkadot App](https://github.com/Zondax/ledger-polkadot) specification for the list of transactions supported. Some transactions are supported only on a specific app version, and others are not supported by any version. For instance, joining a [nomination pool](../learn/learn-nomination-pools.md) is only possible with the **XL version** but not on the **lite version**.
 
 ### Polkadot Migration App
 
@@ -103,9 +91,9 @@ Ledger app.
 ### Polkadot (Generic) App
 
 !!! info "Ledger Generic Support"
-    See [this page](https://data.parity.io/metadata) to see which chains support the Ledger Generic App.
+    See [this page](https://data.parity.io/metadata) to see which Polkadot and Kusama rollup chains support the Polkadot Generic Ledger App.
 
-The Polkadot Ledger Generic App will allow you to use your Ledger device on the relay chain and
+The Polkadot Generic Ledger App will allow you to use your Ledger device on the relay chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
 for the entire Polkadot ecosystem without compromising security. This new app will also count with
 Clear Signing, allowing you to see what you sign on a trusted display. This way, unintentionally
@@ -125,7 +113,7 @@ The Polkadot Ledger Generic app brings the following benefits:
 
 The Polkadot Ledger Generic app will be supported by Ledger Live,
 [Nova Wallet](https://novawallet.io/), [Talisman](https://www.talisman.xyz/),
-[Subwallet](https://www.subwallet.app/), and [PolkaGate](https://polkagate.xyz/).
+and [Subwallet](https://www.subwallet.app/).
 
 For more information about the Polkadot Generic App, see the
 [Ledger FAQ](https://support.ledger.com/hc/en-us/articles/17550211746845-New-Polkadot-app-FAQ?docs=true%20:dot),

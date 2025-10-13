@@ -90,6 +90,31 @@ Vesting funds are on a release schedule that unlocks a constant number of tokens
 (**linear vesting**) or the full amount after a specific block number (**cliff vesting**). In all
 vesting cases, the lock decreases over time until all the funds are transferable.
 
+### Batch Transactions
+
+Batch transactions are single transactions that "batch together" multiple calls. The `utility` pallet is used to dispatch batched calls, and there are three types of batch calls:
+
+- `utility.batch()`: Stops execution if it encounters an error.
+- `utility.batchAll()`: Atomic batch execution, meaning that if any call within the batch fails, everything is rolled back as if nothing happened.
+- `utility.forceBatch()`: If any transaction fails, it is ignored, and the rest of the transactions are executed.
+
+| Function | Stops on Error | Atomic |
+|--------|--------|--------|
+| `batch` | Yes | No | 
+| `batchAll` | Yes | Yes |
+| `forceBatch` | No | No |
+
+For more detailed information about the arguments accepted by each of these calls, see [the Metadata Explorer](../general/metadata.md). The emitted events for each call are summarized below:
+
+| Event | Emitted When | part of `batch` | part of `batchAll` | part of `forceBatch` |
+|--------|--------|--------|--------|--------|
+| `ItemCompleted` | After each batched call succeeds | Yes | Yes | Yes |
+| `ItemFailed` | When a batched call fails | No | No | Yes |
+| `BatchCompleted` | After all batched calls succeed | Yes | Yes | Yes |
+| `BatchCompletedWithErrors` | After all batched calls have been executed, but some were not successful | No | No | Yes |
+| `BatchInterrupted` | When a batched call fails and remaining calls are skipped | Yes | No | No |
+
+
 ## Verifying Extrinsics
 
 !!!danger
@@ -195,7 +220,7 @@ need to use those funds to issue transactions on the parachain's behalf.
 ## Block Limits and Transaction Priority
 
 Relay chain blocks have both a maximum length (in bytes) and a maximum weight. Block producers will
-fill blocks with transactions up to these limits. A portion of each block - currently 25% - is
+fill blocks with transactions up to these limits. The 25% of block capacity is
 reserved for critical transactions that are related to the chain's operation. Block producers will
 only fill up to 75% of a block with normal transactions. Some examples of operational transactions:
 

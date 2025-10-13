@@ -55,6 +55,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
     text-decoration: none !important;
+    text-align: center; 
     color: inherit;
 }
 
@@ -142,4 +143,14 @@
     .card-container {
         width: 500px;
     }
+}
+
+.announcement-text {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;                    
+}
+
+.announcement-link {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
 }

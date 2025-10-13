@@ -4,59 +4,57 @@ description: Explore advanced staking concepts in Polkadot, including staking pr
 ---
 
 !!!tip "New to Staking?"
-      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
-This page is meant to be an advanced guide to staking with the relay chain. For a more general
+This page is meant to provide advanced information about staking on Polkadot. For a more general
 introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
 
 ## Staking Proxies
 
-Polkadot makes it possible to create accounts having special permissions also called **proxy
-accounts**. For more details about proxy accounts visit the [dedicated page](./learn-proxies.md) on
-this wiki.
+Polkadot allows creating accounts with special permissions, called **proxy
+accounts**. For more details about proxy accounts, visit this wiki's [dedicated page](./learn-proxies.md).
 
-Proxy accounts are special accounts which can sign
+Proxy accounts are special accounts that can sign
 [**extrinsic calls**](./learn-transactions.md#pallets-and-extrinsics) made to specific **pallets**
-on behalf of the proxied account. There is thus the possibility to create staking proxy accounts
-that can be used to sign extrinsic calls specific to the staking, session and utility pallets.
+on behalf of the proxied account. There is the possibility of creating staking proxy accounts
+that can be used to sign extrinsic calls specific to the staking, session, and utility pallets.
 
-Staking is not a set-and-forget action, as a nominator you will need to monitor the performance of
-your validators and make changes if needed. There will be this transactions such as nominating that
-will be needed to regularly signed. Each time you sign with an account, in the case of hot accounts,
-you expose the private key of that account to the internet with consequent risk of attack. A hot
+Staking is not a set-and-forget action; as a nominator, you will need to monitor the performance of
+your validators and make changes if required. There will be transactions, such as changing nominations, that
+must be regularly signed. Each time you sign with an account, in the case of hot accounts,
+you expose the private key of that account to the internet with the consequent risk of attack. A hot
 stash will be exposed all the time a transaction is signed. Even in the case of a cold stash created
 with a Ledger device, signing with the stash will build a transaction history that might tell
 something about your habits and preferences, or even your location.
 
-Ideally, accounts with high economic power like the stash must be and remain as isolated as
+Ideally, accounts with high economic power, like the stash, must be and remain as isolated as
 possible. With a staking proxy, the stash account is fully isolated when signing for staking-related
 transactions. The proxy private key will be used to sign staking-related transactions, the stash
-private key will stay isolated and the staking transaction history will be built by the proxy.
+private key will stay isolated, and the proxy will build the transaction history.
 
 ![stash-stakingProxy](../assets/stash-vs-stash-and-staking-proxy.png)
 
-For a practical perspective we need to use only one account and remember one password to sign for
-all staking-related transactions. From a security perspective who controls the staking proxy
+For a practical perspective, we need to use only one account and remember one password to sign for
+all staking-related transactions. From a security perspective, who controls the staking proxy
 controls our staking actions.
 
-It is important to remember that actions that can be performed by the proxy accounts are limited,
-and in the case of staking proxy, extrinsic calls to the balances pallet cannot be signed. This
-means it is not possible to do balance transfers on the proxied account through a staking proxy.
+It is important to remember that actions that the proxy accounts can perform are limited,
+and in the case of a staking proxy, extrinsic calls to the balances pallet cannot be signed. This
+means doing balance transfers on the proxied account is impossible through a staking proxy.
 
-Note that to change the staking proxy you will need to sign with the stash or an _any_ proxy.
+Note that to change the staking proxy, you must sign with the stash or an _any_ proxy.
 
 ## Bags List
 
 !!!info
-    On Polkadot and Kusama, the instance of the pallet [Bags List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'.
+    On Polkadot and Kusama, the instance of the pallet [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'.
+    
+    For a bags list demo, see [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
-For a demo about bags list see [this video tutorial](https://youtu.be/hIIZRJLrBZA).
-
-In Polkadot's NPoS nomination intents are placed in a semi-sorted list called
-[bags list](https://github.com/paritytech/substrate/pull/9507). The Bags-List substrate pallet is
-designed to be self-maintaining, with minimal effort from the blockchain, making it extremely
+In Polkadot's [Nominated Proof-of-Stake (NPoS)](../learn/learn-consensus.md#nominated-proof-of-stake), nomination intents are placed in a semi-sorted list called the bags list. The [Bags-List pallet](https://paritytech.github.io/polkadot-sdk/master/pallet_bags_list/index.html) in the Polkadot SDK is
+designed to be self-maintaining, with minimal effort from the blockchain, making it highly
 scalable. The bags list has two primary components, bags and nodes (or nominators' accounts), with
-bags containing the nodes with bonded balance within a specific range. In the figure below the 1st
+bags containing the nodes with bonded balance within a specific range. In the figure below, the 1st
 empty bag will contain nominators whose bonded balance is in the range of 21 - 30 DOT, the 2nd bag
 11 - 20 DOT, and the 3rd bag 0-10 DOT. The nomination intents are the nominators' accounts with
 bonded tokens (in the example shown below, there are eight nomination intents) that will be put
@@ -66,7 +64,7 @@ inside each of those three bags depending on their stake.
 
 The bags list is semi-sorted, meaning that sorting is only partially done. When the nomination
 intents are submitted to the network, they are automatically put into each bag based on the number
-of bonded tokens, but within each bag, those nodes are arranged based on the time they are inserted
+of bonded tokens. Still, within each bag, those nodes are arranged based on the time they are inserted
 and not based on their stake (see figure below). When the nomination intent of 19 DOT is submitted,
 it gets placed at the last spot in the 2nd bag (shown in the green circle). The same scenario
 applies for the node with 8 DOT (yellow circle) in the 3rd bag. Placing the node above all nodes
@@ -74,45 +72,47 @@ with a lesser stake requires an additional step (more on this later).
 
 ![bags list example 1](../assets/bags-list-example-1.png)
 
-The mentioned two nodes (19 DOT and 8 DOT) have the option to move up in their respective bags,
-which can put them in front of the nodes with less stake than them (see figure below). This action
-must be done manually by submitting the `putInFrontOf` extrinsic within the `voterList` pallet
+The mentioned two nodes (19 DOT and 8 DOT) can move up in their respective bags,
+putting them in front of the nodes with less stake (see figure below). This action
+must be done manually by submitting the **`putInFrontOf`** extrinsic within the `voterList` pallet
 instance. Moreover, if the node with 19 DOT bonds an additional 2 DOT, that node will be put
-automatically in the 1st bag (i.e. automatic `rebag`) because the total number of bonded tokens will
+automatically in the 1st bag (i.e., automatic `rebag`) because the total number of bonded tokens will
 now be within the range of the 1st bag. That node with now 21 DOT will be put at the tail end of the
 1st bag with the possibility to manually put itself in front of "older" nodes with less than 21 DOT
-(if there are any).
+(if there are any). Anyone can issue the **`putInFrontOfOther`** permissionless extrinsic to sort dislocated accounts.
 
 ![bags list example 2](../assets/bags-list-example-2.png)
 
 If one decides to send staking rewards to the stash account and automatically bond them (i.e.
-compounding the staking rewards), the position within a bag does not change automatically. The same
+compounding the staking rewards), the position within a bag does not change. The same
 scenario applies to a slashing event, i.e., when a nominator gets slashed, their position within a
 bag does not change. This might result in a scenario where the node is in the wrong bag and needs to
 be placed in the right bag. To address this issue, any account on-chain can submit the
-permissionless extrinsic `rebag` within the `voterList` pallet instance to update the positions of
-the nodes that do not belong to their bag and place them in the correct one. To reiterate, actions
-like bonding/unbonding tokens automatically rebag the nominator node, but events like staking
-rewards/slashing do not. See the [bags list](learn-nominator.md#bags-list) section for more
+permissionless extrinsic **`rebag`** within the `voterList` pallet instance to update the positions of
+the nodes that do not belong to their bag and place them in the correct one. Note that rebag works in both ways, i.e., rebag in a higher or lower bag, and the Polkadot-JS UI rebags all accounts in your bag that need rebagging. To reiterate, **actions like bonding and unbonding tokens automatically rebag the nominator node, but events like compounding staking rewards and slashing do not**. See the [bags-list](learn-nominator.md#bags-list) section for more
 information.
 
-The bags list is capable of including an unlimited number of nodes, subject to the chain's runtime
-storage. In the current staking system configuration, at most 22500 nominators in the bags-list
-(12500 on Kusama) come out as the electing nominators. See
+!!!info "Important Notes"
+      The `putInFrontOf` extrinsic does not check which account is the lightest (i.e., the account with the least tokens where you can move in front of), as opposed to `rebag`, which automatically puts you in the right bag. Suppose you have the account with 7 DOT and your bag configuration is 8 3 4 9 1 7 5. You can move in front of 1 or 4 (i.e., lighter accounts) or in front of 3 (i.e., lightest account). Ideally, you need to find the lightest account and give it as an argument to the extrinsic. This is what Polkadot-JS UI does for you: it finds the "lightest" account in the bag and puts you in front of it.
+
+      If you want the best placement in the bags list, the recommended order of actions is first to rebag yourself (if possible) and then issue the `putInFrontOf` extrinsic.
+
+      `Rebagging` and `putInFrontOf` only matter if you are in the last bag, close to the minimum active bond. If you bond way above that value, you do not need to issue those extrinsics.
+
+The bags list can include unlimited nodes, subject to the chain's runtime
+storage. In the current staking system configuration, at most 22500 nominators in the bags list (12500 on Kusama) come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 This means that only a portion of the nomination intents is kept. Once the nomination period ends,
-the NPoS election system takes all nomination intents and their associated votes as input, and it
-outputs a set of validators. The bags are iterated from the most staked to the least staked. If the
-accounts are not appropriately sorted, this could leave the last touched bag to only be partially
-iterated. Thus, in some edge cases, the order of the members within a bag is important. Continuing
-with the example used in the previous figures, there are 8 nomination intents of which only 7 will
-be kept. If the bags list stays semi-sorted (i.e. no accounts call the `putInFrontOf` and `rebag`
-extrinsics), the nomination of the node with 8 DOT in the 3rd bag will not be considered while that
+the NPoS election system inputs all nomination intents and associated votes and 
+outputs a set of validators. The bags are iterated from the most staked to the least staked. The algorithm will stop once it has selected 22500 nodes, so the last touched bag will probably be only partially iterated. As such, the order in the last bag matters.
+
+Continuing with the example used in the previous figures, there are 8 nomination intents of which only 7 will be kept. If the bags list stays semi-sorted (i.e., no accounts call the `putInFrontOf` and `rebag`
+extrinsics), the nomination of the node with 8 DOT in the 3rd bag will not be considered, while that
 of the preceding node with 5 DOT will be. Nomination of the node with 8 DOT will be kept only if it
 puts itself in front of the one with 5 DOT. Note how the nomination of the node with 19 DOT in the
-2nd bag will be considered regardless of changing its position inside the bag. The sorting
-functionality of nomination intents using bags is extremely important for the
+2nd bag will be considered regardless of changing its position inside the bag. `Rebag` and `putInFrontOf` only matter if you're in the last bag (i.e., close to the 22500 nomination threshold). The sorting
+functionality of nomination intents using bags is essential for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system.
 
@@ -121,11 +121,10 @@ staking/election system.
 !!!caution "Minimum active nomination threshold to earn rewards is dynamic"
       Submitting a nomination intent does not guarantee staking rewards. The stake of the top 22500 nominators (12500 on Kusama) is applied to the validators in the active set. To avail of staking rewards, ensure that the number of tokens bonded is higher than the minimum active bond. For more information, see the [nominator guide](learn-nominator.md).
 
-The "election solution" which is a connected graph between nominators and validators with the stake
-as edge weights, has to meet certain requirements, such as maximizing the amount of stake to
-nominate validators and distributing the stake backing validators as evenly as possible. The
-objectives of this election mechanism are to maximize the security of the network, and achieve fair
-representation of the nominators. If you want to know more about how NPoS works (e.g. election,
+The "election solution”, a connected graph between nominators and validators with the stake
+as edge weights, has to meet specific requirements, such as maximizing the amount of stake to
+nominate validators and distributing the stake backing validators as evenly as possible. This election mechanism aims to maximize the network's security and achieve fair
+representation of the nominators. If you want to know more about how NPoS works (e.g., election,
 running time complexity, etc.), please read
 [here](https://research.web3.foundation/en/latest/polkadot/NPoS.html).
 

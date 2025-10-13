@@ -76,7 +76,7 @@ the main features of the dashboard. If you need more information, see the
 This page of the dashboard has six main panels:
 
 - **Section A: The Sidebar** shows which page you are on (in this case, the Overview). It will also
-  show the role you currently have in staking (in this case, active in both [Pools](#pools) and
+  show the role you have in staking (in this case, active in both [Pools](#pools) and
   [Nominate](#nominate)). You can also change the [network](#network) (currently on Kusama).
 
 - **Section B: The Accounts Panel** allows you to connect one account to the dashboard. Once

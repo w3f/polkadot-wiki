@@ -103,7 +103,7 @@ community members. The application we use most often to interact with the Matrix
 
 - [Subscribe to the Polkadot newsletter](https://share.hsforms.com/1LL1CBwiASxC5pJUYZAiDVw4752a) -
   official, infrequent
-- [Dot Leap Newsletter](https://dotleap.substack.com/) - less official, weekly
+- [Dot Leap Newsletter](https://newsletter.dotleap.com/) - less official, weekly
 
 ## Ecosystem
 

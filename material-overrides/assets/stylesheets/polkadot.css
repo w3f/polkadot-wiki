@@ -3,7 +3,7 @@
   --heather: #c6cfdb;
   --mystic: #dce2e9;
   --athens-gray: #eceff3;
-  --storm-gray: #6e7391;
+  --black: #6e7391;
   --black: #000000;
 
   /* Primary color */
@@ -24,14 +24,14 @@
 
 :root,
 [data-md-color-scheme='default'] {
-  --md-default-fg-color: var(--storm-gray);
+  --md-default-fg-color: var(--black);
   --md-default-bg-color: var(--white);
 
   --md-primary-fg-color: var(--mystic);
   --md-accent-fg-color: var(--pink);
   --md-accent-fg-color--transparent: var(--athens-gray);
 
-  --md-typeset-a-color: var(--storm-gray);
+  --md-typeset-a-color: var(--black);
 
   --md-footer-fg-color: var(--black);
   --md-footer-fg-color--light: var(--black);
@@ -190,7 +190,11 @@
 }
 
 .md-typeset p {
-  color: var(--storm-gray);
+  color: var(--black);
+}
+
+.md-typeset ul {
+  color: var(--black);
 }
 
 /* Dark mode font styling */
@@ -203,6 +207,10 @@
 }
 
 [data-md-color-scheme='slate'] .md-typeset p {
+  color: #c6cfdb;
+}
+
+[data-md-color-scheme='slate'] .md-typeset ul {
   color: #c6cfdb;
 }
 
@@ -1051,7 +1059,7 @@ input.md-search__input::placeholder {
   }
 
   .md-nav--secondary .md-nav__link > * {
-    color: var(--storm-gray);
+    color: var(--black);
   }
 
   .md-nav--secondary .md-nav__link.md-nav__link--active > * {
@@ -1426,7 +1434,7 @@ details.interface > summary::before {
 /* Styling for the Copy to Clipboard */
 /* Clipboard icon */
 .md-clipboard {
-  color: var(--storm-gray);
+  color: var(--black);
 }
 
 .md-clipboard:focus,
@@ -1528,7 +1536,7 @@ details.interface > summary::before {
 }
 
 .md-typeset .tabbed-set {
-  background: var(--storm-gray);
+  background: var(--black);
   border-radius: 16px;
 }
 
@@ -1766,7 +1774,7 @@ span.badge.external {
 span.badge.beginner,
 span.badge.intermediate,
 span.badge.advanced {
-  background-color: var(--storm-gray);
+  background-color: var(--black);
   color: var(--white);
 }
 
