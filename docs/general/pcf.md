@@ -499,14 +499,9 @@ discretion/opinion from the PCF.
 
 ## PCF Supporting Material
 
-!!!info Work in Progress
-    The supporting material listed below is temporary. Final versions will be uploaded in due time.
-
-
-
+- [Memorandum of Association of PCF](https://drive.google.com/file/d/1BKlPnt0MMe5o6clb6-BT_mKwnSTuDPle/view)
+- [Polkadot Community Foundation Bylaws](https://drive.google.com/file/d/1WhITXXgbzESy9_wdX5H3uFB_kctYWnX4/view)
+- [PCF Constitution](https://drive.google.com/file/d/13vBTwXodvjxnYx3xIfE_SehrsVx6d4bg/view)
 - [Kusamarian AAG Video Discussion](https://twitter.com/TheKusamarian/status/1838956632610669006)
-- [Polkadot Community Foundation Constitution](https://docs.google.com/document/d/1tvWEuSU4JzrShNE_HR9p0cBiiQSGQ4dJ/edit)
-- [Polkadot Community Foundation Bylaws](https://docs.google.com/document/d/1Yrq5mAquY2pPW5ZBnl07Xt7Woj-HwGJd/edit?usp=sharing&ouid=109408449182956936927&rtpof=true&sd=true)
-- [Polkadot Community Foundation M&A](https://docs.google.com/document/d/1rG6crLnwkXsl6hM-BsnmXpaTT9IfefQY/edit)
 - [Terms of Service](https://polkadot.polkassembly.io/terms-and-conditions)
-- Forum code of conduct
+
