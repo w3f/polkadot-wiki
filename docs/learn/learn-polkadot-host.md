@@ -47,7 +47,7 @@ Additional information on each of these requirements can be found
 
 Below is a diagram that displays the Polkadot host surrounding the Polkadot runtime. Think of the
 runtime (in white) as a component that can be inserted, swapped out, or removed entirely. While the
-parts in grey are stable and can not change without an explicit hard fork.
+parts in grey are stable and cannot change without an explicit hard fork.
 
 ![polkadot host](../assets/updated_pre.png)
 

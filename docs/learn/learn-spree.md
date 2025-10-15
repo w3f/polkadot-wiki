@@ -13,7 +13,7 @@ SPREE in brief was described with the following properties and functions:
 - These fragments have their own storage and own [XCM](learn-xcm.md) endpoint.
 - All instances across parachains have identical logic.
 - It executes alongside parachain logic.
-- Protected: storage can not be altered by parachain logic; messages can not be faked from them by
+- Protected: storage cannot be altered by parachain logic; messages cannot be faked from them by
   parachains.
 
 ## Origin

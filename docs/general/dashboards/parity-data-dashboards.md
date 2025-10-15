@@ -71,8 +71,8 @@ pitfalls of custom block parsing strategies in the ever-evolving Substrate Frame
 platform's efficiency is the Block Compressor, which optimizes and reduces the data size
 significantly, making it more manageable for analytical purposes.
 
-DotLake has evolved from it's origins as a data warehouse built to serve Parity's internal data
-needs. Since then, the scope has been broadened to share data intitiatives and learnings with the
+DotLake has evolved from its origins as a data warehouse built to serve Parity's internal data
+needs. Since then, the scope has been broadened to share data initiatives and learnings with the
 wider community. The plan is to progressively make datasets available to the public, alongside
 dashboards, metrics, code, and best practices employed to ingest and decode Substrate data.
 
