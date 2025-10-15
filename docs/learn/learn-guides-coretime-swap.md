@@ -14,7 +14,7 @@ in place for the parachain (can be sudo) if the parachain is locked.
 In order to check if a parachain is locked or not, teams need to query `registrar.paras` with the
 corresponding paraID on the relay chain. It's important to note that since
 [RFC #14](https://github.com/polkadot-fellows/RFCs/pull/14), if a parachain never produced a block
-the it's by default unlocked.
+then it's by default unlocked.
 
 ## Initiate Swap from the Parachain
 
