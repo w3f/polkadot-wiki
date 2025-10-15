@@ -264,7 +264,7 @@ The submission deposit for a referendum can be claimed
 [only if the referendum was `Approved` or `Canceled`](https://github.com/paritytech/polkadot-sdk/blob/cfb29254f74412cea35e8048d8aea94bc789fcb1/substrate/frame/referenda/src/types.rs#L261).
 The submission deposit can be claimed by issuing the `refundSubmissionDeposit` extrinsic.
 
-Users can not refund their submission deposit while the referendum is `Ongoing` or `Rejected`.
+Users cannot refund their submission deposit while the referendum is `Ongoing` or `Rejected`.
 Similarly, users cannot refund their submission deposit if the proposal has `TimedOut` (failing to
 submit the decision deposit
 [within specific period](../general/chain-state-values.md) will lead to a
