@@ -25,7 +25,7 @@ can be accessed on the
 is cross-compatible with all the chains that use the similar format. To switch between the accounts
 on different chains, you can follow the guidelines in
 [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
-[Subscan has a tool](https://polkadot.subscan.io/tools/format_transform) you can use to convert your
+[Subscan has a tool](https://assethub-polkadot.subscan.io/tools/format_transform) you can use to convert your
 address between the different chain formats.
 
 !!!info "Using the same account on multiple chains - Pros and Cons"
