@@ -12,7 +12,7 @@ The
 [Asset Hub system parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/)
 hosts data structures and logic that specialize in the creation, management, and use of assets in
 the network. Although other parachains can host applications dealing with assets on the Asset Hub,
-the hub can be thought of as a trusted "home base" of assets in the network.
+the hub serves as a trusted "home base" of assets in the network and the primary reserve location for DOT in cross-chain operations.
 
 The Asset Hub uses the relay chain's native token. The chain yields its governance to its parent
 relay chain and has no inflation or era-based rewards for collators (although collators receive a
@@ -153,7 +153,7 @@ effectuate transfers up to a given amount on behalf of an account.
 
 The Asset Hub uses a reserve-backed system to manage asset transfers to other parachains. It tracks
 how much of each asset has gone to each parachain and will not accept more from a particular
-parachain.
+parachain. As the primary DOT reserve, Asset Hub maintains accurate accounting of DOT holdings across all parachains in the ecosystem.
 
 As a result of this, asset owners can use the Asset Hub to track information like the total issuance
 of their asset in the entire network, as parachain balances would be included in the reserve-backed
@@ -161,7 +161,7 @@ table. Likewise, for the minting and burning of tokens, an asset's team can perf
 on the Asset Hub and propagate any minted tokens to other parachains in the network.
 
 Parachains that want to send assets to other parachains should do so via instructions to the Asset
-Hub so that the reserve-backed table stays up to date. For more info, see the "Moving Assets between
+Hub so that the reserve-backed table stays up to date. This is particularly important for DOT transfers, where Asset Hub serves as the canonical reserve location. For more info, see the "Moving Assets between
 Chains in XCM" section of the
 [article on the XCM format](https://polkadot.network/blog/xcm-the-cross-consensus-message-format/).
 

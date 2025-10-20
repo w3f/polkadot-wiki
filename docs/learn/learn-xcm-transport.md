@@ -19,7 +19,7 @@ There are three primary methods for message passing, one of which is under devel
 ### XCMP (Cross-Chain Message Passing)
 
 !!!caution
-    XCMP is currently under development, and most of the cross-chain messages pass through HRMP channels for the time being.
+    XCMP is under development, and most cross-chain messages currently pass through HRMP channels.
 
 XCM is related to XCMP in the same way that REST is related to RESTful.
 
@@ -89,7 +89,7 @@ A tutorial on how to open an HRMP channel on a parachain can be found
 </div>
 
 !!!note
-    XCMP is not yet implemented. The following illustrates the overall design goals and expectations for XCMP.
+    XCMP is not yet fully implemented. The following illustrates the overall design goals and expectations for XCMP.
     
 - Cross-chain messages will _not_ be delivered to the relay chain.
 - Cross-chain messages will be constrained to a maximum size specified in bytes.
@@ -113,7 +113,8 @@ opened, which will get returned when the channel is closed.
 #### The Anatomy of an XCMP Interaction
 
 A smart contract that exists on parachain `A` will route a message to parachain `B` in which another
-smart contract is called that makes a transfer of some assets within that chain.
+smart contract is called that makes a transfer of some assets within that chain. With Asset Hub
+serving as the primary reserve for DOT, many cross-chain transfers route through Asset Hub.
 
 Charlie executes the smart contract on parachain `A`, which initiates a new cross-chain message for
 the destination of a smart contract on parachain `B`.
