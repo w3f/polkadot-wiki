@@ -53,7 +53,7 @@ data in transaction is new and yet unknown to the target chain.
 
 It is always the sending chain that pays for rewards for the relayers. The sending chain
 pays at both ends of the bridge from its sovereign accounts on each Bridge Hub. For
-example Polkadot Asset Hub (PAH) → Kusama Asset Hub (KAH) transfer involves relayers getting
+example Polkadot Asset Hub (PAH) → Kusama Asset Hub (KAH) transfer will involve
 rewards from PAH's sovereign account on Polkadot Bridge Hub (PBH) and rewards from PAH's
 sovereign account on Kusama Bridge Hub (KBH). It is the responsibility of Polkadot OpenGov to
 replenish the funds of PAH's sovereign account on both the bridge hubs (PBH and KBH). Similarly, KAH

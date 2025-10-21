@@ -153,7 +153,7 @@ effectuate transfers up to a given amount on behalf of an account.
 
 The Asset Hub uses a reserve-backed system to manage asset transfers to other parachains. It tracks
 how much of each asset has gone to each parachain and will not accept more from a particular
-parachain. As the primary DOT reserve, Asset Hub maintains accurate accounting of DOT holdings across all parachains in the ecosystem.
+parachain.
 
 As a result of this, asset owners can use the Asset Hub to track information like the total issuance
 of their asset in the entire network, as parachain balances would be included in the reserve-backed

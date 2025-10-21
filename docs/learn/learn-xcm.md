@@ -49,7 +49,7 @@ properly convey the intentions from one consensus system to another without any 
 issues.
 
 !!!note
-    XCM is constantly in development - meaning the format is expected to change over time. XCM v3 is the current version deployed on Polkadot. To view updates on the XCM format, visit the [xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been submitted that would contribute to the next release.
+    XCM is constantly in development - meaning the format is expected to change over time. To view updates on the XCM format, visit the [xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been submitted that would contribute to the next release.
 
 ## A Format, Not a Protocol
 
@@ -99,14 +99,11 @@ XCM introduces some key features and additions to cross-consensus messaging, inc
    or other consensus systems like Ethereum or Bitcoin.
 
 A core part of the vision that XCM provides is improving communication between the chains to make
-**system parachains** a reality. The Polkadot relay chain previously handled more than just
-parachain management and shared security - it also handled user balances/assets, governance, and staking.
-The relay chain now focuses primarily on what it's intended for - a place for shared security.
-System parachains alleviate core responsibilities from the relay chain using a
+**system parachains** a reality. System parachains alleviate core responsibilities from the relay chain using a
 standard format like XCM.
 
 Asset Hub, a system parachain, serves as the primary reserve location for DOT and manages cross-chain
-asset transfers, while other system parachains handle specialized functions like governance.
+asset transfers, while other system parachains handle specialized functions like governance or identity.
 
 !!!info
     XCM bridging, functional multichain decomposition, and programmability upgrades are crucial to bringing ecosystems together using a common communication abstraction.
