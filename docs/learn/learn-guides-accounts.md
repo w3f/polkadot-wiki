@@ -18,7 +18,7 @@ description: Comprehensive guides for managing accounts, backups, and security u
 
 ## Account Address Format
 
-An account created on the relay chain can also be used on multiple chains in the ecosystem. More
+An account created on the Polkadot Hub can also be used on multiple chains in the ecosystem. More
 specifically, the account of a chain that uses the `*25519` account address format (the latest list
 can be accessed on the
 [ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json))
