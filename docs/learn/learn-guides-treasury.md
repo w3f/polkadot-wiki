@@ -43,7 +43,7 @@ proposer.
 ## Creating a Treasury Proposal - Spend Local
 
 !!!info ""Spend" vs. "Spend Local""
-    You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and `treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of DOT that is locally available, i.e., DOT from the relay chain's treasury account. `spend` actually allows the caller to specify an asset other than DOT, or even assets in other locations, e.g. [Asset Hub](../general/glossary.md#asset-hub).
+    You may notice that the Treasury pallet contains two extrinsics - `treasury.spend` and `treasury.spendLocal`. `treasury.spendLocal` (formally called `treasury.spend`) refers to a spend of DOT that is locally available, i.e., DOT from the Asset Hub treasury account. `spend` actually allows the caller to specify an asset other than DOT, or even assets in other locations, e.g. [Asset Hub](../general/glossary.md#asset-hub).
 
 Unlike `treasury.spendLocal`, `treasury.spend` is **not** bound by a spend period, and must be
 claimed manually via the `treasury.payout` extrinsic. `treasuy.spendLocal` behavior remains
@@ -173,9 +173,9 @@ Now, let's go through each field one-by-one and fill them in accordingly:
 - The relative location of the asset, and
 - How it is identified within this location.
 
-For this example, we are using USDT, which from the perspective of the relay chain would be:
+For this example, we are using USDT, which from the perspective of the Asset Hub would be:
 
-`Parachain 1000 (AssetHub) > AssetId (Concrete) > PalletInstance 50 > General Index 1984`
+`AssetId (Concrete) > PalletInstance 50 > General Index 1984`
 
 First, we specify the location - in this case, Asset Hub (parachain 1,000). `PalletInstance 50`
 refers to the Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of
@@ -210,7 +210,7 @@ an account address on the chain.
 
 ### Specifying `validFrom` (optional)
 
-The `validFrom` field is optional, and refers to the block height of the relay chain upon which the
+The `validFrom` field is optional, and refers to the block height of the Asset Hub upon which the
 payout can be issued. If the `validFrom` parameter is not set, the spend can be [claimed](#manually-claiming-payouts) immediately
 after approval. For more information on this field, refer to the
 [guide below](#creating-a-multistage-payout-proposal-with-validfrom).
