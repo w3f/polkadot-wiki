@@ -6,13 +6,12 @@ template: architecture-cards.html
 
 ## Relay Chain
 
-The relay chain is the central chain of Polkadot. All validators of are staked on the relay chain in
-DOT and validate for the relay chain. The relay chain is composed of a relatively small number of
-transaction types that include ways to interact with the governance mechanism, and participating in
-NPoS. The relay chain has deliberately minimal functionality - for instance, smart contracts are not
-supported. The main responsibility is to coordinate the system as a whole, including parachains.
-Other specific work is delegated to the parachains, which have different implementations and
-features.
+The relay chain is the central chain of Polkadot. All validators are staked on the relay chain in DOT and validate for the relay chain. The relay chain has deliberately minimal functionality — its main purpose is block production, core scheduling, data availability, and providing shared security to the network. Its main responsibility is to coordinate the system as a whole, including parachains.
+
+Other specific work is delegated to parachains, which have different implementations and features.
+
+> **Note:** The relay chain does not support user-facing functionalities — accounts, balance transfers, staking, and more have been migrated to Asset Hub.
+
 
 ## [Parachain](learn-parachains.md) Slots
 
