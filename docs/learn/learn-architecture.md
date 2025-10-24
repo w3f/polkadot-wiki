@@ -6,7 +6,7 @@ template: architecture-cards.html
 
 ## Relay Chain
 
-The relay chain is the central chain of Polkadot. All validators are staked on the relay chain in DOT and validate for the relay chain. The relay chain has deliberately minimal functionality — its main purpose is block production, core scheduling, data availability, and providing shared security to the network. Its main responsibility is to coordinate the system as a whole, including parachains.
+The relay chain is the central chain of Polkadot. All validators are staked on the relay chain in DOT and validate for the relay chain. The relay chain has deliberately minimal functionality — its primary purpose is to facilitate block production, core scheduling, data availability, and provide shared security to the rest of the network. Its main responsibility is to coordinate the system as a whole, including parachains.
 
 Other specific work is delegated to parachains, which have different implementations and features.
 
