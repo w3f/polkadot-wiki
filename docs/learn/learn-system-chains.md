@@ -1,12 +1,12 @@
 ---
 title: System Chains
-description: System parachains on Polkadot offload core functionalities like governance, assets, and bridging from the relay chain for better performance.
+description: System parachains on Polkadot offload core functionalities such as governance, balances, transfers, and bridging from the relay chain for better performance.
 ---
 
 !!! info "Information about Polkadot's system chains is also available on the [Polkadot Developer Documentation](https://docs.polkadot.com/polkadot-protocol/architecture/system-chains/)"
 
 The primary functionality of the relay chain is to secure the parachains and facilitate secure
-communication between them. All other functionalities like asset transfers, governance, identities
+communication between them. All other functionalities such as asset transfers, governance, identities
 and bridging (a potentially resource intensive task) can benefit from operating separately on system
 chains. System chains are responsible for delegating functionality away from the relay chain for
 peformance reasons, taking advantage of the inherent parallelization the architecture of Polkadot
@@ -40,21 +40,15 @@ KSM. In fact, there will likely be a system parachain specifically for network g
     The [Asset Hub](https://github.com/paritytech/polkadot-sdk/tree/master/cumulus#asset-hub-) on both
     Polkadot and Kusama are the first system parachains.
 
-    The Asset Hub is an asset portal for the entire network. It helps asset creators (e.g. reserve
-    backed stablecoin issuers) to track the total issuance of their asset in the network, including
-    amounts that have been transferred to other parachains. It is also the point where they can
-    transact, to mint and burn, to manage the on-chain asset.
+    The Asset Hub was initially designed as an asset portal for the Polkadot network. Over time, its role expanded, and it has evolved into the primary technical host for most user-facing functionalities within the ecosystem.
 
-    The Asset Hub also supports non-fungible assets (NFTs) via the
-    [Uniques pallet](https://polkadot.js.org/docs/substrate/extrinsics#uniques) and the [nfts pallet](https://polkadot.js.org/docs/substrate/extrinsics#nfts). For more information about
-    NFTs see the [dedicated wiki page](./learn-nft-pallets.md).
+    When users interact with Polkadot - such as creating an account, transferring tokens, or staking - they are, in practice, interacting with the Asset Hub. Although this is abstracted away in most wallets and interfaces, the underlying account data, balances, and staking mechanisms are managed by Asset Hub. It serves as the operational backbone for these activities, even if users are not directly aware of it.
 
-    This logic for asset management is not encoded in smart contracts, but rather directly in the
-    runtime of the chain. Because of the efficiency of executing logic in a parachain, fees and deposits
-    are about 1/10th of their respective value on the relay chain.
+    Core functionalities such as balances, transfers, staking, and asset management are executed on Asset Hub. Users can also issue and manage their own assets, including non-fungible tokens (NFTs), directly on the network.
 
-    These low fee levels mean that the Asset Hub is well suited for handling balances and transfers as
-    well as managing on-chain assets.
+    The Asset Hub provides tools for asset creators, such as reserve-backed stablecoin issuers, to monitor the total issuance of their assets across the entire network, including amounts transferred to other parachains. It also enables them to perform on-chain actions such as minting, burning, and asset administration.
+
+    Unlike smart contract-based systems, asset management, staking and transfer logic on Asset Hub is embedded directly in the chain’s runtime. Due to the efficiency of parachain execution, transaction fees and required deposits are approximately one-tenth of those on the relay chain. 
 
     ### Collectives
 
