@@ -10,7 +10,7 @@ The relay chain is the central chain of Polkadot. All validators are staked on t
 
 Other specific work is delegated to parachains, which have their own domain-specific implementations and features.
 
-> **Note:** The relay chain does not support user-facing functionalities — accounts, balance transfers, staking, and more have been migrated to Asset Hub.
+> **Note:** The relay chain does not support user-facing functionalities — accounts, balance transfers, staking, and more have been migrated to Asset Hub, a system parachain.
 
 
 ## [Parachain](learn-parachains.md) Slots
