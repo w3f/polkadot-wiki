@@ -28,7 +28,7 @@ provided are grouped into the following sections:
 
 The [Ecosystem Tab](https://dashboards.data.paritytech.io/parachains.html) shows a number of
 universally applicable metrics (Active Accounts, Unique Accounts, Transactions, Events) across both
-Polkadot & Kusama Parachains. Users can select whether they want to view:
+Polkadot & Kusama parachains. Users can select whether they want to view:
 
 - Polkadot or Kusama
 - Daily or monthly figures
