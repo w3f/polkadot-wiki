@@ -64,10 +64,14 @@ transition to the advanced NFT concept central to Polkadot’s NFTs pallet devel
 ## NFT Standards
 
 Due to its heterogeneous nature, the Polkadot ecosystem supports differing implementations of NFTs.
-Polkadot’s core blockchain technology is based on Substrate. Accordingly, NFTs created in
-substrate-based context are called “native” NFTs. Native NFTs are created through dedicated methods
-available in pallets, collections of functions written as Wasm code. Polkadot Uniques and NFTs
-pallets and Unique Network’s NFT utility pallet bundle provide a way to do this. Here a common
+Polkadot's core blockchain technology is based on the Polkadot SDK (Substrate). Accordingly, NFTs created in a
+Substrate-based context are called "native" NFTs. Native NFTs are created through dedicated methods
+available in pallets, collections of functions written as Wasm code. This approach offers significant 
+performance advantages over smart contract implementations, as pallets operate at the chain level with 
+direct access to the blockchain's storage and logic, ensuring optimal security under Polkadot's shared 
+security model while maintaining lower computational overhead.
+
+Polkadot Uniques and NFTs pallets and Unique Network's NFT utility pallet bundle provide a way to do this. Here a common
 standard for metadata may provide direct interoperability and efforts in that direction are being
 made through the XCM initiative
 ([RFC-0125: XCM Asset Metadata](https://polkadot-fellows.github.io/RFCs/approved/0125-xcm-asset-metadata.html#rfc-0125-xcm-asset-metadata)).
@@ -153,6 +157,11 @@ protocol level, eliminating the need for external bridge solutions. The XCM impl
 significantly enhances security by removing the trustful aspect of the transactions, which is
 typically required by bridge architectures and represents potential points of failure and security
 risk in cross-chain communication.
+
+NFT XCM capabilities are operational in development environments between Asset Hub and 
+Unique Network, with plans for broader parachain integration. This enables seamless cross-chain NFT 
+transfers, fostering a unified, dynamic marketplace across Polkadot parachains without requiring 
+external bridge infrastructure.
 
 NFT transfers can be decomposed into two independently transferable components:
 
