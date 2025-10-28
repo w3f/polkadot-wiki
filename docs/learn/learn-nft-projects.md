@@ -44,8 +44,6 @@ that allows creating a buy order for a specific NFT.
 
 These NFTs can be viewed and interacted instantly on [KodaDot](https://kodadot.xyz/).
 
-![nft-basilisk](../assets/nft/nft-basilisk.png)
-
 ## Crust
 
 Crust is primarily a storage solution. A
