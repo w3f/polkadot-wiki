@@ -17,7 +17,49 @@ Polkadot ecosystem has a number of NFT pallets in use:
 4. **ORML**: Initially created as a simple NFT pallet, currently used by [Acala parachain](https://acala.network/).
 5. **NFT Manager**: Simple NFT pallet used by [Aventus Network](https://aventus.io/).
 
+
+## Pallet Comparison
+
+These tables provide a side-by-side comparison of the available NFT pallets in the Polkadot ecosystem and how their functionalities differ.
+
+### Asset Metadata
+
+|                                               | Uniques | NFTs                               | Unique Network         |
+| --------------------------------------------- | ------- | ---------------------------------- | ---------------------- |
+| Collection metadata                           | 🟢      | 🟢                                 | 🟢                     |
+| Collection key-value attributes               | 🟢      | 🟢                                 | 🟢                     |
+| Collection modifiable metadata                | 🟢      | 🟢                                 | 🟢                     |
+| Collection modifiable key-value attributes    | 🟢      | 🟢                                 | 🟢                     |
+| Token modifiable key-value attributes         | 🟢      | 🟢                                 | 🟢                     |
+| Token attributes modification approvals       | 🟥      | 🟢                                 | 🟥 (🟢 with contracts) |
+| Token data modification updatable permissions | 🟥      | 🟢                                 | 🟢                     |
+| Token pre-signed attributes                   | 🟥      | 🟢                                 | 🟥 (🟢 with contracts) |
+| Sponsoring                                    | 🟥      | 🟥                                 | 🟢                     |
+| Fractionalization                             | 🟥      | 🟥 (🟢 with nft-fractionalization) | 🟢                     |
+| Nesting                                       | 🟥      | 🟥                                 | 🟢                     |
+
+### Marketplace
+
+The ability to create an on-chain NFT marketplace, integrated into the pallets
+Also:
+NFT Manager has native onchain marketplace support
+
+|                                 | Uniques | NFTs | Unique Network |
+| ------------------------------- | ------- | ---- | -------------- |
+| Embedded market functions       | 🟢      | 🟢   | 🟥             |
+| Custom Smart Contract market(s) | 🟥      | 🟥   | 🟢             |
+
+### EVM support
+
+Native support for EVM and Ethereum by pallets
+
+|                                      | Uniques | NFTs | Unique Network |
+| ------------------------------------ | ------- | ---- | -------------- |
+| EVM support (ERC721 interface)       | 🟥      | 🟥   | 🟢             |
+| EVM support (custom pallet features) | 🟥      | 🟥   | 🟢             |
+
 For detailed comparison of pallets see [NFT Pallets in the Polkadot ecosystem](https://docs.google.com/presentation/d/1J6kJ5lQSAnHTre3j7-J6fH34kk8TQ4apif-CCHjQo3o/edit?usp=sharing)
+
 
 ## Pallet Characteristics
 
