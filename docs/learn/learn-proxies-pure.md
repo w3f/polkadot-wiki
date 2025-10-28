@@ -42,6 +42,9 @@ proxy channels) within proxy calls via `proxy.proxy` extrinsic. [For example](./
 proxies_ within a multisig is possible. Using proxy calls, it is possible to use the _any_ proxy to call the
 _pure_ proxy, which in turn will do a multisig call.
 
+!!!info "Staking Migration to Asset Hub"
+    **Pure proxies** are automatically migrated to Asset Hub. Additionally, **"Any" type pure proxies** are kept on the Relay Chain to prevent them from becoming inaccessible. **Proxy announcements are not migrated** and will be deleted from the Relay Chain.
+
 ## History of Pure Proxies
 
 In the past, pure proxies were called anonymous proxies. However, pure proxies are not anonymous because they have an address spawned by a primary account acting as _any_ proxy. Even if _any_ proxy changes, it is still possible to find who generated the _anonymous_ proxy by going backward using a block explorer. There was thus the need to change the name of _anonymous_ proxy. People suggested _keyless accounts_ since they do not have a private key and are proxied accounts. However, multisig accounts are also keyless (but deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that has been chosen is **pure proxy**. If you want to know more about the reasoning behind the renaming of pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or the discussion on [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
