@@ -109,7 +109,7 @@ account has, an additional amount defined by the
 [`announcementDepositFactor`](../general/chain-state-values.md) is reserved as well.
 
 !!!info "Staking Migration to Asset Hub"
-    **Proxy delegations** are automatically migrated to Asset Hub with proxy types translated appropriately. However, **proxy announcements are not migrated** and will be deleted from the Relay Chain.
+    **Proxy delegations** are automatically migrated to Asset Hub with proxy types translated appropriately. However, **proxy announcements are not migrated** and will be deleted from the Relay Chain. Any time-delayed proxy announcements will need to be re-created on Asset Hub.
 
 ---
 
