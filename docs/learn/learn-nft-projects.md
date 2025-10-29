@@ -24,7 +24,6 @@ More information about Asset Hub pallets can be found in the [NFT pallets sectio
 
 Astar provides familiar EVM tooling for developers transitioning from Ethereum, alongside Wasm smart contract capabilities using [ink!](https://use.ink/) and [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) standards.
 
-The multi-virtual machine environment enables diverse NFT use cases and implementations.
 
 Developer tools and documentation links:
 
