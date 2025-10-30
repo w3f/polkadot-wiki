@@ -227,7 +227,7 @@ the derived accounts are fully secure. Unless you have a specific need for a sof
 recommended to generate the account using a hard derivation path.
 
 Many Polkadot key generation tools support hard and soft derivation. For instance, if you intend to
-create an account to be used on the relay chain, you can derive a **hard key** child account using
+create an account on Polkadot, you can derive a **hard key** child account using
 **//** after the mnemonic phrase.
 
 ```
