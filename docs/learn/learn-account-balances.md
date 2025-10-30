@@ -22,7 +22,7 @@ There are four types of account balances:
 - **Free Balance** is a portion of an account's total balance that is not held (see below). It is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), and deposits) as long as the total balance (free + reserved) remains above the maximum of frozen balance and [existential deposit (ED)](./learn-accounts.md#existential-deposit-and-reaping).
 
 - **Reserved Balance** (also called holds, or held balance) is the balance removed from free and does not overlay. It can be slashed, but only after all the free balance has been slashed. Reserved balance is used for:
-    - native [staking](./learn-staking.md) on the Polkadot Hub  or via nomination pools
+    - native [staking](./learn-staking.md) on the Polkadot Hub as an individual nominator, or via nomination pools
     - deposits such as [governance](./learn-polkadot-opengov.md) decision and submission deposits, [identity](./learn-identity.md) deposits, and [proxy](./learn-proxies.md) and [multi-signature](./learn-account-multisig.md) accounts deposits. It cannot be used for transfers or paying fees.
 
 - **Frozen Balance** (also called locks, or locked balance) is simply the minimum total balance the user needs to maintain (inclusive of reserves). Frozen balance is used for:
