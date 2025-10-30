@@ -12,8 +12,8 @@ the XCM format can be used to construct many more combinations to suit the use c
 ### Example Use-Cases
 
 - Request for specific operations to occur on the recipient system such as governance voting.
-- Enables single use-case chains e.g. the [Asset Hub](./learn-guides-assets-create.md) as asset
-  parachains
+- Enables system chains e.g. the [Asset Hub](./learn-guides-assets-create.md) as the primary
+  asset management parachain
 - Optionally include payment of fees on a target network for requested operation.
 - Provide methods for various asset transfer models:
   - **Remote Transfers**: control an account on a remote chain, allowing the local chain to have an
@@ -21,10 +21,10 @@ the XCM format can be used to construct many more combinations to suit the use c
     controls into other accounts on that remote chain.
   - **Asset Teleportation**: movement of an asset happens by destroying it on one side and creating
     a clone on the other side.
-  - **Reserve Asset Transfer**: there may be two chains that want to nominate a third chain, where
-    one includes a native asset that can be used as a reserve for that asset. Then, the derivative
-    form of the asset on each of those chains would be fully backed, allowing the derivative asset
-    to be exchanged for the underlying asset on the reserve chain backing it.
+  - **Reserve Asset Transfer**: Asset Hub serves as the primary reserve location for DOT, where
+    parachains can hold derivative forms of DOT that are fully backed by the underlying asset on
+    Asset Hub, allowing the derivative asset to be exchanged for the underlying asset on the reserve
+    chain backing it.
 
 Let's review two of these example asset transfer use cases: **Asset Teleportation** and **Reserve
 Asset Transfer**.
