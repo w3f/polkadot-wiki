@@ -46,7 +46,7 @@ PoS ensures that everybody participating in the staking process has "skin in the
 be held accountable. In case of misbehavior, participants in the staking process can be punished or
 [**slashed**](./learn-offenses.md), and depending on the gravity of the situation, their stake can
 be partly or fully confiscated by the network. It is not in a staker's economic interest to
-orchestrate an attack and risk losing tokens. Any rational actor staking on the network would want
+orchestrate an attack and risk losing tokens. Any
 to get rewarded, and the PoS network rewards good behavior and punishes bad behavior.
 
 ## Nominated Proof-of-Stake (NPoS)
@@ -258,10 +258,10 @@ support article to understand in detail how to select the set of validators to n
 
 Two different accounts can be used to securely manage your funds while staking.
 
-- **Stash:** This account holds funds bonded for staking, but delegates all staking functions to a
+- **Stash:** This account holds funds bonded for staking, but delegates some staking functions to a
   staking proxy account. You may actively participate in staking with a stash private key kept in a
   cold wallet like Ledger, meaning it stays offline all the time. Having a staking proxy will allow
-  you to sign all staking-related transactions with the proxy instead of using your Ledger device.
+  you to sign most staking-related transactions with the proxy instead of using your Ledger device.
   This will allow you:
 
   - to avoid carrying around your Ledger device just to sign staking-related transactions, and
@@ -271,8 +271,7 @@ Two different accounts can be used to securely manage your funds while staking.
   nominating and validating. It can set preferences like commission (for validators) and the staking
   rewards payout account. The earned rewards can be bonded (locked) immediately for bonding on your
   stash account, which would effectively compound the rewards you receive over time. You could also
-  choose to have them deposited to a different account as a free (transferable) balance. If you are
-  a validator, it can also be used to set your [session keys](learn-cryptography.md). Staking
+  choose to have them deposited to a different account as a free (transferable) balance. Staking
   proxies only need sufficient funds to pay for the transaction fees.
 
 !!!warning
@@ -308,11 +307,14 @@ In other words, there may be slight differences in your rewards from era to era,
 validators in the active set at the same time. These variations should cancel out over a long enough
 timeline. See the page on [Validator Payout Guide](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/).
 
+!!!info "Staking Rewards"
+     You must claim your staking rewards from Polkadot Hub, not the relay chain.
+
 The distribution of staking rewards to the nominators is not automatic and needs to be triggered by
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
 payout for all the nominators whose stake has backed a specific validator in the active set of that
 era. Staking rewards are kept available for
-[a limited amount of time](../general/chain-state-values.md).
+[a limited amount of time](../general/chain-state-values.md). Staking rewards are claimed on Asset Hub.
 
 For more information on why this is so, see the page on [simple payouts](learn-staking-advanced.md).
 
@@ -349,18 +351,7 @@ inactive set in the next. The validator will not lose their nominators.
 
 For more on chilling, see the [How to Chill](https://docs.polkadot.com/infrastructure/running-a-validator/operational-tasks/pause-validating/) page on the main website.
 
-### Fast Unstake
-
-!!!info "Fast Unstaking feature is live!"
-    If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you can now unbond them immediately.
-
-If your bonded balance did not back any validators for a
-[pre-determined period](../general/chain-state-values.md), you are eligible to
-perform fast unstaking. The [staking dashboard](https://staking.polkadot.cloud/#/overview) will
-automatically check if you qualify. For more information, visit the
-["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
-
-## Why and Why not to Stake?
+### Why and Why not to Stake?
 
 ### Pros of Staking
 
