@@ -20,7 +20,7 @@ provided are grouped into the following sections:
 - [Staking](https://dashboards.data.paritytech.io/staking.html) - metrics pertaining to staking,
   nomination pools and more.
 - [Ecosystem](https://dashboards.data.paritytech.io/parachains.html) - high level activity metrics
-  for parachains
+  for parachains.
 - [Monthly Report](https://dashboards.data.paritytech.io/eoyr.html) - an updated version of the
   [Polkadot in Numbers: Annual Report 2023](https://dashboards.data.paritytech.io/reports/2023/index.html).
 
