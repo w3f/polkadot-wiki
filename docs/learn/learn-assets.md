@@ -9,8 +9,21 @@ on the latter, namely assets issued by a creator (e.g. rights to audited, off-ch
 the creator, or art issued as an NFT).
 
 The
-[Asset Hub system parachain](.learn-system-chains.md) hosts the data structures and runtime logic for the creation, management, and use of assets in the Polkadot network.  Note that assets are not hosted on the Relay Chain - they exist only on the Asset Hub. Other parachains can interact with these assets, but the Asset Hub functions as the trusted “home base” for all asset-related activity across the network.
+[Asset Hub system parachain](https://www.parity.io/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/)
+hosts data structures and logic that specialize in the creation, management, and use of assets in
+the network. Although other parachains can host applications dealing with assets on the Asset Hub,
+the hub serves as a trusted "home base" of assets in the network and the primary reserve location for DOT in cross-chain operations.
 
+The Asset Hub uses the relay chain's native token. The chain yields its governance to its parent
+relay chain and has no inflation or era-based rewards for collators (although collators receive a
+portion of transaction fees). As a [system parachain](./learn-system-chains.md), the Asset Hub has a
+trusted relationship with the relay chain, and as such, can teleport the relay chain's native token
+between itself and the relay chain. That is, the native token on the relay chain is just as good on
+Asset Hub.
+
+The Asset Hub does not support smart contracts. See the [Advanced](#advanced-techniques) section at
+the bottom for a discussion on using proxy and multisig accounts to replicate oft-used contract
+logic.
 
 ## Sufficient Assets
 
@@ -148,7 +161,7 @@ table. Likewise, for the minting and burning of tokens, an asset's team can perf
 on the Asset Hub and propagate any minted tokens to other parachains in the network.
 
 Parachains that want to send assets to other parachains should do so via instructions to the Asset
-Hub so that the reserve-backed table stays up to date. For more info, see the "Moving Assets between
+Hub so that the reserve-backed table stays up to date. This is particularly important for DOT transfers, where Asset Hub serves as the canonical reserve location. For more info, see the "Moving Assets between
 Chains in XCM" section of the
 [article on the XCM format](https://polkadot.network/blog/xcm-the-cross-consensus-message-format/).
 
