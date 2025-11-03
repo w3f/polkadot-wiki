@@ -17,13 +17,13 @@ accounts**. For more details about proxy accounts, visit this wiki's [dedicated 
 Proxy accounts are special accounts that can sign
 [**extrinsic calls**](./learn-transactions.md#pallets-and-extrinsics) made to specific **pallets**
 on behalf of the proxied account. There is the possibility of creating staking proxy accounts
-that can be used to sign extrinsic calls specific to the staking, session, and utility pallets.
+that can be used to sign extrinsic calls specific to the staking and utility pallets. Session keys must be set by the stash account.
 
 Staking is not a set-and-forget action; as a nominator, you will need to monitor the performance of
 your validators and make changes if required. There will be transactions, such as changing nominations, that
 must be regularly signed. Each time you sign with an account, in the case of hot accounts,
-you expose the private key of that account to the internet with the consequent risk of attack. A hot
-stash will be exposed all the time a transaction is signed. Even in the case of a cold stash created
+you expose the private key of that account to the internet
+stash will be exposed all the time a transaction is
 with a Ledger device, signing with the stash will build a transaction history that might tell
 something about your habits and preferences, or even your location.
 

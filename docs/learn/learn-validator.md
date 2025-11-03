@@ -7,7 +7,7 @@ description: Validators secure Polkadot's relay chain by staking tokens, validat
     This page provides a general overview of the role of validators in the Polkadot network. For more detailed information you can read the [Parachain Protocol Overview](./learn-parachains-protocol.md).
 
 Validators secure the [relay chain](learn-architecture.md#relay-chain) by staking DOT,
-validating proofs from [collators](./learn-collator.md) and participating in consensus with other validators.
+validating proofs from [collators](./learn-collator.md) and participating in consensus with other validators. While validators operate on the relay chain, staking operations (like bonding DOT and nominating) are performed on the Polkadot Hub.
 
 Validators play a crucial role in adding new blocks to the relay chain. They also
 guarantee that each rollup chain (or parachain) follows its unique rules and can pass messages with other rollups in a secure environment.
@@ -74,7 +74,7 @@ Any instances of non-compliance with the consensus algorithms result in
 [**disputes**](./learn-parachains-protocol.md#disputes) with the [punishment](./learn-offenses.md) of the validators on the
 wrong side by removing some or all their staked tokens, thereby discouraging bad actors. Good
 performance, however, will be rewarded, with validators receiving block rewards (including
-transaction fees) in the form of native tokens in exchange for their activities.
+transaction fees) in the form of native tokens in exchange for their activities. These rewards are paid out and must be claimed on the Asset Hub.
 
 ## Deterministic Finality
 
