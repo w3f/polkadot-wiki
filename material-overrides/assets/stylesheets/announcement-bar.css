@@ -1,3 +1,23 @@
+.announcement-bar {
+  background-color: #e6007a;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.announcement-bar .announcement-text {
+  white-space: normal;
+  line-height: 1.5;
+}
+
 .md-banner {
   background-color: #e6007a;
   color: white;
