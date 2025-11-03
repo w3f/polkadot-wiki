@@ -17,7 +17,7 @@ The fourth (now defunct) proof of concept (PoC-4) [testnet](#testnet) for Polkad
 
 ## Asset Hub
 
-A system parachain used for asset management.
+A system parachain that hosts all on-chain assets and account functionality on Polkadot, including balances, staking, proxies, and is expected to host smart contracts in Q4 2025.
 
 ## Attestation
 

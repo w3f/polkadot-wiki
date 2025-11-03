@@ -34,7 +34,7 @@ relayer pays for transactions at both sides of the bridge.
 !!!caution "Relayer Incentive Mechanism - Work in Progress"
     The initial bridge design supports any number of relayers, but there's no guaranteed reward for each
     and every relayer submitting valid bridge transactions. Also, these rewards are distributed from the
-    accounts controlled by the respective relay chain's governance. Hence, any delays in replenishing
+    accounts controlled by the respective network's governance. Hence, any delays in replenishing
     the funds on these accounts will result in not receiving any rewards.
 
 Rewards paid to relayer has two parts - static and dynamic. The static part of the reward is set

@@ -80,8 +80,7 @@ The underlying technologies of the Hyperbridge are integrated with:
   cross-chain communications.
 - [BEEFY consensus](https://spec.polkadot.network/sect-finality#sect-grandpa-beefy): The BEEFY
   (Bridge Efficiency Enabling Finality Yielder) protocol functions as a complementary system to
-  GRANDPA, specifically designed to facilitate efficient bridging between the Polkadot network's
-  relay chain and external, isolated blockchains like Ethereum. Notably, BEEFY addresses the
+  GRANDPA, specifically designed to facilitate efficient bridging between the Polkadot network and external, isolated blockchains like Ethereum. Notably, BEEFY addresses the
   interoperability challenge with blockchains not initially constructed to integrate seamlessly with
   the Polkadot interchain framework.
 - [The Barretenberg backend](https://github.com/AztecProtocol/barretenberg): Within the realm of
