@@ -18,10 +18,7 @@ SPREE in brief was described with the following properties and functions:
 
 ## Origin
 
-On 28 March, 2019 u/Tawaren, a member of the Polkadot community, made a post on
-[r/dot](https://www.reddit.com/r/dot/) called "SmartProtocols Idea" and laid out a proposal for
-[Smart Protocols](https://www.reddit.com/r/dot/comments/b6kljn/smartprotocols_idea/). The core
-insight of the post was that XCMP had a complication in that it was difficult to verify and prove
+On 28 March, 2019 u/Tawaren, a member of the Polkadot community observed that XCMP had a complication in that it was difficult to verify and prove
 code was executed on a parachain without trust. A solution was to install the SmartProtocols in the
 relay chain that would be isolated blobs of code with their own storage per instance that could only
 be changed through an interface with each parachain. SmartProtocols are the precursor to SPREE.

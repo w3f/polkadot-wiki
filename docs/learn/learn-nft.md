@@ -63,23 +63,25 @@ transition to the advanced NFT concept central to Polkadot’s NFTs pallet devel
 
 ## NFT Standards
 
-Due to its heterogeneous nature, the Polkadot ecosystem supports differing implementations of NFTs.
-Polkadot’s core blockchain technology is based on Substrate. Accordingly, NFTs created in
-substrate-based context are called “native” NFTs. Native NFTs are created through dedicated methods
-available in pallets, collections of functions written as Wasm code. Polkadot Uniques and NFTs
-pallets and Unique Network’s NFT utility pallet bundle provide a way to do this. Here a common
-standard for metadata may provide direct interoperability and efforts in that direction are being
-made through the XCM initiative
+Due to its heterogeneous nature, the Polkadot ecosystem supports multiple implementations of NFTs.
+Polkadot's core blockchain technology is based on the Polkadot SDK (Substrate). NFTs created in a
+Substrate-based context are called "native" NFTs. Native NFTs are created through dedicated methods
+available in pallets, collections of functions written as Wasm code. Pallets operate at the chain level with 
+direct access to the blockchain's storage and logic, ensuring security under Polkadot's shared 
+security model.
+
+Polkadot Uniques and NFTs pallets and Unique Network's NFT utility pallet bundle provide native NFT functionality. Common
+standards for metadata provide direct interoperability through the XCM initiative
 ([RFC-0125: XCM Asset Metadata](https://polkadot-fellows.github.io/RFCs/approved/0125-xcm-asset-metadata.html#rfc-0125-xcm-asset-metadata)).
 
-Polkadot’s Ink! language for writing contracts in Substrate provides a separate mechanism for
-creating NFTs. Astar has been spearheading this effort and one example of this is their
+The ink! smart contract language for writing contracts provides another mechanism for
+creating NFTs. Astar has implemented
 [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals)
-initiative for standardizing NFTs using the Contracts pallet.
+for standardizing NFTs using the Contracts pallet.
 
-The availability of Ethereum Virtual Machines (EVM) in the Polkadot ecosystem provides yet another
-way to create and manage NFTs using Solidity contracts just like on the Ethereum network. Such NFTs
-are built in adherence to the corresponding ERC standards adopted from the Ethereum network.
+Ethereum Virtual Machine (EVM) implementations in the Polkadot ecosystem provide another
+way to create and manage NFTs using Solidity contracts. These NFTs
+follow ERC standards from the Ethereum network.
 
 ## Birth of NFTs - The EVM Domain
 
@@ -140,32 +142,28 @@ much less efficient transaction processing than the native substrate solutions.
 
 ## Cross-Chain Transfers
 
-Transfer of NFTs across chains is one of the most engaging issues in blockchain. In terms of the
-mechanism through which a transfer of the NFT can occur on the Polkadot network, two distinct
-approaches exist:
+Transfer of NFTs across chains is handled through two approaches on the Polkadot network:
 
 - Asset teleportation
 - Asset reservation via sovereign account mechanism - derivative NFTs
 
-Cross-chain transfers within the Polkadot Substrate ecosystem are exclusively executed through the
-XCM (Cross-Consensus Messaging) system. This system provides native, trustless security at the
-protocol level, eliminating the need for external bridge solutions. The XCM implementation
-significantly enhances security by removing the trustful aspect of the transactions, which is
-typically required by bridge architectures and represents potential points of failure and security
-risk in cross-chain communication.
+Cross-chain transfers within the Polkadot ecosystem are executed through the
+XCM (Cross-Consensus Messaging) system. This system provides native security at the
+protocol level, eliminating the need for external bridge solutions.
 
-NFT transfers can be decomposed into two independently transferable components:
+NFT XCM capabilities are operational in development environments between Asset Hub and 
+Unique Network, with expansion to other parachains planned. This enables cross-chain NFT 
+transfers across Polkadot parachains without external bridge infrastructure.
 
-- core asset properties, consisting of identity and ownership data, and
-- optional metadata attributes.
+NFT transfers can be split into two components:
 
-In certain cross-chain operations, such as staking, complete NFT teleportation is unnecessary. This
-was demonstrated through a successful
-[XCM implementation between Unique Network and Acala](https://unique.network/blog/unique-network-cross-chain-nft-proof-of-concept-is-here/),
-where a derivative NFT was created on the Acala chain representing the original NFT from Unique
-Network. The derivative implementation required only core asset properties, as metadata transfer was
-nonessential for staking and collateral use cases where only identity and ownership verification are
-required.
+- Core asset properties (identity and ownership data)
+- Optional metadata attributes
+
+Complete NFT teleportation may not always be necessary. A successful
+[XCM implementation between Unique Network and Acala](https://unique.network/blog/unique-network-cross-chain-nft-proof-of-concept-is-here/)
+created a derivative NFT on the Acala chain representing the original NFT from Unique
+Network, requiring only core asset properties for staking and collateral use cases.
 
 Teleportation, i.e., a complete transfer of identity ownership and metadata, may be the optimal
 solution for a complete asset migration and the only available option for bridging mechanisms.
@@ -173,12 +171,3 @@ solution for a complete asset migration and the only available option for bridgi
 Bridging to and from Substrate chains and EVM chains takes much effort but is a highly desired
 feature in the NFT industry. Merging the collector and customer base has significant implications,
 so multiple projects focus on making this possible.
-
-## What’s Next From Here?
-
-Utility NFTs are at a very early adoption stage.
-
-If you consider an NFT an ownable, universal digital encapsulation of data, it has a role as
-significant as that of a smart contract. Real-world asset tokenization, tradable digital coupons,
-virtual digital keys and badges, bundles of utility, resource, and accomplishment tokens, data
-wrappers… a likely advent of the era of discovery lays ahead.
