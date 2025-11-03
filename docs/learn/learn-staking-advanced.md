@@ -44,8 +44,8 @@ means doing balance transfers on the proxied account is impossible through a sta
 
 Note that to change the staking proxy, you must sign with the stash or an _any_ proxy.
 
-!!!info "Post Asset Hub Migration Changes"
-    After staking migration to Asset Hub, **session keys must be set by the stash account** (not the controller) and now **require a deposit**. All proxy relationships will be maintained during migration.
+!!!info "Staking Migration to Asset Hub"
+    **Staking proxies** are automatically migrated to Asset Hub along with other proxy types (except the "Any" type). However, **proxy announcements are not migrated** and will be deleted from the Relay Chain.
 
 ## Bags List
 
