@@ -73,5 +73,5 @@ To learn more about development of  Solidity contracts for PolkaVM, refer to the
 
 ## Resources
 - [Polkadot Developer Docs](https://docs.polkadot.com/develop/)
-- [Revive Compiler](https://github.com/revive)
+- [Revive Compiler](https://github.com/paritytech/revive)
 - [Smart contracts roadmap discussion](https://forum.polkadot.network/t/contracts-on-assethub-roadmap/9513)
