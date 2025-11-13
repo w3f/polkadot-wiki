@@ -1105,7 +1105,7 @@ ___
  
 ### approveBountyWithCurator(bounty_id: `Compact<u32>`, curator: `MultiAddress`, fee: `Compact<u128>`)
 - **interface**: `api.tx.bounties.approveBountyWithCurator`
-- **summary**:    Approve bountry and propose a curator simultaneously.  This call is a shortcut to calling `approve_bounty` and `propose_curator` separately. 
+- **summary**:    Approve boundary and propose a curator simultaneously.  This call is a shortcut to calling `approve_bounty` and `propose_curator` separately. 
 
    May only be called from `T::SpendOrigin`. 
 
@@ -7582,7 +7582,7 @@ ___
 - **interface**: `api.tx.utility.ifElse`
 - **summary**:    Dispatch a fallback call in the event the main call fails to execute.  May be called from any origin except `None`. 
 
-   This function first attempts to dispatch the `main` call.  If the `main` call fails, the `fallback` is attemted.  if the fallback is successfully dispatched, the weights of both calls  are accumulated and an event containing the main call error is deposited. 
+   This function first attempts to dispatch the `main` call.  If the `main` call fails, the `fallback` is attempted.  if the fallback is successfully dispatched, the weights of both calls  are accumulated and an event containing the main call error is deposited. 
 
    In the event of a fallback failure the whole call fails  with the weights returned. 
 

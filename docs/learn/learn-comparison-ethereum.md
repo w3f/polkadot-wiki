@@ -7,7 +7,7 @@ Both protocols are blockchains at their core but serve fundamentally different r
 utilized:
 
 - Ethereum is a general-purpose blockchain that hosts the Ethereum Virtual Machine, an environment
-  for executing smart contracts. Ethereum is homogenous but can utilize rollups and layer two
+  for executing smart contracts. Ethereum is homogeneous but can utilize rollups and layer two
   solutions to scale its usage.
 - Polkadot is a heterogeneous, multi-chain protocol (a "layer 0" or metaprotocol) that hosts
   multiple layer one blockchains and allows them to partake in shared security. Polkadot acts as a

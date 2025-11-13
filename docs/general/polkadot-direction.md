@@ -56,7 +56,7 @@ To sum up, accords ensure that the receiver faithfully interprets XCM messages s
 XCMP channels. Accords are the missing piece of the puzzle to achieve a fully trustless and
 collaborative environment between applications.
 
-Polkadot is the only ecosystem where accords can properly exist because it has a homogenous security
+Polkadot is the only ecosystem where accords can properly exist because it has a homogeneous security
 layer that provides a specific state transition function for each logic component. This allows
 patterns of cooperation between multiple logic components (i.e., trans-applications) that would not
 be possible to achieve over bridges.

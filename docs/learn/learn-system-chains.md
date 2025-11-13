@@ -9,7 +9,7 @@ The primary functionality of the relay chain is to secure the parachains and fac
 communication between them. All other functionalities such as asset transfers, governance, identities
 and bridging (a potentially resource intensive task) can benefit from operating separately on system
 chains. System chains are responsible for delegating functionality away from the relay chain for
-peformance reasons, taking advantage of the inherent parallelization the architecture of Polkadot
+performance reasons, taking advantage of the inherent parallelization the architecture of Polkadot
 provides.
 
 ## Overview
@@ -74,7 +74,7 @@ KSM. In fact, there will likely be a system parachain specifically for network g
     sense to have a parachain on each network dedicated to bridges. This is because of the execution
     isolation provided by parachains.
 
-    The Bridge Hub system parachain operates on the relay chain, and is responsible for faciliating
+    The Bridge Hub system parachain operates on the relay chain, and is responsible for facilitating
     bridges to the wider Web3 space. It contains the required bridge
     [pallets](../general/glossary.md#pallet) in its runtime, which enable trustless bridging with other
     blockchain networks like Polkadot, Kusama and Ethereum. The Bridge Hub uses the native token of the
@@ -84,7 +84,7 @@ KSM. In fact, there will likely be a system parachain specifically for network g
 
     ### People Chain
 
-    The People Chain allows users to mange their account [identity](./learn-identity.md).
+    The People Chain allows users to manage their account [identity](./learn-identity.md).
 
     ### Coretime Chain
 
