@@ -1105,7 +1105,7 @@ ___
  
 ### approveBountyWithCurator(bounty_id: `Compact<u32>`, curator: `MultiAddress`, fee: `Compact<u128>`)
 - **interface**: `api.tx.bounties.approveBountyWithCurator`
-- **summary**:    Approve boundary and propose a curator simultaneously.  This call is a shortcut to calling `approve_bounty` and `propose_curator` separately. 
+- **summary**:    Approve the bounty and propose a curator simultaneously.  This call is a shortcut to calling `approve_bounty` and `propose_curator` separately. 
 
    May only be called from `T::SpendOrigin`. 
 
