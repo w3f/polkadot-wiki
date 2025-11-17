@@ -129,7 +129,7 @@ control the minimum value they receive, protecting against unfavourable price mo
 withdrawal process​.
 
 For example, the snapshot below shows how to remove liquidity by specifying the number of LP tokens.
-In exchange of removing around half of the liquidity of the pool, the expecation is that we receive
+In exchange of removing around half of the liquidity of the pool, the expectation is that we receive
 at least 0.4 `ROC` tokens (`u128` value of`400000000000` as it has 12 decimals) and 40 `EDU` tokens
 (`u128` value of `400000000000` as it has 10 decimals).
 

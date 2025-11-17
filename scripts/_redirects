@@ -2,7 +2,7 @@
 # content is moved to https://docs.polkadot.com/
 
 # The objective of the redirects is to ensure all Polkadot Wiki URLs that are shared
-# previously are going to pount to the relevant latest documentation. No previous URLs
+# previously are going to point to the relevant latest documentation. No previous URLs
 # should throw 404 error.  
 
 # Redirects for all index pages of docusaurus to respective links on Mkdocs
