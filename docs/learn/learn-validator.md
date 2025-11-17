@@ -94,7 +94,7 @@ if all is well, the candidate becomes _backable_, and some in-core validators sh
 
 The validators on the relay chain will try to reach a consensus on the block candidate. Upon
 reaching consensus, the now validated block candidate is shared with the validators and collators,
-and the process repeats for new transactions. With the new [pipelining feature (also called asynchronus backing)](./learn-async-backing.md), a collator can continue building new blocks on a rollup while the previous block candidate they proposed to the relay chain validators is being backed. A block is included in the relay chain every 6 seconds.
+and the process repeats for new transactions. With the new [pipelining feature (also called asynchronous backing)](./learn-async-backing.md), a collator can continue building new blocks on a rollup while the previous block candidate they proposed to the relay chain validators is being backed. A block is included in the relay chain every 6 seconds.
 
 ## Further Readings
 

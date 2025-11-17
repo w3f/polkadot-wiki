@@ -92,7 +92,7 @@ tenets:
     For new fellowship inductions, Polkassembly has created an interface (still in beta) to [apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives) This initiative is funded by Polkadot treasury through [OpenGov referendum 373](https://polkadot-old.polkassembly.io/treasury/574)
 
 The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on
-[the fellowship dasboard](https://polkadot-fellows.xyz/#/membership).
+[the fellowship dashboard](https://polkadot-fellows.xyz/#/membership).
 
 ### Rank Updates
 

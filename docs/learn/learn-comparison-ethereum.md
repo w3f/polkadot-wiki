@@ -32,7 +32,7 @@ Both protocols have fundamentally different goals:
   [Parachains Protocol](./learn-parachains-protocol.md).
 
 Although Polkadot's primary
-purpose is to validate the protocols that operate under it, it also supports smart contract deployments. Additionaly, several parachains provide
+purpose is to validate the protocols that operate under it, it also supports smart contract deployments. Additionally, several parachains provide
 [smart contract functionality](https://docs.polkadot.com/develop/smart-contracts/evm/).
 Parachains on Polkadot can even run an EVM for executing smart contracts written in Solidity using
 [Frontier, an Ethereum compatibility layer for Substrate](https://github.com/polkadot-evm/frontier).

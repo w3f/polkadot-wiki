@@ -12,7 +12,7 @@ Polkadot is **a multi-core decentralized computer** that provides resilient and 
 
 The Polkadot community [voted on a Wish for Change proposal](https://polkadot.polkassembly.io/referenda/747) stating that Polkadot 2.0 includes the following major technical upgrades:
 
-- [asnychronous backing](../learn/learn-async-backing.md) allowing pipelining and thus a more efficient rollup system that grants rollups more throughput without compromising security.
+- [asynchronous backing](../learn/learn-async-backing.md) allowing pipelining and thus a more efficient rollup system that grants rollups more throughput without compromising security.
 - [coretime](../learn/learn-agile-coretime.md) allowing agile allocation of cores and thus execution on the Polkadot decentralized computer.
 - [elastic scaling](../learn/learn-elastic-scaling.md) allowing the use of multiple cores simultaneously by the same rollup chain to boost throughput.
 
