@@ -153,12 +153,12 @@ to learn how to restore your account on the Polkadot-JS UI.
 In the example, the locked balance is 0.55 KSM because the biggest lock is on democracy and is 0.55
 KSM. As soon as the democracy lock is removed the next biggest lock is on staking 0.5 KSM (bonded
 0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be 0.5 KSM, and 0.05 KSM will
-be added to the transferrable balance. After redeeming the unbonded 0.1 KSM, the locked balance will
-be 0.4 KSM, and an additional 0.1 KSM will be added to the transferrable balance. Now the biggest
+be added to the transferable balance. After redeeming the unbonded 0.1 KSM, the locked balance will
+be 0.4 KSM, and an additional 0.1 KSM will be added to the transferable balance. Now the biggest
 lock is still the bonded one. This means that even if we remove the vested lock, the locked balance
-will still be 0.4 KSM and no tokens will be added to the transferrable balance. To free those bonded
+will still be 0.4 KSM and no tokens will be added to the transferable balance. To free those bonded
 tokens we will need to unbond them and wait for the unbonding period to make them redeemable. If we
-remove the proxy the reserved funds will be automatically added to the transferrable balance.
+remove the proxy the reserved funds will be automatically added to the transferable balance.
 
 ## Query Account Data in Polkadot-JS
 
@@ -187,13 +187,13 @@ More in-depth information about the above data can be found in the
 The `AccountData` structure defines the balance types in Substrate. The three types of balances
 include:
 
-- `free`, is the balance that is free but not necessarily transferrable.
+- `free`, is the balance that is free but not necessarily transferable.
 - `reserved`, is the balance that is not free, and it is put on hold for on-chain activity such as staking,
   deposits for multi-signature calls, setting up proxies and identities, and other actions that hold
   state on the network.
 - `frozen`, is the amount that is free to use for on-chain activity but is locked in governance, or vesting.
 
-The **usable** or transferrable balance of the account is currently calculated using the formula
+The **usable** or transferable balance of the account is currently calculated using the formula
 below:
 
 ```

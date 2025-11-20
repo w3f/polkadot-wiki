@@ -150,7 +150,7 @@ can overlap on the same account balance instead of being stacked on top of one a
 automatically added to accounts when the account participates in activities on-chain (voting, etc.), but these are not customizable.
 
 Locks are accounted for within the `frozen` balance of the account. This is the balance that can be
-`free` but not transferrable, and locked in
+`free` but not transferable, and locked in
 [governance](./learn-polkadot-opengov.md) and [vesting](./learn-transactions.md#vested-transfers).
 
 Locks overlap (in both amount and duration), and the general rule is that:
@@ -176,7 +176,7 @@ after 224 days, you will be able to remove the second governance lock.
 
 ![locks-example-2](../assets/locks-example-2.png)
 
-After 224 days, all 80 DOT (- ED) will be free and transferrable.
+After 224 days, all 80 DOT (- ED) will be free and transferable.
 
 ### Edge Case for Locks
 
