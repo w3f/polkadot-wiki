@@ -9,6 +9,7 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
     and add your protocol native, permissionless, non-custodial NPoS Staking app to this page.
 
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
+- [PAPI Staking Dashboard](#papi-staking-dashboard)
 - [NOMI](#nomi)
 - [SubWallet Earning](#subwallet-earning)
 
@@ -93,6 +94,18 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
     <p class="card-title">Create, Manage & Destroy Pools</p>
   </a>
 </div>
+
+## PAPI Staking Dashboard
+
+The [PAPI Staking Dashboard](https://staking.usepapi.app/polkadot/dashboard) is a fully decentralized, trustless web application for native non-custodial [staking](../learn/learn-staking.md). It operates exclusively via Polkadot light clients with no reliance on centralized RPC endpoints or third-party indexers.
+
+Key features include:
+
+- **Light client support**: All data originates from direct peer connections, with a visible "trustless" status indicator confirming the decentralized connection.
+- **Full staking functionality**: Supports real-time interaction, validator filtering, nomination rebalancing, bonding/unbonding, and reward claiming.
+- **Solo nomination and pools**: Manage your staking operations as a solo nominator or participate in [nomination pools](../learn/learn-nomination-pools.md).
+
+![](../assets/staking-apps/papi-dashboard.png)
 
 ## NOMI
 
