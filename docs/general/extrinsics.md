@@ -1434,7 +1434,7 @@ ___
 
    - `origin`: Must be Root or pass `AdminOrigin`. 
 
-  - `end_price`: The price after the leadin period of Bulk Coretime in the first sale.
+  - `end_price`: The price after the leading period of Bulk Coretime in the first sale.
 
   - `extra_cores`: Number of extra cores that should be requested on top of the cores required for `Reservations` and `Leases`. 
 
@@ -7716,7 +7716,7 @@ ___
 - **interface**: `api.tx.voterList.putInFrontOf`
 - **summary**:    Move the caller's Id directly in front of `lighter`. 
 
-   The dispatch origin for this call must be _Signed_ and can only be called by the Id of  the account going in front of `lighter`. Fee is payed by the origin under all  circumstances. 
+   The dispatch origin for this call must be _Signed_ and can only be called by the Id of  the account going in front of `lighter`. Fee is paid by the origin under all  circumstances. 
 
    Only works if: 
 

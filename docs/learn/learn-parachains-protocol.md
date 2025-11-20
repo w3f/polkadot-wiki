@@ -393,7 +393,7 @@ for the attempt.
 
 A dispute stems from a disagreement between two or more validators. For this to happen, a bad actor
 needs to distribute an invalid block to honest validators. Scenarios leading to a dispute can be one
-of the followings (ordered from most to least important):
+of the following (ordered from most to least important):
 
 - A parablock included on a branch of the relay chain is bad
 - A parablock backed on a branch of the relay chain is bad
