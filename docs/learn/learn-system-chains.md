@@ -48,7 +48,7 @@ KSM. In fact, there will likely be a system parachain specifically for network g
 
     The Asset Hub provides tools for asset creators, such as reserve-backed stablecoin issuers, to monitor the total issuance of their assets across the entire network, including amounts transferred to other parachains. It also enables them to perform on-chain actions such as minting, burning, and asset administration.
 
-    In the future the Asset Hub is expected to be upgraded to support [smart contracts](/learn/learn-smart-contracts.md). This upgrade will extend its role beyond native runtime logic, enabling developers to deploy and interact with smart contracts directly on the Asset Hub in Solidity and Rust. 
+    In the future the Asset Hub is expected to be upgraded to support [smart contracts](./learn-smart-contracts.md). This upgrade will extend its role beyond native runtime logic, enabling developers to deploy and interact with smart contracts directly on the Asset Hub in Solidity and Rust. 
 
     Unlike smart contract-based systems, asset management, staking and transfer logic on Asset Hub is embedded directly in the chain’s runtime. Due to the efficiency of parachain execution, transaction fees and required deposits are approximately one-tenth of those on the relay chain. 
 

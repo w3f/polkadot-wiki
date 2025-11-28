@@ -45,12 +45,11 @@ for funding via the treasury. See:
 Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 
 - [Acala Grants Program](https://acala.network/ecosystem-program)
-- [Aleph Zero Ecosystem Funding Program](https://alephzero.org/blog/introducing-ecosystem-funding-program/)
+- [Aleph Zero Ecosystem Funding Program](https://alephzero.org/ecosystem-funding-program)
 - [Avail Uncharted Grants](https://github.com/availproject/avail-uncharted/blob/main/grants/grants.md)
 - [Darwinia Grants Program](https://github.com/ringecosystem/collaboration/tree/master/grant)
 - [Decentralized Futures Program](https://futures.web3.foundation/)
 - [Decentralized JAM](https://jam.web3.foundation/)
-- [Edgeware Grants and Bounties](https://gov.edgewa.re/discussion/1132-edgeware-proposal-process-and-template)
 - [Hydration Network Bounties](https://docs.hydration.net/security/intro#bug-bounties)
 - [ink!ubator](https://use.ink/ubator/)
 - [KodaDot RFPs](https://github.com/kodadot/grants/discussions/2)
