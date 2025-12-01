@@ -150,6 +150,6 @@ DOT will continue to be JAM’s native token. No other native token will be issu
 - Read the [JAM Chain page](./learn-jam-chain.md).
 - Explore official communication on https://graypaper.com and from W3F, Parity, and Polkadot to
   learn more about JAM. You can also join discussions on the forum and the fellowship calls.
-- Watch Gavin Wood's [Token2049 Dubai keynote on JAM](https://www.youtube.com/watch?v=13GHb1Pu6ss).
+- Watch Gavin Wood's [Hong Kong keynote on JAM](https://www.youtube.com/watch?v=8gfZW454CeY).
 - Read [the "Demystifying JAM" blog post](https://blog.kianenigma.com/posts/tech/demystifying-jam/)
   by Kian Paimani.
