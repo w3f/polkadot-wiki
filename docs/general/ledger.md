@@ -91,7 +91,7 @@ Ledger app.
 ### Polkadot (Generic) App
 
 !!! info "Ledger Generic Support"
-    See [Zondax documentation](https://zondax.ch/docs/polkadot) to see which Polkadot and Kusama rollup chains support the Polkadot Generic Ledger App.
+    See [the Parity Metadata page](https://data.parity.io/metadata) to see which Polkadot and Kusama rollup chains support the Polkadot Generic Ledger App.
 
 The Polkadot Generic Ledger App will allow you to use your Ledger device on the relay chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
