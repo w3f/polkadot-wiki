@@ -292,7 +292,7 @@ more about fact-checking and claim verification, have a look at the following ma
    [here](https://webliteracy.pressbooks.com).
 3. Wikipedia article on [fact-checking](https://en.wikipedia.org/wiki/Fact-checking)
 
-Finally, you should also check our complementary guide on [how to identify scams](scams.md), which
+Finally, you should also check our complementary guide on [how to identify scams](./scams.md), which
 explains how to identify outright scams and avoid them, as well as how to protect your sensitive
 information.
 

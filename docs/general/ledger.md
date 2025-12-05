@@ -91,7 +91,7 @@ Ledger app.
 ### Polkadot (Generic) App
 
 !!! info "Ledger Generic Support"
-    See [this page](https://data.parity.io/metadata) to see which Polkadot and Kusama rollup chains support the Polkadot Generic Ledger App.
+    See [the Parity Metadata page](https://data.parity.io/metadata) to see which Polkadot and Kusama rollup chains support the Polkadot Generic Ledger App.
 
 The Polkadot Generic Ledger App will allow you to use your Ledger device on the relay chain and
 parachains without being affected by runtime upgrades. The goal is to provide a single application
@@ -116,8 +116,7 @@ The Polkadot Ledger Generic app will be supported by Ledger Live,
 and [Subwallet](https://www.subwallet.app/).
 
 For more information about the Polkadot Generic App, see the
-[Ledger FAQ](https://support.ledger.com/hc/en-us/articles/17550211746845-New-Polkadot-app-FAQ?docs=true%20:dot),
-and [Zondax beryx page](https://substrate.beryx.io/new_polkadot_ledger_app).
+[Ledger FAQ](https://support.ledger.com/article/360016289919-zd).
 
 ## Migration Process
 
