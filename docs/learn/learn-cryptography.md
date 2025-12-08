@@ -13,7 +13,7 @@ For detailed descriptions on the cryptography used in Polkadot please see the mo
 ## Hashing Algorithm
 
 The hashing algorithm used in Polkadot is
-[Blake2b](https://en.wikipedia.org/wiki/BLAKE_(hash_function)). Blake2 is considered to be a very fast cryptographic hash function that is also used in the cryptocurrency [Zcash](https://z.cash).
+[Blake2b](<https://en.wikipedia.org/wiki/BLAKE_(hash_function)>). Blake2 is considered to be a very fast cryptographic hash function that is also used in the cryptocurrency [Zcash](https://z.cash).
 
 ## Keypairs and Signing
 

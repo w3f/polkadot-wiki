@@ -120,5 +120,5 @@ and the process repeats for new transactions. With the new [pipelining feature (
 - [Polkadot Telemetry Service](https://telemetry.polkadot.io/) - Network
   information, including what nodes are running on a given chain, what software versions they are
   running, and sync status.
-- [Subscan Validators Page](https://kusama.subscan.io/validator) - Displays information on the
+- [Subscan Validators Page](https://kusama.subscan.io/validator/) - Displays information on the
   current validators - not as tailored for validators as the other sites.

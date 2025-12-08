@@ -87,7 +87,7 @@ productive and understand multisig transactions. Further information is availabl
 
 ### Signet
 
-Talisman [Signet](https://www.talisman.xyz/signet) supports multisig ops and enterprise workflow for
+Talisman [Signet](https://signet.talisman.xyz/) supports multisig ops and enterprise workflow for
 onchain organisations. Enterprise features and self-hosted options are available. Signet is
 proprietary, where as Polkadot Multisig by Signet is free.
 

@@ -77,7 +77,7 @@ If your bonded balance did not back any validators in the last 28 days on Polkad
 Kusama), you are eligible to perform fast unstaking. The
 [staking dashboard](https://staking.polkadot.cloud/#/overview) will automatically check if you
 qualify. For more information, visit the
-["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433-can-i-transfer-dot-without-unbonding-and-waiting-28-days-).
+["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433).
 
 ## Setting up Accounts
 
