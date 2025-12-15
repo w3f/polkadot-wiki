@@ -21,7 +21,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Active Validator Count
 
-    The number of Polkadot validators in the active set is {{ rpc("polkadot-assethub", "Staking", "ValidatorCount", 297, false, false) }}.
+    The current number of Polkadot validators in the active set is {{ rpc("polkadot-assethub", "Staking", "ValidatorCount", 297, false, false) }}.
 
     #### Block Hash Count
 
