@@ -7,7 +7,7 @@ A Polkadot OpenGov referendum always contains a call that will be executed after
 voted in successfully. The referendum proposer is responsible for checking if the call gets executed
 successfully on-chain and whether an appropriate origin and track have been chosen. In the case of
 referenda that send a cross-chain call to the system chains, it is important to check whether the
-XCM call gets dispatched successfully from Polkadot and is received/executed as expected on the
+XCM call gets dispatched successfully from Asset Hub and is received/executed as expected on the
 system chain.
 
 This tutorial aims to show how to test the calls to be submitted with the referendum and ensure they
@@ -26,7 +26,7 @@ needs to know the exact origin and track to submit this proposal. As this is a t
 would be one of the treasury tracks -
 [SmallSpender](learn-polkadot-opengov-origins.md#small-spender) in the case of 4500 DOT.
 
-`0x13030b00d00361ed28009e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818`
+`0x3c031b00004055d175838c4a5f00d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d`
 
 ![opengov-treasury-proposal-call](../assets/governance/opengov-call-test-treasury-proposal.png)
 
@@ -35,11 +35,11 @@ would be one of the treasury tracks -
 If you like to check whether the call above will get executed successfully, you can check that by
 performing a dry run using [Chopsticks](https://github.com/AcalaNetwork/chopsticks), which is
 embedded in Polkadot JS UI. You can run a Chopsticks instance of any Polkadot SDK based chain by
-clicking "fork locally" on the UI. The snapshot below shows it for Polkadot.
+clicking "fork locally" on the UI. The snapshot below shows it for Asset Hub.
 
 ![polkadot-fork-locally](../assets/governance/polkadot-fork-locally.png)
 
-After forking locally, the Polkadot JS UI displays a local instance of the Polkadot network, which
+After forking locally, the Polkadot JS UI displays a local instance of the Asset Hub network, which
 does not produce any blocks by default. You will notice a few test accounts with DOT balance that
 can interact with the network and test out Polkadot protocol features accessible through regular
 accounts. However, the treasury spend call cannot be submitted through a signed account origin, so
@@ -56,7 +56,7 @@ await api.rpc('dev_setStorage', {
        [number + 1], [
          {
            call: {
-             Inline: '0x13030b00d00361ed28009e4e7009937c56d267338762a60ed004293afd40e7c2081847c12cb63c76a818'
+             Inline: '0x3c031b00004055d175838c4a5f00d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d'
            },
            origin: {
              origins: 'SmallSpender'
@@ -90,6 +90,7 @@ collective in the Collectives system chain runtime.
 Note down the call data and navigate to Developer > Runtime calls and fetch the weights for
 execution of the call through `transactionPaymentCallApi.queryCallInfo`. Here is the call info used
 in our example for your reference:
+
 `0x4603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
 
 ![tx-payment-call-api](../assets/governance/collectives-remove-call-weights.png)
@@ -98,7 +99,7 @@ Now you have all the information you need to create an XCM call that needs to be
 No fee payment is required for an XCM call dispatched through OpenGov. The Collectives chain
 `ParaID` is 1001. With this information, we can construct the XCM call shown below.
 
-`0x630004000100a50f04082f0000060303e3c4cc9589ad944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
+`0x1f0005010100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
 
 ![unpaid-execution-xcm-call](../assets/governance/collectives-remove-xcm-call.png)
 
@@ -109,16 +110,16 @@ only perform the required checks on the sending chain, not the receiving chain. 
 testing, download and install [Chopsticks](https://github.com/AcalaNetwork/chopsticks) on your
 machine and run the command below:
 
-`npx @acala-network/chopsticks@latest xcm -r polkadot -p polkadot-collectives`
+`npx @acala-network/chopsticks@latest xcm -r polkadot -p polkadot-asset-hub -p polkadot-collectives`
 
-This should start the Polkadot and the Collectives instances available at ports 8001 and 8000
-respectively. Connect to both these instances using Polkadot JS UI on two separate browser windows.
+This should start the Polkadot relay chain, Asset Hub, and the Collectives instances available at ports 8000, 8001, and 8002
+respectively. Connect to these instances using Polkadot JS UI on separate browser windows.
 To connect to these local machine instances at the designated ports, edit the custom endpoint for
 Polkadot JS UI as shown in the picture below and click on Switch button at the top.
 
 ![polkadot-js-local](../assets/governance/polkadot-js-local-node.png)
 
-Navigate to the Polkadot instance and open JavaScript console to run the code below.
+Navigate to the Asset Hub instance and open JavaScript console to run the code below.
 
 ```
 const number = (await api.rpc.chain.getHeader()).number.toNumber()
@@ -129,7 +130,7 @@ await api.rpc('dev_setStorage', {
        [number + 1], [
          {
            call: {
-             Inline: '0x630004000100a50f04082f0000060303e3c4cc9589ad944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300'
+             Inline: '0x1f0005010100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300'
            },
            origin: {
              origins: 'FellowshipAdmin'
@@ -150,7 +151,7 @@ left of the Polkadot JS UI should be incremented by 1. You can navigate to Polka
 Explorer to check the emitted events and see if the call got executed successfully. If the call is
 unsuccessful, you should see the respective errors displayed here.
 
-**Successful XCM call dispatch shown on the Polkadot network:**
+**Successful XCM call dispatch shown on the Asset Hub network:**
 
 ![xcm-polkadot-send](../assets/governance/polkadot-send-xcm.png)
 
