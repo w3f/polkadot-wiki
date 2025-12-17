@@ -60,7 +60,7 @@
 
 [data-ty='input']:before,
 [data-ty-prompt]:before {
-  color: var(--pink);
+  color: var(--grey-500);
   content: 'papermoon@ubuntu-jammy:';
   size: 12px;
 }
@@ -96,7 +96,7 @@
   text-align: center;
   width: 100%;
   color: var(--white);
-  background-color: var(--pink);
+  background-color: var(--grey-700);
 }
 
 .md-typeset .table-termynal table:not([class]) td {

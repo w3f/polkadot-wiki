@@ -26,8 +26,7 @@
 }
 
 .col a:hover {
-    color: #0078d4;
-    /* Add hover effect */
+    opacity: 0.8;
 }
 
 .row {
@@ -43,27 +42,19 @@
 /* Card container: Entire card is clickable */
 .card-container {
     height: 450px;
-    /* Adjusted height for description */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 1px solid slategrey;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    border: 1px solid var(--color-border);
+    border-radius: var(--rounded-lg);
+    background-color: var(--color-surface);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
     text-decoration: none !important;
     text-align: center; 
-    color: inherit;
-}
-
-/* Dark mode card container */
-[data-md-color-scheme='slate'] .card-container {
-    background-color: #3a3a3a;
-    border: 1px solid #4a4a4a;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: var(--color-text-primary);
 }
 
 .card-title {
@@ -72,16 +63,9 @@
 }
 
 .card-container:hover {
-    transform: scale(1.05); /* Gradual zoom effect */
-    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.6), /* Pink polkadot glow */
-                0 0 15px rgba(255, 182, 193, 0.5); /* Enhanced glow */
-    background-color: #f4f4f4;
-    /* Optional: Slight color change on hover */
-}
-
-/* Dark mode card hover */
-[data-md-color-scheme='slate'] .card-container:hover {
-    background-color: #454545;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-border-strong);
 }
 
 /* Image inside the card */
@@ -100,13 +84,8 @@
 .card-title {
     margin-top: 5px;
     font-weight: bold;
-    color: black;
+    color: var(--color-text-primary);
     text-align: center;
-}
-
-/* Dark mode card title */
-[data-md-color-scheme='slate'] .card-title {
-    color: #c6cfdb;
 }
 
 .title {
@@ -116,16 +95,10 @@
 /* Description text inside the card */
 .card-description {
     font-size: 16px;
-    color: #555;
+    color: var(--color-text-secondary);
     text-align: center;
     margin-top: 5px;
     line-height: 1.4;
-    /* Better spacing for multi-line descriptions */
-}
-
-/* Dark mode card description */
-[data-md-color-scheme='slate'] .card-description {
-    color: #9ca3af;
 }
 
 .md-search-result__meta {

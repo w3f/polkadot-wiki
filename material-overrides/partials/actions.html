@@ -1,0 +1,36 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+<div class="page-actions-title">Page actions</div>
+{% if page.edit_url %}
+  {% if "content.action.edit" in features %}
+    <a href="{{ page.edit_url }}" title="{{ lang.t('action.edit') }}" class="md-content__button md-icon">
+      {% set icon = config.theme.icon.edit or "material/file-edit-outline" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+      Edit this page
+    </a>
+  {% endif %}
+
+  {% if "content.action.view" in features %}
+    {% if "/blob/" in page.edit_url %}
+      {% set part = "blob" %}
+    {% else %}
+      {% set part = "edit" %}
+    {% endif %}
+    <a href="{{ page.edit_url | replace(part, 'raw') }}" title="{{ lang.t('action.view') }}" class="md-content__button md-icon">
+      {% set icon = config.theme.icon.view or "material/file-eye-outline" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </a>
+  {% endif %}
+
+  {% if "content.action.report" in features %}
+    <a href="https://github.com/w3f/polkadot-wiki/issues/new?title=Issue%20on%20{{ page.title | urlencode }}"
+       title="Report an issue"
+       class="md-content__button md-icon"
+       target="_blank">
+      {% set icon = "material/alert-circle-outline" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+      Report an issue
+    </a>
+  {% endif %}
+{% endif %}

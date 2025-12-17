@@ -6,7 +6,69 @@
 .md-content .md-typeset h1:nth-of-type(2) {
     display: none;
 }
+
+.cards-container {
+    position: relative;
+}
+
+.grain-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--py-6);
+    margin-top: var(--py-8);
+    position: relative;
+    z-index: 1;
+}
+
+.theme-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--py-3);
+    padding: var(--py-8);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--rounded-2xl);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    min-height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-card:hover {
+    border-color: var(--color-border-strong);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 20px rgba(128, 128, 128, 0.03);
+    transform: translateY(-2px);
+}
+
+.theme-card h3 {
+    font-family: var(--header-font-family);
+    color: var(--color-text-primary);
+    font-size: var(--text-xl);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.theme-card p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
 </style>
+
+<canvas class="grain-canvas"></canvas>
 
 <h1>Fundamentals</h1>
 <div class="admonition info">
@@ -16,96 +78,106 @@
         Polkadot.</p>
     <p>For developer-focused documentation see <a href="https://docs.polkadot.com/">the Polkadot Documentation</a>.</p>
 </div>
-<div class="row">
 
-    <!-- Card 1 -->
-    <a href="../../learn/learn-DOT" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Become an Ambassador.png" class="card-image" alt="Transactions" />
-        <p class="card-title">DOT Token</p>
-    </a>
-
-    <!-- Card 2 -->
-    <a href="../../learn/learn-accounts" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Creating an account.png" class="card-image" alt="Explore" />
-        <p class="card-title">Accounts</p>
-    </a>
-
-    <!-- Card 3 -->
-    <a href="../../learn/learn-proxies" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Proxy Accounts.png" class="card-image" alt="Proxies" />
-        <p class="card-title">Proxy Accounts</p>
-    </a>
-
+<div class="cards-container">
+    <div class="cards-grid">
+        <a href="../../learn/learn-DOT" class="theme-card">
+            <h3>DOT Token</h3>
+            <p>Learn about Polkadot's native token and its utility.</p>
+        </a>
+        <a href="../../learn/learn-accounts" class="theme-card">
+            <h3>Accounts</h3>
+            <p>Create and manage your Polkadot accounts securely.</p>
+        </a>
+        <a href="../../learn/learn-proxies" class="theme-card">
+            <h3>Proxy Accounts</h3>
+            <p>Delegate permissions with advanced proxy features.</p>
+        </a>
+        <a href="../../learn/learn-identity" class="theme-card">
+            <h3>Account Identity</h3>
+            <p>Establish your on-chain identity and reputation.</p>
+        </a>
+        <a href="../../learn/learn-transactions" class="theme-card">
+            <h3>Transactions</h3>
+            <p>Understand how to send and receive transactions.</p>
+        </a>
+        <a href="../../learn/learn-staking" class="theme-card">
+            <h3>Staking</h3>
+            <p>Stake DOT to secure the network and earn rewards.</p>
+        </a>
+        <a href="../../learn/learn-polkadot-opengov" class="theme-card">
+            <h3>Polkadot OpenGov</h3>
+            <p>Participate in decentralized governance decisions.</p>
+        </a>
+        <a href="../../learn/learn-assets" class="theme-card">
+            <h3>Asset Hub</h3>
+            <p>Create and manage assets on Polkadot's Asset Hub.</p>
+        </a>
+        <a href="../../learn/learn-nft" class="theme-card">
+            <h3>NFTs</h3>
+            <p>Explore non-fungible tokens on Polkadot.</p>
+        </a>
+        <a href="../../learn/learn-polkadot-technical-fellowship" class="theme-card">
+            <h3>Collectives</h3>
+            <p>Join specialized groups within the ecosystem.</p>
+        </a>
+        <a href="https://research.web3.foundation/" class="theme-card">
+            <h3>Research</h3>
+            <p>Dive into the latest blockchain research.</p>
+        </a>
+    </div>
 </div>
 
-<div class="row">
+<script>
+(function() {
+    const canvas = document.querySelector('.grain-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    let mouse = { x: width / 2, y: height / 2 };
 
-    <!-- Card 1 -->
-    <a href="../../learn/learn-identity" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Set an Identity.png" class="card-image" alt="Identity" />
-        <p class="card-title">Account Identity</p>
-    </a>
+    function generateGrain() {
+        const imgData = ctx.createImageData(width, height);
+        const alpha = 25;
+        for (let i = 0; i < imgData.data.length; i += 4) {
+            const v = Math.random() * 255;
+            imgData.data[i] = v;
+            imgData.data[i + 1] = v;
+            imgData.data[i + 2] = v;
+            imgData.data[i + 3] = alpha;
+        }
+        return imgData;
+    }
 
-    <!-- Card 2 -->
-    <a href="../../learn/learn-transactions" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Balance Transfers.png" class="card-image" alt="Transactions" />
-        <p class="card-title">Transactions</p>
-    </a>
+    let grain = generateGrain();
 
-    <!-- Card 3 -->
-    <a href="../../learn/learn-staking" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Staking.png" class="card-image" alt="Staking" />
-        <p class="card-title">Staking</p>
-    </a>    
-</div>
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.putImageData(grain, 0, 0);
+        
+        const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 400);
+        gradient.addColorStop(0, 'rgba(128,128,128,0.08)');
+        gradient.addColorStop(1, 'rgba(128,128,128,0)');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+        
+        requestAnimationFrame(draw);
+    }
 
-<div class="row">
+    window.addEventListener('mousemove', e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
 
-    <!-- Card 1 -->
-    <a href="../../learn/learn-polkadot-opengov" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/explore/Polkadot OpenGov.png" class="card-image" alt="OpenGov" />
-        <p class="card-title">Polkadot OpenGov</p>
-    </a>
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        grain = generateGrain();
+    });
 
-    <!-- Card 2 -->
-    <a href="../../learn/learn-assets" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/polkadot-hub.png" class="card-image" alt="OpenGov" />
-        <p class="card-title">Asset Hub</p>
-    </a>
+    draw();
+})();
+</script>
 
-    <!-- Card 3 -->
-    <a href="../../learn/learn-nft" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/nfts.png" class="card-image" alt="OpenGov" />
-        <p class="card-title">NFTs</p>
-    </a>
-
-</div>
-
-<div class="row">
-
-    <!-- Card 1 -->
-    <a href="../../learn/learn-polkadot-technical-fellowship" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/collectives.png" class="card-image" alt="OpenGov" />
-        <p class="card-title">Collectives</p>
-    </a>
-
-    <!-- Card 2 -->
-    <a href="https://research.web3.foundation/" class="card-container" data-aos="fade-up" data-aos-delay="100"
-        style="width: 300px; height: 200px;">
-        <img src="../../assets/Research.png" class="card-image" alt="OpenGov" />
-        <p class="card-title">Research</p>
-    </a>
-
-</div>
 {{ super () }}
 {% endblock %}

@@ -1,36 +1,16 @@
 {#-
-    This file was automatically generated - do not edit
-  -#}
-  
-  <nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
-    <div class="md-grid">
-      <ul class="md-tabs__list">
-        {% for nav_item in nav %}
-          {% if nav_item.is_section %}
-            <li class="md-tabs__item--custom" tabindex="0">    
-              <span class="md-tabs__link">
-                <a href="{{ nav_item.children[0].url | url }}">{{ nav_item.title }}</a>   
-              </span>
-              <ul class="md-tab__list">
-                {% for section_item in nav_item.children %}
-                  {% if section_item.is_section %}
-                    <li class="md-tab__item">
-                      <a href="{{ section_item.children[0].url | url }}">
-                        <span class="dropdown-title">{{ section_item.title }}</span>
-                      </a>
-                    </li>
-                  {% elif section_item.is_page and not section_item == nav_item.children[0] %}
-                    <li class="md-tab__item">
-                      <a href="{{ section_item.url | url }}">
-                        <span class="dropdown-title">{{ section_item.title }}</span>
-                      </a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
+  This file was automatically generated - do not edit
+-#}
+
+{% import "partials/tabs-item.html" as item with context %}
+<nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      {% for nav_item in nav %}
+        {% if not (nav_item.is_page and nav_item.url == "") %}
+          {{ item.render(nav_item) }}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
