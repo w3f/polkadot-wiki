@@ -27,7 +27,7 @@ theme:
   name: material
   custom_dir: material-overrides
   logo: assets/logo/logo.png
-  favicon: assets/images/favicon.webp
+  favicon: assets/logo/favicon.ico
   icon:
     edit: material/github
     admonition:
