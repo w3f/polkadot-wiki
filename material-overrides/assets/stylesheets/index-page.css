@@ -1,16 +1,24 @@
 .subsection-wrapper {
   display: flex;
-  gap: 1em;
+  gap: var(--py-3);
   flex-wrap: wrap;
 }
 
 .subsection-wrapper .card {
-  border: 1px solid var(--mystic);
-  border-radius: 16px;
+  background-color: var(--color-surface);
+  border-radius: var(--rounded-2xl);
+  border: 1px solid var(--color-border);
   text-decoration: none;
   align-content: start;
   flex: 1 0 48%;
-  max-width: 48%;
+  max-width: 50%;
+  transition: all 0.2s ease;
+}
+
+.subsection-wrapper .card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .md-typeset .subsection-wrapper .card a {
@@ -18,47 +26,43 @@
   cursor: pointer;
 }
 
-.md-typeset .subsection-wrapper .card a:hover .title {
-  color: var(--pink);
-}
-
 .subsection-wrapper .card-header {
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.2em 1.2em 0em;
+  padding: 1.2em 1.2em 1em 1.5em;
   gap: 0.25em;
   display: flex;
 }
+
 .subsection-wrapper .card-header .badge {
   order: 2;
 }
 
 .subsection-wrapper .card .card-header h2.title {
-  order: 1; 
+  order: 1;
   padding: 0;
 }
 
 .subsection-wrapper .title {
   margin: 0;
   line-height: 1.5em;
-  font-size: 1.15em;
+  font-size: 0.8rem;
   padding: 1.05em 1.05em 0em;
 }
 
-.md-typeset hr {
-  margin: 0 1.5em 1em;
+.subsection-wrapper .title span {
+  vertical-align: text-top;
 }
 
-.subsection-wrapper .card hr {
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
+.subsection-wrapper .title svg {
+  height: 1rem;
+  margin-right: 0.25em;
 }
 
 .subsection-wrapper .description {
-  color: var(--md-default-fg-color);
   margin: 0;
-  font-size: 0.9em;
-  padding: 0 1.5em 1.8em 1.5em;
+  font-size: 0.8rem;
+  padding: 0 1.2em 1.2em 1.5em;
 }
 
 @media screen and (max-width: 36em) {

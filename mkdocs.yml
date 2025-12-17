@@ -8,8 +8,6 @@ extra_javascript:
   - js/root-level-sections.js
   - js/search-bar-results.js
   - js/header-scroll.js
-  - js/homepage-light-mode.js
-  - js/dynamic-logo.js
   - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js
   - js/cookies-config.js
   - js/simple-analytics.js
@@ -23,14 +21,13 @@ extra_css:
 
 # Repository
 repo_name: w3f/polkadot-wiki
-repo_url: https://github.com/w3f/polkadot-wiki
 
 # Configuration
 theme:
   name: material
   custom_dir: material-overrides
+  logo: assets/logo/logo.png
   favicon: assets/images/favicon.webp
-  logo: assets/images/logo.webp
   icon:
     edit: material/github
     admonition:
@@ -38,19 +35,15 @@ theme:
   font:
     text: Manrope
   palette:
-    # Light mode (default fallback)
+    # Light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: custom
-      accent: pink
+      scheme: custom-light
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
-      accent: pink
+      scheme: custom-dark
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -58,7 +51,6 @@ theme:
     - content.code.annotate # Adds annotations to code blocks
     - content.code.copy # Adds copy to clipboard button to code snippets
     - content.tooltips # Adds tooltips
-    - navigation.footer # Shows previous and next on the footer
     - navigation.tabs # Top-level sections are rendered below the header (can be modified to in-line with CSS)
     - navigation.tabs.sticky # When scrolling, the tabs remain at the top of the page
     - navigation.sections # Render top-level sections as groups in the sidebar
@@ -80,6 +72,7 @@ plugins:
 
 # Additional configuration
 extra:
+  generator: false
   home_url: /
   home_name: Home
   social:

@@ -1,0 +1,25 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+
+{% from "partials/macros.html" import render_title_with_icon %}
+
+{% if "material/tags" in config.plugins and tags %}
+  {% include "partials/tags.html" %}
+{% endif %}  
+
+{% set badge_html = '' %}
+{% if page.meta and page.meta.tutorial_badge %}
+  {% set badge_html = '<span class="badge ' ~ (page.meta.tutorial_badge | lower | replace(".", "-")) ~ '">' ~ (page.meta.tutorial_badge | capitalize) ~ '</span>' %}
+{% endif %}
+
+{% if "\x3ch1" in page.content %}
+  {{ page.content | replace('</h1>', '</h1>' ~ badge_html, 1) | safe }}
+{% else %}
+  <h1>{{ page.title | d(config.site_name, true) }}</h1>
+  {{ badge_html | safe }}
+  {{ page.content }}
+{% endif %}
+
+{% include "partials/source-file.html" %}
+{% include "partials/comments.html" %}

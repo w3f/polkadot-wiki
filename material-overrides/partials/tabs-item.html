@@ -1,0 +1,37 @@
+{% macro render(nav_item) %}
+  {% set class = "md-tabs__item" %}
+  {% if nav_item.active %}
+    {% set class = class ~ " md-tabs__item--active" %}
+  {% endif %}
+  {% if nav_item.children %}
+    {% set _ = namespace(index = none) %}
+    {% if "navigation.indexes" in features %}
+      {% for item in nav_item.children %}
+        {% if item.is_index and _.index is none %}
+          {% set _.index = item %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% set index = _.index %}
+    {% if index %}
+      <li class="{{ class }}">
+        <a href="{{ index.url | url }}" class="md-tabs__link">
+          {{ nav_item.title }}
+        </a>
+      </li>
+    {% else %}
+      <li class="{{ class }}">
+        {% set first = nav_item.children | first %}
+        <a href="{{ first.url | url }}" class="md-tabs__link">
+          {{ nav_item.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% else %}
+    <li class="{{ class }}">
+      <a href="{{ nav_item.url | url }}" class="md-tabs__link">
+        {{ nav_item.title }}
+      </a>
+    </li>
+  {% endif %}
+{% endmacro %}

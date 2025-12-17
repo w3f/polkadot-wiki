@@ -12,38 +12,162 @@
 {%- block container -%} 
   {% block content %}
     <div class="home-container md-typeset">
-        <div class="hero-section">
-          <div class="column hero-content">
-            <div>
-              <h1>
-                Welcome to the Polkadot Wiki
-              </h1>
-              <h2>Your Best Companion for Everything Polkadot</h2>
-              <p>Since 2019, the Polkadot Wiki has been the source of truth for the Polkadot ecosystem. It has been built for the curious, the enthusiasts, and the developers seeking the truth about Polkadot.
-              </p>
-            </div>
+
+      <section class="hero-section">
+        <canvas id="grain-canvas" class="grain-canvas"></canvas>
+        <div class="hero-content">
+          <h1>Polkadot Wiki</h1>
+          <p class="tagline">The source of truth for the Polkadot ecosystem.</p>
+          <div class="button-wrapper">
+            <a href="./general/getting-started">
+              <button class="md-button">Get Started
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </button>
+            </a>     
+            <a href="./general/fundamentals">
+              <button class="md-button secondary">Learn Fundamentals
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </button>
+            </a>
           </div>
-          <div class="column tutorial-cards">
-            <a class="tutorial-card" href="./general/getting-started">
-              <img src="./assets/home/Explore.png" alt="Alt text" class="tutorial-card-image" />
-              <h3>Explore</h3>
-              <p>Explore Wallets, Applications and Programs in the Polkadot Ecosystem.</p>
+        </div>
+      </section>
+
+      <div class="md-grid column">
+
+        <div class="feature-section column">
+          <h2>Explore Polkadot</h2>
+          <div class="featured-content row">
+            <a class="card column" href="./general/polkadot-direction">
+              <div class="row title-row">
+                <h3>Polkadot Vision</h3>
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </div>
+              <p>Discover Polkadot's vision and direction for the future of Web3.</p>
             </a>
-            <a class="tutorial-card" href="./general/fundamentals">
-              <img src="./assets/home/Learn.png" alt="Alt text" class="tutorial-card-image" />
-              <h3>Fundamentals</h3>
-              <p>Learn about Polkadot's Wallets, Staking, Governance and more.</p>
+            <a class="card column" href="./general/web3-and-polkadot">
+              <div class="row title-row">
+                <h3>Web3 and Polkadot</h3>
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </div>
+              <p>Understand Polkadot's role in the decentralized web ecosystem.</p>
             </a>
-            <a class="tutorial-card" href="./learn/learn-architecture">
-              <img src="./assets/Architecture.png" alt="Alt text" class="tutorial-card-image" />
-              <h3>Architecture</h3>
-              <p>Learn about the Architecture of Polkadot's Decentralized Computer.</p>
+            <a class="card column" href="./general/getting-started">
+              <div class="row title-row">
+                <h3>Ecosystem Overview</h3>
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </div>
+              <p>Explore networks, applications, and programs in the ecosystem.</p>
+            </a>
+          </div>
+        </div>
+  
+        <div class="feature-section column">
+          <h2>Learn About Polkadot</h2>
+          <div class="featured-content row">   
+            <a class="card column" href="./learn/learn-architecture">
+              <div class="row title-row">
+                <h3>Understand the Architecture</h3>
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </div>
+              <p>Dive into the technical architecture of Polkadot's decentralized computer.</p>
+            </a>
+            <a class="card column" href="./general/fundamentals">
+              <div class="row title-row">
+                <h3>Core Fundamentals</h3>
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </div>
+              <p>Master the essential concepts including wallets, staking, and governance.</p>
+            </a>
+            <a class="card column" href="./general/governance-apps">
+              <div class="row title-row">
+                <h3>Participate in Governance</h3>
+                <span class="twemoji">
+                  {% include ".icons/material/arrow-right.svg" %} 
+                </span>
+              </div>
+              <p>Learn how to participate in Polkadot's decentralized governance system.</p>
             </a>
           </div>
         </div>
 
-      </br>
+      </div>
 
-  </div>
+    </div>
   {% endblock %}
 {%- endblock -%} 
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    const canvas = document.querySelector('.grain-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    let mouse = { x: width / 2, y: height / 2 };
+
+    // Generate static grain
+    function generateGrain() {
+      const imgData = ctx.createImageData(width, height);
+      const alpha = 35; // grain visibility
+
+      for (let i = 0; i < imgData.data.length; i += 4) {
+        const v = Math.random() * 255;
+        imgData.data[i] = v;     // R
+        imgData.data[i + 1] = v; // G
+        imgData.data[i + 2] = v; // B
+        imgData.data[i + 3] = alpha; // A
+      }
+
+      return imgData;
+    }
+
+    let grain = generateGrain();
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw grain
+      ctx.putImageData(grain, 0, 0);
+
+      // Spotlight always bright (white)
+      const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 600);
+      gradient.addColorStop(0, 'rgba(255,255,255,0.15)');
+      gradient.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+
+      requestAnimationFrame(draw);
+    }
+
+    // Mouse tracking
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      grain = generateGrain();
+    });
+
+    draw();
+  </script>
+{% endblock %} 

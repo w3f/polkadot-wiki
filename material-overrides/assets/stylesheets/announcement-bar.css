@@ -1,6 +1,7 @@
 .md-banner {
-  background-color: #e6007a;
-  color: white;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border-strong);
   font-size: 16px;
   display: flex;
   justify-content: center;
@@ -8,7 +9,7 @@
   padding-bottom: 20px;
   padding-top: 10px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   flex-wrap: wrap;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .md-banner a {
-  color: white;
+  color: var(--color-text-primary);
   font-weight: bold;
   text-decoration: underline;
 }
