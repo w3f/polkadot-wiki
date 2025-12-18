@@ -142,7 +142,7 @@ nav:
           - Ledger: general/ledger.md
           - Polkadot Vault: general/polkadot-vault.md
       - Apps:
-          - Polkadot Ecosystem Apps: https://polkadot.com/get-started/dapps/
+          - Polkadot Ecosystem Apps: https://polkadot.com/ecosystem
           - Staking Apps: general/staking-apps.md
           - Staking Dashboard: general/dashboards/staking-dashboard.md
           - Governance Apps: general/governance-apps.md

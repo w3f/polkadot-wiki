@@ -48,7 +48,7 @@ the native token unless stipulated by the parachain implementation.
 
 Like other blockchains, parachains are **deterministic state machines**. Each parachain has a
 **state**, executes a batch of transactions grouped into a block, and achieves a new state. Joe
-Petrowski provided in [this article](https://polkadot.com/blog/the-path-of-a-parachain-block/) a
+Petrowski provided in [this article](https://medium.com/polkadot-network/the-path-of-a-parachain-block-47d05765d7a) a
 good analogy of a state with a light switch that can be either on or off, which is one of the
 simplest examples of how a state machine functions. Each parachain has its own state, and the Relay
 Chain links all those states into one state, i.e. a state of states. A multi-chain network like

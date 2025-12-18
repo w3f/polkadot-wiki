@@ -14,12 +14,12 @@
 /*/build-index    https://docs.polkadot.com/develop    301
 /*/build-guide    https://docs.polkadot.com/develop/#development-pathways    301
 /*/maintain-index    https://docs.polkadot.com/infrastructure/    301
-/*/wallets-index    https://polkadot.com/get-started/wallets/    301
-/*/apps-index    https://polkadot.com/get-started/dapps/    301
+/*/wallets-index    https://polkadot.com/ecosystem/    301
+/*/apps-index    https://polkadot.com/ecosystem/    301
 /*/community-index    /general/community    301
 /*/programs-index    /general/decentralized-voices/   301
 /*/general-index     /general/fundamentals/   301
-/*/dashboards-index    https://polkadot.com/get-started/dapps/    301
+/*/dashboards-index    https://polkadot.com/ecosystem/  301
 /*/learn-basics-index    /general/fundamentals/    301
 /*/learn-advanced-index    /general/fundamentals/    301
 /*/build-client-index    https://docs.polkadot.com/develop/toolkit    301
@@ -61,13 +61,13 @@
 /*/polkadotjs    /general/polkadotjs    301
 /*/polkadot-direction    /general/polkadot-direction    301
 /*/contributors    /general/contributors    301
-/*/wallets-and-extensions    https://polkadot.com/get-started/wallets/    301
+/*/wallets-and-extensions    https://polkadot.com/ecosystem/    301
 /*/staking-apps    /general/staking-apps    301
 /*/governance-apps    /general/governance-apps    301
 /*/multisig-apps    /general/multisig-apps    301
 /*/learn-nft-projects    /learn/learn-nft-projects    301
 /*/nft-projects/    /learn/learn-nft-projects    301
-/*/parachains-apps    https://polkadot.com/get-started/dapps/    301
+/*/parachains-apps    https://polkadot.com/ecosystem/    301
 
 # Kusama
 
@@ -163,7 +163,7 @@
 /*/learn-accounts-index/    /learn/learn-accounts/    301
 /*/learn-teleport    /learn/learn-teleport    301
 /*/learn-nft    /learn/learn-nft    301
-/*/wallets/    https://polkadot.com/get-started/wallets/    301
+/*/wallets/    https://polkadot.com/ecosystem/    301
 /*/learn-staking-miner/    /learn/learn-staking    301
 /*/general/polkadot-ecosystem-overview    /general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview    301
 /*/general/onboarding-status-and-key-dashboards    /general/dashboards/dune-analytics/onboarding-status-and-key-dashboards    301

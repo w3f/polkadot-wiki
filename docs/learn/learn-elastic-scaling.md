@@ -25,7 +25,7 @@ respectively. Polkadot also provides throughput boost via parallel computation f
 with **elastic scaling**: parachains can use multiple cores to include multiple parablocks within
 the same relay chain block.
 
-The capabilities of elastic scaling were tested live on Kusama in December 2024 with [the Spammening Event](https://polkadot.com/spammening/). During this event, 143,343 TPS were recorded on 23 out of 100 cores (23% capacity), consistently achieving an average block time of 6.3 seconds and finality of 16.5 seconds.
+The capabilities of elastic scaling were tested live on Kusama in December 2024 with [the Spammening Event](https://data.parity.io/spammening). During this event, 143,343 TPS were recorded on 23 out of 100 cores (23% capacity), consistently achieving an average block time of 6.3 seconds and finality of 16.5 seconds.
 
 !!! info "Polkadot 2.0"
     Elastic scaling is the last technical upgrade of Polkadot 2.0 that includes pipelining, agile scheduling, and now parallel computing. This makes Polkadot a true decentralized computer offering secure computation. 
