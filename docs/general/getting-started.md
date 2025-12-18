@@ -61,19 +61,19 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
 ### Beginner Level
 
 - The [Blockchain Fundamentals MOOC course](https://youtube.com/playlist?list=PLxVihxZC42nF_MCN9PTvZMIifRjx9cZ2J&feature=shared): an introduction to blockchain technology to start familiarizing yourself with concepts such as cryptography and peer-to-peer networks.
-- [Polkadot's light paper](https://polkadot.com/papers/Polkadot-lightpaper.pdf): a visual, easy to
+- [Polkadot's light paper](https://github.com/w3f/polkadot-light-paper/blob/master/Polkadot-lightpaper.pdf): a visual, easy to
   read, and less technical introduction into Polkadot's technology. This paper dives into the
   components of Polkadot and is tailored for both a non-technical and technical reader.
 - [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot](https://linktr.ee/polkadotbook): a book funded by the Polkadot Treasury about Blockchain technology with a dive into the Polkadot protocol, its participants and components.
 
 ### Intermediate Level
 
-- [Polkadot's original white paper](https://polkadot.com/papers/Polkadot-whitepaper.pdf): the original Polkadot white
+- [Polkadot's original white paper](https://github.com/polkadot-io/polkadot-white-paper/blob/master/PolkaDotPaper.pdf): the original Polkadot white
   paper that describes [Polkadot 1.0](./polkadot-v1.md) and how Polkadot's core components work together.
 - [Polkadot's overview paper](https://arxiv.org/abs/2005.13456): an updated version of the white
   paper that describes the protocol in more technical terms.
 - [The Technical Explainer Videos](https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8):
-  These introductory videos explain and demonstrate how to interact with Polkadot using the [Polkadot-JS tools](./polkadotjs.md) and more user-friendly [wallets](https://polkadot.com/get-started/wallets/).
+  These introductory videos explain and demonstrate how to interact with Polkadot using the [Polkadot-JS tools](./polkadotjs.md) and more user-friendly [wallets](https://polkadot.com/ecosystem).
 - [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
   specific errors and problems while using tools such as the [Polkadot Staking Dashboard](./dashboards/staking-dashboard.md) and [Polkadot-JS UI](./polkadotjs-ui.md).
 

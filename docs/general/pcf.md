@@ -74,7 +74,7 @@ Some hypothetical future activities that the community may consider delegating t
 include:
 
 - Retail marketing activities, e.g., social ad campaigns targeting developers
-- Educational programs, e.g. [Polkadot Blockchain Academy](https://polkadot.com/blockchain-academy)
+- Educational programs, e.g. [Polkadot Blockchain Academy](https://polkadot.academy/)
 - Complex grants programs, e.g., tranched or actively managed awards tied to milestones
 - Community events, e.g., contracting with venues and service providers for physical gatherings
 - Code management, e.g., maintain [the polkadot-js GitHub repo](https://github.com/polkadot-js)

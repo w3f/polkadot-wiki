@@ -57,6 +57,6 @@ Kusama Gifts provide an easy way to:
 - Get friends and family set up to participate in crowdloans.
 
 Learn more about how you can create and send Kusama Gifts
-[here](https://polkadot.com/blog/introducing-polkadot-kusama-gifts).
+[here](https://gifts.kusama.network/#/About).
 
 While Kusama does not support smart contracts natively, building apps on it is possible (e.g. [RMRK.app](https://rmrk.app/)).
