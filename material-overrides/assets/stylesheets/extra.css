@@ -47,11 +47,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--rounded-lg);
-    background-color: var(--color-surface);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+    background-color: var(--color-bg);
+    transition: transform 0.2s ease-in-out !important;
     text-decoration: none !important;
     text-align: center; 
     color: var(--color-text-primary);
@@ -63,9 +60,7 @@
 }
 
 .card-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-color: var(--color-border-strong);
+    transform: scale(1.02);
 }
 
 /* Image inside the card */

@@ -5,9 +5,7 @@
 }
 
 .subsection-wrapper .card {
-  background-color: var(--color-surface);
-  border-radius: var(--rounded-2xl);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
   text-decoration: none;
   align-content: start;
   flex: 1 0 48%;
@@ -16,8 +14,6 @@
 }
 
 .subsection-wrapper .card:hover {
-  border-color: var(--color-border-strong);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 

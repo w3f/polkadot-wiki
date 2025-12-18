@@ -21,6 +21,8 @@
   {% if page and page.meta and page.meta.keywords %}
     <meta name="keywords" content="{{ page.meta.keywords }}">
   {% endif %}
+  {#- Dynamic favicon for light/dark mode -#}
+  <link rel="icon" type="image/png" href="{{ 'assets/logo/polkadot-icon__near-black-on-cool-gray.png' | url }}">
 {% endblock %}
 
 {% block site_nav %}
@@ -77,4 +79,5 @@
 
 {% block scripts %}
   {{ super() }}
+  <script src="{{ 'js/favicon-switcher.js' | url }}"></script>
 {% endblock %} 
