@@ -159,18 +159,14 @@
 
 .card {
   padding: var(--py-8);
-  border-radius: var(--rounded-2xl);
   gap: 12px;
   flex: 1;
   min-width: 0;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
   transition: all 0.2s ease;
 }
 
 .card:hover {
-  border-color: var(--color-border-strong);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 20px rgba(128, 128, 128, 0.03);
   transform: translateY(-2px);
 }
 

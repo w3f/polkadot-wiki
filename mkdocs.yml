@@ -8,6 +8,7 @@ extra_javascript:
   - js/root-level-sections.js
   - js/search-bar-results.js
   - js/header-scroll.js
+  - js/favicon-switcher.js
   - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js
   - js/cookies-config.js
   - js/simple-analytics.js
@@ -27,13 +28,13 @@ theme:
   name: material
   custom_dir: material-overrides
   logo: assets/logo/logo.png
-  favicon: assets/logo/favicon.ico
+  favicon: assets/logo/polkadot-icon__near-black-on-cool-gray.png
   icon:
     edit: material/github
     admonition:
       code: material/code-tags
   font:
-    text: Manrope
+    text: DM Sans
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -273,6 +274,7 @@ nav:
                   - Onboarding Status and Key Dashboards: general/dashboards/dune-analytics/onboarding-status-and-key-dashboards.md
                   - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
   - Guides:
+    - general/polkadotjs.md
     - Polkadot-JS Guides:
       - general/polkadotjs.md
       - Polkadot-JS UI: general/polkadotjs-ui.md

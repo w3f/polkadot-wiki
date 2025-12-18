@@ -9,7 +9,6 @@
   padding-bottom: 20px;
   padding-top: 10px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   flex-wrap: wrap;
 }
 
@@ -21,7 +20,7 @@
 .md-banner a {
   color: var(--color-text-primary);
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {

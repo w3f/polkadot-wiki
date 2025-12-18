@@ -6,7 +6,6 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--rounded-lg);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 15px 20px;
   font-size: 14px;
   z-index: 1000;
@@ -23,7 +22,7 @@
 
 .floating-message-box a {
   color: var(--color-text-primary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .floating-message-box a:hover {
