@@ -32,9 +32,6 @@ needs to know the exact origin and track to submit this proposal. As this is a t
 would be one of the treasury tracks -
 [SmallSpender](learn-polkadot-opengov-origins.md#small-spender) in the case of 4500 DOT.
 
-!!!note "TODO"
-    Replace the call data below with the correct treasury spend call for the current runtime.
-
 `0x3c030b00d00361ed2800d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d`
 
 ![opengov-treasury-proposal-call](../assets/governance/opengov-call-test-treasury-proposal.png)
@@ -98,9 +95,6 @@ in our example for your reference:
 Now you have all the information you need to create an XCM call that needs to be sent from Polkadot.
 No fee payment is required for an XCM call dispatched through OpenGov. The Collectives chain
 `ParaID` is 1001. With this information, we can construct the XCM call shown below.
-
-!!!note "TODO"
-    Replace the XCM call data below with the correct cross-chain call for the current runtime.
 
 `0x1f0005000100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
 
@@ -170,9 +164,6 @@ You can then navigate to the local Collectives instance and check the events to 
 ### Testing Large Calls with Preimage Lookup
 
 For very long calls like [Referendum 1247](https://polkadot.subsquare.io/referenda/1247) which removes 19 ambassadors at once, the call data exceeds the JavaScript console `Inline` character limit. In such cases, use the preimage lookup method instead.
-
-!!!note "TODO"
-    Replace the preimage hash and length below with the correct values for the current runtime.
 
 The preimage hash for this call is `0x82802c62d52a2431e422b58fff1fbdd0efc648e7c98351bd26048d169b94f956` with length `733` (obtained from Polkadot JS UI Governance > Preimages tab).
 
