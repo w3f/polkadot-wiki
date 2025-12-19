@@ -118,10 +118,10 @@ Connect to each instance using Polkadot JS UI in separate browser windows by edi
 
 ![polkadot-js-local](../assets/governance/polkadot-js-local-node.png)
 
-Navigate to the Asset Hub instance (port 8001) in Polkadot JS UI and open the JavaScript console.
+Navigate to the Asset Hub instance (port 8000) in Polkadot JS UI and open the JavaScript console.
 
 !!!info "Important: Use Relay Chain Block Number"
-    Even though you're connected to Asset Hub, the scheduler must use the **relay chain block number** from the Polkadot instance (port 8000), not Asset Hub's block number. Check your Chopsticks terminal for the Polkadot relay chain height and use that value + 1 in the scheduler.
+    Even though you're connected to Asset Hub, the scheduler must use the **relay chain block number** from the Polkadot instance (port 8002), not Asset Hub's block number. Check your Chopsticks terminal for the Polkadot relay chain height and use that value in the scheduler.
 
 ```javascript
 // Replace 29138613 with the relay chain block height + 1 from your Chopsticks output
