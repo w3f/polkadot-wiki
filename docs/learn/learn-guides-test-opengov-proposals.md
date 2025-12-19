@@ -35,7 +35,7 @@ would be one of the treasury tracks -
 !!!note "TODO"
     Replace the call data below with the correct treasury spend call for the current runtime.
 
-`0x3c031b00004055d175838c4a5f00d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d`
+`0x3c030b00d00361ed2800d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d`
 
 ![opengov-treasury-proposal-call](../assets/governance/opengov-call-test-treasury-proposal.png)
 
@@ -48,17 +48,17 @@ The treasury spend call cannot be submitted through a signed account origin, it 
     When using the scheduler, you must manually specify the relay chain block number. Use the block height displayed in your Chopsticks terminal output when the instance was launched, then add 1 to schedule the call for the next block. For example, if Chopsticks shows the current height as `24152000`, use `24152001` in the scheduler.
 
 ```javascript
-// Replace 24152001 with your actual relay chain block height + 1
+// Replace 24152001 with your actual relay chain block
 const scheduledBlock = 24152001
 
 await api.rpc('dev_setStorage', {
  scheduler: {
    agenda: [
      [
-       [scheduledBlock], [
+       [scheduledBlock + 1], [
          {
            call: {
-             Inline: '0x3c031b00004055d175838c4a5f00d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d'
+             Inline: '0x3c030b00d00361ed2800d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d'
            },
            origin: {
              origins: 'SmallSpender'
@@ -91,9 +91,6 @@ Note down the call data and navigate to Developer > Runtime calls and fetch the 
 execution of the call through `transactionPaymentCallApi.queryCallInfo`. Here is the call info used
 in our example for your reference:
 
-!!!note "TODO"
-    Replace the call data below with the correct ambassador removal call for the current runtime.
-
 `0x4603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
 
 ![tx-payment-call-api](../assets/governance/collectives-remove-call-weights.png)
@@ -105,7 +102,7 @@ No fee payment is required for an XCM call dispatched through OpenGov. The Colle
 !!!note "TODO"
     Replace the XCM call data below with the correct cross-chain call for the current runtime.
 
-`0x1f0005010100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
+`0x1f0005000100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300`
 
 ![unpaid-execution-xcm-call](../assets/governance/collectives-remove-xcm-call.png)
 
@@ -114,14 +111,16 @@ No fee payment is required for an XCM call dispatched through OpenGov. The Colle
 To test cross-chain calls, you need to run multiple network instances simultaneously. Use the following command to start the Polkadot relay chain and Asset Hub instances:
 
 ```bash
-npx @acala-network/chopsticks@latest xcm -r polkadot -p polkadot-asset-hub
+npx @acala-network/chopsticks@latest xcm -r polkadot -p polkadot-asset-hub -p polkadot-collectives
 ```
 
 This command starts two instances available at ports 8000 (Polkadot) and 8001 (Asset Hub). **Note the block heights displayed in the terminal output for each chain** when they launch—you will need these for scheduling calls.
 
 Connect to each instance using Polkadot JS UI in separate browser windows by editing the custom endpoint settings:
-- Polkadot: `ws://127.0.0.1:8000`
-- Asset Hub: `ws://127.0.0.1:8001`
+
+- [Polkadot: `ws://127.0.0.1:8002`](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A8002)
+- [Asset Hub: `ws://127.0.0.1:8000`](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A8000)
+- [Collectives: `ws://127.0.0.1:8001`](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A8001)
 
 ![polkadot-js-local](../assets/governance/polkadot-js-local-node.png)
 
@@ -131,17 +130,17 @@ Navigate to the Asset Hub instance (port 8001) in Polkadot JS UI and open the Ja
     Even though you're connected to Asset Hub, the scheduler must use the **relay chain block number** from the Polkadot instance (port 8000), not Asset Hub's block number. Check your Chopsticks terminal for the Polkadot relay chain height and use that value + 1 in the scheduler.
 
 ```javascript
-// Replace 24152001 with the relay chain block height + 1 from your Chopsticks output
-const relayChainBlock = 24152001
+// Replace 29138613 with the relay chain block height + 1 from your Chopsticks output
+const relayChainBlock = 29138613
 
 await api.rpc('dev_setStorage', {
  scheduler: {
    agenda: [
      [
-       [relayChainBlock], [
+       [relayChainBlock + 1], [
          {
            call: {
-             Inline: '0x1f0005010100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300'
+             Inline: '0x1f0005000100a50f05082f0000060300944603000c691601793de060491dab143dfae19f5f6413d4ce4c363637e5ceacb2836a4e0300'
            },
            origin: {
              origins: 'FellowshipAdmin'
@@ -166,7 +165,8 @@ unsuccessful, you should see the respective errors displayed here.
 
 ![xcm-polkadot-send](../assets/governance/polkadot-send-xcm.png)
 
-You can then navigate to the local Collectives instance and check the events to confirm the call is
+You can then navigate to the local Collectives instance and check the events to confirm the call has been executed.
+
 ### Testing Large Calls with Preimage Lookup
 
 For very long calls like [Referendum 1247](https://polkadot.subsquare.io/referenda/1247) which removes 19 ambassadors at once, the call data exceeds the JavaScript console `Inline` character limit. In such cases, use the preimage lookup method instead.
@@ -180,14 +180,14 @@ The preimage hash for this call is `0x82802c62d52a2431e422b58fff1fbdd0efc648e7c9
     Remember to use the relay chain block height from your Chopsticks terminal output, not the value from `api.rpc.chain.getHeader()`. The relay chain block number ensures proper cross-chain message scheduling.
 
 ```javascript
-// Replace 24152001 with the relay chain block height + 1 from your Chopsticks output
+// Replace 24152001 with the relay chain block height
 const relayChainBlock = 24152001
 
 await api.rpc('dev_setStorage', {
  scheduler: {
    agenda: [
      [
-       [relayChainBlock], [
+       [relayChainBlock + 1], [
          {
            call: {
              Lookup: {
