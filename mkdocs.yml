@@ -65,9 +65,9 @@ plugins:
   - search
   - social:
       cards_layout_options:
-          font_family: Unbounded
-          background_color: "#b8ffce"
-          color: "#000000"
+          font_family: DM Sans
+          background_color: "#FAFAF9"
+          color: "#0F0F0F"
   - macros:
       module_name: macros/rpc
 
