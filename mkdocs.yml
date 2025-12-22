@@ -28,7 +28,7 @@ theme:
   name: material
   custom_dir: material-overrides
   logo: assets/logo/logo.png
-  favicon: assets/logo/polkadot-icon__near-black-on-cool-gray.png
+  favicon: assets/logo/polkadot_logo_light.png
   icon:
     edit: material/github
     admonition:
@@ -68,7 +68,7 @@ plugins:
           font_family: DM Sans
           background_color: "#FAFAF9"
           color: "#0F0F0F"
-          logo: assets/logo/polkadot-icon__near-black-on-cool-gray.png
+          logo: assets/logo/polkadot_logo_light.png
   - macros:
       module_name: macros/rpc
 

@@ -4,8 +4,8 @@
  */
 
 (function() {
-  const lightFavicon = '/assets/logo/polkadot-icon__near-black-on-cool-gray.png';
-  const darkFavicon = '/assets/logo/polkadot-icon__cool-gray-on-near-black.png';
+  const lightFavicon = '/assets/logo/polkadot_logo_light.png';
+  const darkFavicon = '/assets/logo/polkadot_logo_dark.png';
 
   function updateFavicon() {
     const isDarkMode = document.querySelector('[data-md-color-scheme="custom-dark"]') !== null;
