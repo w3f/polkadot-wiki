@@ -68,6 +68,7 @@ plugins:
           font_family: DM Sans
           background_color: "#FAFAF9"
           color: "#0F0F0F"
+          logo: assets/logo/polkadot-icon__near-black-on-cool-gray.png
   - macros:
       module_name: macros/rpc
 
