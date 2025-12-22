@@ -168,7 +168,7 @@
   --md-default-bg-color: var(--color-bg); /* Page background */
   --md-default-fg-color: var(--color-text-primary); /* Primary text color */
   --md-default-fg-color--lightest: var(--md-default-bg-color);
-  --md-default-fg-color--lighter: var(--color-surface-secondary);
+  --md-default-fg-color--light: #fff;
   --md-typeset-color: var(--color-text-secondary); /* Body text */
   --md-typeset-a-color: var(--grey-50); /* Links */
   --md-primary-fg-color: var(--color-bg); /* Nav background */
@@ -1381,4 +1381,14 @@ div.mermaid {
   color: var(--md-default-fg-color);
   text-transform: capitalize;
   padding-left: 0.6666666667em;
+}
+
+/* Fix dark mode color issues - override Material theme hardcoded colors */
+.md-typeset blockquote {
+  border-left-color: var(--md-default-fg-color) !important;
+  color: var(--md-default-fg-color) !important;
+}
+
+.md-nav__item--section > .md-nav__link[for] {
+  color: var(--md-default-fg-color) !important;
 }
