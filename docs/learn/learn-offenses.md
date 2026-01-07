@@ -138,9 +138,7 @@ The following are scenarios that build towards slashes under equivocation:
     online simultaneously. HA systems are to be treated with extreme caution and are not advised.
 3.  The keystore folder is copied when attempting to copy a database from one instance to another.  
     It is important to note that equivocation slashes occur with a single incident. This can happen
-    if duplicated keystores are used for only a few seconds. A slash can result in losing nominators
-    and funds, removal from the [Decentralized Nodes program](https://nodes.web3.foundation/), and
-    reputational damage.
+    if duplicated keystores are used for only a few seconds. A slash can result in losing nominators and funds, and reputational damage.
 
 See the next section to understand how slash amounts for equivocations are calculated. If you want
 to know more about slashing, please look at the

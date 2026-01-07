@@ -20,7 +20,7 @@ Polkadot is owned by the [DOT token](../learn/learn-DOT.md) holders who can shap
 OpenGov) to orchestrate decisions, including accessing funds from the
 [treasury](../learn/learn-polkadot-opengov-treasury.md). Technical changes to the protocol's code are enacted and implemented automatically. Token holders can cast [direct votes](../learn/learn-polkadot-opengov.md#voting-on-a-referendum), [delegate their voting power](../learn/learn-polkadot-opengov.md#multirole-delegation) to entities and DAOs they trust, and place deposits for their referenda or referenda proposed by others.
 
-In addition to purchasing coretime and voting in governance, the DOT token gives you the power to participate in Polkadot [staking](../learn/learn-staking.md) and help secure the network. For node operators, DOT can also enable you to participate in programs like the [Decentralized Nodes program](https://nodes.web3.foundation/).
+In addition to purchasing coretime and voting in governance, the DOT token gives you the power to participate in Polkadot [staking](../learn/learn-staking.md) and help secure the network.
 
 Polkadot's level of abstraction and generalization allows for building applications 
 specific to their use cases, and for those applications to communicate securely, leveraging each

@@ -44,8 +44,7 @@ information on [the Chain State Values page](../general/chain-state-values.md).
 KSM has utility in [Kusama's OpenGov](../learn/learn-polkadot-opengov.md) where you can
 [vote](../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
 [delegate your voting power](../learn/learn-polkadot-opengov.md#multirole-delegation), and place
-deposits for your referenda or referenda proposed by others. KSM can also enable you to participate
-in programs like the [Decentralized Nodes program](https://nodes.web3.foundation/).
+deposits for your referenda or referenda proposed by others.
 
 ### Kusama Gifts
 

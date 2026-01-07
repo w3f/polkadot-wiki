@@ -66,5 +66,5 @@
 *[System Parachains]: Parachains forming part of Polkadot's core protocol.
 *[Technical Committee]: Together with the Council, it was one of the two chambers in the Polkadot Governance V1 model. It was a technocratic committee to manage upgrade timelines.
 *[Teleport]: Sending assets between chains by burning and minting.
-*[Thousand Validators Program]: Previous iteration of the Decentralized Nodes Program.
+*[Thousand Validators Program]: Previous iteration of the Decentralized Nodes Program, now closed.
 *[total issuance]: The total number of tokens in existence.
