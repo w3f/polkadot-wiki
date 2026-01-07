@@ -66,9 +66,8 @@ plugins:
   - social:
       cards_layout_options:
           font_family: DM Sans
-          background_color: "#FAFAF9"
-          color: "#0F0F0F"
-          logo: assets/logo/polkadot_logo_light.png
+          background_color: "#0F0F0F"
+          color: "#FAFAF9"
   - macros:
       module_name: macros/rpc
 
