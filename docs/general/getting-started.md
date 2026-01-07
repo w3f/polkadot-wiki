@@ -65,6 +65,7 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
   read, and less technical introduction into Polkadot's technology. This paper dives into the
   components of Polkadot and is tailored for both a non-technical and technical reader.
 - [Polkadot for Beginners: A non-technical guide to decentralization, blockchains & Polkadot](https://linktr.ee/polkadotbook): a book funded by the Polkadot Treasury about Blockchain technology with a dive into the Polkadot protocol, its participants and components.
+- [What is a blockchain, actually?](https://blog.kianenigma.com/what-blockchain-actually/): an online book by [Kian Paimani](https://x.com/kianenigma) reflecting on blockchain technology.
 
 ### Intermediate Level
 
