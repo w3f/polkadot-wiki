@@ -3,12 +3,6 @@ title: Grants Program
 description: Explore grant programs supporting development in the Polkadot ecosystem.
 ---
 
-!!!info "Decentralized Futures Program"
-    In addition to the listed grants programs, the Web3 Foundation has launched the **Decentralized
-    Futures** program to support individuals and teams as they launch new initiatives aimed at growing
-    the Polkadot ecosystem. For details on the status of the program, see the
-    [Decentralized Futures Program](decentralized-futures.md).
-
 ## Web3 Foundation Grants
 
 Web3 Foundation offers grants for open source software development and research around Substrate,
@@ -47,7 +41,6 @@ Below is a list of other grant programs in the Polkadot/Substrate ecosystem.
 - [Acala Grants Program](https://acala.network/ecosystem-program)
 - [Avail Uncharted Grants](https://github.com/availproject/avail-uncharted/blob/main/grants/grants.md)
 - [Darwinia Grants Program](https://github.com/ringecosystem/collaboration/tree/master/grant)
-- [Decentralized Futures Program](https://futures.web3.foundation/)
 - [Decentralized JAM](https://jam.web3.foundation/)
 - [Hydration Network Bounties](https://docs.hydration.net/security/intro#bug-bounties)
 - [ink!ubator](https://use.ink/ubator/)
