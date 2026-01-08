@@ -70,15 +70,6 @@ separate action, and it takes effect after the
 visible on the Polkadot-JS UI during the unbonding period, and after it, the staking lock can be
 unlocked, and the bonded funds become free balance you can transfer.
 
-!!!info "Fast Unstaking"
-    If you accidentally bonded your tokens or your bonded tokens never backed any active validator, you can now unbond them immediately.
-
-If your bonded balance did not back any validators in the last 28 days on Polkadot (7 days on
-Kusama), you are eligible to perform fast unstaking. The
-[staking dashboard](https://staking.polkadot.cloud/#/overview) will automatically check if you
-qualify. For more information, visit the
-["Fast Unstake" section in this support article](https://support.polkadot.network/support/solutions/articles/65000169433).
-
 ## Setting up Accounts
 
 ### Stash & Staking Proxy

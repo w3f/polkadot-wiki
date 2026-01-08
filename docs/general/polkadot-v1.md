@@ -105,7 +105,7 @@ Polkadot 1.0 achieved resilience through the following strategies:
 
 - **Nominated Proof-of-Stake (NPoS)** where the stake per validator is maximized and evenly distributed across validators, and participation in native staking is decentralized and democratized as much as possible.
 - [**ELVES protocol**](../learn/learn-parachains-protocol.md) allows for the shared security system, where everything coming through Polkadot's virtual cores passes rigorous checking. See [this page](../learn/learn-comparisons-rollups.md#rollup-comparison-table) to explore how Polkadot's rollup technology differs from optimistic and ZK rollups.
-- The now closed [**Decentralized Nodes Program**](https://nodes.web3.foundation/) aimed to incentivize new operators to
+- The [now closed **Decentralized Nodes Program**](https://medium.com/web3foundation/web3-foundation-is-sunsetting-the-decentralized-nodes-program-761b70b1a468) aimed to incentivize new operators to
   become network participants and further increase physical (how many validator nodes per service
   provider) and social decentralization (how many validator nodes per operator). Those can be
   explored with the [Polkawatch App](https://polkadot.polkawatch.app/).

@@ -74,19 +74,25 @@ manage Polkadot, Kusama and their parachains native tokens.
 ### Polkadot Migration App
 
 !!! warning "For Migration Only"
-    This app is only meant for performing the migration to the Polkadot Generic App; do not use it frequently. 
+    This app is only meant for performing the migration to the Polkadot (Generic) App; do not use it frequently.
 
-    After you migrate your assets, delete the Migration app and use the Polkadot Generic App.
+    After you migrate your assets, delete the Migration app and use the Polkadot App.
 
 The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot relay chain
-and [Polkadot System Chains](glossary.md#system-parachains)**. Old Ledger accounts are accounts
+and [Polkadot System Chains](glossary.md#system-parachains)**. 
+
+Old Ledger accounts are accounts
 that have been created using the old Kusama Ledger app and any parachain Ledger apps (for both
 Kusama and Polkadot) except for Polkadot System Chains.
 
 Suppose you have accounts on any Polkadot parachain, Kusama relay chain, and Kusama parachains. In
 that case, you will need the Polkadot Migration app to move fungible and non-fungible assets (NFT),
-identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot
-Ledger app.
+identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot Ledger app.
+
+!!! note "The migration app has nothing to do with the Asset Hub migration"
+    The migration app was made before [the Asset Hub migration](https://support.polkadot.network/support/solutions/articles/65000190561).
+    
+    With the Asset Hub migration, users who have old Kusama Ledger accounts will need to use the migration app to transfer funds and assets to a new account generated via the Polkadot (Generic) app.
 
 ### Polkadot (Generic) App
 
@@ -111,7 +117,7 @@ The Polkadot Ledger Generic app brings the following benefits:
 - Development Efficiency: The app helps developing teams save costs by having and maintaining their
   app.
 
-The Polkadot Ledger Generic app will be supported by Ledger Live,
+The Polkadot Ledger Generic app is supported by Ledger Live,
 [Nova Wallet](https://novawallet.io/), [Talisman](https://www.talisman.xyz/),
 and [Subwallet](https://www.subwallet.app/).
 
