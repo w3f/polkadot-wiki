@@ -159,7 +159,6 @@ nav:
           - Ecosystem Funds: general/ecosystem-funds.md  
       - Programs:
           - Decentralized Voices: general/decentralized-voices.md
-          - Bug Bounty: general/bug-bounty.md
           - Ambassadors: general/ambassadors.md  
       - Stay Safe:
               - How to DYOR: general/how-to-dyor.md
@@ -175,7 +174,6 @@ nav:
         - Getting Started: kusama/kusama-getting-started.md
         - Timeline: kusama/kusama-timeline.md
         - Code of Conduct: kusama/kusama-coc.md
-        - Bug Bounty: kusama/kusama-bug-bounty.md
         - Social Recovery: kusama/kusama-social-recovery.md
         - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
         - Kusama Inflation: kusama/kusama-inflation.md

@@ -27,7 +27,7 @@ on-chain governance, and parachains.
 
 - **[Timeline](kusama-timeline.md)** – Stay up-to-date with the latest action on Kusama.
 - **[Code of Conduct](kusama-coc.md)** - Kusama's Code of Conduct to sustain chaos.
-- **[Bug Bounty](kusama-bug-bounty.md)** - An Overview of how you can help catch bugs.
+- **[Bug Bounty](https://security.parity.io/bug-bounties)** - An Overview of how you can help catch bugs.
 - **[Account Recovery](kusama-social-recovery.md)** - Steps on how to perform account recovery on Kusama.
 - **[Adversarial Cheatsheet](kusama-adverserial-cheatsheet.md)** - A Cheatsheet to help you create chaos.
 - **[Kappa Sigma Mu](https://ksmsociety.io/)** - Learn about the Kappa Sigma Mu Society and Join as a Member.
