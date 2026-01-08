@@ -140,10 +140,6 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
   Once the unbonding period has passed, you can unlock the locked funds (button with a lock icon)
   that will be available as a free balance.
 
-!!!info "No fast unstake and pool swap for pool members"
-    Note that the option to fast unstake is only available to nominators. Also, to change pool, you
-    cannot simply swap memberships. You will need to unbond and go through the whole unbonding period.
-
 - **Section C: The Pool Panel** shows the pool id where you have membership (in this case, Pool 82),
   the pool name, and next to it, a `Manage` button that will allow to choose between different
   options:
@@ -220,9 +216,6 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
   [unbonding period](../chain-state-values.md). Once the unbonding period has
   passed, you can unlock the locked funds (button with a lock icon) that will be available as a free
   balance.
-
-!!!info "Fast unstake"
-    If your account did not receive rewards in the past 28 eras, you will be eligible for fast unstake. The dashboard will automatically check this for you and prompt a banner.
 
 - **Section C: The Nominator Panel** shows the current status of the nominator, currently set to
   "Nominating and Earning Rewards", and next to it, the `Unstake` button allows you to unstake the
