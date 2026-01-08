@@ -44,4 +44,4 @@ actions shouldn't be taken too seriously - try to assume jest before malice.
 
 Please understand that this network is, despite its success, an experiment with potential flaws, so
 it’s appreciated that community members help report any sort of exploits directly to the team before
-sharing publicly. Please see the [bug bounty program](kusama-bug-bounty.md).
+sharing publicly. Please see the [bug bounty program](https://security.parity.io/bug-bounties).
