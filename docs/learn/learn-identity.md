@@ -91,6 +91,11 @@ here, you must reach out to specific registrars individually if you want to be j
     (Registrar 4) provides setting on-chain ID as a service on their
     [website](https://polkaidentity.com/).
 
+    Registrar 5: <br /> **URL**: https://dotid.app <br /> **Account**:
+    12gL6BDsAMQCij7Ni5CxeN3J9VYwsKAUgbSLxAMbceCkxqv1 <br /> **Fee**: 0 DOT <br /> ECH0.RE
+    (Registrar 5) provides setting on-chain ID as a service on their
+    [website](https://dotid.app).
+
 === "Kusama"
 
     ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
