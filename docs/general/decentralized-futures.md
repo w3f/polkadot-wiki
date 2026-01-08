@@ -11,7 +11,7 @@ Program, and (as the name suggests) it helped strengthen the decentralization of
 This program was set to distribute **20 million USD and 5 million DOT tokens** to support individuals
 and teams as they launched new initiatives to grow the Polkadot ecosystem. The main objective was to
 expand the network by adding self-sustaining participants. Funding was available for Polkadot-focused
-organizations aimed to generate profit and for non-profit ventures that had a strategy to secure
+organizations aimed to generate profit, and for non-profit ventures that had a strategy to secure
 ongoing financing through Polkadot's on-chain treasury system beyond 2024.
 
 The Program was run by the Web3 Foundation, which is a not-for-profit organization that supports Web3
@@ -30,21 +30,13 @@ Proposals had to be **submitted before July 1st, 2024**. Applications were **rev
 
 ## Selection Criteria
 
-In the current phase, we intentionally maintain openness in our approach. This deliberate choice
-stems from recognizing that specific initiatives demand substantial and bold efforts, often
-incurring significant costs, particularly in areas where traditional go-to-market functions are no
-longer in play. Conversely, there are instances where individuals require relatively modest funding
-in the tens of thousands to initiate their projects. This broad approach avoids constraining
-people's creativity and allows for many possibilities. However, it does come with the drawback of
-prolonged application processing times.
+Several factors significantly enhanced the likelihood of application success:
 
-Several factors significantly enhance the likelihood of application success:
-
-- A well-thought-out and compelling plan outlining the project’s sustainability beyond 2024 is
+- A well-thought-out and compelling plan outlining the project’s sustainability beyond 2024 was
   crucial. While injecting funds into the ecosystem is straightforward, convincing customers or the
   community of the value behind that financial investment poses a more substantial challenge.
-- Applicants are encouraged to provide a detailed breakdown of how the requested funds will be
+- Applicants were encouraged to provide a detailed breakdown of how the requested funds will be
   utilized, with granularity increasing proportionally with the amount sought. This meticulous
-  approach ensures transparency and accountability in the allocation of resources.
+  approach ensured transparency and accountability in the allocation of resources.
 - A demonstrated willingness to receive a more significant portion of the value in long-term DOT
   rather than immediate FIAT, aligning with the broader ecosystem's goals.
