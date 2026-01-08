@@ -158,7 +158,7 @@ nav:
           - Polkadot Community Foundation: general/pcf.md
           - Ecosystem Funds: general/ecosystem-funds.md  
       - Programs:
-          - Bug Bounty: general/bug-bounty.md
+          - Decentralized Voices: general/decentralized-voices.md
           - Ambassadors: general/ambassadors.md  
       - Stay Safe:
               - How to DYOR: general/how-to-dyor.md
@@ -174,7 +174,6 @@ nav:
         - Getting Started: kusama/kusama-getting-started.md
         - Timeline: kusama/kusama-timeline.md
         - Code of Conduct: kusama/kusama-coc.md
-        - Bug Bounty: kusama/kusama-bug-bounty.md
         - Social Recovery: kusama/kusama-social-recovery.md
         - Adversarial Cheatsheet: kusama/kusama-adverserial-cheatsheet.md
         - Kusama Inflation: kusama/kusama-inflation.md
@@ -267,10 +266,6 @@ nav:
           - JAM FAQ: learn/learn-jam-faq.md
   - Analytics:
      - Parity Data Dashboards: general/dashboards/parity-data-dashboards.md
-     - Dune Analytics:
-                  - Polkadot Ecosystem Overview: general/dashboards/dune-analytics/polkadot-dashboards/legacy/polkadot-ecosystem-overview.md
-                  - Onboarding Status and Key Dashboards: general/dashboards/dune-analytics/onboarding-status-and-key-dashboards.md
-                  - DuneSQL Cheatsheet: general/dashboards/dune-analytics/dunesql-cheatsheet.md
   - Guides:
     - general/polkadotjs.md
     - Polkadot-JS Guides:

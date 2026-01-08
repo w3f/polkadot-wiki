@@ -78,8 +78,7 @@ window.addEventListener("load", function () {
     script.setAttribute('data-search-mode-enabled', 'false');
     script.setAttribute('data-search-mode-default', 'false');
     script.setAttribute('data-search-result-primary-title-font-size', '16px');
-    script.setAttribute('data-button-position-top', '120px');
-    script.setAttribute('data-button-position-right', '0px');
+    script.setAttribute('data-button-position-right', '20px');
     script.setAttribute('data-user-analytics-cookie-enabled', 'false');
 
     // Reset global state
