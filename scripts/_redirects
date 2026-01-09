@@ -68,6 +68,7 @@
 /*/decentralized-voices    https://medium.com/web3foundation/decentralized-voices-closing-this-chapter-carrying-the-lessons-forward-e10d3a46a7b6    301
 /*/programs-index    https://medium.com/web3foundation/decentralized-voices-closing-this-chapter-carrying-the-lessons-forward-e10d3a46a7b6   301
 /*/alpha-program    https://x.com/Polkadot/status/1765738058433892457   301
+/*/new-alpha-program    https://x.com/Polkadot/status/1765738058433892457   301
 
 # Kusama
 
@@ -167,7 +168,7 @@
 /*/learn-staking-miner/    /learn/learn-staking    301
 /*/general/polkadot-ecosystem-overview    https://data.parity.io/    301
 /*/general/onboarding-status-and-key-dashboards    https://data.parity.io/    301
-/*/general/project-dashboards    https://data.parity.io/    301
+/*/general/project-dashboards    https://data.parity.io/home    301
 /*/general/dunesql-cheatsheet    https://data.parity.io/    301
 /*/ens/    /general/getting-started    301
 /*/learn    /general/getting-started    301
@@ -250,14 +251,14 @@
 /*/general/dune-analytics     https://data.parity.io/   301
 /*/parity-data-dashboards     /general/dashboards/parity-data-dashboards    301
 /*/staking-dashboard     /general/dashboards/staking-dashboard/    301
-/*/general/dune-analytics/polkadot-annual-reviews    https://data.parity.io/  301
-/*/general/dune-analytics/polkadot-dashboards    https://data.parity.io/   301
+/*/general/dune-analytics/polkadot-annual-reviews    https://data.parity.io/eoyr2025  301
+/*/general/dune-analytics/polkadot-dashboards    https://data.parity.io/overview#introduction   301
 /*/general/dune-analytics/parachain-dashboards   https://data.parity.io/   301
-/*/general/dune-analytics/polkadot-dashboards-overview   https://data.parity.io/    301
-/*/general/dune-analytics/polkadot-dashboards-governance  https://data.parity.io/    301
-/*/general/dune-analytics/polkadot-dashboards-staking  https://data.parity.io/    301
-/*/general/dune-analytics/polkadot-dashboards-network  https://data.parity.io/    301
-/*/general/dune-analytics/polkadot-2024-review   https://data.parity.io/  301
+/*/general/dune-analytics/polkadot-dashboards-overview   https://data.parity.io/overview#introduction    301
+/*/general/dune-analytics/polkadot-dashboards-governance  https://data.parity.io/opengov-report#intro    301
+/*/general/dune-analytics/polkadot-dashboards-staking  https://data.parity.io/staking    301
+/*/general/dune-analytics/polkadot-dashboards-network  https://data.parity.io/overview#introduction    301
+/*/general/dune-analytics/polkadot-2024-review   https://data.parity.io/eoyr2024  301
 /*/general/dune-analytics/:parachain-dashboard   https://data.parity.io/    301
 
 # Polkadot-JS Section
