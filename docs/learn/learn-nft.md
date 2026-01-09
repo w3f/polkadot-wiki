@@ -108,7 +108,7 @@ A blockchain must provide a mechanism for overcoming these limitations to facili
 advanced NFT tokens, as we will see in the upcoming section.
 
 A typical
-[NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)[​](https://wiki.polkadot.network/docs/learn-nft#a-typical-nft-on-ethereum)\*\*
+[NFT on Ethereum](https://opensea.io/assets/ethereum/0x2127fe7ffce4380459cced92f2d4793f3af094a4/12598)[​](https://wiki.polkadot.com/docs/learn-nft#a-typical-nft-on-ethereum)\*\*
 
 ![samurai nft](../assets/nft/samurai.png)
 
