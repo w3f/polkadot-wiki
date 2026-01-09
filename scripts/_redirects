@@ -37,7 +37,7 @@
 /*/funding    /general/funding/    301
 /*/metadata    /general/metadata    301
 /*/chain-state-values    /general/chain-state-values    301
-/*/ambassadors    /general/ambassadors    301
+/*/ambassadors    https://forum.polkadot.network/c/ambassador-programme/30    301
 /*/polkadot-v1    /general/polkadot-v1    301
 /*/community    /general/community    301
 /*/polkadot-vision-index    /general/polkadot-v1/    301
@@ -87,7 +87,7 @@
 /*/learn-comparisons    /learn/learn-comparisons-rollups/    301
 /*/learn-video-tutorials    https://www.youtube.com/@PolkadotNetwork/playlists    301
 /*/learn-future-implementations-index    /learn/future-implementations   301
-/*/learn-archive    https://wiki.polkadot.network/    301
+/*/learn-archive    https://wiki.polkadot.com/    301
 /*/build-transaction-construction   /learn/learn-transaction-construction     301
 /*/learn-agile-coretime    /learn/learn-agile-coretime    301
 /*/learn-parachains    /learn/learn-parachains    301

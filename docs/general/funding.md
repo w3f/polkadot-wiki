@@ -39,9 +39,9 @@ flowchart LR
     style J stroke:#e83e8c,stroke-width:2px,stroke-dasharray: 5 5
     click C "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
     click F "https://grants.web3.foundation/docs/Process/how-to-apply" "Apply now"
-    click E "https://wiki.polkadot.network/learn/learn-polkadot-opengov-treasury/" _blank
-    click H "https://wiki.polkadot.network/learn/learn-polkadot-opengov-treasury/" _blank
-    click J "https://wiki.polkadot.network/general/ecosystem-funds/" _blank
+    click E "https://wiki.polkadot.com/learn/learn-polkadot-opengov-treasury/" _blank
+    click H "https://wiki.polkadot.com/learn/learn-polkadot-opengov-treasury/" _blank
+    click J "https://wiki.polkadot.com/general/ecosystem-funds/" _blank
 ```
 
 For more information about funding options and initiatives in the Polkadot ecosystem, see [the Web3 Foundation Funding & Support page](https://web3.foundation/funding-support/).
