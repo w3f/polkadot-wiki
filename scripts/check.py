@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 sitemap_path = './wiki_sitemap.xml'
 
 # Base URL for testing
-base_url = 'https://wiki.polkadot.network'
+base_url = 'https://wiki.polkadot.com'
 
 # Parse the sitemap.xml file
 tree = ET.parse(sitemap_path)
@@ -27,7 +27,7 @@ blanket_urls = [
 for url in root.findall('ns:url', namespace):
     loc = url.find('ns:loc', namespace).text
     # Replace the base URL with localhost for testing
-    test_url = loc.replace('https://wiki.polkadot.network', base_url)
+    test_url = loc.replace('https://wiki.polkadot.com', base_url)
     try:
         response = requests.get(test_url, allow_redirects=True)
         final_url = response.url
