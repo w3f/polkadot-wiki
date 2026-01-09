@@ -13,10 +13,6 @@ description: An Introduction to Polkadot's Parachains.
     <a href="./learn-agile-coretime#implementation" target="_blank" rel="noopener noreferrer">
       here.
     </a>
-    For decentralized, transparent, and regulatory-compliant fundraising within the ecosystem, check out the
-    <a href="https://www.polimec.org/" target="_blank" rel="noopener noreferrer">
-      Polimec parachain.
-    </a> 
   </p>
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>

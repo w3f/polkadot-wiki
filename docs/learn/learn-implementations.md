@@ -41,8 +41,7 @@ execute the STF within a Wasm environment.
 
 With this in mind, we can point to some other implementations of Polkadot. Having different
 implementations inherently promotes the decentralization of the technology and progresses it in a
-meaningful way. Other implementations of Polkadot that exist, many of whom have received a
-[grant](../general/grants.md) from the Web3 Foundation, are in programming languages like Go, C++,
+meaningful way. Other implementations of Polkadot that exist, many of whom have received a grant from the Web3 Foundation, are in programming languages like Go, C++,
 and JavaScript, which are all languages that can be compiled in Wasm.
 
 As stated in the Soramitsu grant announcement:
@@ -82,4 +81,4 @@ collection of tools, interfaces, and libraries for Polkadot and Substrate.
 
 While the ecosystem continues to grow rapidly, the continued development of alternative
 implementations will only strengthen Polkadot. Consider becoming a contributor to the ecosystem,
-and learn about the how you can receive a [grant](../general/grants.md) for your development.
+and [learn about the how you can receive a grant for your development](https://medium.com/web3foundation/new-w3f-grant-guidelines-b2c921a84850).
