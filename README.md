@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="https://user-images.githubusercontent.com/25497083/148661419-419ad5b3-1b9f-480a-b723-3f292616730c.png" width="200">
+<img align="center" src="./docs/assets/logo/polkadot_logo_dark.png" width="200">
 </p>
 
 <div align="Center">
