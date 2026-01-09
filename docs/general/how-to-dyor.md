@@ -162,8 +162,7 @@ proxies, this can be considered a red flag and extra precaution should be taken.
 
 Besides their community, projects that are serious about building on Polkadot usually engage with
 the [community](community.md). They are active in the various
-[Polkadot and Kusama channels](./community.md), and some of them are
-[Polkadot Ambassadors](./ambassadors.md), or generally
+[Polkadot and Kusama channels](./community.md), and some of them are Polkadot Ambassadors, or generally
 prominent members of the ecosystem.
 
 ### Clear Integration

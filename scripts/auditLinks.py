@@ -5,11 +5,11 @@ import time
 import random
 
 Root = "./docs"
-PolkadotUrl = "https://wiki.polkadot.network/"
+PolkadotUrl = "https://wiki.polkadot.com/"
 ReporUrl = "https://github.com/w3f/polkadot-wiki/tree/master/docs"
 
 Whitelist = [
-    "https://wiki.polkadot.network/docs/community/",
+    "https://wiki.polkadot.com/docs/community/",
     "https://crates.io/crates/diener",
     "https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be",
     "https://www.linode.com/",
