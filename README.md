@@ -139,7 +139,7 @@ The Polkadot Wiki is built in a CI job, where it is then deployed on Netlify. Ea
 Pull request previews are enabled, meaning a temporary deployment via Netlify is generated for each PR.
 
 After these jobs are successfully completed, the CICD production workflow will automatically deploy
-`prod` to the public site when the PR is merged to master: [Polkadot Wiki](https://wiki.polkadot.network).
+`prod` to the public site when the PR is merged to master: [Polkadot Wiki](https://wiki.polkadot.com).
 
 #### GitHub Actions
 
