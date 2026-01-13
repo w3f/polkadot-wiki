@@ -44,8 +44,7 @@ attestation:
 - Reasonable: The data appears reasonable, but no in-depth checks (e.g. formal KYC process) were
   performed (all the currently verified identities on-chain).
 - Known Good: The registrar has certified that the information is correct (this step involves
-  verification of state issued identity documents, and at the moment no account has known good
-  identity, with the exception of registrars).
+  verification of state issued identity documents).
 - Out of Date: The information used to be good, but is now out of date.
 - Low Quality: The information is low quality or imprecise, but can be fixed with an update.
 - Erroneous: The information is erroneous and may indicate malicious intent.
@@ -118,6 +117,11 @@ here, you must reach out to specific registrars individually if you want to be j
 
     ~~Registrar 6~~: <br /> **URL**: ~~https://polkaidentity.com/~~ <br /> **Account**:
     ~~HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
+
+    Registrar 7: <br /> **URL**: https://dotid.app <br /> **Account**:
+    HZPJ3NopdSxPNqW9GU4S33PZVPLgqewCd1k9CsTe3xNQhWK <br /> **Fee**: 0 KSM <br /> ECH0.RE
+    (Registrar 6) provides setting on-chain ID as a service on their
+    [website](https://dotid.app). <br /> Registrar 6 was temporarily placed under the control of ECH0.RE at block 7,327,072 via identity.setAccountId, in order to ensure continuity of identity judgements on Kusama.
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
