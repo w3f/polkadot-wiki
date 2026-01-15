@@ -29,11 +29,11 @@ pymdown-extensions==10.20
 python-dateutil==2.9.0.post0
 PyYAML==6.0.3
 pyyaml_env_tag==1.1
-regex==2025.11.3
+regex==2026.1.15
 requests==2.32.5
 six==1.17.0
 urllib3==2.6.3
 watchdog==6.0.0
 wcmatch==10.1
 zipp==3.23.0
-substrate-interface==1.7.11
+substrate-interface==1.8.0
