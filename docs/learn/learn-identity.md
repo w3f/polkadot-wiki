@@ -78,8 +78,8 @@ here, you must reach out to specific registrars individually if you want to be j
     Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
     1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ <br /> **Fee**: 20 DOT <br />
 
-    Registrar 2: <br /> **Account**: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB <br /> **Fee**: 0
-    DOT <br />
+    ~~Registrar 2~~: <br /> **Account**: ~~1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB~~ <br />
+    **Fee**: ~~0 DOT~~ <br />
 
     Registrar 3: <br /> **Account**: 13SceNt2ELz3ti4rnQbY1snpYH4XE4fLFsW8ph9rpwJd6HFC <br /> **Fee**:
     0.5 DOT <br /> Polkassembly (Registrar 3) provides setting on-chain ID as a service on their
