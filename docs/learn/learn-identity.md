@@ -68,7 +68,7 @@ There are multiple registrars on Polkadot and Kusama. Unless no additional infor
 here, you must reach out to specific registrars individually if you want to be judged by those.
 
 !!!info "Decommissioned Registrar Service"
-    From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity judgement requests. Identities judged by the registrar before that date will not be affected. For new identity judgment, please use the other registrars.
+    From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity judgement requests. From January 2026 onwards, **Registrar 2** will also not accept new judgement requests. Identities judged by the registrar before that date will not be affected. For new identity judgment, please use the other registrars.
 
 === "Polkadot"
 
