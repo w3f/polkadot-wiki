@@ -109,7 +109,7 @@ Some simple things that you can do to keep your assets and information secure fr
   of unvetted (not security-scanned) software, such as extensions, 3rd party software, and
   registries/repositories that come in many forms and shapes.
 - Store your assets in cold storage, like a hardware wallet or
-  [Polkadot Vault](./polkadot-vault.md).
+  [Polkadot Vault](../learn/learn-guides-vault.md).
 
 ### Always check the source
 

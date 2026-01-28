@@ -12,7 +12,7 @@ description: Discover governance apps in the Polkadot ecosystem for proposals an
 
 ## Polkassembly
 
-![Polkassembly](https://github.com/w3f/polkadot-wiki/assets/874046/f2fc1032-ba81-465a-896c-51bd35efd435)
+![Polkassembly](../assets/f2fc1032-ba81-465a-896c-51bd35efd435)
 
 Polkassembly is a platform specifically designed to foster open, transparent discussions around
 Polkadot and Kusama governance proposals. By bridging on-chain decisions with off-chain discussions,
@@ -68,7 +68,7 @@ governance events and provides user interfaces to facilitate various governance 
 ## Delegation Dashboard
 
 The [Polkadot Delegation Dashboard](https://delegation.polkadot.network/) is a web3 application that
-allows you to delegate your voting power on [Polkadot OpenGov](../learn/learn-polkadot-opengov.md).
+allows you to delegate your voting power on [Polkadot OpenGov](../knowledge-base/opengov.md).
 
 !!!info "How to get added as a Delegate on the Dashboard?"
     Anyone interested in being listed as a delegate can add their details on the [Governance-UI repository](https://github.com/paritytech/governance-ui/blob/main/assets/data/polkadot/delegates.json).
@@ -97,4 +97,4 @@ For detailed instructions on how to delegate your voting power using dashboard, 
 
 **If you become a nomination pool member or a pool admin, you cannot participate in Governance with
 the bonded tokens in the pool, as they are held in a
-[system account](../learn/learn-account-advanced.md#system-accounts).**
+[system account](../reference/accounts-advanced.md#system-accounts).**

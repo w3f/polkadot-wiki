@@ -11,14 +11,14 @@ description: Find answers to common questions about Polkadot and its ecosystem.
 
 
 !!!info "JAM FAQ"
-    For questions regarding JAM and its relation to Polkadot, visit the [JAM FAQ](../learn/learn-jam-faq.md)
+    For questions regarding JAM and its relation to Polkadot, visit the [JAM FAQ](../knowledge-base/jam.md)
 
 
 ## Polkadot
 
 ### What is the minimum amount of KSM / DOT I can have in my account?
 
-Please see information about [Existential Deposits](../learn/learn-accounts.md#existential-deposit-and-reaping).
+Please see information about [Existential Deposits](../getting-started/accounts/index.md#existential-deposit-and-reaping).
 
 ### Polkadot Roadmap
 
@@ -51,7 +51,7 @@ Polkadot's goal to have 1000 validators is set to be something that is practical
 Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator runs their own validating node and verifies the relay chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
 Finally, individuals may participate in the block production process indirectly by
-[nominating](../learn/learn-nominator.md) validators. In this way, individuals who are not running a
+[nominating](../getting-started/staking/roles.md) validators. In this way, individuals who are not running a
 node can still share in staking rewards.
 
 ### What is the block time of the relay chain?
@@ -69,7 +69,7 @@ contract chains can connect to Polkadot as a parachain, or via a bridge.
 ### How does the Polkadot relay chain connect to external chains in the ecosystem?
 
 One of the cornerstone interoperability technologies being researched and developed for deployment
-on Polkadot is cross-chain [bridges](../learn/learn-bridges.md). Bridges come in a variety of
+on Polkadot is cross-chain [bridges](../reference/bridges.md). Bridges come in a variety of
 flavors with varying levels of trust associated with them. Polkadot is predominantly researching the
 trust-minimized flavor that imposes economic costs on the operators of the bridge, and therefore
 makes it economically secure. Bridge efforts are being worked on in concert with other projects in
@@ -97,7 +97,7 @@ to consider precisely how benchmarking was performed for Polkadot.
 The inflation rate is approximately 120,000,000 DOT per year.
 
 The 85% of inflation is rewarded to validators for performing their duties, while the 15% goes to
-the treasury. Please see the article on [inflation](../learn/learn-DOT.md#dot-inflation) for more
+the treasury. Please see the article on [inflation](../knowledge-base/staking-polkadot.md#dot-inflation) for more
 information.
 
 ### Transfer Fees
@@ -133,7 +133,7 @@ are able to build new blocks.
 Proof of Work (PoW) and Proof of Stake (PoS) have been inaccurately used as short hand to refer to
 consensus mechanisms of blockchains, but that does not capture the full picture. PoW is the method
 for agreeing on a block author and part of the fuller
-[Nakamoto consensus](../learn/learn-consensus.md#nakamoto-consensus) that also encompasses a chain
+[Nakamoto consensus](../reference/consensus.md#nakamoto-consensus) that also encompasses a chain
 selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a set of rules for selecting
 the validator set and does not specify a chain selection rule or how a chain might reach finality.
 PoS algorithms have traditionally been paired with an algorithm for coming to Byzantine agreement
@@ -158,7 +158,7 @@ on how to do validate you can consult the
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
-on the results of an election algorithm known as [Phragmén's method](../learn/learn-phragmen.md).
+on the results of an election algorithm known as [Phragmén's method](../getting-started/staking/npos.md).
 Phragmén's method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
@@ -167,8 +167,8 @@ are looking for _nominators_ that will put up their tokens to increase the stake
 
 ### How are validators rewarded?
 
-Validators are rewarded from the [inflation of the relay chain](../learn/learn-DOT.md#dot-inflation),
-[transaction fees](../learn/learn-transactions.md#transaction-fees), and tips. However, they only
+Validators are rewarded from the [inflation of the relay chain](../knowledge-base/staking-polkadot.md#dot-inflation),
+[transaction fees](../knowledge-base/transactions.md#transaction-fees), and tips. However, they only
 take a percentage of the former two. More details can be read on the page for
 [validator payouts](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout).
 
@@ -196,7 +196,7 @@ You can also use some tools some to perform estimations.
 
 ### What prevents Polkadot governance from failing?
 
-Examples of [Polkadot's governance](../learn/learn-polkadot-opengov.md) can be found in the runtime upgrades
+Examples of [Polkadot's governance](../knowledge-base/opengov.md) can be found in the runtime upgrades
 that have successfully taken place through on the testnets, Kusama, and Polkadot itself.
 
 It is fair to say that the field of on-chain blockchain governance is still new, and no one can
@@ -224,7 +224,7 @@ determined minority to overrule the vote of an apathetic majority in certain sit
 mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
 approval or rejection based on what part of the governance protocol the proposal originated in. For
 details on the subtleties of Polkadot's governance system, please see the
-[governance page](../learn/learn-polkadot-opengov.md).
+[governance page](../knowledge-base/opengov.md).
 
 ## Parachains
 

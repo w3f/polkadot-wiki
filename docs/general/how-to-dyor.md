@@ -169,7 +169,7 @@ prominent members of the ecosystem.
 
 There are many ways for a project to build on Polkadot. Some of the most notable Polkadot projects
 are parachains on Kusama or gearing up to become one. Parachains can purchase
-[coretime](../learn/learn-agile-coretime.md) and access a relay chain's core.
+[coretime](../reference/agile-coretime.md) and access a relay chain's core.
 
 Verifying which projects are parachains on Kusama can be quickly done by visiting the
 [parachains](https://polkadot.js.org/apps/#/parachains) page on
@@ -291,7 +291,7 @@ more about fact-checking and claim verification, have a look at the following ma
    [here](https://webliteracy.pressbooks.com).
 3. Wikipedia article on [fact-checking](https://en.wikipedia.org/wiki/Fact-checking)
 
-Finally, you should also check our complementary guide on [how to identify scams](./scams.md), which
+Finally, you should also check our complementary guide on [how to identify scams](../knowledge-base/scams.md), which
 explains how to identify outright scams and avoid them, as well as how to protect your sensitive
 information.
 

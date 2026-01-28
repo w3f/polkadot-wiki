@@ -38,20 +38,20 @@ Quick Link: [Demo](https://www.youtube.com/watch?v=amm_Vk0vzP4&t=43s) |
 !!!info "Walk-Through Video Tutorial"
     See [this video tutorial](https://www.youtube.com/watch?v=APxPsawebJw) and [this article](https://blog.chainsafe.io/multix-a-simple-interface-to-manage-complex-multisigs-on-polkadot-97328be26f9d) for more information about using [Multix](https://multix.chainsafe.io/) for multisig accounts.
 
-The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex multisigs. The tool is part of [the open-source Polkadot/Kusama Tech Stack](../general/build-open-source.md#user-interface). Besides being user-friendly, Multix provides several benefits:
+The [Multix tool](https://multix.chainsafe.io/) is an easy-to-use interface to manage complex multisigs. The tool is part of [the open-source Polkadot/Kusama Tech Stack](../knowledge-base/open-source.md#user-interface). Besides being user-friendly, Multix provides several benefits:
 
 - When one person creates the multisig account, all the signatories see the multisig account on
   their interface.
 - There is no need to pass around the call data to confirm a transaction. Such information is
   retrieved from the chain and displayed to the users.
-- Thanks to the power of [pure proxies](../learn/learn-proxies-pure.md), adding and removing signatories or adjusting the threshold is now possible without creating new multisigs and Multix provides an intuitive interface to work with pure proxies.
+- Thanks to the power of [pure proxies](../knowledge-base/pure-proxies.md), adding and removing signatories or adjusting the threshold is now possible without creating new multisigs and Multix provides an intuitive interface to work with pure proxies.
 
 The pure proxy setup used by [MultiX](https://github.com/ChainSafe/Multix) can be seen on the
-[pure proxy page](../learn/learn-proxies-pure.md#why-pure-proxy).
+[pure proxy page](../knowledge-base/pure-proxies.md#why-pure-proxy).
 
 ## Nova Spektr
 
-![](https://github.com/Leemo94/polkadot-wiki/blob/master/docs/assets/nova_spektr.png?raw=true)
+![](../assets/nova_spektr.png?raw=true)
 
 Nova Spektr is your all-in-one Polkadot Wallet, engineered with enterprise-grade capabilities such
 as multisigs, proxy accounts, hardware wallets, light clients, and much more. Nova Spektr is
@@ -93,7 +93,7 @@ proprietary, where as Polkadot Multisig by Signet is free.
 
 ## Polkasafe
 
-![Polkasafe](https://github.com/w3f/polkadot-wiki/assets/874046/586bf051-a7fb-43c0-957e-0b659d50c9ab)
+![Polkasafe](../assets/586bf051-a7fb-43c0-957e-0b659d50c9ab)
 
 [Polkasafe](https://polkasafe.xyz) - Your gateway to the Ultimate MultiSig experience on Polkadot.
 

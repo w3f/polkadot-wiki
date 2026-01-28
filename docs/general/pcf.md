@@ -5,7 +5,7 @@ description: Understand the role of the Polkadot Community Foundation in executi
 
 The Polkadot Community Foundation (PCF) is a foundation company incorporated in the Cayman Islands
 whose activities are directed by DOT holders via
-[Polkadot’s OpenGov](../learn/learn-polkadot-opengov.md).
+[Polkadot’s OpenGov](../knowledge-base/opengov.md).
 
 The PCF is an optional off-chain vehicle for OpenGov to execute tasks such as signing commercial
 contracts, making fiat payments, enforcing intellectual property, and contracting third-party
@@ -220,12 +220,12 @@ Proposals_.
 ### Foundation Funding Proposals
 
 Foundation Funding Proposals are funding requests from the
-[Polkadot treasury](../learn/learn-guides-treasury.md#creating-a-treasury-proposal), specifying the
+[Polkadot treasury](../getting-started/governance/proposing.md#creating-a-treasury-proposal), specifying the
 amount in the preimage's value field according to the level of spend required, and setting the
 beneficiary to the PCF multisig wallet address. The Proposal must also include the intended use of
 funds in a comment on the [Polkassembly](https://polkadot.polkassembly.io/opengov) website and begin
 with “[Polkadot Community Foundation]” in its name. The referenda can use any
-[OpenGov origin](../learn/learn-polkadot-opengov-origins.md) with sufficient spending permission.
+[OpenGov origin](../getting-started/governance/mechanics.md) with sufficient spending permission.
 
 Examples of Foundation Funding Proposals:
 
@@ -265,9 +265,9 @@ other activities.
 
 Foundation Resolution Proposals indicate token holders' wishes for the foundation without requiring
 funding. These must be of the type
-[system.remark](../learn/learn-guides-polkadot-opengov.md#submitting-a-preimage), with the remark
+[system.remark](../getting-started/governance/voting.md#submitting-a-preimage), with the remark
 text starting with “[Polkadot Community Foundation]” and submitted using
-[the Wish For Change submission track](../learn/learn-polkadot-opengov-origins.md#wish-for-change).
+[the Wish For Change submission track](../getting-started/governance/mechanics.md#wish-for-change).
 
 Examples of Foundation Resolution Proposals (Wish for Change)
 
@@ -445,7 +445,7 @@ as contractor, consulting, and legal fees.
 
 This can be found on
 [the Polkassembly docs website](https://docs.polkassembly.io/jekyll/2022-06-30-opengov.html#creating-a-referendum-on-polkassembly),
-or [Polkadot-JS guides](../learn/learn-guides-polkadot-opengov.md#create-a-referenda-proposal).
+or [Polkadot-JS guides](../getting-started/governance/voting.md#create-a-referenda-proposal).
 
 **What happens if the proposal isn’t sufficiently funded during the execution phase?**
 
