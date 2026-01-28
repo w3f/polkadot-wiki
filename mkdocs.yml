@@ -168,6 +168,26 @@ nav:
           - Delegating Your Vote: getting-started/governance/delegation.md
           - Tracking Activity: getting-started/governance/tracking.md
   
+  - Builders:
+      - Polkadot Cloud: build/polkadot-cloud.md
+      - Polkadot Smart Contracts: build/polkadot-smart-contracts.md
+      - Introducing the Toolkit:
+          - What Is the Polkadot SDK?: build/toolkit/what-is-sdk.md
+          - "Building with the SDK: High-Level View": build/toolkit/building-high-level.md
+          - Parachains and App-Specific Blockchains: build/toolkit/parachains-apps.md
+          - How Modular Design Works: build/toolkit/modular-design.md
+      - Smart Contracts:
+          - Smart Contracts on Polkadot: build/smart-contracts/polkadot.md
+          - How Smart Contracts Work: build/smart-contracts/how-it-works.md
+          - ink! Development Overview: build/smart-contracts/ink-overview.md
+          - Smart Contracts vs Parachains: build/smart-contracts/vs-parachains.md
+      - Solutions:
+          - Assets: build/solutions/assets.md
+          - Identity: build/solutions/identity.md
+          - Polkadot Products: build/solutions/polkadot-products.md
+          - Proof of Personhood: build/solutions/proof-of-personhood.md
+          - Storage: build/solutions/storage.md
+
   - Knowledge Base:
       - Account Abstraction: knowledge-base/account-abstraction.md
       - Account Balances: knowledge-base/account-balances.md
@@ -216,27 +236,7 @@ nav:
       - Validator: knowledge-base/validator.md
       - XCM: learn/learn-xcm.md
 
-  - Build:
-      - Polkadot Cloud: build/polkadot-cloud.md
-      - Polkadot Smart Contracts: build/polkadot-smart-contracts.md
-      - Introducing the Toolkit:
-          - What Is the Polkadot SDK?: build/toolkit/what-is-sdk.md
-          - "Building with the SDK: High-Level View": build/toolkit/building-high-level.md
-          - Parachains and App-Specific Blockchains: build/toolkit/parachains-apps.md
-          - How Modular Design Works: build/toolkit/modular-design.md
-      - Smart Contracts:
-          - Smart Contracts on Polkadot: build/smart-contracts/polkadot.md
-          - How Smart Contracts Work: build/smart-contracts/how-it-works.md
-          - ink! Development Overview: build/smart-contracts/ink-overview.md
-          - Smart Contracts vs Parachains: build/smart-contracts/vs-parachains.md
-      - Solutions:
-          - Assets: build/solutions/assets.md
-          - Identity: build/solutions/identity.md
-          - Polkadot Products: build/solutions/polkadot-products.md
-          - Proof of Personhood: build/solutions/proof-of-personhood.md
-          - Storage: build/solutions/storage.md
-
-  - Reference:
+  - Technical Reference:
       - Accounts (Advanced): reference/accounts-advanced.md
       - Agile Coretime (Scheduling): reference/agile-coretime.md
       - Architecture: reference/architecture.md
