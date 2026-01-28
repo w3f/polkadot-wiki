@@ -22,7 +22,7 @@ mkdocs-open-in-new-tab==1.0.8
 natsort==8.4.0
 packaging==26.0
 paginate==0.5.7
-pathspec==1.0.3
+pathspec==1.0.4
 platformdirs==4.5.1
 Pygments==2.19.2
 pymdown-extensions==10.20.1
