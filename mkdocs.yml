@@ -167,6 +167,13 @@ nav:
           - Submitting a Proposal: getting-started/governance/proposing.md
           - Delegating Your Vote: getting-started/governance/delegation.md
           - Tracking Activity: getting-started/governance/tracking.md
+      - Community:
+          - Community: getting-started/community/index.md
+          - Scams: getting-started/community/scams.md
+          - Contributing: getting-started/community/contributing.md
+          - Contributors: getting-started/community/contributors.md
+          - Open Source: getting-started/community/open-source.md
+          - Polkadot Community Foundation: getting-started/community/foundation.md
   
   - Builders:
       - Polkadot Cloud: build/polkadot-cloud.md
@@ -193,9 +200,7 @@ nav:
       - Account Balances: knowledge-base/account-balances.md
       - Accounts: knowledge-base/accounts-general.md
       - Asset Hub: knowledge-base/asset-hub.md
-      - Community: knowledge-base/community.md
-      - Contributing: knowledge-base/contributing.md
-      - Contributors: knowledge-base/contributors.md
+      - Asset Hub: knowledge-base/asset-hub.md
       - Coretime Marketplaces: knowledge-base/coretime-marketplaces.md
       - Coretime Parachains: knowledge-base/coretime-parachains.md
       - DOT-KSM Bridge: knowledge-base/dot-ksm-bridge.md
@@ -214,17 +219,17 @@ nav:
       - Nomination Pools: knowledge-base/nomination-pools.md
       - Nominator: knowledge-base/nominator.md
       - Offenses: knowledge-base/offenses.md
-      - Open Source: knowledge-base/open-source.md
+      - Offenses: knowledge-base/offenses.md
       - Parachains: learn/learn-parachains.md
       - Parachains FAQ: knowledge-base/parachains-faq.md
-      - Polkadot Community Foundation: knowledge-base/foundation.md
+      - Parachains FAQ: knowledge-base/parachains-faq.md
       - Polkadot OpenGov: knowledge-base/opengov.md
       - Polkadot OpenGov Origins: knowledge-base/opengov-origins.md
       - Polkadot Technical Fellowship: knowledge-base/technical-fellowship.md
       - Proxies: knowledge-base/proxies.md
       - Pure Proxies: knowledge-base/pure-proxies.md
       - Rollups & Interoperability: knowledge-base/rollups.md
-      - Scams: knowledge-base/scams.md
+      - Rollups & Interoperability: knowledge-base/rollups.md
       - Smart Contracts: knowledge-base/smart-contracts.md
       - Snowbridge: knowledge-base/snowbridge.md
       - Staking (Advanced): knowledge-base/staking-advanced.md

@@ -4,13 +4,13 @@ description: Learn about Polkadot's on-chain treasury, its inflow and outflow me
 ---
 
 The Treasury is a pot of funds collected through a portion of block production rewards,
-[transaction fees](./learn-transactions.md#transaction-fees), [slashing](./learn-offenses.md), and
-[DOT inflation](./learn-DOT.md#dot-inflation). Treasury funds are held in a
+[transaction fees](../../knowledge-base/transactions.md#transaction-fees), [slashing](../../knowledge-base/offenses.md), and
+[DOT inflation](../introduction/tokenomics.md#dot-inflation). Treasury funds are held in a
 [system account](../../reference/accounts-advanced.md#system-accounts) that cannot be controlled by any
 external account; only the system internal logic can access it.
 
 !!!tip "Creating a Treasury Proposal on Polkadot OpenGov"
-    If you would like to create a treasury proposal on Polkadot OpenGov, follow the instructions outlined on [this how-to guide](./learn-guides-treasury.md#creating-a-treasury-proposal).
+    If you would like to create a treasury proposal on Polkadot OpenGov, follow the instructions outlined on [this how-to guide](../../getting-started/governance/proposing.md#creating-a-treasury-proposal).
 
 ## Treasury Inflow and Outflow
 
@@ -20,7 +20,7 @@ mechanisms:
 - **Transaction fees:** 80% of the transaction fees of every submitted extrinsic is diverted to the
   Treasury, while 20% is given to the block producers.
 - **Inflation:** 15% of DOT annual inflation is directed to the Treasury.
-- **Slashes:** whenever validators and nominators are [slashed](./learn-offenses.md), a share of the
+- **Slashes:** whenever validators and nominators are [slashed](../../knowledge-base/offenses.md), a share of the
   slashed tokens are diverted to Treasury. They are typically rare and unpredictable events.
 - **Transfers:** everyone can send funds to the Treasury directly. This is a rare event and
   typically due to grantees reimbursing some of the amount they got allocated for various reasons.
@@ -44,20 +44,20 @@ The outflow is determined by the following mechanisms:
 ## Treasury Tracks
 
 OpenGov allows for managing funds through six tracks, each with its own
-[origin and track parameters](./learn-polkadot-opengov-origins.md#origins-and-tracks-info).
+[origin and track parameters](../../knowledge-base/opengov-origins.md#origins-and-tracks-info).
 
-- [Treasurer](./learn-polkadot-opengov-origins.md#treasurer)
-- [Big Spender](./learn-polkadot-opengov-origins.md#big-spender)
-- [Medium Spender](./learn-polkadot-opengov-origins.md#medium-spender)
-- [Small Spender](./learn-polkadot-opengov-origins.md#small-spender)
-- [Big Tipper](./learn-polkadot-opengov-origins.md#big-tipper)
-- [Small Tipper](./learn-polkadot-opengov-origins.md#small-tipper)
+- [Treasurer](../../knowledge-base/opengov-origins.md#treasurer)
+- [Big Spender](../../knowledge-base/opengov-origins.md#big-spender)
+- [Medium Spender](../../knowledge-base/opengov-origins.md#medium-spender)
+- [Small Spender](../../knowledge-base/opengov-origins.md#small-spender)
+- [Big Tipper](../../knowledge-base/opengov-origins.md#big-tipper)
+- [Small Tipper](../../knowledge-base/opengov-origins.md#small-tipper)
 
 ## Submit Treasury Proposal via Polkassembly
 
 Access to Treasury funds requires successful enactment of referendum in the respective treasury
 track on-chain. Learn how to submit a treasury proposal for referendum using
-[Polkassembly](../general/governance-apps.md).
+[Polkassembly](../../general/governance-apps.md).
 
 Go to [Polkassembly](https://polkadot.polkassembly.io/opengov) and click on the FAB button in the
 bottom right corner. Then,
@@ -83,21 +83,21 @@ bottom right corner. Then,
 
 The treasury currently operates on a single account on-chain. The above tracks manage the outflow of
 the treasury on the network. With _sub_-treasuries, having treasury accounts that correspond to each
-[collective](./learn-system-chains.md#collectives) is also possible.
+[collective](../../knowledge-base/system-chains.md#collectives) is also possible.
 
 Rather than have many referenda through OpenGov, the treasury can allocate funds to each
-sub-treasury (through [governance](./learn-polkadot-opengov.md)), from which each respective collective
+sub-treasury (through [governance](../../knowledge-base/opengov.md)), from which each respective collective
 can spend funds (depending on their specific rule set).
 
 New treasuries could be added to respective
-[system chains](./learn-system-chains.md#existing-system-chains) through governance by adding more
+[system chains](../../knowledge-base/system-chains.md#existing-system-chains) through governance by adding more
 instances of this pallet.
 
 ## Multi-Asset Treasury Support
 
 The treasuries can support multiple asset types and thus can spend assets other than DOT (or KSM on
 Kusama) held within the treasury, and their transfers and interactions across the chains facilitated
-by [cross-consensus messaging](./learn-xcm.md). These assets have a few requirements:
+by [cross-consensus messaging](../../learn/learn-xcm.md). These assets have a few requirements:
 
 1. The asset is listed on the [AssetHub system parachain](https://assethub-polkadot.subscan.io/).
 2. The asset is active and has sufficient liquidity to be utilized for payouts.
@@ -131,9 +131,9 @@ curators are multisig addresses with agency over a portion of the treasury to pr
 bug or vulnerability, develop a strategy, or monitor a set of tasks related to a specific topic, all
 for the benefit of the ecosystem.
 
-A proposer can [submit a bounty proposal](./learn-guides-bounties.md#submit-a-bounty-proposal) to
+A proposer can [submit a bounty proposal](../../learn/learn-guides-bounties.md#submit-a-bounty-proposal) to
 OpenGov,
-[with a curator to be defined later](./learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
+[with a curator to be defined later](../../learn/learn-guides-bounties.md#assign-a-curator-to-a-bounty), whose
 background and expertise is such that they can determine when the task is complete.
 
 When submitting the value of the bounty, the proposer can specify a fee that will be paid to
@@ -167,4 +167,4 @@ access funds directly from the parent bounty without going through an OpenGov re
 ---
 
 !!!info "Polkadot-JS Guides"
-    If you are an advanced user, see the [Polkadot-JS guides about bounties](./learn-guides-bounties.md) and [treasury](./learn-guides-treasury.md).
+    If you are an advanced user, see the [Polkadot-JS guides about bounties](../../learn/learn-guides-bounties.md) and [treasury](../../getting-started/governance/index.md).

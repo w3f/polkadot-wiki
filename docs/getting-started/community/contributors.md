@@ -11,7 +11,7 @@ contact information to see that it matches the origin of the message, and then f
 touch with someone else on this list to verify the legitimacy of the original inquiry.
 
 !!!warning "Employee impersonation is a common type of scam"
-    For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](../knowledge-base/scams.md) guide.
+    For other ways of protecting yourself, please see the [How to Protect Yourself from Scams](./scams.md) guide.
 
 ## Technical Education
 

@@ -7,7 +7,7 @@ description: Explore the open-source tools, libraries, and frameworks in the Pol
 # Open Source Polkadot Stack <!-- omit in toc -->
 
 !!!caution "Do your research before using open-source tools"
-    The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](./how-to-dyor.md) and be aware of [scams](../knowledge-base/scams.md).
+    The tools listed here are open-source and are linked directly to their source code. Before using these tools to build your projects, always [do your research](../../general/how-to-dyor.md) and be aware of [scams](./scams.md).
 
 This page aims to provide an overview of the open-source Polkadot Tech Stack.
 

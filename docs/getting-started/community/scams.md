@@ -47,7 +47,7 @@ share these with anyone, they can access your account and execute any transactio
 6. Scams are absolutely rife in this space. It is easy and cheap to set a scam up, and hard to shut
    one down. Therefore, the user must be diligent to avoid such scams.
 7. If you can, always try to verify new information that you see through an official source, such as
-   [Polkadot network's official blog](../general/community.md) or
+   [Polkadot network's official blog](./index.md) or
    [Polkadot's Official Support](https://support.polkadot.network). Often, scammers will fake a
    websites or blog posts, but if you validate such information through a secondary source, you will
    reduce the chances of being scammed.
@@ -86,7 +86,7 @@ If you received a message from an admin over Telegram, ignore it. Our team membe
 personally message you. Our social media accounts are posted on our website, and our team will
 announce any new ones. We will never offer to sell you DOT at a discount, air-drop "rewards", or
 message you privately to help with a problem you posted publicly. Our social media and community
-pages can be found [here](./community.md).
+pages can be found [here](./index.md).
 
 ### Keep your data secure
 
@@ -109,7 +109,7 @@ Some simple things that you can do to keep your assets and information secure fr
   of unvetted (not security-scanned) software, such as extensions, 3rd party software, and
   registries/repositories that come in many forms and shapes.
 - Store your assets in cold storage, like a hardware wallet or
-  [Polkadot Vault](../learn/learn-guides-vault.md).
+  [Polkadot Vault](../../learn/learn-guides-vault.md).
 
 ### Always check the source
 
