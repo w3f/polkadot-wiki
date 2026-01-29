@@ -1,14 +1,4 @@
 {#- Macro to render title with optional icon -#}
 {% macro render_title_with_icon(title, icon_class) %}
-  {% if ":" in title %}
-    {% set parts = title.split(":", 1) %}
-    {% set icon_name = parts[0].strip() %}
-    {% set text = parts[1].strip() %}
-    <span class="{{ icon_class or 'twemoji' }}">
-      {% include ".icons/" ~ icon_name ~ ".svg" %}
-    </span>
-    <span>{{ text }}</span>
-  {% else %}
-    {{ title }}
-  {% endif %}
+  {{ title }}
 {% endmacro %}

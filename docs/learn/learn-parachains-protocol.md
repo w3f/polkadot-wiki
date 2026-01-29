@@ -14,14 +14,14 @@ Protocol from the perspective of availability and validity. on).
 
 ## Main Actors
 
-### [Validators](../learn/learn-validator.md)
+### [Validators](../knowledge-base/validator.md)
 
 They are responsible for validating the proposed parachain's blocks by checking the
 **Proof-of-Validity** (PoV) of the blocks and ensuring the PoV remains available for a designated
 period. They have "skin in the game", meaning they have funds bonded on-chain that can be partially
 or fully confiscated by the network in case of misbehavior.
 
-### [Collators](../learn/learn-collator.md)
+### [Collators](../reference/collator.md)
 
 They create the PoV that validators know how to check. Creating PoV requires familiarity with
 transaction format and block authoring rules of a specific parachain, as well as having access to
@@ -125,7 +125,7 @@ via the **Collator Distribution Subsystem**.
 
 Para-validators participate in the **Candidate Backing Subsystem**. A para-validator needs to check
 if the candidate block follows the
-[state transition](../learn/learn-parachains.md#state-transitions) rules of the parachain. Because
+[state transition](learn-parachains.md#state-transitions) rules of the parachain. Because
 states are stored within Merkle trees, a para-validator can verify state transitions without having
 access to the entire state, but it needs:
 
@@ -267,7 +267,7 @@ Validators perform two main actions in the Approval Process:
   receives enough random checkers. This stage tracks approval votes to identify when
   [no-show](https://paritytech.github.io/polkadot/book/protocol-approval.html#no-shows) approval
   checks take suspiciously long. It also tracks relay chain
-  [equivocations](../learn/learn-offenses.md#slash-for-equivocation) to determine when adversaries
+  [equivocations](../knowledge-base/offenses.md#slash-for-equivocation) to determine when adversaries
   possibly gained foreknowledge about assignments and add more checks in those cases. Assignees
   determine their own assignments to check specific candidates using two or three
   [assignment criteria](https://paritytech.github.io/polkadot/book/protocol-approval.html#assignment-criteria),
@@ -295,7 +295,7 @@ b) in another relay chain block notes are fed into the approval code.
 
 The gossiped messages are of two types, assignment notices, and approval votes, and are signed with
 [approval keys](https://paritytech.github.io/polkadot/book/protocol-approval.html#approval-keys).
-Such keys are part of the [session keys](./learn-cryptography.md#session-keys) used by validators.
+Such keys are part of the [session keys](../../reference/cryptography.md#session-keys) used by validators.
 Briefly, approval keys are:
 
 - **Approval assignment keys** that are sr25519 keys used only for assignment criteria

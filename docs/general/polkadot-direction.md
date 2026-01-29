@@ -19,9 +19,9 @@ If we see Polkadot as a service provider of trustless, resilient and verifiable 
 ## Offloading Tasks to System Chains
 
 Polkadot 1.0 was a chain-centric paradigm comprising domain-specific rollups that could exchange messages. Trusted communication channels are ensured via a shared security mechanism provided by the ELVES protocol, Polkadot's rollup technology. Polkadot not only provides message-passing
-capability, but also extra functionalities such as [staking](../learn/learn-staking.md),
-[accounts](../learn/learn-accounts.md), [balances](../learn/learn-transactions.md#balance-transfers),
-and [governance](../learn/learn-polkadot-opengov.md). Having a chain-centric system will ultimately
+capability, but also extra functionalities such as [staking](../knowledge-base/staking-advanced.md),
+[accounts](../getting-started/accounts/index.md), [balances](../knowledge-base/transactions.md#balance-transfers),
+and [governance](../knowledge-base/opengov.md). Having a chain-centric system will ultimately
 end in a chain-centric application and UX.
 
 The true innovation of Polkadot is about leveraging the unique value proposition offered by
@@ -30,7 +30,7 @@ to solve real-world problems. Those applications will thus need to span across c
 
 **Increasingly fewer tasks will be handled by the relay chain** which will focus efforts only on
 primary tasks: securing the network and providing secure message-passing capability.
-[System parachains](../learn/learn-system-chains.md) will be used to take over secondary relay chain
+[System parachains](../knowledge-base/system-chains.md) will be used to take over secondary relay chain
 tasks such as staking, governance, etc.
 
 ### XCM and Accords
@@ -38,7 +38,7 @@ tasks such as staking, governance, etc.
 [XCMP](../learn/learn-xcm.md) is the transport layer for delivering XCM messages. It gives the
 transportation method and a secure route but not a framework for binding agreements.
 
-[XCM](../learn/learn-xcm-transport.md) is a format, a language of intention abstracted over
+[XCM](../reference/xcm-transport.md) is a format, a language of intention abstracted over
 functionality common within chains. It creates an expressive language of what you intend to do or
 want to happen. XCM messages are transported between different chains using XCMP. Ideally, in a
 fully trustless environment, strong guarantees ensure chains faithfully interpret XCM messages. We
@@ -61,7 +61,7 @@ layer that provides a specific state transition function for each logic componen
 patterns of cooperation between multiple logic components (i.e., trans-applications) that would not
 be possible to achieve over bridges.
 
-Accords will be implemented using [SPREE technology](../learn/learn-spree.md).
+Accords will be implemented using [SPREE technology](../reference/spree.md).
 
 ## Agile Core Usage
 
@@ -87,7 +87,7 @@ bandwidth for the fixed price of opening and closing a block.
 Sharing cores with other applications to share costs but with no reduction in latency. Note that
 this is different from the [split coretime](./polkadot-v2.md#polkadot-20-core-usage-and-functionalities) where one core is used by multiple
 application at different times to share costs at the expense of higher latency. Shared cores will be
-enabled with [JAM](../learn/learn-jam-chain.md), a semi-coherent system in which data from different
+enabled with [JAM](../getting-started/introduction/evolution.md), a semi-coherent system in which data from different
 shards can be scheduled within the same core.
 
 ![core-usage-agile-shared](../assets/core-usage-agile-shared.png)
@@ -118,9 +118,9 @@ are breakable and prone to cyber-attacks. Polkadot is basing its resilience on d
   execution. However, a library of
   richly featured and high-performance ZK primitives ready for specific use cases is being built.
   The first use-case will be used to improve privacy for on-chain collectives such as
-  [the Polkadot Technical Fellowship](../learn/learn-polkadot-technical-fellowship.md).
-- **[SAFROLE](../learn/learn-safrole.md) consensus:** New forkless block-production consensus
-  algorithm replacing [BABE](../learn/learn-consensus.md#block-production-babe) and where blocks are
+  [the Polkadot Technical Fellowship](../knowledge-base/technical-fellowship.md).
+- **[SAFROLE](../reference/safrole.md) consensus:** New forkless block-production consensus
+  algorithm replacing [BABE](../reference/consensus.md#block-production-babe) and where blocks are
   not produced unless they are expected to be finalized. This will provide several benefits, such
   as:
   - Improved security, parachain performance, and UX from being forkless

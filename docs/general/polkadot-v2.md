@@ -3,7 +3,7 @@ title: Polkadot 2.0
 description: Explore Polkadot 2.0's innovations making Polkadot's decentralized computer more accessible and efficient.
 ---
 
-Understanding what [Polkadot 1.0](./polkadot-v1.md) is about, and the philosophy behind it, will help
+Understanding what [Polkadot 1.0](../general/polkadot-v1.md) is about, and the philosophy behind it, will help
 us envision the future direction of the Polkadot as a high-performance decentralized computer capable of delivering resilient and verifiable computation, and interoperability to anyone and anything.
   
 ## Polkadot 2.0 Definition
@@ -12,9 +12,9 @@ Polkadot is **a multi-core decentralized computer** that provides resilient and 
 
 The Polkadot community [voted on a Wish for Change proposal](https://polkadot.polkassembly.io/referenda/747) stating that Polkadot 2.0 includes the following major technical upgrades:
 
-- [asynchronous backing](../learn/learn-async-backing.md) allowing pipelining and thus a more efficient rollup system that grants rollups more throughput without compromising security.
-- [coretime](../learn/learn-agile-coretime.md) allowing agile allocation of cores and thus execution on the Polkadot decentralized computer.
-- [elastic scaling](../learn/learn-elastic-scaling.md) allowing the use of multiple cores simultaneously by the same rollup chain to boost throughput.
+- [asynchronous backing](../reference/async-backing.md) allowing pipelining and thus a more efficient rollup system that grants rollups more throughput without compromising security.
+- [coretime](../reference/agile-coretime.md) allowing agile allocation of cores and thus execution on the Polkadot decentralized computer.
+- [elastic scaling](../reference/elastic-scaling.md) allowing the use of multiple cores simultaneously by the same rollup chain to boost throughput.
 
 These technical upgrades made the Polkadot decentralized computer more efficient, powerful, and accessible for anyone to use.
 
@@ -36,7 +36,7 @@ The entry points to access Polkadot's computation are the virtual cores. Thus, r
 
 Thus, classic lease auctions were deprecated to create an agile marketplace for [coretime], where coretime becomes a commodity that can be tokenized, sold, and traded. Rollup chains can purchase:
 
-- **bulk coretime**: a standard purchase of coretime through [the Coretime System Chain](../learn/learn-system-chains.md#existing-system-chains) at a fixed
+- **bulk coretime**: a standard purchase of coretime through [the Coretime System Chain](../knowledge-base/system-chains.md#existing-system-chains) at a fixed
 price for a fixed period, with a predictable renewal price.
 - **on-demand coretime**: On-demand purchase of coretime available through ongoing sale for immediate use at a spot price.
 
@@ -49,7 +49,7 @@ Coretime sales are burned and contribute to the protocol's revenue by adding def
 
 We have seen how in [Polkadot 1.0](./polkadot-v1.md#polkadot-10-core-usage-and-functionalities), one rollup chain has a specific core at all times for a fixed two-year period, whether they needed it or not. However, blocks must be produced when required to achieve full efficiency, and the system must target full block capacity, lowering the probability of incentivizing validators to build blocks half full or, worse, empty.
 
-Polkadot 2.0 generalizes core usage to meet different rollup needs. For more information about coretime, see the [agile coretime documentation](../learn/learn-agile-coretime.md).
+Polkadot 2.0 generalizes core usage to meet different rollup needs. For more information about coretime, see the [agile coretime documentation](../reference/agile-coretime.md).
 
 The figure below shows the core usage for Polkadot 2.0. The horizontal axis is time, and each row represents a virtual core. The colors show different rollup chains.
 
@@ -62,7 +62,7 @@ As shown above, coretime can be:
 
 An application can be assigned to multiple cores simultaneously. Some applications can have a
 permanent core assignment and an intermittent one, for example, in a period of high demand to send
-multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime across multiple cores is achieved through [elastic scaling](../learn/learn-elastic-scaling.md).
+multiple blocks to multiple cores at the same time slot to reduce latency. Combining coretime across multiple cores is achieved through [elastic scaling](../reference/elastic-scaling.md).
 
 Below is an example of two rollup chains accessing two separate Polkadot cores. The CPU load diagram shows that Chain 1 uses Core 1 computation at 100% while Chain 2 uses Core 2 at 25%. Rollups produce blocks every 6 seconds using the pipelining feature (i.e. asynchronous backing).
 

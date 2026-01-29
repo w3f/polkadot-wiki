@@ -79,7 +79,7 @@ manage Polkadot, Kusama and their parachains native tokens.
     After you migrate your assets, delete the Migration app and use the Polkadot App.
 
 The Polkadot Migration app is for users having **old Ledger accounts not on the Polkadot relay chain
-and [Polkadot System Chains](glossary.md#system-parachains)**. 
+and [Polkadot System Chains](../knowledge-base/glossary.md#system-parachains)**. 
 
 Old Ledger accounts are accounts
 that have been created using the old Kusama Ledger app and any parachain Ledger apps (for both
@@ -103,7 +103,7 @@ The Polkadot Generic Ledger App will allow you to use your Ledger device on the 
 parachains without being affected by runtime upgrades. The goal is to provide a single application
 for the entire Polkadot ecosystem without compromising security. This new app will also count with
 Clear Signing, allowing you to see what you sign on a trusted display. This way, unintentionally
-signing rogue transactions can be avoided. [See this page](transaction-attacks.md) to understand
+signing rogue transactions can be avoided. [See this page](../knowledge-base/transaction-attacks.md) to understand
 the importance of verifying transactions before signing them.
 
 The Polkadot Ledger Generic app brings the following benefits:
@@ -133,7 +133,7 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 - Install Polkadot Migration and Polkadot App.
 - Use a browser extension or mobile wallet that supports the new apps. No application will
   automatically migrate your assets. You need to manually migrate your assets,
-  [identities](../learn/learn-identity.md), [staking](../learn/learn-staking.md), etc., to the
+  [identities](../knowledge-base/identity.md), [staking](../knowledge-base/staking-advanced.md), etc., to the
   account controlled by the Polkadot app and sign in with the Migration app (some extensions and
   wallets UI will prompt which app you need to use to sign in depending on the chain you are in).
 - When the migration process is finished, you can delete the Migration app, and everything will be

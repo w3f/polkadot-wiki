@@ -52,7 +52,7 @@ Spec and Metadata into a portal).
 
 To add more chains on the Vault app you can follow the instructions
 [here](https://github.com/novasamatech/parity-signer/blob/master/docs/src/tutorials/Add-New-Network.md#add-network-specs).
-In this example we will add the [Asset Hub](../learn/learn-assets.md) system parachain. Briefly,
+In this example we will add the [Asset Hub](../knowledge-base/asset-hub.md) system parachain. Briefly,
 fork the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
 terminal within the `/generate_message` folder and type the following:
 

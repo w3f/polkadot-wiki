@@ -16,15 +16,15 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
 ## Polkadot Staking Dashboard
 
 The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a web3 application
-dedicated to native non-custodial [staking](../learn/learn-staking.md) on the relay chain. The
+dedicated to native non-custodial [staking](../knowledge-base/staking-advanced.md) on the relay chain. The
 dashboard allows to stake as a solo nominator or as a
-[nomination pool](../learn/learn-nomination-pools.md) member. Users can also create their nomination
-pools. The dashboard supports [Ledger](./ledger.md),
-[Polkadot Vault](./polkadot-vault.md),
+[nomination pool](../knowledge-base/nomination-pools.md) member. Users can also create their nomination
+pools. The dashboard supports [Ledger](../learn/learn-guides-ledger.md),
+[Polkadot Vault](../learn/learn-guides-vault.md),
 [SubWallet](https://www.subwallet.app/),
 [Talisman](https://talisman.xyz/), [WalletConnect](https://walletconnect.network/), [Fearless Wallet](https://fearlesswallet.io/),
 [PolkaGate](https://polkagate.xyz/), and [Enkrypt](https://www.enkrypt.com/). The dashboard also
-supports [staking proxies](../learn/learn-staking.md#stash-account-and-staking-proxy).
+supports [staking proxies](../knowledge-base/staking-advanced.md#stash-account-and-staking-proxy).
 
 You can find more information about the Polkadot staking dashboard on the dedicated [wiki page](./dashboards/staking-dashboard.md) and
 [support articles](https://support.polkadot.network/support/solutions/folders/65000157523).
@@ -97,13 +97,13 @@ Below a list of video tutorial about the Polkadot Staking Dashboard.
 
 ## PAPI Staking Dashboard
 
-The [PAPI Staking Dashboard](https://staking.usepapi.app/polkadot/dashboard) is a fully decentralized, trustless web application for native non-custodial [staking](../learn/learn-staking.md). It operates exclusively via Polkadot light clients with no reliance on centralized RPC endpoints or third-party indexers.
+The [PAPI Staking Dashboard](https://staking.usepapi.app/polkadot/dashboard) is a fully decentralized, trustless web application for native non-custodial [staking](../knowledge-base/staking-advanced.md). It operates exclusively via Polkadot light clients with no reliance on centralized RPC endpoints or third-party indexers.
 
 Key features include:
 
 - **Light client support**: All data originates from direct peer connections, with a visible "trustless" status indicator confirming the decentralized connection.
 - **Full staking functionality**: Supports real-time interaction, validator filtering, nomination rebalancing, bonding/unbonding, and reward claiming.
-- **Solo nomination and pools**: Manage your staking operations as a solo nominator or participate in [nomination pools](../learn/learn-nomination-pools.md).
+- **Solo nomination and pools**: Manage your staking operations as a solo nominator or participate in [nomination pools](../knowledge-base/nomination-pools.md).
 
 ![](../assets/staking-apps/papi-dashboard.png)
 
@@ -116,7 +116,7 @@ staking on the relay chain. It aims to offer a unique and enhanced nomination ex
 evaluating numerous conflicting traits in the decision-making process. For the analysis, validator
 data is collected at the last block of every session.
 
-[![](https://github.com/turboflakes/apps/blob/main/src/assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
+[![](../assets/nomi_dashboard.webp?raw=true)](https://turboflakes.io/)
 
 source: https://github.com/turboflakes/apps
 

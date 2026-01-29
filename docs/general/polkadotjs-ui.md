@@ -31,7 +31,7 @@ functionalities include account generation, balance transfers, and staking.
 
 In this section of the UI, you can see accounts injected from a browser extension, such as the
 [**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or other in-browser wallets. It is also possible to expand balance details and see different
-[**account balance types**](../learn/learn-account-balances.md). You
+[**account balance types**](../knowledge-base/account-balances.md). You
 can also:
 
 - Add an account (this option must be enabled under [Settings](#settings)). Note that if you clear
@@ -39,45 +39,45 @@ can also:
   or JSON file.
 - Recover and account from JSON file.
 - Add an account from QR code.
-- Add an account from a [**Ledger**](./ledger.md) device (this option must be enabled under
+- Add an account from a [**Ledger**](../learn/learn-guides-ledger.md) device (this option must be enabled under
   [Settings](#settings)).
-- Create a [**multi-signature account**](../learn/learn-account-multisig.md).
+- Create a [**multi-signature account**](../knowledge-base/multisig.md).
 - Add a proxied account (see
-  [**Pure Proxies**](../learn/learn-proxies-pure.md) for more
+  [**Pure Proxies**](../knowledge-base/pure-proxies.md) for more
   information).
 
 For each account visible in the UI, you can perform different actions, including
-[**adding a proxy**](../learn/learn-proxies.md),
-[**setting an identity**](../learn/learn-identity.md), and
-[**sending tokens**](../learn/learn-transactions.md#balance-transfers).
+[**adding a proxy**](../knowledge-base/proxies.md),
+[**setting an identity**](../knowledge-base/identity.md), and
+[**sending tokens**](../knowledge-base/transactions.md#balance-transfers).
 
 For more information about adding and recovering accounts, see the
-[**Account Generation**](../learn/learn-accounts.md#account-generation) page.
+[**Account Generation**](../getting-started/accounts/index.md#account-generation) page.
 
 ### Network (Staking)
 
-In this section of the UI, you can participate in [**staking**](../learn/learn-staking.md). In the
+In this section of the UI, you can participate in [**staking**](../knowledge-base/staking-advanced.md). In the
 Staking menu you can access:
 
 - The **Overview** tab showing active or waiting validators.
 - The **Accounts** tab (visible only if you added an account) showing accounts that are used for staking
-  ([**stash and staking proxy**](../learn/learn-staking.md#stash-account-and-staking-proxy)), bonded
+  ([**stash and staking proxy**](../knowledge-base/staking-advanced.md#stash-account-and-staking-proxy)), bonded
   amount, and nominations. In this tab, you can do staking-related transactions such as bonding more
   funds or changing nominations. If you have
-  [**staking proxies**](../learn/learn-staking-advanced.md#staking-proxies) here, you can use them
+  [**staking proxies**](../getting-started/staking/index.md#staking-proxies) here, you can use them
   while signing for staking-related transactions.
 - The **Payouts** tab (visible only if you added an account) showing any pending rewards that still
   need to be paid out to you.
-- The **Pool** tab showing all registered [**nomination pool**](../learn/learn-nomination-pools.md)
+- The **Pool** tab showing all registered [**nomination pool**](../knowledge-base/nomination-pools.md)
   with the respective state (open, blocked, or destroying). This tab can also be used to create and
   join a pool.
 - The **Targets** tab showing detailed information about validators such as commission and return.
-  More information can be found in the [**Nominator Page**](../learn/learn-nominator.md).
+  More information can be found in the [**Nominator Page**](../getting-started/staking/roles.md).
 - The **Bags** tab (visible only if you added an account) showing the bag you are in ("My bags") and
-  all bags within the [**bags list**](../learn/learn-staking-advanced.md#bags-list). Here (if
+  all bags within the [**bags list**](../getting-started/staking/index.md#bags-list). Here (if
   applicable), you can rebag accounts that do not belong to the bag you are in, and you can move
   your account in front of the account having less stake than you.
-- The **Slashes** tab showing if there are any global [slashes](../learn/learn-offenses.md).
+- The **Slashes** tab showing if there are any global [slashes](../knowledge-base/offenses.md).
 - The **Validator stats** tab showing statistics for a chosen validator.
 
 ### Settings
@@ -104,7 +104,7 @@ In addition to staking, in the Network section, you can also:
 ### Governance
 
 In this section of the UI, you can participate in
-[**governance**](../learn/learn-polkadot-opengov.md).
+[**governance**](../knowledge-base/opengov.md).
 
 ### Developer
 
@@ -112,16 +112,16 @@ In this section of the UI, you can access advanced features such as:
 
 - [Query on-chain data](https://polkadot.js.org/apps/#/chainstate)
 - [Query the node using RPC calls](https://polkadot.js.org/apps/#/rpc)
-- Call [**extrinsics**](../learn/learn-transactions.md) using your account (you are able to see this
+- Call [**extrinsics**](../knowledge-base/transactions.md) using your account (you are able to see this
   option only if you have an account in the UI)
 
 The [Extrinsic tab](https://polkadot.js.org/apps/#/extrinsics) provides the use to access more
 granular functions such as
-[**pure proxies**](../learn/learn-proxies-pure.md) and
-[**time-delayed proxies**](../learn/learn-proxies.md#time-delayed-proxy), change
-[**nomination pool**](../learn/learn-nomination-pools.md) settings (nomination and roles) and use
-[**non-transfer proxies**](../learn/learn-proxies.md#proxy-types),
-[**destroy assets**](../learn/learn-assets.md#destroying-an-asset), and much more.
+[**pure proxies**](../knowledge-base/pure-proxies.md) and
+[**time-delayed proxies**](../knowledge-base/proxies.md#time-delayed-proxy), change
+[**nomination pool**](../knowledge-base/nomination-pools.md) settings (nomination and roles) and use
+[**non-transfer proxies**](../knowledge-base/proxies.md#proxy-types),
+[**destroy assets**](../knowledge-base/asset-hub.md#destroying-an-asset), and much more.
 
 ## Beginner's Guide to Polkadot-JS
 

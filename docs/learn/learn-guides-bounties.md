@@ -50,7 +50,7 @@ an OpenGov referendum.
 When you add a bounty, this will show as "proposed" in the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). Once the community approves your bounty
 proposal as an OpenGov referendum, the bounty will show as "funded" at the end of the
-[spending period](../general/glossary.md#spend-period) on the main
+[spending period](../knowledge-base/glossary.md#spend-period) on the main
 [Bounties page](https://polkadot.js.org/apps/#/bounties). You can then proceed with assigning
 curators to the bounty.
 
@@ -63,7 +63,7 @@ medium to explain the proposal, for example a bounty proposal document on
 can be used to submit all the information needed by OpenGov voters to make an informed decision.
 
 Submitting a bounty proposal will require a
-[deposit](../general/chain-state-values.md).
+[deposit](../../general/chain-state-values.md).
 
 ## Assign a Curator to a Bounty
 
@@ -91,7 +91,7 @@ how you can add a curator to a bounty and submit it for approval through an Open
 </div>
 
 Once your OpenGov referendum has been approved by the community and served the required
-[spending period](../general/glossary.md#spend-period), the bounty will still show as "funded" on
+[spending period](../knowledge-base/glossary.md#spend-period), the bounty will still show as "funded" on
 the main [Bounties page](https://polkadot.js.org/apps/#/bounties) and await the curator's
 acceptance. The curator must formally accept the curator role by signing a `bounties.acceptCurator`
 extrinsic. More information about when to do this can be found on the main
@@ -191,7 +191,7 @@ To refill a parent bounty,
 
 The preimage must contain a `treasury.spendLocal` extrinsic specifying the amount of tokens to be
 sent from the treasury to the receiver's address, in this case the
-[system account](./learn-account-advanced.md#system-accounts) of the
+[system account](../../reference/accounts-advanced.md#system-accounts) of the
 [parent bounty](./learn-polkadot-opengov-treasury.md#bounties).
 
 To get the bounty system account of a parent bounty, go to

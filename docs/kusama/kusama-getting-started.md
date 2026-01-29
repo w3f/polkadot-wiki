@@ -39,11 +39,11 @@ on-chain governance, and parachains.
 
 KSM is the native token of the Kusama Network. KSM can be used for transaction fees, staking,
 governance, purchase of coretime, and for enabling several key functionalities on Kusama. See more
-information on [the Chain State Values page](../general/chain-state-values.md).
+information on [the Chain State Values page](../../general/chain-state-values.md).
 
-KSM has utility in [Kusama's OpenGov](../learn/learn-polkadot-opengov.md) where you can
-[vote](../learn/learn-polkadot-opengov.md#voting-on-a-referendum),
-[delegate your voting power](../learn/learn-polkadot-opengov.md#multirole-delegation), and place
+KSM has utility in [Kusama's OpenGov](../knowledge-base/opengov.md) where you can
+[vote](../knowledge-base/opengov.md#voting-on-a-referendum),
+[delegate your voting power](../knowledge-base/opengov.md#multirole-delegation), and place
 deposits for your referenda or referenda proposed by others.
 
 ### Kusama Gifts
