@@ -118,10 +118,10 @@ here, you must reach out to specific registrars individually if you want to be j
     ~~Registrar 6~~: <br /> **URL**: ~~https://polkaidentity.com/~~ <br /> **Account**:
     ~~HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
 
-    Registrar 6: <br /> **URL**: https://dotid.app <br /> **Account**:
-    HZPJ3NopdSxPNqW9GU4S33PZVPLgqewCd1k9CsTe3xNQhWK <br /> **Fee**: 0 KSM <br /> ECH0.RE
-    (Registrar 6) provides setting on-chain ID as a service on their
-    [website](https://dotid.app). <br /> Registrar 6 was temporarily placed under the control of ECH0.RE at block 7,327,072 via identity.setAccountId, in order to ensure continuity of identity judgements on Kusama.
+    Registrar 7: <br /> **URL**: https://dotid.app <br /> **Account**:
+    EFecAJfvw9f2qvJX8y1QAa9STqXygRX4UYcBXeCYMPjXZ45 <br /> **Fee**: 0 KSM <br /> ECH0.RE
+    (Registrar 7) provides setting on-chain ID as a service on their
+    [website](https://dotid.app).
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
