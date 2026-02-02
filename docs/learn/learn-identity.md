@@ -42,16 +42,16 @@ attestation:
 
 - Unknown: The default value, no judgement made yet.
 - Reasonable: The data appears reasonable, but no in-depth checks (e.g. formal KYC process) were
-  performed (all the currently verified identities on-chain).
+  performed.
 - Known Good: The registrar has certified that the information is correct (this step involves
   verification of state issued identity documents).
 - Out of Date: The information used to be good, but is now out of date.
 - Low Quality: The information is low quality or imprecise, but can be fixed with an update.
 - Erroneous: The information is erroneous and may indicate malicious intent.
 
-A seventh state, "fee paid", is for when a user has requested judgement and it is in progress.
-Information that is in this state or "erroneous" is "sticky" and cannot be modified; it can only be
-removed by the complete removal of the identity.
+A seventh state, "fee paid", is for when a user has requested judgement and it is in progress.  
+Judgements in this state, as well as "erroneous" judgements, are "sticky": modifying the identity information does not remove them.
+They can only be removed by the complete removal of the identity.
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for
 issuing faulty judgments.
@@ -118,10 +118,10 @@ here, you must reach out to specific registrars individually if you want to be j
     ~~Registrar 6~~: <br /> **URL**: ~~https://polkaidentity.com/~~ <br /> **Account**:
     ~~HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
 
-    Registrar 6: <br /> **URL**: https://dotid.app <br /> **Account**:
-    HZPJ3NopdSxPNqW9GU4S33PZVPLgqewCd1k9CsTe3xNQhWK <br /> **Fee**: 0 KSM <br /> ECH0.RE
-    (Registrar 6) provides setting on-chain ID as a service on their
-    [website](https://dotid.app). <br /> Registrar 6 was temporarily placed under the control of ECH0.RE at block 7,327,072 via identity.setAccountId, in order to ensure continuity of identity judgements on Kusama.
+    Registrar 7: <br /> **URL**: https://dotid.app <br /> **Account**:
+    EFecAJfvw9f2qvJX8y1QAa9STqXygRX4UYcBXeCYMPjXZ45 <br /> **Fee**: 0 KSM <br /> ECH0.RE
+    (Registrar 7) provides setting on-chain ID as a service on their
+    [website](https://dotid.app).
 
 See [this page](./learn-guides-identity.md#registrars) to learn how to become a Registrar.
 
