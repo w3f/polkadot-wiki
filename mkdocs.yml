@@ -139,6 +139,9 @@ nav:
           - Mission and Philosophy: getting-started/introduction/mission.md
           - Tokenomics and DOT token: getting-started/introduction/tokenomics.md
           - Polkadot Evolution - From Today to JAM: getting-started/introduction/evolution.md
+          - Polkadot Direction: getting-started/introduction/polkadot-direction.md
+          - Polkadot v1: getting-started/introduction/polkadot-v1.md
+          - Polkadot v2: getting-started/introduction/polkadot-v2.md
       - Accounts:
           - Create Your First Account: getting-started/accounts/index.md
           - What Is a Polkadot Account: getting-started/accounts/what-is-account.md
@@ -172,7 +175,11 @@ nav:
           - Scams: getting-started/community/scams.md
           - Contributing: getting-started/community/contributing.md
           - Contributors: getting-started/community/contributors.md
+          - FAQ: getting-started/community/faq.md
+          - How to DYOR: getting-started/community/how-to-dyor.md
+          - Ledger: getting-started/community/ledger.md
           - Open Source: getting-started/community/open-source.md
+          - PCF: getting-started/community/pcf.md
           - Polkadot Community Foundation: getting-started/community/foundation.md
   
   - Builders:
@@ -190,9 +197,14 @@ nav:
           - Smart Contracts vs Parachains: build/smart-contracts/vs-parachains.md
       - Solutions:
           - Assets: build/solutions/assets.md
+          - Governance Apps: build/solutions/governance-apps.md
           - Identity: build/solutions/identity.md
+          - Multisig Apps: build/solutions/multisig-apps.md
           - Polkadot Products: build/solutions/polkadot-products.md
+          - Polkadot Vault: build/solutions/polkadot-vault.md
+          - Polkadot.js UI: build/solutions/polkadotjs-ui.md
           - Proof of Personhood: build/solutions/proof-of-personhood.md
+          - Staking Apps: build/solutions/staking-apps.md
           - Storage: build/solutions/storage.md
 
   - Knowledge Base:
@@ -220,7 +232,7 @@ nav:
       - Nominator: knowledge-base/nominator.md
       - Offenses: knowledge-base/offenses.md
       - Offenses: knowledge-base/offenses.md
-      - Parachains: learn/learn-parachains.md
+      - Parachains: knowledge-base/parachains.md
       - Parachains FAQ: knowledge-base/parachains-faq.md
       - Parachains FAQ: knowledge-base/parachains-faq.md
       - Polkadot OpenGov: knowledge-base/opengov.md
@@ -254,18 +266,19 @@ nav:
       - Elastic Scaling (Parallel Computing): reference/elastic-scaling.md
       - ELVES Protocol (Parachains Protocol): reference/elves-protocol.md
       - Host Implementations: reference/host-implementations.md
+      - Implementations: reference/implementations.md
       - NFT Pallets: reference/nft-pallets.md
       - NPoS Election Algorithms (Phragmen): reference/phragmen.md
+      - Parachains Protocol: reference/parachains-protocol.md
+      - Parachains: reference/parachains.md
       - Polkadot Host: reference/polkadot-host.md
       - Runtime Upgrades: reference/runtime-upgrades.md
       - Safrole: reference/safrole.md
       - SPREE: reference/spree.md
+      - Transaction Construction: reference/transaction-construction.md
       - XCM: reference/xcm.md
       - XCM Instructions: reference/xcm-instructions.md
       - XCM Pallet: reference/xcm-pallet.md
       - XCM Transport: reference/xcm-transport.md
       - XCM Use Cases: reference/xcm-use-cases.md
       - XCM Virtual Machine (XCVM): reference/xcvm.md
-
-
-

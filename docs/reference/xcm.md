@@ -1,128 +1,149 @@
 ---
-title: XCM FRAME Pallet Overview
-description: Mechanics of the XCM Pallet and its role in Polkadot's Ecosystem.
+title: Introduction to Cross-Consensus Message Format (XCM)
+description: XCM, The Messaging Format at the Forefront of Interoperability.
 ---
 
 !!!info "XCM Documentation"
     For a more practical approach to utilizing XCM, refer to the [Polkadot Docs](https://docs.polkadot.com/develop/interoperability/intro-to-xcm/). Please keep in mind that XCM is under active development.
 
-The XCM pallet
-([`pallet-xcm`](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs))
-provides a set of pre-defined, commonly used XCVM programs in the form of a set of extrinsics using
-[FRAME](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#frame).
+The Cross-Consensus Message Format, or **XCM**, is a **messaging format** and language used to
+communicate between consensus systems.
 
-This pallet provides some default implementations for traits required by `XcmConfig`. The XCM
-executor is also included as an associated type within the pallet's configuration.
+One of Polkadot's main functionalities is interoperability amongst parachains and any other
+participating consensus-driven systems. XCM is the language through which complex, cross-consensus
+interactions can occur. Two blockchains can "speak" XCM to seamlessly interact with each other using
+a standard messaging format.
 
-Where the XCM format defines a set of instructions used to construct XCVM programs, `pallet-xcm`
-defines a set of extrinsics that can be utilized to build XCVM programs, either to target the local
-or external chains. `pallet-xcm`'s functionality is separated into three categories:
+!!!info
+    We typically discuss XCM in the context of parachains, but please bear this in mind that it expands to the domain of all consensus systems! Remember, a consensus system here means any system or protocol that achieves finality to agree on the latest and correct state, whether it's a Polkadot parachain, an EVM smart contract, or other bridged consensus systems.
+
+XCM is not meant to be only specific to Polkadot, but rather its primary intention is to define a
+**generic** and **common** format amongst different consensus systems to communicate.
+
+It's important to note that XCM does not define how messages are delivered but rather define how
+they should look, act, and contain relative instructions to the on-chain actions the message intends
+to perform.
+
+[**XCMP**](./learn-xcm-transport.md#xcmp-cross-chain-message-passing), or Cross Chain Message Passing, is the actual
+network-layer protocol to deliver XCM-formatted messages to other participating parachains. There
+are other ways to define transport layer protocols for delivering XCM messages(see:
+[HRMP](./learn-xcm-transport.md#hrmp-xcmp-lite) and
+[VMP](./learn-xcm-transport.md#vmp-vertical-message-passing)).
+
+XCM has four high-level core design principles which it stands to follow:
+
+1. **Asynchronous**: XCM messages in no way assume that the sender will be blocking on its
+   completion.
+2. **Absolute**: XCM messages are guaranteed to be delivered and interpreted accurately, in order
+   and in a timely fashion. Once a message is sent, one can be sure it will be processed as it was
+   intended to be.
+3. **Asymmetric**: XCM messages, by default, do not have results that let the sender know that the
+   message was received - they follow the 'fire and forget' paradigm. Any results must be separately
+   communicated to the sender with an additional message back to the origin.
+4. **Agnostic**: XCM makes no assumptions about the nature of the consensus systems between which
+   the messages are being passed. XCM as a message format should be usable in any system that
+   derives finality through consensus.
+
+These four crucial design decisions allow for XCM messages to be a reliable yet convenient way to
+properly convey the intentions from one consensus system to another without any compatibility
+issues.
 
 !!!note
-      Remember, all XCMs are XCVM programs that follow [the XCM format](https://github.com/paritytech/xcm-format). It is the job of the XCM executor is to handle and execute these programs.
+    XCM is constantly in development - meaning the format is expected to change over time. To view updates on the XCM format, visit the [xcm-format repository](https://github.com/paritytech/xcm-format) to view any RFCs that have been submitted that would contribute to the next release.
 
-1. Primitive, dispatchable functions to locally execute an XCM.
-2. High-level, dispatchable functions for asset transfers.
-3. Version negotiation-specific dispatchable functions.
+## A Format, Not a Protocol
 
-## Primitive Extrinsics
+What started as an approach to _cross-chain communication_, has evolved into a format for**Cross-Consensus Communication** that is not only conducted between chains, but also between smart contracts, pallets, bridges, and even sharded enclaves like [SPREE](learn-spree.md).
 
-There are two primary primitive extrinsics. These extrinsics handle sending and executing XCVM
-programs as dispatchable functions within the pallet.
+XCM cannot actually send messages between systems. It is a format for how message transfer should be
+performed, similar to how RESTful services use REST as an architectural style of development, where
+HTTP requests contain specific parameters to perform some action.
 
-1. [`execute`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L902) -
-   This call contains direct access to the XCM executor. It is the job of the executor to check the
-   message and ensure that no barrier/filter will block the execution of the XCM. Once it is deemed
-   valid, the message will then be _locally_ executed, therein returning the outcome as an event.
-   This operation is executed on behalf of whichever account has signed the extrinsic. It's possible
-   for only a partial execution to occur.
-2. [`send`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L769) -
-   This call specifies where a message should be sent
-   ([via a transport method](./learn-xcm-transport.md)) externally to a particular destination, i.e.
-   a parachain, smart contract, or any system which is governed by consensus. In contrast to
-   `execute`, the executor is not called locally, as the execution will occur on the destination
-   chain.
+Similar to UDP, out of the box XCM is a "fire and forget" model, unless there is a separate XCM
+message designed to be a response message which can be sent from the recipient to the sender. All
+error handling should also be done on the recipient side.
 
 !!!info
-    The XCM pallet needs the `XcmRouter` to send XCMs. It is used to dictate where XCMs are allowed to be sent, and which XCM transport protocol to use. For example, Kusama, the canary network, uses the `ChildParachainRouter` which only allows for Downward Message Passing from the relay to parachains to occur.
+    XCM is not designed in a way where every system supporting the format is expected to be able to interpret any possible XCM message. Practically speaking, one can imagine that some messages will not have reasonable interpretations under some systems or will be intentionally unsupported.
 
-You can read more about [XCM transport protocols here](./learn-xcm-transport.md).
+Furthermore, it's essential to realize that XCM messages by themselves are _not_ considered
+transactions. XCM describes how to change the state of the target network, but the message by itself
+doesn't perform the state change.
 
-## Asset Transfer Extrinsics
+This partly ties to what is called **asynchronous composability**, which allows XCM messages to
+bypass the concept of time-constrained mechanisms, like on-chain scheduling and execution over time
+in the correct order in which it was intended.
 
-Several extrinsics within the pallet handle asset transfer logic. They define a predetermined set of
-instructions for sending and executing XCMs. Two variants of these functions are prefixed with
-`limited_`. They have the same functionality but can specify a weight to pay for the XCM fee.
+### XCM Tech Stack
 
-Otherwise, the fee is taken as needed from the asset being transferred.
+![xcm tech stack](../assets/cross-consensus-tech-stack.png)
 
-1. [`reserve_transfer_assets`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L872) -
-   Transfer some assets from the local chain to the sovereign account of a destination chain and
-   forward an XCM containing a
-   [`ReserveAssetDeposited`](https://github.com/paritytech/xcm-format#reserveassetdeposited)
-   instruction, which serves as a notification.
+XCM can be used to express the meaning of the messages over each of these three communication
+channels.
 
-2. [`teleport_assets`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L827) -
-   Teleport some assets from the local chain to some destination chain.
+## Core Functionality of XCM
 
-### Transfer Reserve vs. Teleport
+XCM opens the doors to a multi-hop, multi-network communications.
 
-While both extrinsics deal with transferring assets, they exhibit fundamentally different behavior.
+XCM introduces some key features and additions to cross-consensus messaging, including:
 
-- **Teleporting** an asset implies a two-step process: the assets are taken out of circulating
-  supply (typically by burning/destroying) in the origin chain and re-minted to whatever account is
-  specified at the destination. Teleporting should only occur if there is an inherent and bilateral
-  trust between the two chains, as the tokens destroyed at the origin _could not_ necessarily be
-  guaranteed to have the same properties when minted at the destination. There has to be **trust**
-  that the a particular chain burned, or re-minted the assets.
-- **Transferring** or **reserving** an asset implies that **equivalent** assets (i.e, native
-  currency, like `DOT` or `KSM`) are withdrawn from _sovereign account_ of the origin chain and
-  deposited into the sovereign account on the destination chain. Unlike teleporting an asset, it is
-  not destroyed and re-minted.  Rather a trusted entity such as Asset Hub is used to
-  **reserve** the assets, wherein the sovereign account of the destination chain on the reserve
-  chain obtains ownership of these assets. Asset Hub serves as the primary reserve location for DOT
-  in the Polkadot ecosystem.
+1. **Programmability** - the ability to have **expectations** for messages, which allow for more
+   comprehensive use cases, safe dispatches for version checking, branching, and NFT/Asset support.
 
-  It's worth noting that this means that some other mechanism is needed to ensure that the balance
-  on the destination does not exceed the amount being held in reserve chain.
+2. **Functional Multichain Decomposition** - the ability to define mechanisms to cross-reference and
+   perform actions on other chains on behalf of the origin chain (remote locking), context/id for
+   these messages, and asset namespacing.
+
+3. **Bridging** - introduces the concept of a universal location, which allows for a base reference
+   for global consensus systems for multi-hop setups. This location is above the parent relay chain
+   or other consensus systems like Ethereum or Bitcoin.
+
+A core part of the vision that XCM provides is improving communication between the chains to make
+**system parachains** a reality. System parachains alleviate core responsibilities from the relay chain using a
+standard format like XCM.
+
+Asset Hub, a system parachain, serves as the primary reserve location for DOT and manages cross-chain
+asset transfers, while other system parachains handle specialized functions like governance or identity.
 
 !!!info
-    A sovereign account refers to an account within a particular consensus system. Even though accounts may be different in terms of factors such as an address format, XCM agnostic nature enables communication between these sovereign accounts that are in other consensus systems.
+    XCM bridging, functional multichain decomposition, and programmability upgrades are crucial to bringing ecosystems together using a common communication abstraction.
 
-## Version Negotiation Extrinsics
+For more information on the specific instructions used for these key features, head over to the
+[instructions and registers page](./learn-xcm-instructions.md).
 
-The following extrinsics require root, as they are only used when bypassing XCM version negotiation.
-They change any relevant storage aspects that enforce anything to do with XCM version negotiations.
+#### Cross-Consensus Message Format (XCM Format)
 
-1. [`force_xcm_version`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L934) -
-   Modifies the `SupportedVersion` storage to change a particular destination's stated XCM version.
-2. [`force_default_xcm_version`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L957) -
-   Modifies the `SafeXcmVersion` storage, which stores the default XCM version to use when the
-   destination's version is unknown.
-3. [`force_subscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L972) -
-   Sends an XCM with a
-   [`SubscribeVersion`](https://github.com/paritytech/xcm-format#subscribeversion) instruction to a
-   destination.
-4. [`force_unsubscribe_version_notify`](https://github.com/paritytech/polkadot-sdk/blob/a808a3a0918ffbce314dbe00e03761e7a8f8ce79/polkadot/xcm/pallet-xcm/src/lib.rs#L996) -
-   Sends an XCM with a
-   [`UnsubscribeVersion`](https://github.com/paritytech/xcm-format#unsubscribeversion) instruction
-   to a destination.
+For an updated and complete description of the cross-consensus message format please see the
+[xcm-format repository on GitHub](https://github.com/paritytech/xcm-format).
 
-## Fees in the XCM Pallet
+## Resources
 
-Message fees are only paid if the interior location does not equal the interpreting consensus system
-(known as Here in the context of an XCM `Multilocation`). Otherwise, the chain bears the fees. If
-applicable, fees are withdrawn from the assets from the specified `MultiLocation` and used as
-payment to execute any subsequent instructions within the XCM.
+- [Shawn Tabrizi: XCM - The Backbone Of A Multichain Future | Polkadot Decoded 2022](https://www.youtube.com/watch?v=cS8GvPGMLS0) -
+  High level overview which should answer “What is XCM?
 
-Fees are generally dependent on several factors within the `XcmConfig`. For example, the barrier may
-negate any fees to be paid at all.
+- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) -
+  Detailed blog post by Dr. Gavin Wood about the XCM Format.
 
-Before any XCM is sent, and if the destination chain’s barrier requires it, a
-[`BuyExecution`](https://github.com/paritytech/xcm-format#buyexecution) instruction is used to buy
-the necessary weight for the XCM. XCM fee calculation is handled by the Trader, which iteratively
-calculates the total fee based on the number of instructions.
+- [XCM Format specification](https://github.com/paritytech/xcm-format) - The best starting point for
+  understanding the XCM API at a technical level.
 
-The Trader used to calculate the weight (time for computation in consensus) to include in the
-message. Fee calculation in XCM is highly configurable and, for this reason, subjective to whichever
-configuration is in place.
+- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) -
+  High level overview of XCM and specifically the new features available in XCM v3.
+
+- [XCMP Scheme](https://medium.com/web3foundation/polkadots-messaging-scheme-b1ec560908b7) - An
+  overall overview of XCMP describing a number of design decisions.
+
+- [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An overview
+  of the messaging schemes from the Polkadot Parachain Host Implementor's guide.
+
+- [Sub0 Online: Getting Started with XCM - Your First Cross Chain Messages](https://www.youtube.com/watch?v=5cgq5jOZx9g) -
+  Code focused workshop on how XCM v1 works, and the core concepts of XCM.
+
+- [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) -
+  Technical audit report by Quarkslab prepared for Parity.
+
+- [XCM pallet code](https://github.com/paritytech/polkadot-sdk/blob/master/polkadot/xcm/pallet-xcm/src/lib.rs) -
+  The pallet that contains XCM logic from the Polkadot code repository
+
+- [XCM Config & Pallet-XCM | Polkadot Deep Dives](https://www.youtube.com/watch?v=bFMvWmU1pYI) - A
+  technical deep dive into `pallet-xcm` and the XCM configuration.
