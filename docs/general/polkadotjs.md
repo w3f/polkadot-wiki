@@ -65,7 +65,7 @@ Let's see how we can query on-chain data with Polkadot-JS UI on the Polkadot net
 example. To find out the current value for existential deposit, navigate to Developer > Chain
 state > Constants and query the balances pallet for existential deposit as shown in the snapshot
 below. You need to click on the plus button to execute the query. The value displayed is in
-[plancks](../learn/learn-DOT.md#the-planck-unit)
+[plancks](../knowledge-base/staking-polkadot.md#the-planck-unit)
 
 ![query chain state](../assets/chain-state-constant.png)
 
@@ -73,8 +73,8 @@ below. You need to click on the plus button to execute the query. The value disp
 
 The [**Polkadot-JS browser extension**](https://polkadot.js.org/extension/) is not a wallet _per se_
 but an account management tool. It allows you to create accounts and also import accounts from
-[**Ledger**](./ledger.md) devices or Parity Signer, allowing the signing of
-[**extrinsics**](../learn/learn-transactions.md) using these accounts. It also allows you export
+[**Ledger**](../learn/learn-guides-ledger.md) devices or Parity Signer, allowing the signing of
+[**extrinsics**](../knowledge-base/transactions.md) using these accounts. It also allows you export
 existing accounts and restore accounts (given you have the required information to restore them).
 
 The extension is a robust key storage tool, i.e. even if you clear the cache of your browser your
@@ -89,7 +89,7 @@ extension-compliant dApps such as the [**Polkadot-JS UI**](https://polkadot.js.o
 and the [**Polkadot Staking Dashboard**](https://staking.polkadot.cloud/#/overview).
 
 !!!info Metadata Updates
-    The browser extension is a tool that interacts with the Polkadot network, but it is disconnected from it when it is not in use. It is important you [**always check for metadata updates**](../learn/learn-guides-accounts.md#polkadot-js-browser-extension) before using the extension or other account management tools such as Parity Signer (aka Polkadot Vault).
+    The browser extension is a tool that interacts with the Polkadot network, but it is disconnected from it when it is not in use. It is important you [**always check for metadata updates**](../getting-started/accounts/polkadot-js.md#polkadot-js-browser-extension) before using the extension or other account management tools such as Parity Signer (aka Polkadot Vault).
 
 ## Polkadot-JS Phishing List
 

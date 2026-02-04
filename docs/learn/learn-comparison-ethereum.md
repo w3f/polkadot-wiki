@@ -197,9 +197,8 @@ provides shared logic for cross-consensus messages, and will be used to construc
 Ethereum supports smart contract development using Solidity. These contracts are immutable, and
 cannot be changed once published on-chain.
 
-Polkadot supports smart contracts through parachains, usually using the
-[ink! smart contract language](https://use.ink/), but also Solidity through Frontier-enabled
-parachains. On Ethereum, smart contracts can call each other; however, they are fixed on-chain to
+Polkadot supports smart contracts through parachains using various smart contract languages,
+including Solidity through Frontier-enabled parachains. On Ethereum, smart contracts can call each other; however, they are fixed on-chain to
 the domain of Ethereum. On Polkadot, smart contracts can call each other in the same parachain _and_
 across parachains.
 

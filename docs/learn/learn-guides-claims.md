@@ -32,8 +32,8 @@ screen).
 You will need to generate an account on the relay chain to claim DOT (or KSM on Kusama). See the
 [available wallets and extensions](https://polkadot.com/ecosystem/) for more information about
 wallets and browser extensions you can use to create an account. In terms of hardware wallet
-support, you can use the [Ledger](../general/ledger.md) devices or
-[Polkadot Vault](../general/polkadot-vault.md).
+support, you can use the [Ledger](../../learn/learn-guides-ledger.md) devices or
+[Polkadot Vault](../../learn/learn-guides-vault.md).
 
 ## Claiming Tokens
 
@@ -78,8 +78,8 @@ Polkadot-JS UI and click "Confirm Claim."
 
 At this point, if you are eligible, you will see a success message if everything went right and your
 tokens will now be in the account that you claimed to. Congratulations! You can now participate in
-aspects of the network such as [governance](../learn/learn-polkadot-opengov.md) and
-[staking](../learn/learn-staking.md).
+aspects of the network such as [governance](../knowledge-base/opengov.md) and
+[staking](../knowledge-base/staking-advanced.md).
 
 ### Verifying your Claim
 

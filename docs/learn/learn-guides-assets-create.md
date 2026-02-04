@@ -17,7 +17,7 @@ The Asset Hub is a generic assets system parachain which provides functionality 
 transferring assets — both Fungible and Non-Fungible Tokens (NFTs). The native token of the Asset
 hub is the same as the relay chain's native asset (DOT or KSM). The Existential Deposit (ED),
 transaction fees, and the deposits for proxy/multisig operations are about
-[1/10th of the values on the relay chains](../general/chain-state-values.md).
+[1/10th of the values on the relay chains](../../general/chain-state-values.md).
 Apart from the native token, the assets held on the Asset Hub can be broadly categorized as
 
 - Assets backed by an on-chain protocol’s utility
@@ -35,12 +35,12 @@ For additional background on the Asset Hub check out
 **The images in the guides below are for Polkadot, but they also apply to Kusama.**
 
 To create an asset on the Asset Hub, you would need to
-[deposit some funds](../general/chain-state-values.md). Before you create an asset on
+[deposit some funds](../../general/chain-state-values.md). Before you create an asset on
 the Asset Hub, ensure that your Asset Hub account balance is a bit more than the sum of those two
 deposits, which should seamlessly account for the required deposits and transaction fees. You can
 send the native token from a relay chain account to a the Asset Hub account using the teleport
 functionality. For instructions on teleporting tokens, check this
-[page on Teleports](../learn/learn-teleport.md).
+[page on Teleports](../knowledge-base/teleport.md).
 
 Assuming you have the required balance on your Asset Hub account, the following instructions should
 let you successfully create an asset on the Asset Hub
