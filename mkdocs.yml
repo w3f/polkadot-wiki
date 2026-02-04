@@ -146,9 +146,7 @@ nav:
           - Create Your First Account: getting-started/accounts/index.md
           - What Is a Polkadot Account: getting-started/accounts/what-is-account.md
           - Recommended Wallets: getting-started/accounts/wallets.md
-          - Create Account with Polkadot.js: getting-started/accounts/polkadot-js.md
-          - Create Account with Talisman: getting-started/accounts/talisman.md
-          - Create Account with SubWallet: getting-started/accounts/subwallet.md
+
           - Account Security Best Practices: getting-started/accounts/security.md
           - Backing Up Your Account: getting-started/accounts/backup.md
       - Staking:
@@ -156,9 +154,7 @@ nav:
           - How NPoS Works: getting-started/staking/npos.md
           - Validators and Nominators: getting-started/staking/roles.md
           - Choosing Validators: getting-started/staking/choosing-validators.md
-          - Stake with Polkadot.js: getting-started/staking/stake-js.md
-          - Stake with Talisman: getting-started/staking/stake-talisman.md
-          - Stake with SubWallet: getting-started/staking/stake-subwallet.md
+
           - Monitoring Rewards: getting-started/staking/rewards.md
           - Managing Nominations: getting-started/staking/nominations.md
           - Unbonding and Withdrawing: getting-started/staking/unbonding.md
@@ -193,8 +189,8 @@ nav:
       - Smart Contracts:
           - Smart Contracts on Polkadot: build/smart-contracts/polkadot.md
           - How Smart Contracts Work: build/smart-contracts/how-it-works.md
-          - ink! Development Overview: build/smart-contracts/ink-overview.md
-          - Smart Contracts vs Parachains: build/smart-contracts/vs-parachains.md
+
+          - Smart Contracts vs. SDK: build/smart-contracts/vs-parachains.md
       - Solutions:
           - Assets: build/solutions/assets.md
           - Governance Apps: build/solutions/governance-apps.md

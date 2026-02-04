@@ -6,6 +6,15 @@ description: Explore advanced staking concepts in Polkadot, including staking pr
 !!!tip "New to Staking?"
       Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
+## Staking Guides
+
+For step-by-step guides on how to stake using different wallets and platforms, visit the official Polkadot Support page:
+
+- **Staking Support Guides**: Comprehensive tutorials for staking with various wallets and platforms - [https://support.polkadot.network/support/solutions/65000066564](https://support.polkadot.network/support/solutions/65000066564)
+
+---
+
+
 This page is meant to provide advanced information about staking on Polkadot. For a more general
 introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
 

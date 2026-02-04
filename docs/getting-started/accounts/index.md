@@ -147,5 +147,23 @@ but gets put back when it has the existential deposit.
 
 ---
 
+## External Resources
+
+For detailed wallet-specific guides and step-by-step tutorials, visit the following external resources:
+
+### Wallet Documentation
+
+- **SubWallet Documentation**: Comprehensive guides for using SubWallet - [https://docs.subwallet.app/main](https://docs.subwallet.app/main)
+- **Wallet Support Guides**: Official support articles for Nova Wallet, Talisman, SubWallet, and other wallets - [https://support.polkadot.network/support/solutions/65000105290](https://support.polkadot.network/support/solutions/65000105290)
+
+### Polkadot Support
+
+For general account management questions and troubleshooting:
+
+- **Support Home**: [https://support.polkadot.network/support/home](https://support.polkadot.network/support/home)
+
+---
+
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about accounts](./polkadot-js.md).
+

@@ -1,3 +1,3 @@
-# When to Use Smart Contracts vs Parachains
+# Smart Contracts vs. SDK-Based Development
 
 TODO: Content needs to be written or migrated for this topic.

@@ -74,8 +74,8 @@ Polkadot Uniques and NFTs pallets and Unique Network's NFT utility pallet bundle
 standards for metadata provide direct interoperability through the XCM initiative
 ([RFC-0125: XCM Asset Metadata](https://polkadot-fellows.github.io/RFCs/approved/0125-xcm-asset-metadata.html#rfc-0125-xcm-asset-metadata)).
 
-The ink! smart contract language for writing contracts provides another mechanism for
-creating NFTs. Astar has implemented
+Smart contract languages for writing contracts provide another mechanism for
+creating NFTs using the Contracts pallet. Astar has implemented
 [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) (Polkadot Standards Proposals)
 for standardizing NFTs using the Contracts pallet.
 

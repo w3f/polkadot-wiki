@@ -22,13 +22,12 @@ More information about Asset Hub pallets can be found in the [NFT pallets sectio
 
 [Astar Network](https://astar.network/) and [Shiden Network](https://shiden.astar.network/) are smart contract platforms in the Polkadot ecosystem supporting EVM and Wasm smart contracts for NFT development.
 
-Astar provides familiar EVM tooling for developers transitioning from Ethereum, alongside Wasm smart contract capabilities using [ink!](https://use.ink/) and [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) standards.
+Astar provides familiar EVM tooling for developers transitioning from Ethereum, alongside Wasm smart contract capabilities using [PSP34](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md) standards.
 
 
 Developer tools and documentation links:
 
 - [General information](https://astar.network/blog/An-introduction-to-NFTs-on-Astar-38359)
-- [Generating PSP34 NFTs via ink! contracts](https://docs.astar.network/docs/tutorials/from-zero-to-ink-hero/nft/)
 - [EVM NFT management example](https://docs.astar.network/docs/build/EVM/astarbase/#example-use-case-discount-price-on-an-nft)
 
 ## Basilisk
