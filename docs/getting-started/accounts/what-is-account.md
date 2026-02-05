@@ -142,6 +142,8 @@ It just means you want to keep your computer clean until you maybe need this fol
 recreate it. Your address is like this folder - it gets removed from the chain when nothing is in it
 but gets put back when it has the existential deposit.
 
+For a detailed breakdown of different balance types (free, reserved, locked), see the [Account Balances](../../knowledge-base/account-balances.md) guide.
+
 
 ## Identity
 
@@ -154,5 +156,13 @@ For more information, see [Identity in the Knowledge Base](../../knowledge-base/
 !!!info "Instructions for setting and clearing Identities"
     The procedure to set and clear identities is explained in detail in this support article - [How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity)
 
-!!!note The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](../../knowledge-base/identity.md#sub-identities) to the Ledger stash.
+!!!note 
+    The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](../../knowledge-base/identity.md#sub-identities) to the Ledger stash.
+
+## Deep Dive
+
+For those interested in the technical underpinnings of Polkadot accounts:
+
+-   **[Advanced Account](../../reference/accounts-advanced.md)**: Explore account derivation, indices, and the system accounts.
+-   **[Account Abstraction](../../knowledge-base/account-abstraction.md)**: Learn about the future of flexible account logic and keyless interactions (OpenGov, Proxies, Multisigs).
 

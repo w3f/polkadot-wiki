@@ -143,8 +143,8 @@ nav:
           - Polkadot v1: getting-started/introduction/polkadot-v1.md
           - Polkadot v2: getting-started/introduction/polkadot-v2.md
       - Accounts:
-          - Create Your First Account: getting-started/accounts/index.md
-          - What Is a Polkadot Account: getting-started/accounts/what-is-account.md
+          - getting-started/accounts/index.md
+          - What Is a Polkadot Account?: getting-started/accounts/what-is-account.md
           - Wallets: getting-started/accounts/wallets.md
           - Account Security & Backup: https://support.polkadot.network/support/solutions/articles/65000181874#article-show-65000181874
       - Staking:
@@ -186,7 +186,6 @@ nav:
       - Smart Contracts:
           - Smart Contracts on Polkadot: build/smart-contracts/polkadot.md
           - How Smart Contracts Work: build/smart-contracts/how-it-works.md
-
           - Smart Contracts vs. SDK: build/smart-contracts/vs-parachains.md
       - Solutions:
           - Assets: build/solutions/assets.md

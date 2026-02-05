@@ -7,24 +7,16 @@ Here you will find everything you need to get started with creating and managing
 
 <div class="grid cards" markdown>
 
--   **[What Is a Polkadot Account?](what-is-account.md)** ❓
+-   **[What Is a Polkadot Account?](what-is-account.md)**
     
     Understand the basics of Polkadot accounts, addresses, and keys.
 
--   **[Recommended Polkadot Wallets](wallets.md)** 👛
+-   **[Recommended Polkadot Wallets](wallets.md)**
     
-    Choose the right wallet for you (Nova, Talisman, SubWallet, Vault, Ledger) and find official setup guides.
+    Choose the right wallet for you and find official setup guides.
 
--   **[Account Security Best Practices](security.md)** 🛡️
-    
-    Learn how to keep your funds safe with essential security tips.
-
--   **[Backing Up Your Account Safely](backup.md)** 💾
+-   **[Account Security & Backup](https://support.polkadot.network/support/solutions/articles/65000181874#article-show-65000181874)**
     
     Ensure you never lose access to your funds by backing up correctly.
-
--   **[Identity Guides](identity.md)** 🆔
-    
-    Advanced guide to managing on-chain identities and registrars.
 
 </div>
