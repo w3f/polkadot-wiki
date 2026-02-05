@@ -3,7 +3,7 @@ title: Create an Account
 description: Learn how to create a Polkadot account using a wallet.
 ---
 
-In the Polkadot ecosystem, accounts are generated and managed through wallets. There is no central "sign up" page—instead, you choose a wallet that suits your needs, and use it to generate your cryptographic keys (your account).
+In the Polkadot ecosystem, accounts are generated and managed through wallets. There is no central "sign up" page. Instead, you choose a wallet that suits your needs, and use it to generate your cryptographic keys (your account).
 
 Below are the recommended wallets you can use to create your first account, ranging from user-friendly mobile apps to secure hardware devices.
 
