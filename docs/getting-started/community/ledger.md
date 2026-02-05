@@ -3,6 +3,9 @@ title: Using the Polkadot Ledger Apps
 description: Use the Polkadot Ledger Application.
 ---
 
+!!! warning "This page is deprecated"
+    The content on this page is outdated. Please visit the [**Accounts**](../../accounts/index.md) section for the latest information or the [**Polkadot Support Portal**](https://support.polkadot.network).
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
