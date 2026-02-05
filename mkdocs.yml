@@ -145,7 +145,7 @@ nav:
       - Accounts:
           - getting-started/accounts/index.md
           - What Is a Polkadot Account?: getting-started/accounts/what-is-account.md
-          - Wallets: getting-started/accounts/wallets.md
+          - Create an Account: getting-started/accounts/wallets.md
           - Account Security & Backup: https://support.polkadot.network/support/solutions/articles/65000181874#article-show-65000181874
       - Staking:
           - Introduction to Staking: getting-started/staking/index.md
