@@ -3,6 +3,9 @@ title: Ledger Guides
 description: Learn how to use Ledger devices with Polkadot-JS for managing accounts, sending transfers, staking, and more.
 ---
 
+!!! warning "This page is deprecated"
+    The content on this page is outdated. Please visit the [**Accounts**](../getting-started/accounts/index.md) section for the latest information or the [**Polkadot Support Portal**](https://support.polkadot.network).
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

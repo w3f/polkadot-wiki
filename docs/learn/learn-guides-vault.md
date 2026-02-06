@@ -3,6 +3,9 @@ title: Polkadot Vault App Guides
 description: Comprehensive guides for using the Polkadot Vault app, including sending transfers, importing accounts, and updating metadata.
 ---
 
+!!! warning "This page is deprecated"
+    The content on this page is outdated. Please visit the [**Accounts**](../getting-started/accounts/index.md) section for the latest information or the [**Polkadot Support Portal**](https://support.polkadot.network).
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

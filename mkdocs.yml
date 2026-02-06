@@ -143,18 +143,15 @@ nav:
           - Polkadot v1: getting-started/introduction/polkadot-v1.md
           - Polkadot v2: getting-started/introduction/polkadot-v2.md
       - Accounts:
-          - Create Your First Account: getting-started/accounts/index.md
-          - What Is a Polkadot Account: getting-started/accounts/what-is-account.md
-          - Recommended Wallets: getting-started/accounts/wallets.md
-
-          - Account Security Best Practices: getting-started/accounts/security.md
-          - Backing Up Your Account: getting-started/accounts/backup.md
+          - getting-started/accounts/index.md
+          - What Is a Polkadot Account?: getting-started/accounts/what-is-account.md
+          - Create an Account: getting-started/accounts/wallets.md
+          - Account Security & Backup: https://support.polkadot.network/support/solutions/articles/65000181874#article-show-65000181874
       - Staking:
           - Introduction to Staking: getting-started/staking/index.md
           - How NPoS Works: getting-started/staking/npos.md
           - Validators and Nominators: getting-started/staking/roles.md
           - Choosing Validators: getting-started/staking/choosing-validators.md
-
           - Monitoring Rewards: getting-started/staking/rewards.md
           - Managing Nominations: getting-started/staking/nominations.md
           - Unbonding and Withdrawing: getting-started/staking/unbonding.md
@@ -189,7 +186,6 @@ nav:
       - Smart Contracts:
           - Smart Contracts on Polkadot: build/smart-contracts/polkadot.md
           - How Smart Contracts Work: build/smart-contracts/how-it-works.md
-
           - Smart Contracts vs. SDK: build/smart-contracts/vs-parachains.md
       - Solutions:
           - Assets: build/solutions/assets.md

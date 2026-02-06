@@ -3,6 +3,9 @@ title: Polkadot Vault (formerly Parity Signer)
 description: Use your old smartphone as an air-gapped wallet with Polkadot Vault, a secure cold storage solution for managing accounts and signing transactions.
 ---
 
+!!! warning "This page is deprecated"
+    The content on this page is outdated. Please visit the [**Accounts**](../../getting-started/accounts/index.md) section for the latest information or the [**Polkadot Support Portal**](https://support.polkadot.network).
+
 !!!info "Rebranding of Parity Signer to Polkadot Vault"
     The Polkadot Vault app rebranding is live on
     [iOS](https://apps.apple.com/us/app/parity-signer/id1218174838) and

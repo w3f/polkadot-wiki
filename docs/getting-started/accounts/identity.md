@@ -22,18 +22,18 @@ keywords: [registrar, identity, sub-identity, polkadot-js]
 
 This is an advanced guide that is relevant for entities that would like to become registrars or
 would like to set sub-identities to an existing account with an identity. See
-[this page](./learn-identity.md) to learn about how to set an identity and have it verified.
+[this page](../../learn/learn-identity.md) to learn about how to set an identity and have it verified.
 
 ## Setting an Identity
 
 Users can set an identity by registering through default fields such as legal name, display name,
 website, Twitter handle, Riot handle, etc. along with some extra, custom fields for which they would
-like attestations (see [Judgements](./learn-identity.md#judgements)).
+like attestations (see [Judgements](../../learn/learn-identity.md#judgements)).
 
 !!!info "Instructions for setting and clearing Identities"
     The procedure to set and clear identities is explained in detail in this support article - [How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity)
 
-!!!note The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](./learn-identity.md#sub-identities) to the Ledger stash.
+!!!note The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](../../learn/learn-identity.md#sub-identities) to the Ledger stash.
 
 ### Format Caveat
 
@@ -97,7 +97,7 @@ support article and this [video tutorial](https://www.youtube.com/watch?v=0Yh1JY
 ### Setting Sub-Identity (Sub-ID) for your Ledger Account
 
 Setting an Identity is not possible on Ledger app yet, but as a workaround, you can
-[set the identity for an on-chain account ](security.md#setting-an-identity) and then
+[set the identity for an on-chain account ](#setting-an-identity) and then
 use it to set a sub-identity to your Ledger account.
 
 - Go to https://polkadot.js.org/apps/#/accounts. Click on the three vertical dots corresponding to
@@ -114,7 +114,7 @@ use it to set a sub-identity to your Ledger account.
 You should now see the sub-identity displayed on-chain. You need to be aware that the creation of
 identities and sub-identities requires
 [deposits](../../general/chain-state-values.md). This reserved account balance is
-freed once you [clear the identities](security.md#clearing-and-killing-an-identity)
+freed once you [clear the identities](#clearing-and-killing-an-identity)
 on the account.
 
 ![Sub-identity example](../../assets/identity/sub-id-3.png)
