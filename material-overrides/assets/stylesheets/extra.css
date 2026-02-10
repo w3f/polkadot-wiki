@@ -122,3 +122,37 @@
   font-family: 'Unbounded', sans-serif;
   font-weight: 700;
 }
+
+.youtube-icon {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-right: 6px;
+        padding: 0.2em 0.45em;
+        border-radius: 0.25em;
+        background: #000000;
+        color: #ffffff;
+        font-size: 0.75em;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+}
+
+.youtube-icon::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 6px solid #ffffff;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+}
+
+[data-md-color-scheme="custom-dark"] .youtube-icon {
+    background: #ffffff;
+    color: #000000;
+}
+
+[data-md-color-scheme="custom-dark"] .youtube-icon::before {
+    border-left-color: #000000;
+}
