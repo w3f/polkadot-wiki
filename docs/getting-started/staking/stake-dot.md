@@ -35,3 +35,27 @@ SubWallet is a comprehensive wallet available as a browser extension and mobile 
 For detailed instructions on how to stake using Polkadot.js, please refer to the official support guides:
 
 - **[Stake Using Polkadot-JS UI](https://support.polkadot.network/support/solutions/folders/65000157524)**: A collection of articles covering nomination, bonding, and managing your stake.
+
+## Common Mistakes & FAQ
+
+Staking on Polkadot can be rewarding, but it's important to avoid common pitfalls. Here are some frequently asked questions and mistakes to watch out for:
+
+### Why am I not getting staking rewards?
+
+There are several reasons you might not be receiving rewards:
+
+- **Minimum Active Bond Not Met**: The minimum amount of DOT required to earn rewards is dynamic and changes based on network conditions. Even if you bond more than the minimum intention threshold, you may not be in the top nominators if your stake is below the current minimum active bond. Check the current minimum on the Staking Dashboard's "Nominate" page.
+- **Not Enough Validators Nominated**: You should nominate up to 16 validators to maximize your chances of having at least one active validator each era. Nominating only one or two validators significantly reduces your earning potential.
+- **100% Commission Validators**: If you nominate a validator with 100% commission, you will receive no rewards when your stake is assigned to that validator.
+- **Inactive or Waiting Validators**: Your stake must back an active validator to earn rewards. If all your nominated validators are "waiting" or "inactive," you won't earn rewards.
+- **Unclaimed Rewards**: Staking rewards are not automatic. While validators typically claim rewards, you should monitor and manually claim if needed. Rewards expire after 84 eras (approximately 84 days) on Polkadot.
+
+For detailed troubleshooting, see: **[Why am I not getting staking rewards?](https://support.polkadot.network/support/solutions/articles/65000170805-why-am-i-not-getting-staking-rewards-)**
+
+### Other Common Mistakes
+
+- **Not Monitoring Your Nominations**: Staking is not "set-and-forget." Regularly review your nominated validators' performance and make adjustments as needed.
+- **Ignoring Validator Research**: Choose validators based on performance, reputation, commission rates, and slashing history. Don't just pick validators at random.
+- **Withdrawing Too Early**: Be patient with staking rewards. Avoid the temptation to constantly switch validators or withdraw prematurely due to short-term fluctuations.
+
+For more information on choosing reliable validators and best practices, visit the [Polkadot Support Portal](https://support.polkadot.network/support/solutions/65000066564).
