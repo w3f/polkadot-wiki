@@ -23,7 +23,7 @@ natsort==8.4.0
 packaging==26.0
 paginate==0.5.7
 pathspec==1.0.4
-platformdirs==4.5.1
+platformdirs==4.7.0
 Pygments==2.19.2
 pymdown-extensions==10.20.1
 python-dateutil==2.9.0.post0
