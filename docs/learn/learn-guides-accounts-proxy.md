@@ -102,7 +102,7 @@ enabled for execution.
 
 Proxy calls are used by proxies to call proxied accounts. These calls are important for example in
 the case of _pure_ proxies, as any attempt to sign transactions with a _pure_ proxy will fail. For
-more details see the [dedicated section about pure proxies](./learn-proxies-pure.md).
+more details see the [dedicated section about pure proxies](../../knowledge-base/pure-proxies.md).
 
 ### Nested Proxy Calls
 

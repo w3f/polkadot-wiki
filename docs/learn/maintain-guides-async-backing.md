@@ -20,7 +20,7 @@ to set the stage.
 
 !!!info
     For more contextual information about asynchronous backing, see
-    [this page](../learn/learn-async-backing.md).
+    [this page](../reference/async-backing.md).
 
 Pull the latest version of Cumulus for use with your parachain. It contains necessary changes for
 async backing compatibility. Latest on master branch of

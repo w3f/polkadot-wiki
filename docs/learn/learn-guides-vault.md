@@ -3,6 +3,9 @@ title: Polkadot Vault App Guides
 description: Comprehensive guides for using the Polkadot Vault app, including sending transfers, importing accounts, and updating metadata.
 ---
 
+!!! warning "This page is deprecated"
+    The content on this page is outdated. Please visit the [**Accounts**](../getting-started/accounts/index.md) section for the latest information or the [**Polkadot Support Portal**](https://support.polkadot.network).
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -52,7 +55,7 @@ Spec and Metadata into a portal).
 
 To add more chains on the Vault app you can follow the instructions
 [here](https://github.com/novasamatech/parity-signer/blob/master/docs/src/tutorials/Add-New-Network.md#add-network-specs).
-In this example we will add the [Asset Hub](../learn/learn-assets.md) system parachain. Briefly,
+In this example we will add the [Asset Hub](../knowledge-base/asset-hub.md) system parachain. Briefly,
 fork the [Parity Signer GitHub repository](https://github.com/paritytech/parity-signer), start the
 terminal within the `/generate_message` folder and type the following:
 

@@ -140,7 +140,7 @@ The recovery process is now complete and successful.
 ![social-recovery-15](../assets/recovery/social-recovery-15.png)
 
 !!!tip "Using `Root` origin"
-    There is still one possible way to recover the account without going through the recovery process. That is by using the `Root` origin. However, in order to use root permissions, you will need to either go through [governance](../learn/learn-polkadot-opengov.md).
+    There is still one possible way to recover the account without going through the recovery process. That is by using the `Root` origin. However, in order to use root permissions, you will need to either go through [governance](../knowledge-base/opengov.md).
 
 ## Further Reading
 
