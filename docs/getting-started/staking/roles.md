@@ -13,14 +13,14 @@ description: Understand the role of nominators in Polkadot's staking ecosystem, 
 !!!info "Stake through Nomination Pools"
     The minimum amount required to become an active nominator (i.e. the [minimum active bond](../../general/chain-state-values.md)) and earn rewards may change from era to era. If you have less tokens than the minimum active nomination and still want to participate in staking, you can join the nomination pools with a [smaller amount of tokens](../../general/chain-state-values.md). For additional information, see
     [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
-    Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
+    Check the wiki doc on [nomination pools](../../knowledge-base/nomination-pools.md) for more information.
 
 If you landed on this page, you decided to understand how you can be a good nominator. Note, this
-page is not for [nomination pool](./learn-nomination-pools.md) members, although pool members might
+page is not for [nomination pool](../../knowledge-base/nomination-pools.md) members, although pool members might
 gain essential knowledge about how to choose nomination pools.
 
 The information provided on this page is complementary to that on the
-[**Staking Page**](./learn-staking.md) and [**Advanced Staking Page**](./learn-staking-advanced.md).
+[**Staking Page**](./introduction.md) and [**Advanced Staking Page**](../../knowledge-base/staking-advanced.md).
 Make sure you read those pages as well before nominating.
 
 ## Who are Nominators?
@@ -35,7 +35,7 @@ take a slightly more passive role. Being a nominator does not require running a 
 worrying about online uptime. However, a good nominator performs due diligence on the validators
 that they elect. When looking for validators to nominate, a nominator should pay attention to their
 own reward percentage for nominating a specific validator - as well as the risk that they bear of
-being [slashed](./learn-offenses.md) if the validator gets slashed.
+being [slashed](../../knowledge-base/offenses.md) if the validator gets slashed.
 
 ## Why Nominate?
 
@@ -43,14 +43,14 @@ being [slashed](./learn-offenses.md) if the validator gets slashed.
   world aspiring to build and foster the next-gen Internet, Web3: a decentralized, privacy-focused,
   and trustless internet.
 - You are an essential piece of the puzzle, keeping the network secure. The bonded balance can be
-  used to vote in [Polkadot OpenGov](./learn-polkadot-opengov.md) and shape the network's future
+  used to vote in [Polkadot OpenGov](../../knowledge-base/opengov.md) and shape the network's future
   direction.
 - You will start to understand how Polkadot works at a technical-level. When you feel comfortable
   with your nomination skills and knowledge, you can open your
-  [nomination pool](./learn-nomination-pools.md), help others secure the network and earn rewards,
+  [nomination pool](../../knowledge-base/nomination-pools.md), help others secure the network and earn rewards,
   and build your reputation as a trusted nomination pool operator. If you like to be more involved,
-  the next step is to become a [validator](./learn-validator.md).
-- By getting [staking](./learn-staking.md) rewards you keep up with or (likely) stay ahead of
+  the next step is to become a [validator](../../knowledge-base/validator.md).
+- By getting [staking](./introduction.md) rewards you keep up with or (likely) stay ahead of
   network inflation.
 
 Nominators secure the relay chain by staking native tokens (DOT on Polkadot or KSM on Kusama) and
@@ -59,11 +59,11 @@ as a validator, which requires experience setting up a node and running and main
 
 On Polkadot, you can also earn DOT by nominating one or more validators. Doing so makes you a
 nominator for the validator(s) you chose. Pick your validators carefully -
-[if they do not behave properly, they will get slashed, and you will lose some DOT](./learn-offenses.md).
+[if they do not behave properly, they will get slashed, and you will lose some DOT](../../knowledge-base/offenses.md).
 However, if they follow the network rules, you can share the staking rewards they generate.
 
 While your tokens are staked for nominations, they are 'locked' (bonded). You can
-[stop nominating at any time](./learn-guides-nominator.md#stop-nominating), but remember that the
+[stop nominating at any time](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-), but remember that the
 action is effective in the next era and does not automatically unbond your funds. Unbonding is a
 separate action, and it takes effect after the
 [unbonding period](../../general/chain-state-values.md). A staking lock will be
@@ -81,12 +81,12 @@ reasoning for generating distinct accounts for this purpose is elaborated in the
 You can generate your stash and staking proxy account via any of the recommended methods, which are
 detailed on the [account generation](../accounts/index.md#account-generation) page. The first
 thing you need to do before becoming a nominator is to make sure you have a
-[**stash account**](./learn-staking.md#stash-account-and-staking-proxy) where you can transfer funds
+[**stash account**](./introduction.md#stash-account-and-staking-proxy) where you can transfer funds
 you want to use for staking. For these accounts, it is recommended to use a "cold wallet" solution
-such as [Ledger](../../learn/learn-guides-ledger.md) or [Polkadot Vault](../../learn/learn-guides-vault.md).
+such as [Ledger](https://support.polkadot.network/support/solutions/folders/65000169119) or [Polkadot Vault](https://support.polkadot.network/support/solutions/folders/65000169119).
 
 After setting up the stash account, it is recommended to have a
-[**staking proxy**](./learn-staking-advanced.md#staking-proxies). Although you can be a nominator
+[**staking proxy**](./introduction.md#staking-proxies). Although you can be a nominator
 with just a stash account, having a staking proxy is good practice for security reasons.
 
 A staking proxy of the stash will be able to sign for all staking-related transactions as well. The
@@ -111,57 +111,39 @@ rewards is extremely unsafe.
 !!!info
     Being a nominator is made simpler by using the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step through specifying rewards destination and bonded amount, and nominating validators (more on this below).
 
-## Nominating with the Polkadot-JS UI
+## Choosing Validators
 
-### Targets Page
+When choosing validators, consider the following key metrics:
 
-There are many factors to consider when deciding which of your nominations. One helpful tool to
-choose validators is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets) table in
-the Polkadot-JS UI. This allows sorting validators using various metrics. Below are the relevant
-metrics shown as an example, followed by a brief description of each.
+| Metric | Description |
+| --------- | ----------- |
+| **payout** | How recently the validator made its last reward payout to nominators. |
+| **nominators** | The number of active nominators (backing the validator this era) and total nominators. |
+| **commission** | Percentage of rewards kept by the validator. 100% means nominators receive nothing. |
+| **total stake** | The total amount of tokens staked by nominators and the validator. |
+| **own stake** | The amount of tokens the validator has put up as stake ("skin in the game"). |
+| **return** | Average annual yield paid out to nominators. Past performance does not guarantee future results. |
 
-| validator | payout   | nominators             | comm. | total stake | own stake | return |
-| --------- | -------- | ---------------------- | ----- | ----------- | --------- | ------ |
-| A         | recently | 1 (`active`) 4 (`all`) | 3%    | 1.6 MDOT    | 8500 DOT  | 17.8%  |
+Every nominator can select up to
+[a maximum number of validators](../../general/chain-state-values.md),
+which contributes towards maximizing the probability of having the nominator's stake applied to
+the validators active set. Nominating too few validators could result in the nominators not
+receiving their rewards when none of them make it to the active set or when those validators stop
+validating. The election algorithm attempts to maximize the overall network stake while minimizing
+the variance of the active stake across the validators. For additional information on the election
+process, check out the research behind
+[Nominated Proof-of-Stake](https://research.web3.foundation/Polkadot/protocols/NPoS).
 
-- **payout**: How recently the validator made its last reward payout to nominators.
-- **nominators**: This column consists of two number values. The **active** count (left number) is
-  the number of nominators whose stake is baking the validator in the current era. In this case
-  Validator A has one active nominator. The total or **all** count (right number) is the number of
-  all nominators who nominated Validator A. This includes the active count and all the other
-  nominators whose stake in the current era is baking other validators.
+A validator's commission is the percentage of the validator reward taken by the validator before
+the rewards are split among the nominators. Validators must be able to run at break-even to
+continue operations sustainably. Independent validators that rely on the commission to cover their
+server costs help to keep the network decentralized. Some validators, operated by central
+exchanges, keep 100% of the commission to pay out their staking service clients and therefore do
+not provide any rewards to external nominators.
 
-  Every nominator can select up to
-  [a maximum number of validators](../../general/chain-state-values.md),
-  which contributes towards maximizing the probability of having the nominator’s stake applied to
-  the validators active set. Nominating too few validators could result in the nominators not
-  receiving their rewards when none of them make it to the active set or when those validators stop
-  validating. The election algorithm attempts to maximize the overall network stake while minimizing
-  the variance of the active stake across the validators. For additional information on the election
-  process, check out the research behind
-  [nominated proof-of-stake](https://research.web3.foundation/Polkadot/protocols/NPoS).
+For step-by-step instructions on selecting validators, see:
 
-- **comm.**: Total commission kept by the validator (100% means the validator will keep all rewards
-  , and thus nominators will not receive them). A validator's commission is the percentage of the
-  validator reward taken by the validator before the rewards are split among the nominators. As a
-  nominator, you may think that choosing validators with the lowest commission is best. However,
-  validators must be able to run at break-even to continue operations sustainably. Independent
-  validators that rely on the commission to cover their server costs help to keep the network
-  decentralized. Some validators, operated by central exchanges, etc., keep 100% of the commission
-  to payout their staking service clients and therefore do not provide any rewards to external
-  nominators. The commission is just one piece of the puzzle you should consider when picking
-  nominating validators.
-- **total stake**: The total amount of tokens staked by nominators and the validator (i.e. own
-  stake, see below).
-- **own stake**: The amount of tokens the validator has put up as a stake. A higher own stake can be
-  considered as having more "skin in the game". This can imply increased trustworthiness. However, a
-  validator not having a large amount of "own stake" is not automatically untrustworthy, as the
-  validator could nominate from a different address.
-- **return**: Average annual yield paid out to nominators (i.e. number of rewards divided by the
-  number of bonded tokens). Note that nominating those with a higher yield may not guarantee similar
-  future performance.
-
-![Staking Returns](../../assets/nominators_target.png)
+- [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-)
 
 On the Targets page, you can use different filters to select validators with specific traits (where
 a trait is a combination of the metrics above). Available filters are:
@@ -176,16 +158,16 @@ a trait is a combination of the metrics above). Available filters are:
 
 - **comm. < 20%**: Do not show any validators with a commission of 20% or higher.
 - **recent payouts**: Only show validators that have recently caused a
-  [payout to be issued](learn-staking-advanced.md). Note that anyone can cause a payout to occur; it
+  [payout to be issued](../../knowledge-base/staking-advanced.md). Note that anyone can cause a payout to occur; it
   does not have to be the operator of a validator.
 - **currently elected**: Only show validators in the active set (i.e., they have been elected to
   produce blocks in the current era).
-- **with an identity**: Only show validators that have set an [identity](learn-identity.md). Note
+- **with an identity**: Only show validators that have set an [identity](../../knowledge-base/identity.md). Note
   that this identity does not have to be verified by a registrar for the validator to appear in the
   list.
 
 !!!warning "Single Operators with Multiple Validators"
-    Recall that [slashing](./learn-offenses.md) is an additive function; the more validators equivocating in a given session, the harsher the penalties. Since validators that are controlled by a single operator are more at risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of others in many ways (different hardware, geographic location, owner, etc.).
+    Recall that [slashing](../../knowledge-base/offenses.md) is an additive function; the more validators equivocating in a given session, the harsher the penalties. Since validators that are controlled by a single operator are more at risk of a "synchronized" failure, nominating them implies a greater risk of having a large slash of your nominated funds. Generally, it is safer to nominate validators whose behavior is independent of others in many ways (different hardware, geographic location, owner, etc.).
 
 ### Bags List
 
@@ -208,7 +190,7 @@ For guidelines about how to rebag or move your account within a bag, see the fol
 
 - The "Bags List" Section on
   [this Support Page](https://support.polkadot.network/support/solutions/articles/65000181018-i-have-more-than-the-minimum-bonded-but-i-m-not-getting-rewards).
-- The [Bags List Section](./learn-staking-advanced.md#bags-list) in Advanced Staking Concepts.
+- The [Bags List Section](../../knowledge-base/staking-advanced.md#bags-list) in Advanced Staking Concepts.
 - The [dedicated technical explainer video](https://youtu.be/hIIZRJLrBZA).
 
 ### Validator Stats
@@ -216,7 +198,7 @@ For guidelines about how to rebag or move your account within a bag, see the fol
 Nominators can query [validator histories](https://polkadot.js.org/apps/#/staking/query/) to see
 statistics such as era points, elected stake, rewards and slashes, and commission. It is good
 practice to do comprehensive research on validator candidates. This could include (but should not be
-limited to) checking the validators' [identity](learn-identity.md) (if they have set one) and going
+limited to) checking the validators' [identity](../../knowledge-base/identity.md) (if they have set one) and going
 over the validators' websites to see who they are, what kind of infrastructure setup they are using,
 reputation, the vision behind the validator, and more.
 
@@ -249,8 +231,8 @@ The staking election system has three stages for both validators and nominators,
 - **intention to nominate:** an account that has stated the intention to nominate; also called
   simply a "nominator".
 - **electing nominator:** a nominator who is selected to be a part of the input to the
-  [NPoS election algorithm](learn-phragmen.md). This selection is based on stake and is made using
-  the [bags list](./learn-staking-advanced.md#bags-list).
+  [NPoS election algorithm](../../reference/phragmen.md). This selection is based on stake and is made using
+  the [bags list](../../knowledge-base/staking-advanced.md#bags-list).
 - **active nominator:** a nominator who came out of the NPoS election algorithm backing an active
   validator. When slashing occurs, all the active nominators backing the validator get slashed.
 
@@ -272,7 +254,7 @@ As long as you have nominated more than one validator candidate, at least one of
 and you are nominating with enough stake to get into the solution set, your bonded stake will be
 fully distributed to one or more validators. That being said, you may not receive rewards if you
 nominated very few validator candidates and no one got elected, or your stake is small, and you are
-not part of the [top 22,500 nominators](./learn-staking-advanced.md#bags-list), or the validator you
+not part of the [top 22,500 nominators](../../knowledge-base/staking-advanced.md#bags-list), or the validator you
 are nominating has 100% commission. It is generally wise to choose as many trustworthy validators as
 you can to reduce the risk of none of your nominated validators being elected.
 
@@ -280,11 +262,11 @@ you can to reduce the risk of none of your nominated validators being elected.
     To explore the possible reasons for not receiving staking rewards, check out the following:
     - The [Staking FAQ](https://support.polkadot.network/support/solutions/articles/65000181959-staking-faq-s) on the Support Pages.
     - The ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/) Reddit article.
-    - The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards) section on the Staking Page.
+    - The ["Why am I not receiving staking rewards?"](./rewards.md#why-am-i-not-receiving-rewards) section on the Staking Page.
 
 Rewards are _lazy_ - somebody must trigger a payout for a validator for rewards to go to all of the
 validator's nominators. Any account can do this, although validator operators often do this as a
-service to their nominators. See the page on [Simple Payouts](learn-staking-advanced.md) for more
+service to their nominators. See the page on [Simple Payouts](../../knowledge-base/staking-advanced.md) for more
 information and instructions for claiming rewards.
 
 !!!note "Explainer videos on Nominating"
@@ -297,7 +279,7 @@ information and instructions for claiming rewards.
 
 ### Required Minimum Stake
 
-Due to the way the [Phragmen algorithm](learn-phragmen.md) generates the solution set and due to the
+Due to the way the [Phragmen algorithm](../../reference/phragmen.md) generates the solution set and due to the
 fact that the solution set must fit in a single block, a minimum number of DOT will be required to
 nominate with to receive staking rewards can change between the eras.
 
@@ -325,7 +307,7 @@ Thus, for **nominator counters**, we have:
 
 When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
-[this](./learn-guides-nominator.md#nominate-using-polkadot-js) guide to configure it first. Your
+[this](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-) guide to configure it first. Your
 nominations will be effective in the next era; eras are roughly 24 hours on Polkadot (6 hours on
 Kusama).
 
@@ -344,7 +326,7 @@ nomination from the validators you selected.
 If you are committing a very large stake, you may have more than one active nomination. However, the
 election algorithm attempts to minimize this situation, and it should not occur often, so you should
 almost always see only a single active nomination per era. See the
-[section on Phragmén optimization](learn-phragmen.md#optimizations) for more details.
+[section on Phragmén optimization](../../reference/phragmen.md#optimizations) for more details.
 
 ### Minimum Active Nomination to Receive Staking Rewards
 
@@ -355,7 +337,6 @@ almost always see only a single active nomination per era. See the
 
 ## Guides
 
-- [Be a Nominator (Polkadot)](./learn-guides-nominator.md#nominate-a-validator) - Guide on
-  nominating on the Kusama canary network.
-- [Stop Being a Nominator (all networks)](./learn-guides-nominator.md#stop-nominating) - Guide on
-  stopping nominations and withdrawing tokens.
+- [How to Stake/Nominate on Polkadot](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-)
+- [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-)
+- [Staking Support Guides](https://support.polkadot.network/support/solutions/65000066564)

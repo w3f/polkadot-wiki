@@ -148,14 +148,13 @@ nav:
           - Create an Account: getting-started/accounts/wallets.md
           - Account Security & Backup: https://support.polkadot.network/support/solutions/articles/65000181874#article-show-65000181874
       - Staking:
-          - Introduction to Staking: getting-started/staking/index.md
-          - How NPoS Works: getting-started/staking/npos.md
+          - Introduction to Staking: getting-started/staking/introduction.md
           - Validators and Nominators: getting-started/staking/roles.md
-          - Choosing Validators: getting-started/staking/choosing-validators.md
-          - Monitoring Rewards: getting-started/staking/rewards.md
+          - Choosing Reliable Validators: getting-started/staking/choosing-validators.md
+          - Monitoring Staking Rewards: getting-started/staking/rewards.md
+          - Stake DOT: getting-started/staking/stake-dot.md
           - Managing Nominations: getting-started/staking/nominations.md
-          - Unbonding and Withdrawing: getting-started/staking/unbonding.md
-          - Common Mistakes: getting-started/staking/mistakes.md
+          - Unbonding and Withdrawing Your Stake: getting-started/staking/unbonding.md
       - Governance:
           - Introduction to Governance: getting-started/governance/index.md
           - How Governance Works: getting-started/governance/mechanics.md

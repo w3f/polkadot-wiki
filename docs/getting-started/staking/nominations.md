@@ -1,106 +1,62 @@
 ---
-title: Polkadot-JS Nomination Pool Guides
-description: Detailed guides for creating, managing, and destroying nomination pools using Polkadot-JS.
+title: Managing Nominations
+description: Guides for managing nominations and nomination pools.
 ---
 
-<!-- MessageBox -->
-<div id="messageBox" class="floating-message-box">
-  <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
-      Polkadot Support Team.
-    </a>
-  </p>
-  <button class="close-messagebox" aria-label="Close message">✖</button>
-</div>
+!!!info "Support Guides"
+    For step-by-step guides on managing your nominations and nomination pools, visit the [Polkadot Support Portal](https://support.polkadot.network/support/solutions/65000066564).
 
-See [this page](./learn-nomination-pools.md) to learn about nomination pools.
+See the [Nomination Pools](../../knowledge-base/nomination-pools.md) page to learn about how
+nomination pools work.
 
-## Pool Creation with Polkadot-JS
+## Pool Creation
 
-!!!info
-    You easily create a pool using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool) for more information.
-
-The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
-funds to the pool to add themselves as the first member. As stated above, the depositor must always
-be a member as long as the pool exists; they will be the last member to leave, ensuring they always
-have some skin in the game. A significant stake from the depositor is always a good indicator of the
-pool's credibility.
+You can create a pool using the
+[Polkadot Staking Dashboard](../../build/solutions/staking-dashboard.md). The depositor sets the
+administrative roles and transfers some funds to the pool to add themselves as the first member. The
+depositor must always be a member as long as the pool exists; they will be the last member to leave,
+ensuring they always have some skin in the game. A significant stake from the depositor is always a
+good indicator of the pool's credibility.
 
 The current minimum bond to create a pool can be found
 [here](../../general/chain-state-values.md).
 
-The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
-navigate to Network > Staking > Pools and click on Add Pool button.
+For detailed instructions, see:
 
-![Create Nomination Pools](../../assets/staking/Nomination-Pools-1.png)
+- [Staking Dashboard: How to Create a Nomination Pool](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool)
 
-The UI automatically assigns an ID to the pool and allows for entering the name of the pools and the
-deposit to be bonded.
+## Pool Upkeep
 
-![Create Nomination Pools - deposit](../../assets/staking/Nomination-Pools-2.png)
+The pool's nominator role can update the validator selection at any time. The root and bouncer can
+update the pool's state to blocked and kick members by unbonding and withdrawing on their behalf.
+The state can also be toggled back to open.
 
-When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the Depositor account by
-default. If any of these roles need to be assigned to a different account, create the pool using
-`create` extrinsic available in
-[Developer > Extrinsics > nominationPools](https://polkadot.js.org/apps/#/extrinsics) on Polkadot JS
-Apps UI.
+For detailed instructions on managing pool nominations, see:
 
-![Nomination Pool Roles](../../assets/staking/Nomination-Pools-7.png)
+- [Nomination Pool Features](https://support.polkadot.network/support/solutions/articles/65000182437)
 
-## Pool Upkeep with Polkadot-JS
+## Pool Destruction
 
-The nominator can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
-[Network > Staking > Accounts page](https://polkadot.js.org/apps/#/staking/actions) and click on
-Pooled button. If you have any pooled accounts with the role of nominator, you will notice the
-option to set nominees. Select the validators to nominate like you would normally using a nominator
-account.
+A pool can be pushed into the "destroying" state in one of two ways:
 
-![Nominate validators](../../assets/staking/Nomination-Pools-5.png)
-
-The root and bouncer can update the pool’s state to blocked through `setState` extrinsic and kick
-members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to open).
-
-## Pool Destruction with Polkadot-JS
-
-!!!info
-    As a pool admin, you can easily destroy a pool and permissionlessly remove all members using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool) for more information.
-
-A pool can be pushed into the “destroying” state via one of:
-
-- The root and bouncer set the pool to “destroying”. This can be done by submitting the
-  `nominationPools.setState(poolId, state)` extrinsic using the
-  [Polkadot-JS UI extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
-  specific ID of the pool and `state` is the pool's state that must be set to "destroying". Other
-  possible states are "open" and "blocked".
+- The root or bouncer sets the pool to "destroying".
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
-  been [slashed](./learn-offenses.md).
+  been [slashed](../../knowledge-base/offenses.md).
 
-When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
-anyone can help all the members exit.
+When a pool is in the "destroying" state, unbond and withdraw become permissionless, so anyone can
+help all the members exit. The pool is destroyed once the depositor withdraws, no members belong to
+the pool, and all the pool's resources are wiped from the state.
 
-The pool is destroyed once the depositor withdraws, no members belong to the pool, and all the
-pool’s resources are wiped from the state.
+For detailed instructions, see:
 
-## Claim Rewards for Other Pool Members with Polkadot-JS
+- [Staking Dashboard: How to Destroy a Nomination Pool](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool)
+
+## Claiming Rewards for Other Pool Members
 
 As a pool member you can claim rewards for any other members who set their
-[claim permissions](./learn-nomination-pools.md#claim-permissions) to one of the _permissionless_
-options.
+[claim permissions](../../knowledge-base/nomination-pools.md#claim-permissions) to one of the
+permissionless options.
 
-Let's take the example of ALICE setting the claim permissions to `PermissionlessAll`. Another
-account STASH can now claim ALICE's rewards (as a free balance or compound them to the existing
-bonded balance). To do so, STASH can go to the
-[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue the following
-extrisics:
+For detailed instructions on claiming rewards for other pool members, see:
 
-- `nominationPools.claimPayoutOthers` extrinsic specifying ALICE's account. This will claim the
-  rewards as a free balance on ALICE's account.
-
-![pools-payoutOthers](../../assets/nomination-pools-payoutOthers.png)
-
-- `nominationPools.bondExtraOthers` extrinsic specifying ALICE's account and the option to bond:
-  - the free balance currently available in ALICE's account (`FreeBalance`) or
-  - the pool rewards (`Rewards`) unclaimed by ALICE.
-
-![pools-bondExtraOthers](../../assets/nomination-pools-bondExtraOthers.png)
+- [Staking Dashboard: Nomination Pool Guides](https://support.polkadot.network/support/solutions/folders/65000157523)
