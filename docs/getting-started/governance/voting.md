@@ -31,10 +31,12 @@ Polkadot uses a mechanism called **Conviction Voting**. This allows you to incre
 ## How to Vote
 
 ### Voting Interfaces
-You can vote using several different community tools:
--   **[Polkassembly](https://polkadot.polkassembly.io/)** & **[Subsquare](https://polkadot.subsquare.io/)**: Web-based governance platforms.
--   **[Nova Wallet](https://novawallet.io/)**: Mobile wallet with built-in governance.
--   **[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer)**: Advanced developer interface.
+You can vote using several different tools from the community:
+
+- **[Polkassembly](https://polkadot.polkassembly.io/)**: Web-based governance platform.
+- **[Subsquare](https://polkadot.subsquare.io/)**: Web-based governance platform.
+- **[Nova Wallet](https://novawallet.io/)**: Mobile wallet with built-in governance.
+- **[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer)**: Advanced developer interface.
 
 !!!info "Support Guide: How to Vote"
     For step-by-step instructions on voting using the Polkadot-JS UI, please see the official support article:

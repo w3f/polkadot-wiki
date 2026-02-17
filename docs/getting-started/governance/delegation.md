@@ -5,13 +5,13 @@ description: Participate in Polkadot governance by delegating your voting power 
 
 # Delegating Your Vote
 
-You don't have to vote on every single referenda yourself. Polkadot's governance system uses a mechanism called **Liquid Democracy**, which allows you to delegate your voting power to others you trust.
+You don't have to vote on every single referenda yourself. Polkadot governance allows you to delegate your voting power to others you trust.
 
 ## Why Delegate?
 
--   **Save Time**: Following every proposal is a full-time job.
+-   **Save Time**: Following every proposal can be a full-time job.
 -   **Expertise**: Delegate to experts in specific fields (e.g., technical upgrades vs. treasury spending).
--   **Passive Participation**: Ensure your DOT is still "active" in governance even if you are offline.
+-   **Passive participation**: Ensure your DOT is still "active" in governance even if you are offline.
 
 ## How Delegation Works
 
@@ -22,19 +22,19 @@ You don't have to vote on every single referenda yourself. Polkadot's governance
 
 ## Tools for Delegation
 
-### 1. Polkassembly Delegation
+### Polkassembly Delegation
 Polkassembly provides a comprehensive interface for managing your delegations. You can find delegates, compare their stats, and assign them to specific tracks.
 
 -   **[Launch Delegation Dashboard](https://polkadot.polkassembly.io/delegation)**
 
-### 2. Nova Wallet (Mobile)
-Nova Wallet offers a streamlined delegation experience on mobile. You can easily browse delegates and assign your voting power with a few taps.
+### Nova Wallet (Mobile)
+[Nova Wallet](https://novawallet.io/) offers a streamlined delegation experience on mobile. You can easily browse delegates and assign your voting power with a few taps.
 
-### 3. Subsquare
+### Subsquare
 Subsquare also supports delegation management within its governance platform.
 -   **[Subsquare](https://polkadot.subsquare.io/)**
 
-### 4. Polkadot-JS UI (Advanced)
+### Polkadot-JS UI (Advanced)
 You can delegate via the "Referenda" tab or by submitting the `convictionVoting.delegate` extrinsic directly.
 
 !!!info "Support Guide: How to Delegate"
