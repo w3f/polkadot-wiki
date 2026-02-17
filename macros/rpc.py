@@ -49,11 +49,11 @@ def get_network_url(network):
         
 def human_readable(decimals_amount, number, rounded=True):
     balance_str = str(number)
-    
-    # Determine display decimals based on token type (derived from decimals_amount)
-    # For DOT (decimals_amount=10), show 2 decimals
-    # For KSM (decimals_amount=12), show 6 decimals
-    if decimals_amount == 10:  # DOT
+
+    # Keep full chain precision when rounded=False.
+    if not rounded:
+        display_decimals = decimals_amount
+    elif decimals_amount == 10:  # DOT
         display_decimals = 2
     elif decimals_amount == 12:  # KSM
         display_decimals = 6
