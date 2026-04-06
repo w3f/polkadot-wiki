@@ -19,11 +19,11 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
 
 === "Simple Mode"
 
-    ![](../assets/staking-apps/staking-dashboard-simple.png)
+    ![](../assets/staking-apps/staking-dashboard-simple.webp)
 
 === "Advanced Mode"
 
-    ![](../assets/staking-apps/staking-dashboard-advanced.png)
+    ![](../assets/staking-apps/staking-dashboard-advanced.webp)
 
  The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/) enables users to stake either as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member, and also supports creating and managing nomination pools. The dashboard offers a Simple mode for new stakers and an Advanced mode for experienced stakers. It works with the most popular browser extension and hardware wallets, and supports [staking proxies](../learn/learn-staking.md#stash-account-and-staking-proxy).
 
@@ -37,6 +37,12 @@ Below is a simple list of video tutorials about the Polkadot Staking Dashboard:
 - <span class="youtube-icon">YouTube</span> [Staking Dashboard Walkthrough](https://youtu.be/hvXLc4H7rA4?feature=shared)
 - <span class="youtube-icon">YouTube</span> [Everything You Can Do After Staking](https://youtu.be/58pIe8tt2o4?feature=shared)
 - <span class="youtube-icon">YouTube</span> [Create, Manage & Destroy Pools](https://youtu.be/aTFWhwy_Mxg?feature=shared)
+
+#### Staking Companion App
+
+Bring the Polkadot Staking Dashboard to your pocket with the [Staking Companion](https://polkadot.cloud/app) app for iOS and Android. Monitor your Polkadot assets, rewards, and nominations from one clean mobile interface. No keys on device, just read-only peace of mind on the go.
+
+![](../assets/staking-apps/companion-app.webp)
 
 ## PAPI Staking Dashboard
 
