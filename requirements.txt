@@ -23,7 +23,7 @@ natsort==8.4.0
 packaging==26.0
 paginate==0.5.7
 pathspec==1.0.4
-platformdirs==4.9.4
+platformdirs==4.9.6
 Pygments==2.20.0
 pymdown-extensions==10.21.2
 python-dateutil==2.9.0.post0
@@ -35,5 +35,5 @@ six==1.17.0
 urllib3==2.6.3
 watchdog==6.0.0
 wcmatch==10.1
-zipp==3.23.0
+zipp==3.23.1
 substrate-interface==1.8.1
