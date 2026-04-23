@@ -1,11 +1,11 @@
 babel==2.18.0
 bracex==2.6
-certifi==2026.2.25
+certifi==2026.4.22
 charset-normalizer==3.4.7
-click==8.3.2
+click==8.3.3
 colorama==0.4.6
 ghp-import==2.1.0
-idna==3.11
+idna==3.13
 importlib_metadata==9.0.0
 Jinja2==3.1.6
 Markdown==3.10.2
@@ -20,10 +20,10 @@ mkdocs-material-extensions==1.3.1
 mkdocs-macros-plugin==1.5.0
 mkdocs-open-in-new-tab==1.0.8
 natsort==8.4.0
-packaging==26.0
+packaging==26.1
 paginate==0.5.7
-pathspec==1.0.4
-platformdirs==4.9.4
+pathspec==1.1.0
+platformdirs==4.9.6
 Pygments==2.20.0
 pymdown-extensions==10.21.2
 python-dateutil==2.9.0.post0
@@ -35,5 +35,5 @@ six==1.17.0
 urllib3==2.6.3
 watchdog==6.0.0
 wcmatch==10.1
-zipp==3.23.0
+zipp==3.23.1
 substrate-interface==1.8.1
