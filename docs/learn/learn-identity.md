@@ -68,7 +68,7 @@ There are multiple registrars on Polkadot and Kusama. Unless no additional infor
 here, you must reach out to specific registrars individually if you want to be judged by those.
 
 !!!info "Decommissioned Registrar Service"
-    From the 1st of April 2024 onwards, **Registrar 0** will still exist on-chain but will not accept any new judgment requests. The registrar fee is set to a substantial amount to dissuade identity judgement requests. From January 2026 onwards, **Registrar 2** will also not accept new judgement requests. Identities judged by the registrar before that date will not be affected. For new identity judgment, please use the other registrars.
+    Registrars shown as struck through in the list below are decommissioned and no longer accept new judgment requests. Existing judgments issued by those registrars remain unaffected. For new identity judgments, please use one of the active registrars.
 
 === "Polkadot"
 
@@ -89,7 +89,7 @@ here, you must reach out to specific registrars individually if you want to be j
     ~~16LYBUcQKWZjAYE4oAPWx9XFaEYnCAffwpPuPWrUvU1mqBZT~~ <br /> **Fee**: ~~0.5 DOT~~ <br />
 
     Registrar 5: <br /> **URL**: https://dotid.app <br /> **Account**:
-    12gL6BDsAMQCij7Ni5CxeN3J9VYwsKAUgbSLxAMbceCkxqv1 <br /> **Fee**: 0 DOT <br /> ECH0.RE
+    12gL6BDsAMQCij7Ni5CxeN3J9VYwsKAUgbSLxAMbceCkxqv1 <br /> **Fee**: 0 DOT <br /> dotID
     (Registrar 5) provides setting on-chain ID as a service on their
     [website](https://dotid.app).
 
@@ -119,7 +119,7 @@ here, you must reach out to specific registrars individually if you want to be j
     ~~HurhThD66KBUf2zcE9Zhx46sCqNJXviKhWAct95rBCkPuix~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
 
     Registrar 7: <br /> **URL**: https://dotid.app <br /> **Account**:
-    EFecAJfvw9f2qvJX8y1QAa9STqXygRX4UYcBXeCYMPjXZ45 <br /> **Fee**: 0 KSM <br /> ECH0.RE
+    EFecAJfvw9f2qvJX8y1QAa9STqXygRX4UYcBXeCYMPjXZ45 <br /> **Fee**: 0 KSM <br /> dotID
     (Registrar 7) provides setting on-chain ID as a service on their
     [website](https://dotid.app).
 
