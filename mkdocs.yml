@@ -9,11 +9,8 @@ extra_javascript:
   - js/search-bar-results.js
   - js/header-scroll.js
   - js/favicon-switcher.js
-  - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js
-  - js/cookies-config.js
   - js/simple-analytics.js
 extra_css:
-  - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css
   - assets/stylesheets/extra.css
   - assets/stylesheets/MessageBox.css
   - assets/stylesheets/announcement-bar.css

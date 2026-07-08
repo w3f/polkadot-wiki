@@ -1047,15 +1047,6 @@ h3 > span.twemoji.lg.middle {
   font-size: 0.9rem;
 }
 
-/* Show cookie consent on top of Kapa widget */
-.md-consent__overlay {
-  z-index: 200;
-}
-
-.md-consent__inner {
-  z-index: 201;
-}
-
 /* --- Copy to clipboard --- */
 .md-clipboard,
 :hover > .md-clipboard {
