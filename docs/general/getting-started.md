@@ -75,7 +75,7 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
   paper that describes the protocol in more technical terms.
 - [The Technical Explainer Videos](https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8):
   These introductory videos explain and demonstrate how to interact with Polkadot using the [Polkadot-JS tools](./polkadotjs.md) and more user-friendly [wallets](https://polkadot.com/ecosystem).
-- [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
+- [Polkadot Support](https://docs.polkadot.com/get-support/) - Get help with
   specific errors and problems while using tools such as the [Polkadot Staking Dashboard](./dashboards/staking-dashboard.md) and [Polkadot-JS UI](./polkadotjs-ui.md).
 
 ### Advanced Level

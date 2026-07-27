@@ -7,7 +7,7 @@ description: Learn how to create and manage multisig accounts for secure and col
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -17,7 +17,7 @@ description: Learn how to create and manage multisig accounts for secure and col
 ## Creating a Multisig Account
 
 Check the "How to create a multisig account" section on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account).
+[this support page](how-to/create-multisig-account.md).
 We recommend trying out the tutorial on
 [Westend network](https://docs.polkadot.com/develop/networks/#westend) - Polkadot's testnet.
 
@@ -28,7 +28,7 @@ We recommend trying out the tutorial on
 
 You can create a multisig account directly on the Accounts Tab of the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts), and use this account to send funds. See
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account)
+[this support article](how-to/create-multisig-account.md)
 for more information.
 
 ## Multisig Transactions with Extrinsic Tab
@@ -138,4 +138,4 @@ with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMsl
 ## Decoding Multisig Call Data
 
 !!!info
-    Before signing a transaction, it is important to know the exact specifics of what is being signed. Check the ["How to use a multisig account"](https://support.polkadot.network/support/solutions/articles/65000181826-how-to-create-and-use-a-multisig-account) in the support docs on how to decode the multisig call data.
+    Before signing a transaction, it is important to know the exact specifics of what is being signed. Check the ["How to use a multisig account"](how-to/create-multisig-account.md) in the support docs on how to decode the multisig call data.

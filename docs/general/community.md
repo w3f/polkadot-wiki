@@ -14,7 +14,7 @@ Below are the most essential links to the community channels for Polkadot and Ku
 
     - [Polkadot Forum](https://forum.polkadot.network/) - a place for thoughtful comments and discussions on the future of Polkadot, and the steps we can take to get there together.
     - [Polkadot GitHub](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
-    - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and [Polkadot Support Contact](https://support.polkadot.network).
+    - [Polkadot Support Contact](https://docs.polkadot.com/get-support/).
     - [Polkadot's Latest Research (news)](https://research.web3.foundation/news).
     - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
     - [Polkadot Discussion and Governance on Polkassembly](https://polkadot.polkassembly.io/).

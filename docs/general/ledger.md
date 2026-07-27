@@ -3,6 +3,16 @@ title: Using the Polkadot Ledger Apps
 description: Use the Polkadot Ledger Application.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [Ledger — How to Sign a Transaction](../learn/how-to/ledger-sign-transaction.md)
+    - [How to Add a Ledger Account](../learn/how-to/add-ledger-account.md)
+    - [How to Add Your Ledger Account (Signer)](../learn/how-to/add-ledger-account-signer.md)
+    - [Ledger — How to Confirm the Account Address on Your Device](../learn/how-to/ledger-confirm-address.md)
+<!-- how-to-guides -->
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -11,7 +21,7 @@ description: Use the Polkadot Ledger Application.
       this support article.
     </a>
     If the problem persists, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -90,7 +100,7 @@ that case, you will need the Polkadot Migration app to move fungible and non-fun
 identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot Ledger app.
 
 !!! note "The migration app has nothing to do with the Asset Hub migration"
-    The migration app was made before [the Asset Hub migration](https://support.polkadot.network/support/solutions/articles/65000190561).
+    The migration app was made before [the Asset Hub migration](../learn/how-to/asset-hub-migration.md).
     
     With the Asset Hub migration, users who have old Kusama Ledger accounts will need to use the migration app to transfer funds and assets to a new account generated via the Polkadot (Generic) app.
 
@@ -147,7 +157,7 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 ## Using Ledger Live
 
 See
-[this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
+[this support article](https://paritytech.github.io/polkadot-support/ledger/using-ledger/ledger-how-to-use-polkadot-and-stake-dot-with-ledger-live)
 to learn how to use Polkadot with ledger live.
 
 ---

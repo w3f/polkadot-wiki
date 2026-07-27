@@ -3,11 +3,18 @@ title: Polkadot-JS UI (Wallet)
 description: A comprehensive guide to Polkadot-JS UI, a wallet for developers and power users in the Polkadot ecosystem.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Switch Network Nodes](../learn/how-to/switch-network-nodes.md)
+<!-- how-to-guides -->
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>

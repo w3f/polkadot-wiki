@@ -3,6 +3,15 @@ title: Polkadot OpenGov
 description: Dive into Polkadot OpenGov, its decentralized governance model, referenda, tracks, and multi-role delegation features.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Remove Expired Referenda Locks](how-to/remove-referenda-locks.md)
+    - [How to Vote on Polkadot OpenGov](how-to/vote-opengov.md)
+    - [How to Participate in Polkadot OpenGov](how-to/opengov-participate.md)
+<!-- how-to-guides -->
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -11,7 +20,7 @@ description: Dive into Polkadot OpenGov, its decentralized governance model, ref
       balances and locks.
     </a>
     For additional support about Polkadot OpenGov, see the
-    <a href="https://support.polkadot.network/support/solutions/65000105211" target="_blank" rel="noopener noreferrer">
+    <a href="https://paritytech.github.io/polkadot-support/polkadot-opengov" target="_blank" rel="noopener noreferrer">
       dedicated support pages.
     </a>
   </p>

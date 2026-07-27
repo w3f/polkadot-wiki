@@ -3,6 +3,13 @@ title: Pure Proxy Accounts
 description: Discover pure proxy accounts in Polkadot, their unique features, security benefits, and use cases for efficient account management.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Create a Pure Proxy](how-to/create-pure-proxy.md)
+<!-- how-to-guides -->
+
 Pure proxies are very different from other proxy types. So far, the proxies we have described are
 _existing accounts_ assigned as proxies by a primary account. These proxies act on behalf of the
 primary account, reducing the exposure of the primary account's private key. Remember, the more

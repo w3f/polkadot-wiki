@@ -7,7 +7,7 @@ description: Learn how to create, manage, and use proxy accounts on Polkadot-JS 
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -45,12 +45,12 @@ account. The videos below contain more information about using proxies.
 ## Creating Proxy with Polkadot-JS
 
 To create a proxy account with Polkadot-JS read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
+[this support article](how-to/create-proxy-account.md).
 
 ## Removing Proxy with Polkadot-JS
 
 Read the section "Removing Proxies" on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account)
+[this support page](how-to/create-proxy-account.md)
 to learn how to remove proxies.
 
 ## View your Proxy on Polkadot-JS

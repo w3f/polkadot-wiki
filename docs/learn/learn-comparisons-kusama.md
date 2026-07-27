@@ -3,13 +3,20 @@ title: Polkadot vs. Kusama
 description: Compare Polkadot and Kusama, their priorities, governance, and use cases for blockchain experimentation and stability.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [Polkadot and Kusama — What's the Difference?](how-to/polkadot-vs-kusama.md)
+<!-- how-to-guides -->
+
 Although they are like cousins and share many parts of their code, Polkadot and Kusama are
 independent, standalone networks with different priorities. Kusama is wild and fast, and great for
 bold experimentation and early-stage deployment. Polkadot is more conservative, prioritizing
 stability and dependability. Cousins have their differences after all.
 
 !!!info
-    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
+    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this support article](how-to/polkadot-vs-kusama.md).
 
 ## Cost and Speed
 

@@ -3,10 +3,17 @@ title: Protect Yourself from Scams
 description: Learn how to safeguard your crypto assets from scams and hacks with essential tips and guidelines for staying secure in the Polkadot ecosystem.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [What to Do If You Fell Victim to a Scam or Hack](../learn/how-to/scam-or-hack-recovery.md)
+<!-- how-to-guides -->
+
 Scams and hacks are an unfortunate reality of the crypto industry. It's important to stay alert and
 protect yourself and your non-refundable crypto assets from scammers and hackers. If you ever feel
 you have been the target of such an attempt or are currently targeted, please contact
-[Polkadot Support](https://support.polkadot.network).
+[Polkadot Support](https://docs.polkadot.com/get-support/).
 
 ## DISCLAIMER: Key Security
 
@@ -29,7 +36,7 @@ share these with anyone, they can access your account and execute any transactio
 </div>
 
 !!!info
-    Visit [this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely) for more information about key security.
+    Visit [this support article](../learn/how-to/store-mnemonic-safely.md) for more information about key security.
 
 ## Essential Rules
 
@@ -48,7 +55,7 @@ share these with anyone, they can access your account and execute any transactio
    one down. Therefore, the user must be diligent to avoid such scams.
 7. If you can, always try to verify new information that you see through an official source, such as
    [Polkadot network's official blog](../general/community.md) or
-   [Polkadot's Official Support](https://support.polkadot.network). Often, scammers will fake a
+   [Polkadot's Official Support](https://docs.polkadot.com/get-support/). Often, scammers will fake a
    websites or blog posts, but if you validate such information through a secondary source, you will
    reduce the chances of being scammed.
 
@@ -116,7 +123,7 @@ Some simple things that you can do to keep your assets and information secure fr
 For any potential scam, always do a background check on the source, i.e., look at any username,
 email, YouTube channel name, URL, etc. If something seems fishy, that's because it likely is. Never
 enter any personal data if you feel the source could be a scam. Feel free to check with
-[Polkadot's official support](https://support.polkadot.network).
+[Polkadot's official support](https://docs.polkadot.com/get-support/).
 
 ### Check twice before sending DOT/KSM
 
@@ -154,6 +161,6 @@ tools.
 In the unfortunate case of having fallen for a scam, nothing can likely be done to recover your
 funds. However, you can still receive help and support. The Polkadot Support Team stands ready to
 help you in this difficult situation. Please check this
-[Support Article](https://support.polkadot.network/support/solutions/articles/65000182668-what-to-do-if-you-fell-victim-to-scam-or-hack)
+[Support Article](../learn/how-to/scam-or-hack-recovery.md)
 for steps you should take to **prevent further loss** and contact Polkadot Support from the same
 page.

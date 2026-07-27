@@ -3,6 +3,19 @@ title: Types of Transactions (a.k.a. Extrinsics)
 description: Learn about the different types of transactions (extrinsics) in Polkadot, including signed, unsigned, and inherent transactions.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Send / Transfer Funds](how-to/transfer-funds.md)
+    - [Why Can't I Transfer My DOT?](how-to/why-cant-i-transfer-dot.md)
+    - [How to Verify What Extrinsic You're Signing](how-to/verify-extrinsic.md)
+    - [How to Sign a Transaction (Signer)](how-to/sign-transaction-signer.md)
+    - [Error 'Frozen' — I Can't Transfer All My DOT](how-to/error-frozen-cant-transfer.md)
+    - [How to Sign a Transaction](how-to/sign-transaction.md)
+    - [How to Send All of Your Funds Out of Your Account](how-to/send-all-funds.md)
+<!-- how-to-guides -->
+
 ## Pallets and Extrinsics
 
 Polkadot is built using [Substrate](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate), a modular framework to efficiently build

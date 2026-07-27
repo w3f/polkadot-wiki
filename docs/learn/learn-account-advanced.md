@@ -3,6 +3,13 @@ title: Advanced Polkadot Accounts
 description: Dive deeper into advanced concepts like address formats, derivation paths, and system accounts in Polkadot.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Create an Account in Subkey](how-to/create-account-subkey.md)
+<!-- how-to-guides -->
+
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
@@ -406,7 +413,7 @@ general users. Follow the instructions in the
 [Subkey documentation](https://docs.polkadot.com/polkadot-protocol/basics/accounts/#using-subkey).
 
 !!!info
-    For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+    For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this support article**](how-to/create-account-subkey.md).
 
 ## Using ENS with DOT/KSM accounts
 

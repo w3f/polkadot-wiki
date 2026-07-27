@@ -3,6 +3,13 @@ title: Account Identity
 description: Learn about on-chain identity, judgements, registrars, and how to manage your identity on Polkadot.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Set Identities for Sub Accounts](how-to/set-subaccount-identities.md)
+<!-- how-to-guides -->
+
 Polkadot provides a naming system that allows participants to add personal information to their
 on-chain account and subsequently ask for verification of this information by
 [registrars](#registrars).
@@ -124,4 +131,4 @@ See [this page](./learn-guides-identity.md#registrars) to learn how to become a 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about account identity](./learn-guides-identity.md).
     
-    See also [these Polkadot-JS support guides](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity).
+    See also [these Polkadot-JS support guides](https://paritytech.github.io/polkadot-support/general-knowledge/identity/polkadot-developer-interface-how-to-set-and-clear-an-identity).

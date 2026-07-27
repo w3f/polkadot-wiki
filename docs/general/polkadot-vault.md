@@ -3,6 +3,22 @@ title: Polkadot Vault (formerly Parity Signer)
 description: Use your old smartphone as an air-gapped wallet with Polkadot Vault, a secure cold storage solution for managing accounts and signing transactions.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [Polkadot Vault — How to Add a New Chain and Update Metadata](../learn/how-to/vault-add-chain-metadata.md)
+    - [Polkadot Vault — How to Add Your Account](../learn/how-to/vault-add-account.md)
+    - [Parity Signer — How to Create an Account](../learn/how-to/parity-signer-create-account.md)
+    - [Parity Signer — How to Restore Your Account](../learn/how-to/parity-signer-restore-account.md)
+    - [Parity Signer — How to Sign a Transaction](../learn/how-to/parity-signer-sign-transaction.md)
+    - [Parity Signer — How to Add Your Account](../learn/how-to/parity-signer-add-account.md)
+    - [Polkadot Vault — How to Create an Account](../learn/how-to/vault-create-account.md)
+    - [Polkadot Vault — How to Restore Your Account](../learn/how-to/vault-restore-account.md)
+    - [Polkadot Vault — How to Sign a Transaction](../learn/how-to/vault-sign-transaction.md)
+    - [Polkadot Vault — How to Create the Same Account on Different Networks](../learn/how-to/vault-same-account-networks.md)
+<!-- how-to-guides -->
+
 !!!info "Rebranding of Parity Signer to Polkadot Vault"
     The Polkadot Vault app rebranding is live on
     [iOS](https://apps.apple.com/us/app/parity-signer/id1218174838) and
@@ -58,7 +74,7 @@ should consider one or the other depending on your user type.
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |              Hardware designed to stay offline and be secure. Certified by French cybersecurity agency [ANSSI](https://cyber.gouv.fr/en).               |                                                                                                                                                                                                                         Hardware not designed to stay offline. The user must switch off all inbound and outbound connections (network, wifi, Bluetooth, NFC).                                                                                                                                                                                                                          |
 |        Hardware is resistant to side-channel attacks via [Secure Element](https://www.ledger.com/academy/security/the-secure-element-whistanding-security-attacks/). The secure element will destroy itself if opened.         |                                                                                                                                                                                                   Although there is no wired connection, side-channel attacks are possible. Without a secure element, the phone can be opened, and the keys will be accessible in its storage unit.                                                                                                                                                                                                    |
-|                                                                                        Accounts derived from one mnemonic seed phrase.                                                                                         | One mnemonic for each account or one mnemonic for multiple accounts via [account derivation](../learn/learn-account-advanced.md#derivation-paths) or default [Substrate address format](../learn/learn-account-advanced.md#address-format). See [this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-#Should-I-use-the-same-account-across-different-chains?) for information on whether to use the same account or different accounts on different chains based on your needs. |
+|                                                                                        Accounts derived from one mnemonic seed phrase.                                                                                         | One mnemonic for each account or one mnemonic for multiple accounts via [account derivation](../learn/learn-account-advanced.md#derivation-paths) or default [Substrate address format](../learn/learn-account-advanced.md#address-format). See [this support article](https://paritytech.github.io/polkadot-support/getting-started/basics/can-i-use-the-same-account-on-polkadot-kusama-and-parachains#should-i-use-the-same-account-across-different-chains) for information on whether to use the same account or different accounts on different chains based on your needs. |
 |                                                                          Easy firmware and application upgrades through the Ledger Live application.                                                                           |                                                                                                                    The app should never be connected to the internet after installation, so the version installed on the phone should not be updated directly. For [app upgrades](#update-the-vault-app), users must factory reset the phone and recover all accounts through seed phrases. Metadata updates for each chain must be done via the QR code fountain.                                                                                                                     |
 |                                                                                          Currently, not all parachains are supported.                                                                                          |                                                                                                                                                                                                   Users can add all parachains either through a third-party provider or if they have the wss endpoint and know [how to extract the chain specifications and metadata](#add-chains).                                                                                                                                                                                                    |
 | Ledger app updates on Ledger Live sometimes lag behind chain updates resulting in users only being able to transact if they [install developer versions](ledger.md) (only for advanced users). |                                                                                                                                                                                  Metadata updates are always available to install once released, either through the third-party provider or manually. In this case, the installation process requires familiarity with working on the command prompt.                                                                                                                                                                                  |
@@ -74,7 +90,7 @@ Set).
 
 For guidelines about how to create an account using Polkadot Vault, see
 [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
+[**this support article**](../learn/how-to/parity-signer-create-account.md).
 
 !!!info
     Importing an account into an extension will not import its private key. Only the public key will be
@@ -85,7 +101,7 @@ For guidelines about how to create an account using Polkadot Vault, see
 ## Restore Account on Polkadot Vault
 
 See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer)
+[**this support page**](../learn/how-to/parity-signer-restore-account.md)
 to learn how to restore your account on the Polkadot Vault app.
 
 ## Signing Transactions Without Metadata
@@ -103,7 +119,7 @@ Signing a transaction using Polkadot Vault remains the same, except the wallet y
 Remember to always check for metadata updates before signing transactions. See
 [this article](https://github.com/w3f/polkadot-wiki/pull/4600/files#diff-5d4d0a286cdc7b1d016ee155f9694dbcddc13f5264490fc1a960c38000baca4d)
 to learn how to sign transactions and
-[this article](https://support.polkadot.network/support/solutions/articles/65000184128-polkadot-vault-how-to-add-a-new-chain-and-update-the-metadata)
+[this article](../learn/how-to/vault-add-chain-metadata.md)
 on how to easily add new chains and do metadata updates using the Vault app.
 
 The procedure to sign transactions with the Vault app is as follows:
@@ -114,7 +130,7 @@ The procedure to sign transactions with the Vault app is as follows:
   about what you will sign. Make sure the information matches what you intended to sign in the first
   place. If something does not feel right, do not sign. Check
   [this page](transaction-attacks.md#corrupted-qr-code-parity-signer) for more information and
-  contact [the Polkadot Support Team](https://support.polkadot.network/support/home).
+  contact [the Polkadot Support Team](https://docs.polkadot.com/get-support/).
 - If the information shown by the Vault app is correct, you can present the QR code (signature) to
   the camera on your laptop to sign for the transaction.
 
@@ -176,7 +192,7 @@ The Vault app contains default chain specs for Polkadot, Kusama, and Westend. It
 more chains via QR-code, and update their metadata by generating your own QR-code fountain in a
 metadata portal similar to that [signed by Parity](https://metadata.parity.io/#/polkadot).
 Alternatively, you can use a third-party provider to add chains and their metadata. Check
-[this article](https://support.polkadot.network/support/solutions/articles/65000184128-polkadot-vault-how-to-add-a-new-chain-and-update-the-metadata)
+[this article](../learn/how-to/vault-add-chain-metadata.md)
 for detailed instructions. If you choose this approach, you should trust the provider you choose.
 
 ---

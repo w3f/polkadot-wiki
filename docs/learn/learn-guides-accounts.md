@@ -7,7 +7,7 @@ description: Comprehensive guides for managing accounts, backups, and security u
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -24,7 +24,7 @@ can be accessed on the
 [ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json))
 is cross-compatible with all the chains that use the similar format. To switch between the accounts
 on different chains, you can follow the guidelines in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
+[this support article](https://paritytech.github.io/polkadot-support/getting-started/basics/can-i-use-the-same-account-on-polkadot-kusama-and-parachains).
 [Subscan has a tool](https://assethub-polkadot.subscan.io/tools/format_transform) you can use to convert your
 address between the different chain formats.
 
@@ -61,7 +61,7 @@ clicking the colorful icon of your account will copy it in that format.
 !!!info
     For guidelines about how to create an account using the Polkadot Extension, see
 [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
-[**this support article**](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
+[**this support article**](how-to/create-polkadot-account.md).
 
 The Polkadot-JS Browser Extension (the Polkadot Extension) provides a reasonable balance of security
 and usability. It provides a separate local mechanism to generate your address and interact with
@@ -77,7 +77,7 @@ than using Parity Signer or other air-gapped approaches.
 ### Account Backup using the Polkadot-JS Browser Extension
 
 See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file)
+[**this support page**](how-to/export-json-backup.md)
 to know how to back up your account.
 
 ### Reset Password using the Polkadot-JS Browser Extension
@@ -106,12 +106,12 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
 ### Restore Account on the Polkadot-JS Browser Extension
 
 !!!info
-    See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension) to learn how to restore your account on the Polkadot-JS UI.
+    See [**this video tutorial**](https://youtu.be/9ohp8k4Hz8c) and [**this support page**](how-to/restore-account-signer.md) to learn how to restore your account on the Polkadot-JS UI.
 
 ## Polkadot-JS UI
 
 !!!info
-    For guidelines about how to create an account using Polkadot-JS UI, see [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180529).
+    For guidelines about how to create an account using Polkadot-JS UI, see [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support article**](how-to/create-account.md).
 
 !!!caution
     If you use this method to create your account and clear your cookies in your browser, your account will be lost forever if you do not [back it up](#restore-account-on-the-polkadot-js-ui). Make sure you store your seed phrase in a safe place or download the account's JSON file if using the Polkadot-JS browser extension. Learn more about account backup and restoration [here](#restore-account-on-the-polkadot-js-ui).
@@ -125,7 +125,7 @@ only be used if all other methods are not feasible.
 ### Account Backup using the Polkadot-JS UI
 
 !!!info
-    See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support page**](https://support.polkadot.network/support/solutions/articles/65000177677-how-to-export-your-json-backup-file) to know how to back up your account.
+    See [**this video tutorial**](https://youtu.be/DNU0p5G0Gqc) and visit [**this support page**](how-to/export-json-backup.md) to know how to back up your account.
 
 ### Reset password using the Polkadot-JS UI
 
@@ -142,7 +142,7 @@ password for an account created on the Polkadot-JS UI (i.e. a non-injected accou
 ### Restore Account on the Polkadot-JS UI
 
 See [**this video tutorial**](https://youtu.be/cBsZqFpBANY) and
-[**this support page**](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui)
+[**this support page**](how-to/restore-account.md)
 to learn how to restore your account on the Polkadot-JS UI.
 
 ### Unlocking Locks
@@ -211,7 +211,7 @@ More in-depth information about the above data can be found in the
 The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
 that lets you generate addresses that contain a specific substring. For the tutorial on how to
 create an account using Vanity Generator, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
+[this support article](how-to/create-vanity-address.md).
 
 ## Encryption Enhancement
 

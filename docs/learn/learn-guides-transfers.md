@@ -7,7 +7,7 @@ description: Step-by-step guides for transferring balances, verifying extrinsics
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -27,14 +27,14 @@ Before signing extrinsics with the Polkadot-JS Browser Extension, always check f
 See [this video tutorial](https://www.youtube.com/watch?v=gbvrHzr4EDY) to learn how to send funds
 using the Polkadot-JS UI and Browser Extension. See also the Polkadot Support pages for detailed
 information about signing transactions using
-[the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993-how-to-sign-a-transaction-directly-on-polkadot-js-ui)
+[the Polkadot-JS UI](how-to/sign-transaction.md)
 and
-[the Polkadot-JS browser extension](https://support.polkadot.network/support/solutions/articles/65000181989).
+[the Polkadot-JS browser extension](how-to/sign-transaction-signer.md).
 
 ### Verify Extrinsics with the Polkadot-JS Browser Extension
 
 Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-extension)
+[**dedicated support page**](how-to/verify-extrinsic.md#verify-an-extrinsic-in-the-polkadot-developer-signer)
 and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=261) tutorial to learn about how to
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
 to you while signing for transactions.
@@ -42,7 +42,7 @@ to you while signing for transactions.
 ### Verify Extrinsics with the Polkadot-JS UI
 
 Visit the
-[**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-in-the-Polkadot-JS-UI)
+[**dedicated support page**](how-to/verify-extrinsic.md#verify-an-extrinsic-in-the-polkadot-developer-interface)
 and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=163) tutorial to learn about how to
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
 to you while signing for transactions.
@@ -50,7 +50,7 @@ to you while signing for transactions.
 ### Keep-Alive Checks with the Polkadot-JS UI
 
 !!!info
-    See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) to learn about keep-alive checks and existential deposit.
+    See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and [**this support page**](how-to/existential-deposit.md) to learn about keep-alive checks and existential deposit.
 
 In Polkadot there are two main ways to transfer funds from one account to another:
 
@@ -61,7 +61,7 @@ In Polkadot there are two main ways to transfer funds from one account to anothe
   drops below the existential deposit your account will be reaped. It may be that you do not want to
   keep the account alive (for example, because you are moving all of your funds to a different
   address). To switch the keep-alive check off visit
-  [this support article](https://support.polkadot.network/support/solutions/articles/65000169248).
+  [this support article](how-to/error-frozen-cant-transfer.md).
 
 !!!info
     Attempting to send less than the [existential deposit](../general/chain-state-values.md) to an account with zero balance will always fail, no matter if the keep-alive check is on or not.
@@ -148,7 +148,7 @@ construct a batch transfer you need to:
 ### Teleporting Tokens using the Polkadot-JS UI
 
 See [this video tutorial](https://youtu.be/3tE9ouub5Tg) and
-[this additional support article](https://support.polkadot.network/support/solutions/articles/65000181119-how-to-teleport-dot-or-ksm-between-statemint-or-statemine)
+[this additional support article](how-to/teleport-dot-ksm.md)
 to learn more about how to teleport tokens.
 
 !!!info
@@ -208,7 +208,7 @@ to check if you have bonded tokens, stop nominating (if necessary) and unbond yo
 ### Checking for Locks
 
 !!!info
-    See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and [this support page](https://support.polkadot.network/support/solutions/articles/65000169437-why-can-t-i-transfer-tokens-) to learn how to check for locks and remove them.
+    See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and [this support page](how-to/why-cant-i-transfer-dot.md) to learn how to check for locks and remove them.
 
 You can also check for locks by querying `system.account(AccountId)` in
 [`Chain state` tab under the `Developer` drop-down menu in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate).

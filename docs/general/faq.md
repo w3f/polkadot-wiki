@@ -5,8 +5,7 @@ description: Find answers to common questions about Polkadot and its ecosystem.
 
 !!!info
     This FAQ focuses on technically oriented questions for users interested in certain aspects of
-    Polkadot. If you have a more general question related to usage, you may search for the answer on our support
-    [Knowledge Base](https://support.polkadot.network/support/home) or the main
+    Polkadot. If you have a more general question related to usage, you may find the answer in the main
     [Polkadot network FAQ](https://polkadot.network/faq).
 
 

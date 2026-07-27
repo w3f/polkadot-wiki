@@ -7,7 +7,7 @@ description: Learn how to propose, vote, and manage referenda in Polkadot OpenGo
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -141,7 +141,7 @@ lock your tokens, the stronger your vote will be weighted. Unwillingness to lock
 that your vote only counts for 10% of the tokens that you hold.
 
 For detailed instructions on how to vote on Polkadot OpenGov referenda, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184120-polkadot-opengov-how-to-vote)
+[this support guide.](how-to/vote-opengov.md)
 
 !!!caution "Polkadot OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)"
     Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead of `democracy.vote` (which only works for the old version of governance).
@@ -170,7 +170,7 @@ will be unlocked after removing votes and unlocking on all the tracks. Similarly
 The `class` is the [OpenGov track](./learn-polkadot-opengov-origins.md) where you have the lock.
 
 For additional instructions, check
-[this support guide.](https://support.polkadot.network/support/solutions/articles/65000184129-polkadot-js-ui-how-to-remove-expired-referenda-locks)
+[this support guide.](how-to/remove-referenda-locks.md)
 
 ## Delegations
 
@@ -182,7 +182,7 @@ For an overview of how delegation works in Polkadot OpenGov, check out the
 [Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
 Instructions to do delegations with Polkadot-JS are also available on the
-[Support Pages](https://support.polkadot.network/support/solutions/articles/65000184776-polkadot-js-ui-how-to-delegate-your-voting-power-on-polkadot-opengov).
+[Support Pages](https://paritytech.github.io/polkadot-support/wallets/polkadot-developer-interface-wallet-polkadot-js-ui/polkadot-developer-interface-how-to-delegate-your-voting-power-on-polkadot-opengov).
 
 ### Delegate Votes
 

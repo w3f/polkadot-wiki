@@ -6,7 +6,7 @@ description: Learn how to create fungible and non-fungible assets on the Asset H
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -25,7 +25,7 @@ Apart from the native token, the assets held on the Asset Hub can be broadly cat
 - Assets without any backing
 
 For additional background on the Asset Hub check out
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181800-what-is-statemint-and-statemine-and-how-do-i-use-them-).
+[this support article](how-to/what-is-asset-hub.md).
 
 ## Creating Assets on the Asset Hub with Polkadot-JS
 

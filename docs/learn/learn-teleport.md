@@ -3,6 +3,13 @@ title: Teleporting Assets
 description: Learn how Polkadot enables secure asset teleportation between parachains and the relay chain using XCM and SPREE modules.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Teleport DOT or KSM](how-to/teleport-dot-ksm.md)
+<!-- how-to-guides -->
+
 One of the main properties that Polkadot brings to the blockchain industry is secure
 interoperability. This interoperability allows for **asset teleportation**, i.e., the process of
 moving assets (such as fungible and non-fungible tokens) between chains (parachains) to use them as

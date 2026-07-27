@@ -3,6 +3,25 @@ title: Polkadot Accounts
 description: Learn about Polkadot accounts, their structure, identity, and how to manage them effectively.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Create a Vanity Address](how-to/create-vanity-address.md)
+    - [How to Export Your JSON Backup File](how-to/export-json-backup.md)
+    - [How to Store Your Mnemonic Phrase & Backup Safely](how-to/store-mnemonic-safely.md)
+    - [How to Restore Your Account (Signer)](how-to/restore-account-signer.md)
+    - [How to Create an Account](how-to/create-account.md)
+    - [How to Receive DOT to My Account](how-to/receive-dot.md)
+    - [How to Restore Your Account](how-to/restore-account.md)
+    - [My Mnemonic Phrase Is Invalid](how-to/mnemonic-invalid.md)
+    - [My Password Is Not Working](how-to/password-not-working.md)
+    - [How to Import a Private Key from Another Wallet](how-to/import-private-key.md)
+    - [How to Change the Style of Your DOT Icon](how-to/change-dot-icon-style.md)
+    - [The Difference Between Accounts and Address Book](how-to/accounts-vs-address-book.md)
+    - [How to Create a Polkadot Account](how-to/create-polkadot-account.md)
+<!-- how-to-guides -->
+
 !!!info "User friendly wallets"
     Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
 
@@ -117,7 +136,7 @@ the unified address format include the following:
 ## Existential Deposit and Reaping
 
 !!!info
-    Visit [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) for more information about existential deposit.
+    Visit [**this support page**](how-to/existential-deposit.md) for more information about existential deposit.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the

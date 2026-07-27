@@ -7,7 +7,7 @@ description: Learn how to use Ledger devices with Polkadot-JS for managing accou
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -30,9 +30,9 @@ being affected by their runtime upgrades.
 You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to
 the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). For instructions on how to import
 Ledger accounts to the Polkadot Extension read through
-[this support article](https://support.polkadot.network/support/solutions/articles/65000175387-how-to-add-your-ledger-through-the-polkadot-extension),
+[this support article](how-to/add-ledger-account-signer.md),
 while if you want to import Ledger accounts to the Polkadot-JS UI, you can consult
-[this other article](https://support.polkadot.network/support/solutions/articles/65000170812-how-to-add-ledger-account-through-the-polkadot-js-ui).
+[this other article](how-to/add-ledger-account.md).
 
 ### Derivation Paths
 
@@ -55,7 +55,7 @@ with those accounts on Ledger Live.
 If your Ledger account is directly imported into the Polkadot-JS UI, you can ask the UI to confirm
 the address on your Ledger device. There are a few methods to check the balance of your Ledger
 account. Check out
-[this support article](https://support.polkadot.network/support/solutions/articles/65000169332-where-can-i-see-the-balance-of-my-account-)
+[this support article](https://paritytech.github.io/polkadot-support/getting-started/general-information/where-can-i-see-the-balance-of-my-polkadot-account)
 for information.
 
 ## Navigating your Account
@@ -68,22 +68,22 @@ balances, visit the [balances page](./learn-account-balances.md).
 ## Sending a Transfer with Ledger Devices
 
 !!!danger "Verifying Extrinsics"
-    Visit the [**dedicated support page**](https://support.polkadot.network/support/solutions/articles/65000179161-how-can-i-verify-what-extrinsic-i-m-signing-#Verify-an-extrinsic-using-Ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to verify extrinsics before signing them. The video will also mention potential attacks that can happen while signing transactions.
+    Visit the [**dedicated support page**](how-to/verify-extrinsic.md#verify-an-extrinsic-using-ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to verify extrinsics before signing them. The video will also mention potential attacks that can happen while signing transactions.
 
 !!!info "Signature error message"
-    If you have already connected your device, but an error message appears before signing a transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano device. Visit [this support page](https://support.polkadot.network/support/solutions/articles/65000181994) for more information about signing transactions using your ledger.
+    If you have already connected your device, but an error message appears before signing a transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano device. Visit [this support page](how-to/ledger-sign-transaction.md) for more information about signing transactions using your ledger.
 
 General instructions to send a transfer can be found on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui).
+[this support page](how-to/transfer-funds.md).
 To sign transactions with your Ledger Nano check
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181994) or
+[this support article](how-to/ledger-sign-transaction.md) or
 see [this video tutorial](https://youtu.be/gbvrHzr4EDY?t=579).
 
 ## Receiving a Transfer
 
 To receive a transfer on the accounts stored on your Ledger device, you must provide the sender
 (i.e., the payer) with your address. To do so, follow the instructions on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000181866-how-to-receive-dot-to-my-account-on-polkadot-js-ui).
+[this support page](how-to/receive-dot.md).
 
 !!!caution "Sharing your account address"
     Before giving anyone your address, ensure it matches what's on the Ledger by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will intercept clicks and clipboard requests and can change your copied value in-flight, so being extra vigilant around copy-paste operations makes sense.
@@ -98,7 +98,7 @@ clicking on your account's avatar icon - this immediately copies your address to
 ## Staking
 
 For staking using Ledger devices, follow the instructions on
-[this support article](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-).
+[this support article](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-how-do-i-stake-nominate-on-polkadot).
 
 ## Ledger Developer Release
 

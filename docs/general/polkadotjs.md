@@ -11,7 +11,7 @@ description: Discover Polkadot-JS tools for developers and power users, includin
       Polkadot website.
     </a>
     If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>

@@ -3,6 +3,16 @@ title: Asset Hub Overview
 description: Learn about fungible tokens, NFTs, and asset management on Polkadot's Asset Hub.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [Asset Hub Migration — What You Must Know](how-to/asset-hub-migration.md)
+    - [What is Asset Hub and How Do I Use It?](how-to/what-is-asset-hub.md)
+    - [How to Transfer Tether (USDT) on Polkadot](how-to/transfer-usdt.md)
+    - [How to Withdraw USDT from Exchanges on Asset Hub](how-to/withdraw-usdt-from-exchanges.md)
+<!-- how-to-guides -->
+
 Assets in the Polkadot ecosystem can be represented on several chains. They can take many forms,
 from a parachain's native token to on-chain representations of off-chain reserves. This page focuses
 on the latter, namely assets issued by a creator (e.g. rights to audited, off-chain reserves held by
@@ -121,7 +131,7 @@ balance of 10 and an account has a balance of 25, then an attempt to transfer 20
 transfer all 25.
 
 !!!info
-    See [this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine) to learn more about transferring assets using the Asset Hub.
+    See [this support article](how-to/transfer-usdt.md) to learn more about transferring assets using the Asset Hub.
 
 ### Destroying an Asset
 

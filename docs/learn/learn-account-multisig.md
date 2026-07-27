@@ -3,6 +3,13 @@ title: Multi-Signature Accounts
 description: Learn how to create and manage multi-signature accounts on Polkadot for enhanced security and group decision-making.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Create and Use a Multisig Account](how-to/create-multisig-account.md)
+<!-- how-to-guides -->
+
 !!!info "Multisig Apps"
     See the [multisig apps](../general/multisig-apps.md) page for more information about user-friendly tools about multi-signature accounts.
 

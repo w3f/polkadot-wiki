@@ -7,7 +7,7 @@ description: Learn how to create treasury proposals, submit referenda, and manag
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -38,7 +38,7 @@ Spreading the word about the proposal's explanation to the community is ultimate
 proposer.
 
 !!!tip "Use Accounts with Verified On-Chain Identity for Treasury Proposals"
-    To ensure legitimacy, it is required that the account linked to the Treasury proposal has an [identity set](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity) and is [verified by an on-chain registrar](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement).
+    To ensure legitimacy, it is required that the account linked to the Treasury proposal has an [identity set](https://paritytech.github.io/polkadot-support/general-knowledge/identity/polkadot-developer-interface-how-to-set-and-clear-an-identity) and is [verified by an on-chain registrar](https://paritytech.github.io/polkadot-support/general-knowledge/identity/how-to-request-and-cancel-identity-judgement).
 
 ## Creating a Treasury Proposal - Spend Local
 

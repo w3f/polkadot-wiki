@@ -7,7 +7,7 @@ description: Learn how to bond tokens, nominate validators, and claim staking re
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -26,7 +26,7 @@ See [this page](./learn-staking.md) to learn about staking.
 ### Bond your Tokens
 
 !!!info "Support Article"
-    Read the support article about [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-).
+    Read the support article about [How to Bond Tokens and Nominate](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-how-do-i-stake-nominate-on-polkadot).
 
 On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
 "Network" menu).
@@ -80,7 +80,7 @@ earn compound interest.
 ### Nominate a Validator
 
 !!!info "Support Article"
-    Read the support article about [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-).
+    Read the support article about [How to Select Validators](how-to/choose-validators.md).
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can be
@@ -109,7 +109,7 @@ more details.
 ### Stop Nominating
 
 !!!info "Support Article"
-    Read the support article about [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-). See also the support article about [How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period).
+    Read the support article about [How to Stop Nominating & Unbond Tokens](how-to/unstake-tokens.md). See also the support article about [How to Rebond Tokens](how-to/rebond-tokens.md).
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them.
