@@ -21,7 +21,7 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 1\. [Create](vault-create-account.md) or [restore](vault-restore-account.md) an account in Polkadot Vault.
 
-2\. Open the [Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window".
+2\. Open the [Polkadot Developer Signer](signer-where-to-download.md) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window".
 
 ![](../../assets/how-to/65016543777.png)
 
@@ -47,7 +47,7 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 !!! warning "IMPORTANT"
 
-    We highly recommend **adding your Polkadot Vault account through the**  [**Polkadot Developer Signer**](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it). It provides better security and convenience.
+    We highly recommend **adding your Polkadot Vault account through the**  [**Polkadot Developer Signer**](signer-where-to-download.md). It provides better security and convenience.
 
 1\. [Create](vault-create-account.md) or [restore](vault-restore-account.md) an account in Polkadot Vault.
 

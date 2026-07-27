@@ -98,7 +98,7 @@ clicking on your account's avatar icon - this immediately copies your address to
 ## Staking
 
 For staking using Ledger devices, follow the instructions on
-[this support article](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-how-do-i-stake-nominate-on-polkadot).
+[this support article](how-to/stake-nominate.md).
 
 ## Ledger Developer Release
 

@@ -21,7 +21,7 @@ When you [create](parity-signer-create-account.md) your accounts in Parity Signe
 
 !!! warning "IMPORTANT"
 
-    For most users, we strongly recommend adding Parity Signer accounts in the **[Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it)**.
+    For most users, we strongly recommend adding Parity Signer accounts in the **[Polkadot Developer Signer](signer-where-to-download.md)**.
 
     Click [here](parity-signer-add-account.md) to see the instructions.
 

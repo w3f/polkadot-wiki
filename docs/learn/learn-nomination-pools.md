@@ -10,6 +10,7 @@ description: Learn about staking through Polkadot's nomination pools, enabling u
     - [Nomination Pool Members & OpenGov Participation](how-to/nomination-pool-opengov-changes.md)
     - [Staking Dashboard — How to Create a Nomination Pool](how-to/create-nomination-pool.md)
     - [Staking Dashboard — How to Join a Nomination Pool](how-to/join-nomination-pool.md)
+    - [Nomination Pools on the Polkadot Developer Interface](how-to/nomination-pools-guide.md)
 <!-- how-to-guides -->
 
 <!-- MessageBox -->
@@ -101,7 +102,7 @@ The current minimum bond to join a pool can be seen
     Depending on how much control you want to give your proxy, you might choose between any > non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions related to the `NominationPool` pallet.
 
 Check the "How to join a pool" section in
-[this support article](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-nomination-pools)
+[this support article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 ### Claim Rewards
@@ -110,7 +111,7 @@ The member can claim their portion of any rewards that have accumulated since th
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
 era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How
 to claim rewards" section in
-[this support article](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-nomination-pools)
+[this support article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 ### Claim Permissions
@@ -146,7 +147,7 @@ At any point in time after joining the pool, a member can start the process of e
 withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship
 with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded
 funds" section in
-[this support article](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-nomination-pools)
+[this support article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 !!!info "Unbonding transaction automatically triggers withdrawal of rewards"

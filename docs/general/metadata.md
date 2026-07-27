@@ -4,6 +4,13 @@ description: Visualization tool for network metadata.
 template: metadata.html
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [How to Update the Metadata (Signer)](../learn/how-to/update-metadata-signer.md)
+<!-- how-to-guides -->
+
 # Metadata Explorer
 
 The `Metadata Explorer` tool helps visualize the metadata of various parachains by retrieving the latest data directly from the chain using the [polkadot-js api](https://docs.polkadot.com/develop/toolkit/api-libraries/polkadot-js-api/). The dropdown below allows you to update the chain selection to visualize. You can search all sub-categories using the provided search field. The information is categorized by the chains Pallets, RPC and Runtime information.

@@ -15,7 +15,7 @@ When you [create](vault-create-account.md) your accounts in Polkadot Vault, you 
 
 !!! warning "IMPORTANT"
 
-    For most users, we strongly recommend adding Polkadot Vault accounts in the **[Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it)**. Click here to see the instructions.
+    For most users, we strongly recommend adding Polkadot Vault accounts in the **[Polkadot Developer Signer](signer-where-to-download.md)**. Click here to see the instructions.
 
 1. Initiate a transaction on the Polkadot Developer Interface and click "Sign via QR" or "Sign and Submit":
 

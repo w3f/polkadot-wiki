@@ -20,6 +20,7 @@ description: Learn about Polkadot accounts, their structure, identity, and how t
     - [How to Change the Style of Your DOT Icon](how-to/change-dot-icon-style.md)
     - [The Difference Between Accounts and Address Book](how-to/accounts-vs-address-book.md)
     - [How to Create a Polkadot Account](how-to/create-polkadot-account.md)
+    - [How to View Your Mnemonic Phrase (Signer)](how-to/view-mnemonic-signer.md)
 <!-- how-to-guides -->
 
 !!!info "User friendly wallets"

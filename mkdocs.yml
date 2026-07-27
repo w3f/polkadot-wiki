@@ -273,6 +273,11 @@ nav:
       - Polkadot-JS Staking Guides:
         - learn/learn-guides-nominator.md
         - learn/learn-guides-staking-pools.md
+        - "How Do I Stake (Nominate) on Polkadot?": learn/how-to/stake-nominate.md
+        - "How to Unstake Your Tokens": learn/how-to/unstake-tokens.md
+        - "How to Change Your Controller Account": learn/how-to/change-controller-account.md
+        - "Nomination Pools on the Polkadot Developer Interface": learn/how-to/nomination-pools-guide.md
+        - "How to Rebond Tokens During the Unbonding Period": learn/how-to/rebond-tokens.md
       - Polkadot-JS Coretime Guides:
         - learn/learn-guides-coretime-swap.md
       - Polkadot-JS OpenGov Guides:
@@ -280,12 +285,36 @@ nav:
         - learn/learn-guides-test-opengov-proposals.md
         - learn/learn-guides-treasury.md
         - learn/learn-guides-bounties.md
+        - "How to Vote on Polkadot OpenGov": learn/how-to/vote-opengov.md
+        - "How to Participate in Polkadot OpenGov": learn/how-to/opengov-participate.md
+        - "How to Delegate Your Voting Power on Polkadot OpenGov": learn/how-to/delegate-voting-power.md
+        - "How to Remove Expired Referenda Locks": learn/how-to/remove-referenda-locks.md
       - Polkadot-JS Asset Hub Guides:
         - learn/learn-guides-assets-create.md
         - learn/learn-guides-asset-conversion.md
       - Polkadot-JS Bridge Hub Guides:
         - learn/learn-guides-DOT-KSM-bridge.md
       - Polkadot-JS Claims Guides: learn/learn-guides-claims.md
+      - Polkadot-JS How-To:
+        - "How to Create an Account": learn/how-to/create-account.md
+        - "How to Restore Your Account": learn/how-to/restore-account.md
+        - "How to Receive DOT to My Account": learn/how-to/receive-dot.md
+        - "How to Import a Private Key from Another Wallet": learn/how-to/import-private-key.md
+        - "The Difference Between Accounts and Address Book": learn/how-to/accounts-vs-address-book.md
+        - "How to Switch Network Nodes": learn/how-to/switch-network-nodes.md
+        - "How to Send / Transfer Funds": learn/how-to/transfer-funds.md
+        - "How to Send All of Your Funds Out of Your Account": learn/how-to/send-all-funds.md
+        - "How to Transfer Tether (USDT) on Polkadot": learn/how-to/transfer-usdt.md
+        - "How to Teleport DOT or KSM": learn/how-to/teleport-dot-ksm.md
+        - "How to Sign a Transaction": learn/how-to/sign-transaction.md
+        - "How to Set Identities for Sub Accounts": learn/how-to/set-subaccount-identities.md
+        - "How to Set and Clear an Identity": learn/how-to/set-clear-identity.md
+        - "How to Add Your Account from Parity Signer": learn/how-to/parity-signer-add-account.md
+        - "How to Restore Your Account (Signer)": learn/how-to/restore-account-signer.md
+        - "How to Sign a Transaction (Signer)": learn/how-to/sign-transaction-signer.md
+        - "Where to Download the Polkadot Developer Signer": learn/how-to/signer-where-to-download.md
+        - "How to View Your Mnemonic Phrase (Signer)": learn/how-to/view-mnemonic-signer.md
+        - "How to Update the Metadata (Signer)": learn/how-to/update-metadata-signer.md
     - Other Guides:
       - learn/learn-guides-ledger.md
       - learn/learn-guides-vault.md
@@ -294,44 +323,27 @@ nav:
     - How-To Guides:
       - Accounts & Wallets:
         - "How to Create a Vanity Address": learn/how-to/create-vanity-address.md
-        - "How to Set Identities for Sub Accounts": learn/how-to/set-subaccount-identities.md
         - "How to Create a Proxy Account": learn/how-to/create-proxy-account.md
         - "How to Create a Pure Proxy": learn/how-to/create-pure-proxy.md
         - "How to Create an Account in Subkey": learn/how-to/create-account-subkey.md
         - "How to Create and Use a Multisig Account": learn/how-to/create-multisig-account.md
         - "How to Export Your JSON Backup File": learn/how-to/export-json-backup.md
         - "How to Store Your Mnemonic Phrase & Backup Safely": learn/how-to/store-mnemonic-safely.md
-        - "How to Restore Your Account (Signer)": learn/how-to/restore-account-signer.md
-        - "How to Create an Account": learn/how-to/create-account.md
-        - "How to Receive DOT to My Account": learn/how-to/receive-dot.md
-        - "How to Restore Your Account": learn/how-to/restore-account.md
         - "My Mnemonic Phrase Is Invalid": learn/how-to/mnemonic-invalid.md
         - "My Password Is Not Working": learn/how-to/password-not-working.md
-        - "How to Import a Private Key from Another Wallet": learn/how-to/import-private-key.md
         - "How to Change the Style of Your DOT Icon": learn/how-to/change-dot-icon-style.md
-        - "The Difference Between Accounts and Address Book": learn/how-to/accounts-vs-address-book.md
         - "How to Create a Polkadot Account": learn/how-to/create-polkadot-account.md
-        - "How to Switch Network Nodes": learn/how-to/switch-network-nodes.md
       - Transactions:
-        - "How to Send / Transfer Funds": learn/how-to/transfer-funds.md
-        - "How to Teleport DOT or KSM": learn/how-to/teleport-dot-ksm.md
         - "Why Can't I Transfer My DOT?": learn/how-to/why-cant-i-transfer-dot.md
         - "How to Verify What Extrinsic You're Signing": learn/how-to/verify-extrinsic.md
-        - "How to Sign a Transaction (Signer)": learn/how-to/sign-transaction-signer.md
         - "Error 'Frozen' — I Can't Transfer All My DOT": learn/how-to/error-frozen-cant-transfer.md
-        - "How to Sign a Transaction": learn/how-to/sign-transaction.md
-        - "How to Transfer Tether (USDT) on Polkadot": learn/how-to/transfer-usdt.md
         - "How to Withdraw USDT from Exchanges on Asset Hub": learn/how-to/withdraw-usdt-from-exchanges.md
-        - "How to Send All of Your Funds Out of Your Account": learn/how-to/send-all-funds.md
       - Staking:
         - "Nomination Pool Members & OpenGov Participation": learn/how-to/nomination-pool-opengov-changes.md
         - "Staking Dashboard — How to Stake Your DOT": learn/how-to/stake-your-dot.md
         - "How to Choose Validators": learn/how-to/choose-validators.md
-        - "How to Unstake Your Tokens": learn/how-to/unstake-tokens.md
         - "Staking Dashboard — How to Create a Nomination Pool": learn/how-to/create-nomination-pool.md
         - "Staking Dashboard — How to Join a Nomination Pool": learn/how-to/join-nomination-pool.md
-        - "How to Rebond Tokens During the Unbonding Period": learn/how-to/rebond-tokens.md
-        - "How to Change Your Controller Account": learn/how-to/change-controller-account.md
         - "Staking Dashboard — How to Connect Your Account": learn/how-to/connect-account.md
         - "Staking Dashboard — How to Unbond Your Tokens": learn/how-to/unbond-tokens.md
       - Ledger:
@@ -345,15 +357,10 @@ nav:
         - "Parity Signer — How to Create an Account": learn/how-to/parity-signer-create-account.md
         - "Parity Signer — How to Restore Your Account": learn/how-to/parity-signer-restore-account.md
         - "Parity Signer — How to Sign a Transaction": learn/how-to/parity-signer-sign-transaction.md
-        - "Parity Signer — How to Add Your Account": learn/how-to/parity-signer-add-account.md
         - "Polkadot Vault — How to Create an Account": learn/how-to/vault-create-account.md
         - "Polkadot Vault — How to Restore Your Account": learn/how-to/vault-restore-account.md
         - "Polkadot Vault — How to Sign a Transaction": learn/how-to/vault-sign-transaction.md
         - "Polkadot Vault — How to Create the Same Account on Different Networks": learn/how-to/vault-same-account-networks.md
-      - OpenGov:
-        - "How to Remove Expired Referenda Locks": learn/how-to/remove-referenda-locks.md
-        - "How to Vote on Polkadot OpenGov": learn/how-to/vote-opengov.md
-        - "How to Participate in Polkadot OpenGov": learn/how-to/opengov-participate.md
       - Concepts & Essentials:
         - "Asset Hub Migration — What You Must Know": learn/how-to/asset-hub-migration.md
         - "What is Asset Hub and How Do I Use It?": learn/how-to/what-is-asset-hub.md

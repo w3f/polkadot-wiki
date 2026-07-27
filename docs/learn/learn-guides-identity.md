@@ -31,7 +31,7 @@ website, Twitter handle, Riot handle, etc. along with some extra, custom fields 
 like attestations (see [Judgements](./learn-identity.md#judgements)).
 
 !!!info "Instructions for setting and clearing Identities"
-    The procedure to set and clear identities is explained in detail in this support article - [How to set and clear an Identity](https://paritytech.github.io/polkadot-support/general-knowledge/identity/polkadot-developer-interface-how-to-set-and-clear-an-identity)
+    The procedure to set and clear identities is explained in detail in this support article - [How to set and clear an Identity](how-to/set-clear-identity.md)
 
 !!!note The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](./learn-identity.md#sub-identities) to the Ledger stash.
 
@@ -80,7 +80,7 @@ automatically loaded.
 ## Clearing and Killing an Identity
 
 !!!info
-    Visit the section "Clear an Identity" on [this support article](https://paritytech.github.io/polkadot-support/general-knowledge/identity/polkadot-developer-interface-how-to-set-and-clear-an-identity) for guidelines about clearing identities.
+    Visit the section "Clear an Identity" on [this support article](how-to/set-clear-identity.md) for guidelines about clearing identities.
 
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.

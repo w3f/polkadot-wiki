@@ -11,7 +11,7 @@ When sending an extrinsic, whether it is to transfer funds or take some other ac
 
 ### Verify an extrinsic in the Polkadot Developer Signer
 
-The [Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it) is your gateway to the Web 3.0 Polkadot ecosystem, as it can connect to many compatible apps and websites. Because of that, it is essential that you verify your extrinsics before signing them, especially when interacting with a new site or app.
+The [Polkadot Developer Signer](signer-where-to-download.md) is your gateway to the Web 3.0 Polkadot ecosystem, as it can connect to many compatible apps and websites. Because of that, it is essential that you verify your extrinsics before signing them, especially when interacting with a new site or app.
 
 When you are about to issue an extrinsic, a pop-up window will appear, asking you to sign the extrinsic with the selected account. In this window, you can see what you are signing. Let's review the window, following from top to down:
 

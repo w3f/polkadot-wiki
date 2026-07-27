@@ -12,7 +12,7 @@ description: "Learn how to restore your Polkadot account either from your JSON f
 
 In this article, you will learn how to restore your Polkadot account either from your mnemonic phrase, your JSON backup file, or a raw private key in the Polkadot Developer Interface.
 
-If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it).
+If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](signer-where-to-download.md).
 
 !!! warning "IMPORTANT"
 

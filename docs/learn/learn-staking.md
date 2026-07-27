@@ -11,6 +11,7 @@ description: Overview of staking and Nominated Proof-of-Stake (NPoS) in Polkadot
     - [How to Unstake Your Tokens](how-to/unstake-tokens.md)
     - [Staking Dashboard — How to Connect Your Account](how-to/connect-account.md)
     - [Staking Dashboard — How to Unbond Your Tokens](how-to/unbond-tokens.md)
+    - [How Do I Stake (Nominate) on Polkadot?](how-to/stake-nominate.md)
 <!-- how-to-guides -->
 
 !!!tip "New to Staking?"
@@ -181,7 +182,7 @@ nominator [guide](learn-nominator.md) to understanding your responsibilities as 
 
 If you want to become a nominator, see [this](../learn/learn-nominator.md) guide. If you are a
 beginner and would like to securely stake your tokens using the Polkadot-JS UI, refer to
-[this](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-how-do-i-stake-nominate-on-polkadot)
+[this](how-to/stake-nominate.md)
 support article. The tutorial presented in the support article is demonstrated on Polkadot, but the
 procedure is the same for Kusama.
 

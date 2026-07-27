@@ -10,6 +10,7 @@ description: Dive into Polkadot OpenGov, its decentralized governance model, ref
     - [How to Remove Expired Referenda Locks](how-to/remove-referenda-locks.md)
     - [How to Vote on Polkadot OpenGov](how-to/vote-opengov.md)
     - [How to Participate in Polkadot OpenGov](how-to/opengov-participate.md)
+    - [How to Delegate Your Voting Power on Polkadot OpenGov](how-to/delegate-voting-power.md)
 <!-- how-to-guides -->
 
 <!-- MessageBox -->

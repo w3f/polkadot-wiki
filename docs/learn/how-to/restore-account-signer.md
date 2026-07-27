@@ -23,7 +23,7 @@ In this article, you will learn how to restore your Polkadot account in the Polk
 
 4. The extension recognizes all known Polkadot scams and alerts you when you try to visit a known scam site. This will help you protect yourself and your funds.
 
-If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it).
+If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](signer-where-to-download.md).
 
 !!! tip "GOOD TO KNOW"
 
@@ -33,7 +33,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 ### Restore from your 12-word mnemonic phrase
 
-1\. Open the [Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it) and click on the "plus (+)" sign on the top right. Then select "Import account from pre-existing seed".
+1\. Open the [Polkadot Developer Signer](signer-where-to-download.md) and click on the "plus (+)" sign on the top right. Then select "Import account from pre-existing seed".
 
 ![](../../assets/how-to/65001747786.png)
 

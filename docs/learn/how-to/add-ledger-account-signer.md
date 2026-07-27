@@ -26,7 +26,7 @@ The Generic Polkadot app allows you to operate on any network using the account 
 
 4. The extension recognizes all known Polkadot scams and alerts you when you try to visit a known scam site. This will help you protect yourself and your funds.
 
-If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it).
+If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](signer-where-to-download.md).
 
 !!! tip "GOOD TO KNOW"
 

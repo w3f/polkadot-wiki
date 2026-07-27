@@ -26,7 +26,7 @@ See [this page](./learn-staking.md) to learn about staking.
 ### Bond your Tokens
 
 !!!info "Support Article"
-    Read the support article about [How to Bond Tokens and Nominate](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-how-do-i-stake-nominate-on-polkadot).
+    Read the support article about [How to Bond Tokens and Nominate](how-to/stake-nominate.md).
 
 On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
 "Network" menu).

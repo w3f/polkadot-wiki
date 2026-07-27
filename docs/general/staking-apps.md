@@ -11,7 +11,8 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
 - [PAPI Staking Dashboard](#papi-staking-dashboard)
 - [NOMI](#nomi)
-- [SubWallet Earning](#subwallet-ear[Polkadot Staking Dashboard](https://staking.polkadot.cloud/) is a Web3 application for native, non-custodial [staking](../learn/learn-staking.md) on Polkadot Hub.This section covers the official Polkadot Staking Dashboard for native, non-custodial staking on Polkadot Hub.[Polkadot Staking Dashboard](https://staking.polkadot.cloud/) is a Web3 application for native, non-custodial [staking](../learn/learn-staking.md) on Polkadot Hub.ning)
+- [SubWallet Earning](#subwallet-earning)
+- [Polkadot Staking Dashboard](https://staking.polkadot.cloud/) is a Web3 application for native, non-custodial [staking](../learn/learn-staking.md) on Polkadot Hub.
 
 ## Polkadot Staking Dashboard
 

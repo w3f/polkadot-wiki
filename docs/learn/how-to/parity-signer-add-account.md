@@ -17,7 +17,7 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 1\. [Create](parity-signer-create-account.md) or [restore](parity-signer-restore-account.md) an account in Parity Signer.
 
-2\. Open the [Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window".
+2\. Open the [Polkadot Developer Signer](signer-where-to-download.md) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window".
 
 ![](../../assets/how-to/65012721702.png)
 
@@ -37,7 +37,7 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 !!! warning "IMPORTANT"
 
-    We highly recommend **adding your Parity Signer account through the**[**Polkadot Developer Signer**](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it). It provides better security and convenience.
+    We highly recommend **adding your Parity Signer account through the**[**Polkadot Developer Signer**](signer-where-to-download.md). It provides better security and convenience.
 
 1\. [Create](parity-signer-create-account.md) or [restore](parity-signer-restore-account.md) an account in Parity Signer.
 

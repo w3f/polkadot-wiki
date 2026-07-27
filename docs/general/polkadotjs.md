@@ -3,6 +3,13 @@ title: Polkadot-JS Guides
 description: Discover Polkadot-JS tools for developers and power users, including UI, extension, API, and phishing protection.
 ---
 
+<!-- how-to-guides -->
+!!!tip "Step-by-step how-to guides"
+    Follow these guides to put this into practice:
+
+    - [Where to Download the Polkadot Developer Signer](../learn/how-to/signer-where-to-download.md)
+<!-- how-to-guides -->
+
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>

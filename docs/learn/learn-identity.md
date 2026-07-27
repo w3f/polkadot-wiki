@@ -8,6 +8,7 @@ description: Learn about on-chain identity, judgements, registrars, and how to m
     Follow these guides to put this into practice:
 
     - [How to Set Identities for Sub Accounts](how-to/set-subaccount-identities.md)
+    - [How to Set and Clear an Identity](how-to/set-clear-identity.md)
 <!-- how-to-guides -->
 
 Polkadot provides a naming system that allows participants to add personal information to their
@@ -131,4 +132,4 @@ See [this page](./learn-guides-identity.md#registrars) to learn how to become a 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about account identity](./learn-guides-identity.md).
     
-    See also [these Polkadot-JS support guides](https://paritytech.github.io/polkadot-support/general-knowledge/identity/polkadot-developer-interface-how-to-set-and-clear-an-identity).
+    See also [these Polkadot-JS support guides](how-to/set-clear-identity.md).

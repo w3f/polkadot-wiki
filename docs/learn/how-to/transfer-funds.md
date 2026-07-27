@@ -10,7 +10,7 @@ description: "In order to withdraw DOT and send funds out of your account on the
 
     Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options).
 
-Whether your account is in the [Polkadot Developer Signer](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-signer-where-to-download-it) or created/added directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), you'll need to use the Polkadot Developer Interface to send funds or issue any extrinsic. The Polkadot Developer Signer is an account manager, not a wallet, so it requires a UI to interact with.
+Whether your account is in the [Polkadot Developer Signer](signer-where-to-download.md) or created/added directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), you'll need to use the Polkadot Developer Interface to send funds or issue any extrinsic. The Polkadot Developer Signer is an account manager, not a wallet, so it requires a UI to interact with.
 
 * * *
 
