@@ -149,7 +149,7 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
     ![dashboard-permissionlessPoolClaims](../../assets/dashboard-permissionlessPoolClaims.png)
 
     !!!info
-        For more information about how-to update your claim permissions with the staking dashboard see [this support article](https://paritytech.github.io/polkadot-support/staking/nomination-pools/staking-dashboard-how-to-claim-nomination-pool-rewards#permissionless-claiming).
+        For more information about how-to update your claim permissions with the staking dashboard see [this support article](../../learn/how-to/claim-pool-rewards.md#permissionless-claiming).
 
     - Leave the pool and unbond all the funds in the pool.
 

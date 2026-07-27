@@ -12,7 +12,7 @@ _Polkadot Vault is the new mobile app developed by Parity that replaces Parity S
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 In this article, you will learn how to add your Polkadot Vault account to the Polkadot Developer Interface. Polkadot Vault is a cold-storage account manager app, you need a UI in order to interact with your accounts and issue transactions.
 

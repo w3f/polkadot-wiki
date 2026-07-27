@@ -51,7 +51,7 @@ The following wallets are oriented toward **developers and advanced users** :
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options) and check how to create a Polkadot account with them in the section above.
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md) and check how to create a Polkadot account with them in the section above.
 
 No matter the [type](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-interface-what-are-the-different-account-types) of your account, we recommend that you add your accounts through a browser extension, as it has many advantages:
 

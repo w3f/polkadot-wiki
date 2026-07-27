@@ -29,7 +29,7 @@ In this example, we use the Westend testnet, but the process is the same for Pol
 
 2\. Navigate to the "[Pool](https://staking.polkadot.cloud/#/pool)" tab and click the "Join Pool" button. The system will show you Polkadot Cloud pool. You can select it if it suits you, or click "Choose Another Pool" to view a different one. Alternatively, you can go to the "[Browse Pools](https://staking.polkadot.cloud/#/pools)" to do your own research and choose the pool that best matches your preferences.
 
-You can learn how to choose the best nomination pool based on your preferences in this [article](https://paritytech.github.io/polkadot-support/staking/nomination-pools/how-do-i-know-which-nomination-pool-to-choose):
+You can learn how to choose the best nomination pool based on your preferences in this [article](choose-nomination-pool.md):
 
 ![](../../assets/how-to/65032600090.png)
 
@@ -73,7 +73,7 @@ On the right side, you can enter the amount you want to bond and choose how rewa
 
   * To switch pools, a member must wait for the unbonding period: 7 days on Kusama and 28 days on Polkadot.
   * Auto-compounding is not enabled by default, but it can be done manually or permissionlessly, depending on your chosen settings.
-  * A member can also partially unbond their staked funds in the pool, with up to 16 partial unbonds allowed. See [this article](https://paritytech.github.io/polkadot-support/staking/nomination-pools/staking-dashboard-how-to-unbond-from-a-nomination-pool) for more details on how to unbond or exit a pool.
+  * A member can also partially unbond their staked funds in the pool, with up to 16 partial unbonds allowed. See [this article](unbond-from-nomination-pool.md) for more details on how to unbond or exit a pool.
   * See this [article](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/nominating-vs-joining-a-nomination-pool) for a comparison between nominating directly and joining a nomination pool.
 
 For guidance on creating or destroying pools, refer to [this article](create-nomination-pool.md).

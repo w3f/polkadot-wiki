@@ -9,6 +9,9 @@ description: Learn about on-chain identity, judgements, registrars, and how to m
 
     - [How to Set Identities for Sub Accounts](how-to/set-subaccount-identities.md)
     - [How to Set and Clear an Identity](how-to/set-clear-identity.md)
+    - [How to Set Your On-Chain Identity on Polkassembly](how-to/set-identity-polkassembly.md)
+    - [How to Use the W3F Registrar Page](how-to/w3f-registrar.md)
+    - [How to Request and Cancel Identity Judgement](how-to/request-cancel-judgement.md)
 <!-- how-to-guides -->
 
 Polkadot provides a naming system that allows participants to add personal information to their

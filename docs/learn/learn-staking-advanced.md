@@ -9,6 +9,7 @@ description: Explore advanced staking concepts in Polkadot, including staking pr
 
     - [How to Rebond Tokens During the Unbonding Period](how-to/rebond-tokens.md)
     - [How to Change Your Controller Account](how-to/change-controller-account.md)
+    - [Staking Dashboard — How to Update Your Controller Account](how-to/dashboard-update-controller.md)
 <!-- how-to-guides -->
 
 !!!tip "New to Staking?"

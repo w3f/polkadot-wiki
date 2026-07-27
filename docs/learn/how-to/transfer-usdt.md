@@ -8,7 +8,7 @@ description: "Learn wow to transfer Tether USDT on Polkadot Asset Hub and Kusama
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for **power users and developers**. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options).
+    Polkadot Developer Interface is a web wallet meant for **power users and developers**. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 Tether (USDT) is now available on Polkadot. You can check their [official announcements](https://tether.to/en/tether-tokens-usdt-live-on-polkadot/).
 

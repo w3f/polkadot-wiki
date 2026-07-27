@@ -8,7 +8,7 @@ description: "In this tutorial, you will learn how to install the Polkadot app o
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 This article explains how to add a Ledger account directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), either using the Generic Polkadot app or the Migration Polkadot app.
 
@@ -20,7 +20,7 @@ The Generic Polkadot app allows you to operate on any network using the account 
 
 However, **we recommend adding your Ledger through the other wallet extensions compatible with Ledger** :
 
-****[Where to Store DOT: Polkadot Wallet Options](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options)****
+****[Where to Store DOT: Polkadot Wallet Options](where-to-store-dot.md)****
 
 * * *
 

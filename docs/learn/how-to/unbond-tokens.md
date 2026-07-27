@@ -30,7 +30,7 @@ In this example, we use Polkadot, but the process is the same for Kusama.
 
 !!! info
 
-    If you change your mind once the unbonding period has be initiated, you can rebond your funds following this guide: "[Staking Dashboard: How to Rebond Your Tokens](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-how-to-rebond-your-tokens)"
+    If you change your mind once the unbonding period has be initiated, you can rebond your funds following this guide: "[Staking Dashboard: How to Rebond Your Tokens](dashboard-rebond-tokens.md)"
 
 3. After the unbonding period has concluded (28 days in Polkadot or 7 days in Kusama), click any of the unlocked padlocks icons to fully withdraw the unbonded tokens.
 

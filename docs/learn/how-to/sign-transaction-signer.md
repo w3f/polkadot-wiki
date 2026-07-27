@@ -17,7 +17,7 @@ When you create your accounts in the Polkadot browser extension, you need a UI t
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options).
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 1\. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/), after you initiate a transaction and click "Sign and Submit," a new window will pop up:
 

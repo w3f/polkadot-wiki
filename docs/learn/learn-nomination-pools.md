@@ -11,6 +11,9 @@ description: Learn about staking through Polkadot's nomination pools, enabling u
     - [Staking Dashboard — How to Create a Nomination Pool](how-to/create-nomination-pool.md)
     - [Staking Dashboard — How to Join a Nomination Pool](how-to/join-nomination-pool.md)
     - [Nomination Pools on the Polkadot Developer Interface](how-to/nomination-pools-guide.md)
+    - [Staking Dashboard — How to Claim Nomination Pool Rewards](how-to/claim-pool-rewards.md)
+    - [Staking Dashboard — How to Unbond from a Nomination Pool](how-to/unbond-from-nomination-pool.md)
+    - [How Do I Know Which Nomination Pool to Choose?](how-to/choose-nomination-pool.md)
 <!-- how-to-guides -->
 
 <!-- MessageBox -->

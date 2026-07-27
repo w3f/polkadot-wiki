@@ -51,7 +51,7 @@ makes sense.
 ## Request Judgement
 
 !!!info "Instructions for requesting and cancelling Identity judgements"
-    The procedure to request and cancel identity judgments is explained in detail in this [support article](https://paritytech.github.io/polkadot-support/general-knowledge/identity/how-to-request-and-cancel-identity-judgement)
+    The procedure to request and cancel identity judgments is explained in detail in this [support article](how-to/request-cancel-judgement.md)
 
 To be judged after submitting your identity information, go to the
 [Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
@@ -70,7 +70,7 @@ automatically loaded.
 ![Chevdor is registrar #1](../assets/identity/16.jpg)
 
 !!!info "Requesting judgement through Web3 Foundation Registrar"
-    If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks. For more information visit [this support article](https://paritytech.github.io/polkadot-support/general-knowledge/identity/how-to-use-the-w3f-registrar-page).
+    If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks. For more information visit [this support article](how-to/w3f-registrar.md).
 
 !!!caution
     The set identity calls go on-chain. Hence, the contact information is available publicly, for both legitimate entities, like registrars or validators, but also scammers who might impersonate them. The strings in the identity fields are good candidates for homograph attacks, as someone could list a fraudulent website (web3.f0undation instead of web3.foundation for example) and still get verified by the registrar (if the checks are automated)!

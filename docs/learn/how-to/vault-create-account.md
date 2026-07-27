@@ -85,7 +85,7 @@ Click "Done" and that's it, your accounts are ready to use!
 
 You can add your Polkadot Vault account to the Polkadot Developer Signer to use it with every compatible wallet listed in the article below:
 
-[Where to Store DOT: Polkadot Wallet Options](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options)
+[Where to Store DOT: Polkadot Wallet Options](where-to-store-dot.md)
 
 !!! warning "IMPORTANT"
 

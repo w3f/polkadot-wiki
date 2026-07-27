@@ -12,7 +12,7 @@ _Discover the new Staking Dashboard that makes staking much easier, and check ou
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/where-to-store-dot-polkadot-wallet-options).
+    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 Nominators help secure the network by bonding their DOT and selecting validators they deem trustworthy to produce blocks. If you want to learn more about the benefits and risks of being a nominator, you can check [this article](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/what-are-the-benefits-and-risks-of-staking-on-polkadot).
 
@@ -60,7 +60,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 5\. Select the amount you want to bond. Make sure you leave a small amount of DOT transferrable in both the stash and the staking proxy. You'll need some transferrable funds to pay transaction fees when changing your nominations, bonding more, or unbonding.
 
-6\. Choose your reward destination. You can auto-compound your staking rewards increasing the amount at stake, or send them to the stash as a free balance, the controller (which will be the [stash account itself](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-how-to-update-your-controller-account)), or any other account.
+6\. Choose your reward destination. You can auto-compound your staking rewards increasing the amount at stake, or send them to the stash as a free balance, the controller (which will be the [stash account itself](dashboard-update-controller.md)), or any other account.
 
 ![](../../assets/how-to/65031344289.png)
 
@@ -82,7 +82,7 @@ For most users, we recommend staking through the new [Staking Dashboard](https:/
 
 If you have a Ledger device, you can also stake using Ledger Live. You can follow the steps in this article to start staking:
 
-[Ledger: How to Use Polkadot and Stake DOT with Ledger Live](https://paritytech.github.io/polkadot-support/ledger/using-ledger/ledger-how-to-use-polkadot-and-stake-dot-with-ledger-live)
+[Ledger: How to Use Polkadot and Stake DOT with Ledger Live](ledger-stake-ledger-live.md)
 
 * * *
 

@@ -12,6 +12,8 @@ description: Overview of staking and Nominated Proof-of-Stake (NPoS) in Polkadot
     - [Staking Dashboard — How to Connect Your Account](how-to/connect-account.md)
     - [Staking Dashboard — How to Unbond Your Tokens](how-to/unbond-tokens.md)
     - [How Do I Stake (Nominate) on Polkadot?](how-to/stake-nominate.md)
+    - [How to See My Staking Rewards](how-to/see-staking-rewards.md)
+    - [Staking Dashboard — How to Rebond Your Tokens](how-to/dashboard-rebond-tokens.md)
 <!-- how-to-guides -->
 
 !!!tip "New to Staking?"
@@ -346,7 +348,7 @@ account. It is also possible to top-up / withdraw some bonded tokens without hav
 staked tokens.
 
 If you wish to know if you received a payout, you will have to check via a block explorer. See
-[the relevant Support page](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/how-can-i-see-my-staking-rewards)
+[the relevant Support page](how-to/see-staking-rewards.md)
 for details. For specific details about validator payouts, please see
 [this guide](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/).
 
