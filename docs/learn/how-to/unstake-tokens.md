@@ -6,7 +6,7 @@ description: "You can decide to unstake and stop being a nominator on Polkadot a
 !!!info "Related Wiki page"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started._
+_Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -18,11 +18,11 @@ You can decide to unbond (unstake) and stop being a nominator at any time. Howev
 
 !!! info
 
-    If you are unbonding because you have less than the minimum amount needed for staking, please [check out these options](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/i-have-less-than-the-minimum-dot-needed-for-staking).
+    If you are unbonding because you have less than the minimum amount needed for staking, please [check out these options](../learn-nomination-pools.md).
 
 !!! warning "IMPORTANT"
 
-    Please ensure that your controller or staking proxy account has enough _transferrable_ balance to pay for the transaction fees when unbonding. Otherwise, you will encounter the [InsufficientBalance](https://paritytech.github.io/polkadot-support/troubleshooting/errors-and-how-to-resolve-them/error-insufficient-balance) error.
+    Please ensure that your controller or staking proxy account has enough _transferrable_ balance to pay for the transaction fees when unbonding. Otherwise, you will encounter the [InsufficientBalance](../../general/maintain-errors.md) error.
 
     Remember that the fee needs to be deducted without the controller or staking proxy account's balance dropping below the [existential deposit](existential-deposit.md). To fix the issue, you can transfer a small amount to your controller or staking proxy account.
 

@@ -70,7 +70,7 @@ It's important to notice that each referendum should be accompanied by contextua
 
     Locks applied to your assets overlap. It means that with the same locked balance you could vote on several referenda at the same time.
 
-    Read our [Support article](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-account-balances-and-locks) for further information of types of balances.
+    Read our [Support article](../learn-account-balances.md) for further information of types of balances.
 
 5\. After setting your vote, click on "Vote." Review the transaction details on the new panel and click "Sign and Submit." And that's it, you just voted on a referendum!
 

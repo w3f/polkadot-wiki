@@ -6,7 +6,7 @@ description: "Learn how to manually withdraw claimable rewards from a nomination
 !!!info "Related Wiki page"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started._
+_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 

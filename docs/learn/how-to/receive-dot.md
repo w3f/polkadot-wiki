@@ -18,7 +18,7 @@ In this article, you'll learn how to copy your account address in order to recei
 
 To receive funds to an account, you need to copy your account address and either share it with the sender or use it yourself, if you are sending funds from an exchange or another one of your accounts.
 
-1\. Go to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page Polkadot Developer Interface. That's where you can see all your accounts, regardless of [type](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-interface-what-are-the-different-account-types).
+1\. Go to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page Polkadot Developer Interface. That's where you can see all your accounts, regardless of [type](../learn-account-advanced.md).
 
 2\. Click on the icon next to your account. This will **copy** the account's address.
 

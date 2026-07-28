@@ -6,7 +6,7 @@ description: "This article gives you short step-by-step instructions on how to s
 !!!info "Related Wiki page"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover the new Staking Dashboard that makes staking much easier, and check our [extensive article list](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started._
+_Discover the new Staking Dashboard that makes staking much easier, and check our [extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -14,7 +14,7 @@ _Discover the new Staking Dashboard that makes staking much easier, and check ou
 
     Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-Nominators help secure the network by bonding their DOT and selecting validators they deem trustworthy to produce blocks. If you want to learn more about the benefits and risks of being a nominator, you can check [this article](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/what-are-the-benefits-and-risks-of-staking-on-polkadot).
+Nominators help secure the network by bonding their DOT and selecting validators they deem trustworthy to produce blocks. If you want to learn more about the benefits and risks of being a nominator, you can check [this article](../learn-staking.md).
 
 This article explains how to stake on Polkadot Developer Interface. If you're interested in other options, check the last section of this article:
 How else can I stake
@@ -28,7 +28,7 @@ How else can I stake
 
     Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is **dynamic** and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot Developer Interface. Please refer to [this referendum](https://polkadot.polkassembly.io/referendum/55) for details.
 
-  * If you are staking **above the dynamic minimum**  amount and still **aren't receiving rewards** , it's possible that your account needs to be re-adjusted by calling an extrinsic. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/i-have-more-than-the-minimum-bonded-but-im-not-getting-rewards).
+  * If you are staking **above the dynamic minimum**  amount and still **aren't receiving rewards** , it's possible that your account needs to be re-adjusted by calling an extrinsic. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
   * If you don't have enough DOT to earn rewards, consider [joining a nomination pool](nomination-pools-guide.md) instead of staking solo.
 
 * * *

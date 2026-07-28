@@ -29,7 +29,7 @@ When you create your accounts in the Polkadot browser extension, you need a UI t
 
 !!! info
 
-    In the transaction details, **the amount is displayed in Planck**. One DOT contains 10,000,000,000 Planck. You can read more about it in our [article](https://paritytech.github.io/polkadot-support/getting-started/advanced-concepts/how-many-planck-are-in-a-dot).
+    In the transaction details, **the amount is displayed in Planck**. One DOT contains 10,000,000,000 Planck. You can read more about it in our [article](../learn-DOT.md#the-planck-unit).
 
 3\. To sign the transaction, enter your account password and click the "Sign the transaction" button:
 

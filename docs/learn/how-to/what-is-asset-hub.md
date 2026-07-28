@@ -51,7 +51,7 @@ With this upgrade, Polkadot Hub enables developers to deploy smart contracts whi
 
 Obtain more information about smart contracts on Polkadot in our documentation:
 
-  * Support article: [Polkadot Hub: Smart Contracts on Polkadot](https://paritytech.github.io/polkadot-support/trending/top-articles/polkadot-hub-smart-contracts-on-polkadot)
+  * Support article: [Polkadot Hub: Smart Contracts on Polkadot](../learn-smart-contracts.md)
   * Polkadot Docs: [Smart Contracts on Polkadot Hub](https://docs.polkadot.com/smart-contracts/overview/)
 
 * * *

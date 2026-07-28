@@ -8,7 +8,7 @@ description: "Learn how you can connect your Polkadot account to the Staking Das
 
 __
 
-The[Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to learn how to navigate its tabs.
+The[Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.
 
 This article explains how you can connect and disconnect your account to the [Staking Dashboard](https://staking.polkadot.cloud/#/overview). We will show how to connect the following types of accounts:
 
@@ -63,7 +63,7 @@ We will also show how to disconnect and remove accounts:
 
 ![](../../assets/how-to/65028445519.png)
 
-Now, you can [start staking](stake-your-dot.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to see what else you can do on the Staking Dashboard.
+Now, you can [start staking](stake-your-dot.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](../../general/dashboards/staking-dashboard.md) to see what else you can do on the Staking Dashboard.
 
 * * *
 
@@ -103,7 +103,7 @@ If you're not using the default account type of 0, click the "Import Another Acc
 
 ![](../../assets/how-to/65028445585.png)
 
-Now you can [start staking](stake-your-dot.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to see what else you can do on the Staking Dashboard.
+Now you can [start staking](stake-your-dot.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](../../general/dashboards/staking-dashboard.md) to see what else you can do on the Staking Dashboard.
 
 If you are a visual learner, check out our video tutorial:
 

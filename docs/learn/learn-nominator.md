@@ -13,7 +13,7 @@ description: Understand the role of nominators in Polkadot's staking ecosystem, 
 !!!tip "New to Staking?"
     Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by reading [this dedicated page](../learn/learn-staking.md).
     
-    Discover the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started.
+    Discover the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that makes staking much easier and check this [extensive article list](../general/dashboards/staking-dashboard.md) to help you get started.
     
     You can now [stake natively with just 1 DOT and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
@@ -214,7 +214,7 @@ Polkadot JS Apps UI prompts the nominator account to rebag or move up by calling
 For guidelines about how to rebag or move your account within a bag, see the following:
 
 - The "Bags List" Section on
-  [this Support Page](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/i-have-more-than-the-minimum-bonded-but-im-not-getting-rewards).
+  [this Support Page](learn-staking-advanced.md).
 - The [Bags List Section](./learn-staking-advanced.md#bags-list) in Advanced Staking Concepts.
 - The [dedicated technical explainer video](https://youtu.be/hIIZRJLrBZA).
 
@@ -285,7 +285,7 @@ you can to reduce the risk of none of your nominated validators being elected.
 
 !!!info "Not receiving Staking Rewards?"
     To explore the possible reasons for not receiving staking rewards, check out the following:
-    - The [Staking FAQ](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/staking-faqs) on the Support Pages.
+    - The [Staking FAQ](learn-staking.md) on the Support Pages.
     - The ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/) Reddit article.
     - The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards) section on the Staking Page.
 

@@ -53,7 +53,7 @@ Your account has now successfully been restored and will appear in the list of a
 
 ![](../../assets/how-to/65001748534.png)
 
-It will also appear in the list of accounts on the Polkadot Developer Interface under the ["extension" category](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-interface-what-are-the-different-account-types) (you may have to refresh the page first before you can see it).
+It will also appear in the list of accounts on the Polkadot Developer Interface under the ["extension" category](../learn-account-advanced.md) (you may have to refresh the page first before you can see it).
 
 * * *
 
@@ -79,7 +79,7 @@ Your account has now been successfully restored, and you will see it in the list
 
 ![](../../assets/how-to/65001748774.png)
 
-You will also see it in the list of accounts on the Polkadot Developer Interface under the ["extension" category](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-interface-what-are-the-different-account-types) (you may have to refresh the page first before you can see it).
+You will also see it in the list of accounts on the Polkadot Developer Interface under the ["extension" category](../learn-account-advanced.md) (you may have to refresh the page first before you can see it).
 
 * * *
 

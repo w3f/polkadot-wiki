@@ -247,10 +247,28 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 
 - **Panel A: The Stats Panel** shows the total number of active validators, all validators currently
   registered (active and inactive), and average commission across all validators.
-- **Panel B: The Validators Panel** shows all validators. You can order them by low/high commission
-  or apply the following filters:
-  - Include only active validators
-  - Exclude validators that have 100% commission, blocked nominations, and have missing identity.
+- **Panel B: The Validators Panel** shows all validators. They can be ordered by either "Performance"
+  or "Commission" (low/high), or filtered by the following criteria:
+  - Include only active validators (excludes validators that are waiting, i.e. not in the current
+    [active set](../../learn/learn-validator.md)). A new set is selected every era, so an active
+    validator is not guaranteed to remain active in future eras.
+  - Exclude validators with 100% commission (nominating these yields no staking rewards).
+  - Exclude validators with blocked nominations (attempting to nominate them causes the transaction
+    to fail, even when nominating others alongside them).
+  - Exclude validators with a missing [on-chain identity](../../learn/learn-identity.md).
+
+For each validator, the panel displays: the account icon and address (replaced by the on-chain
+identity when set, which may or may not be verified by a [registrar](../../learn/learn-identity.md#registrars));
+a small graph of the validator's 30-day performance; a copy icon for its public address; a heart icon
+to add or remove it from the Favorites tab; and a metrics icon that opens detailed statistics such as
+self stake, recent performance, and reward history. Also shown are the estimated Annual Percentage
+Yield (APY), the "Top x%" ranking (displayed when the validator is among the top performers over the
+last 30 days), the commission rate (from 0% to 100%), and the status in the current validator set
+(active or waiting, with the total stake shown for active validators).
+
+The Validators page also includes a **Favorites** tab, which lists the validators marked with the
+heart icon. These can be quickly selected when [nominating](#nominate), and removed by toggling the
+heart icon again.
 
 ## Support
 

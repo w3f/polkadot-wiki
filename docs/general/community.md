@@ -71,6 +71,8 @@ community members. The application we use most often to interact with the Matrix
 
 - [Polkadot Discord](https://polkadot-discord.w3f.tools/) (RECOMMENDED)
 - [Kusama Discord](https://kusama-discord.w3f.tools/)
+- [Polkadot Announcements on Telegram](https://t.me/PolkadotAnnouncements) - official channel for
+  Polkadot announcements.
 
 ### Social media
 

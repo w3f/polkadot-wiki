@@ -44,7 +44,7 @@ Here, you can see:
 
   * **From** : the source of the metadata. Remember only to accept updates from trusted sources.
   * **Chain** : each chain has its own metadata, so you must update it separately for each network you use.
-  * **Decimals** and **Symbol** : this defines the divisibility of the native coin (how many [Planck](https://paritytech.github.io/polkadot-support/getting-started/advanced-concepts/how-many-planck-are-in-a-dot) units make up one coin) and specifies the coin's ticker symbol.
+  * **Decimals** and **Symbol** : this defines the divisibility of the native coin (how many [Planck](../learn-DOT.md#the-planck-unit) units make up one coin) and specifies the coin's ticker symbol.
   * **Upgrade** : the runtime version you used until now and the version you are about to use.
 
 4\. Complete the process by clicking "Yes, do this metadata update".

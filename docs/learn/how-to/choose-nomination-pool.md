@@ -6,13 +6,13 @@ description: "This article will help you choose the Polkadot or Kusama nominatio
 !!!info "Related Wiki page"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started._
+_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
 If you're looking to join a nomination pool on Polkadot or Kusama, this article may help you choose the right pool.
 
-Nomination pools are designed to permissionlessly allow members to pool their funds together and act as a single nominator account. The minimum to join a nomination pool and earn rewards is low: just 1 DOT on Polkadot or 0.00166666665 KSM on Kusama. You can read more about nomination pools in [this article](https://paritytech.github.io/polkadot-support/staking/nomination-pools/staking-dashboard-nomination-pool-features).
+Nomination pools are designed to permissionlessly allow members to pool their funds together and act as a single nominator account. The minimum to join a nomination pool and earn rewards is low: just 1 DOT on Polkadot or 0.00166666665 KSM on Kusama. You can read more about nomination pools in [this article](../../general/dashboards/staking-dashboard.md).
 
 It is important to do your own research before joining a nomination pool. When you join a pool, your funds remain in your custody; however, you trust the pool administration to use them to nominate in your interest. If the pool is not managed effectively, you may not earn the expected rewards. The pool administration's choice of validators can lead to slashing, and you and other pool members may lose funds.
 
@@ -101,7 +101,7 @@ Nomination pools nominate validators for all members of the pool based on some c
 
 #### **Community Reputation**
 
-Nomination pool administrators can be active on their social media and in the ecosystem channels to answer potential questions, attract new members, and boost their reputation. You can join the [Polkadot community](https://paritytech.github.io/polkadot-support/general-knowledge/good-to-know/where-to-find-us-on-social-media) on social media to see what reputation a nomination pool has.
+Nomination pool administrators can be active on their social media and in the ecosystem channels to answer potential questions, attract new members, and boost their reputation. You can join the [Polkadot community](../../general/community.md) on social media to see what reputation a nomination pool has.
 
 * * *
 

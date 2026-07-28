@@ -6,7 +6,7 @@ description: "Ledger Live natively supports Polkadot. Learn how to store your DO
 !!!info "Related Wiki page"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
-_Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started._
+_Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -28,7 +28,7 @@ In this article you'll find video instructions on how to use your Polkadot Ledge
 
     Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is dynamic and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot-JS UI. Please refer to this [referendum](https://polkadot.polkassembly.io/referendum/86) for details.
 
-  * **_If you are staking above the dynamic minimum amount and still aren't receiving rewards_** _,_ it's possible that your account needs to be re-adjusted. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/i-have-more-than-the-minimum-bonded-but-im-not-getting-rewards).
+  * **_If you are staking above the dynamic minimum amount and still aren't receiving rewards_** _,_ it's possible that your account needs to be re-adjusted. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
 
   * **Do not bond ALL your funds**. Leave a small amount _transferable_ in your account, so that you can pay transaction fees from that (changing validators, bonding more or unbonding your tokens are all transactions that will cost a small fee).
 

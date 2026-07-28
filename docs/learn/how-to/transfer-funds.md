@@ -24,7 +24,7 @@ For the receiving account, you can either select an account from the drop-down m
 
 ![](../../assets/how-to/65032390669.png)
 
-3\. Once you have entered all the details, click on the "Make Transfer" button. It will take you to the pop-up window shown below, which will display your expected transaction fees in [milli DOT](https://paritytech.github.io/polkadot-support/getting-started/general-information/how-much-is-a-microdot-and-a-milidot-in-dot).
+3\. Once you have entered all the details, click on the "Make Transfer" button. It will take you to the pop-up window shown below, which will display your expected transaction fees in [milli DOT](../learn-DOT.md#the-planck-unit).
 
 !!! warning "IMPORTANT"
 

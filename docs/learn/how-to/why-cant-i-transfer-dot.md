@@ -12,7 +12,7 @@ There are a couple of reasons why you might not be able to transfer your DOT. In
 
 ### Most common errors when transferring DOT
 
-Your account can have different types of balances, more specifically, transferable, frozen, and reserved. Only the transferable balance can be sent out of your account. Your frozen and reserved balance can't be moved. But it can be made transferable if or when the locks are removed or the reasons for the reserves cease to exist. To learn more about the different types of balance, please check [this article](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-account-balances-and-locks), and to learn how to remove locks and make your balance transferable, please watch the video at the end of the article.
+Your account can have different types of balances, more specifically, transferable, frozen, and reserved. Only the transferable balance can be sent out of your account. Your frozen and reserved balance can't be moved. But it can be made transferable if or when the locks are removed or the reasons for the reserves cease to exist. To learn more about the different types of balance, please check [this article](../learn-account-balances.md), and to learn how to remove locks and make your balance transferable, please watch the video at the end of the article.
 
 If transferring funds resulted in a failed extrinsic, these are the most common errors and how to solve them:
 

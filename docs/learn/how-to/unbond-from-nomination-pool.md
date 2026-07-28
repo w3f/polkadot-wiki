@@ -6,7 +6,7 @@ description: "Learn how to use the Polkadot staking dashboard to lower your bond
 !!!info "Related Wiki page"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to learn how to navigate its tabs.
+The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.
 
 Members can either unbond part of their funds from a nomination pool or exit the pool completely.
 

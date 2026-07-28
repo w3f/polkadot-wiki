@@ -6,7 +6,7 @@ description: "Learn how to stake your DOT (or KSM) using the new Polkadot Stakin
 !!!info "Related Wiki page"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started._
+_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -36,7 +36,7 @@ After [connecting the account](connect-account.md) you want to use as your stash
 
 3\. In the next step, choose the validators you want to nominate. On Polkadot, you can select up to 16 validators, and up to 24 on Kusama.
 
-The staking dashboard gives you several ways to choose your validator. You can generate an "Optimal Selection", pick from "Active Low Commission" or "[From Favorites](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-validators-and-favorites-tabs)", or add them from scratch using the "Manual Selection" option:
+The staking dashboard gives you several ways to choose your validator. You can generate an "Optimal Selection", pick from "Active Low Commission" or "[From Favorites](../../general/dashboards/staking-dashboard.md)", or add them from scratch using the "Manual Selection" option:
 
 ![](../../assets/how-to/65029020533.png)
 
@@ -64,7 +64,7 @@ If all three areas are filled out, like in the image above, you can stake and st
 
 !!! info
 
-    If you want to learn more about these staking limits, please read [this article](https://paritytech.github.io/polkadot-support/trending/top-articles/why-am-i-not-getting-staking-rewards).
+    If you want to learn more about these staking limits, please read [this article](../learn-staking.md).
 
 5\. After entering the amount you want to bond and clicking Continue, you'll see a summary. Review it, and click 'Start Nominating' to stake your funds!
 

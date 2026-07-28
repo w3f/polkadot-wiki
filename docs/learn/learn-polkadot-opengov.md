@@ -21,8 +21,8 @@ description: Dive into Polkadot OpenGov, its decentralized governance model, ref
       balances and locks.
     </a>
     For additional support about Polkadot OpenGov, see the
-    <a href="https://paritytech.github.io/polkadot-support/polkadot-opengov" target="_blank" rel="noopener noreferrer">
-      dedicated support pages.
+    <a href="./learn-guides-polkadot-opengov" target="_blank" rel="noopener noreferrer">
+      Polkadot-JS OpenGov guides.
     </a>
   </p>
   <button class="close-messagebox" aria-label="Close message">✖</button>
@@ -315,6 +315,10 @@ amount earlier than those which use highly privileged classes such as `Root`.
 In Polkadot OpenGov, the proposer suggests the enactment period, but there is also a minimum set for
 each origin track. For example, `root` origin approvals require an extended period because of the
 importance of the changes they bring to the network.
+
+Approved referenda are enforced on-chain automatically. Once the enactment period elapses, the
+runtime executes the proposal's preimage directly, rather than treating the outcome as an advisory
+signal that a third party must choose to implement.
 
 ### Cancelling, Killing & Blacklisting
 

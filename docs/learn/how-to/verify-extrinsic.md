@@ -29,7 +29,7 @@ When you are about to issue an extrinsic, a pop-up window will appear, asking yo
 
 ![](../../assets/how-to/65016225863.png)
 
-In this example, it is a transfer with a "keep-alive" check. In the details, you can see the recipient address and the amount being sent in [Plancks](https://paritytech.github.io/polkadot-support/getting-started/advanced-concepts/how-many-planck-are-in-a-dot).
+In this example, it is a transfer with a "keep-alive" check. In the details, you can see the recipient address and the amount being sent in [Plancks](../learn-DOT.md#the-planck-unit).
 
 6\. **Info** : a short description of the method you are about to use. Click on the arrow to see it:
 
@@ -49,7 +49,7 @@ If you are using the [Polkadot Developer Interface](https://polkadot.js.org/apps
 
 1\. **Method** : the extrinsic you are about to sign. **It is very important!** Click on the arrow to see the details. You will see a short description of the method you are about to use. In this example, it is a transfer with a "keep-alive" check. In the details, you can see the recipient address, its icon, and the amount being sent in DOT. If the recipient account is in your [address book](accounts-vs-address-book.md) or on the Accounts page, you will also see the name you gave to the recipient account.
 
-2\. **Fees** : the fee you will pay from your remaining transferrable balance for broadcasting this transaction. On Polkadot, it is nominated in [milliDOT](https://paritytech.github.io/polkadot-support/getting-started/general-information/how-much-is-a-microdot-and-a-milidot-in-dot).
+2\. **Fees** : the fee you will pay from your remaining transferrable balance for broadcasting this transaction. On Polkadot, it is nominated in [milliDOT](../learn-DOT.md#the-planck-unit).
 
 3\. **Sending from my account** : the account you are using to issue the extrinsic. You can see the account icon, name, and address. If you are making a transfer, this will be the sender.
 

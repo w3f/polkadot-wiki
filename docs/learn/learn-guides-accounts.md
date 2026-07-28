@@ -24,7 +24,7 @@ can be accessed on the
 [ss58 registry repository](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json))
 is cross-compatible with all the chains that use the similar format. To switch between the accounts
 on different chains, you can follow the guidelines in
-[this support article](https://paritytech.github.io/polkadot-support/getting-started/basics/can-i-use-the-same-account-on-polkadot-kusama-and-parachains).
+[this support article](learn-account-advanced.md).
 [Subscan has a tool](https://assethub-polkadot.subscan.io/tools/format_transform) you can use to convert your
 address between the different chain formats.
 

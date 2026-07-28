@@ -25,7 +25,7 @@ When creating an account, the wallet typically generates a mnemonic phrase that 
 
 Even though an account is deterministically generated, its public address can have different representations depending on the network. For example, the same account's public address starts with 1 in Polkadot while in Kusama, it starts with a capital letter. Converting formats between Polkadot-based chains is simple using tools like "[Subscan Transformer](https://polkadot.subscan.io/tools/format_transform)." Learn more about account formats in the article below:
 
-[My Address Starts with “5” or a Capital Letter, Not “1” as It Should.](https://paritytech.github.io/polkadot-support/troubleshooting/errors-and-how-to-resolve-them/my-address-starts-with-5-or-a-capital-letter-not-1-as-it-should)
+[My Address Starts with “5” or a Capital Letter, Not “1” as It Should.](../learn-accounts.md)
 
 * * *
 

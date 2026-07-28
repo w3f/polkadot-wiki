@@ -134,6 +134,19 @@ the unified address format include the following:
 
     To assist, a feature for copying legacy addresses is being implemented to ensure a seamless experience during this interim period.
 
+!!!info "Why an address may start with `5` or a capital letter instead of `1`"
+    Each network has its own address representation of the _same_ public key: Polkadot addresses start
+    with `1`, Kusama addresses start with a capital letter, and the generic Substrate format starts
+    with `5` ([SS58 prefix](./learn-account-advanced.md#for-the-curious-how-prefixes-work) `42`). An
+    address shown starting with `5` or a capital letter is therefore still valid and points to the same
+    account; only the format differs. This commonly happens when a wallet displays the generic Substrate
+    format while an interface shows the network-specific one. Most wallets and interfaces let you choose
+    which format to display - for example, in the [Polkadot-JS UI](./learn-guides-accounts.md) the
+    address prefix can be set to match the connected network from the Settings page. See the
+    [Address Format](./learn-account-advanced.md#address-format) and
+    [address conversion tools](./learn-account-advanced.md#address-conversion-tools) sections for how to
+    convert between formats.
+
 ## Existential Deposit and Reaping
 
 !!!info

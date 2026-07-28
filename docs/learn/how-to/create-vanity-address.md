@@ -55,7 +55,7 @@ You may have noticed that each Polkadot account has an icon like this:
 
 ![](../../assets/how-to/65012654243.png)
 
-These are also called identicons, and it is a visual representation of your account address. Your identicon is generated when you [create a new account on Polkadot](create-polkadot-account.md). It appears next to your address on your Accounts page on Polkadot-JS or a [block explorer](https://paritytech.github.io/polkadot-support/getting-started/general-information/where-can-i-see-the-balance-of-my-polkadot-account).
+These are also called identicons, and it is a visual representation of your account address. Your identicon is generated when you [create a new account on Polkadot](create-polkadot-account.md). It appears next to your address on your Accounts page on Polkadot-JS or a [block explorer](../learn-account-advanced.md).
 
 Although account identicons seem random, generating many accounts increases your chance of finding a recognizable account identicon. Like these:
 

@@ -47,7 +47,7 @@ For the receiving account, you can either select an account from the drop-down m
 
 You can reactivate it anytime by depositing a minimum of 0.01 DOT.
 
-6\. Once you have entered all the details, click on the "Make Transfer" button. It will take you to the pop-up window shown below, which will display your expected transaction fees in [microDOT](https://paritytech.github.io/polkadot-support/getting-started/general-information/how-much-is-a-microdot-and-a-milidot-in-dot):
+6\. Once you have entered all the details, click on the "Make Transfer" button. It will take you to the pop-up window shown below, which will display your expected transaction fees in [microDOT](../learn-DOT.md#the-planck-unit):
 
 ![](../../assets/how-to/65032405293.png)
 
@@ -67,7 +67,7 @@ If you do not see this option, your account either holds exactly 0.01 DOT or is 
 
 To fix this, send a small amount of DOT to this account to increase the transferrable balance so that the transaction fee can be deducted without the transferrable balance dropping below 0.01 DOT. Transaction fees are very low on Polkadot, so increasing the balance to even 0.012 DOT should be sufficient, but to be safe, it's recommended that you have at least 0.02 DOT. You will then see the "Reap the sender" option appear, and you can send your entire balance out.
 
-Another possibility is that your account has other types of balances, like locked or reserved. In that case, the account can't be reaped, so you must manually enter the amount you want to send. You can read about different types of balances [here](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-account-balances-and-locks). Also, the transferable balance can be below 0.01 DOT, but if it's too low, the UI won't let you send out funds.
+Another possibility is that your account has other types of balances, like locked or reserved. In that case, the account can't be reaped, so you must manually enter the amount you want to send. You can read about different types of balances [here](../learn-account-balances.md). Also, the transferable balance can be below 0.01 DOT, but if it's too low, the UI won't let you send out funds.
 
 * * *
 

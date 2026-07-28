@@ -12,9 +12,9 @@ It is essential to  **do your own research** before nominating and to keep monit
 
 If you do not wish to monitor your selections continually, you can consider joining a nomination pool instead of staking solo. These articles can help you with that:
 
-[Staking Dashboard: Nomination Pool Features](https://paritytech.github.io/polkadot-support/staking/nomination-pools/staking-dashboard-nomination-pool-features)
+[Staking Dashboard: Nomination Pool Features](../../general/dashboards/staking-dashboard.md)
 
-[Staking Dashboard: How to Join Nomination Pools](https://paritytech.github.io/polkadot-support/staking/stake-using-polkadot-js-ui/polkadot-developer-interface-nomination-pools)
+[Staking Dashboard: How to Join Nomination Pools](nomination-pools-guide.md)
 
 You can find the information about validators on the [Community](https://staking.polkadot.cloud/#/community) and [Validators](https://staking.polkadot.cloud/#/validators) tabs of the Staking Dashboard.
 
@@ -65,7 +65,7 @@ More information, such as the [era points](../learn-staking.md), elected stake, 
 
 #### **7\. Nominate!**
 
-Now that you've decided on your validators, you can nominate them. [This guide](stake-your-dot.md) can help you with the process, but we also recommend checking all the articles in the [Staking Dashboard: Overview](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) page.
+Now that you've decided on your validators, you can nominate them. [This guide](stake-your-dot.md) can help you with the process, but we also recommend checking all the articles in the [Staking Dashboard: Overview](../../general/dashboards/staking-dashboard.md) page.
 
 * * *
 

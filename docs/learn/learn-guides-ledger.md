@@ -55,7 +55,7 @@ with those accounts on Ledger Live.
 If your Ledger account is directly imported into the Polkadot-JS UI, you can ask the UI to confirm
 the address on your Ledger device. There are a few methods to check the balance of your Ledger
 account. Check out
-[this support article](https://paritytech.github.io/polkadot-support/getting-started/general-information/where-can-i-see-the-balance-of-my-polkadot-account)
+[this support article](learn-account-advanced.md)
 for information.
 
 ## Navigating your Account

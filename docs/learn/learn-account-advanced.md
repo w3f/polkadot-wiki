@@ -41,6 +41,21 @@ byte**, **32 byte**, and **arbitrary raw byte** variants. It also enhances the o
 !!!info
     Many wallets allow you to convert between formats. Stand-alone tools exist as well; you can find them in the [address conversion tools](#address-conversion-tools) section.
 
+### Using the Same Account Across Chains
+
+Because every network format is only a different representation of the same public key, a single
+account can be used on most Substrate-based chains, including Polkadot, Kusama, and their parachains
+(a few chains are exceptions). Only the address representation changes from one chain to the next;
+the underlying key pair and the account's visual identicon remain constant across networks, which is
+a reliable way to confirm that two differently-formatted addresses belong to the same account.
+
+Reusing one account across chains means fewer mnemonic phrases and backup files to safeguard, and it
+can be necessary to manage assets such as crowdloan rewards, which are delivered to the account that
+participated. The trade-off is that a single account becomes a single point of failure: if its
+mnemonic is compromised, funds on _every_ chain are at risk. The shifting address format per network
+can also cause confusion, particularly when a wallet displays the generic Substrate format (starting
+with `5`) while an interface shows each chain's network-specific format.
+
 ### For the Curious: How Prefixes Work
 
 The [SS58 registry](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json) states

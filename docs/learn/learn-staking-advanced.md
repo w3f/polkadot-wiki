@@ -13,7 +13,7 @@ description: Explore advanced staking concepts in Polkadot, including staking pr
 <!-- how-to-guides -->
 
 !!!tip "New to Staking?"
-      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](../general/dashboards/staking-dashboard.md) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 This page is meant to provide advanced information about staking on Polkadot. For a more general
 introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
@@ -110,6 +110,8 @@ information.
       If you want the best placement in the bags list, the recommended order of actions is first to rebag yourself (if possible) and then issue the `putInFrontOf` extrinsic.
 
       `Rebagging` and `putInFrontOf` only matter if you are in the last bag, close to the minimum active bond. If you bond way above that value, you do not need to issue those extrinsics.
+
+      Note that `putInFrontOf` only moves a node ahead of a lighter node within the same bag and therefore does not by itself guarantee rewards: the node it is placed in front of may itself fall outside the electing set. A node bonded above the dynamic minimum active bond should, however, begin earning rewards from the following era.
 
 The bags list can include unlimited nodes, subject to the chain's runtime
 storage. In the current staking system configuration, at most 22500 nominators in the bags list (12500 on Kusama) come out as the electing nominators. See

@@ -6,7 +6,7 @@ description: "Learn how now the nomination pools in Polkadot allow you to partic
 !!!info "Related Wiki page"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-Changes deployed with the [runtime version 1.4.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.4.0) in Polkadot and Kusama allow members of a Polkadot nomination pool to participate in any referendum on [Polkadot OpenGov](https://paritytech.github.io/polkadot-support/polkadot-opengov/how-to-participate-in-polkadot-opengov/polkadot-opengov-how-does-it-work). Now, you can stake as low as 1 DOT and be part of any decision concerning the network's future.
+Changes deployed with the [runtime version 1.4.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.4.0) in Polkadot and Kusama allow members of a Polkadot nomination pool to participate in any referendum on [Polkadot OpenGov](../learn-polkadot-opengov.md). Now, you can stake as low as 1 DOT and be part of any decision concerning the network's future.
 
 As part of these changes, accounts in nomination pools were automatically migrated to the new setup. In most cases, the transition was seamless, so you likely didn’t notice any difference.
 
@@ -23,7 +23,7 @@ If that’s the case, this article is for you.
 
 ### Past and new system
 
-In the past, one of the [differences between staking solo and joining a nomination pool](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/nominating-vs-joining-a-nomination-pool) was that, if you joined a nomination pool, your funds were transferred and locked in a [system account](../learn-account-advanced.md#system-accounts) representing the pool, allowing it to act as a single nominator. Unfortunately, by losing direct ownership of the funds, the pool member also lost the ability to use these locked funds in Polkadot OpenGov.
+In the past, one of the [differences between staking solo and joining a nomination pool](../learn-nomination-pools.md) was that, if you joined a nomination pool, your funds were transferred and locked in a [system account](../learn-account-advanced.md#system-accounts) representing the pool, allowing it to act as a single nominator. Unfortunately, by losing direct ownership of the funds, the pool member also lost the ability to use these locked funds in Polkadot OpenGov.
 
 This system was updated so the nomination pool accounts were transformed into special staking accounts that receive staking delegations from their members. Just like governance delegations, these delegated funds remain in the member's account. This allows nomination pool members to use the funds marked as delegated for other activities, such as participating in Polkadot OpenGov.
 

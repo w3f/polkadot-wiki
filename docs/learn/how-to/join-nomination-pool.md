@@ -8,7 +8,7 @@ description: "Learn how to use the Polkadot staking dashboard to join a nominati
 
 __
 
-The[Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article ](https://paritytech.github.io/polkadot-support/staking/staking-basics/staking-dashboard-overview)to learn how to navigate its tabs.
+The[Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article ](../../general/dashboards/staking-dashboard.md)to learn how to navigate its tabs.
 
 This article explains how to use the [Staking Dashboard](https://staking.polkadot.cloud/#/pool) to join a nomination pool.
 
@@ -74,7 +74,7 @@ On the right side, you can enter the amount you want to bond and choose how rewa
   * To switch pools, a member must wait for the unbonding period: 7 days on Kusama and 28 days on Polkadot.
   * Auto-compounding is not enabled by default, but it can be done manually or permissionlessly, depending on your chosen settings.
   * A member can also partially unbond their staked funds in the pool, with up to 16 partial unbonds allowed. See [this article](unbond-from-nomination-pool.md) for more details on how to unbond or exit a pool.
-  * See this [article](https://paritytech.github.io/polkadot-support/staking/learn-more-about-staking/nominating-vs-joining-a-nomination-pool) for a comparison between nominating directly and joining a nomination pool.
+  * See this [article](../learn-nomination-pools.md) for a comparison between nominating directly and joining a nomination pool.
 
 For guidance on creating or destroying pools, refer to [this article](create-nomination-pool.md).
 

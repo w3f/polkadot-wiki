@@ -17,14 +17,14 @@ This article will guide you through creating a Polkadot account using the battle
 
     The wallets mentioned in this section are highly recommended most users, specially for newcomers. They provide identical functionalities and security standards, but the interface and user experience are tailored for everyday use.
 
-On the [Support website](https://paritytech.github.io/polkadot-support/wallets/), you can find articles about some wallets funded by the Polkadot Treasury and well-regarded by the community, describing some of their basic features like creating an account, receiving and sending funds, staking, etc.
+On the [Support website](where-to-store-dot.md), you can find articles about some wallets funded by the Polkadot Treasury and well-regarded by the community, describing some of their basic features like creating an account, receiving and sending funds, staking, etc.
 
 The following Support articles guide you through the process of creating a Polkadot account using these user-friendly wallets:
 
-  * [Talisman Wallet: How to Create an Account](https://paritytech.github.io/polkadot-support/wallets/talisman/talisman-wallet-how-to-create-an-account)
-  * [Nova Wallet: How to Create an Account](https://paritytech.github.io/polkadot-support/wallets/nova-wallet/nova-wallet-how-to-create-an-account)
-  * [Subwallet: How to Create an Account](https://paritytech.github.io/polkadot-support/wallets/subwallet/subwallet-how-to-create-an-account)
-  * [PolkaGate: How to Create an Account](https://paritytech.github.io/polkadot-support/wallets/polkagate/polkagate-how-to-create-an-account)
+  * [Talisman Wallet: How to Create an Account](https://docs.talisman.xyz/)
+  * [Nova Wallet: How to Create an Account](https://docs.novawallet.io/)
+  * [Subwallet: How to Create an Account](https://docs.subwallet.app/)
+  * [PolkaGate: How to Create an Account](https://docs.polkagate.xyz/)
 
 * * *
 
@@ -53,7 +53,7 @@ The following wallets are oriented toward **developers and advanced users** :
 
     The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md) and check how to create a Polkadot account with them in the section above.
 
-No matter the [type](https://paritytech.github.io/polkadot-support/getting-started/basics/polkadot-developer-interface-what-are-the-different-account-types) of your account, we recommend that you add your accounts through a browser extension, as it has many advantages:
+No matter the [type](../learn-account-advanced.md) of your account, we recommend that you add your accounts through a browser extension, as it has many advantages:
 
   * It provides better security than using the Web UI directly.
   * Your browser won't "forget" your accounts if its cookies are cleared.
@@ -89,7 +89,7 @@ No matter the [type](https://paritytech.github.io/polkadot-support/getting-start
 
 !!! tip "GOOD TO KNOW"
 
-    At this point you can choose to use the account on any chain or allow it for a specific chain only, from the drop-down menu. Read [this article](https://paritytech.github.io/polkadot-support/getting-started/basics/can-i-use-the-same-account-on-polkadot-kusama-and-parachains) for more details.
+    At this point you can choose to use the account on any chain or allow it for a specific chain only, from the drop-down menu. Read [this article](../learn-account-advanced.md) for more details.
 
 7\. Set a password for your account. You will need to enter this password when signing any transaction with your account, like sending funds out. We recommend using only Latin letters, numbers, and symbols. It's important you remember your password. There is no way to recover it later.
 
