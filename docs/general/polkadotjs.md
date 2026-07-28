@@ -3,19 +3,12 @@ title: Polkadot-JS Guides
 description: Discover Polkadot-JS tools for developers and power users, including UI, extension, API, and phishing protection.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [Where to Download the Polkadot Developer Signer](../learn/how-to/signer-where-to-download.md)
-<!-- how-to-guides -->
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
     Polkadot-JS is for developers and power users only. Explore Polkadot with secure and user-friendly wallets listed on the
-    <a href="https://www.polkadot.network/ecosystem/wallets/" target="_blank" rel="noopener noreferrer">
-      Polkadot website.
+    <a href="/learn/how-to/where-to-store-dot/" target="_blank" rel="noopener noreferrer">
+      wallet options page.
     </a>
     If you need help using the Polkadot-JS UI, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
@@ -104,3 +97,9 @@ The [**Polkadot-JS phishing list**](https://polkadot.js.org/phishing/) website i
 curation of malicious actors and operators. The Polkadot-JS extension uses this list to warn a user
 about suspicious URLs and addresses that are part of the list, and automatically blocks the account
 address.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [Where to Download the Polkadot Developer Signer](../learn/how-to/signer-where-to-download.md)
+<!-- how-to-guides -->

@@ -3,16 +3,6 @@ title: Asset Hub Overview
 description: Learn about fungible tokens, NFTs, and asset management on Polkadot's Asset Hub.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [Asset Hub Migration — What You Must Know](how-to/asset-hub-migration.md)
-    - [What is Asset Hub and How Do I Use It?](how-to/what-is-asset-hub.md)
-    - [How to Transfer Tether (USDT) on Polkadot](how-to/transfer-usdt.md)
-    - [How to Withdraw USDT from Exchanges on Asset Hub](how-to/withdraw-usdt-from-exchanges.md)
-<!-- how-to-guides -->
-
 Assets in the Polkadot ecosystem can be represented on several chains. They can take many forms,
 from a parachain's native token to on-chain representations of off-chain reserves. This page focuses
 on the latter, namely assets issued by a creator (e.g. rights to audited, off-chain reserves held by
@@ -204,3 +194,12 @@ For example, if a team wants sign-off from two groups to perform a privileged op
 create a 2-of-2 [**multisig**](./learn-account-multisig.md) from two
 [**pure proxies**](./learn-proxies-pure.md), and then set members from
 each group as proxies to those two accounts.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [Asset Hub Migration — What You Must Know](how-to/asset-hub-migration.md)
+- [What is Asset Hub and How Do I Use It?](how-to/what-is-asset-hub.md)
+- [How to Transfer Tether (USDT) on Polkadot](how-to/transfer-usdt.md)
+- [How to Withdraw USDT from Exchanges on Asset Hub](how-to/withdraw-usdt-from-exchanges.md)
+<!-- how-to-guides -->

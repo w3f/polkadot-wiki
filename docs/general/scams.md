@@ -3,13 +3,6 @@ title: Protect Yourself from Scams
 description: Learn how to safeguard your crypto assets from scams and hacks with essential tips and guidelines for staying secure in the Polkadot ecosystem.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [What to Do If You Fell Victim to a Scam or Hack](../learn/how-to/scam-or-hack-recovery.md)
-<!-- how-to-guides -->
-
 Scams and hacks are an unfortunate reality of the crypto industry. It's important to stay alert and
 protect yourself and your non-refundable crypto assets from scammers and hackers. If you ever feel
 you have been the target of such an attempt or are currently targeted, please contact
@@ -164,3 +157,9 @@ help you in this difficult situation. Please check this
 [Support Article](../learn/how-to/scam-or-hack-recovery.md)
 for steps you should take to **prevent further loss** and contact Polkadot Support from the same
 page.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [What to Do If You Fell Victim to a Scam or Hack](../learn/how-to/scam-or-hack-recovery.md)
+<!-- how-to-guides -->

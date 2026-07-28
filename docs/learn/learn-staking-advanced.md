@@ -3,15 +3,6 @@ title: Advanced Staking Concepts
 description: Explore advanced staking concepts in Polkadot, including staking proxies, bags list, rewards distribution, and staking miner mechanics.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Rebond Tokens During the Unbonding Period](how-to/rebond-tokens.md)
-    - [How to Change Your Controller Account](how-to/change-controller-account.md)
-    - [Staking Dashboard — How to Update Your Controller Account](how-to/dashboard-update-controller.md)
-<!-- how-to-guides -->
-
 !!!tip "New to Staking?"
       Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](../general/dashboards/staking-dashboard.md) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
@@ -406,3 +397,11 @@ resources section below.
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
 - [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Rebond Tokens During the Unbonding Period](how-to/rebond-tokens.md)
+- [How to Change Your Controller Account](how-to/change-controller-account.md)
+- [Staking Dashboard — How to Update Your Controller Account](how-to/dashboard-update-controller.md)
+<!-- how-to-guides -->

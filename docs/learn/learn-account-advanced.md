@@ -3,13 +3,6 @@ title: Advanced Polkadot Accounts
 description: Dive deeper into advanced concepts like address formats, derivation paths, and system accounts in Polkadot.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Create an Account in Subkey](how-to/create-account-subkey.md)
-<!-- how-to-guides -->
-
 ## Address Format
 
 The address format used in Substrate-based chains is SS58. SS58 is a modification of Base-58-check
@@ -532,3 +525,9 @@ for (var key in accounts) {
 
 11. Refresh Polkadot-JS App browser and check the Accounts and Addresses pages. All of your accounts
     and addresses should now be available.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create an Account in Subkey](how-to/create-account-subkey.md)
+<!-- how-to-guides -->

@@ -3,22 +3,6 @@ title: Polkadot Vault (formerly Parity Signer)
 description: Use your old smartphone as an air-gapped wallet with Polkadot Vault, a secure cold storage solution for managing accounts and signing transactions.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [Polkadot Vault — How to Add a New Chain and Update Metadata](../learn/how-to/vault-add-chain-metadata.md)
-    - [Polkadot Vault — How to Add Your Account](../learn/how-to/vault-add-account.md)
-    - [Parity Signer — How to Create an Account](../learn/how-to/parity-signer-create-account.md)
-    - [Parity Signer — How to Restore Your Account](../learn/how-to/parity-signer-restore-account.md)
-    - [Parity Signer — How to Sign a Transaction](../learn/how-to/parity-signer-sign-transaction.md)
-    - [Parity Signer — How to Add Your Account](../learn/how-to/parity-signer-add-account.md)
-    - [Polkadot Vault — How to Create an Account](../learn/how-to/vault-create-account.md)
-    - [Polkadot Vault — How to Restore Your Account](../learn/how-to/vault-restore-account.md)
-    - [Polkadot Vault — How to Sign a Transaction](../learn/how-to/vault-sign-transaction.md)
-    - [Polkadot Vault — How to Create the Same Account on Different Networks](../learn/how-to/vault-same-account-networks.md)
-<!-- how-to-guides -->
-
 !!!info "Rebranding of Parity Signer to Polkadot Vault"
     The Polkadot Vault app rebranding is live on
     [iOS](https://apps.apple.com/us/app/parity-signer/id1218174838) and
@@ -201,4 +185,17 @@ for detailed instructions. If you choose this approach, you should trust the pro
     If you are an advanced user, see the
     [Polkadot-JS guides about Polkadot Vault](../learn/learn-guides-vault.md).
 
+<!-- how-to-guides -->
+## How-to guides
 
+- [Polkadot Vault — How to Add a New Chain and Update Metadata](../learn/how-to/vault-add-chain-metadata.md)
+- [Polkadot Vault — How to Add Your Account](../learn/how-to/vault-add-account.md)
+- [Parity Signer — How to Create an Account](../learn/how-to/parity-signer-create-account.md)
+- [Parity Signer — How to Restore Your Account](../learn/how-to/parity-signer-restore-account.md)
+- [Parity Signer — How to Sign a Transaction](../learn/how-to/parity-signer-sign-transaction.md)
+- [Parity Signer — How to Add Your Account](../learn/how-to/parity-signer-add-account.md)
+- [Polkadot Vault — How to Create an Account](../learn/how-to/vault-create-account.md)
+- [Polkadot Vault — How to Restore Your Account](../learn/how-to/vault-restore-account.md)
+- [Polkadot Vault — How to Sign a Transaction](../learn/how-to/vault-sign-transaction.md)
+- [Polkadot Vault — How to Create the Same Account on Different Networks](../learn/how-to/vault-same-account-networks.md)
+<!-- how-to-guides -->

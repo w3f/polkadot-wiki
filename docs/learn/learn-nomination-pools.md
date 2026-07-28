@@ -3,19 +3,6 @@ title: Nomination Pools
 description: Learn about staking through Polkadot's nomination pools, enabling users to pool tokens and earn rewards with minimal requirements.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [Nomination Pool Members & OpenGov Participation](how-to/nomination-pool-opengov-changes.md)
-    - [Staking Dashboard — How to Create a Nomination Pool](how-to/create-nomination-pool.md)
-    - [Staking Dashboard — How to Join a Nomination Pool](how-to/join-nomination-pool.md)
-    - [Nomination Pools on the Polkadot Developer Interface](how-to/nomination-pools-guide.md)
-    - [Staking Dashboard — How to Claim Nomination Pool Rewards](how-to/claim-pool-rewards.md)
-    - [Staking Dashboard — How to Unbond from a Nomination Pool](how-to/unbond-from-nomination-pool.md)
-    - [How Do I Know Which Nomination Pool to Choose?](how-to/choose-nomination-pool.md)
-<!-- how-to-guides -->
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -257,3 +244,14 @@ following statements are true:
 !!!info "Advanced How-to Guides"
     See [this page](./learn-guides-staking-pools.md#pool-creation-with-polkadot-js) for more information about the lifecycle of nomination pools. The cycle includes creation, upkeep and destruction.
 
+<!-- how-to-guides -->
+## How-to guides
+
+- [Nomination Pool Members & OpenGov Participation](how-to/nomination-pool-opengov-changes.md)
+- [Staking Dashboard — How to Create a Nomination Pool](how-to/create-nomination-pool.md)
+- [Staking Dashboard — How to Join a Nomination Pool](how-to/join-nomination-pool.md)
+- [Nomination Pools on the Polkadot Developer Interface](how-to/nomination-pools-guide.md)
+- [Staking Dashboard — How to Claim Nomination Pool Rewards](how-to/claim-pool-rewards.md)
+- [Staking Dashboard — How to Unbond from a Nomination Pool](how-to/unbond-from-nomination-pool.md)
+- [How Do I Know Which Nomination Pool to Choose?](how-to/choose-nomination-pool.md)
+<!-- how-to-guides -->

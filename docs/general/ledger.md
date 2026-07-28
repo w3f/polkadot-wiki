@@ -3,17 +3,6 @@ title: Using the Polkadot Ledger Apps
 description: Use the Polkadot Ledger Application.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [Ledger — How to Sign a Transaction](../learn/how-to/ledger-sign-transaction.md)
-    - [How to Add a Ledger Account](../learn/how-to/add-ledger-account.md)
-    - [How to Add Your Ledger Account (Signer)](../learn/how-to/add-ledger-account-signer.md)
-    - [Ledger — How to Confirm the Account Address on Your Device](../learn/how-to/ledger-confirm-address.md)
-    - [Ledger — How to Use Polkadot and Stake DOT with Ledger Live](../learn/how-to/ledger-stake-ledger-live.md)
-<!-- how-to-guides -->
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -167,4 +156,12 @@ to learn how to use Polkadot with ledger live.
     If you are an advanced user, see the
     [Polkadot-JS guides about Ledger](../learn/learn-guides-ledger.md).
 
+<!-- how-to-guides -->
+## How-to guides
 
+- [Ledger — How to Sign a Transaction](../learn/how-to/ledger-sign-transaction.md)
+- [How to Add a Ledger Account](../learn/how-to/add-ledger-account.md)
+- [How to Add Your Ledger Account (Signer)](../learn/how-to/add-ledger-account-signer.md)
+- [Ledger — How to Confirm the Account Address on Your Device](../learn/how-to/ledger-confirm-address.md)
+- [Ledger — How to Use Polkadot and Stake DOT with Ledger Live](../learn/how-to/ledger-stake-ledger-live.md)
+<!-- how-to-guides -->

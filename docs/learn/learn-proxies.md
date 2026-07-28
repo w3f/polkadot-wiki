@@ -3,13 +3,6 @@ title: Proxy Accounts
 description: Explore proxy accounts in Polkadot, their types, security benefits, and how they simplify account management and staking operations.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Create a Proxy Account](how-to/create-proxy-account.md)
-<!-- how-to-guides -->
-
 Proxies are helpful because they let you delegate efficiently and add a layer of security. Rather
 than using funds in a single account, smaller accounts with unique roles can complete tasks on
 behalf of the main stash account. Proxies can be _hotter_ than the initial account, which can be
@@ -122,3 +115,9 @@ account has, an additional amount defined by the
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md). You can find information about creating and removing proxies, and more.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create a Proxy Account](how-to/create-proxy-account.md)
+<!-- how-to-guides -->

@@ -3,21 +3,8 @@ title: Staking on Polkadot
 description: Overview of staking and Nominated Proof-of-Stake (NPoS) in Polkadot, including validator selection, rewards, and security mechanisms.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [Staking Dashboard — How to Stake Your DOT](how-to/stake-your-dot.md)
-    - [How to Unstake Your Tokens](how-to/unstake-tokens.md)
-    - [Staking Dashboard — How to Connect Your Account](how-to/connect-account.md)
-    - [Staking Dashboard — How to Unbond Your Tokens](how-to/unbond-tokens.md)
-    - [How Do I Stake (Nominate) on Polkadot?](how-to/stake-nominate.md)
-    - [How to See My Staking Rewards](how-to/see-staking-rewards.md)
-    - [Staking Dashboard — How to Rebond Your Tokens](how-to/dashboard-rebond-tokens.md)
-<!-- how-to-guides -->
-
 !!!tip "New to Staking?"
-    Explore Polkadot with a secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/) and start your staking journey. Discover the [Staking Dashboard](https://staking.polkadot.cloud/) and check this [extensive article list](../general/dashboards/staking-dashboard.md) to help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
+    Explore Polkadot with a secure and user-friendly wallets listed on the [wallet options page](how-to/where-to-store-dot.md) and start your staking journey. Discover the [Staking Dashboard](https://staking.polkadot.cloud/) and check this [extensive article list](../general/dashboards/staking-dashboard.md) to help you get started. The dashboard supports [Ledger](../general/ledger.md) devices natively and does not require an extension or wallet as an interface.
 
 !!!info "Stake through Nomination Pools"
     The minimum amount required to become an active nominator (i.e. [the minimum active bond](../general/chain-state-values.md)) and earn rewards is variable. If you have less tokens than the minimum active bond and still want to participate in staking, you can join the nomination pools with a [minimal bond](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). Check the wiki doc on [nomination pools](learn-nomination-pools.md) for more information.
@@ -460,3 +447,15 @@ long as at least one is active.
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about staking](./learn-guides-nominator.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [Staking Dashboard — How to Stake Your DOT](how-to/stake-your-dot.md)
+- [How to Unstake Your Tokens](how-to/unstake-tokens.md)
+- [Staking Dashboard — How to Connect Your Account](how-to/connect-account.md)
+- [Staking Dashboard — How to Unbond Your Tokens](how-to/unbond-tokens.md)
+- [How Do I Stake (Nominate) on Polkadot?](how-to/stake-nominate.md)
+- [How to See My Staking Rewards](how-to/see-staking-rewards.md)
+- [Staking Dashboard — How to Rebond Your Tokens](how-to/dashboard-rebond-tokens.md)
+<!-- how-to-guides -->

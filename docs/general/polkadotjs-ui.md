@@ -3,13 +3,6 @@ title: Polkadot-JS UI (Wallet)
 description: A comprehensive guide to Polkadot-JS UI, a wallet for developers and power users in the Polkadot ecosystem.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Switch Network Nodes](../learn/how-to/switch-network-nodes.md)
-<!-- how-to-guides -->
-
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
@@ -135,3 +128,9 @@ granular functions such as
 - [Introduction to Polkadot-JS](https://www.youtube.com/watch?v=4EQqwGFV1D8)
 - [Create an account using Polkadot-JS](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 - [Network Explorer on Polkadot-JS UI](https://www.youtube.com/watch?v=g4b4IWR6OrE)
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Switch Network Nodes](../learn/how-to/switch-network-nodes.md)
+<!-- how-to-guides -->

@@ -3,13 +3,6 @@ title: Account Balances
 description: Discover the different types of account balances in Polkadot and Kusama, including free, frozen, and spendable balances.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [What is the Existential Deposit?](how-to/existential-deposit.md)
-<!-- how-to-guides -->
-
 !!!info "Advanced Information"
     
     This section provides advanced details about account balances, targeting developers and power users. 
@@ -199,3 +192,9 @@ Following the previous example, if you:
 You will get a 6x conviction for 24 DOT! See
 [here](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
 for more information.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [What is the Existential Deposit?](how-to/existential-deposit.md)
+<!-- how-to-guides -->

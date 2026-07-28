@@ -3,28 +3,8 @@ title: Polkadot Accounts
 description: Learn about Polkadot accounts, their structure, identity, and how to manage them effectively.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Create a Vanity Address](how-to/create-vanity-address.md)
-    - [How to Export Your JSON Backup File](how-to/export-json-backup.md)
-    - [How to Store Your Mnemonic Phrase & Backup Safely](how-to/store-mnemonic-safely.md)
-    - [How to Restore Your Account (Signer)](how-to/restore-account-signer.md)
-    - [How to Create an Account](how-to/create-account.md)
-    - [How to Receive DOT to My Account](how-to/receive-dot.md)
-    - [How to Restore Your Account](how-to/restore-account.md)
-    - [My Mnemonic Phrase Is Invalid](how-to/mnemonic-invalid.md)
-    - [My Password Is Not Working](how-to/password-not-working.md)
-    - [How to Import a Private Key from Another Wallet](how-to/import-private-key.md)
-    - [How to Change the Style of Your DOT Icon](how-to/change-dot-icon-style.md)
-    - [The Difference Between Accounts and Address Book](how-to/accounts-vs-address-book.md)
-    - [How to Create a Polkadot Account](how-to/create-polkadot-account.md)
-    - [How to View Your Mnemonic Phrase (Signer)](how-to/view-mnemonic-signer.md)
-<!-- how-to-guides -->
-
 !!!info "User friendly wallets"
-    Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+    Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the [wallet options page](how-to/where-to-store-dot.md).
 
 This document covers the basics of accounts in the Polkadot ecosystem. See the
 [Advanced Account](./learn-account-advanced.md) page for more information about accounts such as
@@ -83,7 +63,7 @@ when dealing with non-trivial amounts of funds.
 
 Generating a mnemonic seed on a browser extension or a mobile application will create a hot key or
 hot wallet. Create your Polkadot accounts with a secure and user-friendly wallet listed on the
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+[wallet options page](how-to/where-to-store-dot.md).
 
 Cold keys are generated on special devices such as those provided by [Ledger](../general/ledger.md).
 Additionally, you can generate your account using the [Polkadot Vault](../general/polkadot-vault.md)
@@ -182,3 +162,22 @@ but gets put back when it has the existential deposit.
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about accounts](./learn-guides-accounts.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create a Vanity Address](how-to/create-vanity-address.md)
+- [How to Export Your JSON Backup File](how-to/export-json-backup.md)
+- [How to Store Your Mnemonic Phrase & Backup Safely](how-to/store-mnemonic-safely.md)
+- [How to Restore Your Account (Signer)](how-to/restore-account-signer.md)
+- [How to Create an Account](how-to/create-account.md)
+- [How to Receive DOT to My Account](how-to/receive-dot.md)
+- [How to Restore Your Account](how-to/restore-account.md)
+- [My Mnemonic Phrase Is Invalid](how-to/mnemonic-invalid.md)
+- [My Password Is Not Working](how-to/password-not-working.md)
+- [How to Import a Private Key from Another Wallet](how-to/import-private-key.md)
+- [How to Change the Style of Your DOT Icon](how-to/change-dot-icon-style.md)
+- [The Difference Between Accounts and Address Book](how-to/accounts-vs-address-book.md)
+- [How to Create a Polkadot Account](how-to/create-polkadot-account.md)
+- [How to View Your Mnemonic Phrase (Signer)](how-to/view-mnemonic-signer.md)
+<!-- how-to-guides -->

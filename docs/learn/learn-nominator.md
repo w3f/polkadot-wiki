@@ -3,13 +3,6 @@ title: Nominator
 description: Understand the role of nominators in Polkadot's staking ecosystem, including rewards, risks, and best practices.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Choose Validators](how-to/choose-validators.md)
-<!-- how-to-guides -->
-
 !!!tip "New to Staking?"
     Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). You can learn how staking works by reading [this dedicated page](../learn/learn-staking.md).
     
@@ -366,3 +359,9 @@ almost always see only a single active nomination per era. See the
   nominating on the Kusama canary network.
 - [Stop Being a Nominator (all networks)](./learn-guides-nominator.md#stop-nominating) - Guide on
   stopping nominations and withdrawing tokens.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Choose Validators](how-to/choose-validators.md)
+<!-- how-to-guides -->

@@ -3,13 +3,6 @@ title: Multi-Signature Accounts
 description: Learn how to create and manage multi-signature accounts on Polkadot for enhanced security and group decision-making.
 ---
 
-<!-- how-to-guides -->
-!!!tip "Step-by-step how-to guides"
-    Follow these guides to put this into practice:
-
-    - [How to Create and Use a Multisig Account](how-to/create-multisig-account.md)
-<!-- how-to-guides -->
-
 !!!info "Multisig Apps"
     See the [multisig apps](../general/multisig-apps.md) page for more information about user-friendly tools about multi-signature accounts.
 
@@ -45,3 +38,9 @@ threshold, they will immediately have access to these tokens.
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about multi-signature accounts](./learn-guides-accounts-multisig.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create and Use a Multisig Account](how-to/create-multisig-account.md)
+<!-- how-to-guides -->
