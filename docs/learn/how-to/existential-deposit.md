@@ -3,7 +3,7 @@ title: What is the Existential Deposit?
 description: "On the Polkadot network, an address is only active when it holds a minimum amount, which is called an existential deposit (ED)."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Account Balances](../learn-account-balances.md).
 
 On most Substrate-based chains, an account is only active when it holds a minimum amount of determined assets, currently set at**0.01 DOT** on Polkadot and **0.00000333333 KSM** on Kusama. This minimum amount is called the Existential Deposit (ED).

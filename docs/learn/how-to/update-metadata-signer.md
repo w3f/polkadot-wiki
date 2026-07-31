@@ -3,7 +3,7 @@ title: How to Update the Metadata (Signer)
 description: "A step-by-step guide on how to update the metadata in the Polkadot Developer Signer"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Metadata](../../general/metadata.md).
 
 Every once in a while, when you visit [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts) (Polkadot-JS UI), you may see a counter next to Settings or this warning asking you to apply updates to your extension:

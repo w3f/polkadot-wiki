@@ -3,7 +3,7 @@ title: Parity Signer — How to Add Your Account
 description: "How to add a Parity Signer to the Polkadot Developer Interface to initiate transactions"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
 !!! warning "IMPORTANT"

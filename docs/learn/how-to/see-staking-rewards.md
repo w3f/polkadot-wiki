@@ -3,7 +3,7 @@ title: How to See My Staking Rewards
 description: "View your staking rewards on block explorers like Subscan or Polkascan, or on our new Polkadot staking dashboard."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 _Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._

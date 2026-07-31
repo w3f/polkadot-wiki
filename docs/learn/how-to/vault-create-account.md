@@ -3,7 +3,7 @@ title: Polkadot Vault — How to Create an Account
 description: "Polkadot Vault is the new mobile app that turns your phone into a cold-storage solution for your Polkadot accounts. It's the new and improved Parity Signer."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
 In this article, you will learn how to **create a new account** in Polkadot Vault. If you want to know how to restore an account **originally created in Polkadot Vault or Parity Signer** , please refer to [this article](vault-restore-account.md).

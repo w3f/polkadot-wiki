@@ -124,14 +124,12 @@ See [this page](./learn-guides-identity.md#registrars) to learn how to become a 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about account identity](./learn-guides-identity.md).
     
-    See also [these Polkadot-JS support guides](how-to/set-clear-identity.md).
+    See also [these Polkadot-JS guides](how-to/set-clear-identity.md).
 
 <!-- how-to-guides -->
 ## How-to guides
 
 - [How to Set Identities for Sub Accounts](how-to/set-subaccount-identities.md)
 - [How to Set and Clear an Identity](how-to/set-clear-identity.md)
-- [How to Set Your On-Chain Identity on Polkassembly](how-to/set-identity-polkassembly.md)
-- [How to Use the W3F Registrar Page](how-to/w3f-registrar.md)
 - [How to Request and Cancel Identity Judgement](how-to/request-cancel-judgement.md)
 <!-- how-to-guides -->

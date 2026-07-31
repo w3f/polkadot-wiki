@@ -29,7 +29,7 @@ share these with anyone, they can access your account and execute any transactio
 </div>
 
 !!!info
-    Visit [this support article](../learn/how-to/store-mnemonic-safely.md) for more information about key security.
+    Visit [this article](../learn/how-to/store-mnemonic-safely.md) for more information about key security.
 
 ## Essential Rules
 
@@ -154,7 +154,7 @@ tools.
 In the unfortunate case of having fallen for a scam, nothing can likely be done to recover your
 funds. However, you can still receive help and support. The Polkadot Support Team stands ready to
 help you in this difficult situation. Please check this
-[Support Article](../learn/how-to/scam-or-hack-recovery.md)
+[article](../learn/how-to/scam-or-hack-recovery.md)
 for steps you should take to **prevent further loss** and contact Polkadot Support from the same
 page.
 

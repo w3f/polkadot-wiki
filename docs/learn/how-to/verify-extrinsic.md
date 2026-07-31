@@ -3,7 +3,7 @@ title: How to Verify What Extrinsic You're Signing
 description: "How to verify your Polkadot extrinsics before signing them on the Polkadot Developer Signer, the Polkadot Developer Interface, and on Ledger. Always verify your extrinsics before signing."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 When sending an extrinsic, whether it is to transfer funds or take some other action, verifying the extrinsic's details is always good practice before signing it. Once an extrinsic has been broadcast and added to a block, it is irreversible and too late to correct potential mistakes.

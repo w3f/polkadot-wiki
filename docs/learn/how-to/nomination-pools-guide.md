@@ -3,7 +3,7 @@ title: Nomination Pools on the Polkadot Developer Interface
 description: "Steps on how to join a nomination pool on Polkadot or Kusama."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
 !!! warning "IMPORTANT"

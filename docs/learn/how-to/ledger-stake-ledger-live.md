@@ -3,7 +3,7 @@ title: Ledger — How to Use Polkadot and Stake DOT with Ledger Live
 description: "Ledger Live natively supports Polkadot. Learn how to store your DOT tokens on the Ledger hardware wallet and stake and nominate using Ledger Live."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
 _Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._

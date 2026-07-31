@@ -3,7 +3,7 @@ title: Polkadot Vault — How to Restore Your Account
 description: "Polkadot Vault is the new mobile app that turns your phone into a cold-storage solution for your Polkadot accounts. It's the new and improved Parity Signer."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
 _Polkadot Vault is the new mobile app developed by Parity that replaces Parity Signer. It's redesigned with additional functionality and for a better and more streamlined user experience._

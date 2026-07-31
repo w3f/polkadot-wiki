@@ -3,7 +3,7 @@ title: How to Delegate Your Voting Power on Polkadot OpenGov
 description: "Learn how to delegate your vote in Polkadot democracy from the Polkadot Developer Interface. All you need to know on how to delegate and participate in Polkadot OpenGov!"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot OpenGov](../learn-polkadot-opengov.md).
 
 Delegating voting power to a trusted community member can be an effective way to participate in the decision-making process of Polkadot OpenGov. It allows you to empower others who share your values and vision for the ecosystem to represent you and vote on your behalf. This article will explore how to delegate and undelegate your voting power to another account from the familiar Polkadot Developer Interface.
@@ -15,7 +15,7 @@ Delegating voting power to a trusted community member can be an effective way to
 
 ### Conviction locks
 
-When you [vote in a referendum](vote-opengov.md), you can increase your voting power by locking your tokens for a longer period of time. This is known as the "conviction lock." Similarly, you can choose the duration of the conviction lock you wish to apply to your delegation. Read about conviction locking in the wiki article "[Voluntary Locking](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting)."
+When you [vote in a referendum](vote-opengov.md), you can increase your voting power by locking your tokens for a longer period of time. This is known as the "conviction lock." Similarly, you can choose the duration of the conviction lock you wish to apply to your delegation. Read about conviction locking in the article "[Voluntary Locking](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting)."
 
 It's important to highlight that the duration of the locking period of your balance depends on the conviction lock you chose when you delegated your vote, not the conviction used by your delegate. For example, if you delegated with a 1x conviction and your delegate votes with a 6x conviction, your balance will be locked for a duration equivalent to a 1x conviction.
 
@@ -75,7 +75,7 @@ If you wish to stop delegating, whether because you want to vote personally or d
 
 ![](../../assets/how-to/65032407417.png)
 
-2\. Select the account for which you want to remove an existing delegation (1), select 'convictionVoting' from the drop-down on the left (2), and 'undelegate(class)' from the one on the right (3). In the "class" field (4), enter the track index for which you want to undelegate (check [this wiki article](https://wiki.polkadot.network/docs/maintain-guides-opengov#origins-and-tracks-info) to learn the index of each track).
+2\. Select the account for which you want to remove an existing delegation (1), select 'convictionVoting' from the drop-down on the left (2), and 'undelegate(class)' from the one on the right (3). In the "class" field (4), enter the track index for which you want to undelegate (check [this page](../learn-polkadot-opengov-origins.md#origins-and-tracks-info) to learn the index of each track).
 
 ![](../../assets/how-to/65032408487.png)
 

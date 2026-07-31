@@ -3,7 +3,7 @@ title: How to Set Identities for Sub Accounts
 description: "Steps for how to create multiple identities under a primary account on the Polkadot network."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Identity](../learn-identity.md).
 
 Once the identity of an account is set (visit this article to know how), the system allows users to create "sub accounts" under this primary account, each with its unique identity. This article guides you through setting sub-identities using Polkadot Developer Interface.

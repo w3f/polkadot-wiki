@@ -130,7 +130,7 @@ the unified address format include the following:
 ## Existential Deposit and Reaping
 
 !!!info
-    Visit [**this support page**](how-to/existential-deposit.md) for more information about existential deposit.
+    Visit [**this page**](how-to/existential-deposit.md) for more information about existential deposit.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the

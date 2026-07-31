@@ -9,7 +9,7 @@ bold experimentation and early-stage deployment. Polkadot is more conservative, 
 stability and dependability. Cousins have their differences after all.
 
 !!!info
-    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this support article](how-to/polkadot-vs-kusama.md).
+    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this article](how-to/polkadot-vs-kusama.md).
 
 ## Cost and Speed
 

@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Unbond from a Nomination Pool
 description: "Learn how to use the Polkadot staking dashboard to lower your bond in a nomination pool or complete exit it."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
 The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.

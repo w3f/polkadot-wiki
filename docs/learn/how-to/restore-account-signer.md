@@ -3,7 +3,7 @@ title: How to Restore Your Account (Signer)
 description: "Learn how to restore your Polkadot account either from the account's 12-word mnemonic phrase or its JSON file in the Polkadot Developer Signer."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 In this article, you will learn how to restore your Polkadot account in the Polkadot Developer Signer either with your account's 12-word mnemonic phrase or its JSON file and password.

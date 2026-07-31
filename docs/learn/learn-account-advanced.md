@@ -421,7 +421,7 @@ general users. Follow the instructions in the
 [Subkey documentation](https://docs.polkadot.com/polkadot-protocol/basics/accounts/#using-subkey).
 
 !!!info
-    For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this support article**](how-to/create-account-subkey.md).
+    For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this article**](how-to/create-account-subkey.md).
 
 ## Using ENS with DOT/KSM accounts
 

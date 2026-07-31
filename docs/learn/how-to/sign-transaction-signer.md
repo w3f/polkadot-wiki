@@ -3,7 +3,7 @@ title: How to Sign a Transaction (Signer)
 description: "A step-by-step guide on how to sign a transaction using the Polkadot Developer Signer extension"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction will not be broadcasted in the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.

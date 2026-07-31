@@ -3,7 +3,7 @@ title: How to Create an Account in Subkey
 description: "How to create a new Polkadot or Kusama account in Subkey."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts (advanced)](../learn-account-advanced.md).
 
 !!! warning "IMPORTANT"

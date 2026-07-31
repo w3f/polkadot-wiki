@@ -3,7 +3,7 @@ title: What is Asset Hub and How Do I Use It?
 description: "Polkadot and Kusama Asset Hub (former Statemint and Statemine) are system parachains for creating and sending fungible and non-fungible (NFTs) tokens."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Asset Hub](../learn-assets.md).
 
 Polkadot and Kusama Asset Hubs are system chains initially designed to facilitate the issuance and transfer of assets and NFTs. Since launch, they have evolved through two key upgrades: the Asset Hub migration and the ability to deploy smart contracts directly on the network.
@@ -51,7 +51,7 @@ With this upgrade, Polkadot Hub enables developers to deploy smart contracts whi
 
 Obtain more information about smart contracts on Polkadot in our documentation:
 
-  * Support article: [Polkadot Hub: Smart Contracts on Polkadot](../learn-smart-contracts.md)
+  * [Polkadot Hub: Smart Contracts on Polkadot](../learn-smart-contracts.md)
   * Polkadot Docs: [Smart Contracts on Polkadot Hub](https://docs.polkadot.com/smart-contracts/overview/)
 
 * * *

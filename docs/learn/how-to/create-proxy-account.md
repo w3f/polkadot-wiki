@@ -3,7 +3,7 @@ title: How to Create a Proxy Account
 description: "Instructions for creating a proxy account using the Polkadot-JS UI."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Proxies](../learn-proxies.md).
 
 Polkadot allows users to set proxy accounts to perform a limited number of actions on their behalf. There are a few different types of proxies you can set up. You can read about the differences in this [wiki article](../learn-proxies.md#proxy-types).

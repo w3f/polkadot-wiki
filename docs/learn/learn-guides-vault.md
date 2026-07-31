@@ -19,18 +19,18 @@ description: Comprehensive guides for using the Polkadot Vault app, including se
 ## Sending a Transfer with the Vault App
 
 !!!danger "Verifying Extrinsics"
-    Visit the [**dedicated support page**](how-to/verify-extrinsic.md#verify-an-extrinsic-using-ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn about how to verify extrinsics before signing them. The video will also mention potential attacks that can happen to you while signing for transactions.
+    Visit the [**dedicated page**](how-to/verify-extrinsic.md#verify-an-extrinsic-using-ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn about how to verify extrinsics before signing them. The video will also mention potential attacks that can happen to you while signing for transactions.
 
 General instructions to send a transfer can be found on
-[this support page](how-to/transfer-funds.md).
+[this page](how-to/transfer-funds.md).
 To sign transactions with the Polkadot Vault app check
-[this support article](how-to/parity-signer-sign-transaction.md)
+[this article](how-to/parity-signer-sign-transaction.md)
 or see [this video tutorial](https://youtu.be/gbvrHzr4EDY?t=281).
 
 ## Import Vault Accounts into Polkadot-JS
 
 See
-[this support article](how-to/vault-add-account.md)
+[this article](how-to/vault-add-account.md)
 to import a Polkadot Vault account into the
 [Polkadot-JS Browser Extension](../general/polkadotjs.md#polkadot-js-extension) or
 [Parity Signer Companion](https://chrome.google.com/webstore/detail/parity-signer-companion/damllfnhhcbmclmjilomenbhkappdjgb).

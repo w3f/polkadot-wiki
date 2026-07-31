@@ -3,7 +3,7 @@ title: How to Change the Style of Your DOT Icon
 description: "On the accounts page on the Polkadot Developer Interface, your accounts are represented by DOT icon avatars."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 On the [Accounts page on Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), in the Polkadot Developer Signer, and on many block explorers, small icons (also called identicons) appear next to your account address:

@@ -29,6 +29,6 @@ In addition to block explorers, many other tools are being built by the communit
 [Subscan XCM Dashboard](https://polkadot.subscan.io/xcm_dashboard)| HRMP/XCM tool for [Polkadot](https://polkadot.subscan.io/xcm_dashboard) and [Kusama](https://kusama.subscan.io/xcm_dashboard)
 [Polkawatch](https://polkawatch.app/)| Analytics app
 [Polkadot Telemetry](https://telemetry.polkadot.io/)| Node data
-[Polkadot Tech Stack](https://wiki.polkadot.network/docs/build-open-source)| List of projects supported by a Web3 Foundation grant
+[Polkadot Tech Stack](../../general/build-open-source.md)| List of projects supported by a Web3 Foundation grant
 
 * * *

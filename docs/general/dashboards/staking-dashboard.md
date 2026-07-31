@@ -125,7 +125,7 @@ most recently received rewards.
 ### Pools
 
 !!!info "Joining a Nomination Pool - Walk-through video tutorial"
-    [This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a [nomination pool](../../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read the [dedicated support article](../../learn/how-to/join-nomination-pool.md) about joining a pool.
+    [This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a [nomination pool](../../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read the [dedicated article](../../learn/how-to/join-nomination-pool.md) about joining a pool.
 
 ![dashboard pools](../../assets/dashboard-pools.png)
 
@@ -149,7 +149,7 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
     ![dashboard-permissionlessPoolClaims](../../assets/dashboard-permissionlessPoolClaims.png)
 
     !!!info
-        For more information about how-to update your claim permissions with the staking dashboard see [this support article](../../learn/how-to/claim-pool-rewards.md#permissionless-claiming).
+        For more information about how-to update your claim permissions with the staking dashboard see [this article](../../learn/how-to/claim-pool-rewards.md#permissionless-claiming).
 
     - Leave the pool and unbond all the funds in the pool.
 
@@ -165,17 +165,17 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
     ![dashboard-manage-commission](../../assets/dashboard-managePoolCommission.png)
 
     !!!info
-        For more information about how-to manage commission of your nomination pool with the staking dashboard see [this support article](../../learn/how-to/create-nomination-pool.md#pool-management-options).
+        For more information about how-to manage commission of your nomination pool with the staking dashboard see [this article](../../learn/how-to/create-nomination-pool.md#pool-management-options).
 
     - Rename Pool: you can change the pool's name.
     - Lock Pool: you can lock the pool so that new members are not allowed.
     - Destroy Pool: you can destroy the pool. See
     [this wiki page](../../learn/learn-guides-staking-pools.md#pool-destruction-with-polkadot-js) and
-    [this support article](../../learn/how-to/create-nomination-pool.md#how-to-initiate-the-destruction-of-a-pool) for more information.
+    [this article](../../learn/how-to/create-nomination-pool.md#how-to-initiate-the-destruction-of-a-pool) for more information.
 
     You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the panel, currently set to "Nominating and Earning Rewards".
 
-    Note that if it is the first time you log in to the dashboard, you will see two buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a nomination pool, see [this support article](../../learn/how-to/create-nomination-pool.md#how-to-create-a-pool).
+    Note that if it is the first time you log in to the dashboard, you will see two buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a nomination pool, see [this article](../../learn/how-to/create-nomination-pool.md#how-to-create-a-pool).
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
   highlighting the validator that is active and will pay rewards to the pool at the end of the era

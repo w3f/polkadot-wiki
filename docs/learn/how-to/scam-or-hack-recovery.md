@@ -3,7 +3,7 @@ title: What to Do If You Fell Victim to a Scam or Hack
 description: "Scams are an unfortunate reality of the crypto industry. If you fell victim to one, learn what are the first steps to take before contacting Polkadot Support."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Scams](../../general/scams.md).
 
 Scams are an unfortunate reality of the crypto industry. The Polkadot community takes the matter of scam fighting and prevention very seriously. It is the first ecosystem that has a dedicated and decentralized Anti-Scam Team that has taken [great strides in protecting our community](https://medium.com/polkadot-network/polkadots-anti-scam-initiatives-1660ef5787b7). Still, vigilance is required on behalf of the user, and for this reason, we have compiled a [guide on how to protect yourself from scams](../../general/scams.md), which we strongly recommend everyone to read.

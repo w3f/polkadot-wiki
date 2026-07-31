@@ -3,7 +3,7 @@ title: How to Store Your Mnemonic Phrase & Backup Safely
 description: "This article will teach you the best practices to keep your Polkadot mnemonic phrase, JSON backup file, and private keys safe and secure."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 If you ever lose access to your account, the only ways to restore it are your mnemonic phrase or your account's JSON backup file in combination with a password. You must keep them secure and private to ensure you can access your account anytime, and nobody else can.

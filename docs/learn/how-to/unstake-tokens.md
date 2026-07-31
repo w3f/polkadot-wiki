@@ -3,7 +3,7 @@ title: How to Unstake Your Tokens
 description: "You can decide to unstake and stop being a nominator on Polkadot anytime. Here are the specific steps on how to do that."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 _Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._

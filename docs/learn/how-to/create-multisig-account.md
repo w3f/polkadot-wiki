@@ -3,7 +3,7 @@ title: How to Create and Use a Multisig Account
 description: "Multisig (multiple signatures) accounts are a great tool to increase security or distribute control of an account. Learn how to create and use one on Polkadot."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Multi-signature](../learn-account-multisig.md).
 
 Multisig (multiple signatures) accounts are a great tool to increase security or distribute control of an account. A multisig account is an account that consists of several signatory accounts, and it needs the approval of some or all of them to issue an extrinsic.
@@ -101,7 +101,7 @@ Go to the "Accounts" page and click on the "+ Multisig" button:
 
 Now that the multisig is created and funded, Alice, Bob, and Charlie want to make a transaction.
 
-Whenever a multisig transaction (call) is initiated, whoever initiated it must **reserve a deposit** of a little more than 0.2 DOT. The exact amount depends on how large is the threshold of the multisig. If you want to know exactly how much it is and how it's calculated, you can check [this wiki article](../learn-account-multisig.md). This reserve is released when the transaction is approved or canceled. The rest of the signatories don't need to reserve a deposit.
+Whenever a multisig transaction (call) is initiated, whoever initiated it must **reserve a deposit** of a little more than 0.2 DOT. The exact amount depends on how large is the threshold of the multisig. If you want to know exactly how much it is and how it's calculated, you can check [this article](../learn-account-multisig.md). This reserve is released when the transaction is approved or canceled. The rest of the signatories don't need to reserve a deposit.
 
 This is done to prevent bloating of the chain state from multisig calls that are initiated but never completed. So, whoever plans to initiate calls needs to have at least 0.25 DOT transferable balance in their account to be able to pay for the deposit.
 
@@ -168,7 +168,7 @@ Let's say that Alice (or Bob or Charlie) realizes that she made a mistake when i
 
 * * *
 
-In this article, you learned how to create and use a multisig account and what they're useful for. If you want to learn more about multisigs, you can check [this wiki article](../learn-account-multisig.md).
+In this article, you learned how to create and use a multisig account and what they're useful for. If you want to learn more about multisigs, you can check [this article](../learn-account-multisig.md).
 
 If you are more of a visual learner, check these video guides:
 

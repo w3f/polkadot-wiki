@@ -3,7 +3,7 @@ title: My Password Is Not Working
 description: "There are some common mistakes when entering your password. If you have forgotten your password you can reset it by restoring your account from your mnemonic phrase"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 Whenever you issue an extrinsic with the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot.api.onfinality.io%2Fpublic-ws#/accounts) or the [Polkadot Developer Signer](signer-where-to-download.md), for example, the purpose of staking or transferring funds out of your account, you will be asked for your password.

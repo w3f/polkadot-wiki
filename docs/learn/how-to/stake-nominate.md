@@ -3,7 +3,7 @@ title: How Do I Stake (Nominate) on Polkadot?
 description: "This article gives you short step-by-step instructions on how to stake on Polkadot. For more details, please watch the video tutorial."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 _Discover the new Staking Dashboard that makes staking much easier, and check our [extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._

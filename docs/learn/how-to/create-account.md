@@ -3,7 +3,7 @@ title: How to Create an Account
 description: "How to create a new account in the Polkadot Developer Interface. This is considered advanced. For most regular users, we recommend the Polkadot Developer Signer instead."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 !!! warning "IMPORTANT"

@@ -3,7 +3,7 @@ title: Nomination Pool Members & OpenGov Participation
 description: "Learn how now the nomination pools in Polkadot allow you to participate in Polkadot OpenGov and how to solve the 'NotMigrated' error message if you can't manage your nomination pool."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
 Changes deployed with the [runtime version 1.4.0](https://github.com/polkadot-fellows/runtimes/releases/tag/v1.4.0) in Polkadot and Kusama allow members of a Polkadot nomination pool to participate in any referendum on [Polkadot OpenGov](../learn-polkadot-opengov.md). Now, you can stake as low as 1 DOT and be part of any decision concerning the network's future.

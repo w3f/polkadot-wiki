@@ -3,7 +3,7 @@ title: Why Can't I Transfer My DOT?
 description: "There are a couple of reasons why you might not be able to transfer your DOT. In this article we examine the most common reasons and what you can do."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 There are a couple of reasons why you might not be able to transfer your DOT. In this article, we examine the most common of them, but if you encounter a situation not covered by this article or have any questions, feel free to [contact us](https://docs.polkadot.com/get-support/).

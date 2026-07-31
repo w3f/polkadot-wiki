@@ -3,7 +3,7 @@ title: How to Export Your JSON Backup File
 description: "You can always export a backup JSON file for your account on the Polkadot Developer Interface and in the Polkadot Developer Signer, which you can use to restore your account."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 The JSON backup file stores your account's information encrypted with the account's password. It's a second recovery method in addition to the mnemonic phrase.

@@ -3,7 +3,7 @@ title: How to Add a Ledger Account
 description: "In this tutorial, you will learn how to install the Polkadot app on your Ledger device and connect it to the Polkadot Developer Interface"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
 !!! warning "IMPORTANT"
@@ -24,7 +24,7 @@ However, **we recommend adding your Ledger through the other wallet extensions c
 
 * * *
 
-1\. Start by installing the Polkadot app or the Polkadot Migration app on your Ledger device by following the[Ledger's Support page](https://support.ledger.com/hc/en-us/articles/360016289919) instructions.
+1\. Start by installing the Polkadot app or the Polkadot Migration app on your Ledger device by following [Ledger's Support page](https://support.ledger.com/hc/en-us/articles/360016289919) instructions.
 
 2\. Open a Chromium-based browser (Google Chrome, Edge, Brave, etc.) and make sure you're using the latest version.
 

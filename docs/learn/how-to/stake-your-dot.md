@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Stake Your DOT
 description: "Learn how to stake your DOT (or KSM) using the new Polkadot Staking Dashboard"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 _Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._

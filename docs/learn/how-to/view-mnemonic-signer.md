@@ -3,7 +3,7 @@ title: How to View Your Mnemonic Phrase (Signer)
 description: "The Polkadot Developer Signer only shows your mnemonic seed once: during the initial creation of your account."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 Both the Polkadot Developer Signer and Polkadot-JS UI only show your mnemonic phrase once: during the initial creation of your account.

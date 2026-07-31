@@ -3,7 +3,7 @@ title: How to Request and Cancel Identity Judgement
 description: "How to request or cancel an identity judgment on Polkadot."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Identity](../learn-identity.md).
 
 Polkadot offers an identity mechanism that enables users to include their personal details into their on-chain account and later request registrars to verify this information.

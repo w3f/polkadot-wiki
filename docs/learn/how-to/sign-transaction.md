@@ -3,7 +3,7 @@ title: How to Sign a Transaction
 description: "A step-by-step guide on how to sign a transaction directly on Polkadot-JS UI"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 !!! warning "IMPORTANT"

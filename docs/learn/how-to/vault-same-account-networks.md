@@ -3,7 +3,7 @@ title: Polkadot Vault — How to Create the Same Account on Different Networks
 description: "Learn how to create and manage the same Polkadot Vault account across different networks using the same mnemonic and derivation path."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
 Any account created in a wallet can be used across multiple networks, so there’s no need to create separate accounts for each one. Most wallets in the Polkadot ecosystem allow a single account to connect to different networks seamlessly. However, Polkadot Vault (since version 6.2.0) introduces a unique derivation path for each network, creating separate accounts per network. This enhances security but limits interoperability, as each account will only function on the specific network it was created for.

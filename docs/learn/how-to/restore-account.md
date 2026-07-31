@@ -3,7 +3,7 @@ title: How to Restore Your Account
 description: "Learn how to restore your Polkadot account either from your JSON file, your 12-word mnemonic phrase, or your raw private key on Polkadot-JS UI"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 !!! warning "IMPORTANT"

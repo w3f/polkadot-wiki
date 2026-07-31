@@ -3,7 +3,7 @@ title: How to Change Your Controller Account
 description: "Changing the controller account on your Polkadot stash account only takes a couple of clicks via the Polkadot Developer Interface."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
 _Discover the Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._

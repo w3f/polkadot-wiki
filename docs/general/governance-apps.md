@@ -93,7 +93,7 @@ features of the Delegation Dashboard and shows how to perform multi-role delegat
 </div>
 
 For detailed instructions on how to delegate your voting power using dashboard, check
-[this support guide.](../learn/how-to/delegate-voting-power.md).
+[this guide.](../learn/how-to/delegate-voting-power.md).
 
 **If you become a nomination pool member or a pool admin, you cannot participate in Governance with
 the bonded tokens in the pool, as they are held in a

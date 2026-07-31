@@ -3,7 +3,7 @@ title: Parity Signer — How to Restore Your Account
 description: "Parity Signer allows you to restore your DOT account with your mnemonic phrase. Use Parity Signer on and old phone that you don't connect to the internet anymore."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
 In this article, you will learn how to restore an account in Parity Signer that was originally created in Parity Signer. If you want to know how to **create a new account** in Parity Signer, please refer to the video tutorial in [this article](parity-signer-create-account.md).

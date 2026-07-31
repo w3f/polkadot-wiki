@@ -3,7 +3,7 @@ title: How to Send All of Your Funds Out of Your Account
 description: "Be aware that if you send your total balance out, your Polkadot account will be deactivated. If that is your intention, here is how to do it."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 !!! warning "IMPORTANT"

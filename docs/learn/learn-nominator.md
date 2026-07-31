@@ -207,7 +207,7 @@ Polkadot JS Apps UI prompts the nominator account to rebag or move up by calling
 For guidelines about how to rebag or move your account within a bag, see the following:
 
 - The "Bags List" Section on
-  [this Support Page](learn-staking-advanced.md).
+  [this page](learn-staking-advanced.md).
 - The [Bags List Section](./learn-staking-advanced.md#bags-list) in Advanced Staking Concepts.
 - The [dedicated technical explainer video](https://youtu.be/hIIZRJLrBZA).
 
@@ -278,7 +278,7 @@ you can to reduce the risk of none of your nominated validators being elected.
 
 !!!info "Not receiving Staking Rewards?"
     To explore the possible reasons for not receiving staking rewards, check out the following:
-    - The [Staking FAQ](learn-staking.md) on the Support Pages.
+    - The [Staking FAQ](learn-staking.md).
     - The ["Why am I not receiving staking rewards?"](https://www.reddit.com/r/Polkadot/comments/10kurje/why_am_i_not_receiving_staking_rewards/) Reddit article.
     - The ["Why am I not receiving staking rewards?"](./learn-staking.md#why-am-i-not-receiving-rewards) section on the Staking Page.
 

@@ -17,7 +17,7 @@ description: Learn how to create and manage multisig accounts for secure and col
 ## Creating a Multisig Account
 
 Check the "How to create a multisig account" section on
-[this support page](how-to/create-multisig-account.md).
+[this page](how-to/create-multisig-account.md).
 We recommend trying out the tutorial on
 [Westend network](https://docs.polkadot.com/develop/networks/#westend) - Polkadot's testnet.
 
@@ -28,7 +28,7 @@ We recommend trying out the tutorial on
 
 You can create a multisig account directly on the Accounts Tab of the
 [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts), and use this account to send funds. See
-[this support article](how-to/create-multisig-account.md)
+[this article](how-to/create-multisig-account.md)
 for more information.
 
 ## Multisig Transactions with Extrinsic Tab

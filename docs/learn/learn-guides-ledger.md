@@ -30,7 +30,7 @@ being affected by their runtime upgrades.
 You can import your Ledger account to [Polkadot Extension](https://polkadot.js.org/extension/) or to
 the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). For instructions on how to import
 Ledger accounts to the Polkadot Extension read through
-[this support article](how-to/add-ledger-account-signer.md),
+[this article](how-to/add-ledger-account-signer.md),
 while if you want to import Ledger accounts to the Polkadot-JS UI, you can consult
 [this other article](how-to/add-ledger-account.md).
 
@@ -55,7 +55,7 @@ with those accounts on Ledger Live.
 If your Ledger account is directly imported into the Polkadot-JS UI, you can ask the UI to confirm
 the address on your Ledger device. There are a few methods to check the balance of your Ledger
 account. Check out
-[this support article](learn-account-advanced.md)
+[this article](learn-account-advanced.md)
 for information.
 
 ## Navigating your Account
@@ -68,22 +68,22 @@ balances, visit the [balances page](./learn-account-balances.md).
 ## Sending a Transfer with Ledger Devices
 
 !!!danger "Verifying Extrinsics"
-    Visit the [**dedicated support page**](how-to/verify-extrinsic.md#verify-an-extrinsic-using-ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to verify extrinsics before signing them. The video will also mention potential attacks that can happen while signing transactions.
+    Visit the [**dedicated page**](how-to/verify-extrinsic.md#verify-an-extrinsic-using-ledger) and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=360) tutorial to learn how to verify extrinsics before signing them. The video will also mention potential attacks that can happen while signing transactions.
 
 !!!info "Signature error message"
-    If you have already connected your device, but an error message appears before signing a transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano device. Visit [this support page](how-to/ledger-sign-transaction.md) for more information about signing transactions using your ledger.
+    If you have already connected your device, but an error message appears before signing a transaction, make sure you have opened the Polkadot Ledger Generic application on your Ledger Nano device. Visit [this page](how-to/ledger-sign-transaction.md) for more information about signing transactions using your ledger.
 
 General instructions to send a transfer can be found on
-[this support page](how-to/transfer-funds.md).
+[this page](how-to/transfer-funds.md).
 To sign transactions with your Ledger Nano check
-[this support article](how-to/ledger-sign-transaction.md) or
+[this article](how-to/ledger-sign-transaction.md) or
 see [this video tutorial](https://youtu.be/gbvrHzr4EDY?t=579).
 
 ## Receiving a Transfer
 
 To receive a transfer on the accounts stored on your Ledger device, you must provide the sender
 (i.e., the payer) with your address. To do so, follow the instructions on
-[this support page](how-to/receive-dot.md).
+[this page](how-to/receive-dot.md).
 
 !!!caution "Sharing your account address"
     Before giving anyone your address, ensure it matches what's on the Ledger by [confirming the address on your device](#confirming-the-address-on-your-device). Some malware will intercept clicks and clipboard requests and can change your copied value in-flight, so being extra vigilant around copy-paste operations makes sense.
@@ -98,7 +98,7 @@ clicking on your account's avatar icon - this immediately copies your address to
 ## Staking
 
 For staking using Ledger devices, follow the instructions on
-[this support article](how-to/stake-nominate.md).
+[this article](how-to/stake-nominate.md).
 
 ## Ledger Developer Release
 

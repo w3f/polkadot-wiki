@@ -3,7 +3,7 @@ title: Where to Download the Polkadot Developer Signer
 description: "Install the Polkadot Developer Signer directly from the Google Chrome Store or Firefox add-ons"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot-JS](../../general/polkadotjs.md).
 
 The Polkadot Developer Signer is an account manager developed by Parity. In this article, you can learn where to download it for Chromium-based browsers (Chrome, Brave, Edge) and Firefox.

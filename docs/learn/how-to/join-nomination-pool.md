@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Join a Nomination Pool
 description: "Learn how to use the Polkadot staking dashboard to join a nomination pool or increase your bond in a pool you've already joined."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
 __

@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Rebond Your Tokens
 description: "How to use our new staking dashboard to rebond your locked DOT or KSM before the unbonding period is over."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 __

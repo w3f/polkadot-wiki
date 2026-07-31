@@ -3,7 +3,7 @@ title: How to Receive DOT to My Account
 description: "In this article, you'll learn how to copy your account address in order to receive funds to your account, no matter where the funds are coming from."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 !!! warning "IMPORTANT"

@@ -3,7 +3,7 @@ title: Error 'Frozen' — I Can't Transfer All My DOT
 description: "If you're trying to transfer all your DOT but see the error “Funds exist but are frozen,” this article explains why the transaction is failing and how you can resolve the issue."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 Any account on Polkadot can hold multiple assets and not just the native DOT token. The native asset is usually responsible for keeping the account active by maintaining the required existential deposit (ED). If an account drops below the ED on every sufficient asset, the account is reaped ("deactivated"), and any remaining funds, like non-sufficient assets, are destroyed.

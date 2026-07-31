@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Unbond Your Tokens
 description: "How to unbond (unstake) your tokens using the new Staking Dashboard."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 __

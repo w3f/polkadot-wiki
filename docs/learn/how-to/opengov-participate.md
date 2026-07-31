@@ -3,7 +3,7 @@ title: How to Participate in Polkadot OpenGov
 description: "Polkadot OpenGov allows you to decide on protocol changes and manage its Treasury. Thanks to Polkassembly and Subsquare, this is easy and user-friendly. Learn here how to do it."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot OpenGov](../learn-polkadot-opengov.md).
 
 Participating in Polkadot OpenGov allows you to raise your voice on the trajectory of the network protocol and its Treasury. User-friendly interfaces like Polkassembly and Subsquare facilitate the process, offering easy access to discussions, voting on referenda, and monitoring past votes. Whether casting a direct vote or delegating voting power to community members you trust, you can actively contribute to shaping Polkadot's governance with just a few clicks.

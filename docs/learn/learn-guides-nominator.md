@@ -25,8 +25,8 @@ See [this page](./learn-staking.md) to learn about staking.
 
 ### Bond your Tokens
 
-!!!info "Support Article"
-    Read the support article about [How to Bond Tokens and Nominate](how-to/stake-nominate.md).
+!!!info "Related guide"
+    Read the article about [How to Bond Tokens and Nominate](how-to/stake-nominate.md).
 
 On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
 "Network" menu).
@@ -79,8 +79,8 @@ earn compound interest.
 
 ### Nominate a Validator
 
-!!!info "Support Article"
-    Read the support article about [How to Select Validators](how-to/choose-validators.md).
+!!!info "Related guide"
+    Read the article about [How to Select Validators](how-to/choose-validators.md).
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can be
@@ -108,8 +108,8 @@ more details.
 
 ### Stop Nominating
 
-!!!info "Support Article"
-    Read the support article about [How to Stop Nominating & Unbond Tokens](how-to/unstake-tokens.md). See also the support article about [How to Rebond Tokens](how-to/rebond-tokens.md).
+!!!info "Related guide"
+    Read the article about [How to Stop Nominating & Unbond Tokens](how-to/unstake-tokens.md). See also the article about [How to Rebond Tokens](how-to/rebond-tokens.md).
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them.

@@ -74,7 +74,7 @@ Set).
 
 For guidelines about how to create an account using Polkadot Vault, see
 [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=120) and visit
-[**this support article**](../learn/how-to/parity-signer-create-account.md).
+[**this article**](../learn/how-to/parity-signer-create-account.md).
 
 !!!info
     Importing an account into an extension will not import its private key. Only the public key will be
@@ -85,7 +85,7 @@ For guidelines about how to create an account using Polkadot Vault, see
 ## Restore Account on Polkadot Vault
 
 See [**this video tutorial**](https://youtu.be/hgv1R9mPEXw?t=407) and
-[**this support page**](../learn/how-to/parity-signer-restore-account.md)
+[**this page**](../learn/how-to/parity-signer-restore-account.md)
 to learn how to restore your account on the Polkadot Vault app.
 
 ## Signing Transactions Without Metadata

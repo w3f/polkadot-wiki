@@ -45,12 +45,12 @@ account. The videos below contain more information about using proxies.
 ## Creating Proxy with Polkadot-JS
 
 To create a proxy account with Polkadot-JS read
-[this support article](how-to/create-proxy-account.md).
+[this article](how-to/create-proxy-account.md).
 
 ## Removing Proxy with Polkadot-JS
 
 Read the section "Removing Proxies" on
-[this support page](how-to/create-proxy-account.md)
+[this page](how-to/create-proxy-account.md)
 to learn how to remove proxies.
 
 ## View your Proxy on Polkadot-JS

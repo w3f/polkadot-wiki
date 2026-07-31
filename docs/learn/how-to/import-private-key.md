@@ -3,7 +3,7 @@ title: How to Import a Private Key from Another Wallet
 description: "How to restore your DOT account by importing a private key from another wallet."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 !!! warning "IMPORTANT"

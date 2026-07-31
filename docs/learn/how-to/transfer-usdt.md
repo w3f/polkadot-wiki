@@ -3,7 +3,7 @@ title: How to Transfer Tether (USDT) on Polkadot
 description: "Learn wow to transfer Tether USDT on Polkadot Asset Hub and Kusama Asset Hub, former  Statemint and Statemine, respectively, using Polkadot Developer Interface."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Asset Hub](../learn-assets.md).
 
 !!! warning "IMPORTANT"

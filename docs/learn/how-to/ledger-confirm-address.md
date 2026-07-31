@@ -3,7 +3,7 @@ title: Ledger — How to Confirm the Account Address on Your Device
 description: "One of the security features hardware wallets offer is to confirm your account address on the device. Learn how to confirm your Polkadot address on your Ledger."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
 One of the security features hardware wallets offer is to confirm your account address on the device to ensure that what you see on your computer is the correct address and has not been changed either by the UI or after copying it. This way, you are sure that when you send tokens to your account, they will arrive at the correct destination.

@@ -121,7 +121,7 @@ balance of 10 and an account has a balance of 25, then an attempt to transfer 20
 transfer all 25.
 
 !!!info
-    See [this support article](how-to/transfer-usdt.md) to learn more about transferring assets using the Asset Hub.
+    See [this article](how-to/transfer-usdt.md) to learn more about transferring assets using the Asset Hub.
 
 ### Destroying an Asset
 

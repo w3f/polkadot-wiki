@@ -335,8 +335,6 @@ nav:
         - "How to Change the Style of Your DOT Icon": learn/how-to/change-dot-icon-style.md
         - "My Mnemonic Phrase Is Invalid": learn/how-to/mnemonic-invalid.md
         - "My Password Is Not Working": learn/how-to/password-not-working.md
-        - "How to Set Your On-Chain Identity on Polkassembly": learn/how-to/set-identity-polkassembly.md
-        - "How to Use the W3F Registrar Page": learn/how-to/w3f-registrar.md
         - "How to Request and Cancel Identity Judgement": learn/how-to/request-cancel-judgement.md
       - Transactions:
         - "Why Can't I Transfer My DOT?": learn/how-to/why-cant-i-transfer-dot.md

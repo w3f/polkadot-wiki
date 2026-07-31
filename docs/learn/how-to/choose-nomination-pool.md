@@ -3,7 +3,7 @@ title: How Do I Know Which Nomination Pool to Choose?
 description: "This article will help you choose the Polkadot or Kusama nomination pool that suits your needs and allows you to earn staking rewards consistently."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
 _Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._

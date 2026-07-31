@@ -31,7 +31,7 @@ website, Twitter handle, Riot handle, etc. along with some extra, custom fields 
 like attestations (see [Judgements](./learn-identity.md#judgements)).
 
 !!!info "Instructions for setting and clearing Identities"
-    The procedure to set and clear identities is explained in detail in this support article - [How to set and clear an Identity](how-to/set-clear-identity.md)
+    The procedure to set and clear identities is explained in detail in this article - [How to set and clear an Identity](how-to/set-clear-identity.md)
 
 !!!note The Ledger app on **Nano S** doesn't support the extrinsic for setting identity. As a workaround, create a primary identity with an on-chain account and then using that primary identity, assign a [sub-identity](./learn-identity.md#sub-identities) to the Ledger stash.
 
@@ -51,7 +51,7 @@ makes sense.
 ## Request Judgement
 
 !!!info "Instructions for requesting and cancelling Identity judgements"
-    The procedure to request and cancel identity judgments is explained in detail in this [support article](how-to/request-cancel-judgement.md)
+    The procedure to request and cancel identity judgments is explained in detail in this [article](how-to/request-cancel-judgement.md)
 
 To be judged after submitting your identity information, go to the
 [Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
@@ -70,7 +70,7 @@ automatically loaded.
 ![Chevdor is registrar #1](../assets/identity/16.jpg)
 
 !!!info "Requesting judgement through Web3 Foundation Registrar"
-    If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks. For more information visit [this support article](how-to/w3f-registrar.md).
+    If you requested judgement for your on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to complete a few additional tasks.
 
 !!!caution
     The set identity calls go on-chain. Hence, the contact information is available publicly, for both legitimate entities, like registrars or validators, but also scammers who might impersonate them. The strings in the identity fields are good candidates for homograph attacks, as someone could list a fraudulent website (web3.f0undation instead of web3.foundation for example) and still get verified by the registrar (if the checks are automated)!
@@ -80,7 +80,7 @@ automatically loaded.
 ## Clearing and Killing an Identity
 
 !!!info
-    Visit the section "Clear an Identity" on [this support article](how-to/set-clear-identity.md) for guidelines about clearing identities.
+    Visit the section "Clear an Identity" on [this article](how-to/set-clear-identity.md) for guidelines about clearing identities.
 
 **Clearing:** Users can clear their identity information and have their deposit returned. Clearing
 an identity also clears all sub accounts and returns their deposits.
@@ -92,7 +92,7 @@ deposit.
 
 To set up sub-identities with Polkadot-JS see the
 [how to set sub-identities](how-to/set-subaccount-identities.md)
-support article and this [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU).
+article and this [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU).
 
 ### Setting Sub-Identity (Sub-ID) for your Ledger Account
 

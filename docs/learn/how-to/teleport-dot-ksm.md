@@ -3,7 +3,7 @@ title: How to Teleport DOT or KSM
 description: "How to teleport your DOT from Polkadot to Polkadot Asset Hub (former Statemint) or your KSM from Kusama to Kusama Asset Hub (former Statemine), and vice versa."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Teleport](../learn-teleport.md).
 
 !!! warning "IMPORTANT"

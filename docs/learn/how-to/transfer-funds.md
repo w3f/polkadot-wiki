@@ -3,7 +3,7 @@ title: How to Send / Transfer Funds
 description: "In order to withdraw DOT and send funds out of your account on the Polkadot Developer Interface, click on the Send button next to the account you want to send from."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
 !!! warning "IMPORTANT"

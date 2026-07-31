@@ -3,7 +3,7 @@ title: How to Remove Expired Referenda Locks
 description: "Learn how to remove expired locks one you voted or delegated on Polkadot OpenGov."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot OpenGov](../learn-polkadot-opengov.md).
 
 !!! warning "IMPORTANT"

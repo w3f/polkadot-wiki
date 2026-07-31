@@ -44,7 +44,7 @@ Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us
 
 ### Third-Party Wallets
 
-Numerous third-party wallets have been built by the community or funded in other ways. You can find a list of them on community websites like [Dotinsights](https://dotinsights.subwallet.app/projects/). Open-source projects are also listed in our [Wiki](https://wiki.polkadot.network/docs/build-open-source#user-interface).
+Numerous third-party wallets have been built by the community or funded in other ways. You can find a list of them on community websites like [Dotinsights](https://dotinsights.subwallet.app/projects/). Open-source projects are also listed in the [Open Source](../../general/build-open-source.md) page.
 
 We cannot provide support for these wallets. However, most of them are user-friendly and have their own documentation and support teams ready to help.
 
@@ -52,7 +52,7 @@ We cannot provide support for these wallets. However, most of them are user-frie
 
 ### Wallets for developers and power users
 
-The following wallets have been developed by Parity. There are many useful articles on our Support page to help you use and address issues with these wallets, and you can always [contact us](https://docs.polkadot.com/get-support/) if you need support.
+The following wallets have been developed by Parity. There are many useful articles on our page to help you use and address issues with these wallets, and you can always [contact us](https://docs.polkadot.com/get-support/) if you need support.
 
 !!! tip "GOOD TO KNOW"
 

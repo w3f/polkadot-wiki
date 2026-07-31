@@ -3,7 +3,7 @@ title: How to Vote on Polkadot OpenGov
 description: "Discover how to vote on referenda in Polkadot OpenGov democracy. Follow our simple guide for active participation in the decision-making process."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot OpenGov](../learn-polkadot-opengov.md).
 
 Polkadot and Kusama allow community members to participate and influence decisions through a decentralized voting system. Polkadot governance is a crucial instrument for shaping the direction of the network and ensuring that decisions align with the community's values and goals. This article will explore how to vote in any proposed referendum using the new Polkadot OpenGov system.
@@ -70,7 +70,7 @@ It's important to notice that each referendum should be accompanied by contextua
 
     Locks applied to your assets overlap. It means that with the same locked balance you could vote on several referenda at the same time.
 
-    Read our [Support article](../learn-account-balances.md) for further information of types of balances.
+    Read our [article](../learn-account-balances.md) for further information of types of balances.
 
 5\. After setting your vote, click on "Vote." Review the transaction details on the new panel and click "Sign and Submit." And that's it, you just voted on a referendum!
 

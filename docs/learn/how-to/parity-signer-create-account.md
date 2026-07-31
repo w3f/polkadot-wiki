@@ -3,7 +3,7 @@ title: Parity Signer — How to Create an Account
 description: "Create a new Polkadot or Kusama account in Parity Signer."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
 In this article you will learn how to **create a new account** in Parity Signer. If you want to know how to restore an account **originally created in Parity Signer** , please refer to [this article](parity-signer-restore-account.md).

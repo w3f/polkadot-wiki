@@ -3,7 +3,7 @@ title: Polkadot and Kusama — What's the Difference?
 description: "A side-by-side comparison of the Polkadot and Kusama networks."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Kusama Comparison](../learn-comparisons-kusama.md).
 
 Kusama and Polkadot are independent, standalone networks built on similar codebases but with different priorities. Kusama is wild and fast; great for bold experimentation and early-stage deployment. Polkadot is more conservative, prioritizing stability and dependability.

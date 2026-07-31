@@ -3,7 +3,7 @@ title: How to Withdraw USDT from Exchanges on Asset Hub
 description: "Learn how to withdraw USDT from Bitfinex or Binance to your account on Polkadot Asset Hub (former Statemint) and Kusama Asset Hub (former Statemine), to take advantage of the low fees."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Asset Hub](../learn-assets.md).
 
 In this article, you'll learn how to withdraw USDT from centralized exchanges to your account on Polkadot Asset Hub or Kusama Asset Hub. By using USDT on the Asset Hubs, you can take advantage of the extremely low fees needed to send assets on both networks.

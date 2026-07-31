@@ -141,7 +141,7 @@ lock your tokens, the stronger your vote will be weighted. Unwillingness to lock
 that your vote only counts for 10% of the tokens that you hold.
 
 For detailed instructions on how to vote on Polkadot OpenGov referenda, check
-[this support guide.](how-to/vote-opengov.md)
+[this guide.](how-to/vote-opengov.md)
 
 !!!caution "Polkadot OpenGov uses Conviction Voting Pallet (Not Democracy Pallet)"
     Use `convictionVoting.vote` for voting on Referenda in Polkadot OpenGov instead of `democracy.vote` (which only works for the old version of governance).
@@ -170,7 +170,7 @@ will be unlocked after removing votes and unlocking on all the tracks. Similarly
 The `class` is the [OpenGov track](./learn-polkadot-opengov-origins.md) where you have the lock.
 
 For additional instructions, check
-[this support guide.](how-to/remove-referenda-locks.md)
+[this guide.](how-to/remove-referenda-locks.md)
 
 ## Delegations
 
@@ -182,7 +182,7 @@ For an overview of how delegation works in Polkadot OpenGov, check out the
 [Learn Polkadot OpenGov](../learn/learn-polkadot-opengov.md) page.
 
 Instructions to do delegations with Polkadot-JS are also available on the
-[Support Pages](how-to/delegate-voting-power.md).
+[these guides](how-to/delegate-voting-power.md).
 
 ### Delegate Votes
 

@@ -25,7 +25,7 @@ Apart from the native token, the assets held on the Asset Hub can be broadly cat
 - Assets without any backing
 
 For additional background on the Asset Hub check out
-[this support article](how-to/what-is-asset-hub.md).
+[this article](how-to/what-is-asset-hub.md).
 
 ## Creating Assets on the Asset Hub with Polkadot-JS
 

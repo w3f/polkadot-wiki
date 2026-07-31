@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Connect Your Account
 description: "Learn how you can connect your Polkadot account to the Staking Dashboard, using any of the supported extensions, like the Polkadot (JS) extension."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
 __

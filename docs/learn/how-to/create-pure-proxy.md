@@ -3,7 +3,7 @@ title: How to Create a Pure Proxy
 description: "Instructions for setting a pure (anonymous) proxy on the Polkadot network."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Pure Proxies](../learn-proxies-pure.md).
 
 Pure proxies (used to be called anonymous proxies) are an advanced feature and can only be created from the [Extrinsics](https://polkadot.js.org/apps/#/extrinsics) page.

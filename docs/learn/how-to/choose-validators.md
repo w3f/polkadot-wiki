@@ -3,7 +3,7 @@ title: How to Choose Validators
 description: "To maximize your staking rewards and minimize the risk of getting slashed, here are a few points to consider when picking validators to nominate on the Polkadot network."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nominator](../learn-nominator.md).
 
 If you're wondering how to stake on Polkadot, this article has important information on deciding which validators to pick.

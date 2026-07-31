@@ -3,7 +3,7 @@ title: The Difference Between Accounts and Address Book
 description: "You can send funds out of a DOT address listed under \"Accounts\". Any address in your Address Book is just a contact, so sending is not possible."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 !!! warning "IMPORTANT"

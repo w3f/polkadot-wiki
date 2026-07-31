@@ -3,7 +3,7 @@ title: Asset Hub Migration — What You Must Know
 description: "Several key features are moving from the Polkadot Relay Chain to Asset Hub, paving the way for a more scalable, feature-rich Polkadot. Read the article to learn more!"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Asset Hub](../learn-assets.md).
 
 !!! danger "READ THIS FIRST!"

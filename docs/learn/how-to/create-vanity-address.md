@@ -3,7 +3,7 @@ title: How to Create a Vanity Address
 description: "How to create your own non-random Polkadot (DOT) address and memorable DOT icon."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 _If you want your DOT address to contain specific words, letters, or numbers, you can use the_ vanity generator _. It lets you generate multiple addresses with the parameters you choose._

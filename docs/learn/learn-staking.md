@@ -174,11 +174,11 @@ nominator [guide](learn-nominator.md) to understanding your responsibilities as 
 If you want to become a nominator, see [this](../learn/learn-nominator.md) guide. If you are a
 beginner and would like to securely stake your tokens using the Polkadot-JS UI, refer to
 [this](how-to/stake-nominate.md)
-support article. The tutorial presented in the support article is demonstrated on Polkadot, but the
+article. The tutorial presented in the article is demonstrated on Polkadot, but the
 procedure is the same for Kusama.
 
 !!!info "Polkadot Staking Dashboard"
-    The [Staking Dashboard](https://staking.polkadot.cloud/) provides a more user-friendly alternative to staking. See the instructions in [this](how-to/stake-your-dot.md) support article to learn how to stake with the dashboard.
+    The [Staking Dashboard](https://staking.polkadot.cloud/) provides a more user-friendly alternative to staking. See the instructions in [this](how-to/stake-your-dot.md) article to learn how to stake with the dashboard.
 
 **Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking,
 without sacrificing Polkadot's strict security model.
@@ -254,7 +254,7 @@ era. Variability in rewards due to the era points should level out over time. If
 consistently gets era points below average, it makes sense to nominate a better-performing validator
 for the health of the network and increased staking rewards. See
 [this](how-to/choose-validators.md)
-support article to understand in detail how to select the set of validators to nominate.
+article to understand in detail how to select the set of validators to nominate.
 
 ### Stash Account and Staking Proxy
 
@@ -337,7 +337,7 @@ account. It is also possible to top-up / withdraw some bonded tokens without hav
 staked tokens.
 
 If you wish to know if you received a payout, you will have to check via a block explorer. See
-[the relevant Support page](how-to/see-staking-rewards.md)
+[the relevant page](how-to/see-staking-rewards.md)
 for details. For specific details about validator payouts, please see
 [this guide](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/).
 
@@ -427,12 +427,12 @@ long as at least one is active.
     By joining a [nomination pool](learn-nomination-pools.md) that is active and earning rewards, you can start earning staking rewards with as low as 1 DOT. The nomination pools typically have a dedicated pool operator who ensures that the pool's stake is always backing an active validator and is receiving rewards.
 
 !!!info "Bags List & Minimum Active Bond"
-    You can find information about why you might not receive staking rewards on [this support page](learn-staking.md) and [this video tutorial](https://youtu.be/hIIZRJLrBZA).
+    You can find information about why you might not receive staking rewards on [this page](learn-staking.md) and [this video tutorial](https://youtu.be/hIIZRJLrBZA).
 
 ## Staking FAQ
 
 !!!info
-    See [this support page](learn-staking.md) for the FAQs about staking.
+    See [this page](learn-staking.md) for the FAQs about staking.
 
 ## Resources
 

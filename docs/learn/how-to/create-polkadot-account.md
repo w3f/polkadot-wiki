@@ -3,7 +3,7 @@ title: How to Create a Polkadot Account
 description: "You can create a DOT account in any wallet that supports Polkadot, including hardware (cold storage) options."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 If you're looking to store your DOT safely, there are several recommended wallets available. These range from more advanced options to user-friendly products made by the community for the community.
@@ -17,9 +17,9 @@ This article will guide you through creating a Polkadot account using the battle
 
     The wallets mentioned in this section are highly recommended most users, specially for newcomers. They provide identical functionalities and security standards, but the interface and user experience are tailored for everyday use.
 
-On the [Support website](where-to-store-dot.md), you can find articles about some wallets funded by the Polkadot Treasury and well-regarded by the community, describing some of their basic features like creating an account, receiving and sending funds, staking, etc.
+On the [wallet options page](where-to-store-dot.md), you can find articles about some wallets funded by the Polkadot Treasury and well-regarded by the community, describing some of their basic features like creating an account, receiving and sending funds, staking, etc.
 
-The following Support articles guide you through the process of creating a Polkadot account using these user-friendly wallets:
+The following articles guide you through the process of creating a Polkadot account using these user-friendly wallets:
 
   * [Talisman Wallet: How to Create an Account](https://docs.talisman.xyz/)
   * [Nova Wallet: How to Create an Account](https://docs.novawallet.io/)

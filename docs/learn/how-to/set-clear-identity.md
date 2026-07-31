@@ -3,7 +3,7 @@ title: How to Set and Clear an Identity
 description: "Instructions for how to set and clear an identity and Kusama or Polkadot."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Identity](../learn-identity.md).
 
 Polkadot provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by [registrars](../learn-identity.md#registrars).
@@ -11,9 +11,6 @@ Polkadot provides a naming system that allows participants to add personal infor
 !!! warning "IMPORTANT"
 
     Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
-
-    To set your identity on a more user-friendly interface, visit the following link:
-    [How to Set Your On-chain Identity on Polkassembly](set-identity-polkassembly.md)
 
 This article will guide you through the process of setting up and clearing an identity on-chain on Polkadot.
 

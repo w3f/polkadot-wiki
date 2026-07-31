@@ -3,7 +3,7 @@ title: My Mnemonic Phrase Is Invalid
 description: "If you're trying to restore your Polkadot account from your mnemonic phrase but you're getting an error that it is invalid, make sure to check a few things listed here."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
 When you are trying to restore your account on the Polkadot Developer Interface or the Polkadot Developer Signer, you may get an error like in these screenshots.

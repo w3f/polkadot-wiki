@@ -3,7 +3,7 @@ title: How to Switch Network Nodes
 description: "In order to access your Kusama accounts you need to be on the Kusama network. The same goes for Polkadot. Here is how you can switch between them."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Polkadot-JS UI](../../general/polkadotjs-ui.md).
 
 !!! warning "IMPORTANT"

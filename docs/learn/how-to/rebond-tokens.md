@@ -3,7 +3,7 @@ title: How to Rebond Tokens During the Unbonding Period
 description: "You can rebond your locked tokens before the unbonding period is over by issuing a rebond extrinsic manually in polkadot developer interface."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
 _Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._

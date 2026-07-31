@@ -92,7 +92,7 @@ The current minimum bond to join a pool can be seen
     Depending on how much control you want to give your proxy, you might choose between any > non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions related to the `NominationPool` pallet.
 
 Check the "How to join a pool" section in
-[this support article](how-to/nomination-pools-guide.md)
+[this article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 ### Claim Rewards
@@ -101,7 +101,7 @@ The member can claim their portion of any rewards that have accumulated since th
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
 era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How
 to claim rewards" section in
-[this support article](how-to/nomination-pools-guide.md)
+[this article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 ### Claim Permissions
@@ -137,7 +137,7 @@ At any point in time after joining the pool, a member can start the process of e
 withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship
 with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded
 funds" section in
-[this support article](how-to/nomination-pools-guide.md)
+[this article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 !!!info "Unbonding transaction automatically triggers withdrawal of rewards"

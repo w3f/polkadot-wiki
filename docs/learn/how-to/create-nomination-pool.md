@@ -3,7 +3,7 @@ title: Staking Dashboard — How to Create a Nomination Pool
 description: "Learn how to create or destroy a nomination pool on the Polkadot staking dashboard. You should create a pool only if you intend to attract nominators."
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
 __

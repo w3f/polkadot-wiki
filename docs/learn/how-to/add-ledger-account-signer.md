@@ -3,7 +3,7 @@ title: How to Add Your Ledger Account (Signer)
 description: "Learn how to connect your Polkadot Ledger account to the Polkadot Developer Signer"
 ---
 
-!!!info "Related Wiki page"
+!!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
 In this article you will learn how to add your Ledger Polkadot account in the Polkadot Developer Signer, both from the Generic Polkadot app, and the Migration Polkadot app.
