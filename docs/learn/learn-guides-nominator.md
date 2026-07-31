@@ -155,19 +155,17 @@ npm install -g @polkadot/api-cli
 
 ### Step 2: Bond Tokens
 
-!!!info "Controller accounts are deprecated"
-    Controller accounts are deprecated. For more information, see [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+!!!info "Controller accounts have been removed"
+    Controller accounts have been removed from staking: the `bond` extrinsic no longer takes a
+    controller argument, and rewards can no longer be paid to a controller. Bonding is now signed by
+    the stash account itself. For background, see
+    [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
 
 Executing the following command:
 
 ```bash
-polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
+polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
 ```
-
-`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. (Controller accounts
-are now deprecated. Refer to
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)
-for additional context)
 
 `NUMBER_OF_TOKENS`: The number of native tokens (in Plancks) you would like to stake to the network.
 For more information, see [this page](../learn/learn-DOT.md).
@@ -178,12 +176,12 @@ For more information, see [this page](../learn/learn-DOT.md).
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
 - `Account` - Pay into a custom account that is not the stash (can be a proxy or another type of
   account).
-- `Controller` - Pay into the controller account.
+- `None` - Receive no reward.
 
 Example for Kusama:
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io
 ```
 
 For wss endpoints see [this page](https://docs.polkadot.com/develop/networks/).
