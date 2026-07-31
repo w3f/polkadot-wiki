@@ -22,15 +22,13 @@ You can decide to unbond (unstake) and stop being a nominator at any time. Howev
 
 !!! warning "IMPORTANT"
 
-    Please ensure that your controller or staking proxy account has enough _transferrable_ balance to pay for the transaction fees when unbonding. Otherwise, you will encounter the [InsufficientBalance](../../general/maintain-errors.md) error.
+    Please ensure that your stash or staking proxy account has enough _transferrable_ balance to pay for the transaction fees when unbonding. Otherwise, you will encounter the [InsufficientBalance](../../general/maintain-errors.md) error.
 
-    Remember that the fee needs to be deducted without the controller or staking proxy account's balance dropping below the [existential deposit](existential-deposit.md). To fix the issue, you can transfer a small amount to your controller or staking proxy account.
+    Remember that the fee needs to be deducted without the stash or staking proxy account's balance dropping below the [existential deposit](existential-deposit.md). To fix the issue, you can transfer a small amount to your stash or staking proxy account.
 
-!!! warning "ATTENTION"
+!!! tip "GOOD TO KNOW"
 
-    Controller accounts are being deprecated. You can still use existing ones for now, but creating new ones is no longer possible.
-
-    It is recommended to set your stash account as its own controller, as described in the article "[Polkadot-JS UI: How Can I Change My Controller Account?](change-controller-account.md)"
+    Controller accounts have been removed from staking. Staking actions are now signed by your stash account or, optionally, a [staking proxy](create-proxy-account.md) that can act on its behalf.
 
 Unbonding your tokens can be done by navigating to the Network > Staking > [Accounts](https://polkadot.js.org/apps/#/staking/actions)page on Polkadot Developer Interface. The example below is on the Westend testnet, but the process will be the same on Polkadot.
 

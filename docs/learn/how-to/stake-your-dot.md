@@ -34,7 +34,7 @@ After [connecting the account](connect-account.md) you want to use as your stash
   * **To Your Account** : Sends the rewards to your stash account as transferable balance (not compounding rewards).
   * **To Another Account** : This option will send the rewards to any account you indicate as a transferrable balance.
 
-3\. In the next step, choose the validators you want to nominate. On Polkadot, you can select up to 16 validators, and up to 24 on Kusama.
+3\. In the next step, choose the validators you want to nominate. You can select up to 16 validators on both Polkadot and Kusama.
 
 The staking dashboard gives you several ways to choose your validator. You can generate an "Optimal Selection", pick from "Active Low Commission" or "[From Favorites](../../general/dashboards/staking-dashboard.md)", or add them from scratch using the "Manual Selection" option:
 

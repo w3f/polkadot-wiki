@@ -12,6 +12,10 @@ _Discover the new Staking Dashboard that makes staking much easier and check our
 
 In this article you'll find video instructions on how to use your Polkadot Ledger account and stake your DOT using Ledger Live's native support for Polkadot.
 
+!!! warning "This guide may be outdated"
+
+    Ledger no longer uses a per-network "Polkadot" app — it has been replaced by the single [**Polkadot (Generic) App**](../../general/ledger.md#polkadot-generic-app), which Ledger Live supports. In addition, following the [Asset Hub Migration](asset-hub-migration.md), staking now takes place on Asset Hub: if your DOT is on an account created with an older Ledger app, you must first migrate to a Polkadot (Generic) app account (unstake, wait for the unbonding period, transfer the funds, and stake again — see [Ledger](../../general/ledger.md#migration-process)). For an up-to-date staking flow, we recommend the [Staking Dashboard](stake-your-dot.md).
+
 !!! warning "IMPORTANT"
 
     Ledger is phasing out support for the [Ledger Nano S](https://support.ledger.com/article/Ledger-Nano-S-Limitations). Your funds remain safe, but upgrading is recommended to ensure compatibility with future Polkadot updates.
@@ -26,9 +30,9 @@ In this article you'll find video instructions on how to use your Polkadot Ledge
 
 !!! warning "ATTENTION"
 
-    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is dynamic and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot-JS UI. Please refer to this [referendum](https://polkadot.polkassembly.io/referendum/86) for details.
+    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is dynamic and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot-JS UI. Please refer to the [Staking](../learn-staking.md) page for details.
 
-  * **_If you are staking above the dynamic minimum amount and still aren't receiving rewards_** _,_ it's possible that your account needs to be re-adjusted. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
+  * **_If you are staking above the dynamic minimum amount and still aren't receiving rewards_** _,_ it's possible that your account needs to be re-adjusted. This is due to the **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
 
   * **Do not bond ALL your funds**. Leave a small amount _transferable_ in your account, so that you can pay transaction fees from that (changing validators, bonding more or unbonding your tokens are all transactions that will cost a small fee).
 

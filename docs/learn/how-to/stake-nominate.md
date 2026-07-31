@@ -37,8 +37,8 @@ How else can I stake
 
 !!! tip "GOOD TO KNOW"
 
-    Controller accounts are being deprecated. As a result, for new stashes the controller is automatically set to the stash account.
-    If you don't want to use your stash account often, you can create a staking proxy which can do all staking actions on its behalf. It has the same advantages as the controller, but even more flexibility.
+    Controller accounts have been removed from staking. Staking now uses your stash account together with an optional staking proxy.
+    If you don't want to use your stash account often, you can create a staking proxy which can perform all staking actions on its behalf, giving you added flexibility.
 
     Check out the article on [creating a proxy account](create-proxy-account.md) for more information.
 
@@ -60,7 +60,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 5\. Select the amount you want to bond. Make sure you leave a small amount of DOT transferrable in both the stash and the staking proxy. You'll need some transferrable funds to pay transaction fees when changing your nominations, bonding more, or unbonding.
 
-6\. Choose your reward destination. You can auto-compound your staking rewards increasing the amount at stake, or send them to the stash as a free balance, the controller (which will be the [stash account itself](dashboard-update-controller.md)), or any other account.
+6\. Choose your reward destination. You can auto-compound your staking rewards (increasing the amount at stake), send them to your stash account as free balance, or send them to any other account.
 
 ![](../../assets/how-to/65031344289.png)
 
@@ -68,7 +68,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
     Make sure that you have**at least 0.01 DOT** in the account that you are directing your staking rewards to. If you receive rewards of less than 0.01 DOT and they are sent to an empty account, you will **lose them**. This has to do with the [existential deposit](existential-deposit.md) on Polkadot.
 
-7\. Click "Next". Now, you need to select your validators. Please ensure you've read the article on [choosing your validators](choose-validators.md). You can nominate up to 16 validators on Polkadot (and 24 on Kusama). Nominating more trustworthy validators increases your chance to earn rewards consistently.
+7\. Click "Next". Now, you need to select your validators. Please ensure you've read the article on [choosing your validators](choose-validators.md). You can nominate up to 16 validators on both Polkadot and Kusama. Nominating more trustworthy validators increases your chance to earn rewards consistently.
 
 8\. Once you're done, click "Bond & Nominate." Review the transaction and click "Sign and submit" to finish the process.
 

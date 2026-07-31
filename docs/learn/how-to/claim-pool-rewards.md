@@ -51,9 +51,10 @@ Although you can manually claim your rewards at any moment, there's an option to
 
 3\. From this new window, you have the option to:
 
-  * **Allow Withdraw** : Anyone can claim your rewards on your behalf as a transferable balance in your account.
-  * **Allow Compound** : It grants permission to anyone to claim and compound your rewards.
-  * **Permissioned** : Only you can claim your rewards. This means you must withdraw or compound them yourself.
+  * **Allow Withdraw** : Anyone can claim your rewards on your behalf as a transferable balance in your account (`PermissionlessWithdraw`).
+  * **Allow Compound** : It grants permission to anyone to claim and compound your rewards (`PermissionlessCompound`).
+  * **Allow Withdraw or Compound** : Anyone can claim your rewards on your behalf and either withdraw them to your account or compound them back into the pool (`PermissionlessAll`).
+  * **Permissioned** : Only you can claim your rewards. This means you must withdraw or compound them yourself (`Permissioned`, the default).
 
 ![](../../assets/how-to/65028424254.png)
 

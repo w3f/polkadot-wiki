@@ -78,18 +78,18 @@ community members. The application we use most often to interact with the Matrix
 
 === "Web3 Foundation"
 
-    - [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+    - [Web3 Foundation X](https://x.com/web3foundation)
     - [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
 
 === "Polkadot"
 
-    - [Polkadot Twitter](https://twitter.com/Polkadot)
+    - [Polkadot X](https://x.com/Polkadot)
     - [Polkadot Reddit](https://www.reddit.com/r/polkadot)
     - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 
 === "Kusama"
 
-    - [Kusama Twitter](https://twitter.com/kusamanetwork)
+    - [Kusama X](https://x.com/kusamanetwork)
     - [Kusama Reddit](https://www.reddit.com/r/Kusama)
     - [Kusama YouTube Channel](https://youtube.com/c/kusamanetwork)
 

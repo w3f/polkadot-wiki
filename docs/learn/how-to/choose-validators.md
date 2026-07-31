@@ -27,7 +27,7 @@ You can find the information about validators on the [Community](https://staking
 
 #### **1\. Choose more than one validator**
 
-If at least one of the validators you nominate is elected by the election algorithm to be in the active set, you will nominate them with your entire stake. However, there is a risk of getting no rewards if you nominate very few validator candidates and none of them are chosen. Therefore, it is safer to choose as many trustworthy validators as possible (up to 16 on Polkadot and up to 24 on Kusama).
+If at least one of the validators you nominate is elected by the election algorithm to be in the active set, you will nominate them with your entire stake. However, there is a risk of getting no rewards if you nominate very few validator candidates and none of them are chosen. Therefore, it is safer to choose as many trustworthy validators as possible (up to 16 on both Polkadot and Kusama).
 
 #### **2\. Check if the validator has verified their identity**
 

@@ -10,13 +10,11 @@ _Discover the new Staking Dashboard that makes staking much easier and check our
 
 * * *
 
-If you unbonded your tokens but changed your mind, you can rebond them before the unbonding period is over through the  "**Network** "  **> "Staking**"  **> "**[**Account page**](https://polkadot.js.org/apps/#/staking-async/actions)" on the Polkadot Developer Interface. This extrinsic is issued by the **controller or staking proxy** account.
+If you unbonded your tokens but changed your mind, you can rebond them before the unbonding period is over through the  "**Network** "  **> "Staking**"  **> "**[**Account page**](https://polkadot.js.org/apps/#/staking-async/actions)" on the Polkadot Developer Interface. This extrinsic is issued by the **stash or staking proxy** account.
 
-!!! warning "ATTENTION"
+!!! tip "GOOD TO KNOW"
 
-    Controller accounts are being deprecated. You can still use existing ones for now, but creating new ones is no longer possible.
-
-    It is recommended to set your stash account as its own controller (described in [this article](change-controller-account.md)) and create a staking proxy to obtain the same benefits and greater flexibility.
+    Controller accounts have been removed from staking. Staking actions are now signed by your stash account or, optionally, a staking proxy that can act on its behalf with added flexibility.
 
     Check out the article on [creating a proxy account](create-proxy-account.md) for more information.
 

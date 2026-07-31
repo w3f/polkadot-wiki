@@ -32,6 +32,10 @@ Another possibility is that you're trying to empty your account of an asset that
 
 In the following video, we dive a little deeper into the various locks that can exist on your balance and how to remove them to make your balance transferable again:
 
+!!! warning "This video predates the Asset Hub Migration"
+
+    The walkthrough below was recorded before the [Asset Hub Migration](asset-hub-migration.md). Account balances are now held on the Polkadot Hub, so the interface shown may differ from what you see today. The explanation of locks and how to remove them still applies — see [Account Balances](../learn-account-balances.md) for the current details.
+
 [Learn How You Can Free Funds - Deep Dive into Polkadot's Locks](https://www.youtube.com/watch?v=LHgY7ds_bZ0)
 
 * * *
