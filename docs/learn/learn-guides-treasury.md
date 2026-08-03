@@ -257,27 +257,19 @@ extrinsic can be utilized via a governance proposal.
 !!!tip "Example proposal - Voiding a Treasury Spend"
     For reference, check the referenda on Kusama that [tests VoidSpend functionality for Treasury Payouts](https://kusama.subsquare.io/referenda/391). Through this referenda, a treasury spend was [successfully voided](https://kusama.subscan.io/event?page=1&time_dimension=date&module=treasury&event_id=assetspendvoided).
 
-## Submit Treasury Proposal via Polkassembly
+## Submit Treasury Proposal via Subsquare
 
-To submit a treasury track referendum via [Polkassembly](https://polkadot.polkassembly.io/opengov)
-click on the FAB button in the bottom right corner. Then,
+To submit a treasury track referendum via [Subsquare](https://polkadot.subsquare.io/), open the app
+and start a new proposal on the relevant treasury track. Then,
 
-- Click on "Create Treasury Proposal" and choose an address for the proposer.
-- After choosing an address, you will enter a three-stage guideline:
-
-  - Write a proposal: you can add a detailed description for the proposal, which will be stored on
-    Polkassembly. Alternatively, you can link an existing discussion post.
-
-  ![polkassembly-write-proposal](../assets/polkassembly-write-proposal.png)
-
-  - Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
-    preimage, add the beneficiary address and the token amount. The track will be auto-selected and
-    the user can proceed with the creation of a preimage.
-
-  ![polkassembly-create-preimage](../assets/polkassembly-create-preimage.png)
-
-  - Create a proposal: final confirmation about the proposal creation. The description of the
-    proposal and the preimage are automatically linked to the proposal.
+- Choose an address for the proposer.
+- Write a proposal: add a detailed description for the proposal, which will be stored on Subsquare.
+  Alternatively, you can link an existing discussion post.
+- Create a preimage: an existing preimage can be linked, or a new one can be created. To create a
+  preimage, add the beneficiary address and the token amount. The track will be auto-selected and
+  you can proceed with the creation of a preimage.
+- Create a proposal: final confirmation of the proposal creation. The description of the proposal and
+  the preimage are automatically linked to the proposal.
 
 ## Requesting Tips from the Treasury
 
@@ -291,7 +283,7 @@ Briefly, you will need to:
 - Create a preimage using the `treasury.spendLocal` extrinsic and specifying the number of tokens
   and the beneficiary of the tip
 - Submit a proposal to the right track (i.e. `30` or `31`) using the preimage hash
-- Once you started the referendum go to [Polkassembly](https://polkassembly.io/), log in with the
+- Once you started the referendum go to [Subsquare](https://polkadot.subsquare.io/), log in with the
   proposer account and edit the referendum details
 - Notify [the Polkadot Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io)
   or [the Kusama Direction Element Channel](https://matrix.to/#/#Polkadot-Direction:parity.io) about

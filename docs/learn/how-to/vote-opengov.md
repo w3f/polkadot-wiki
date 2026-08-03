@@ -10,15 +10,14 @@ Polkadot and Kusama allow community members to participate and influence decisio
 
 !!! danger "READ THIS FIRST!"
 
-    This article describes how to vote using Polkadot Developer Interface. Visit the article "[Polkadot OpenGov: How to Participate](opengov-participate.md)" to learn how to do it from [Polkassembly](https://polkadot.polkassembly.io/opengov) and [Subsquare](https://polkadot.subsquare.io/).
+    This article describes how to vote using Polkadot Developer Interface. Visit the article "[Polkadot OpenGov: How to Participate](opengov-participate.md)" to learn how to do it from [Subsquare](https://polkadot.subsquare.io/).
 
 
 ### **Tools for Polkadot OpenGov**
 
 Built by the community, several tools allow you to participate in the governance of Polkadot and Kusama. Here is a list of some of them:
 
-  * [Polkassembly](https://polkassembly.io/). It offers a place to discuss, add contextual information to the referenda, vote, and delegate your voting power.
-  * [Subsquare](https://www.subsquare.io/). It shows contextual information submitted on Polkassembly or Subsquare. It allows commenting on each referendum, and also voting and delegating.
+  * [Subsquare](https://www.subsquare.io/). It offers a place to discuss and add contextual information to the referenda. It allows commenting on each referendum, and also voting and delegating.
   * [Bright Treasury](https://treasury.bright.dev/). A tool focused on proposals, bounties, and referenda on treasury matters.
   * [Nova Wallet](https://novawallet.io/). Mobile wallet with extensive tools to facilitate voting and delegating from your own wallet.
 
@@ -50,7 +49,7 @@ The "Support" graph represents the percentage of "ayes" plus abstentions out of 
 
 The orange line in both graphs indicates the minimum threshold for approval and support that a referendum must keep to be approved. Each track has different thresholds and conditions to meet. Read this [wiki article](../learn-polkadot-opengov.md#approval-and-support) for further details about these and other parameters in OpenGov.
 
-It's important to notice that each referendum should be accompanied by contextual information about it, but that information is not stored on-chain, so Polkadot-JS UI can't show it. You can click on the [Polkassembly](https://polkassembly.io/) or [Subsquare](https://www.subsquare.io/) icons on each referendum (bottom left corner) to discuss and read further about each referendum. These are the _de facto_ sites built by the community where the proposers can share info about their proposals.
+It's important to notice that each referendum should be accompanied by contextual information about it, but that information is not stored on-chain, so Polkadot-JS UI can't show it. You can click on the [Subsquare](https://www.subsquare.io/) icon on each referendum (bottom left corner) to discuss and read further about each referendum. This is the _de facto_ site built by the community where the proposers can share info about their proposals.
 
 4\. By clicking on the "Vote" button, a new panel pops up with the following information:
 

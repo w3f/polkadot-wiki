@@ -5,9 +5,9 @@ description: Overview of the trustless bridge between Polkadot and Kusama, enabl
 
 Both Polkadot and Kusama blockchain networks achieve finality through GRANDPA consensus, which
 enables trustless bridging of both the networks through their respective Bridge Hubs. Polkadot
-Bridge Hub runs a [light client of Kusama network](https://polkadot.polkassembly.io/referenda/545)
+Bridge Hub runs a [light client of Kusama network](https://polkadot.subsquare.io/referenda/545)
 and Kusama Bridge Hub runs a
-[light client of Polkadot network](https://kusama.polkassembly.io/referenda/354), which were both
+[light client of Polkadot network](https://kusama.subsquare.io/referenda/354), which were both
 enabled through their respective OpenGov referenda. This trustless bridge allows Polkadot Asset Hub
 to bridge in wrapped KSM tokens and Kusama Asset Hub to bridge in wrapped DOT tokens, thus making
 DOT available to all Kusama parachains and KSM to all Polkadot parachains.

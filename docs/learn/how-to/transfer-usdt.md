@@ -16,7 +16,7 @@ Tether (USDT) is now available on Polkadot. You can check their [official announ
 
     Tether, the entity behind USDT, [announced the discontinuation of USDT on the Kusama network](https://tether.to/en/tether-makes-strategic-transition-to-meet-community-demands-and-foster-innovation).
 
-USDT was made into a sufficient asset on Polkadot Asset Hub with [Referendum 80](https://polkadot.polkassembly.io/referendum/80), which means that the receiver account **doesn't** need to hold an [existential deposit](existential-deposit.md) in the native DOT token to receive USDT.
+USDT was made into a sufficient asset on Polkadot Asset Hub through [OpenGov Referendum 80](https://polkadot.subsquare.io/democracy/referenda/80), which means that the receiver account **doesn't** need to hold an [existential deposit](existential-deposit.md) in the native DOT token to receive USDT.
 
 However, an account still needs to hold **at least the minimum USDT balance** , which is **0.01**  **USDT** **on** **Polkadot**.
 

@@ -11,7 +11,7 @@ The PCF is an optional off-chain vehicle for OpenGov to execute tasks such as si
 contracts, making fiat payments, enforcing intellectual property, and contracting third-party
 service providers like consultants. Unlike typical companies, the PCF has no shareholders, members,
 trustees, or beneficiaries whose interests could conflict with those of the token holders. See more
-about PCF in [the original OpenGov proposal](https://polkadot.polkassembly.io/referenda/730).
+about PCF in [the original OpenGov proposal](https://polkadot.subsquare.io/referenda/730).
 
 ## Role of the Polkadot Community Foundation
 
@@ -223,7 +223,7 @@ Foundation Funding Proposals are funding requests from the
 [Polkadot treasury](../learn/learn-guides-treasury.md#creating-a-treasury-proposal), specifying the
 amount in the preimage's value field according to the level of spend required, and setting the
 beneficiary to the PCF multisig wallet address. The Proposal must also include the intended use of
-funds in a comment on the [Polkassembly](https://polkadot.polkassembly.io/opengov) website and begin
+funds in a comment on the [Subsquare](https://polkadot.subsquare.io/) website and begin
 with “[Polkadot Community Foundation]” in its name. The referenda can use any
 [OpenGov origin](../learn/learn-polkadot-opengov-origins.md) with sufficient spending permission.
 
@@ -443,9 +443,8 @@ as contractor, consulting, and legal fees.
 
 **Where can I find referenda creation guidelines?**
 
-This can be found on
-[the Polkassembly docs website](https://docs.polkassembly.io/jekyll/2022-06-30-opengov.html#creating-a-referendum-on-polkassembly),
-or [Polkadot-JS guides](../learn/learn-guides-polkadot-opengov.md#create-a-referenda-proposal).
+This can be found in the
+[Polkadot-JS guides](../learn/learn-guides-polkadot-opengov.md#create-a-referenda-proposal).
 
 **What happens if the proposal isn’t sufficiently funded during the execution phase?**
 
@@ -504,4 +503,3 @@ discretion/opinion from the PCF.
 - [Polkadot Community Foundation Bylaws](https://drive.google.com/file/d/1WhITXXgbzESy9_wdX5H3uFB_kctYWnX4/view)
 - [PCF Constitution](https://drive.google.com/file/d/13vBTwXodvjxnYx3xIfE_SehrsVx6d4bg/view)
 - [Kusamarian AAG Video Discussion](https://twitter.com/TheKusamarian/status/1838956632610669006)
-- [Terms of Service](https://polkadot.polkassembly.io/terms-and-conditions)

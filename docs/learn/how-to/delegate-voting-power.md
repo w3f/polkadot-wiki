@@ -10,7 +10,7 @@ Delegating voting power to a trusted community member can be an effective way to
 
 !!! danger "READ THIS FIRST!"
 
-    This article provides instructions on how to delegate your voting power using the Polkadot Developer Interface. However, the Polkadot Developer Interface is a web wallet meant for power users and developers. Please refer to the article "[Polkadot OpenGov: How to Participate](opengov-participate.md)" to learn how to do it from more user-friendly platforms like [Polkassembly](https://polkadot.polkassembly.io/opengov) and [Subsquare](https://polkadot.subsquare.io/).
+    This article provides instructions on how to delegate your voting power using the Polkadot Developer Interface. However, the Polkadot Developer Interface is a web wallet meant for power users and developers. Please refer to the article "[Polkadot OpenGov: How to Participate](opengov-participate.md)" to learn how to do it from more user-friendly platforms like [Subsquare](https://polkadot.subsquare.io/).
 
 
 ### Conviction locks

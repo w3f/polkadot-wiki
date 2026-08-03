@@ -26,7 +26,7 @@ How else can I stake
 
 !!! warning "IMPORTANT"
 
-    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is **dynamic** and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot Developer Interface. Please refer to [this referendum](https://polkadot.polkassembly.io/referendum/55) for details.
+    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is **dynamic** and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot Developer Interface. Please refer to [this referendum](https://polkadot.subsquare.io/democracy/referenda/55) for details.
 
   * If you are staking **above the dynamic minimum**  amount and still **aren't receiving rewards** , it's possible that your account needs to be re-adjusted by calling an extrinsic. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
   * If you don't have enough DOT to earn rewards, consider [joining a nomination pool](nomination-pools-guide.md) instead of staking solo.

@@ -17,12 +17,10 @@ Below are the most essential links to the community channels for Polkadot and Ku
     - [Polkadot Support Contact](https://docs.polkadot.com/get-support/).
     - [Polkadot's Latest Research (news)](https://research.web3.foundation/news).
     - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
-    - [Polkadot Discussion and Governance on Polkassembly](https://polkadot.polkassembly.io/).
     - [Polkadot Discussion and Governance on Subsquare](https://polkadot.subsquare.io/discussions).
 
 === "Kusama"
 
-    - [Kusama Discussion and Governance on Polkassembly](https://kusama.polkassembly.io/).
     - [Kusama Discussion and Governance on Subsquare](https://kusama.subsquare.io/discussions).
 
 ### Events
@@ -31,7 +29,7 @@ Below are the most essential links to the community channels for Polkadot and Ku
 applying for funding, and materials for running it.
 
 [Community Events](https://dotevents.xyz/) -
-Information on events funded by the [Treasury](https://polkadot.polkassembly.io/bounty/17) and
+Information on events funded by the [Treasury](https://polkadot.subsquare.io/treasury/bounties/17) and
 organized by the Polkadot community (candidates or ambassadors) focused on promoting Polkadot,
 Kusama, and related technologies. The events are educational and informative, and their goal is to
 create an impact in the community.

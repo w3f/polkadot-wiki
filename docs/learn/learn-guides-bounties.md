@@ -57,7 +57,6 @@ curators to the bounty.
 To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
 information. When a user submits a bounty spending proposal, they will need to find an off-chain
 medium to explain the proposal, for example a bounty proposal document on
-[Polkassembly](https://polkadot.polkassembly.io/opengov) or
 [Subsquare](https://polkadot.subsquare.io/).
 [This template](https://docs.google.com/document/d/1-IBz_owspV5OcvezWXpksWDQReWowschD0TFuaVKKcU/edit?usp=sharing)
 can be used to submit all the information needed by OpenGov voters to make an informed decision.
@@ -112,7 +111,7 @@ during the current spend period).
     See [this written tutorial](https://scribehow.com/shared/How_to_Create_and_Award_a_Child_Bounty__Q-YFGkYAR3WxMnvYGHiU3Q) to learn more about how to create and award child bounties.
 
 !!!info "Remember to add contextual information about child bounties"
-    When you add child bounties, please add contextual information on the governance forums [Polkassembly](https://polkassembly.io/) or [Subsquare](https://polkadot.subsquare.io/).
+    When you add child bounties, please add contextual information on the governance forum [Subsquare](https://polkadot.subsquare.io/).
 
 See the video tutorial below to learn how to create a child bounty, assign a curator, and award a
 child bounty.
@@ -140,11 +139,9 @@ Once a child bounty is awarded, awardees can claim the child bounty.
     See [this written tutorial](https://scribehow.com/shared/How_to_claim_a_Child_Bounty_reward_on_Polkadotjs__t3V7NDUjQlus40EUjc-5Kw) to learn more about how to claim a child bounty reward.
 
 The status of child bounties can be viewed on the
-[Polkassembly Bounty page](https://polkadot.polkassembly.io/bounties) under the specific parent
+[Subsquare Bounty page](https://polkadot.subsquare.io/treasury/bounties) under the specific parent
 bounty. A child bounty status can be "Added", "Awarded", or "Claimed". For example, the parent
-bounty 17 refers to the Community Events Bounty, which has 183 child bounties.
-
-![polkassembly-child-bounties](../assets/polkassembly-child-bounties.png)
+bounty 17 refers to the Community Events Bounty, which has many child bounties.
 
 After the child bounty has been rewarded, follow the guidelines in the video tutorial below to learn
 how to claim a child bounty reward. Note that the extrinsic to claim the child bounty reward is

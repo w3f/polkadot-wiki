@@ -135,7 +135,7 @@ should monitor the relay chain as follows to know when the next runtime upgrade 
    correspond to the `Root` and `whitelistedCaller` tracks, respectively. These are the only tracks
    that can enact runtime upgrdes. Log the referendum's `index`; this will help you keep track of
    the its progress. With the index you can look up the details of the proposal in
-   [Polkassembly.io](https://polkadot.polkassembly.io/whitelisted-caller?trackStatus=all&page=1) to
+   [Subsquare](https://polkadot.subsquare.io/referenda/tracks/1) to
    see if it corresponds with a runtime upgrade.
 2. Ongoing referenda will have an `enactment` field under `referenda.ReferendumInfoFor` storage.
    This is the block number that, if passed, the system will attempt to schedule the inner
