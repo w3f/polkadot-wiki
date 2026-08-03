@@ -131,6 +131,6 @@ Undelegating from Subsquare is as easy as delegating. Follow the steps below to 
 
 !!! warning "ATTENTION"
 
-    Once the unlocking period has passed after undelegating, you can unlock your votes by following the Polkadot Wiki article: "[Removing Expired Voting Locks](../learn-guides-polkadot-opengov.md#removing-expired-voting-locks)."
+    Once the unlocking period has passed after undelegating, you can unlock your votes by following this article: "[Removing Expired Voting Locks](../learn-guides-polkadot-opengov.md#removing-expired-voting-locks)."
 
 * * *

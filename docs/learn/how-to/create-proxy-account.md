@@ -69,9 +69,7 @@ Polkadot offers different types of proxies you can set, depending on the permiss
 
   * Staking - these proxies allow staking-related transactions. Not to be confused with the soon-to-be-deprecated _controller_ accounts, which are needed for certain transactions. Staking proxies are meant to allow you to access your stash account less frequently.
 
-For more proxy types, visit the Polkadot Wiki article below:
-
-[Polkadot Wiki: Proxy Types](../learn-proxies.md#proxy-types)
+For more proxy types, visit the [Proxy Types](../learn-proxies.md#proxy-types) article.
 
 See more in-depth info about proxy types [in this article](../learn-proxies.md).
 
