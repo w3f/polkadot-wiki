@@ -23,7 +23,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
     **·** It allows you to interact with any Web 3.0-compatible site in the Polkadot ecosystem.
     **·** The extension recognizes all known Polkadot scams and alerts you when you access a phishing site. This will help you protect yourself and your funds.
 
-****
+* * *
 
 !!! tip "GOOD TO KNOW"
 

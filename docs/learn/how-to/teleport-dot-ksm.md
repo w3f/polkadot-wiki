@@ -36,7 +36,7 @@ Like with regular transfers, these fees are deducted from your transferable bala
 
 !!! warning "ATTENTION"
 
-    Teleports don't have the "keep alive" safeguard like normal transfers. This means that you need to make sure that your balance after the application of fees is above the existential deposit, otherwise your account will be reaped (deactivated) and **any remaining balance will belost!**
+    Teleports don't have the "keep alive" safeguard like normal transfers. This means that you need to make sure that your balance after the application of fees is above the existential deposit, otherwise your account will be reaped (deactivated) and **any remaining balance will be lost!**
 
     If you want to teleport your entire balance, and reap your account, make sure to account for the source chain fees, when choosing the amount to teleport.
 
@@ -55,10 +55,10 @@ Teleports come with an additional fee on the destination chain. This fee is dedu
     * **Polkadot Relay Chain** : 1 DOT
 
     * **Kusama Asset Hub:**  0.0000033333 KSM
-    * **Kusama** **People:** 0.000033333333 KSM
-    * **Kusama** **Bridge Hub:** 0.000033333333 KSM
-    * **Kusama** **Coretime:** 0.000033333333 KSM
-    * ******Kusama** **Relay Chain:** 0.00033333333 KSM****
+    * **Kusama People:** 0.000033333333 KSM
+    * **Kusama Bridge Hub:** 0.000033333333 KSM
+    * **Kusama Coretime:** 0.000033333333 KSM
+    * **Kusama Relay Chain:** 0.00033333333 KSM
 
 * * *
 

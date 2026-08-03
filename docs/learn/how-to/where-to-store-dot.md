@@ -58,17 +58,17 @@ The following wallets have been developed by Parity. There are many useful artic
 
     These wallets are mostly created with developers and advanced users in mind, and although they provide advanced functionality, they might not be very user-friendly. For a more user-friendly experience, you can use one of the many wallets developed by other teams, [listed ](where-to-store-dot.md#treasury-funded-wallets)above.
 
-#### **Polkadot browser extension**
+#### Polkadot browser extension
 
 The [Polkadot Developer Signer](create-polkadot-account.md) is an account manager and will work in all Chromium-based browsers (Chrome, Brave, Edge) and Firefox. It is recommended to store your accounts in the extension and not on the Polkadot Developer Interface directly.
 
 Because the extension only manages your keys and allows you to sign transactions, it needs to interact with a UI to show information about your accounts (like their balance) and to make transactions with them. It can be the Polkadot Developer Interface (below) or any compatible Web 3.0 app in the Polkadot ecosystem. With the Polkadot Developer Signer, you can connect your accounts to most of them.
 
-#### **************************Polkadot Developer Interface (user interface)******************
+#### Polkadot Developer Interface (user interface)
 
 The[Polkadot Developer Interface](create-account.md) web wallet contains advanced features designed for developers and power users, such as multi-sig accounts and switching signature schemes. It supports the full functionality that Substrate chains have to offer.
 
-#### **************************Subkey (needs technical knowledge)******************
+#### Subkey (needs technical knowledge)
 
 [Subkey](create-account-subkey.md) is a command-line utility meant for advanced users.
 

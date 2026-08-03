@@ -19,8 +19,7 @@ This article explains how to add a Ledger account directly on the [Polkadot Deve
 The Generic Polkadot app allows you to operate on any network using the account generated from the Polkadot app. On the other hand, the Migration app contains the derivation path for every Substrate network, which allows you to migrate the funds from any account created from a legacy Ledger app to the new Generic Polkadot app account.
 
 However, **we recommend adding your Ledger through the other wallet extensions compatible with Ledger** :
-
-****[Where to Store DOT: Polkadot Wallet Options](where-to-store-dot.md)****
+**[Where to Store DOT: Polkadot Wallet Options](where-to-store-dot.md)**
 
 * * *
 

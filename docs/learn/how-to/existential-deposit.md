@@ -23,10 +23,10 @@ If an account drops below the ED on every sufficient asset, the account is reape
     * **Polkadot Relay Chain** : 1 DOT
 
     * **Kusama Asset Hub:**  0.0000033333 KSM
-    * **Kusama** **People:** 0.000033333333 KSM
-    * **Kusama** **Bridge Hub:** 0.000033333333 KSM
-    * **Kusama** **Coretime:** 0.000033333333 KSM
-    * ******Kusama** **Relay Chain:** 0.00033333333 KSM****
+    * **Kusama People:** 0.000033333333 KSM
+    * **Kusama Bridge Hub:** 0.000033333333 KSM
+    * **Kusama Coretime:** 0.000033333333 KSM
+    * **Kusama Relay Chain:** 0.00033333333 KSM
 
 
 ### Facts to know about the existential deposit

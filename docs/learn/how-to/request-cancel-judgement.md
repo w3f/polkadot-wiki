@@ -25,7 +25,7 @@ This article will go through the steps to request, and cancelling, a judgment fr
 
 If you don't know which registrar to pick, first check the available registrars by going to "Chain State", under "Developer" > "Chain state", and selecting 'identity.registrars' to get the full list. You can also check [this page](../learn-identity.md#registrars), which lists the current Polkadot registrars.
 
-**Modify the settings below according to the registrar's instructions, and click "****Submit Transaction"****.**
+**Modify the settings below according to the registrar's instructions, and click "Submit Transaction".**
 
 ![](../../assets/how-to/65024784167.png)
 
