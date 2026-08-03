@@ -35,7 +35,7 @@ If you have an account on Polkadot Developer Interface or it is connected to the
 
 ![](../../assets/how-to/65032514099.png)
 
-2\. On this page, you will be presented with a filter for the tracks for which there are active referenda. For information about the different tracks, you can read this [wiki article](../learn-polkadot-opengov.md#origins-and-tracks).
+2\. On this page, you will be presented with a filter for the tracks for which there are active referenda. For information about the different tracks, you can read [this article](../learn-polkadot-opengov.md#origins-and-tracks).
 
 _![](../../assets/how-to/65032514242.png)_
 
@@ -47,7 +47,7 @@ The "Approval" graph plots a horizontal line representing the current percentage
 
 The "Support" graph represents the percentage of "ayes" plus abstentions out of the total possible number of votes (excluding conviction adjustments) that can be made within the system.
 
-The orange line in both graphs indicates the minimum threshold for approval and support that a referendum must keep to be approved. Each track has different thresholds and conditions to meet. Read this [wiki article](../learn-polkadot-opengov.md#approval-and-support) for further details about these and other parameters in OpenGov.
+The orange line in both graphs indicates the minimum threshold for approval and support that a referendum must keep to be approved. Each track has different thresholds and conditions to meet. Read [this article](../learn-polkadot-opengov.md#approval-and-support) for further details about these and other parameters in OpenGov.
 
 It's important to notice that each referendum should be accompanied by contextual information about it, but that information is not stored on-chain, so Polkadot-JS UI can't show it. You can click on the [Subsquare](https://www.subsquare.io/) icon on each referendum (bottom left corner) to discuss and read further about each referendum. This is the _de facto_ site built by the community where the proposers can share info about their proposals.
 
@@ -61,7 +61,7 @@ It's important to notice that each referendum should be accompanied by contextua
 * "Abstain," your vote will count for the referendum support (total voting balance) but not for its approval (voting power ratio of "Ayes" or "Nays").
   * The voting balance (3). The amount of DOT (or KSM) you will vote with. If you are voting from a delegate account, the delegated voting power won’t be visible here, but it will be taken into account for the referendum result.
 
-  * The conviction you are voting with (4). It's a multiplier to your voting balance, so these two determine your "voting power." The greater the conviction, the greater your voting power and the longer the tokens will be locked for that referendum. Learn more about "conviction locking" in our wiki article "[Voluntary Locking](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting)."
+  * The conviction you are voting with (4). It's a multiplier to your voting balance, so these two determine your "voting power." The greater the conviction, the greater your voting power and the longer the tokens will be locked for that referendum. Learn more about "conviction locking" in the article "[Voluntary Locking](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting)."
 
 ![](../../assets/how-to/65032514802.png)
 

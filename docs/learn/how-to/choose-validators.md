@@ -75,6 +75,6 @@ Many Polkadot validators also publish YouTube videos or guides to staking on Med
 
 Community members on the forums often share their recommendations and experiences. Join the conversation on our [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) on Element/Matrix.
 
-Further information on nominating can be found in the [Polkadot Wiki](../learn-nominator.md#good-nominator-practices).
+Further information on nominating can be found under [good nominator practices](../learn-nominator.md#good-nominator-practices).
 
 * * *

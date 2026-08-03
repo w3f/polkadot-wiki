@@ -17,7 +17,7 @@ This article explains how to use the same account on any available network using
 
 ### Mnemonic phrase and derivation paths
 
-Accounts in the Polkadot ecosystem are deterministically created based on two key components: the mnemonic phrase and the derivation path. A specific combination of them will always generate the same account. Learn more about portability and derivation paths in the Polkadot Wiki sections below:
+Accounts in the Polkadot ecosystem are deterministically created based on two key components: the mnemonic phrase and the derivation path. A specific combination of them will always generate the same account. Learn more about portability and derivation paths in the sections below:
 
 [Portability](../learn-account-advanced.md#portability) and [Derivation Paths](../learn-account-advanced.md#derivation-paths)
 

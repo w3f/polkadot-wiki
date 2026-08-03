@@ -23,7 +23,7 @@ This article will go through the steps to request, and cancelling, a judgment fr
 
 1\. Navigate to the [Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-people-rpc.polkadot.io#/extrinsics) tab and select '**identity.requestJudgement** '.
 
-If you don't know which registrar to pick, first check the available registrars by going to "Chain State", under "Developer" > "Chain state", and selecting 'identity.registrars' to get the full list. You can also check this [wiki page](../learn-identity.md#registrars), which lists the current Polkadot registrars.
+If you don't know which registrar to pick, first check the available registrars by going to "Chain State", under "Developer" > "Chain state", and selecting 'identity.registrars' to get the full list. You can also check [this page](../learn-identity.md#registrars), which lists the current Polkadot registrars.
 
 **Modify the settings below according to the registrar's instructions, and click "****Submit Transaction"****.**
 
@@ -35,7 +35,7 @@ If you don't know which registrar to pick, first check the available registrars 
 
     For new identity judgments, please utilize the other registrars:
 
-    [Polkadot Wiki: Registrars](../learn-identity.md#registrars)
+    [Registrars](../learn-identity.md#registrars)
 
 This will make your identity go from unjudged:
 
@@ -69,6 +69,6 @@ You may decide that you do not want to be judged by a registrar (for instance, b
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
 
-See this [wiki article](../learn-guides-identity.md#registrars) for more on how to become a registrar.
+See [this article](../learn-guides-identity.md#registrars) for more on how to become a registrar.
 
 * * *

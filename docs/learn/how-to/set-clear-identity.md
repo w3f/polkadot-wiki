@@ -32,7 +32,7 @@ Users can set an identity by registering through default fields such as legal na
     Web3 Foundation's Registrar (Registrar Index 0) **no longer accepts judgement requests**. This change doesn't affect identities already judged by the registrar.
 
     For new identity judgments, please utilize the other registrars:
-    [Polkadot Wiki: Registrars](../learn-identity.md#registrars)
+    [Registrars](../learn-identity.md#registrars)
 
 Users must reserve funds in a bond to store their information on chain: 0.20017 DOT, and 0.00001 DOT per byte of encoded information (or about 0.006673 KSM and 0.0000003 KSM, respectively, in Kusama). These funds are _locked_ , not spent - they are returned when the identity is cleared.
 

@@ -10,7 +10,7 @@ If you ever lose access to your account, the only ways to restore it are your mn
 
 !!! danger "READ THIS FIRST!"
 
-    **Do not share your mnemonic phrase, backup file, raw seed, or password with anyone!** No official representative will ever ask you for this information or suggest you enter it on a third-party website. Learn more about [protecting yourself from scams](../../general/scams.md) on our Wiki.
+    **Do not share your mnemonic phrase, backup file, raw seed, or password with anyone!** No official representative will ever ask you for this information or suggest you enter it on a third-party website. Learn more about [protecting yourself from scams](../../general/scams.md).
 
 
 ### Storing your mnemonic phrase

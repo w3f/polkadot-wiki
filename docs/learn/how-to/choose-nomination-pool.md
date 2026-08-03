@@ -39,7 +39,7 @@ Nomination pools can charge a commission. It is applied to the staking rewards t
 
 ![](../../assets/how-to/65028556709.png)
 
-Pool administration can change this commission over time. You can read more about pool commissions on the [Polkadot Wiki](../learn-nomination-pools.md#pool-commissions).
+Pool administration can change this commission over time. You can read more about [pool commissions](../learn-nomination-pools.md#pool-commissions).
 
 #### **Current Pool Nominations**
 
@@ -73,7 +73,7 @@ If you want to see the public address and roles of a specific pool, you have to 
 
 
 
-In the [Polkadot Wiki](../learn-nomination-pools.md#roles), you'll find more information about each specific role's meaning.
+You'll find more information about [each specific role's meaning](../learn-nomination-pools.md#roles).
 
 Here are a few things to consider about the accounts that manage the pool:
 

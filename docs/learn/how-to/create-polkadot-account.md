@@ -21,10 +21,10 @@ On the [wallet options page](where-to-store-dot.md), you can find articles about
 
 The following articles guide you through the process of creating a Polkadot account using these user-friendly wallets:
 
-  * [Talisman Wallet: How to Create an Account](https://docs.talisman.xyz/)
-  * [Nova Wallet: How to Create an Account](https://docs.novawallet.io/)
-  * [Subwallet: How to Create an Account](https://docs.subwallet.app/)
-  * [PolkaGate: How to Create an Account](https://docs.polkagate.xyz/)
+  * [Talisman Wallet: How to Create an Account](https://docs.talisman.xyz/talisman/start/installing-talisman/create-a-new-account)
+  * [Nova Wallet: How to Create an Account](https://docs.novawallet.io/nova-wallet-wiki/wallet-management/create-a-new-wallet)
+  * [Subwallet: How to Create an Account](https://docs.subwallet.app/main/mobile-app-user-guide/account-management/create-a-new-account-with-new-seed-phrase)
+  * [PolkaGate: How to Create an Account](https://docs.polkagate.xyz/polkagate/polkagate-extension-user-guide/create-account/create-new-account)
 
 * * *
 

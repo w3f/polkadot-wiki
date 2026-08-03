@@ -23,7 +23,7 @@ When creating a pool, you can set the administrative roles and make an initial d
 
     Closing a nomination pool is not simple and it takes time. For a minimum duration of two unbonding periods (56 days in Polkadot and 14 days in Kusama), multiple extrinsics must be issued between initiating the pool's destruction and its complete dismantling. Make sure you understand and accept this process before creating a nomination pool.
 
-    For more information, visit the [Polkadot Wiki](../learn-guides-staking-pools.md#pool-destruction-with-polkadot-js).
+    For more information, see [Pool destruction with Polkadot-JS](../learn-guides-staking-pools.md#pool-destruction-with-polkadot-js).
 
 ### How to create a pool
 
@@ -47,7 +47,7 @@ Notice that whoever holds the Nominator role can update these nominations in the
 
 !!! info
 
-    See this [wiki article](../learn-nomination-pools.md#roles) for a detailed overview of roles and limitations.
+    See [this article](../learn-nomination-pools.md#roles) for a detailed overview of roles and limitations.
 
 5\. In the "Bond" section, you can choose the initial deposit amount. Once you have done this, click "Continue."
 
@@ -83,7 +83,7 @@ The "Manage Pool" panel provides the Root account with access to the following o
 
   * **View Pool Metrics:** This option will display information regarding the pool and its metrics.
   * **Claim Commission** : If the nomination pool had set commission to the pool's rewards, it could be claimed from here.
-  * **Manage Commission** : A commission rate can be set after importing the payee account. This commission can be increased up to the value of "Max Commission" at a specified "Change Rate." Once set, the "Max Commission" and the "Change Rate" can only be decreased. To learn more about nomination pools commission, visit the [wiki article](../learn-nomination-pools.md#pool-commissions) on the topic.
+  * **Manage Commission** : A commission rate can be set after importing the payee account. This commission can be increased up to the value of "Max Commission" at a specified "Change Rate." Once set, the "Max Commission" and the "Change Rate" can only be decreased. To learn more about nomination pools commission, visit [this article](../learn-nomination-pools.md#pool-commissions) on the topic.
 
 ![](../../assets/how-to/65028495605.png)
 

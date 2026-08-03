@@ -94,6 +94,6 @@ To do this, select the "Withdraw unbonded" button from the menu above after the 
   * A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
   * Rebonding during the unbonding period is not possible.
 
-See the [wiki](../learn-nomination-pools.md) for more information on how to create and destroy pools.
+See [Nomination Pools](../learn-nomination-pools.md) for more information on how to create and destroy pools.
 
 * * *
