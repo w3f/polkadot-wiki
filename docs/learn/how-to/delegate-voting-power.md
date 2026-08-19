@@ -21,7 +21,7 @@ It's important to highlight that the duration of the locking period of your bala
 
 !!! warning "IMPORTANT"
 
-    Undelegating your voting power does not mean that your funds will be immediately accessible, even if your selected delegate never voted. Your voting balance will become available after the conviction lock period you applied to it has expired and only once you unlock it.
+    Undelegating your voting power doesn't mean that your funds will be immediately accessible, even if your selected delegate never voted. Your voting balance will become available after the conviction lock period you applied to it has expired and only once you unlock it.
 
     Learn how to unlock your referenda locks in "Polkadot Developer Interface: How to Remove Expired Democracy Locks"
 
@@ -59,9 +59,9 @@ This information can help you identify the delegates who are or have been active
 
 !!! warning "ATTENTION"
 
-    Delegations do not propagate. If you delegate to an account which is already delegating on a track, your voting power won't be considered in any referenda on that track.
+    Delegations don't propagate. If you delegate to an account which is already delegating on a track, your voting power won't be considered in any referenda on that track.
 
-4\. When you are satisfied with your delegation, click 'Delegate,' and that's it! Your voting power will participate in every referendum your delegate votes on within the selected tracks.
+4\. When you are satisfied with your delegation, click 'Delegate,' and that's it. Your voting power will participate in every referendum your delegate votes on within the selected tracks.
 
 !!! warning "IMPORTANT"
 
@@ -79,7 +79,7 @@ If you wish to stop delegating, whether because you want to vote personally or d
 
 ![](../../assets/how-to/65032408487.png)
 
-3\. Click on the "Submit Transaction" button, review and sign the transaction on your wallet, and that's it, you just undelegated all your voting power for the selected track!
+3\. Click on the "Submit Transaction" button, review and sign the transaction on your wallet, and that's it, you just undelegated all your voting power for the selected track.
 
 !!! warning "ATTENTION"
 

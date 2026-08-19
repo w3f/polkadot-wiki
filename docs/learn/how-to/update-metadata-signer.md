@@ -16,17 +16,17 @@ This means there was a runtime upgrade since you last used Polkadot Developer In
 
     The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
-In this guide, we will use the Polkadot Developer Signer, but the same steps can be used for any other extension within the Polkadot ecosystem.
+This guide uses the Polkadot Developer Signer, but the same steps can be used for any other extension within the Polkadot ecosystem.
 
 !!! danger "READ THIS FIRST!"
 
-    Only allow metadata updates **from trusted sources** , like the Polkadot Developer Interface. **Do not sign** a transaction if you **cannot verify** what you are signing or you suspect you might be signing a different extrinsic than the one intended.
+    Only allow metadata updates **from trusted sources** , like the Polkadot Developer Interface. **Do not sign** a transaction if you **cannot verify** what you're signing or you suspect you might be signing a different extrinsic than the one intended.
 
 * * *
 
 ### How to update the Polkadot Developer Signer metadata on the Polkadot Developer Interface
 
-1\. If one of your extensions needs to be updated, you will see a counter next to [Settings](https://polkadot.js.org/apps/#/settings) and a warning on the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface:
+1\. If one of your extensions needs to be updated, you'll see a counter next to [Settings](https://polkadot.js.org/apps/#/settings) and a warning on the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface:
 
 ![](../../assets/how-to/65032425522.png)
 
@@ -34,7 +34,7 @@ In this guide, we will use the Polkadot Developer Signer, but the same steps can
 
 ![](../../assets/how-to/65032425540.png)
 
-Here, you will see what extensions can be updated. Click the "Update metadata" button to apply updates.
+Here, you'll see what extensions can be updated. Click the "Update metadata" button to apply updates.
 
 3\. An extension window will pop up:
 
@@ -45,7 +45,7 @@ Here, you can see:
   * **From** : the source of the metadata. Remember only to accept updates from trusted sources.
   * **Chain** : each chain has its own metadata, so you must update it separately for each network you use.
   * **Decimals** and **Symbol** : this defines the divisibility of the native coin (how many [Planck](../learn-DOT.md#the-planck-unit) units make up one coin) and specifies the coin's ticker symbol.
-  * **Upgrade** : the runtime version you used until now and the version you are about to use.
+  * **Upgrade** : the runtime version you used until now and the version you're about to use.
 
 4\. Complete the process by clicking "Yes, do this metadata update."
 

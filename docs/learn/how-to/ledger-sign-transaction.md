@@ -6,7 +6,7 @@ description: "A step-by-step guide on how to sign a Polkadot transaction on Ledg
 !!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
-Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction will not be broadcast in the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
+Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction won't be broadcast in the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
 
 !!! warning "IMPORTANT"
 
@@ -19,7 +19,7 @@ Signing a transaction is the final step of any transaction, like [sending funds 
 
 !!! warning "IMPORTANT"
 
-    For most users, we strongly recommend adding Ledger through the **Polkadot browser extension**. [Click here to see the benefits and instructions.](add-ledger-account-signer.md)
+    For most users, adding Ledger through the **Polkadot browser extension** is strongly recommended. [Click here to see the benefits and instructions.](add-ledger-account-signer.md)
 
 Whether you add your Ledger through the [Polkadot browser extension](add-ledger-account-signer.md) or directly on the[ Polkadot Developer Interface](add-ledger-account.md), you need a UI to interact with your accounts and initiate transactions.
 
@@ -53,7 +53,7 @@ To reject the transaction, move to the next screen that says "Reject" and press 
 
 ![](../../assets/how-to/65012721860.jpeg)
 
-6\. Congratulations, you have signed a transaction! It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction.
+6\. You've signed the transaction. It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction.
 
 * * *
 
@@ -73,7 +73,7 @@ If you have added your Ledger directly to the Polkadot Developer Interface and n
 
 #### **My transaction failed**
 
-Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction cannot be executed, and it fails:
+Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction can't be executed, and it fails:
 
 ![](../../assets/how-to/65012690425.png)
 

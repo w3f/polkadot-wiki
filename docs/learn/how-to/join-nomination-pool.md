@@ -8,18 +8,18 @@ description: "Learn how to use the Polkadot staking dashboard to join a nominati
 
 __
 
-The[Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article ](../../general/dashboards/staking-dashboard.md)to learn how to navigate its tabs.
+The[Staking Dashboard](https://staking.polkadot.cloud/#/overview) is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, consider reading the [overview article ](../../general/dashboards/staking-dashboard.md)to learn how to navigate its tabs.
 
 This article explains how to use the [Staking Dashboard](https://staking.polkadot.cloud/#/pool) to join a nomination pool.
 
-In this example, we use the Westend testnet, but the process is the same for Polkadot and Kusama.
+This example uses the Westend testnet, but the process is the same for Polkadot and Kusama.
 
 
 ### How to Join a Nomination Pool
 
 !!! warning "IMPORTANT"
 
-    You can now join a nomination pool with tokens that are locked for governance in addition you can vote in governance while your tokens are staked in a pool. The bonded tokens remain in your account and under your control, but cannot be transferred. The pool handles validator nominations and reward distribution.
+    You can now join a nomination pool with tokens that are locked for governance in addition you can vote in governance while your tokens are staked in a pool. The bonded tokens remain in your account and under your control, but can't be transferred. The pool handles validator nominations and reward distribution.
 
 !!! tip "GOOD TO KNOW"
 
@@ -72,7 +72,7 @@ On the right side, you can enter the amount you want to bond and choose how rewa
 ### Limitations
 
   * To switch pools, a member must wait for the unbonding period: 7 days on Kusama and 28 days on Polkadot.
-  * Auto-compounding is not enabled by default, but it can be done manually or permissionlessly, depending on your chosen settings.
+  * Auto-compounding isn't enabled by default, but it can be done manually or permissionlessly, depending on your chosen settings.
   * A member can also partially unbond their staked funds in the pool, with up to 16 partial unbonds allowed. See [this article](unbond-from-nomination-pool.md) for more details on how to unbond or exit a pool.
   * See this [article](../learn-nomination-pools.md) for a comparison between nominating directly and joining a nomination pool.
 

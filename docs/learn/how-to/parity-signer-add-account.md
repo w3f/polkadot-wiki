@@ -10,7 +10,7 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
     Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-[Parity Signer](https://signer.parity.io/) is the iOS and Android account manager app. It is meant to be used on an old phone that can permanently stay offline. You will still need a UI, like the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), to interact with your accounts and initiate transactions.
+[Parity Signer](https://signer.parity.io/) is the iOS and Android account manager app. It is meant to be used on an old phone that can permanently stay offline. You'll still need a UI, like the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), to interact with your accounts and initiate transactions.
 
 
 ### How to add your account through the Polkadot Developer Signer
@@ -29,7 +29,7 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 5\. A camera will open on your browser. Now, open your Parity Signer app and navigate to the Keys tab. Tap on your account twice to see a QR code.
 
-6\. Show the QR code in Parity Signer to the camera. Your Parity Signer account is now added to the extension! You will also see the account on the "[Accounts](https://polkadot.js.org/apps/#/accounts)" page on the Polkadot Developer Interface.
+6\. Show the QR code in Parity Signer to the camera. Your Parity Signer account is now added to the extension. You'll also see the account on the "[Accounts](https://polkadot.js.org/apps/#/accounts)" page on the Polkadot Developer Interface.
 
 * * *
 
@@ -37,7 +37,7 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 !!! warning "IMPORTANT"
 
-    We highly recommend **adding your Parity Signer account through the**[**Polkadot Developer Signer**](signer-where-to-download.md). It provides better security and convenience.
+    **Adding your Parity Signer account through the**[**Polkadot Developer Signer**](signer-where-to-download.md) is highly recommended. It provides better security and convenience.
 
 1\. [Create](parity-signer-create-account.md) or [restore](parity-signer-restore-account.md) an account in Parity Signer.
 
@@ -45,10 +45,10 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 [![](../../assets/how-to/65012721612.png)](../../assets/how-to/65012709859.png)
 
-3\. Allow the Polkadot Developer Interface to use your camera. If you do not see a pop-up request, click on a camera icon in the URL bar and allow the website to access your camera.
+3\. Allow the Polkadot Developer Interface to use your camera. If you don't see a pop-up request, click on a camera icon in the URL bar and allow the website to access your camera.
 
 4\. A camera will open on your browser. Now, open your Parity Signer app and navigate to the Keys tab. Tap on your account twice to see a QR code.
 
-5\. Show the QR code in Parity Signer to the camera. Your Parity Signer account is now added to the Accounts page!
+5\. Show the QR code in Parity Signer to the camera. Your Parity Signer account is now added to the Accounts page.
 
 * * *

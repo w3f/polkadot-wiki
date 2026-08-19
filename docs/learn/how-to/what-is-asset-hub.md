@@ -49,7 +49,7 @@ Starting with runtime version [2.0.4 on Kusama](https://github.com/polkadot-fell
 
 With this upgrade, Polkadot Hub enables developers to deploy smart contracts while continuing to use familiar Ethereum tooling, workflows, and programming languages, making it easy to bring existing applications and development practices into the Polkadot ecosystem without switching stacks.
 
-Obtain more information about smart contracts on Polkadot in our documentation:
+Obtain more information about smart contracts on Polkadot in the documentation:
 
   * [Polkadot Hub: Smart Contracts on Polkadot](../learn-smart-contracts.md)
   * Polkadot Docs: [Smart Contracts on Polkadot Hub](https://docs.polkadot.com/smart-contracts/overview/)

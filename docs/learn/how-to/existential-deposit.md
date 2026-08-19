@@ -8,9 +8,9 @@ description: "On the Polkadot network, an address is only active when it holds a
 
 On most Substrate-based chains, an account is only active when it holds a minimum amount of determined assets, currently set at**0.01 DOT** on Polkadot and **0.00000333333 KSM** on Kusama. This minimum amount is called the Existential Deposit (ED).
 
-The ED exists so that accounts with very small balances or completely empty do not "bloat" the state of the blockchain. This limit allows the network to maintain high performance and reduce fees.
+The ED exists so that accounts with very small balances or completely empty don't "bloat" the state of the blockchain. This limit allows the network to maintain high performance and reduce fees.
 
-If an account drops below the ED on every sufficient asset, the account is reaped ("deactivated"), and any remaining funds are destroyed. It can be reactivated with a new deposit larger than the ED at any time. This will not restore the destroyed funds.
+If an account drops below the ED on every sufficient asset, the account is reaped ("deactivated"), and any remaining funds are destroyed. It can be reactivated with a new deposit larger than the ED at any time. This won't restore the destroyed funds.
 
 !!! tip "GOOD TO KNOW"
 
@@ -31,11 +31,11 @@ If an account drops below the ED on every sufficient asset, the account is reape
 
 ### Facts to know about the existential deposit
 
-  * Accounts that have never received a deposit are not discoverable on block explorers.
+  * Accounts that have never received a deposit aren't discoverable on block explorers.
   * If you send funds lower than the ED to an empty account, the account won't receive the funds (nominators need to pay attention to this when collecting staking rewards, see below).
   * If you send all (or almost all) of your funds out of an account, which will result in the remaining balance going under the ED, the account will be reaped, and any remaining funds will be burned.
 
-  * An account can be reactivated at any time. However, this will not bring back any previously burned funds.
+  * An account can be reactivated at any time. However, this won't bring back any previously burned funds.
 
   * To protect yourself from accidentally slipping below the ED amount and losing your funds, ensure the remaining balance after the transaction stays above the ED. However, most of the wallets would display a warning if you try otherwise.
 
@@ -52,7 +52,7 @@ Please note that the existential deposit is spendable and that it simply keeps y
 
 !!! warning "ATTENTION"
 
-    An account needs to be activated with the existential deposit before staking rewards can be sent to it. **DO NOT direct staking rewards to an inactive account.** If a reward is below 0.01 DOT, it will not arrive and you will lose it.
+    An account needs to be activated with the existential deposit before staking rewards can be sent to it. **DO NOT direct staking rewards to an inactive account.** If a reward is below 0.01 DOT, it won't arrive and you'll lose it.
 
 * * *
 
@@ -61,8 +61,8 @@ Please note that the existential deposit is spendable and that it simply keeps y
 There are three types of assets on Polkadot and Kusama:
 
   * **Native asset** : The native asset for Polkadot is DOT, while for Kusama it is KSM. These are considered when determining if an account is active, as long as they are present over a certain amount (0.01 DOT or 0.000003333 KSM)
-  * **Sufficient asset** : These are not native tokens, but they have been approved by governance to keep an account active if the account holds an amount above their designated existential deposit. A sufficient asset doesn't require the account to have any balance in the native token to be received.
-  * **Non-sufficient asset** : These are not native tokens and cannot maintain an account's activity on their own. To hold a non-sufficient asset in an account, the account needs to exist on-chain, which means it needs to have a balance in the native or sufficient asset at least as much as the existential deposit.
+  * **Sufficient asset** : These aren't native tokens, but they have been approved by governance to keep an account active if the account holds an amount above their designated existential deposit. A sufficient asset doesn't require the account to have any balance in the native token to be received.
+  * **Non-sufficient asset** : These aren't native tokens and can't maintain an account's activity on their own. To hold a non-sufficient asset in an account, the account needs to exist on-chain, which means it needs to have a balance in the native or sufficient asset at least as much as the existential deposit.
 
 Currently, the sufficient tokens and foreign assets (native assets on other networks) in Polkadot Asset Hub are:
 

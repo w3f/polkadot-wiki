@@ -6,7 +6,7 @@ description: "Scams are an unfortunate reality of the crypto industry. If you fe
 !!!info "Related concepts"
     For the underlying concepts, see [Scams](../../general/scams.md).
 
-Scams are an unfortunate reality of the crypto industry. The Polkadot community takes the matter of scam fighting and prevention very seriously. It is the first ecosystem that has a dedicated and decentralized Anti-Scam Team that has taken [great strides in protecting our community](https://medium.com/polkadot-network/polkadots-anti-scam-initiatives-1660ef5787b7). Still, vigilance is required on behalf of the user, and for this reason, we have compiled a [guide on how to protect yourself from scams](../../general/scams.md), which we strongly recommend everyone to read.
+Scams are an unfortunate reality of the crypto industry. The Polkadot community takes the matter of scam fighting and prevention very seriously. It is the first ecosystem that has a dedicated and decentralized Anti-Scam Team that has taken [great strides in protecting our community](https://medium.com/polkadot-network/polkadots-anti-scam-initiatives-1660ef5787b7). Still, vigilance is required on behalf of the user, and for this reason, there is a [guide on how to protect yourself from scams](../../general/scams.md), which everyone is strongly encouraged to read.
 
 Unfortunately, though, and despite the Anti-Scam Team's best efforts, some people will inadvertently fall prey to bad actors. If this is the case for you, the sad truth is that it's extremely unlikely you'll be able to get your stolen funds back.
 
@@ -30,13 +30,13 @@ In this case, the loss is limited to whatever amount you sent to the scammers, s
 
 #### **If your account was compromised**
 
-In this case, your account is compromised, and your funds on [all Substrate chains](../learn-account-advanced.md) are in danger. If that mnemonic phrase was for a multi-asset wallet (like Ledger), then all your assets are in danger!
+In this case, your account is compromised, and your funds on [all Substrate chains](../learn-account-advanced.md) are in danger. If that mnemonic phrase was for a multi-asset wallet (like Ledger), then all your assets are in danger.
 
 The first thing you need to do in this situation, even before contacting the Anti-Scam Team, is to send any remaining funds out of your account(s). Sending them to an exchange is a quick and easy way to do this while you regroup.
 
 If your tokens are bonded, in a nomination pool, in crowdloans, or locked in democracy, then they are safe for the time being but still at risk. Contact the Anti-Scam Team to help you safeguard these funds.
 
-It is super important to keep your mnemonic phrase secret and safe and never share it with anyone or enter it on unverified sites. No support agent or member of the Anti-Scam Team will ever ask you for it or any other private information!
+It is super important to keep your mnemonic phrase secret and safe and never share it with anyone or enter it on unverified sites. No support agent or member of the Anti-Scam Team will ever ask you for it or any other private information.
 
 * * *
 
@@ -50,6 +50,6 @@ Doing a malware scan with trusted antivirus software is always a good thing, but
 
 * * *
 
-All of these are first-reaction steps you can take to minimize your losses and secure your system and accounts. But **do reach out to the Anti-Scam Team**. They can help!
+All of these are first-reaction steps you can take to minimize your losses and secure your system and accounts. But **do reach out to the Anti-Scam Team**. They can help.
 
 * * *

@@ -25,7 +25,7 @@ Remember that **Polkadot Vault is meant to work as cold storage** , and that can
 
 ![](../../assets/how-to/65016492960.png)
 
-4\. On the next screen, we are ready to create our first set of keys. Click the "Add Key Set" button and select "Add new Key Set."
+4\. On the next screen, you're ready to create your first set of keys. Click the "Add Key Set" button and select "Add new Key Set."
 
 ![](../../assets/how-to/65020681761.png)
 
@@ -47,7 +47,7 @@ Once you write down the mnemonic phrase, click "Next." Tick the checkboxes confi
 
 !!! warning "ATTENTION"
 
-    You **should not** take a screenshot of your mnemonic phrase! You should write the mnemonic phrase **only on paper** and store it somewhere **safe and secret!**
+    You **should not** take a screenshot of your mnemonic phrase. You should write the mnemonic phrase **only on paper** and store it somewhere **safe and secret.**
 
 7\. The following screen will allow you to select the networks for which you want to create the account. For most Polkadot Vault versions, Polkadot, Kusama, and Westend networks are preselected.
 
@@ -59,7 +59,7 @@ Once you write down the mnemonic phrase, click "Next." Tick the checkboxes confi
 
     [Polkadot Vault: How to Add a New Chain and Update the Metadata](vault-add-chain-metadata.md)
 
-Click "Done" and that's it, your accounts are ready to use!
+Click "Done" and that's it, your accounts are ready to use.
 
 ![](../../assets/how-to/65031299580.png)
 
@@ -103,7 +103,7 @@ If you are already using Parity Signer, please read the following information fi
 
 !!! danger "READ THIS FIRST!"
 
-    If you choose to upgrade to Polkadot Vault, you first need to uninstall Parity Signer and install Polkadot Vault from scratch. **This means that all data, including your accounts, will be deleted from your device!**
+    If you choose to upgrade to Polkadot Vault, you first need to uninstall Parity Signer and install Polkadot Vault from scratch. **This means that all data, including your accounts, will be deleted from your device.**
 
     After the upgrade you will need to [restore your accounts](vault-restore-account.md) from their mnemonic phrases, re-add any networks, and update their metadata.
 

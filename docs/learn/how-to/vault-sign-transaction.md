@@ -6,7 +6,7 @@ description: "Polkadot Vault is the new mobile app that turns your phone into a 
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-Signing is the final step in any transaction, such as [sending funds out of your account](transfer-funds.md). A transaction will not be broadcast to the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
+Signing is the final step in any transaction, such as [sending funds out of your account](transfer-funds.md). A transaction won't be broadcast to the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
 
 
 ### Signing a transaction with Polkadot Vault on Polkadot Developer Interface
@@ -15,7 +15,7 @@ When you [create](vault-create-account.md) your accounts in Polkadot Vault, you 
 
 !!! warning "IMPORTANT"
 
-    For most users, we strongly recommend adding Polkadot Vault accounts in the **[Polkadot Developer Signer](signer-where-to-download.md)**. Click here to see the instructions.
+    For most users, adding Polkadot Vault accounts in the **[Polkadot Developer Signer](signer-where-to-download.md)** is strongly recommended. Click here to see the instructions.
 
 1. Initiate a transaction on the Polkadot Developer Interface and click "Sign via QR" or "Sign and Submit":
 
@@ -35,13 +35,13 @@ When you [create](vault-create-account.md) your accounts in Polkadot Vault, you 
 
 !!! danger "READ THIS FIRST!"
 
-    Always check the information of the transaction you are about to broadcast to ensure it is the one you intended. Once a transaction is broadcast, there's no way to take it back!
+    Always check the information of the transaction you are about to broadcast to ensure it is the one you intended. Once a transaction is broadcast, there's no way to take it back.
 
 ![](../../assets/how-to/65032429734.png)
 
 5\. Now, it's time to present the signed transaction to your computer. If you have added your Polkadot Vault account through the extension, click the "Sign signature via camera" button. Show the QR code to the camera on your computer.
 
-6\. Congratulations, you have signed a transaction! It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
+6\. You've signed the transaction. It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
 
 ![](../../assets/how-to/65032430023.png)
 
@@ -49,7 +49,7 @@ When you [create](vault-create-account.md) your accounts in Polkadot Vault, you 
 
 ### Cannot sign a transaction?
 
-Sometimes it might happen that we cannot sign a transaction. Here are described some of the causes and possible solutions.
+Sometimes a transaction can't be signed. The sections below describe some of the causes and possible solutions.
 
 #### **The camera doesn't start**
 
@@ -73,7 +73,7 @@ Please make sure that the whole QR code is visible to the camera. You may need t
 
 #### **My transaction failed**
 
-Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction cannot be executed, and it fails:
+Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction can't be executed, and it fails:
 
 ![](../../assets/how-to/65016536415.png)![](../../assets/how-to/65016536413.png)
 
@@ -81,7 +81,7 @@ Please check the article "[Why can't I Transfer Tokens?](why-cant-i-transfer-dot
 
 * * *
 
-If you are a visual learner, here we have a video for you. On mark 14:04, you'll see how you can initiate a transaction and sign it from your Polkadot Vault. Enjoy!
+If you're a visual learner, here's a video for you. On mark 14:04, you'll see how you can initiate a transaction and sign it from your Polkadot Vault.
 
 [How to use Polkadot Vault | Technical Explainers](https://www.youtube.com/watch?v=IG_RGLsb2g0&t=844s)
 

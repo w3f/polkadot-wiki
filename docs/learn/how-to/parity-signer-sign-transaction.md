@@ -6,7 +6,7 @@ description: "A step-by-step guide on how to sign a Polkadot transaction in Pari
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction will not be broadcast to the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
+Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction won't be broadcast to the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
 
 !!! info
 
@@ -21,7 +21,7 @@ When you [create](parity-signer-create-account.md) your accounts in Parity Signe
 
 !!! warning "IMPORTANT"
 
-    For most users, we strongly recommend adding Parity Signer accounts in the **[Polkadot Developer Signer](signer-where-to-download.md)**.
+    For most users, adding Parity Signer accounts in the **[Polkadot Developer Signer](signer-where-to-download.md)** is strongly recommended.
 
     Click [here](parity-signer-add-account.md) to see the instructions.
 
@@ -29,7 +29,7 @@ When you [create](parity-signer-create-account.md) your accounts in Parity Signe
 
 ![](../../assets/how-to/65032426070.png)
 
-2\. If you have added your Parity Signer account through the Polkadot Developer Signer, a new window will pop up and you will see a QR code. If you have added your Parity Signer account directly on the Polkadot Developer Interface, you will see a QR code on the left and a camera screen on the right.
+2\. If you have added your Parity Signer account through the Polkadot Developer Signer, a new window will pop up and you'll see a QR code. If you have added your Parity Signer account directly on the Polkadot Developer Interface, you'll see a QR code on the left and a camera screen on the right.
 
 ![](../../assets/how-to/65032426106.png)
 
@@ -41,7 +41,7 @@ When you [create](parity-signer-create-account.md) your accounts in Parity Signe
 
 5\. In the Parity Signer app, a QR code for the signature will appear. If you have added your Parity Signer account through the extension, click the "Sign signature via camera" button. Show the QR code to the camera on your computer.
 
-6\. Congratulations, you have signed a transaction! It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
+6\. You've signed the transaction. It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
 
 ![](../../assets/how-to/65032426315.png)
 
@@ -49,7 +49,7 @@ When you [create](parity-signer-create-account.md) your accounts in Parity Signe
 
 ### Cannot sign a transaction?
 
-Sometimes it might happen that we cannot sign a transaction. Here are described some of the causes and possible solutions.
+Sometimes a transaction can't be signed. The sections below describe some of the causes and possible solutions.
 
 #### **Camera doesn't start**
 
@@ -73,7 +73,7 @@ Please make sure that the full QR code is visible to the camera. You may need to
 
 #### **My transaction failed**
 
-Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction cannot be executed, and it fails:
+Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction can't be executed, and it fails:
 
 ![](../../assets/how-to/65016106656.png)![](../../assets/how-to/65016106650.png)
 

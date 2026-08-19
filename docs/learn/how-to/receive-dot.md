@@ -33,7 +33,7 @@ To receive funds to an account, you need to copy your account address and either
 
 !!! danger "READ THIS FIRST!"
 
-    Always **triple-check** the address after you've pasted it to make sure it's the correct one. Blockchain transactions are **irreversible** and if you accidentally send funds to the wrong address, there's no way to get them back!
+    Always **triple-check** the address after you've pasted it to make sure it's the correct one. Blockchain transactions are **irreversible** and if you accidentally send funds to the wrong address, there's no way to get them back.
 
 !!! info
 

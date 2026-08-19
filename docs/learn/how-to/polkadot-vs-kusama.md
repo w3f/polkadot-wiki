@@ -63,7 +63,7 @@ Both Polkadot and Kusama have:
 
 Kusama is the "canary network" for Polkadot. It is **not** a testnet and has an economic value. All new things come to Kusama first to be tried in a live, fully decentralized, and community-controlled network with real-world conditions and lower stakes.
 
-Kusama may be the perfect environment for ambitious experiments with new ideas and innovations in areas like governance, incentives, monetary policy, and DAOs (decentralized autonomous organizations). Future upgrades to the Polkadot runtime will likely be deployed to Kusama before Polkadot. This way, not only will we be able to see how these new technologies and features will perform under real-world conditions, but teams who have deployed to both networks will also get an advanced look at how their own technology will perform under those upgrades.
+Kusama may be the perfect environment for ambitious experiments with new ideas and innovations in areas like governance, incentives, monetary policy, and DAOs (decentralized autonomous organizations). Future upgrades to the Polkadot runtime will likely be deployed to Kusama before Polkadot. This way, not only will these new technologies and features be observed under real-world conditions, but teams who have deployed to both networks will also get an advanced look at how their own technology will perform under those upgrades.
 
 Polkadot is and always will be the primary network for deploying enterprise-level applications and those that entail high-value transactions requiring bank-level security, stability, and robustness. It can also be an upgrade path for early-stage applications.
 

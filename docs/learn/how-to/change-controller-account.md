@@ -6,7 +6,7 @@ description: "Changing the controller account on your Polkadot stash account onl
 !!!info "Related concepts"
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
-_Discover the Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Discover the Staking Dashboard that makes staking much easier and check the[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -18,7 +18,7 @@ _Discover the Staking Dashboard that makes staking much easier and check our[ext
 
     Controller accounts are being deprecated. You can still use existing ones for now, but creating new ones is no longer possible.
 
-    It is recommended to set your stash account as its own controller as described below.
+    It's recommended to set your stash account as its own controller as described below.
 
 This article explains how to undo the connection between your stash and controller account by setting the stash account as its own controller using Polkadot Developer Interface.
 
@@ -30,7 +30,7 @@ This article explains how to undo the connection between your stash and controll
 
     If you don't want to use your stash account often, you can create a staking proxy which can do all staking actions on its behalf. It has the same advantages as the controller, but even more flexibility.
 
-    Check how to do it in our article "[How to Create a Proxy Account](create-proxy-account.md)".
+    Check how to do it in the article "[How to Create a Proxy Account](create-proxy-account.md)".
 
 1\. On Polkadot Developer Interface, navigate to Developer > [Extrinsics](https://polkadot.js.org/apps/#/extrinsics) tab.
 
@@ -38,10 +38,10 @@ This article explains how to undo the connection between your stash and controll
 
 3\. From the drop-down on the right ("Submit the following extrinsics"), select the 'staking' pallet and 'setController' from the one on its left.
 
-4\. Since 'setController' does not accept any other parameter, you must click "Submit Transaction" and sign the extrinsic from your wallet.
+4\. Since 'setController' doesn't accept any other parameter, you must click "Submit Transaction" and sign the extrinsic from your wallet.
 
 ![](../../assets/how-to/65018521622.png)
 
-And that's it! From now on, only your stash account can sign transactions on its behalf.
+That's it. From now on, only your stash account can sign transactions on its behalf.
 
 * * *

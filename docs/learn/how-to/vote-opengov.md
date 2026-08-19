@@ -49,19 +49,19 @@ The "Support" graph represents the percentage of "ayes" plus abstentions out of 
 
 The orange line in both graphs indicates the minimum threshold for approval and support that a referendum must keep to be approved. Each track has different thresholds and conditions to meet. Read [this article](../learn-polkadot-opengov.md#approval-and-support) for further details about these and other parameters in OpenGov.
 
-It's important to notice that each referendum should be accompanied by contextual information about it, but that information is not stored on-chain, so Polkadot-JS UI can't show it. You can click on the [Subsquare](https://www.subsquare.io/) icon on each referendum (bottom left corner) to discuss and read further about each referendum. This is the _de facto_ site built by the community where the proposers can share info about their proposals.
+It's important to notice that each referendum should be accompanied by contextual information about it, but that information isn't stored on-chain, so Polkadot-JS UI can't show it. You can click on the [Subsquare](https://www.subsquare.io/) icon on each referendum (bottom left corner) to discuss and read further about each referendum. This is the _de facto_ site built by the community where the proposers can share info about their proposals.
 
 4\. By clicking on the "Vote" button, a new panel pops up with the following information:
 
-  * The account we will be voting from (1).
+  * The account you'll be voting from (1).
   * The direction of the vote (2):
 * "Aye" in favor of the referendum.
 * "Nay," against it.
 * "Split," you can split your voting power into both options.
 * "Abstain," your vote will count for the referendum support (total voting balance) but not for its approval (voting power ratio of "Ayes" or "Nays").
-  * The voting balance (3). The amount of DOT (or KSM) you will vote with. If you are voting from a delegate account, the delegated voting power won’t be visible here, but it will be taken into account for the referendum result.
+  * The voting balance (3). The amount of DOT (or KSM) you'll vote with. If you're voting from a delegate account, the delegated voting power won’t be visible here, but it will be taken into account for the referendum result.
 
-  * The conviction you are voting with (4). It's a multiplier to your voting balance, so these two determine your "voting power." The greater the conviction, the greater your voting power and the longer the tokens will be locked for that referendum. Learn more about "conviction locking" in the article "[Voluntary Locking](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting)."
+  * The conviction you're voting with (4). It's a multiplier to your voting balance, so these two determine your "voting power." The greater the conviction, the greater your voting power and the longer the tokens will be locked for that referendum. Learn more about "conviction locking" in the article "[Voluntary Locking](../learn-polkadot-opengov.md#voluntary-locking-conviction-voting)."
 
 ![](../../assets/how-to/65032514802.png)
 
@@ -69,9 +69,9 @@ It's important to notice that each referendum should be accompanied by contextua
 
     Locks applied to your assets overlap. It means that with the same locked balance you could vote on several referenda at the same time.
 
-    Read our [article](../learn-account-balances.md) for further information of types of balances.
+    Read the [article](../learn-account-balances.md) for further information of types of balances.
 
-5\. After setting your vote, click on "Vote." Review the transaction details on the new panel and click "Sign and Submit." And that's it, you just voted on a referendum!
+5\. After setting your vote, click on "Vote." Review the transaction details on the new panel and click "Sign and Submit." And that's it, you just voted on a referendum.
 
 !!! info
 
@@ -83,6 +83,6 @@ It's important to notice that each referendum should be accompanied by contextua
 
 ### **Discussion channels**
 
-Our [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) and [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) channels on Matrix are dedicated to discussions and announcements related to governance. If you have an interest in participating in governance or staying up-to-date with the latest referenda, we encourage you to join these channels and engage in the discussions happening there.
+The [Kusama Direction](https://matrix.to/#/#Kusama-Direction:parity.io) and [Polkadot Direction](https://matrix.to/#/#Polkadot-Direction:parity.io) channels on Matrix are dedicated to discussions and announcements related to governance. If you have an interest in participating in governance or staying up-to-date with the latest referenda, consider joining these channels and engaging in the discussions happening there.
 
 * * *

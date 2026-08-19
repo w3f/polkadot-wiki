@@ -8,14 +8,14 @@ description: "How to unbond (unstake) your tokens using the new Staking Dashboar
 
 __
 
-In this article, we explain how to unbond staked tokens using the[Staking Dashboard](https://staking.polkadot.cloud/#/overview). You can decide to stop being a nominator at any time by unbonding. You may need to [connect your extension account](connect-account.md) first.
+This article explains how to unbond staked tokens using the[Staking Dashboard](https://staking.polkadot.cloud/#/overview). You can decide to stop being a nominator at any time by unbonding. You may need to [connect your extension account](connect-account.md) first.
 
 !!! tip "GOOD TO KNOW"
 
     Please note that there is an unbonding period, currently 28 days on Polkadot and 7 days on Kusama.
     
 
-In this example, we use Polkadot, but the process is the same for Kusama.
+In this example, Polkadot is used, but the process is the same for Kusama.
 
 
 ### How to stop nominating and unbond all your funds
@@ -40,7 +40,7 @@ In this example, we use Polkadot, but the process is the same for Kusama.
 
 ![](../../assets/how-to/65028271277.png)
 
-Congratulations, the tokens should then show up again in your _free_ balance!
+The tokens should then show up again in your _free_ balance.
 
 * * *
 
@@ -56,7 +56,7 @@ The previous section described how to stop nominating and unbond _all_ your fund
 
 ![](../../assets/how-to/65028270442.png)
 
-2\. Enter the amount of funds you'd like to unbond (keep in mind that the remaining balance needs to be over the minimum required to nominate) and click "Submit." Sign the transaction, and that's it, you unbonded only parts of your staking balance!
+2\. Enter the amount of funds you'd like to unbond (keep in mind that the remaining balance needs to be over the minimum required to nominate) and click "Submit." Sign the transaction, and that's it, you've unbonded only parts of your staking balance.
 
 ![](../../assets/how-to/65028270459.png)
 
@@ -68,11 +68,11 @@ The previous section described how to stop nominating and unbond _all_ your fund
 
 ![](../../assets/how-to/65028271277.png)
 
-Congratulations, the unbonded tokens should show up in your _free_ balance!
+The unbonded tokens should show up in your _free_ balance.
 
 * * *
 
-If you are more of a visual learner, check the guide below. It covers all things you can do after you start staking.
+If you're more of a visual learner, check the guide below. It covers all things you can do after you start staking.
 
 [Polkadot Made Easy: How to Unstake your DOT with the Staking Dashboard (Direct Nomination)](https://www.youtube.com/watch?v=zWGkbMMrrFM&list=PLOyWqupZ-WGuiPQ7WRvECJk2ZvZuvfwUK&index=17)
 

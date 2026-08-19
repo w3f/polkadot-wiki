@@ -53,13 +53,13 @@ Remember that Polkadot Vault is meant to work as cold storage and that can only 
 
     Remember that Polkadot Vault (and Parity Signer) provide a 24-word mnemonic phrase for accounts created in both apps. You will need to enter all 24 words in the **correct order** to successfully restore your account.
 
-    If you have a 12-word mnemonic phrase, that account was not created by either app (although it might have been created by an older version of Parity Signer).
+    If you have a 12-word mnemonic phrase, that account wasn't created by either app (although it might have been created by an older version of Parity Signer).
 
-    Ledger accounts also have 24-word mnemonic phrases, but they are not compatible with Polkadot Vault. Make sure you're **not trying to restore your Ledger account in Polkadot Vault.**
+    Ledger accounts also have 24-word mnemonic phrases, but they aren't compatible with Polkadot Vault. Make sure you're **not trying to restore your Ledger account in Polkadot Vault.**
 
 ![](../../assets/how-to/65016514748.png)
 
-7\. The following screen will allow you to select the networks for which you want to create the account. By default Polkadot, Kusama, and Westend are preselected. Click "Done" and that's it, your accounts are ready to use!
+7\. The following screen will allow you to select the networks for which you want to create the account. By default Polkadot, Kusama, and Westend are preselected. Click "Done" and that's it, your accounts are ready to use.
 
 ![](../../assets/how-to/65020682597.png)
 
@@ -115,7 +115,7 @@ If you are already using Parity Signer, please read the following information fi
 
 !!! danger "READ THIS FIRST!"
 
-    If you choose to upgrade to Polkadot Vault, you first need to uninstall Parity Signer and install Polkadot Vault from scratch. **This means that all data, including your accounts, will be deleted from your device!**
+    If you choose to upgrade to Polkadot Vault, you first need to uninstall Parity Signer and install Polkadot Vault from scratch. **This means that all data, including your accounts, will be deleted from your device.**
 
     After the upgrade you will need to restore your accounts from their mnemonic phrases (as described in this article), re-add any networks, and update their metadata.
 

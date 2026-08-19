@@ -13,7 +13,7 @@ When sending an extrinsic, whether it is to transfer funds or take some other ac
 
 The [Polkadot Developer Signer](signer-where-to-download.md) is your gateway to the Web 3.0 Polkadot ecosystem, as it can connect to many compatible apps and websites. Because of that, it is essential that you verify your extrinsics before signing them, especially when interacting with a new site or app.
 
-When you are about to issue an extrinsic, a pop-up window will appear, asking you to sign the extrinsic with the selected account. In this window, you can see what you are signing. Let's review the window, following from top to down:
+When you are about to issue an extrinsic, a pop-up window will appear, asking you to sign the extrinsic with the selected account. In this window, you can see what you're signing. Review the window, following from top to down:
 
 ![](../../assets/how-to/65016225532.png)
 
@@ -23,9 +23,9 @@ When you are about to issue an extrinsic, a pop-up window will appear, asking yo
 
 3\. **Chain** : the network you are issuing the extrinsic on (Polkadot, Kusama, etc.)
 
-4\. **Version**  and  **Nonce** do not need to be checked every time. The version of the network changes with a runtime upgrade. The nonce changes every time you issue a new extrinsic and will be reset if your account is deactivated.
+4\. **Version**  and  **Nonce** don't need to be checked every time. The version of the network changes with a runtime upgrade. The nonce changes every time you issue a new extrinsic and will be reset if your account is deactivated.
 
-5\. **Method** : the extrinsic you are about to sign. **It is very important!** Click on the arrow here to see the details and verify them:
+5\. **Method** : the extrinsic you are about to sign. **It is very important.** Click on the arrow here to see the details and verify them:
 
 ![](../../assets/how-to/65016225863.png)
 
@@ -47,7 +47,7 @@ If you are using the [Polkadot Developer Interface](https://polkadot.js.org/apps
 
 ![](../../assets/how-to/65032433865.png)
 
-1\. **Method** : the extrinsic you are about to sign. **It is very important!** Click on the arrow to see the details. You will see a short description of the method you are about to use. In this example, it is a transfer with a "keep-alive" check. In the details, you can see the recipient address, its icon, and the amount being sent in DOT. If the recipient account is in your [address book](accounts-vs-address-book.md) or on the Accounts page, you will also see the name you gave to the recipient account.
+1\. **Method** : the extrinsic you are about to sign. **It is very important.** Click on the arrow to see the details. You will see a short description of the method you are about to use. In this example, it is a transfer with a "keep-alive" check. In the details, you can see the recipient address, its icon, and the amount being sent in DOT. If the recipient account is in your [address book](accounts-vs-address-book.md) or on the Accounts page, you will also see the name you gave to the recipient account.
 
 2\. **Fees** : the fee you will pay from your remaining transferrable balance for broadcasting this transaction. On Polkadot, it is nominated in [milliDOT](../learn-DOT.md#the-planck-unit).
 
@@ -63,7 +63,7 @@ If you are using a Ledger account, you will see the same details as above, depen
 
 !!! danger "READ THIS FIRST!"
 
-    If you connected to a phishing site, it might show one extrinsic on the screen, but actually is sending a different one to your Ledger device. The _true_ extrinsic details will be shown on your Ledger device regardless. **Always trust your Ledger device over what is shown on your computer!** The Ledger shows what you are signing!
+    If you connected to a phishing site, it might show one extrinsic on the screen, but actually is sending a different one to your Ledger device. The _true_ extrinsic details will be shown on your Ledger device regardless. **Always trust your Ledger device over what is shown on your computer.** The Ledger shows what you're signing.
 
 When you click to sign on the Ledger, the extrinsic details will be shown on the device's screen. Click on the buttons on your device to scroll through them.
 
@@ -79,7 +79,7 @@ When you click to sign on the Ledger, the extrinsic details will be shown on the
 
 ![](../../assets/how-to/65008282299.jpg)
 
-4\. If all the details are correct, you get to approve the extrinsic in the next screen. If the details are not what you expected or what was shown on your computer's screen, **do not approve!** Instead, move to the **next screen** and **reject** the transaction:
+4\. If all the details are correct, you get to approve the extrinsic in the next screen. If the details aren't what you expected or what was shown on your computer's screen, **do not approve.** Instead, move to the **next screen** and **reject** the transaction:
 
 ![](../../assets/how-to/65008282351.jpg)
 

@@ -10,7 +10,7 @@ If you're wondering how to stake on Polkadot, this article has important informa
 
 It is essential to  **do your own research** before nominating and to keep monitoring your nominations. Nominating on Polkadot is an active role. If your active validator misbehaves, you may lose funds due to slashing. If you just "set it and forget it," you may stop earning rewards over time.
 
-If you do not wish to monitor your selections continually, you can consider joining a nomination pool instead of staking solo. These articles can help you with that:
+If you don't wish to monitor your selections continually, you can consider joining a nomination pool instead of staking solo. These articles can help you with that:
 
 [Staking Dashboard: Nomination Pool Features](../../general/dashboards/staking-dashboard.md)
 
@@ -20,7 +20,7 @@ You can find the information about validators on the [Community](https://staking
 
 !!! info
 
-    This article points out some things to consider when choosing your validators. If you want to dive a bit more into the topic, we suggest reading this [blog post](https://polkadot.network/blog/nominating-and-validator-selection-on-polkadot/) from our research team.
+    This article points out some things to consider when choosing your validators. If you want to dive a bit more into the topic, consider reading this [blog post](https://polkadot.network/blog/nominating-and-validator-selection-on-polkadot/) from the research team.
 
 
 ### Best Practices for Nominating: Points to consider
@@ -45,7 +45,7 @@ If a validator has set its identity, you'll see the details on the [Validators](
 
 Block rewards are shared with nominators, but the validators set the commission they take out for their costs before profits are given out. This rate can vary greatly.
 
-**Be aware that if you nominate a validator with** 100% commission **, you will get** NO rewards. These validators are not looking for nominators! Also, commissions can change, so keeping an eye on who you are nominating while you are staking is recommended. Both the Staking Dashboard and the Polkadot Developer Interface let you sort validators based on the commissions and filter out validators with high ones.
+**Be aware that if you nominate a validator with** 100% commission **, you will get** NO rewards. These validators aren't looking for nominators. Also, commissions can change, so keeping an eye on who you're nominating while you're staking is recommended. Both the Staking Dashboard and the Polkadot Developer Interface let you sort validators based on the commissions and filter out validators with high ones.
 
 Selecting validators with 0% commission may also be enticing, but make sure that the validator isn't cutting on infrastructure costs to make up for this 0% commission. It's usually better to choose validators with higher commissions if you trust them more. The impact of the commission on the rewards is pretty small, after all.
 
@@ -65,7 +65,7 @@ More information, such as the [era points](../learn-staking.md), elected stake, 
 
 #### **7\. Nominate!**
 
-Now that you've decided on your validators, you can nominate them. [This guide](stake-your-dot.md) can help you with the process, but we also recommend checking all the articles in the [Staking Dashboard: Overview](../../general/dashboards/staking-dashboard.md) page.
+Now that you've decided on your validators, you can nominate them. [This guide](stake-your-dot.md) can help you with the process, but consider also checking all the articles in the [Staking Dashboard: Overview](../../general/dashboards/staking-dashboard.md) page.
 
 * * *
 
@@ -73,7 +73,7 @@ Now that you've decided on your validators, you can nominate them. [This guide](
 
 Many Polkadot validators also publish YouTube videos or guides to staking on Medium to boost their reputation and attract nominators.
 
-Community members on the forums often share their recommendations and experiences. Join the conversation on our [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) on Element/Matrix.
+Community members on the forums often share their recommendations and experiences. Join the conversation on the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:parity.io) on Element/Matrix.
 
 Further information on nominating can be found under [good nominator practices](../learn-nominator.md#good-nominator-practices).
 

@@ -40,7 +40,7 @@ How to restore your account with your mnemonic phrase in Parity Signer
 
 ![](../../assets/how-to/65010268947.png)
 
-5\. Your account has successfully been restored! This will bring you back to the "Keys" page.
+5\. Your account has successfully been restored. This will bring you back to the "Keys" page.
 
 ![](../../assets/how-to/65010268986.png)
 
@@ -56,7 +56,7 @@ How to restore your account with your mnemonic phrase in Parity Signer
 
 ![](../../assets/how-to/65010269123.png)
 
-Your account should now be successfully restored!
+Your account should now be successfully restored.
 
 * * *
 

@@ -8,7 +8,7 @@ description: "Learn how to create or destroy a nomination pool on the Polkadot s
 
 __
 
-The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.
+The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, consider reading the [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.
 
 This article explains how to create a pool using the [Staking Dashboard](https://staking.polkadot.cloud). If you'd like to learn how to join an already existing pool, check out [these instructions](join-nomination-pool.md) instead.
 

@@ -18,7 +18,7 @@ In this article, you will learn how to add additional chains to Polkadot Vault a
 
 !!! danger "READ THIS FIRST!"
 
-    Make sure that you **explicitly trust** the source of the chain spec and metadata. Adding metadata from an untrusted source could lead to **loss of funds!**
+    Make sure that you **explicitly trust** the source of the chain spec and metadata. Adding metadata from an untrusted source could lead to **loss of funds.**
 
     The instructions in this article are provided with the assumption that you trust the source of the chain spec and metadata. Web3 Foundation does **not endorse** third-party metadata, with the exception of the ones provided by Parity.
 
@@ -39,7 +39,7 @@ If you see the following message when you try to sign a transaction, it means th
 
 ### How to update the metadata
 
-In this example, we update the metadata for Polkadot, but the instructions are the same for any other chain you may have added, with the potential exception of the metadata source (see next section).
+In this example, the metadata for Polkadot is updated, but the instructions are the same for any other chain you may have added, with the potential exception of the metadata source (see next section).
 
 1\. Navigate to [Parity's metadata portal](https://metadata.parity.io/#/polkadot) and select Polkadot on the sidebar.
 
@@ -57,7 +57,7 @@ In this example, we update the metadata for Polkadot, but the instructions are t
 
 ![](../../assets/how-to/65016559243.png)
 
-That's it! Now you can sign transactions with your Polkadot accounts. If you haven't added your account on Polkadot-JS UI yet, check [this article](vault-add-account.md) for instructions.
+That's it. Now you can sign transactions with your Polkadot accounts. If you haven't added your account on Polkadot-JS UI yet, check [this article](vault-add-account.md) for instructions.
 
 * * *
 
@@ -67,9 +67,9 @@ Polkadot Vault supports three chains out of the box: Polkadot, Kusama, and Weste
 
 Currently, there exists one metadata portal that supports a plethora of Substrate chains curated by [Nova wallet](https://novawallet.io). Alternatively, if you are a technically oriented user, you can [create your own QR codes and metadata portal](https://github.com/paritytech/metadata-portal).
 
-Below we provide instructions based on Nova's metadata portal, but the same instructions apply to any other source.
+The instructions below are based on Nova's metadata portal, but the same instructions apply to any other source.
 
-1\. Navigate to [Nova's metadata portal](https://metadata.novasama.io/) and select the chain you want to add from the sidebar. In this example, we'll add Acala to Polkadot Vault.
+1\. Navigate to [Nova's metadata portal](https://metadata.novasama.io/) and select the chain you want to add from the sidebar. In this example, Acala is added to Polkadot Vault.
 
 2\. Navigate to the "Acala" tab.
 
@@ -77,7 +77,7 @@ Below we provide instructions based on Nova's metadata portal, but the same inst
 
 3\. Open Polkadot Vault and click on the "Scanner" tab. This will open your phone's camera to scan the spec QR code.
 
-4\. On the screen that opens up, you can see the details of the issuer and the chain you are about to add. Click "Approve," and the chain is added!
+4\. On the screen that opens up, you can see the details of the issuer and the chain you are about to add. Click "Approve," and the chain is added.
 
 ![](../../assets/how-to/65016559480.png)
 
@@ -100,7 +100,7 @@ Below we provide instructions based on Nova's metadata portal, but the same inst
 
 ![](../../assets/how-to/65020699190.png)
 
-2\. On the next screen, select the network for which you want to create an account. In this example, we select Acala.
+2\. On the next screen, select the network for which you want to create an account. In this example, Acala is selected.
 
 ![](../../assets/how-to/65020699195.png)
 
@@ -112,11 +112,11 @@ Below we provide instructions based on Nova's metadata portal, but the same inst
 
     If you are using an older version, you can click on "Add Custom Derivation Path" and use an empty path (remove the "//"). This will allow you to use the same account that you use on the existing chains on the newly added chain too.
 
-4\. Enter your phone's PIN and you are now ready to [add your account](vault-add-account.md) for that chain on Polkadot-JS UI and sign transactions with it!
+4\. Enter your phone's PIN and you're now ready to [add your account](vault-add-account.md) for that chain on Polkadot-JS UI and sign transactions with it.
 
 * * *
 
-Here is a video if you want a visual guide on how to update metadata in your Polkadot Vault (mark [04:56](https://www.youtube.com/watch?v=IG_RGLsb2g0&t=296s)) and how to add a new network (mark [06:31](https://www.youtube.com/watch?v=IG_RGLsb2g0&t=391s)). Enjoy!
+Here is a video if you want a visual guide on how to update metadata in your Polkadot Vault (mark [04:56](https://www.youtube.com/watch?v=IG_RGLsb2g0&t=296s)) and how to add a new network (mark [06:31](https://www.youtube.com/watch?v=IG_RGLsb2g0&t=391s)).
 
 [How to use Polkadot Vault | Technical Explainers](https://www.youtube.com/watch?v=IG_RGLsb2g0&t=296s)
 

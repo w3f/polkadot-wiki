@@ -18,7 +18,7 @@ This article explains how to add a Ledger account directly on the [Polkadot Deve
 
 The Generic Polkadot app allows you to operate on any network using the account generated from the Polkadot app. On the other hand, the Migration app contains the derivation path for every Substrate network, which allows you to migrate the funds from any account created from a legacy Ledger app to the new Generic Polkadot app account.
 
-However, **we recommend adding your Ledger through the other wallet extensions compatible with Ledger** :
+However, **adding your Ledger through the other wallet extensions compatible with Ledger is recommended** :
 **[Where to Store DOT: Polkadot Wallet Options](where-to-store-dot.md)**
 
 * * *
@@ -51,7 +51,7 @@ If you get the "No device selected" error, check your browser settings. Go to Se
 
     **Remember the combination** you used here (e.g., 0 and 0) because you will be asked to enter it if you need to re-add your Ledger in the future. Any other combination (e.g. 0/1 or 1/1) will produce a different Polkadot account.
 
-7\. Well done! You should see your account appear on the Accounts page under "Hardware" account type:
+7\. You should see your account appear on the Accounts page under "Hardware" account type:
 
 **![](../../assets/how-to/65024729665.png)**
 

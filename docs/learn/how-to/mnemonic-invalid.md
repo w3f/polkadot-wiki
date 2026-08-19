@@ -6,7 +6,7 @@ description: "If you're trying to restore your Polkadot account from your mnemon
 !!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
-When you are trying to restore your account on the Polkadot Developer Interface or the Polkadot Developer Signer, you may get an error like in these screenshots.
+When you're trying to restore your account on the Polkadot Developer Interface or the Polkadot Developer Signer, you may get an error like in these screenshots.
 
 Polkadot Developer Interface:
 

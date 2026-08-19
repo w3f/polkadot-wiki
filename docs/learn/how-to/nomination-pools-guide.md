@@ -18,7 +18,7 @@ Nomination pools are designed to permissionlessly allow members to pool their fu
 Benefits of joining a nomination pool:
 
   * 1 DOT as minimum staking.
-  * No minimum to receive rewards (as low as 1 DOT can earn rewards!)
+  * No minimum to receive rewards (as low as 1 DOT can earn rewards).
   * More control over rewards.
   * The pool nominator will select validators on your behalf.
   * Selected validators can attract more staking input.
@@ -27,7 +27,7 @@ Benefits of joining a nomination pool:
 
 ### How to Join a Pool
 
-Any nominator can join a nomination pool, either through the staking dashboard (instructions on how to do it in [this article](join-nomination-pool.md)) or the Polkadot Developer Interface. In this article, we will go through the steps to do it using the latter.
+Any nominator can join a nomination pool, either through the staking dashboard (instructions on how to do it in [this article](join-nomination-pool.md)) or the Polkadot Developer Interface. This article goes through the steps to do it using the latter.
 
 !!! info
 
@@ -82,7 +82,7 @@ On the Polkadot Developer Interface, navigate to "**Network** "  **> "Staking**"
 
 Similar to nominating manually, the funds will need to be fully unlocked after the unbonding period ends. Withdrawing completely ends the relationship to the pool, allowing you to join a different pool if desired.
 
-To do this, select the "Withdraw unbonded" button from the menu above after the necessary period of time has elapsed. If you would like to unbond all funds, it is highly recommended that you use the "all unbonded" toggle. Doing so ensures that all funds are unbonded, even some that may not display due to rounding by the UI.
+To do this, select the "Withdraw unbonded" button from the menu above after the necessary period of time has elapsed. If you would like to unbond all funds, it's highly recommended that you use the "all unbonded" toggle. Doing so ensures that all funds are unbonded, even some that may not display due to rounding by the UI.
 
 * * *
 
@@ -90,9 +90,9 @@ To do this, select the "Withdraw unbonded" button from the menu above after the 
 
   * In order for a member to switch pools, they must wait for the unbonding period to end: 28 days on Polkadot and 7 days on Kusama.
 
-  * Auto-compounding is not active by default, but it can be done either manually or permissionlessly if you opt for it.
+  * Auto-compounding isn't active by default, but it can be done either manually or permissionlessly if you opt for it.
   * A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
-  * Rebonding during the unbonding period is not possible.
+  * Rebonding during the unbonding period isn't possible.
 
 See [Nomination Pools](../learn-nomination-pools.md) for more information on how to create and destroy pools.
 

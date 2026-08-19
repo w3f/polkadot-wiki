@@ -32,7 +32,7 @@ Public key (SS58): 5Gv8YYFu8H1btvmrJy9FjjAWfb99wrhV3uhPFoNEr918utyR
 Account ID: 0xd6a3105d6768e956e9e5d41050ac29843f98561410d3a47f9dd5b3b227ab8746
 SS58 Address: 5Gv8YYFu8H1btvmrJy9FjjAWfb99wrhV3uhPFoNEr918utyR
 
-This is your new account! Make sure to [save your 12-word mnemonic phrase safely](store-mnemonic-safely.md). For more Subkey commands, please refer to [this guide](https://docs.substrate.io/reference/command-line-tools/subkey/).
+This is your new account. Make sure to [save your 12-word mnemonic phrase safely](store-mnemonic-safely.md). For more Subkey commands, please refer to [this guide](https://docs.substrate.io/reference/command-line-tools/subkey/).
 
 * * *
 

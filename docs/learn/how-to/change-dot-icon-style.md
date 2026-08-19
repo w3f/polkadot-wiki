@@ -26,10 +26,10 @@ They are generated randomly when you create an account on Polkadot. If you don't
 
 
 
-3\. Select any theme by clicking on it. You can see an example of what the theme looks like here. We'll choose "RoboHash" in this example.
+3\. Select any theme by clicking on it. You can see an example of what the theme looks like here. This example uses "RoboHash."
 
 4\. Click Save on the bottom right to apply the changes.
 
-5\. Navigate back to the Accounts tab, and see your new RoboHash icons!
+5\. Navigate back to the Accounts tab, and see your new RoboHash icons.
 
 ![](../../assets/how-to/65014963285.png)

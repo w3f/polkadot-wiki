@@ -39,7 +39,7 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 ![](../../assets/how-to/65016560996.png)
 
-7\. Show the QR code to the camera. Your Polkadot Vault account is now added to the extension! You will also see the account on the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface.
+7\. Show the QR code to the camera. Your Polkadot Vault account is now added to the extension. You'll also see the account on the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface.
 
 * * *
 
@@ -47,7 +47,7 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 !!! warning "IMPORTANT"
 
-    We highly recommend **adding your Polkadot Vault account through the**  [**Polkadot Developer Signer**](signer-where-to-download.md). It provides better security and convenience.
+    **Adding your Polkadot Vault account through the**  [**Polkadot Developer Signer**](signer-where-to-download.md) is highly recommended. It provides better security and convenience.
 
 1\. [Create](vault-create-account.md) or [restore](vault-restore-account.md) an account in Polkadot Vault.
 
@@ -55,10 +55,10 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 [![](../../assets/how-to/65016543776.png)](../../assets/how-to/65012709859.png)
 
-3\. Allow Polkadot Developer Interface to use your camera. If you do not see a pop-up request, click on a camera icon in the URL bar and allow the website to access your camera.
+3\. Allow Polkadot Developer Interface to use your camera. If you don't see a pop-up request, click on a camera icon in the URL bar and allow the website to access your camera.
 
 4\. A camera will open on your browser. Follow steps 5 & 6 in the previous section to get your account's QR code in Polkadot Vault.
 
-5\. Show the QR code to the camera. Your Polkadot Vault account is now added to the Accounts page!
+5\. Show the QR code to the camera. Your Polkadot Vault account is now added to the Accounts page.
 
 * * *

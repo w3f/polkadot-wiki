@@ -10,7 +10,7 @@ description: "In order to access your Kusama accounts you need to be on the Kusa
 
     Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-_The Polkadot Developer Interface allows us to connect to multiple nodes which provide on-chain information and facilitate interaction with the network. While these nodes offer the same services, they may encounter occasional connection issues. In such cases, we can effortlessly switch to a different node with the same functionalities. This article will explain how to switch nodes and networks from the same menu._
+_The Polkadot Developer Interface allows you to connect to multiple nodes which provide on-chain information and facilitate interaction with the network. While these nodes offer the same services, they may encounter occasional connection issues. In such cases, you can effortlessly switch to a different node with the same functionalities. This article will explain how to switch nodes and networks from the same menu._
 
 * * *
 
@@ -35,11 +35,11 @@ If you're experiencing connection issues or having trouble making a transaction 
 
 You can also use the same panel to switch to a completely different network, for example from Polkadot to Kusama.
 
-1. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), click on the currently selected network on the top left. In the case below, we currently are on the Polkadot Asset Hub network.
+1. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), click on the currently selected network on the top left. In the case below, you're currently on the Polkadot Asset Hub network.
 
 ![](../../assets/how-to/65031478453.png)
 
-2\. In the panel that opens, select the network you want to switch to. We're selecting Kusama Asset Hub. There are several nodes available and it doesn't matter which is selected. Only if you experience some connection issues, switch to another one.
+2\. In the panel that opens, select the network you want to switch to. In this example, you're selecting Kusama Asset Hub. There are several nodes available and it doesn't matter which is selected. Only if you experience some connection issues, switch to another one.
 
 3\. Click on the "Switch" button.
 

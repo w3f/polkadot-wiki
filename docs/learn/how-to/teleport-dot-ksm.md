@@ -36,13 +36,13 @@ Like with regular transfers, these fees are deducted from your transferable bala
 
 !!! warning "ATTENTION"
 
-    Teleports don't have the "keep alive" safeguard like normal transfers. This means that you need to make sure that your balance after the application of fees is above the existential deposit, otherwise your account will be reaped (deactivated) and **any remaining balance will be lost!**
+    Teleports don't have the "keep alive" safeguard like normal transfers. This means that you need to make sure that your balance after the application of fees is above the existential deposit, otherwise your account will be reaped (deactivated) and **any remaining balance will be lost.**
 
     If you want to teleport your entire balance, and reap your account, make sure to account for the source chain fees, when choosing the amount to teleport.
 
 #### Transaction fees on the destination chain
 
-Teleports come with an additional fee on the destination chain. This fee is deducted from the teleported amount of DOT or KSM. The remainder needs to be greater than the existential deposit of the destination chain. Otherwise, the entire balance you teleported will be lost!
+Teleports come with an additional fee on the destination chain. This fee is deducted from the teleported amount of DOT or KSM. The remainder needs to be greater than the existential deposit of the destination chain. Otherwise, the entire balance you teleported will be lost.
 
 !!! tip "GOOD TO KNOW"
 
@@ -66,7 +66,7 @@ Teleports come with an additional fee on the destination chain. This fee is dedu
 
 !!! danger "READ THIS FIRST!"
 
-    Do not attempt to **teleport funds directly to exchange** deposit addresses. Although the address format is the same, exchanges might not be able to detect teleports or deposits on every chain. Such deposits will be **irretrievable**!
+    Do not attempt to **teleport funds directly to exchange** deposit addresses. Although the address format is the same, exchanges might not be able to detect teleports or deposits on every chain. Such deposits will be **irretrievable**.
 
 1\. Make sure to [switch](switch-network-nodes.md) to the source chain.
 
@@ -89,7 +89,7 @@ Here, you can choose:
 
 * * *
 
-If you are more of a visual type, we have this video tutorial that guides you through the teleport process:
+If you are more of a visual type, this video tutorial guides you through the teleport process:
 
 [Teleporting | Technical Explainers](https://youtu.be/3tE9ouub5Tg)
 

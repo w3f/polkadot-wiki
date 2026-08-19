@@ -16,7 +16,7 @@ The Generic Polkadot app allows you to operate on any network using the account 
 
     The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
-**We highly recommend that you add your accounts in the browser extension, as it has many advantages:**
+**Adding your accounts in the browser extension is highly recommended, as it has many advantages:**
 
 1. It provides better security than using the Web UI directly.
 
@@ -40,7 +40,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
     Ledger is phasing out support for the [Ledger Nano S](https://support.ledger.com/article/Ledger-Nano-S-Limitations). Your funds remain safe, but upgrading is recommended to ensure compatibility with future Polkadot updates.
 
-    Notice that other Ledger models (e.g., Ledger Nano S Plus) are not affected.
+    Notice that other Ledger models (e.g., Ledger Nano S Plus) aren't affected.
 
 1\. First, update your browser to the latest version. Please note that Ledger hardware device support is only available on Chromium-based browsers (Chrome, Brave, Edge) where WebUSB and WebHID support is available in the browser.
 

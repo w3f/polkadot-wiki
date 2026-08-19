@@ -6,15 +6,15 @@ description: "Learn how to use the Polkadot staking dashboard to lower your bond
 !!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, we recommend reading our [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.
+The  [Staking Dashboard ](https://staking.polkadot.cloud/#/overview)is a powerful tool in the Polkadot ecosystem that allows you to stake your DOT easily. If this is your first time using it, consider reading the [overview article](../../general/dashboards/staking-dashboard.md) to learn how to navigate its tabs.
 
 Members can either unbond part of their funds from a nomination pool or exit the pool completely.
 
-In this example, we will be using Paseo, but the processes are the same for Polkadot and Kusama.
+This example uses Paseo, but the processes are the same for Polkadot and Kusama.
 
 !!! warning
 
-    You cannot rebond during the unbonding period with a nomination pool. If you change your mind, you must wait for the unbonding period to end before joining a nomination pool again.
+    You can't rebond during the unbonding period with a nomination pool. If you change your mind, you must wait for the unbonding period to end before joining a nomination pool again.
 
 !!! warning "IMPORTANT"
 
@@ -53,7 +53,7 @@ The usual unbonding period applies when exiting a nomination pool, 28 days in Po
 
 ### Withdraw Unbonded
 
-1\. After unbonding your tokens, you will need to wait for the unbonding period, which serves as a cooldown period. The length of an era and the total duration of the unbonding period differ depending on which network you are using.
+1\. After unbonding your tokens, you'll need to wait for the unbonding period, which serves as a cooldown period. The length of an era and the total duration of the unbonding period differ depending on which network you are using.
 
 !!! tip "GOOD TO KNOW"
 

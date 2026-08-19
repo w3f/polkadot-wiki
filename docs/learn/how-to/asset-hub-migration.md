@@ -12,7 +12,7 @@ description: "Several key features are moving from the Polkadot Relay Chain to A
 
     **No action was  required on your part**. The process happenned in the background and it took a few hours.
 
-    Your funds moved from one network to another, but never left your account. If you have any questions about the process, [contact us](https://docs.polkadot.com/get-support/).
+    Your funds moved from one network to another, but never left your account. If you have any questions about the process, [contact support](https://docs.polkadot.com/get-support/).
 
 To increase the ecosystem's scalability, Polkadot distributes its functionalities across different chains. Thanks to its interoperability, this distribution is seamless, and you don't need to worry about which network a feature runs on. All functionalities remain accessible through your preferred tools and wallets as part of the overall Polkadot experience.
 
@@ -27,7 +27,7 @@ This article solves some of the questions that you might have regarding one of t
     * [Critical User Journeys for external testing of AH-Next](https://docs.google.com/document/d/1legRcwMYzKn8tWCAsGzoUe2H22JiV-N7xfNjGrivBIE/edit?usp=sharing): Document aiming developers and dApp maintainers.
     * [Substrate API Sidecar - Asset Hub Migration Guide](https://github.com/paritytech/substrate-api-sidecar/blob/b0053ca328136a1af8fe7f568ac3c001b361704e/guides/ASSET_HUB_MIGRATION.md): Asset Hub Migration & Elastic Scaling Guide.
 
-If you have any question, join the [Asset Hub Migration Support](https://t.me/+CjOtzipvBHllMWYy) Telegram channel and ask away!
+If you have any question, join the [Asset Hub Migration Support](https://t.me/+CjOtzipvBHllMWYy) Telegram channel and ask away.
 
 
 ### What's Polkadot Asset Hub?

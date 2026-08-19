@@ -6,13 +6,13 @@ description: "Learn how to stake your DOT (or KSM) using the new Polkadot Stakin
 !!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Discover this new Staking Dashboard that makes staking much easier and check the extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
-In this article, we guide you on how to stake your DOT and nominate validators using the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), all in a simple and intuitive way.
+This article guides you on how to stake your DOT and nominate validators using the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), all in a simple and intuitive way.
 
-After [connecting the account](connect-account.md) you want to use as your stash, go to the "Nominate" tab on the left. It's empty for now, but that will soon change!
+After [connecting the account](connect-account.md) you want to use as your stash, go to the "Nominate" tab on the left. It's empty for now, but that will soon change.
 
 ![](../../assets/how-to/65029020145.png)
 
@@ -46,7 +46,7 @@ If you're not happy with the suggested validators, click "Re-Generate" to create
 
 If you want to select your nominations manually, check [this article](choose-validators.md) to learn how to choose your validators.
 
-4\. Finally, it's time to enter the amount you want to bond. We recommend that you don't bond the entire balance, as you'll need some transferable funds to cover future transaction fees.
+4\. Finally, it's time to enter the amount you want to bond. Avoid bonding the entire balance, as you'll need some transferable funds to cover future transaction fees.
 
 At this stage, you'll also see some useful information to consider. The bar at the bottom shows whether the amount you've entered meets two important thresholds:
 
@@ -60,13 +60,13 @@ If your bond is below the first line, you won't be able to nominate at all, and 
 
 If your bond is above the first line but below the second, you’ll be able to bond, but your account might not participate in the election process (that is you may not end up nominating any validators), and you’re unlikely to receive rewards.
 
-If all three areas are filled out, like in the image above, you can stake and start receiving rewards!
+If all three areas are filled out, like in the image above, you can stake and start receiving rewards.
 
 !!! info
 
     If you want to learn more about these staking limits, please read [this article](../learn-staking.md).
 
-5\. After entering the amount you want to bond and clicking Continue, you'll see a summary. Review it, and click 'Start Nominating' to stake your funds!
+5\. After entering the amount you want to bond and clicking Continue, you'll see a summary. Review it, and click 'Start Nominating' to stake your funds.
 
 ![](../../assets/how-to/65029020245.png)
 
@@ -74,7 +74,7 @@ Sign the extrinsic to complete the process. Once it has been broadcast to the ne
 
 ![](../../assets/how-to/65029020258.png)
 
-And that's it! Visit the Nominate tab regularly to check the status of your nominated validators.
+That's it. Visit the Nominate tab regularly to check the status of your nominated validators.
 
 * * *
 

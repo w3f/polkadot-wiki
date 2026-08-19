@@ -8,7 +8,7 @@ description: "You can create a DOT account in any wallet that supports Polkadot,
 
 If you're looking to store your DOT safely, there are several recommended wallets available. These range from more advanced options to user-friendly products made by the community for the community.
 
-This article will guide you through creating a Polkadot account using the battle-tested Polkadot Developer Signer. However, for newcomers, we strongly advise opting for any of the user-friendly wallets. These wallets offer the same functionalities and security standards but present them in a more approachable interface.
+This article will guide you through creating a Polkadot account using the battle-tested Polkadot Developer Signer. However, for newcomers, opting for any of the user-friendly wallets is strongly advised. These wallets offer the same functionalities and security standards but present them in a more approachable interface.
 
 
 ### User-friendly wallets
@@ -43,7 +43,7 @@ Here are two articles on how to create your account in Polkadot Vault (rebrandin
 
 The following wallets are oriented toward **developers and advanced users** :
 
-  * Polkadot Developer Signer - This is the wallet we cover in this article
+  * Polkadot Developer Signer - This is the wallet covered in this article
   * [Polkadot Developer Interface](create-account.md)
   * [Subkey (needs technical knowledge)](create-account-subkey.md)
 
@@ -53,7 +53,7 @@ The following wallets are oriented toward **developers and advanced users** :
 
     The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md) and check how to create a Polkadot account with them in the section above.
 
-No matter the [type](../learn-account-advanced.md) of your account, we recommend that you add your accounts through a browser extension, as it has many advantages:
+No matter the [type](../learn-account-advanced.md) of your account, add your accounts through a browser extension, as it has many advantages:
 
   * It provides better security than using the Web UI directly.
   * Your browser won't "forget" your accounts if its cookies are cleared.
@@ -83,7 +83,7 @@ No matter the [type](../learn-account-advanced.md) of your account, we recommend
 
 5\. Once you have saved your mnemonic phrase, mark that you have saved it safely and proceed to the next step.
 
-6\. Give your account a descriptive name. It's for your use only and will not be visible to other users.
+6\. Give your account a descriptive name. It's for your use only and won't be visible to other users.
 
 ![](../../assets/how-to/65012434428.png)
 
@@ -91,15 +91,15 @@ No matter the [type](../learn-account-advanced.md) of your account, we recommend
 
     At this point you can choose to use the account on any chain or allow it for a specific chain only, from the drop-down menu. Read [this article](../learn-account-advanced.md) for more details.
 
-7\. Set a password for your account. You will need to enter this password when signing any transaction with your account, like sending funds out. We recommend using only Latin letters, numbers, and symbols. It's important you remember your password. There is no way to recover it later.
+7\. Set a password for your account. You'll need to enter this password when signing any transaction with your account, like sending funds out. Use only Latin letters, numbers, and symbols. It's important you remember your password. There is no way to recover it later.
 
 !!! danger "READ THIS FIRST!"
 
-    The password isn't stored anywhere and we can't recover it for you. It's only used to encrypt your account locally on your computer. It does **not** protect your mnemonic phrase!
+    The password isn't stored anywhere and can't be recovered for you. It's only used to encrypt your account locally on your computer. It does **not** protect your mnemonic phrase.
 
 8\. Confirm your password and add the account.
 
-You are all set! Refresh the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface and you should see your account.
+You're all set. Refresh the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface and you should see your account.
 
 * * *
 

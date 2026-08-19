@@ -33,7 +33,7 @@ Polkadot allows users to set proxy accounts to perform a limited number of actio
 
 !!! tip "GOOD TO KNOW"
 
-    You cannot create a pure proxy type from the "Accounts" page; to do this you must be on the "Extrinsics" page. To create a pure proxy, follow [these steps](create-pure-proxy.md) instead.
+    You can't create a pure proxy type from the "Accounts" page; to do this you must be on the "Extrinsics" page. To create a pure proxy, follow [these steps](create-pure-proxy.md) instead.
 
 * * *
 
@@ -85,11 +85,11 @@ See more in-depth info about proxy types [in this article](../learn-proxies.md).
 
 Proxies are helpful for a few specific purposes because they add a layer of security. Rather than using funds in one sole account, smaller accounts with unique roles complete tasks for the main stash account.
 
-For example, perhaps the owner of an account, Ferdie, wishes to delegate certain actions to her friend, such as decisions around Polkadot OpenGov. Rather than hand over her seed phrase, which would give that person full control over the account (and the ability to run away with the funds!), they can instead create a governance proxy and set their friend's account as the proxy account. The proxy account won't be able to submit other types of extrinsics such as balance transfers. This allows Ferdie to give her friend permission to execute governance transactions (for example, voting, referenda creation, etc.) on her behalf, in a more trustless manner.
+For example, perhaps the owner of an account, Ferdie, wishes to delegate certain actions to her friend, such as decisions around Polkadot OpenGov. Rather than hand over her seed phrase, which would give that person full control over the account (and the ability to run away with the funds), they can instead create a governance proxy and set their friend's account as the proxy account. The proxy account won't be able to submit other types of extrinsics such as balance transfers. This allows Ferdie to give her friend permission to execute governance transactions (for example, voting, referenda creation, etc.) on her behalf, in a more trustless manner.
 
 * * *
 
-Check out this video from our Tech Ed team, which explains proxy accounts in more detail:
+Check out this video from the Tech Ed team, which explains proxy accounts in more detail:
 
 [What are Proxy Accounts on Polkadot Network?](https://www.youtube.com/watch?v=1tcygkq52tU)
 

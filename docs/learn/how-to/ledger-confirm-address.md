@@ -6,7 +6,7 @@ description: "One of the security features hardware wallets offer is to confirm 
 !!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
-One of the security features hardware wallets offer is to confirm your account address on the device to ensure that what you see on your computer is the correct address and has not been changed either by the UI or after copying it. This way, you are sure that when you send tokens to your account, they will arrive at the correct destination.
+One of the security features hardware wallets offer is to confirm your account address on the device to ensure that what you see on your computer is the correct address and hasn't been changed either by the UI or after copying it. This way, you are sure that when you send tokens to your account, they will arrive at the correct destination.
 
 !!! warning "ATTENTION"
 
@@ -18,7 +18,7 @@ In this article, you will learn how to confirm your account address on your Ledg
 
     Ledger is phasing out support for the [Ledger Nano S](https://support.ledger.com/article/Ledger-Nano-S-Limitations). Your funds remain safe, but upgrading is recommended to ensure compatibility with future Polkadot updates.
 
-    Notice that other Ledger models (e.g., Ledger Nano S Plus) are not affected.
+    Notice that other Ledger models (e.g., Ledger Nano S Plus) aren't affected.
 
 * * *
 
@@ -26,7 +26,7 @@ In this article, you will learn how to confirm your account address on your Ledg
 
 !!! tip "GOOD TO KNOW"
 
-    This is available only if your Ledger account has been added directly on Polkadot Developer Interface (it will have a type of '_hardware')_. If it is added in the Polkadot Developer Signer or any other browser extension (type '_extension')_ , this functionality will not be available.
+    This is available only if your Ledger account has been added directly on Polkadot Developer Interface (it will have a type of '_hardware')_. If it is added in the Polkadot Developer Signer or any other browser extension (type '_extension')_ , this functionality won't be available.
 
 1\. On the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot Developer Interface, click on the three dots next to your Ledger account and select "Show address on hardware device":
 

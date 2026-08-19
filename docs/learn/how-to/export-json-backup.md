@@ -39,7 +39,7 @@ The Polkadot Developer Signer allows you to export all your accounts added to it
 
 !!! warning "ATTENTION"
 
-    The password you enter in this step is for the batch JSON file **only!** You will need this password in order to restore your accounts from the JSON file.
+    The password you enter in this step is for the batch JSON file **only.** You will need this password in order to restore your accounts from the JSON file.
 
     This password is **unrelated** to the individual passwords of your accounts. After restoring from the batch file, each account will still need its own password to make transactions.
 
@@ -71,7 +71,7 @@ _[your account address].json_
 
 * * *
 
-That's it! Your backup JSON file has been exported!
+That's it. Your backup JSON file has been exported.
 
 If you ever need to restore your accounts, you can do so with this file and the password. For more details on how to restore, check these articles:
 

@@ -20,7 +20,7 @@ This is the password you set up when you first created your account, and it's th
 
 ![](../../assets/how-to/65015941148.png)
 
-If your password does not work, check the following details:
+If your password doesn't work, check the following details:
 
   * **Is CAPS LOCK on?**  This is one of the most common oversights.
 
@@ -30,7 +30,7 @@ If your password does not work, check the following details:
 
   * **Does your password contain special characters, like é?**  These characters will behave differently if typed or copy-pasted and may result in your password not being recognised. Please check [this issue](https://github.com/polkadot-js/extension/issues/892) for more information. Consider changing your password, as described below, and use only Latin characters, numbers, and symbols.
 
-  * **Do you use the correct password for the correct account?** If you have several accounts, make sure you are using the correct password for the corresponding account. Each account has its own password!
+  * **Do you use the correct password for the correct account?** If you have several accounts, make sure you are using the correct password for the corresponding account. Each account has its own password.
 
 * * *
 
@@ -42,7 +42,7 @@ If your password does not work, check the following details:
 
     As a result, no one can reset or change your password for you. The only way to do that is by restoring with your account's mnemonic phrase.
 
-If you have forgotten your password and you really cannot access your account, then **you can reset your password by restoring your account from your mnemonic phrase**. (You can also restore an account with your JSON file, but since that would require the same password, this won't be of use to you.)
+If you have forgotten your password and you really can't access your account, then **you can reset your password by restoring your account from your mnemonic phrase**. (You can also restore an account with your JSON file, but since that would require the same password, this won't be of use to you.)
 
 During the process of restoring your account from your mnemonic phrase, you will have the chance to set a new password. For detailed instructions on how to restore an account on the Polkadot Developer Interface and the Polkadot Developer Signer, please see [this tutorial](restore-account-signer.md).
 

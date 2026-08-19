@@ -28,7 +28,7 @@ Addresses on your Accounts page have been [created](create-polkadot-account.md) 
 
 #### **Address Book**
 
-Addresses that show up in your [Address Book](https://polkadot.js.org/apps/#/addresses) are read-only. They do not require private keys to be added there, allowing you to add any address here as a contact.
+Addresses that show up in your [Address Book](https://polkadot.js.org/apps/#/addresses) are read-only. They don't require private keys to be added there, allowing you to add any address here as a contact.
 
 Here you can, for example, add your DOT deposit addresses at exchanges that you'd like to monitor or regularly send funds to. Your address book is a passive "watch tool," making sending funds to your contact addresses easier.
 
@@ -38,7 +38,7 @@ To add an address to your Address Book, click the "Add contact" button, add the 
 
 ![](../../assets/how-to/65031224488.png)
 
-You _cannot_ send funds out of an address in your Address book since it's just a contact address, just like you cannot send an email from a friend's email address in your contact list.
+You _cannot_ send funds out of an address in your Address book since it's just a contact address, just like you can't send an email from a friend's email address in your contact list.
 
 !!! danger "READ THIS FIRST!"
 

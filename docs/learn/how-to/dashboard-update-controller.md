@@ -6,7 +6,7 @@ description: "How to use our new staking dashboard to change your controller acc
 !!!info "Related concepts"
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
-_Discover the Staking Dashboard, which makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Discover the Staking Dashboard, which makes staking much easier and check the extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -40,6 +40,6 @@ This article explains how to update your controller account using the Staking Da
 
 ![](../../assets/how-to/65031607214.png)
 
-That's it! You have now updated your controller account to your stash!
+That's it. You have now updated your controller account to your stash.
 
 * * *

@@ -16,9 +16,9 @@ This article explains how to use the[Staking Dashboard](https://staking.polkadot
 
 !!! tip "GOOD TO KNOW"
 
-    You can only rebond the full amount that is currently unbonding. You cannot choose to rebond only part of your unbonding tokens.
+    You can only rebond the full amount that is currently unbonding. You can't choose to rebond only part of your unbonding tokens.
 
-In this example, we are using the Westend testnet, but the process is the same for Polkadot and Kusama.
+In this example, the Westend testnet is used, but the process is the same for Polkadot and Kusama.
 
 * * *
 
@@ -38,11 +38,11 @@ In this example, we are using the Westend testnet, but the process is the same f
 
 ![](../../assets/how-to/65028380917.png)
 
-That's it! You will see your bonded funds increasing soon after you sign the transaction.
+That's it. You'll see your bonded funds increasing soon after you sign the transaction.
 
 * * *
 
-If you are more of a visual learner, check out our video tutorial:
+If you're more of a visual learner, check out the video tutorial:
 
 [Polkadot Made Easy: How to Bond Extra to Your Stake](https://youtu.be/hkj4Rl8q6tQ?si=_PVXMJHkOmMkepmb&t=81)
 

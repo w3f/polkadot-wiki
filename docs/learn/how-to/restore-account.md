@@ -10,13 +10,13 @@ description: "Learn how to restore your Polkadot account either from your JSON f
 
     Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-In this article, you will learn how to restore your Polkadot account either from your mnemonic phrase, your JSON backup file, or a raw private key in the Polkadot Developer Interface.
+In this article, you'll learn how to restore your Polkadot account either from your mnemonic phrase, your JSON backup file, or a raw private key in the Polkadot Developer Interface.
 
 If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](signer-where-to-download.md).
 
 !!! warning "IMPORTANT"
 
-    We highly recommend that you add your accounts through the[ Polkadot Developer Signer browser extension](https://polkadot.js.org/extension/), as it has many advantages:
+    Adding your accounts through the[ Polkadot Developer Signer browser extension](https://polkadot.js.org/extension/) is highly recommended, as it has many advantages:
 
     **·** It provides better security than using the Web UI directly.
     **·** Your browser won't "forget" your accounts if cookies are cleared.
@@ -27,7 +27,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 !!! tip "GOOD TO KNOW"
 
-    The Polkadot Developer Signer is an account manager, not a wallet. You will still need to use the Polkadot Developer Interface to interact with your accounts and see your balance.
+    The Polkadot Developer Signer is an account manager, not a wallet. You'll still need to use the Polkadot Developer Interface to interact with your accounts and see your balance.
 
 
 ### Restore from your 12-word mnemonic phrase
@@ -58,11 +58,11 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 ![](../../assets/how-to/65032555537.png)
 
-7\. Your JSON backup file will have the name of your account and will go to your default download folder. Unless you rename it, it will be named like this:
+7\. Your JSON backup file will have the name of your account and will go to your default download folder. Unless you rename it, it'll be named like this:
 
 _12rsESKfXTArErw95PC4sBAwEmP3FX3oSEhFAFwY1DGX6SJ7.json_
 
-Your account has been successfully restored, and you will see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 * * *
 
@@ -70,7 +70,7 @@ Your account has been successfully restored, and you will see it listed on your 
 
 !!! warning "IMPORTANT"
 
-    You cannot restore a "batch" JSON file (that contains multiple accounts) directly on the Polkadot Developer Interface. These files can only be used to [restore in the Polkadot Developer Signer](restore-account-signer.md).
+    You can't restore a "batch" JSON file (that contains multiple accounts) directly on the Polkadot Developer Interface. These files can only be used to [restore in the Polkadot Developer Signer](restore-account-signer.md).
 
 1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
 
@@ -88,7 +88,7 @@ Your account has been successfully restored, and you will see it listed on your 
 
 ![](../../assets/how-to/65032555670.png)
 
-Your account has been successfully restored, and you will see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 * * *
 
@@ -114,7 +114,7 @@ Your account has been successfully restored, and you will see it listed on your 
 
 5\. Give your account a descriptive name and a [good password](store-mnemonic-safely.md). Click Next, then review the details and click Save.
 
-Your account has been successfully restored, and you will see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
 
 

@@ -52,11 +52,11 @@ Bitfinex offers USDT withdrawals both on Kusama Asset Hub and on Polkadot Asset 
 
 6\. Acknowledge that you've read and understood the conditions, and then click the "Request Withdrawal" button.
 
-7\. After you go through Bitfinex's security checks, your withdrawal will be processed in a few minutes, and you'll see your USDT in your Polkadot Asset Hub or Kusama Asset Hub account!
+7\. After you go through Bitfinex's security checks, your withdrawal will be processed in a few minutes, and you'll see your USDT in your Polkadot Asset Hub or Kusama Asset Hub account.
 
 !!! tip "GOOD TO KNOW"
 
-    Check the balance of your Asset Hub address from one of the suitable block explorers listed in our article "[What Block Explorers Can I Use for the Polkadot and Kusama Ecosystems?](block-explorers.md)"
+    Check the balance of your Asset Hub address from one of the suitable block explorers listed in the article "[What Block Explorers Can I Use for the Polkadot and Kusama Ecosystems?](block-explorers.md)"
 
 * * *
 
@@ -76,7 +76,7 @@ Currently, Binance only offers withdrawals on Polkadot Asset Hub (former Statemi
 
 !!! danger "READ THIS FIRST!"
 
-    Some wallets, such as Trust Wallet, Exodus, and "Crypto.com Onchain Wallet", do not support the Polkadot Asset Hub yet.
+    Some wallets, such as Trust Wallet, Exodus, and "Crypto.com Onchain Wallet", don't support the Polkadot Asset Hub yet.
 
     Before sending any funds, please make sure the destination wallet is compatible with Polkadot Asset Hub to avoid potential issues.
 
@@ -90,7 +90,7 @@ Currently, Binance only offers withdrawals on Polkadot Asset Hub (former Statemi
 
 ![](../../assets/how-to/65018148689.png)
 
-7\. Click on "Withdraw" and that's it. Your withdrawal should be processed by Binance and your funds will reach your address in a few minutes!
+7\. Click on "Withdraw" and that's it. Your withdrawal should be processed by Binance and your funds will reach your address in a few minutes.
 
 * * *
 

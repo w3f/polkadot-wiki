@@ -6,7 +6,7 @@ description: "This article will help you choose the Polkadot or Kusama nominatio
 !!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check our extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Discover this new Staking Dashboard that makes staking much easier and check the extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -14,11 +14,11 @@ If you're looking to join a nomination pool on Polkadot or Kusama, this article 
 
 Nomination pools are designed to permissionlessly allow members to pool their funds together and act as a single nominator account. The minimum to join a nomination pool and earn rewards is low: just 1 DOT on Polkadot or 0.00166666665 KSM on Kusama. You can read more about nomination pools in [this article](../../general/dashboards/staking-dashboard.md).
 
-It is important to do your own research before joining a nomination pool. When you join a pool, your funds remain in your custody; however, you trust the pool administration to use them to nominate in your interest. If the pool is not managed effectively, you may not earn the expected rewards. The pool administration's choice of validators can lead to slashing, and you and other pool members may lose funds.
+It's important to do your own research before joining a nomination pool. When you join a pool, your funds remain in your custody; however, you trust the pool administration to use them to nominate in your interest. If the pool isn't managed effectively, you may not earn the expected rewards. The pool administration's choice of validators can lead to slashing, and you and other pool members may lose funds.
 
 !!! warning "IMPORTANT"
 
-    Please remember that to switch a nomination pool, you need to unbond first. The unbonding period is 28 days on Polkadot and 7 days on Kusama. During the unbonding period, you are not earning rewards. So, make sure to choose a nomination pool you'll be happy with.
+    Please remember that to switch a nomination pool, you need to unbond first. The unbonding period is 28 days on Polkadot and 7 days on Kusama. During the unbonding period, you aren't earning rewards. So, make sure to choose a nomination pool you'll be happy with.
 
 If you want to have more control of your nominations and monitor them yourself, you can stake solo, but remember that the minimum stake to earn rewards is much higher in that case:
 
@@ -35,7 +35,7 @@ The following information about a nomination pool can be found on the [Staking D
 
 #### **Pool Commission**
 
-Nomination pools can charge a commission. It is applied to the staking rewards the pool earned after the validators took their commission. On Polkadot and Kusama, a pool commission can be anywhere between 0% and 10%. If a pool has a non-zero percent commission, you will see it on the [Staking Dashboard](https://staking.polkadot.cloud/#/pools):
+Nomination pools can charge a commission. It is applied to the staking rewards the pool earned after the validators took their commission. On Polkadot and Kusama, a pool commission can be anywhere between 0% and 10%. If a pool has a non-zero percent commission, you'll see it on the [Staking Dashboard](https://staking.polkadot.cloud/#/pools):
 
 ![](../../assets/how-to/65028556709.png)
 
@@ -83,13 +83,13 @@ Here are a few things to consider about the accounts that manage the pool:
 
 #### **Pool's Contact Information**
 
-Nomination pools don't have on-chain identities with contact information. However, you can sometimes find the pool's website or social media account information in its name. You may need to check the pool on a block explorer to see its full name. On the pool's website or social media, you may find answers to your "off-chain" questions, which we will cover below, or get in touch with the pool management.
+Nomination pools don't have on-chain identities with contact information. However, you can sometimes find the pool's website or social media account information in its name. You may need to check the pool on a block explorer to see its full name. On the pool's website or social media, you may find answers to your "off-chain" questions, which are covered below, or get in touch with the pool management.
 
 * * *
 
 ### What You Can Learn About a Pool Off-Chain
 
-Some questions about how a nomination pool is managed cannot be answered solely by the on-chain information. You may need to talk to the pool management or check the pool's website or social media.
+Some questions about how a nomination pool is managed can't be answered solely by the on-chain information. You may need to talk to the pool management or check the pool's website or social media.
 
 #### **Permissionless Rewards Claiming**
 
@@ -107,7 +107,7 @@ Nomination pool administrators can be active on their social media and in the ec
 
 ### Joining a Nomination Pool
 
-Once you have done your own research and picked a nomination pool, join it! The steps are described in these guides:
+Once you have done your own research and picked a nomination pool, join it. The steps are described in these guides:
 
 [Staking Dashboard: How to Join a Nomination Pool](join-nomination-pool.md)
 

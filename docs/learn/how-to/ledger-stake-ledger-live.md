@@ -6,7 +6,7 @@ description: "Ledger Live natively supports Polkadot. Learn how to store your DO
 !!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
-_Discover the new Staking Dashboard that makes staking much easier and check our[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Discover the new Staking Dashboard that makes staking much easier and check the[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -14,13 +14,13 @@ In this article you'll find video instructions on how to use your Polkadot Ledge
 
 !!! warning "This guide may be outdated"
 
-    Ledger no longer uses a per-network "Polkadot" app — it has been replaced by the single [**Polkadot (Generic) App**](../../general/ledger.md#polkadot-generic-app), which Ledger Live supports. In addition, following the [Asset Hub Migration](asset-hub-migration.md), staking now takes place on Asset Hub: if your DOT is on an account created with an older Ledger app, you must first migrate to a Polkadot (Generic) app account (unstake, wait for the unbonding period, transfer the funds, and stake again — see [Ledger](../../general/ledger.md#migration-process)). For an up-to-date staking flow, we recommend the [Staking Dashboard](stake-your-dot.md).
+    Ledger no longer uses a per-network "Polkadot" app — it has been replaced by the single [**Polkadot (Generic) App**](../../general/ledger.md#polkadot-generic-app), which Ledger Live supports. In addition, following the [Asset Hub Migration](asset-hub-migration.md), staking now takes place on Asset Hub: if your DOT is on an account created with an older Ledger app, you must first migrate to a Polkadot (Generic) app account (unstake, wait for the unbonding period, transfer the funds, and stake again — see [Ledger](../../general/ledger.md#migration-process)). For an up-to-date staking flow, the [Staking Dashboard](stake-your-dot.md) is recommended.
 
 !!! warning "IMPORTANT"
 
     Ledger is phasing out support for the [Ledger Nano S](https://support.ledger.com/article/Ledger-Nano-S-Limitations). Your funds remain safe, but upgrading is recommended to ensure compatibility with future Polkadot updates.
 
-    Notice that other Ledger models (e.g., Ledger Nano S Plus) are not affected.
+    Notice that other Ledger models (e.g., Ledger Nano S Plus) aren't affected.
 
 
 ### What to know before staking

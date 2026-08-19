@@ -6,7 +6,7 @@ description: "This article gives you short step-by-step instructions on how to s
 !!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover the new Staking Dashboard that makes staking much easier, and check our [extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Discover the new Staking Dashboard that makes staking much easier, and check the [extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
 
 * * *
 
@@ -22,7 +22,7 @@ How else can I stake
 
 ### What to know before starting
 
-  * **Nominating currently requires a**  **minimum of 250 DOT staked funds on Polkadot(0.1 KSM on Kusama)**. Please ensure you are above that minimum, or you won't be able to nominate.
+  * **Nominating currently requires a**  **minimum of 250 DOT staked funds on Polkadot(0.1 KSM on Kusama)**. Please ensure you're above that minimum, or you won't be able to nominate.
 
 !!! warning "IMPORTANT"
 
@@ -66,7 +66,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 !!! danger "READ THIS FIRST!"
 
-    Make sure that you have**at least 0.01 DOT** in the account that you are directing your staking rewards to. If you receive rewards of less than 0.01 DOT and they are sent to an empty account, you will **lose them**. This has to do with the [existential deposit](existential-deposit.md) on Polkadot.
+    Make sure that you have**at least 0.01 DOT** in the account that you are directing your staking rewards to. If you receive rewards of less than 0.01 DOT and they're sent to an empty account, you'll **lose them**. This has to do with the [existential deposit](existential-deposit.md) on Polkadot.
 
 7\. Click "Next." Now, you need to select your validators. Please ensure you've read the article on [choosing your validators](choose-validators.md). You can nominate up to 16 validators on both Polkadot and Kusama. Nominating more trustworthy validators increases your chance to earn rewards consistently.
 
@@ -76,7 +76,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 ### How else can I stake
 
-For most users, we recommend staking through the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview). It's compatible with several browser extensions within the ecosystem, including the Polkadot browser extension, and is more user-friendly. To get started, check this article:
+For most users, staking through the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) is recommended. It's compatible with several browser extensions within the ecosystem, including the Polkadot browser extension, and is more user-friendly. To get started, check this article:
 
 [Staking Dashboard: How to Stake Your DOT](stake-your-dot.md)
 
@@ -86,6 +86,6 @@ If you have a Ledger device, you can also stake using Ledger Live. You can follo
 
 * * *
 
-That's it! You will begin earning rewards in the next era or the one after that if you nominated during the last epoch.
+That's it. You'll begin earning rewards in the next era or the one after that if you nominated during the last epoch.
 
 * * *

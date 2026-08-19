@@ -99,13 +99,13 @@ You can easily delegate from Subsquare by following the steps below:
 
 4\. To delegate, paste your delegate's address (B) or select it from the delegates who have shown their interest in being a delegate (C), then click "Delegate."
 
-5\. On the screen below, configure your delegation by selecting the tracks you'd like to delegate on. Note that you can select multiple tracks, and you cannot delegate on tracks where you have non-expired votes or ongoing delegations.
+5\. On the screen below, configure your delegation by selecting the tracks you'd like to delegate on. Note that you can select multiple tracks, and you can't delegate on tracks where you have non-expired votes or ongoing delegations.
 
 6\. Enter the balance you'd like to delegate from the available "voting balance" on the top-right corner of the panel.
 
 7\. Select the conviction that will be applied to your voting power. This will multiply your voting power and increase the locking period after you undelegate.
 
-8\. After reviewing all set parameters, click "Confirm." Sign with your account, and you're all set!
+8\. After reviewing all set parameters, click "Confirm." Sign with your account, and you're all set.
 
 ![](../../assets/how-to/65023249372.png)
 

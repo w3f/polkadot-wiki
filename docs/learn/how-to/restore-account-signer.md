@@ -13,7 +13,7 @@ In this article, you will learn how to restore your Polkadot account in the Polk
     The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 
-**We highly recommend that you add your accounts in the browser extension, as it has many advantages:**
+**Adding your accounts in the browser extension is highly recommended, as it has many advantages:**
 
 1. It provides better security than using the Web UI directly
 

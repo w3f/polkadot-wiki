@@ -40,7 +40,7 @@ However, an account still needs to hold **at least the minimum USDT balance** , 
 
 3\. Click the "Send" button. Then enter the receiver address and the amount to transfer.
 
-4\. Sign and submit the transaction, and that's it!
+4\. Sign and submit the transaction, and that's it.
 
 ![](../../assets/how-to/65031027022.gif)
 

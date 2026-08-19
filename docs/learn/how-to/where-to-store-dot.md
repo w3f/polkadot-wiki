@@ -7,7 +7,7 @@ _Secure, non-custodial Polkadot wallets ensure your funds are protected, with en
 
 * * *
 
-If you are wondering, "What is the best wallet for DOT?" you will be happy to hear that several teams are developing wallets for DOT tokens, including cold storage (offline) options. From the most user-friendly options to the most advanced and sophisticated wallets, you have many wallets to choose from to manage your DOT.
+If you are wondering, "What is the best wallet for DOT?" you'll be happy to hear that several teams are developing wallets for DOT tokens, including cold storage (offline) options. From the most user-friendly options to the most advanced and sophisticated wallets, you have many wallets to choose from to manage your DOT.
 
 
 ### Treasury Funded Wallets
@@ -34,7 +34,7 @@ Hardware wallets offer the capability to store your account offline while still 
 
 #### **Polkadot Vault**
 
-You can install [Polkadot Vault](https://www.parity.io/signer/) (rebranded from Parity Signer) on an old smartphone reset to factory defaults, which you will keep in airplane mode. This way, you can turn your old phone into a cold storage wallet.
+You can install [Polkadot Vault](https://www.parity.io/signer/) (rebranded from Parity Signer) on an old smartphone reset to factory defaults, which you'll keep in airplane mode. This way, you can turn your old phone into a cold storage wallet.
 
 #### **Ledger**
 
@@ -46,13 +46,13 @@ Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us
 
 Numerous third-party wallets have been built by the community or funded in other ways. You can find a list of them on community websites like [Dotinsights](https://dotinsights.subwallet.app/projects/). Open-source projects are also listed in the [Open Source](../../general/build-open-source.md) page.
 
-We cannot provide support for these wallets. However, most of them are user-friendly and have their own documentation and support teams ready to help.
+Support for these wallets isn't available here. However, most of them are user-friendly and have their own documentation and support teams ready to help.
 
 * * *
 
 ### Wallets for developers and power users
 
-The following wallets have been developed by Parity. There are many useful articles on our page to help you use and address issues with these wallets, and you can always [contact us](https://docs.polkadot.com/get-support/) if you need support.
+The following wallets have been developed by Parity. There are many useful articles on the wiki to help you use and address issues with these wallets, and you can always [get in touch](https://docs.polkadot.com/get-support/) if you need support.
 
 !!! tip "GOOD TO KNOW"
 
@@ -60,7 +60,7 @@ The following wallets have been developed by Parity. There are many useful artic
 
 #### Polkadot browser extension
 
-The [Polkadot Developer Signer](create-polkadot-account.md) is an account manager and will work in all Chromium-based browsers (Chrome, Brave, Edge) and Firefox. It is recommended to store your accounts in the extension and not on the Polkadot Developer Interface directly.
+The [Polkadot Developer Signer](create-polkadot-account.md) is an account manager and will work in all Chromium-based browsers (Chrome, Brave, Edge) and Firefox. It's recommended to store your accounts in the extension and not on the Polkadot Developer Interface directly.
 
 Because the extension only manages your keys and allows you to sign transactions, it needs to interact with a UI to show information about your accounts (like their balance) and to make transactions with them. It can be the Polkadot Developer Interface (below) or any compatible Web 3.0 app in the Polkadot ecosystem. With the Polkadot Developer Signer, you can connect your accounts to most of them.
 

@@ -21,7 +21,7 @@ _If you want your DOT address to contain specific words, letters, or numbers, yo
 
     The address format in Substrate-based chains is SS58, a modification of [Base58Check](https://en.bitcoin.it/wiki/Base58Check_encoding) from Bitcoin. This encoding does not allow characters that look the same in some fonts (i.e., 0OIl).
 
-In this example, we'll use the word "dot":
+This example uses the word "dot":
 
 ![](../../assets/how-to/65016177838.png)
 
@@ -29,7 +29,7 @@ In this example, we'll use the word "dot":
 
 ![](../../assets/how-to/65012654115.png)
 
-**4\. When you find an address you like, click the "Save" button on the right to claim this address. The accounts are not saved if you do not choose to do this.**
+**4\. When you find an address you like, click the "Save" button on the right to claim this address. The accounts aren't saved if you don't choose to do this.**
 
 Clicking the "Save" button will open a window to save your private key. In the vanity generator, only **Raw seed** is available for generated addresses. To ensure you can always restore your account, [save the raw seed safely.](store-mnemonic-safely.md)
 

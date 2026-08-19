@@ -23,7 +23,7 @@ Keep reading to learn why this happens and how to resolve it.
 
 The native token DOT is usually responsible for keeping an account active by maintaining the [existential deposit](existential-deposit.md). However, there are also other assets known as “sufficient assets," such as USDC, USDT, or ETH, that can independently keep an account alive without relying on DOT.
 
-Other assets, such as DED or MYTH, are considered [non-sufficient assets](existential-deposit.md#native-sufficient-and-non-sufficient-assets), meaning they cannot keep the account alive on their own on the Polkadot network. If the balance of DOT (or any other sufficient asset) falls below the ED, the account is reaped, becomes inactive, and all non-sufficient assets in it are destroyed. This situation is what the failed transaction and error message avoid.
+Other assets, such as DED or MYTH, are considered [non-sufficient assets](existential-deposit.md#native-sufficient-and-non-sufficient-assets), meaning they can't keep the account alive on their own on the Polkadot network. If the balance of DOT (or any other sufficient asset) falls below the ED, the account is reaped, becomes inactive, and all non-sufficient assets in it are destroyed. This situation is what the failed transaction and error message avoid.
 
 Unfortunately, not all wallets display every asset stored in an account. This can lead to confusion, and you might think you only hold DOT, while other assets like DED or MYTH are still present but hidden. In such cases, if you attempt to send all your DOT to another account, the transaction may fail. This prevents the deactivation of the account, which would otherwise destroy the remaining non-sufficient assets.
 

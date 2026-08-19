@@ -26,11 +26,11 @@ In this article you will learn how to **create a new account** in Parity Signer.
 
 ![](../../assets/how-to/65010269766.png)
 
-3. **[Save your mnemonic phrase safely](store-mnemonic-safely.md)**.  **Anyone who knows it can have full access to your account!**
+3. **[Save your mnemonic phrase safely](store-mnemonic-safely.md)**.  **Anyone who knows it can have full access to your account.**
 
 **![](../../assets/how-to/65010269838.png)**
 
-4\. That's it! This will bring you back to your account on the Keys page.
+4\. That's it. This will bring you back to your account on the Keys page.
 
 !!! tip "GOOD TO KNOW"
 
@@ -48,7 +48,7 @@ You can add your Parity Signer account to the Polkadot browser extension to use 
 
 * * *
 
-If you are more of a visual type, please check this video guide. The specific instructions on how to create the account can be found at the 2:00 timestamp, but we recommend watching the whole video.
+If you are more of a visual type, please check this video guide. The specific instructions on how to create the account can be found at the 2:00 timestamp, but watching the whole video is recommended.
 
 [Create and Restore your Accounts on Parity Signer](https://www.youtube.com/watch?v=hgv1R9mPEXw&t=120s)
 

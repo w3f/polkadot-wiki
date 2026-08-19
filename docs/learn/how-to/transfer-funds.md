@@ -48,7 +48,7 @@ For the receiving account, you can either select an account from the drop-down m
 
 [How to sign a transaction on Ledger](ledger-sign-transaction.md)
 
-6\. Congratulations, you have signed a transaction! It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
+6\. You've signed the transaction. It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
 
 ![](../../assets/how-to/65032390940.png)
 

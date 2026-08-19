@@ -6,7 +6,7 @@ description: "A step-by-step guide on how to sign a transaction using the Polkad
 !!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
-Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction will not be broadcast in the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
+Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction won't be broadcast in the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
 
 * * *
 
@@ -29,7 +29,7 @@ When you create your accounts in the Polkadot browser extension, you need a UI t
 
 !!! info
 
-    In the transaction details, **the amount is displayed in Planck**. One DOT contains 10,000,000,000 Planck. You can read more about it in our [article](../learn-DOT.md#the-planck-unit).
+    In the transaction details, **the amount is displayed in Planck**. One DOT contains 10,000,000,000 Planck. You can read more about it in this [article](../learn-DOT.md#the-planck-unit).
 
 3\. To sign the transaction, enter your account password and click the "Sign the transaction" button:
 
@@ -37,7 +37,7 @@ When you create your accounts in the Polkadot browser extension, you need a UI t
 
 4\. If you want to send other transactions soon, click the "Remember my password for the next 15 minutes" checkbox. It will allow you to skip entering your password for the next 15 minutes. You can make it 15 more minutes every time you send a transaction.
 
-5\. Congratulations, you have signed a transaction! It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
+5\. You've signed the transaction. It will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction:
 
 ![](../../assets/how-to/65016106404.png)
 
@@ -45,7 +45,7 @@ When you create your accounts in the Polkadot browser extension, you need a UI t
 
 ### Cannot sign a transaction?
 
-Sometimes it might happen that we cannot sign a transaction. Here are described some of the causes and possible solutions.
+Sometimes a transaction can't be signed. The sections below describe some of the causes and possible solutions.
 
 #### **The new window doesn't appear**
 
@@ -63,15 +63,15 @@ If you blocked the window, hid it, or accidentally closed it, click on the exten
 
 #### **My password is invalid**
 
-We have compiled a few things to try in this article:
+This article lists a few things to try:
 
-[My password is not working!](password-not-working.md)
+[My password is not working](password-not-working.md)
 
 If you don't know your password but have your mnemonic phrase, you can [restore your account](restore-account-signer.md) and set a new password.
 
 #### **My transaction failed**
 
-Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction cannot be executed, and it fails:
+Signing a transaction means that it will be included in the blockchain. However, it doesn't always mean it will be executed. You can check the result of your transaction on a block explorer. Sometimes a transaction can't be executed, and it fails:
 
 ![](../../assets/how-to/65016106656.png)![](../../assets/how-to/65016106650.png)
 

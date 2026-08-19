@@ -49,13 +49,13 @@ To "waiting":
 
 Once the registrar has confirmed the identity, a green checkmark should appear next to your account name with the appropriate confidence level:
 
-![](../../assets/how-to/65012681863.png)_Note that changing even a single field's value after you've been verified will un-verify your account and you will need to start the judgement process anew. However, you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
+![](../../assets/how-to/65012681863.png)_Note that changing even a single field's value after you've been verified will un-verify your account and you'll need to start the judgement process anew. However, you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
 
 * * *
 
 ###  Cancelling a Judgement
 
-You may decide that you do not want to be judged by a registrar (for instance, because you realize you entered incorrect data or selected the wrong registrar). In this case, after submitting the request for judgement but before your identity has been judged, you can issue a call to cancel the judgement using an extrinsic.
+You may decide that you don't want to be judged by a registrar (for instance, because you realize you entered incorrect data or selected the wrong registrar). In this case, after submitting the request for judgement but before your identity has been judged, you can issue a call to cancel the judgement using an extrinsic.
 
 ![](../../assets/how-to/65024784223.png)
 
@@ -67,7 +67,7 @@ You may decide that you do not want to be judged by a registrar (for instance, b
 
 ### Registrars
 
-Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they are willing to pay and only registrars below this amount would provide judgement.
+Registrars can set a fee for their services and limit their attestation to certain fields. For example, a registrar could charge 1 DOT to verify one's legal name, email, and GPG key. When a user requests judgement, they'll pay this fee to the registrar who provides the judgement on those claims. Users set a maximum fee they're willing to pay and only registrars below this amount would provide judgement.
 
 See [this article](../learn-guides-identity.md#registrars) for more on how to become a registrar.
 

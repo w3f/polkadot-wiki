@@ -20,7 +20,7 @@ If you want to send your total balance out of your account, be aware that your a
 
     Not all wallets that support DOT have the technical capability to allow you to send out the existential deposit. Below you will learn how to do this in the Polkadot Developer Interface.
 
-    If your current wallet does not have this functionality, you can export your private key from there and import it to Polkadot Developer Interface or contact the support of your wallet to see if there's a way to deactivate your account. Once imported, you can proceed as below. Note that exposing your private keys on a website comes with a security risk, therefore you should only do this if you do not plan on reactivating this account in the future.
+    If your current wallet doesn't have this functionality, you can export your private key from there and import it to Polkadot Developer Interface or contact the support of your wallet to see if there's a way to deactivate your account. Once imported, you can proceed as below. Note that exposing your private keys on a website comes with a security risk, therefore you should only do this if you don't plan on reactivating this account in the future.
 
 
 ### Send all of your funds
@@ -57,13 +57,13 @@ You can reactivate it anytime by depositing a minimum of 0.01 DOT.
 
 8\. Sign the transaction with the sender account on your wallet.
 
-9\. Congratulations, you have signed a transaction, and it will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction.
+9\. You've signed the transaction, and it will be included in the blockchain within a few seconds. You can now open any of the [block explorers](block-explorers.md) to view your transaction.
 
 * * *
 
 ### Missing "transfer the full account balance, reap the sender" option
 
-If you do not see this option, your account either holds exactly 0.01 DOT or is very close to it.
+If you don't see this option, your account either holds exactly 0.01 DOT or is very close to it.
 
 To fix this, send a small amount of DOT to this account to increase the transferrable balance so that the transaction fee can be deducted without the transferrable balance dropping below 0.01 DOT. Transaction fees are very low on Polkadot, so increasing the balance to even 0.012 DOT should be sufficient, but to be safe, it's recommended that you have at least 0.02 DOT. You will then see the "Reap the sender" option appear, and you can send your entire balance out.
 

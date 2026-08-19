@@ -14,7 +14,7 @@ Pure proxies (used to be called anonymous proxies) are an advanced feature and c
 
     Instead, the **killPure** extrinsic must be called **from** the _pure_ proxy. This means the pure proxy must be added as an account on the Polkadot-JS UI [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
-    **Making a mistake could result in loss of funds!**
+    **Making a mistake could result in loss of funds.**
 
 
 ### Setting a Pure Proxy
@@ -59,7 +59,7 @@ See more in-depth info about proxy types [in this article](../learn-proxies.md).
 
     Controller accounts are being deprecated. You can still use existing ones for now, but creating new ones is no longer possible.
 
-    It is recommended to set your stash account as its own controller (described in [this article](change-controller-account.md)) and create a staking proxy to obtain the same benefits and greater flexibility.
+    It's recommended to set your stash account as its own controller (described in [this article](change-controller-account.md)) and create a staking proxy to obtain the same benefits and greater flexibility.
 
     Check out the article on [creating a proxy account](create-proxy-account.md) for more information.
 
@@ -77,17 +77,17 @@ The procedure for removing a Pure Proxy is different, and there are a few functi
 
   * **Block height** it was created at
 
-  * The **extrinsic index** on the block (on most block explorers, you will see the extrinsic ID listed as something along the lines of "11111111-2." 11111111 is the block height (block number), and 2 is the extrinsic index.
+  * The **extrinsic index** on the block (on most block explorers, you'll see the extrinsic ID listed as something along the lines of "11111111-2." 11111111 is the block height (block number), and 2 is the extrinsic index.
 
 ![](../../assets/how-to/65015290063.png)
 
-2\. Navigate to the [accounts](https://polkadot.js.org/apps/#/accounts) page and make sure you are on the correct network. Click "**Proxied** " and add your address; name it PURE PROXY. You should now see this address in your accounts.
+2\. Navigate to the [accounts](https://polkadot.js.org/apps/#/accounts) page and make sure you're on the correct network. Click "**Proxied** " and add your address; name it PURE PROXY. You should now see this address in your accounts.
 
 ![](../../assets/how-to/65015290117.png)
 
 3\. Navigate to the "Developer" > "[Extrinsics](https://polkadot.js.org/apps/#/extrinsics)" page.
 
-4\. You need to remove the proxy _from_ the pure proxy. It is important to note that pure proxies _work backward_ in that the original account acts as the proxy. Call the extrinsic '**proxy.killPure** ' using the selected account PURE PROXY with the following parameters:
+4\. You need to remove the proxy _from_ the pure proxy. It's important to note that pure proxies _work backward_ in that the original account acts as the proxy. Call the extrinsic '**proxy.killPure** ' using the selected account PURE PROXY with the following parameters:
 
   * _Spawner_ (original account)
 
@@ -113,7 +113,7 @@ Pure proxies, in particular, can be used for permissionless management. In the e
 
 * * *
 
-If you are more of a visual learner, check these videos from our Tech Ed team. They show how to create and delete pure proxies and when you may want to use them:
+If you are more of a visual learner, check these videos from the Tech Ed team. They show how to create and delete pure proxies and when you may want to use them:
 
   * [Creating and Deleting Anonymous (Pure) Proxies on Polkadot ](https://www.youtube.com/watch?v=T443RcCYP24)
   * [When and Why you can use Anonymous (Pure) Proxies on Polkadot](https://www.youtube.com/watch?v=YkYApbhU3i0)
