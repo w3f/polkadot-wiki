@@ -37,7 +37,7 @@ Unbonding your tokens can be done by navigating to the Network > Staking > [Acco
 
 #### Unbond all your tokens
 
-Navigate to the "Network" > "Staking Async" > "[Accounts](https://polkadot.js.org/apps/#/staking/actions)"page on Polkadot Developer Interface. If you want to unbond _all_ your funds, you need to chill your account first, i.e., stop nominating. Click on the Stop button to the right of your account:
+Navigate to the "Network" > "Staking Async" > "[Accounts](https://polkadot.js.org/apps/#/staking/actions)"page on Polkadot Developer Interface. If you want to unbond _all_ your funds, you need to chill your account first, that is, stop nominating. Click on the Stop button to the right of your account:
 
 [![](../../assets/how-to/65011122678.png)](https://polkadot.js.org/apps/#/staking/actions)
 
@@ -59,7 +59,7 @@ If you don't see the Stop button, it means you're not nominating any validators.
 
 Once you've clicked the Stop button and chilled your account successfully, they will still be bonded. This means they stay ready to be used to nominate. To make them transferable again, you first need to unbond them. This process will take 28 days on Polkadot and 7 days on Kusama.
 
-To do this, click the three dots next to the account you want to unbond tokens for, and select "**Unbond funds** ".
+To do this, click the three dots next to the account you want to unbond tokens for, and select "**Unbond funds** ."
 
 ![](../../assets/how-to/65011122820.png)
 

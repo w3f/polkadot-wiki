@@ -35,7 +35,7 @@ When you [create](vault-create-account.md) your accounts in Polkadot Vault, you 
 
 !!! danger "READ THIS FIRST!"
 
-    Always check the information of the transaction you are about to broadcast to ensure it is the one you intended. Once a transaction is broadcasted, there's no way to take it back!
+    Always check the information of the transaction you are about to broadcast to ensure it is the one you intended. Once a transaction is broadcast, there's no way to take it back!
 
 ![](../../assets/how-to/65032429734.png)
 
@@ -63,7 +63,7 @@ However, for the Polkadot Developer Signer to ask permission to use your camera,
 
 1\. Open the extension and click on the gear icon on the top right
 
-2\. Check "Allow QR Camera Access". The first time you do this, you may need to click on "Open the extension in a new window" and do these steps from there.
+2\. Check "Allow QR Camera Access." The first time you do this, you may need to click on "Open the extension in a new window" and do these steps from there.
 
 ![](../../assets/how-to/65016536416.png)
 

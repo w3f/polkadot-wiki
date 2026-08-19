@@ -27,9 +27,9 @@ In this article you will learn how to **restore an account** in Polkadot Vault t
 
 1. Download the Polkadot Vault app [from the official site](https://signer.parity.io/) and install it on your phone.
 
-2\. If this is a new installation, read through the introductory screens and click "Continue", then agree to the Terms of Service and Privacy Policy.
+2\. If this is a new installation, read through the introductory screens and click "Continue," then agree to the Terms of Service and Privacy Policy.
 
-3\. Again, if this is a new installation, you are then prompted to enable Airplane mode, turn off WiFi, and disconnect any cables. Once you do these steps, click "Next".
+3\. Again, if this is a new installation, you are then prompted to enable Airplane mode, turn off WiFi, and disconnect any cables. Once you do these steps, click "Next."
 
 Remember that Polkadot Vault is meant to work as cold storage and that can only be achieved if your phone is air-gapped from the outside world.
 
@@ -59,7 +59,7 @@ Remember that Polkadot Vault is meant to work as cold storage and that can only 
 
 ![](../../assets/how-to/65016514748.png)
 
-7\. The following screen will allow you to select the networks for which you want to create the account. By default Polkadot, Kusaman, and Westend are preselected. Click "Done" and that's it, your accounts are ready to use!
+7\. The following screen will allow you to select the networks for which you want to create the account. By default Polkadot, Kusama, and Westend are preselected. Click "Done" and that's it, your accounts are ready to use!
 
 ![](../../assets/how-to/65020682597.png)
 

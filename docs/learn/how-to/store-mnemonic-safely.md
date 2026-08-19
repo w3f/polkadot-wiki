@@ -15,11 +15,11 @@ If you ever lose access to your account, the only ways to restore it are your mn
 
 ### Storing your mnemonic phrase
 
-The mnemonic phrase is the key to your account. If you lose access to your account (e.g., you forget the password), you can always [restore it with the mnemonic phrase](restore-account-signer.md). Each mnemonic phrase generates a unique account, so you cannot change it, unlike the password. It gives full access to your account to anyone who has it, so you need to keep it secret and safe. The mnemonic phrase is shown to you once when [creating an account](create-polkadot-account.md). The [wallets we support](where-to-store-dot.md) and most of the wallets in the ecosystem use 12-word mnemonic phrases. However, some wallets, like the Ledger hardware wallet, use 24 words.
+The mnemonic phrase is the key to your account. If you lose access to your account (for example, you forget the password), you can always [restore it with the mnemonic phrase](restore-account-signer.md). Each mnemonic phrase generates a unique account, so you cannot change it, unlike the password. It gives full access to your account to anyone who has it, so you need to keep it secret and safe. The mnemonic phrase is shown to you once when [creating an account](create-polkadot-account.md). The [wallets we support](where-to-store-dot.md) and most of the wallets in the ecosystem use 12-word mnemonic phrases. However, some wallets, like the Ledger hardware wallet, use 24 words.
 
   * Write your mnemonic phrase down on paper.
   * Make sure to write all 12 or 24 words in the correct order. The same words in a different order won't restore your account.
-  * We recommend having several copies of the mnemonic phrase in separate locations: e.g., one in your home safe and one in a safety deposit box at your bank.
+  * We recommend having several copies of the mnemonic phrase in separate locations: for example, one in your home safe and one in a safety deposit box at your bank.
   * To protect your mnemonic phrase from physical damage, you can store it in a sealed plastic bag to prevent water damage, in a fireproof safe, etched in metal, etc.
  * Do **not** store your mnemonic phrase on any electronic device. Do not store it on a USB drive, on your computer, on your phone, or in the cloud. Do **not** take screenshots or send it to yourself via email or messenger.
 

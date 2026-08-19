@@ -21,13 +21,13 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 1\. [Create](vault-create-account.md) or [restore](vault-restore-account.md) an account in Polkadot Vault.
 
-2\. Open the [Polkadot Developer Signer](signer-where-to-download.md) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window".
+2\. Open the [Polkadot Developer Signer](signer-where-to-download.md) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window."
 
 ![](../../assets/how-to/65016543777.png)
 
 3. The extension will open in a new window. You will see a camera icon in the URL bar: click on it and allow the extension to access your camera.
 
-4\. You may need to reload the extension page. Then click on the plus icon and choose "Attach external QR-signer account".
+4\. You may need to reload the extension page. Then click on the plus icon and choose "Attach external QR-signer account."
 
 ![](../../assets/how-to/65016543775.png)
 

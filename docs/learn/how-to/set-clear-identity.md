@@ -40,7 +40,7 @@ These amounts can also be extracted by querying constants through the "[Chain st
 
 To set an identity, follow the steps below:
 
-1\. Click the three vertical dots next to your account and select "Set on-chain identity".
+1\. Click the three vertical dots next to your account and select "Set on-chain identity."
 
 ![](../../assets/how-to/65024782723.png)
 
@@ -66,7 +66,7 @@ To clear an identity:
 
 2\. Click the three dots corresponding to the account you want to clear and select "Set on-chain identity."
 
-3\. Select "**Clear Identity** ", and sign and submit the transaction.
+3\. Select "**Clear Identity** ," and sign and submit the transaction.
 
 It is possible to kill an identity that it deems erroneous. This results in a slash of the deposit.
 

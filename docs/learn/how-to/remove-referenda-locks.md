@@ -35,6 +35,6 @@ To remove all expired referenda locks from your account, follow these steps:
 
 **![](../../assets/how-to/65016419565.png)**
 
-3.  Then sign and submit the extinsic and all the expired locks will be removed.
+3.  Then sign and submit the extrinsic and all the expired locks will be removed.
 
 * * *

@@ -28,7 +28,7 @@ If your password does not work, check the following details:
 
   * **Is there a blank space before or after your password?** This can accidentally happen when you copy/paste a password.
 
-  * **Does your password contain special characters, like é?**  These characters will behave differently if typed or copy-pasted and may result in your password not being recognised. Please check [this issue](https://github.com/polkadot-js/extension/issues/892) for more information. Consider changing your password, as described below, and use only latin characters, numbers, and symbols.
+  * **Does your password contain special characters, like é?**  These characters will behave differently if typed or copy-pasted and may result in your password not being recognised. Please check [this issue](https://github.com/polkadot-js/extension/issues/892) for more information. Consider changing your password, as described below, and use only Latin characters, numbers, and symbols.
 
   * **Do you use the correct password for the correct account?** If you have several accounts, make sure you are using the correct password for the corresponding account. Each account has its own password!
 

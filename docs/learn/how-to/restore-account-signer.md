@@ -33,7 +33,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 ### Restore from your 12-word mnemonic phrase
 
-1\. Open the [Polkadot Developer Signer](signer-where-to-download.md) and click on the "plus (+)" sign on the top right. Then select "Import account from pre-existing seed".
+1\. Open the [Polkadot Developer Signer](signer-where-to-download.md) and click on the "plus (+)" sign on the top right. Then select "Import account from pre-existing seed."
 
 ![](../../assets/how-to/65001747786.png)
 
@@ -59,7 +59,7 @@ It will also appear in the list of accounts on the Polkadot Developer Interface 
 
 ### Restore from your JSON file
 
-1\. Open the Polkadot Developer Signer and click on the "plus (+)" button. Then select "Restore account from backup JSON file".
+1\. Open the Polkadot Developer Signer and click on the "plus (+)" button. Then select "Restore account from backup JSON file."
 
 ![](../../assets/how-to/65001747794.png)
 
@@ -67,7 +67,7 @@ It will also appear in the list of accounts on the Polkadot Developer Interface 
 
 ![](../../assets/how-to/65001748692.png)
 
-3\. Now enter the **password you set for your account** when you created it and click "Restore".
+3\. Now enter the **password you set for your account** when you created it and click "Restore."
 
 ![](../../assets/how-to/65001748751.png)
 

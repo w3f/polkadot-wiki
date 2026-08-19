@@ -17,15 +17,15 @@ In this article, you will learn how to **create a new account** in Polkadot Vaul
 
 1. Download the Polkadot Vault app for your factory-reset phone [from the official site](https://signer.parity.io/) and install it on your phone.
 
-2\. Read through the introductory screens and click "Continue", then agree to the Terms of Service and Privacy Policy.
+2\. Read through the introductory screens and click "Continue," then agree to the Terms of Service and Privacy Policy.
 
-3\. After that, you are prompted to enable Airplane mode, turn off WiFi, and disconnect any cables. Once you do these steps, click "Next".
+3\. After that, you are prompted to enable Airplane mode, turn off WiFi, and disconnect any cables. Once you do these steps, click "Next."
 
 Remember that **Polkadot Vault is meant to work as cold storage** , and that can only be achieved if your phone is air-gapped from the outside world.
 
 ![](../../assets/how-to/65016492960.png)
 
-4\. On the next screen, we are ready to create our first set of keys. Click the "Add Key Set" button and select "Add new Key Set".
+4\. On the next screen, we are ready to create our first set of keys. Click the "Add Key Set" button and select "Add new Key Set."
 
 ![](../../assets/how-to/65020681761.png)
 
@@ -41,7 +41,7 @@ Remember that **Polkadot Vault is meant to work as cold storage** , and that can
 
 You can also use "Banana Split" for more security. ["Banana Split"](https://bs.parity.io) is a self-hosted app that you can use to split your mnemonic phrase into pieces using [Shamir's Secret Sharing scheme](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing).
 
-Once you write down the mnemonic phrase, click "Next." Tick the checkboxes confirming that you have written down the recovery phrase and understood the consequences of losing it, and click "Next".
+Once you write down the mnemonic phrase, click "Next." Tick the checkboxes confirming that you have written down the recovery phrase and understood the consequences of losing it, and click "Next."
 
 ![](../../assets/how-to/65020681806.png)
 

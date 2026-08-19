@@ -6,7 +6,7 @@ description: "A step-by-step guide on how to sign a Polkadot transaction in Pari
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction will not be broadcasted to the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
+Signing a transaction is the final step of any transaction, like [sending funds out of your account](transfer-funds.md). A transaction will not be broadcast to the blockchain until you sign it. You sign a transaction with your private key for your account, proving that you own this account. The signing process, however, depends on what wallet or account manager you use.
 
 !!! info
 
@@ -63,7 +63,7 @@ However, for the Polkadot Developer Signer to ask permission to use your camera,
 
 1\. Open the extension and click on the gear icon on the top right
 
-2\. Check "Allow QR Camera Access". The first time you do this, you may need to click on "Open the extension in a new window" and do these steps from there.
+2\. Check "Allow QR Camera Access." The first time you do this, you may need to click on "Open the extension in a new window" and do these steps from there.
 
 ![](../../assets/how-to/65016536264.png)
 

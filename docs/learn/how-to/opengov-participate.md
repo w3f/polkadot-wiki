@@ -20,11 +20,11 @@ This article guides you on the basic functionalities offered by [Subsquare](http
 
 #### **Connect your wallet**
 
-You can check the content and status of any proposals without connecting an account. However, any further interaction with Subsquare (e.g., voting, delegation, commenting, etc.) will require you to connect an account from your wallet. Follow the steps below to do so.
+You can check the content and status of any proposals without connecting an account. However, any further interaction with Subsquare (for example, voting, delegation, commenting, etc.) will require you to connect an account from your wallet. Follow the steps below to do so.
 
 1\. Go to [Subsquare.io](https://www.subsquare.io/) and expand the network selector by clicking the "Launch App" button on the top-right corner. Select the network in which you want to participate. This article guides you on Polkadot, but many features are shared on other networks.
 
-![](../../assets/how-to/65023204942.png)2\. Once on the main site, click "Connect".
+![](../../assets/how-to/65023204942.png)2\. Once on the main site, click "Connect."
 
 ![](../../assets/how-to/65023205009.png)
 

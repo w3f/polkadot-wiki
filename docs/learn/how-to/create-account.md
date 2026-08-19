@@ -49,7 +49,7 @@ In this article, you will learn how to create a new account in the Polkadot Deve
 
 ![](../../assets/how-to/65032557918.png)
 
-5\. Review the details, and click "Save". This will also download the JSON backup file for the account on your computer:
+5\. Review the details, and click "Save." This will also download the JSON backup file for the account on your computer:
 
 ![](../../assets/how-to/65032557929.png)
 

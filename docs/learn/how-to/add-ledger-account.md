@@ -31,7 +31,7 @@ However, **we recommend adding your Ledger through the other wallet extensions c
 
 4\. Under account options, choose "Attach Ledger via WebUSB" from the drop-down menu "Manage hardware connections."
 
-5\. In the drop-down menu "Manage Ledger app", ensure you have selected the desired option. Select whether you want to add an account from the Generic Polkadot app or migrate your funds using an account from the Polkadot Migration app. Then click Save:
+5\. In the drop-down menu "Manage Ledger app," ensure you have selected the desired option. Select whether you want to add an account from the Generic Polkadot app or migrate your funds using an account from the Polkadot Migration app. Then click Save:
 
 ![](../../assets/how-to/65024729380.png)
 

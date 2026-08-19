@@ -17,13 +17,13 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 1\. [Create](parity-signer-create-account.md) or [restore](parity-signer-restore-account.md) an account in Parity Signer.
 
-2\. Open the [Polkadot Developer Signer](signer-where-to-download.md) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window".
+2\. Open the [Polkadot Developer Signer](signer-where-to-download.md) in your browser toolbar. Click on the gear icon to open the settings. Here, allow QR camera access, then choose "Open extension in new window."
 
 ![](../../assets/how-to/65012721702.png)
 
 3. The extension will open in a new window. You will see a camera icon in the URL bar: click on it and allow the extension to access your camera.
 
-4\. You may need to reload the extension page. Then click on the plus icon and choose "Attach external QR-signer account".
+4\. You may need to reload the extension page. Then click on the plus icon and choose "Attach external QR-signer account."
 
 ![](../../assets/how-to/65012721732.png)
 

@@ -72,7 +72,7 @@ Members can exit the pool at any time by selecting "**Unbond funds** " instead, 
 
 The member can claim their portion of any rewards that have accumulated since the previous time they claimed (or, in the case that they have never claimed, any rewards that have accumulated since the era after they joined). Rewards are split pro rata among the actively bonded members.
 
-On the Polkadot Developer Interface, navigate to "**Network** "  **> "Staking**"  **> "[Accounts](https://polkadot.js.org/apps/#/staking-async/actions)" > "Pooled**", where you can view your pool member account details. To claim rewards, click on the three vertical dots and click on "**Withdraw claimable**."
+On the Polkadot Developer Interface, navigate to "**Network** "  **> "Staking**"  **> "[Accounts](https://polkadot.js.org/apps/#/staking-async/actions)" > "Pooled**," where you can view your pool member account details. To claim rewards, click on the three vertical dots and click on "**Withdraw claimable**."
 
 ![](../../assets/how-to/65032559217.png)
 

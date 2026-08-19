@@ -43,7 +43,7 @@ Pool administration can change this commission over time. You can read more abou
 
 #### **Current Pool Nominations**
 
-To see all the validators the nomination pool currently nominates, click "more".
+To see all the validators the nomination pool currently nominates, click "more."
 
 ![](../../assets/how-to/65028556743.png)
 
@@ -67,7 +67,7 @@ Please note that this minimum is dynamic and will change over time, as well as t
 
 #### **Pool Administration Accounts**
 
-If you want to see the public address and roles of a specific pool, you have to click on "More", and on the new displayed screen, you'll find all the information regarding the pool:
+If you want to see the public address and roles of a specific pool, you have to click on "More," and on the new displayed screen, you'll find all the information regarding the pool:
 
 ![](../../assets/how-to/65028556984.png)
 
@@ -79,7 +79,7 @@ Here are a few things to consider about the accounts that manage the pool:
 
   * Is the same personal account playing all roles, or are there different accounts in the pool administration? Having one personal account for every role may be convenient for the owner, but it also creates a single point of failure. If the only pool manager loses access to their account or just loses their interest, the pool will be left unattended.
   * Is it a personal account that manages the pool, or a multi-signature one? Multi-signature accounts are controlled by several key owners, not just one, and are a good solution for teams that want to manage a pool collectively.
-  * Do the management accounts have on-chain identities with contact information? You may want to talk to the pool manager, e.g., to ask some questions about the pool. Having their contact information will be very helpful in this case.
+  * Do the management accounts have on-chain identities with contact information? You may want to talk to the pool manager, for example, to ask some questions about the pool. Having their contact information will be very helpful in this case.
 
 #### **Pool's Contact Information**
 

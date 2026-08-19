@@ -29,7 +29,7 @@ Built by the community, several tools allow you to participate in the governance
 
     Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-If you have an account on Polkadot Developer Interface or it is connected to the UI (e.g. using the Polkadot Developer Signer), you can vote directly on the trusted Polkadot Developer Interface in a few simple steps:
+If you have an account on Polkadot Developer Interface or it is connected to the UI (for example using the Polkadot Developer Signer), you can vote directly on the trusted Polkadot Developer Interface in a few simple steps:
 
 1\. On the Polkadot Developer Interface, go to the ["Governance" > "Referenda"](https://polkadot.js.org/apps/#/referenda) tab.
 

@@ -64,7 +64,7 @@ The migration will take place once all the potential issues have been minimized.
 
   * Balance display: Your funds are safe, but your account balance may appear incorrectly during the migration on your wallet. From then on, wallets will query the Polkadot Asset Hub, but the balance records may take some time to update fully.
   * Transfer limitations: You won't be able to teleport DOT to or from the Polkadot Relay Chain or Polkadot Asset Hub. However, DOT and assets should be able to be transferred within Polkadot Asset Hub.
-  * Feature temporary restrictions: Some functionalities (e.g., governance, proxies, multisig, vesting, and other pallets) will be disabled on the Polkadot Relay Chain _during_ the migration. Once the migration is complete, they'll also be available on Polkadot Asset Hub.
+  * Feature temporary restrictions: Some functionalities (for example, governance, proxies, multisig, vesting, and other pallets) will be disabled on the Polkadot Relay Chain _during_ the migration. Once the migration is complete, they'll also be available on Polkadot Asset Hub.
 
 !!! warning "ATTENTION"
 
@@ -95,7 +95,7 @@ The migration will let the Relay Chain focus on security and interoperability, b
 
 ### Special attention: Polkadot Vault users
 
-The only case where user action may be required is for Polkadot Vault users running older versions (≤7.0). Accounts created in Polkadot Vault (formerly Parity Signer) might use by default different derivation paths depending on the network they were generated for (e.g., //polkadot if it was created for the Polkadot Relay Chain, //statemint for Polkadot Asset Hub, etc.).
+The only case where user action may be required is for Polkadot Vault users running older versions (≤7.0). Accounts created in Polkadot Vault (formerly Parity Signer) might use by default different derivation paths depending on the network they were generated for (for example, //polkadot if it was created for the Polkadot Relay Chain, //statemint for Polkadot Asset Hub, etc.).
 
 If you want to continue using your Polkadot (Relay Chain) account on Polkadot Asset Hub, you should create a new Polkadot Asset Hub account and customize the derivation path to match the one used by the Polkadot Relay Chain account. Most likely, the derivation path will be //polkadot.
 

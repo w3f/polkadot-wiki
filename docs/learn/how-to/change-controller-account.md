@@ -34,7 +34,7 @@ This article explains how to undo the connection between your stash and controll
 
 1\. On Polkadot Developer Interface, navigate to Developer > [Extrinsics](https://polkadot.js.org/apps/#/extrinsics) tab.
 
-2\. Ensure that your stash account is selected on the top field, "Using the selected account".
+2\. Ensure that your stash account is selected on the top field, "Using the selected account."
 
 3\. From the drop-down on the right ("Submit the following extrinsics"), select the 'staking' pallet and 'setController' from the one on its left.
 

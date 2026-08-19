@@ -33,7 +33,7 @@ If you're experiencing connection issues or having trouble making a transaction 
 
 ### Switching Networks
 
-You can also use the same panel to switch to a completely different network, e.g. from Polkadot to Kusama.
+You can also use the same panel to switch to a completely different network, for example from Polkadot to Kusama.
 
 1. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), click on the currently selected network on the top left. In the case below, we currently are on the Polkadot Asset Hub network.
 

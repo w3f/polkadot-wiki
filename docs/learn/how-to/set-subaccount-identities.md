@@ -19,7 +19,7 @@ Once the identity of an account is set (visit this article to know how), the sys
 
 ### What is a sub-identity for?
 
-Users can also link accounts by setting "sub accounts", each with its own identity, under a primary account. The system reserves a bond for each sub account. An example of how you might use this would be a validation company running multiple validators. A single entity, "My Staking Company", could register multiple sub accounts that represent the Stash accounts of each of their validators (e.g. "My Staking Company/01", "My Staking Company/02", "My Staking Company/03", etc.).
+Users can also link accounts by setting "sub accounts," each with its own identity, under a primary account. The system reserves a bond for each sub account. An example of how you might use this would be a validation company running multiple validators. A single entity, "My Staking Company," could register multiple sub accounts that represent the Stash accounts of each of their validators (for example "My Staking Company/01," "My Staking Company/02," "My Staking Company/03," etc.).
 
 !!! info
 

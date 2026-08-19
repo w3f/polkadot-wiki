@@ -36,11 +36,11 @@ After [connecting the account](connect-account.md) you want to use as your stash
 
 3\. In the next step, choose the validators you want to nominate. You can select up to 16 validators on both Polkadot and Kusama.
 
-The staking dashboard gives you several ways to choose your validator. You can generate an "Optimal Selection", pick from "Active Low Commission" or "[From Favorites](../../general/dashboards/staking-dashboard.md)", or add them from scratch using the "Manual Selection" option:
+The staking dashboard gives you several ways to choose your validator. You can generate an "Optimal Selection," pick from "Active Low Commission" or "[From Favorites](../../general/dashboards/staking-dashboard.md)," or add them from scratch using the "Manual Selection" option:
 
 ![](../../assets/how-to/65029020533.png)
 
-If you're not happy with the suggested validators, click "Re-Generate" to create a new set or add more validators: "From Favorites", "High Performance Validator", "Active Validators", or "Random Validators". Click on the "X" button next to the one you want to replace:
+If you're not happy with the suggested validators, click "Re-Generate" to create a new set or add more validators: "From Favorites," "High Performance Validator," "Active Validators," or "Random Validators." Click on the "X" button next to the one you want to replace:
 
 ![](../../assets/how-to/65029020178.png)
 
@@ -58,7 +58,7 @@ b. To actively nominate and receive rewards (the **Active** line)
 
 If your bond is below the first line, you won't be able to nominate at all, and the app will prevent you from proceeding. This minimum is currently set at 250 DOT on Polkadot.
 
-If your bond is above the first line but below the second, you’ll be able to bond, but your account might not participate in the election process (i.e. you may not end up nominating any validators), and you’re unlikely to receive rewards.
+If your bond is above the first line but below the second, you’ll be able to bond, but your account might not participate in the election process (that is you may not end up nominating any validators), and you’re unlikely to receive rewards.
 
 If all three areas are filled out, like in the image above, you can stake and start receiving rewards!
 

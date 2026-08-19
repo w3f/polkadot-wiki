@@ -31,7 +31,7 @@ Even though an account is deterministically generated, its public address can ha
 
 ### Account creation in Polkadot Vault
 
-Polkadot Vault supports multiple accounts across different networks. However, since version 6.2.0, it defaults to using a [hard derivation path](../learn-account-advanced.md#soft-and-hard-derivation) (i.e., "//") specific to each network. For example, a Polkadot account will have the path "//polkadot," while a Kusama account will have "//kusama." This means they are entirely separate accounts, not just different representations of the same one.
+Polkadot Vault supports multiple accounts across different networks. However, since version 6.2.0, it defaults to using a [hard derivation path](../learn-account-advanced.md#soft-and-hard-derivation) (that is, "//") specific to each network. For example, a Polkadot account will have the path "//polkadot," while a Kusama account will have "//kusama." This means they are entirely separate accounts, not just different representations of the same one.
 
 * * *
 
@@ -46,7 +46,7 @@ To use an account in Polkadot Vault on a different network than the one it was o
     [Polkadot Vault: How to Create an Account](vault-create-account.md)
     [Polkadot Vault: How to Restore Your Account](vault-restore-account.md)
 
-1. In Polkadot Vault, each account’s derivation path is displayed next to it. Accounts in the same keyset on different networks (notice the network logo in the screenshot below) share the same mnemonic but have distinct derivation paths (e.g., "//statemint" and "//polkadot") by default, resulting in separate accounts.
+1. In Polkadot Vault, each account’s derivation path is displayed next to it. Accounts in the same keyset on different networks (notice the network logo in the screenshot below) share the same mnemonic but have distinct derivation paths (for example, "//statemint" and "//polkadot") by default, resulting in separate accounts.
 
 ![](../../assets/how-to/65028020310.png)
 
@@ -60,7 +60,7 @@ If you want to use the same account on a different network, note its derivation 
 
 ![](../../assets/how-to/65028020363.png)
 
-4\.  Enter the one you saved in the first step (e.g., "//polkadot")
+4\.  Enter the one you saved in the first step (for example, "//polkadot")
 
 !!! warning "IMPORTANT"
 
@@ -82,6 +82,6 @@ If you want to use the same account on a different network, note its derivation 
 
 <https://polkadot.subscan.io/tools/format_transform>
 
-And that's it! You can now use the same account (i.e., the same mnemonic and derivation path) across different networks in Polkadot Vault.
+And that's it! You can now use the same account (that is, the same mnemonic and derivation path) across different networks in Polkadot Vault.
 
 * * *

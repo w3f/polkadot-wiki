@@ -77,7 +77,7 @@ The procedure for removing a Pure Proxy is different, and there are a few functi
 
   * **Block height** it was created at
 
-  * The **extrinsic index** on the block (on most block explorers, you will see the extrinsic ID listed as something along the lines of "11111111-2". 11111111 is the block height (block number), and 2 is the extrinsic index.
+  * The **extrinsic index** on the block (on most block explorers, you will see the extrinsic ID listed as something along the lines of "11111111-2." 11111111 is the block height (block number), and 2 is the extrinsic index.
 
 ![](../../assets/how-to/65015290063.png)
 

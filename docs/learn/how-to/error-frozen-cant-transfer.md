@@ -31,9 +31,9 @@ Unfortunately, not all wallets display every asset stored in an account. This ca
 
 ### How to prevent the 'frozen' error
 
-If you're using a wallet that doesn't support viewing or managing multiple assets on Polkadot (e.g., Trust Wallet, Ledger Wallet, etc.), you have two options:
+If you're using a wallet that doesn't support viewing or managing multiple assets on Polkadot (for example, Trust Wallet, Ledger Wallet, etc.), you have two options:
 
   * **Leave a small balance of DOT** in your account to maintain the existential deposit and cover transaction fees. Keeping around 0.015 DOT should be enough. If you face a similar situation in Kusama, you can leave about 0.0002 KSM to keep the account active and pay for the transaction fees.
-  * **Restore or import your account using a different wallet** that supports multiple assets (e.g., Nova Wallet, Talisman, Subwallet). Once you can see all your assets, transfer the non-sufficient assets (DED, MYTH, etc.) to another account before sending out all your DOT.
+  * **Restore or import your account using a different wallet** that supports multiple assets (for example, Nova Wallet, Talisman, Subwallet). Once you can see all your assets, transfer the non-sufficient assets (DED, MYTH, etc.) to another account before sending out all your DOT.
 
 * * *

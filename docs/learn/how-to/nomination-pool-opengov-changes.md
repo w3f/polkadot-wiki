@@ -30,7 +30,7 @@ This system was updated so the nomination pool accounts were transformed into sp
 For a more technical explanation of the process, visit the links below:
 
   * [Enabling governance participation for pool members](https://hackmd.io/@ak0n/454-np-governance)
-  * [[FAQ] Allowing Opengov participation for Nomination Pool members](https://hackmd.io/@ak0n/delegate-stake-faq)
+  * [[FAQ] Allowing OpenGov participation for Nomination Pool members](https://hackmd.io/@ak0n/delegate-stake-faq)
 
 * * *
 

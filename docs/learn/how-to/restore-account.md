@@ -54,7 +54,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 ![](../../assets/how-to/65032555534.png)
 
-6. Review the details and click "Save". This will also download the JSON backup file for the account on your computer.
+6. Review the details and click "Save." This will also download the JSON backup file for the account on your computer.
 
 ![](../../assets/how-to/65032555537.png)
 
@@ -110,7 +110,7 @@ Your account has been successfully restored, and you will see it listed on your 
 
 ![](../../assets/how-to/65032555812.png)
 
-4\. This should generate your account address at the top of the window. Check the "I have saved my mnemonic seed safely" box and click "Next".
+4\. This should generate your account address at the top of the window. Check the "I have saved my mnemonic seed safely" box and click "Next."
 
 5\. Give your account a descriptive name and a [good password](store-mnemonic-safely.md). Click Next, then review the details and click Save.
 

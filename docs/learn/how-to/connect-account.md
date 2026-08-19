@@ -89,7 +89,7 @@ Now, you can [start staking](stake-your-dot.md) or join a [nomination pool](join
 
 ![](../../assets/how-to/65028427432.png)
 
-If you are connecting your Ledger for the first time, this screen will appear. Ensure your Ledger device is unlocked and the Polkadot app is open. Then, select your Ledger device and click "Connect". If you've connected before, you can skip to the next step.
+If you are connecting your Ledger for the first time, this screen will appear. Ensure your Ledger device is unlocked and the Polkadot app is open. Then, select your Ledger device and click "Connect." If you've connected before, you can skip to the next step.
 
 ![](../../assets/how-to/65028445567.png)
 
@@ -135,7 +135,7 @@ If you are a visual learner, check out our video tutorial:
 
 ![](../../assets/how-to/65028445700.png)
 
-If you already have other accounts either nominating or joining a nomination pool, they will show up under an "Nominating", or "In pool" section:
+If you already have other accounts either nominating or joining a nomination pool, they will show up under an "Nominating," or "In pool" section:
 
 **![](../../assets/how-to/65028445723.png)**
 
@@ -159,7 +159,7 @@ You can connect a staking proxy to the staking dashboard and operate on behalf o
 
 ![](../../assets/how-to/65028446627.png)
 
-3\. Click on "Proxy Accounts" and declare it by clicking on "+ Declare", pasting your proxied account, and clicking the "Import" button.
+3\. Click on "Proxy Accounts" and declare it by clicking on "+ Declare," pasting your proxied account, and clicking the "Import" button.
 
 ![](../../assets/how-to/65028448795.png)
 
@@ -221,7 +221,7 @@ Read-only accounts have a small pair of glasses next to them and the words "Read
 
 To completely remove a read-only account from the imported accounts, follow these steps:
 
-1\. Click the "Plug icon".
+1\. Click the "Plug icon."
 
 ![](../../assets/how-to/65028234128.png)
 

@@ -65,7 +65,7 @@ That's it! Now you can sign transactions with your Polkadot accounts. If you hav
 
 Polkadot Vault supports three chains out of the box: Polkadot, Kusama, and Westend. But you can add additional chains if you can scan a **trusted** spec QR code and metadata QR fountain.
 
-Currently, there exists one metadata portal that supports a plethora of Substrate chains curated by [Nova wallet](https://novawallet.io). Alternatively, if you are a technically-oriented user, you can [create your own QR codes and metadata portal](https://github.com/paritytech/metadata-portal).
+Currently, there exists one metadata portal that supports a plethora of Substrate chains curated by [Nova wallet](https://novawallet.io). Alternatively, if you are a technically oriented user, you can [create your own QR codes and metadata portal](https://github.com/paritytech/metadata-portal).
 
 Below we provide instructions based on Nova's metadata portal, but the same instructions apply to any other source.
 

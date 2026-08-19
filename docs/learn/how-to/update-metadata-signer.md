@@ -47,6 +47,6 @@ Here, you can see:
   * **Decimals** and **Symbol** : this defines the divisibility of the native coin (how many [Planck](../learn-DOT.md#the-planck-unit) units make up one coin) and specifies the coin's ticker symbol.
   * **Upgrade** : the runtime version you used until now and the version you are about to use.
 
-4\. Complete the process by clicking "Yes, do this metadata update".
+4\. Complete the process by clicking "Yes, do this metadata update."
 
 * * *

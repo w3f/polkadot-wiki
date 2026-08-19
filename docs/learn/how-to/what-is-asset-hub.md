@@ -29,7 +29,7 @@ Here are the key things to know about Asset Hub and its role in the Polkadot eco
   * For regular users, Asset Hub is the main network needed for everyday activity on Polkadot.
   * Most wallets automatically handle the network connection, so users often don't need to choose the network manually.
   * The Relay Chain is now used almost exclusively by validators and parachain operators.
-  * Account balances were migrated from the Relay Chain to Asset Hub on October 7th, 2025, on Kusama and on November 4th, 2025, for Polkadot.
+  * Account balances were migrated from the Relay Chain to Asset Hub on October 7, 2025, on Kusama and on November 4, 2025, for Polkadot.
   * Staking and governance are now alive on Asset Hub and are no longer available on the Relay Chain.
   * The existential deposit in DOT is lower on Asset Hub than on the Relay Chain, and on Asset Hub there are additional sufficient assets (check section below) that can keep an account alive.
 
