@@ -58,7 +58,7 @@ Lastic is a marketplace for buying and selling blockspace. For more information,
 ### Purchasing Cores with Lastic
 
 Lastic allows for purchasing core with accounts hosted on wallets like Subwallet, Talisman, Nova
-Wallet and Polkadot-JS Extension. Select the account to be used for the coretime purchase and then,
+Wallet and Polkadot Developer Signer. Select the account to be used for the coretime purchase and then,
 click on "buy core" button to sign and broadcast the transaction.
 
 ![Lastic-purchase-bulk-coretime](../assets/coretime/Lastic-UI.png)

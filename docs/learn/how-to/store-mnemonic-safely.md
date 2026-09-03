@@ -46,7 +46,7 @@ JSON is a file format for storing and sharing data that uses human-readable text
 
 ### Storing your raw seed
 
-Raw seed is a hexadecimal number derived from the mnemonic phrase. It can also be called a private key. Most of the wallets in the ecosystem provide a mnemonic phrase instead of a raw seed. However, if you created your Polkadot account in an older wallet or the [vanity generator](create-vanity-address.md), you may have a raw seed and no mnemonic phrase. To [restore your account from the raw seed](import-private-key.md), you'll need to use the Polkadot-JS UI web wallet instead of the Polkadot browser extension.
+Raw seed is a hexadecimal number derived from the mnemonic phrase. It can also be called a private key. Most of the wallets in the ecosystem provide a mnemonic phrase instead of a raw seed. However, if you created your Polkadot account in an older wallet or the [vanity generator](create-vanity-address.md), you may have a raw seed and no mnemonic phrase. To [restore your account from the raw seed](import-private-key.md), you'll need to use the Polkadot Developer Interface web wallet instead of the Polkadot browser extension.
 
 Like the mnemonic phrase, your raw seed gives full access to the account to anyone who knows it. **It is**  **not password-protected**.
 

@@ -59,9 +59,9 @@ These multisigs are usually N-of-N, meaning that all signatories are needed to a
 
 Suppose Alice, Bob, and Charlie want to create a 2-of-3 multisig to manage their startup's funds jointly. Here's how it's done.
 
-1\. They first need to add everyone else's account in their Address Book on Polkadot-JS UI. This example plays as Alice, but the other two need to do the same. Obviously, everyone is assumed to have access to their own account on the Accounts page.
+1\. They first need to add everyone else's account in their Address Book on Polkadot Developer Interface. This example plays as Alice, but the other two need to do the same. Obviously, everyone is assumed to have access to their own account on the Accounts page.
 
-On Polkadot-JS UI, go to "Accounts" > "[Address Book](https://polkadot.js.org/apps/#/addresses)":
+On Polkadot Developer Interface, go to "Accounts" > "[Address Book](https://polkadot.js.org/apps/#/addresses)":
 
 ![](../../assets/how-to/65016359535.png)
 
@@ -172,7 +172,7 @@ In this article, you learned how to create and use a multisig account and what t
 
 If you are more of a visual learner, check these video guides:
 
-  * [Start using your Multisig Account with the Polkadot-JS UI](https://www.youtube.com/watch?v=-cPiKMslZqI)
-  * [Use your Multisig Accounts like a Pro with the Polkadot-JS UI (Advanced Tutorial)](https://www.youtube.com/watch?v=T0vIuJcTJeQ)
+  * [Start using your Multisig Account with the Polkadot Developer Interface](https://www.youtube.com/watch?v=-cPiKMslZqI)
+  * [Use your Multisig Accounts like a Pro with the Polkadot Developer Interface (Advanced Tutorial)](https://www.youtube.com/watch?v=T0vIuJcTJeQ)
 
 * * *

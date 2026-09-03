@@ -27,7 +27,7 @@ Built by the community, several tools allow you to participate in the governance
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 If you have an account on Polkadot Developer Interface or it is connected to the UI (for example using the Polkadot Developer Signer), you can vote directly on the trusted Polkadot Developer Interface in a few simple steps:
 
@@ -49,7 +49,7 @@ The "Support" graph represents the percentage of "ayes" plus abstentions out of 
 
 The orange line in both graphs indicates the minimum threshold for approval and support that a referendum must keep to be approved. Each track has different thresholds and conditions to meet. Read [this article](../learn-polkadot-opengov.md#approval-and-support) for further details about these and other parameters in OpenGov.
 
-It's important to notice that each referendum should be accompanied by contextual information about it, but that information isn't stored on-chain, so Polkadot-JS UI can't show it. You can click on the [Subsquare](https://www.subsquare.io/) icon on each referendum (bottom left corner) to discuss and read further about each referendum. This is the _de facto_ site built by the community where the proposers can share info about their proposals.
+It's important to notice that each referendum should be accompanied by contextual information about it, but that information isn't stored on-chain, so Polkadot Developer Interface can't show it. You can click on the [Subsquare](https://www.subsquare.io/) icon on each referendum (bottom left corner) to discuss and read further about each referendum. This is the _de facto_ site built by the community where the proposers can share info about their proposals.
 
 4\. By clicking on the "Vote" button, a new panel pops up with the following information:
 

@@ -105,6 +105,6 @@ You're all set. Refresh the [Accounts](https://polkadot.js.org/apps/#/accounts) 
 
 To see the whole process of creating an account using the Polkadot Developer Signer, please watch this video tutorial.
 
-[Create an Account using Polkadot JS Extension](https://www.youtube.com/watch?v=sy7lvAqyzkY)
+[Create an Account using Polkadot Developer Signer](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 
 * * *

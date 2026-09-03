@@ -6,7 +6,7 @@ description: Learn how to create and manage multisig accounts for secure and col
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -24,17 +24,17 @@ We recommend trying out the tutorial on
 ## Multisig Transactions with Accounts Tab
 
 !!!info "Walkthrough Video Tutorial"
-    See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with a multisig account using the Accounts Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
+    See [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) to learn how to transact with a multisig account using the Accounts Tab in the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts).
 
 You can create a multisig account directly on the Accounts Tab of the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts), and use this account to send funds. See
+[Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), and use this account to send funds. See
 [this article](how-to/create-multisig-account.md)
 for more information.
 
 ## Multisig Transactions with Extrinsic Tab
 
 See the video tutorial below to learn about multi-signature accounts and how you can transact with
-them using the Polkadot-JS UI.
+them using the Polkadot Developer Interface.
 
 <div className="row">
 <div className="col text--center">
@@ -59,7 +59,7 @@ There are three types of actions you can take with a multisig account:
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
 should be used. This function takes only the other signatories and the raw call as arguments. Note
-that the Polkadot-JS UI does not have integration for this call because it is not possible to create
+that the Polkadot Developer Interface does not have integration for this call because it is not possible to create
 multisig accounts with `threshold=1`. If you want to create a multisig with threshold 1, you can use
 [txwrapper-core](https://github.com/paritytech/txwrapper-core), which is developed and supported by
 Parity Technologies. There is a detailed
@@ -95,7 +95,7 @@ released on the account that initiated the call.
 ### Example using Multisig Accounts
 
 !!!info "Walk-through video tutorial"
-    See [this video tutorial](https://www.youtube.com/watch?v=T0vIuJcTJeQ) to learn how to transact with a multisig account using the Extrinsic Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer).
+    See [this video tutorial](https://www.youtube.com/watch?v=T0vIuJcTJeQ) to learn how to transact with a multisig account using the Extrinsic Tab in the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/explorer).
 
 ![multisig diagram](../assets/multisig-diagram.png)
 
@@ -127,13 +127,13 @@ are sorted in ascending order.
     Public keys of signers' wallets are compared byte-for-byte and sorted ascending before being used to generate the multisig address. For example, consider the scenario with three addresses, A, B, and C, starting with `5FUGT`, `5HMfS`, and `5GhKJ`. If we build the ABC multisig with the accounts in that specific order (i.e. first A, then B, and C), the real order of the accounts in the multisig will be ACB. If, in the Extrinsic tab, we initiate a multisig call with C, the order of the other signatories will be first A, then B. If we put first B, then A, the transaction will fail.
 
 This has some implications when using the Extrinsics tab on the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the
+[Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the
 order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the
-multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports
+multisig is executed directly from the Accounts tab (recommended). The Polkadot Developer Interface supports
 multisig accounts, as documented on the [Account Generation page](./learn-account-multisig.md). You
 can see our video tutorials for more information about creating multisig accounts and transacting
 with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the
-[Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
+[Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot Developer Interface.
 
 ## Decoding Multisig Call Data
 

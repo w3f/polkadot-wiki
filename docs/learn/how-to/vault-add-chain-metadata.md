@@ -57,7 +57,7 @@ In this example, the metadata for Polkadot is updated, but the instructions are 
 
 ![](../../assets/how-to/65016559243.png)
 
-That's it. Now you can sign transactions with your Polkadot accounts. If you haven't added your account on Polkadot-JS UI yet, check [this article](vault-add-account.md) for instructions.
+That's it. Now you can sign transactions with your Polkadot accounts. If you haven't added your account on Polkadot Developer Interface yet, check [this article](vault-add-account.md) for instructions.
 
 * * *
 
@@ -112,7 +112,7 @@ The instructions below are based on Nova's metadata portal, but the same instruc
 
     If you are using an older version, you can click on "Add Custom Derivation Path" and use an empty path (remove the "//"). This will allow you to use the same account that you use on the existing chains on the newly added chain too.
 
-4\. Enter your phone's PIN and you're now ready to [add your account](vault-add-account.md) for that chain on Polkadot-JS UI and sign transactions with it.
+4\. Enter your phone's PIN and you're now ready to [add your account](vault-add-account.md) for that chain on Polkadot Developer Interface and sign transactions with it.
 
 * * *
 

@@ -6,7 +6,7 @@ description: Learn how to create treasury proposals, submit referenda, and manag
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -54,7 +54,7 @@ unchanged.
 The example below shows how to create a [preimage](../general/glossary.md#preimage) for a
 transaction that requests 100 DOT from Treasury.
 
-- Navigate to [Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
+- Navigate to [Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
 - Choose `treasury` pallet in the "propose" dropdown and the `spendLocal(amount, beneficiary)`call
@@ -71,9 +71,9 @@ Here is the preimage requesting for 100 DOT.
 ![Treasury Preimage](../assets/treasury/OpenGov-Treasury-Preimage-SpendLocal.png)
 
 !!!info "Balance entered is in Plancks"
-    Polkadot JS UI is for developers and the UI takes input of the balance in [plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals, which is 10000000000 plancks per DOT.
+    Polkadot Developer Interface is for developers and the UI takes input of the balance in [plancks](learn-DOT.md#the-planck-unit). DOT has 10 decimals, which is 10000000000 plancks per DOT.
 
-After successful submission of the preimage, it is displayed on Polkadot-JS UI > Governance >
+After successful submission of the preimage, it is displayed on Polkadot Developer Interface > Governance >
 Preimages page. Every preimage is associated with a unique preimage hash (highlighted in a box in
 the image below). Take a note of this preimage hash, which is required to submit a referendum.
 
@@ -83,7 +83,7 @@ the image below). Take a note of this preimage hash, which is required to submit
 
 The example below shows how to submit a Treasury track referendum.
 
-- Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda)
+- Navigate to [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/referenda)
   and then click on Submit proposal.
 - Select the account which will be used to submit the proposal.
 - Choose the appropriate submission track (The example below selected Small Spender track).
@@ -95,7 +95,7 @@ The example below shows how to submit a Treasury track referendum.
 ![Submit Treasury Proposal](../assets/treasury/submit-proposal-treasury.png)
 
 Once your submission is executed, your referendum will appear under your chosen track on the
-Polkadot-JS UI [referenda page](https://polkadot.js.org/apps/#/referenda).
+Polkadot Developer Interface [referenda page](https://polkadot.js.org/apps/#/referenda).
 
 ### Placing a Decision Deposit for the Treasury Track Referendum
 
@@ -158,7 +158,7 @@ The following tutorial mostly goes over how to utilize the `spend` extrinsic, wh
 The example below shows how to create a [preimage](../general/glossary.md#preimage) for a transaction
 that requests 100 USDT from AssetHub.
 
-- Navigate to [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
+- Navigate to [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
   and then click on Add Preimage.
 - Select the account to submit the preimage.
 - Choose the `treasury` pallet in the "propose" dropdown and the
@@ -181,8 +181,8 @@ First, we specify the location - in this case, Asset Hub (parachain 1,000). `Pal
 refers to the Assets pallet instance on Asset Hub. The general index is `1984`, which is the ID of
 USDT in this instance of the Assets pallet.
 
-!!!caution "Bug on Polkadot-JS UI"
-    As the Polkadot-JS UI is interpreting the general index in DOT, it multiplies the entered values with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would like to have `1984` as the input argument, we can offset this UI induced error by entering `0.0000001984`.
+!!!caution "Bug on Polkadot Developer Interface"
+    As the Polkadot Developer Interface is interpreting the general index in DOT, it multiplies the entered values with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would like to have `1984` as the input argument, we can offset this UI induced error by entering `0.0000001984`.
     
     The issue on Polkadot-JS repo can be tracked [here](https://github.com/polkadot-js/apps/issues/10430).
 
@@ -195,8 +195,8 @@ Here is how the final `assetKind` field should look:
 The amount should be simply the amount of USDT, where each `1` USDT is `1000000`. Because we are
 asking for 100 USDT, we put `100000000` as the input for the amount.
 
-!!!caution "Bug on Polkadot-JS UI"
-    As the Polkadot-JS UI is interpreting the asset balance in DOT, it multiplies the entered values with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would like to have `100000000` as the input argument, we can offset this UI induced error by entering `0.01` for this particular example where we like to input 100 USDT.
+!!!caution "Bug on Polkadot Developer Interface"
+    As the Polkadot Developer Interface is interpreting the asset balance in DOT, it multiplies the entered values with `10000000000` (As DOT token has 10 decimals) and places it in the `u128` argument. As we would like to have `100000000` as the input argument, we can offset this UI induced error by entering `0.01` for this particular example where we like to input 100 USDT.
     
     The issue on Polkadot-JS repo can be tracked [here](https://github.com/polkadot-js/apps/issues/10430).
 
@@ -235,7 +235,7 @@ as described [here](./learn-guides-treasury.md#submitting-a-treasury-track-refer
 ### Manually Claiming Payouts
 
 In order to claim the spend, you must manually call the `treasury.payout` extrinsic via a `Signed`
-origin. The `spendID` for the pending payout can be queried on-chain through Polkadot-JS UI >
+origin. The `spendID` for the pending payout can be queried on-chain through Polkadot Developer Interface >
 Developer > Chain State > Storage > treasury > spends and unselect the include option and then click
 on the plus button to the right.
 

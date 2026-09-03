@@ -26,10 +26,10 @@ recovery process to recover your account.
 ![social-recovery-diag-1](../assets/recovery/social-recovery-diag-1.png)
 
 !!!note "Account Recovery"
-    If you are recovering an account, ensure that your network is set to Kusama. You can do this by selecting the network from the top right corner in the Polkadot-JS UI.
+    If you are recovering an account, ensure that your network is set to Kusama. You can do this by selecting the network from the top right corner in the Polkadot Developer Interface.
 
 First, see the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot-JS Apps that
-shows all available accounts on your browser's local storage and Polkadot-JS extension. To create a
+shows all available accounts on your browser's local storage and Polkadot Developer Signer. To create a
 recoverable account, make sure you have some KSM to pay the transaction fees. You will also need
 some for the reserve required by the account recovery setup.
 

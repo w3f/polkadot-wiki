@@ -34,17 +34,17 @@ would be one of the treasury tracks -
 
 If you like to check whether the call above will get executed successfully, you can check that by
 performing a dry run using [Chopsticks](https://github.com/AcalaNetwork/chopsticks), which is
-embedded in Polkadot JS UI. You can run a Chopsticks instance of any Polkadot SDK based chain by
+embedded in Polkadot Developer Interface. You can run a Chopsticks instance of any Polkadot SDK based chain by
 clicking "fork locally" on the UI. The snapshot below shows it for Polkadot.
 
 ![polkadot-fork-locally](../assets/governance/polkadot-fork-locally.png)
 
-After forking locally, the Polkadot JS UI displays a local instance of the Polkadot network, which
+After forking locally, the Polkadot Developer Interface displays a local instance of the Polkadot network, which
 does not produce any blocks by default. You will notice a few test accounts with DOT balance that
 can interact with the network and test out Polkadot protocol features accessible through regular
 accounts. However, the treasury spend call cannot be submitted through a signed account origin, so
 it has to be tested with a treasury track origin. It can be tested by navigating to Developer >
-JavaScript tab on Polkadot JS UI, which dispatches the call on the next block via the scheduler with
+JavaScript tab on Polkadot Developer Interface, which dispatches the call on the next block via the scheduler with
 the specified origin.
 
 ```
@@ -73,7 +73,7 @@ await api.rpc('dev_newBlock')
 ![polkadot-chopstciks-call](../assets/governance/polkadot-chopsticks-call.png)
 
 After clicking the play button in the JavaScript console, the block number visible on the top left
-of the Polkadot JS UI should be incremented by 1. You can navigate to Polkadot JS UI Network >
+of the Polkadot Developer Interface should be incremented by 1. You can navigate to Polkadot Developer Interface Network >
 Explorer to check the emitted events and see if the call was executed successfully. You should see
 the errors displayed here if the call is unsuccessful.
 
@@ -112,9 +112,9 @@ machine and run the command below:
 `npx @acala-network/chopsticks@latest xcm -r polkadot -p polkadot-collectives`
 
 This should start the Polkadot and the Collectives instances available at ports 8001 and 8000
-respectively. Connect to both these instances using Polkadot JS UI on two separate browser windows.
+respectively. Connect to both these instances using Polkadot Developer Interface on two separate browser windows.
 To connect to these local machine instances at the designated ports, edit the custom endpoint for
-Polkadot JS UI as shown in the picture below and click on Switch button at the top.
+Polkadot Developer Interface as shown in the picture below and click on Switch button at the top.
 
 ![polkadot-js-local](../assets/governance/polkadot-js-local-node.png)
 
@@ -146,7 +146,7 @@ await api.rpc('dev_newBlock')
 ![javascript-fellowship-admin](../assets/governance/javascript-console-fellowship-admin-call.png)
 
 After clicking on the play button in the JavaScript console, the block number visible on the top
-left of the Polkadot JS UI should be incremented by 1. You can navigate to Polkadot JS UI Network >
+left of the Polkadot Developer Interface should be incremented by 1. You can navigate to Polkadot Developer Interface Network >
 Explorer to check the emitted events and see if the call got executed successfully. If the call is
 unsuccessful, you should see the respective errors displayed here.
 
@@ -171,7 +171,7 @@ successfully executes.
 
 The preimage hash of this call is
 `0x82802c62d52a2431e422b58fff1fbdd0efc648e7c98351bd26048d169b94f956` and its length is `733`
-(obtained from Polkadot JS UI Governance > Preimgaes tab for that lists the preimages that are
+(obtained from Polkadot Developer Interface Governance > Preimgaes tab for that lists the preimages that are
 already submitted).
 
 ```

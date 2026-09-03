@@ -209,7 +209,7 @@ contact the project maintainers.
 
 |                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
 | :-------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
-| Polkadot-JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot Developer Signer |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
 | Polkadot-JS Apps      |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
 | Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
 | Subkey                |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
@@ -402,7 +402,7 @@ indicating whether this is claimed permanently.
 ![query account index](../assets/accounts/query-index.png)
 
 Submit a `claim` extrinsic to the `indices` pallet to register an index. The easiest way to do this
-is via Polkadot-JS UI through the _Developer -> Extrinsics_ menu:
+is via Polkadot Developer Interface through the _Developer -> Extrinsics_ menu:
 
 ![Indices extrinsics](../assets/accounts/index.png)
 

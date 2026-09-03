@@ -1,11 +1,11 @@
 ---
 title: Polkadot-JS Token Claims Guide
-description: Step-by-step guide to claiming your DOT and KSM tokens using Polkadot-JS UI.
+description: Step-by-step guide to claiming your DOT and KSM tokens using Polkadot Developer Interface.
 ---
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -20,7 +20,7 @@ native Polkadot address and, if your ETH address is eligible, will pay the token
 address.
 
 To do this, you must sign a message on Ethereum containing the address of your Polkadot account. You
-can do this by using the Polkadot-JS UI [Claims app](https://polkadot.js.org/apps/#/claims). Ensure
+can do this by using the Polkadot Developer Interface [Claims app](https://polkadot.js.org/apps/#/claims). Ensure
 that you are connected to the Polkadot network (displayed in the upper-left-hand corner of the
 screen).
 
@@ -66,13 +66,13 @@ Go to
 MyCrypto is good to use if you have stored the key to the Ethereum account holding your DOT
 indicator tokens on a hardware device like a Ledger Nano. It also supports raw private keys,
 mnemonics, and the Polkadot Vault. After unlocking your Ethereum wallet, copy and paste the
-outputted sentence on the Polkadot-JS UI into the message box on the MyCrypto app. When you click
+outputted sentence on the Polkadot Developer Interface into the message box on the MyCrypto app. When you click
 "Sign Message" you will get a JSON output signature as shown below:
 
 ![claim get signature](../assets/claim-get-signature.png)
 
 Copy and paste the JSON output of the signed message from MyCrypto into the input box on the
-Polkadot-JS UI and click "Confirm Claim."
+Polkadot Developer Interface and click "Confirm Claim."
 
 ![claim paste signature](../assets/claim-paste-signature.png)
 

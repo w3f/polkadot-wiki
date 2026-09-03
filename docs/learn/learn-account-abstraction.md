@@ -100,7 +100,7 @@ include:
   private key on multiple _children_ accounts
 - Account recovery mechanisms such as social recovery to help regain access to your key using
   trusted third-party accounts
-- [Batching functionality](./learn-guides-transfers.md#batch-transfers-with-the-polkadot-js-ui) to
+- [Batching functionality](./learn-guides-transfers.md#batch-transfers-with-the-polkadot-developer-interface) to
   submit multiple calls in one single transaction
 - Payments with non-native tokens
 

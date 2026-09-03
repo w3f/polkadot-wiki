@@ -30,7 +30,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 !!! tip "GOOD TO KNOW"
 
-    The Polkadot Developer Signer is an account manager, not a wallet. You will still need to use Polkadot-JS UI to interact with your accounts and see your balance.
+    The Polkadot Developer Signer is an account manager, not a wallet. You will still need to use Polkadot Developer Interface to interact with your accounts and see your balance.
 
 * * *
 
@@ -88,6 +88,6 @@ Remember that from now on, you will need to approve any extrinsic from the impor
 
 If you prefer visual instructions, you can check this video which also shows an example of how you can stake using your Ledger account. This video covers Ledger accounts in general, but you can skip to the 2:30 timestamp in the video to view the instructions on how to add your Ledger account in the Polkadot Developer Signer:
 
-[Connect Ledger to Polkadot JS UI](https://www.youtube.com/watch?v=7VlTncHCGPc&t=150s)
+[Connect Ledger to Polkadot Developer Interface](https://www.youtube.com/watch?v=7VlTncHCGPc&t=150s)
 
 * * *

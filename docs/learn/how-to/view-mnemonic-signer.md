@@ -6,7 +6,7 @@ description: "The Polkadot Developer Signer only shows your mnemonic seed once: 
 !!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
-Both the Polkadot Developer Signer and Polkadot-JS UI only show your mnemonic phrase once: during the initial creation of your account.
+Both the Polkadot Developer Signer and Polkadot Developer Interface only show your mnemonic phrase once: during the initial creation of your account.
 
 If you miss taking note of it, or if you misplaced your mnemonic phrase, there is no way to view it again at a later stage. While you can always restore your account from your JSON file, you won't be able to see your mnemonic phrase again. For this reason, it is very important to save it in a safe place (preferably on paper) at the time of account creation. You can learn more about storing your mnemonic phrase [here](store-mnemonic-safely.md).
 

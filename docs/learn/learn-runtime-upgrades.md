@@ -79,13 +79,13 @@ releases.
 
 The runtime and client versions are distinct from each other. The runtime versioning typically looks
 like `network-xxxx`, whereas the client versioning looks like `vx.x.xx`. For instance, the runtime
-version shown on the top left section of Polkadot-JS UI below is `kusama-9370`, and the client
+version shown on the top left section of Polkadot Developer Interface below is `kusama-9370`, and the client
 (node) version shown on the top right section is `v0.9.36`.
 
 ![Runtime vs Client versioning](./../assets/runtime-node-version.png)
 
 !!!info "Querying runtime and client versions"
-    The runtime version can be queried on-chain through Polkadot-JS UI by navigating to the Developer tab > Chain State > Storage > system and query `lastRuntimeUpgrade()`.
+    The runtime version can be queried on-chain through Polkadot Developer Interface by navigating to the Developer tab > Chain State > Storage > system and query `lastRuntimeUpgrade()`.
     
     The node version can be queried by navigating to the Developer tab > RPC calls > system and query `version()`.
 

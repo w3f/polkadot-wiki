@@ -103,7 +103,7 @@ running separate nodes; each node is considered its own entity for slashing purp
 
 Once a validator is slashed, it is saved into the state as an "unapplied slash". You can check this
 via
-[Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
+[Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
 The UI shows it per validator, followed by all the affected nominators and the amounts. While
 unapplied, a governance proposal can be made to reverse it during a 27-day grace period, after which
 the slashes are applied.

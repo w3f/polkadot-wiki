@@ -6,7 +6,7 @@ description: Detailed guides for creating, managing, and destroying nomination p
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -70,7 +70,7 @@ A pool can be pushed into the “destroying” state via one of:
 
 - The root and bouncer set the pool to “destroying”. This can be done by submitting the
   `nominationPools.setState(poolId, state)` extrinsic using the
-  [Polkadot-JS UI extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
+  [Polkadot Developer Interface extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
   specific ID of the pool and `state` is the pool's state that must be set to "destroying". Other
   possible states are "open" and "blocked".
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
@@ -91,7 +91,7 @@ options.
 Let's take the example of ALICE setting the claim permissions to `PermissionlessAll`. Another
 account STASH can now claim ALICE's rewards (as a free balance or compound them to the existing
 bonded balance). To do so, STASH can go to the
-[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue the following
+[Polkadot Developer Interface Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue the following
 extrisics:
 
 - `nominationPools.claimPayoutOthers` extrinsic specifying ALICE's account. This will claim the

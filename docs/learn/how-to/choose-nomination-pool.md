@@ -111,7 +111,7 @@ Once you have done your own research and picked a nomination pool, join it. The 
 
 [Staking Dashboard: How to Join a Nomination Pool](join-nomination-pool.md)
 
-[Polkadot-JS UI: Nomination Pools](nomination-pools-guide.md)
+[Polkadot Developer Interface: Nomination Pools](nomination-pools-guide.md)
 
 If you are more of a visual learner, take a look at this video guide:
 

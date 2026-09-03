@@ -54,7 +54,7 @@ If you continued dual-staking after the migration, you may encounter the **'NotM
 
 3\. After the unbonding period ends (7 days on Kusama, 28 days on Polkadot), withdraw the unbonded funds.
 
-4\. Manually run the migration on your account by issuing the extrinsic 'nominationPools.migrateDelegation(memberAccount)' from the [extrinsic tab in Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics).
+4\. Manually run the migration on your account by issuing the extrinsic 'nominationPools.migrateDelegation(memberAccount)' from the [extrinsic tab in Polkadot Developer Interface](https://polkadot.js.org/apps/#/extrinsics).
 
 ![](../../assets/how-to/65028203384.png)
 

@@ -8,7 +8,7 @@ description: "How to restore your DOT account by importing a private key from an
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 Most wallets use a 12-word or 24-word mnemonic phrase to back up your account. You can find instructions on how to your account with its mnemonic phrase [in this article](restore-account-signer.md).
 

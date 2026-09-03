@@ -1,13 +1,13 @@
 ---
 title: Polkadot-JS Identity Guides
-description: A guide to managing identities, registrars, and sub-identities using Polkadot-JS UI.
+description: A guide to managing identities, registrars, and sub-identities using Polkadot Developer Interface.
 keywords: [registrar, identity, sub-identity, polkadot-js]
 ---
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -39,7 +39,7 @@ like attestations (see [Judgements](./learn-identity.md#judgements)).
 
 Please note the following caveat: because the fields support different formats, from raw bytes to
 various hashes, a UI has no way of telling how to encode a given field it encounters. The
-Polkadot-JS UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these
+Polkadot Developer Interface currently encodes the raw bytes it encounters as UTF8 strings, which makes these
 values readable on-screen. However, given that there are no restrictions on the values that can be
 placed into these fields, a different UI may interpret them as, for example, IPFS hashes or encoded
 bitmaps. This means any field stored as raw bytes will become unreadable by that specific UI. As
@@ -54,13 +54,13 @@ makes sense.
     The procedure to request and cancel identity judgments is explained in detail in this [article](how-to/request-cancel-judgement.md)
 
 To be judged after submitting your identity information, go to the
-[Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
+[Extrinsics tab in the Polkadot Developer Interface](https://polkadot.js.org/apps/#/extrinsics) and select the
 `identity` pallet, then `requestJudgement`. For the `reg_index` put the index of the registrar you
 want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these
 confirmations.
 
 If you don't know which registrar to pick, first check the available registrars by going to
-[Chain State tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate) and selecting
+[Chain State tab in the Polkadot Developer Interface](https://polkadot.js.org/apps/#/chainstate) and selecting
 `identity.registrars()` to get the full list.
 
 To find out how to contact the registrar after the application for judgement or to learn who they

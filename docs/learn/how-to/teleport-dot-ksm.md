@@ -8,7 +8,7 @@ description: "How to teleport your DOT from Polkadot to Polkadot Asset Hub (form
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 There are a few reasons why you might want to teleport your DOT from Polkadot Asset Hub to other system chains, for example:
 

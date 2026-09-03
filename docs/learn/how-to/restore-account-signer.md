@@ -85,6 +85,6 @@ You will also see it in the list of accounts on the Polkadot Developer Interface
 
 If you are a visual learner, you can find the same instructions in the video below:
 
-[Restore your Account using the Polkadot-JS Browser Extension](https://www.youtube.com/watch?v=9ohp8k4Hz8c)
+[Restore your Account using the Polkadot Developer Signer](https://www.youtube.com/watch?v=9ohp8k4Hz8c)
 
 * * *

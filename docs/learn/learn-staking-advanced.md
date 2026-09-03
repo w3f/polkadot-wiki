@@ -92,11 +92,11 @@ scenario applies to a slashing event, i.e., when a nominator gets slashed, their
 bag does not change. This might result in a scenario where the node is in the wrong bag and needs to
 be placed in the right bag. To address this issue, any account on-chain can submit the
 permissionless extrinsic **`rebag`** within the `voterList` pallet instance to update the positions of
-the nodes that do not belong to their bag and place them in the correct one. Note that rebag works in both ways, i.e., rebag in a higher or lower bag, and the Polkadot-JS UI rebags all accounts in your bag that need rebagging. To reiterate, **actions like bonding and unbonding tokens automatically rebag the nominator node, but events like compounding staking rewards and slashing do not**. See the [bags-list](learn-nominator.md#bags-list) section for more
+the nodes that do not belong to their bag and place them in the correct one. Note that rebag works in both ways, i.e., rebag in a higher or lower bag, and the Polkadot Developer Interface rebags all accounts in your bag that need rebagging. To reiterate, **actions like bonding and unbonding tokens automatically rebag the nominator node, but events like compounding staking rewards and slashing do not**. See the [bags-list](learn-nominator.md#bags-list) section for more
 information.
 
 !!!info "Important Notes"
-      The `putInFrontOf` extrinsic does not check which account is the lightest (i.e., the account with the least tokens where you can move in front of), as opposed to `rebag`, which automatically puts you in the right bag. Suppose you have the account with 7 DOT and your bag configuration is 8 3 4 9 1 7 5. You can move in front of 1 or 4 (i.e., lighter accounts) or in front of 3 (i.e., lightest account). Ideally, you need to find the lightest account and give it as an argument to the extrinsic. This is what Polkadot-JS UI does for you: it finds the "lightest" account in the bag and puts you in front of it.
+      The `putInFrontOf` extrinsic does not check which account is the lightest (i.e., the account with the least tokens where you can move in front of), as opposed to `rebag`, which automatically puts you in the right bag. Suppose you have the account with 7 DOT and your bag configuration is 8 3 4 9 1 7 5. You can move in front of 1 or 4 (i.e., lighter accounts) or in front of 3 (i.e., lightest account). Ideally, you need to find the lightest account and give it as an argument to the extrinsic. This is what Polkadot Developer Interface does for you: it finds the "lightest" account in the bag and puts you in front of it.
 
       If you want the best placement in the bags list, the recommended order of actions is first to rebag yourself (if possible) and then issue the `putInFrontOf` extrinsic.
 
@@ -251,7 +251,7 @@ calculated, and nobody issued a payout for that era from that validator in the n
 reward would no longer be claimable.
 
 !!!info "Advanced How-to Guides"
-    In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout before 28 eras have passed. See [this page](./learn-guides-nominator.md#claiming-rewards-with-polkadot-js) for more information about how to claim rewards using the Polkadot-JS UI.
+    In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout before 28 eras have passed. See [this page](./learn-guides-nominator.md#claiming-rewards-with-polkadot-js) for more information about how to claim rewards using the Polkadot Developer Interface.
 
 ### FAQ and Cautionary Notes
 

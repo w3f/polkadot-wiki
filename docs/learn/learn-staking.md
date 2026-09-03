@@ -172,7 +172,7 @@ relatively hands-off compared to that of a validator, and even more with
 nominator [guide](learn-nominator.md) to understanding your responsibilities as a nominator.
 
 If you want to become a nominator, see [this](../learn/learn-nominator.md) guide. If you are a
-beginner and would like to securely stake your tokens using the Polkadot-JS UI, refer to
+beginner and would like to securely stake your tokens using the Polkadot Developer Interface, refer to
 [this](how-to/stake-nominate.md)
 article. The tutorial presented in the article is demonstrated on Polkadot, but the
 procedure is the same for Kusama.
@@ -246,7 +246,7 @@ validator can produce blocks for a parachain (i.e. para-validators) or the relay
 para-validators earning more era points per unit time (see
 [this](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/#era-points) page for more information). The
 role can switch between sessions, and you can look at
-[the staking tab on the Polkadot-JS UI](https://polkadot.js.org/apps/#/staking) to know which
+[the staking tab on the Polkadot Developer Interface](https://polkadot.js.org/apps/#/staking) to know which
 validator is producing blocks for the relay chain or parachains.
 
 It is not recommended to change nominations because of the low era points of a validator in a single
@@ -409,7 +409,7 @@ the chain with no reward. If you are bonding significantly more than the Minimum
 not receiving rewards, your nominations are all waiting, or your active validator has 100%
 commission. However, if you bond funds close to the Minimum Active Bond, there could be several
 possibilities for not receiving staking rewards. The table below can be used to troubleshoot why you
-might not be receiving staking rewards using Polkadot-JS UI.
+might not be receiving staking rewards using Polkadot Developer Interface.
 
 Rewards also do not begin immediately after nominating. A new nomination only starts earning once
 the stake is applied to a validator that enters the active set at the next election, which can take

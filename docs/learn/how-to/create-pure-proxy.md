@@ -12,14 +12,14 @@ Pure proxies (used to be called anonymous proxies) are an advanced feature and c
 
     It is critical to set up pure proxies with care. Take note of appropriate permissions and be aware of the potential dangers. There is no way to get access to the pure proxy account after deleting it.
 
-    Instead, the **killPure** extrinsic must be called **from** the _pure_ proxy. This means the pure proxy must be added as an account on the Polkadot-JS UI [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+    Instead, the **killPure** extrinsic must be called **from** the _pure_ proxy. This means the pure proxy must be added as an account on the Polkadot Developer Interface [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
     **Making a mistake could result in loss of funds.**
 
 
 ### Setting a Pure Proxy
 
-1\. To set a pure proxy, head to the Polkadot-JS UI and navigate to the "Developer" > "[Extrinsics](https://polkadot.js.org/apps/#/extrinsics)" tab. A page should display similar to this:
+1\. To set a pure proxy, head to the Polkadot Developer Interface and navigate to the "Developer" > "[Extrinsics](https://polkadot.js.org/apps/#/extrinsics)" tab. A page should display similar to this:
 
 ![](../../assets/how-to/65015289747.png)
 
@@ -39,7 +39,7 @@ The _delay: u32_ field allows you to set a delay for each call that the proxy ac
 
 #### **Types**
 
-Polkadot offers different types of proxies you can set, depending on the permissions use case. You can create the following types with the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts):
+Polkadot offers different types of proxies you can set, depending on the permissions use case. You can create the following types with the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts):
 
   * Any – this proxy type has permission to make any type of transaction, including balance transfers.
 

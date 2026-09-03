@@ -4,7 +4,7 @@ description: "In order to access your Kusama accounts you need to be on the Kusa
 ---
 
 !!!info "Related concepts"
-    For the underlying concepts, see [Polkadot-JS UI](../../general/polkadotjs-ui.md).
+    For the underlying concepts, see [Polkadot Developer Interface](../../general/polkadotjs-ui.md).
 
 !!! warning "IMPORTANT"
 

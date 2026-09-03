@@ -6,7 +6,7 @@ description: Comprehensive guides for using the Polkadot Vault app, including se
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -32,9 +32,9 @@ or see [this video tutorial](https://youtu.be/gbvrHzr4EDY?t=281).
 See
 [this article](how-to/vault-add-account.md)
 to import a Polkadot Vault account into the
-[Polkadot-JS Browser Extension](../general/polkadotjs.md#polkadot-js-extension) or
+[Polkadot Developer Signer](../general/polkadotjs.md#polkadot-developer-signer) or
 [Parity Signer Companion](https://chrome.google.com/webstore/detail/parity-signer-companion/damllfnhhcbmclmjilomenbhkappdjgb).
-Accounts added to those extensions will be injected into the Polkadot-JS UI.
+Accounts added to those extensions will be injected into the Polkadot Developer Interface.
 
 ## Do Your Own Chain Spec and Metadata Update
 
@@ -64,7 +64,7 @@ Kusama. This will create the file `sign_me_add_specs_statemine_sr25510` under th
 [Polkadot](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayPolkadot.ts)
 and
 [Kusama](https://github.com/polkadot-js/apps/blob/089fd77b14169749e35e073a93f7e7276963009c/packages/apps-config/src/endpoints/productionRelayKusama.ts)
-on the Polkadot-JS UI.
+on the Polkadot Developer Interface.
 
 #### Generating Signature
 
@@ -174,7 +174,7 @@ genesis_hash = "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda77
 ```
 
 For each additional chain, you need to add the respective information. Information about the genesis
-hash can be found on the Polkadot-JS UI > connect to the relevant chain > Developer > Chain State.
+hash can be found on the Polkadot Developer Interface > connect to the relevant chain > Developer > Chain State.
 
 #### Rename Chain's Files
 

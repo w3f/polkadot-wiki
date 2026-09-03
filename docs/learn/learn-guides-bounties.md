@@ -1,13 +1,13 @@
 ---
 title: Polkadot-JS Bounty Management Guide
-description: Learn how to submit, manage, and claim bounties using Polkadot-JS UI.
+description: Learn how to submit, manage, and claim bounties using Polkadot Developer Interface.
 keyword: [treasury, bounties, guides, child bounty, polkadot-js]
 ---
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>

@@ -1,6 +1,6 @@
 ---
 title: How to Create a Proxy Account
-description: "Instructions for creating a proxy account using the Polkadot-JS UI."
+description: "Instructions for creating a proxy account using the Polkadot Developer Interface."
 ---
 
 !!!info "Related concepts"

@@ -97,7 +97,7 @@ than the min enactment period.
     | 34  | Big Spender         | 50           | 13.333333 KSM    | 4 Hours        | 14 Days         | 7 Days         | 1 Day                | Linear Decreasing    | Reciprocal           |
 
 !!!info
-    For every referendum in each of these tracks, the Polkadot-JS UI displays interactive graphs of the support and approval.
+    For every referendum in each of these tracks, the Polkadot Developer Interface displays interactive graphs of the support and approval.
     ![UI Support and Approval](./../assets/governance/support-approval-polkadot-js-ui.png)
 
 

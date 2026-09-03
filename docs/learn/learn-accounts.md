@@ -121,7 +121,7 @@ the unified address format include the following:
     address shown starting with `5` or a capital letter is therefore still valid and points to the same
     account; only the format differs. This commonly happens when a wallet displays the generic Substrate
     format while an interface shows the network-specific one. Most wallets and interfaces let you choose
-    which format to display - for example, in the [Polkadot-JS UI](./learn-guides-accounts.md) the
+    which format to display - for example, in the [Polkadot Developer Interface](./learn-guides-accounts.md) the
     address prefix can be set to match the connected network from the Settings page. See the
     [Address Format](./learn-account-advanced.md#address-format) and
     [address conversion tools](./learn-account-advanced.md#address-conversion-tools) sections for how to

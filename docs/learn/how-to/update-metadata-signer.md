@@ -6,11 +6,11 @@ description: "A step-by-step guide on how to update the metadata in the Polkadot
 !!!info "Related concepts"
     For the underlying concepts, see [Metadata](../../general/metadata.md).
 
-Every once in a while, when you visit [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts) (Polkadot-JS UI), you may see a counter next to Settings or this warning asking you to apply updates to your extension:
+Every once in a while, when you visit [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts) (Polkadot Developer Interface), you may see a counter next to Settings or this warning asking you to apply updates to your extension:
 
 ![You have 1 extension that needs to be updated with the latest chain properties in order to display the correct information for the chain you are connected to. This update includes chain metadata and chain properties.](../../assets/how-to/65016445308.png)
 
-This means there was a runtime upgrade since you last used Polkadot Developer Interface (Polkadot-JS UI), and your extension needs to catch up with the latest metadata. Metadata includes essential information that allows you to [verify what you are signing](verify-extrinsic.md), like descriptions for each extrinsic.
+This means there was a runtime upgrade since you last used Polkadot Developer Interface (Polkadot Developer Interface), and your extension needs to catch up with the latest metadata. Metadata includes essential information that allows you to [verify what you are signing](verify-extrinsic.md), like descriptions for each extrinsic.
 
 !!! warning "IMPORTANT"
 

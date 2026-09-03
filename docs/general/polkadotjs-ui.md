@@ -1,12 +1,12 @@
 ---
-title: Polkadot-JS UI (Wallet)
-description: A comprehensive guide to Polkadot-JS UI, a wallet for developers and power users in the Polkadot ecosystem.
+title: Polkadot Developer Interface (Wallet)
+description: A comprehensive guide to Polkadot Developer Interface, a wallet for developers and power users in the Polkadot ecosystem.
 ---
 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -14,7 +14,7 @@ description: A comprehensive guide to Polkadot-JS UI, a wallet for developers an
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-The [**Polkadot-JS UI**](https://polkadot.js.org/apps/#/explorer) is the native application for
+The [**Polkadot Developer Interface**](https://polkadot.js.org/apps/#/explorer) is the native application for
 accessing all features available on Substrate chains as Polkadot and Kusama. The UI is one of the
 moving parts of [**Polkadot-JS tool collection**](./polkadotjs.md), and its functionalities go
 beyond normal wallet functionalities such as transfers.
@@ -30,7 +30,7 @@ functionalities include account generation, balance transfers, and staking.
 ### Accounts
 
 In this section of the UI, you can see accounts injected from a browser extension, such as the
-[**Polkadot-JS Extension**](./polkadotjs.md#polkadot-js-extension) or other in-browser wallets. It is also possible to expand balance details and see different
+[**Polkadot Developer Signer**](./polkadotjs.md#polkadot-developer-signer) or other in-browser wallets. It is also possible to expand balance details and see different
 [**account balance types**](../learn/learn-account-balances.md). You
 can also:
 
@@ -127,7 +127,7 @@ granular functions such as
 
 - [Introduction to Polkadot-JS](https://www.youtube.com/watch?v=4EQqwGFV1D8)
 - [Create an account using Polkadot-JS](https://www.youtube.com/watch?v=sy7lvAqyzkY)
-- [Network Explorer on Polkadot-JS UI](https://www.youtube.com/watch?v=g4b4IWR6OrE)
+- [Network Explorer on Polkadot Developer Interface](https://www.youtube.com/watch?v=g4b4IWR6OrE)
 
 <!-- how-to-guides -->
 ## How-to guides

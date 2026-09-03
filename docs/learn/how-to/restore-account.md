@@ -1,6 +1,6 @@
 ---
 title: How to Restore Your Account
-description: "Learn how to restore your Polkadot account either from your JSON file, your 12-word mnemonic phrase, or your raw private key on Polkadot-JS UI"
+description: "Learn how to restore your Polkadot account either from your JSON file, your 12-word mnemonic phrase, or your raw private key on Polkadot Developer Interface"
 ---
 
 !!!info "Related concepts"
@@ -8,7 +8,7 @@ description: "Learn how to restore your Polkadot account either from your JSON f
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 In this article, you'll learn how to restore your Polkadot account either from your mnemonic phrase, your JSON backup file, or a raw private key in the Polkadot Developer Interface.
 
@@ -122,6 +122,6 @@ Your account has been successfully restored, and you'll see it listed on your [A
 
 If you would like to follow a video tutorial instead, here is a video to help you restore your account from the mnemonic phrase or the JSON file from the Polkadot Developer Interface:
 
-[Restore your Account using the Polkadot-JS UI](https://www.youtube.com/watch?v=cBsZqFpBANY)
+[Restore your Account using the Polkadot Developer Interface](https://www.youtube.com/watch?v=cBsZqFpBANY)
 
 * * *

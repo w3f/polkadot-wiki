@@ -12,7 +12,7 @@ _Discover the new Staking Dashboard that makes staking much easier, and check th
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 Nominators help secure the network by bonding their DOT and selecting validators they deem trustworthy to produce blocks. If you want to learn more about the benefits and risks of being a nominator, you can check [this article](../learn-staking.md).
 
@@ -33,7 +33,7 @@ How else can I stake
 
 * * *
 
-### How to stake using the Polkadot-JS UI
+### How to stake using the Polkadot Developer Interface
 
 !!! tip "GOOD TO KNOW"
 

@@ -6,7 +6,7 @@ description: Learn how to propose, vote, and manage referenda in Polkadot OpenGo
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -64,12 +64,12 @@ Follow the steps below to submit a preimage as shown in the screenshot above.
 
 7. Click the "Submit preimage" button.
 
-After the preimage is submitted successfully on-chain, Polkadot-JS UI lists it under the tab of
+After the preimage is submitted successfully on-chain, Polkadot Developer Interface lists it under the tab of
 Governance -> Preimages.
 
 ### Submitting a Proposal
 
-Submitting a proposal requires you to bond some tokens. On Polkadot-JS UI, you can navigate to the
+Submitting a proposal requires you to bond some tokens. On Polkadot Developer Interface, you can navigate to the
 Governance -> Referenda to make a new proposal. In order to submit a proposal, you will need to
 submit what's called the preimage hash. The preimage hash is simply the hash of the proposal to be
 enacted. The easiest way to get the preimage hash is by clicking on the "Submit preimage" button as
@@ -174,8 +174,8 @@ For additional instructions, check
 
 ## Delegations
 
-!!!info "Video Tutorial about Delegations using the Polkadot-JS UI"
-    See [this video tutorial](https://youtu.be/PNGs11EvCB0) to learn about how to delegate, modify delegations and remove delegations using the Polkadot-JS UI.
+!!!info "Video Tutorial about Delegations using the Polkadot Developer Interface"
+    See [this video tutorial](https://youtu.be/PNGs11EvCB0) to learn about how to delegate, modify delegations and remove delegations using the Polkadot Developer Interface.
 
 For an overview of how delegation works in Polkadot OpenGov, check out the
 [Multirole Delegation](../learn/learn-polkadot-opengov.md#multirole-delegation) section on the
@@ -240,20 +240,20 @@ the track and [delegate](#delegate-votes) again with updated information.
 
 ## Claiming OpenGov Deposits
 
-!!!info "Video Tutorial about OpenGov deposits using the Polkadot-JS UI"
-    See [this video tutorial](https://youtu.be/kkEq5cqW2Pk) to learn about how to claim OpenGov deposits using the Polkadot-JS UI.
+!!!info "Video Tutorial about OpenGov deposits using the Polkadot Developer Interface"
+    See [this video tutorial](https://youtu.be/kkEq5cqW2Pk) to learn about how to claim OpenGov deposits using the Polkadot Developer Interface.
 
 ### Claiming the Preimage and Decision Deposits
 
 After a referendum finishes its life cycle (and gets approved or rejected or timed out), the
 preimage and decision deposits can be claimed. For claiming the preimage deposit, navigate to
-[Polkadot-JS UI > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and click on
+[Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and click on
 unnote button shown on the preimage you submitted.
 
 ![Claim Preimage Deposit](../assets/claim-preimage-deposit.png)
 
 Similarly, to claim the decision deposit, navigate to
-[Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and scroll down
+[Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and scroll down
 to the end of the page to click on the referenda with the decision deposit and claim it.
 
 ![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
@@ -289,7 +289,7 @@ attain
 [specific approval and support levels](./learn-polkadot-opengov-origins.md#referendum-canceller).
 
 To cancel a referendum, you need first to submit a preimage with the `referenda.cancel` extrinsic.
-Go to the [Polkadot-JS UI > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and
+Go to the [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and
 click on the "Add Preimage" button. You must specify the `referenda.cancel` extrinsic with the index
 equal to the ongoing Referendum you wish to cancel. In the screenshot below, the Referendum to be
 cancelled is 249.

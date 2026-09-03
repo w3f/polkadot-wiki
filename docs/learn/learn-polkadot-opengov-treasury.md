@@ -37,7 +37,7 @@ The outflow is determined by the following mechanisms:
   [spend period](../general/glossary.md#spend-period).
 
 !!!info "Spend Period Schedule"
-    On Polkadot-JS UI, navigate to Governance > Treasury to view the status of current [spend period](../general/glossary.md#spend-period).
+    On Polkadot Developer Interface, navigate to Governance > Treasury to view the status of current [spend period](../general/glossary.md#spend-period).
 
 ![preimage-whitelist](../assets/treasury/treasury-spend-period.png)
 

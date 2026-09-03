@@ -90,8 +90,8 @@ for certainty on privileged roles.
 An asset's details contain one field not accessible to its owner or admin team,
 [asset sufficiency](#sufficient-assets).
 
-!!!info "Transaction Fees on Polkadot-JS UI"
-    Polkadot-JS UI [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI, transaction fee needs to be paid using the native asset (DOT or KSM).
+!!!info "Transaction Fees on Polkadot Developer Interface"
+    Polkadot Developer Interface [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot Developer Interface, transaction fee needs to be paid using the native asset (DOT or KSM).
 
 ## Fungible Assets
 
@@ -128,7 +128,7 @@ transfer all 25.
 !!!info "Walk-through video tutorial about destroying assets"
     See [this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=422) to learn how to destroy assets on the Asset Hub.
 
-To destroy an asset, go to the Polkadot-JS UI on the Asset Hub > Developer > Extrinsics. If you
+To destroy an asset, go to the Polkadot Developer Interface on the Asset Hub > Developer > Extrinsics. If you
 created an asset without minting any unit, you could call `assets.startDestroy` and then the
 `assets.finishDestroy` extrinsics specifying the asset id you want to destroy. If you created an
 asset and minted some units, follow the steps below:

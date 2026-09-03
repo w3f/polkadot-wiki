@@ -87,6 +87,6 @@ When you click to sign on the Ledger, the extrinsic details will be shown on the
 
 If you are more of a visual type, check this video on the topic:
 
-[How and Why to verify Extrinsics using Polkadot-JS UI, Browser Extension and Ledger Nano](https://www.youtube.com/watch?v=bxMs-9fBtFk)
+[How and Why to verify Extrinsics using Polkadot Developer Interface, Browser Extension and Ledger Nano](https://www.youtube.com/watch?v=bxMs-9fBtFk)
 
 * * *

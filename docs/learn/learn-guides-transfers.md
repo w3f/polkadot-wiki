@@ -6,7 +6,7 @@ description: Step-by-step guides for transferring balances, verifying extrinsics
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -14,24 +14,24 @@ description: Step-by-step guides for transferring balances, verifying extrinsics
   <button class="close-messagebox" aria-label="Close message">✖</button>
 </div>
 
-## Metadata Updates with the Polkadot-JS Browser Extension
+## Metadata Updates with the Polkadot Developer Signer
 
-Before signing extrinsics with the Polkadot-JS Browser Extension, always check for metadata updates.
+Before signing extrinsics with the Polkadot Developer Signer, always check for metadata updates.
 [**This video tutorial**](https://youtu.be/gbvrHzr4EDY?t=84) will explain how to do it.
 
-!!!info "Polkadot Vault vs Polkadot-JS Browser Extension"
+!!!info "Polkadot Vault vs Polkadot Developer Signer"
     The Polkadot Vault app updates the full metadata through the QR fountain while the extension updates the metadata index (the metadata is not loaded into it). As a consequence the process of updating metadata is different in this two cases (you will notice that on the Vault app the update takes longer for example). Having outdated metadata on the Vault app will prevent you from signing, while on the extension you will be able to click the sign button but the extrinsic will likely fail (similarly of having an outdated Ledger app). In general, failing to update metadata will most likely result in you not being able to sign extrinsics.
 
-## Transfers using the Polkadot-JS UI and Browser Extension
+## Transfers using the Polkadot Developer Interface and Polkadot Developer Signer
 
 See [this video tutorial](https://www.youtube.com/watch?v=gbvrHzr4EDY) to learn how to send funds
-using the Polkadot-JS UI and Browser Extension. See also the Polkadot pages for detailed
+using the Polkadot Developer Interface and Polkadot Developer Signer. See also the Polkadot pages for detailed
 information about signing transactions using
-[the Polkadot-JS UI](how-to/sign-transaction.md)
+[the Polkadot Developer Interface](how-to/sign-transaction.md)
 and
-[the Polkadot-JS browser extension](how-to/sign-transaction-signer.md).
+[the Polkadot Developer Signer](how-to/sign-transaction-signer.md).
 
-### Verify Extrinsics with the Polkadot-JS Browser Extension
+### Verify Extrinsics with the Polkadot Developer Signer
 
 Visit the
 [**dedicated page**](how-to/verify-extrinsic.md#verify-an-extrinsic-in-the-polkadot-developer-signer)
@@ -39,7 +39,7 @@ and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=261) tutorial t
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
 to you while signing for transactions.
 
-### Verify Extrinsics with the Polkadot-JS UI
+### Verify Extrinsics with the Polkadot Developer Interface
 
 Visit the
 [**dedicated page**](how-to/verify-extrinsic.md#verify-an-extrinsic-in-the-polkadot-developer-interface)
@@ -47,7 +47,7 @@ and see [**this video tutorial**](https://youtu.be/bxMs-9fBtFk?t=163) tutorial t
 verify extrinsics before signing them. The video will also mention potential attacks that can happen
 to you while signing for transactions.
 
-### Keep-Alive Checks with the Polkadot-JS UI
+### Keep-Alive Checks with the Polkadot Developer Interface
 
 !!!info
     See [**this video tutorial**](https://youtu.be/mgPHVztHJWk) and [**this page**](how-to/existential-deposit.md) to learn about keep-alive checks and existential deposit.
@@ -69,10 +69,10 @@ In Polkadot there are two main ways to transfer funds from one account to anothe
 Even if the transfer fails due to a keep-alive check, the transaction fee will be deducted from the
 sending account if you attempt to transfer.
 
-### Vested Transfers with the Polkadot-JS UI
+### Vested Transfers with the Polkadot Developer Interface
 
 You can watch [**this video tutorial**](https://youtu.be/JVlwTQBwNGc) to understand how to do vested
-transfers using the Polkadot-JS UI, including linear and cliff vesting. Note the tutorial uses the
+transfers using the Polkadot Developer Interface, including linear and cliff vesting. Note the tutorial uses the
 Westend Testnet, but the same applies to Polkadot and Kusama.
 
 There are two ways that vesting schedules can be created.
@@ -106,7 +106,7 @@ explicitly call an extrinsic to update the lock that is placed on an account.
 
 These extrinsics are exposed from the Vesting pallet.
 
-If you are using [the Polkadot-JS UI](../general/polkadotjs-ui.md), when there are tokens available to
+If you are using [the Polkadot Developer Interface](../general/polkadotjs-ui.md), when there are tokens available to
 vest for an account, you can unlock tokens that have already been vested from the
 [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 
@@ -131,7 +131,7 @@ the future).
    approximately 14’400 blocks per day, and you can see what the latest block is shown on the
    [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
 
-### Batch Transfers with the Polkadot-JS UI
+### Batch Transfers with the Polkadot Developer Interface
 
 Batch transfers are balances transfers to multiple accounts executed by one account. In order to
 construct a batch transfer you need to:
@@ -145,14 +145,14 @@ construct a batch transfer you need to:
 !!!info
     You can watch [**this video tutorial**](https://youtu.be/uoUC2K8muvw) to learn how to do batch transfers. Note the tutorial uses the Westend Testnet, but the same applies to both Polkadot and Kusama.
 
-### Teleporting Tokens using the Polkadot-JS UI
+### Teleporting Tokens using the Polkadot Developer Interface
 
 See [this video tutorial](https://youtu.be/3tE9ouub5Tg) and
 [this additional article](how-to/teleport-dot-ksm.md)
 to learn more about how to teleport tokens.
 
 !!!info
-    If you do not see "Accounts > Teleport" in the Polkadot-JS UI, the source chain that you have selected does not support teleportation yet.
+    If you do not see "Accounts > Teleport" in the Polkadot Developer Interface, the source chain that you have selected does not support teleportation yet.
 
 ## Calculating Fees with Polkadot-JS
 
@@ -211,7 +211,7 @@ to check if you have bonded tokens, stop nominating (if necessary) and unbond yo
     See [this video tutorial](https://youtu.be/LHgY7ds_bZ0) and [this page](how-to/why-cant-i-transfer-dot.md) to learn how to check for locks and remove them.
 
 You can also check for locks by querying `system.account(AccountId)` in
-[`Chain state` tab under the `Developer` drop-down menu in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate).
+[`Chain state` tab under the `Developer` drop-down menu in the Polkadot Developer Interface](https://polkadot.js.org/apps/#/chainstate).
 Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
 JSON object. If you see a non-zero value for anything other than `free`, you have locks on your
 account that need to get resolved.

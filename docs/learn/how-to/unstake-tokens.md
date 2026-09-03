@@ -12,7 +12,7 @@ _Discover the new Staking Dashboard that makes staking much easier and check the
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 You can decide to unbond (unstake) and stop being a nominator at any time. However, please note that there is an **unbonding period** , which serves as a cooldown, during which you won't receive rewards. You'll be able to make your tokens transferable after this time has passed. Currently, the unbonding period lasts 28 days on Polkadot and 7 days on Kusama.
 
@@ -69,7 +69,7 @@ A small clock will appear next to your unbonding balance. Hovering over it with 
 
 !!! info
 
-    If you change your mind once the unbonding period has been initiated, you can rebond your funds following this guide: "[Polkadot-JS UI: How to Rebond Tokens During the Unbonding Period](rebond-tokens.md)"
+    If you change your mind once the unbonding period has been initiated, you can rebond your funds following this guide: "[Polkadot Developer Interface: How to Rebond Tokens During the Unbonding Period](rebond-tokens.md)"
 
 * * *
 

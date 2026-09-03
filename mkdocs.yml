@@ -262,7 +262,7 @@ nav:
     - general/polkadotjs.md
     - Polkadot-JS Guides:
       - general/polkadotjs.md
-      - Polkadot-JS UI: general/polkadotjs-ui.md
+      - Polkadot Developer Interface: general/polkadotjs-ui.md
       - Polkadot-JS Account Guides:
         - learn/learn-guides-accounts.md
         - learn/learn-guides-accounts-multisig.md

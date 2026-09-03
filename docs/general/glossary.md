@@ -310,7 +310,7 @@ margin that each validator deems reasonable.
 ## Injected Account
 
 An account that is not directly managed by the Polkadot UI but can be accessed through it, such as
-accounts controlled by the Polkadot-JS extension.
+accounts controlled by the Polkadot Developer Signer.
 
 ## Interoperability
 

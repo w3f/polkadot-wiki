@@ -124,7 +124,7 @@ A good practice to consider is to verify the address to which you are sending cr
 be sending your assets to an account you do not know or are not familiar with. Crypto is a
 decentralized space with no room for errors.
 
-### Install the Polkadot-JS extension
+### Install the Polkadot Developer Signer
 
 The extension uses crowd-sourced [anti-phishing measures](https://polkadot.js.org/phishing/) to
 automatically prevent your browser from displaying known phishing or scam sites. They will be

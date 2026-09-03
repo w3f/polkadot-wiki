@@ -67,7 +67,7 @@ While your tokens are staked for nominations, they are 'locked' (bonded). You ca
 action is effective in the next era and does not automatically unbond your funds. Unbonding is a
 separate action, and it takes effect after the
 [unbonding period](../general/chain-state-values.md). A staking lock will be
-visible on the Polkadot-JS UI during the unbonding period, and after it, the staking lock can be
+visible on the Polkadot Developer Interface during the unbonding period, and after it, the staking lock can be
 unlocked, and the bonded funds become free balance you can transfer.
 
 ## Setting up Accounts
@@ -111,13 +111,13 @@ rewards is extremely unsafe.
 !!!info
     Being a nominator is made simpler by using the [**Staking Dashboard**](https://staking.polkadot.cloud/#/overview) that will guide you step by step through specifying rewards destination and bonded amount, and nominating validators (more on this below).
 
-## Nominating with the Polkadot-JS UI
+## Nominating with the Polkadot Developer Interface
 
 ### Targets Page
 
 There are many factors to consider when deciding which of your nominations. One helpful tool to
 choose validators is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets) table in
-the Polkadot-JS UI. This allows sorting validators using various metrics. Below are the relevant
+the Polkadot Developer Interface. This allows sorting validators using various metrics. Below are the relevant
 metrics shown as an example, followed by a brief description of each.
 
 | validator | payout   | nominators             | comm. | total stake | own stake | return |
@@ -233,7 +233,7 @@ If you are a beginner, please watch the video below for detailed instructions.
 
 The [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md) allows to choose pre-selected
 lists of validators based on user preference, or to manually select validators similarly as in the
-Polkadot-JS UI.
+Polkadot Developer Interface.
 
 Pre-selected choices are:
 

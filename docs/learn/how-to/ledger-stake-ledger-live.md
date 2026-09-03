@@ -30,7 +30,7 @@ In this article you'll find video instructions on how to use your Polkadot Ledge
 
 !!! warning "ATTENTION"
 
-    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is dynamic and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot-JS UI. Please refer to the [Staking](../learn-staking.md) page for details.
+    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is dynamic and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot Developer Interface. Please refer to the [Staking](../learn-staking.md) page for details.
 
   * **_If you are staking above the dynamic minimum amount and still aren't receiving rewards_** _,_ it's possible that your account needs to be re-adjusted. This is due to the **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
 

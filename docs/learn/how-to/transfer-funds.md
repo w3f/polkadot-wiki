@@ -56,6 +56,6 @@ For the receiving account, you can either select an account from the drop-down m
 
 If you are more of a visual learner, check the video below at mark 02:38:
 
-[Transfer your Funds using Ledger Nano, Parity Signer, Polkadot-JS UI & Browser Extension](https://www.youtube.com/watch?v=gbvrHzr4EDY&t=158s)
+[Transfer your Funds using Ledger Nano, Parity Signer, Polkadot Developer Interface & Browser Extension](https://www.youtube.com/watch?v=gbvrHzr4EDY&t=158s)
 
 * * *

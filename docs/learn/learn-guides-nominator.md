@@ -6,7 +6,7 @@ description: Learn how to bond tokens, nominate validators, and claim staking re
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
     <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
@@ -28,7 +28,7 @@ See [this page](./learn-staking.md) to learn about staking.
 !!!info "Related guide"
     Read the article about [How to Bond Tokens and Nominate](how-to/stake-nominate.md).
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
+On the [Polkadot Developer Interface](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
 "Network" menu).
 
 The "Staking Overview" subsection will show you all the active validators and their information -
@@ -121,10 +121,10 @@ fee. Someone must submit a transaction with a validator ID and an era index. Pol
 automatically calculate that validator's reward and distribute the rewards pro rata.
 
 These details are handled for you automatically if you use the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
+[Polkadot Developer Interface](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
 batches of eras at once.
 
-To claim rewards on Polkadot-JS UI, you will need to be in the "Payouts" tab underneath "Staking",
+To claim rewards on Polkadot Developer Interface, you will need to be in the "Payouts" tab underneath "Staking",
 which will list all the pending payouts for your stashes.
 
 ![pending-payouts](../assets/polkadotjs_payout_page.png)
@@ -141,7 +141,7 @@ transaction.
 
 ## Using Command-Line Interface (CLI)
 
-Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in
+Apart from using the Polkadot Developer Interface to participate in the staking, you can do all these things in
 CLI instead. The CLI approach allows you to interact with the network without using Polkadot-JS.
 
 ### Step 1: Install @polkadot/api-cli
@@ -198,7 +198,7 @@ Result:
 
 You can check the transaction status by using the value of the `InBlock` in
 [Subscan](https://www.subscan.io/). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS UI.
+[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot Developer Interface.
 
 ### Step 3: Nominate a Validator
 
@@ -213,4 +213,4 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 ```
 
 After a few seconds, you should see the hash of the transaction, and if you would like to verify the
-nomination status, you can check that on the Polkadot-JS UI as well.
+nomination status, you can check that on the Polkadot Developer Interface as well.
