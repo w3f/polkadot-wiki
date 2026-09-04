@@ -293,9 +293,17 @@ nav:
         - "How to Restore Your Account": learn/how-to/restore-account.md
         - "How to Receive DOT to My Account": learn/how-to/receive-dot.md
         - "The Difference Between Accounts and Address Book": learn/how-to/accounts-vs-address-book.md
+        - "How to Create and Use a Multisig Account": learn/how-to/create-multisig-account.md
+        - "How to Create a Proxy Account": learn/how-to/create-proxy-account.md
+        - "How to Create a Pure Proxy": learn/how-to/create-pure-proxy.md
+        - "How to Export Your JSON Backup File": learn/how-to/export-json-backup.md
+        - "How to Change the Style of Your DOT Icon": learn/how-to/change-dot-icon-style.md
+        - "My Mnemonic Phrase Is Invalid": learn/how-to/mnemonic-invalid.md
+        - "My Password Is Not Working": learn/how-to/password-not-working.md
         - "How to Switch Network Nodes": learn/how-to/switch-network-nodes.md
         - "How to Set Identities for Sub Accounts": learn/how-to/set-subaccount-identities.md
         - "How to Set and Clear an Identity": learn/how-to/set-clear-identity.md
+        - "How to Request and Cancel Identity Judgement": learn/how-to/request-cancel-judgement.md
         - "How to Send / Transfer Funds": learn/how-to/transfer-funds.md
         - "How to Send All of Your Funds Out of Your Account": learn/how-to/send-all-funds.md
         - "How to Transfer Tether (USDT) on Polkadot": learn/how-to/transfer-usdt.md
@@ -327,15 +335,7 @@ nav:
       - Accounts & Wallets:
         - "How to Create a Polkadot Account": learn/how-to/create-polkadot-account.md
         - "How to Create an Account in Subkey": learn/how-to/create-account-subkey.md
-        - "How to Create and Use a Multisig Account": learn/how-to/create-multisig-account.md
-        - "How to Create a Proxy Account": learn/how-to/create-proxy-account.md
-        - "How to Create a Pure Proxy": learn/how-to/create-pure-proxy.md
-        - "How to Export Your JSON Backup File": learn/how-to/export-json-backup.md
         - "How to Store Your Mnemonic Phrase & Backup Safely": learn/how-to/store-mnemonic-safely.md
-        - "How to Change the Style of Your DOT Icon": learn/how-to/change-dot-icon-style.md
-        - "My Mnemonic Phrase Is Invalid": learn/how-to/mnemonic-invalid.md
-        - "My Password Is Not Working": learn/how-to/password-not-working.md
-        - "How to Request and Cancel Identity Judgement": learn/how-to/request-cancel-judgement.md
       - Transactions:
         - "Why Can't I Transfer My DOT?": learn/how-to/why-cant-i-transfer-dot.md
         - "How to Verify What Extrinsic You're Signing": learn/how-to/verify-extrinsic.md
