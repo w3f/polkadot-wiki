@@ -6,15 +6,12 @@ description: "You can decide to unstake and stop being a nominator on Polkadot a
 !!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover the new Staking Dashboard that makes staking much easier and check the[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
-
-* * *
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-You can decide to unbond (unstake) and stop being a nominator at any time. However, please note that there is an **unbonding period** , which serves as a cooldown, during which you won't receive rewards. You'll be able to make your tokens transferable after this time has passed. Currently, the unbonding period lasts 28 days on Polkadot and 7 days on Kusama.
+You can decide to unbond (unstake) and stop being a nominator at any time. However, please note that there is an **unbonding period** , which serves as a cooldown, during which you won't receive rewards. You'll be able to make your tokens transferable after this time has passed. Currently, the unbonding period lasts 1-2 days on Polkadot, depending on the timing of your unbonding, and 7 days on Kusama.
 
 !!! info
 
@@ -57,7 +54,7 @@ If you don't see the Stop button, it means you're not nominating any validators.
 
 ### Step 2: Unbonding
 
-Once you've clicked the Stop button and chilled your account successfully, they'll still be bonded. This means they stay ready to be used to nominate. To make them transferable again, you first need to unbond them. This process will take 28 days on Polkadot and 7 days on Kusama.
+Once you've clicked the Stop button and chilled your account successfully, they'll still be bonded. This means they stay ready to be used to nominate. To make them transferable again, you first need to unbond them. This process will take 1-2 days on Polkadot and 7 days on Kusama.
 
 To do this, click the three dots next to the account you want to unbond tokens for, and select "**Unbond funds** ."
 
@@ -75,7 +72,7 @@ A small clock will appear next to your unbonding balance. Hovering over it with 
 
 ### Step 3: Withdrawing
 
-Once the 28-day unbonding period has passed, your unbonded funds can be withdrawn and made transferable. To do this, you can either:
+Once the unbonding period has passed, your unbonded funds can be withdrawn and made transferable. To do this, you can either:
 
   * Click “**Withdraw Unbonded** ,” which will then be available in the same menu as above.
   * Or click on the blue padlock icon next to the "redeemable" balance. This is shown both under "Network" > "Staking" > "Accounts" and on the "Accounts" page under the detailed balance of the account

@@ -38,7 +38,7 @@ You can install [Polkadot Vault](https://www.parity.io/signer/) (rebranded from 
 
 #### **Ledger**
 
-Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us/articles/360016289919) which supports Polkadot. You can use it natively with [Ledger Live](ledger-stake-ledger-live.md) or connect it to many of the wallets mentioned in this article and directly to the [Staking Dashboard](connect-account.md#how-to-connect-your-ledger-account).
+Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us/articles/360016289919) which supports Polkadot. You can use it natively with [Ledger Live](../../general/ledger.md#using-ledger-live) or connect it to many of the wallets mentioned in this article and directly to the [Staking Dashboard](connect-account.md#how-to-connect-your-ledger-account).
 
 * * *
 
@@ -46,19 +46,19 @@ Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us
 
 Numerous third-party wallets have been built by the community or funded in other ways. You can find a list of them on community websites like [Dotinsights](https://dotinsights.subwallet.app/projects/). Open-source projects are also listed in the [Open Source](../../general/build-open-source.md) page.
 
-Support for these wallets isn't available here. However, most of them are user-friendly and have their own documentation and support teams ready to help.
+Most of them are user-friendly and have their own documentation and support teams ready to help.
 
 * * *
 
 ### Wallets for developers and power users
 
-The following wallets have been developed by Parity. There are many useful articles on the wiki to help you use and address issues with these wallets, and you can always [get in touch](https://docs.polkadot.com/get-support/) if you need support.
+The following wallets have been developed by Parity. There are many useful articles on the wiki to help you use and address issues with these wallets.
 
 !!! tip "GOOD TO KNOW"
 
     These wallets are mostly created with developers and advanced users in mind, and although they provide advanced functionality, they might not be very user-friendly. For a more user-friendly experience, you can use one of the many wallets developed by other teams, [listed ](where-to-store-dot.md#treasury-funded-wallets)above.
 
-#### Polkadot browser extension
+#### Polkadot Developer Signer
 
 The [Polkadot Developer Signer](create-polkadot-account.md) is an account manager and will work in all Chromium-based browsers (Chrome, Brave, Edge) and Firefox. It's recommended to store your accounts in the extension and not on the Polkadot Developer Interface directly.
 
@@ -66,7 +66,7 @@ Because the extension only manages your keys and allows you to sign transactions
 
 #### Polkadot Developer Interface (user interface)
 
-The[Polkadot Developer Interface](create-account.md) web wallet contains advanced features designed for developers and power users, such as multi-sig accounts and switching signature schemes. It supports the full functionality that Substrate chains have to offer.
+The [Polkadot Developer Interface](create-account.md) web wallet contains advanced features designed for developers and power users, such as multi-sig accounts and switching signature schemes. It supports the full functionality that Substrate chains have to offer.
 
 #### Subkey (needs technical knowledge)
 

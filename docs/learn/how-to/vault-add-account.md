@@ -1,18 +1,18 @@
 ---
 title: Polkadot Vault — How to Add Your Account
-description: "Polkadot Developer Interface is the new mobile app that turns your phone into a cold-storage solution for your Polkadot accounts. It's the new and improved Parity Signer."
+description: "Polkadot Vault is the new mobile app that turns your phone into a cold-storage solution for your Polkadot accounts. It's the new and improved Parity Signer."
 ---
 
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-_Polkadot Vault is the new mobile app developed by Parity that replaces Parity Signer. It's redesigned with additional functionality and for a better and more streamlined user experience._
+_Polkadot Vault is a mobile app that replaces Parity Signer, turning a spare phone into a cold-storage wallet for your Polkadot accounts._
 
 * * *
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 In this article, you will learn how to add your Polkadot Vault account to the Polkadot Developer Interface. Polkadot Vault is a cold-storage account manager app, you need a UI in order to interact with your accounts and issue transactions.
 

@@ -8,20 +8,13 @@ description: "Learn how to restore your Polkadot account either from your JSON f
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 In this article, you'll learn how to restore your Polkadot account either from your mnemonic phrase, your JSON backup file, or a raw private key in the Polkadot Developer Interface.
 
-If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](signer-where-to-download.md).
-
 !!! warning "IMPORTANT"
 
-    Adding your accounts through the[ Polkadot Developer Signer browser extension](https://polkadot.js.org/extension/) is highly recommended, as it has many advantages:
-
-    **·** It provides better security than using the Web UI directly.
-    **·** Your browser won't "forget" your accounts if cookies are cleared.
-    **·** It allows you to interact with any Web 3.0-compatible site in the Polkadot ecosystem.
-    **·** The extension recognizes all known Polkadot scams and alerts you when you access a phishing site. This will help you protect yourself and your funds.
+    This guide restores your account directly in the Polkadot Developer Interface (the web UI). For everyday use, we recommend keeping your accounts in the [Polkadot Developer Signer browser extension](https://polkadot.js.org/extension/) instead — it offers better security, remembers your accounts even if browser cookies are cleared, and lets you connect to any Web 3.0-compatible app in the ecosystem. To restore into the extension, see [How to Restore Your Account (Developer Signer)](restore-account-signer.md).
 
 * * *
 
@@ -50,7 +43,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
 ![](../../assets/how-to/65032555485.png)
 
-5\. Give your account a descriptive name and a [good password](store-mnemonic-safely.md), then click "Next":
+5\. Give your account a descriptive name and a good password, then click "Next":
 
 ![](../../assets/how-to/65032555534.png)
 
@@ -112,7 +105,7 @@ Your account has been successfully restored, and you'll see it listed on your [A
 
 4\. This should generate your account address at the top of the window. Check the "I have saved my mnemonic seed safely" box and click "Next."
 
-5\. Give your account a descriptive name and a [good password](store-mnemonic-safely.md). Click Next, then review the details and click Save.
+5\. Give your account a descriptive name and a good password. Click Next, then review the details and click Save.
 
 Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
 

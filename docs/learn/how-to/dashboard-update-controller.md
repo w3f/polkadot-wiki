@@ -6,9 +6,6 @@ description: "How to use our new staking dashboard to change your controller acc
 !!!info "Related concepts"
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
-_Discover the Staking Dashboard, which makes staking much easier and check the extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
-
-* * *
 
 !!! warning "ATTENTION"
 

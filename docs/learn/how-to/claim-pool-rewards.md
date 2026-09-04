@@ -6,9 +6,6 @@ description: "Learn how to manually withdraw claimable rewards from a nomination
 !!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check the extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
-
-* * *
 
 Rewards are split _pro rata_ among the actively bonded members. Therefore, the staking rewards for members will be the same as if they were nominators. Slashes can also be applied proportionally to members who have been actively bonded.
 

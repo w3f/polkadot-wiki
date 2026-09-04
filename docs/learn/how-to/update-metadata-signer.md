@@ -1,5 +1,5 @@
 ---
-title: How to Update the Metadata (Signer)
+title: How to Update the Metadata (Developer Signer)
 description: "A step-by-step guide on how to update the metadata in the Polkadot Developer Signer"
 ---
 
@@ -10,11 +10,11 @@ Every once in a while, when you visit [Polkadot Developer Interface](https://pol
 
 ![You have 1 extension that needs to be updated with the latest chain properties in order to display the correct information for the chain you are connected to. This update includes chain metadata and chain properties.](../../assets/how-to/65016445308.png)
 
-This means there was a runtime upgrade since you last used Polkadot Developer Interface (Polkadot Developer Interface), and your extension needs to catch up with the latest metadata. Metadata includes essential information that allows you to [verify what you are signing](verify-extrinsic.md), like descriptions for each extrinsic.
+This means there was a runtime upgrade since you last used Polkadot Developer Interface, and your extension needs to catch up with the latest metadata. Metadata includes essential information that allows you to [verify what you are signing](verify-extrinsic.md), like descriptions for each extrinsic.
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 This guide uses the Polkadot Developer Signer, but the same steps can be used for any other extension within the Polkadot ecosystem.
 

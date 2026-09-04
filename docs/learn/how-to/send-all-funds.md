@@ -8,7 +8,7 @@ description: "Be aware that if you send your total balance out, your Polkadot ac
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 _Sometimes you want to empty an account by removing all the funds from it. For this case, you must configure the transaction accordingly. The account will be deactivated, and all your funds will be sent to the indicated account. Keep reading to learn how to do it._
 

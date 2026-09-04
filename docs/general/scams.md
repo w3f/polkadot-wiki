@@ -152,14 +152,6 @@ tools.
 ## I Got Scammed - What Can I Do?
 
 In the unfortunate case of having fallen for a scam, nothing can likely be done to recover your
-funds. However, you can still receive help and support. The Polkadot Support Team stands ready to
-help you in this difficult situation. Please check this
-[article](../learn/how-to/scam-or-hack-recovery.md)
-for steps you should take to **prevent further loss** and contact Polkadot Support from the same
-page.
-
-<!-- how-to-guides -->
-## How-to guides
-
-- [What to Do If You Fell Victim to a Scam or Hack](../learn/how-to/scam-or-hack-recovery.md)
-<!-- how-to-guides -->
+funds. However, you can still take steps to **prevent further loss**, such as moving any remaining
+assets to a new, secure account. You can also reach out to the [Polkadot community](community.md)
+for guidance.

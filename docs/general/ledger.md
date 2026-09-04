@@ -146,9 +146,7 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 
 ## Using Ledger Live
 
-See
-[this article](../learn/how-to/ledger-stake-ledger-live.md)
-to learn how to use Polkadot with ledger live.
+See [Ledger Live](https://www.ledger.com/ledger-live) to learn how to use Polkadot with Ledger Live.
 
 ---
 
@@ -161,7 +159,6 @@ to learn how to use Polkadot with ledger live.
 
 - [Ledger — How to Sign a Transaction](../learn/how-to/ledger-sign-transaction.md)
 - [How to Add a Ledger Account](../learn/how-to/add-ledger-account.md)
-- [How to Add Your Ledger Account (Signer)](../learn/how-to/add-ledger-account-signer.md)
+- [How to Add Your Ledger Account (Developer Signer)](../learn/how-to/add-ledger-account-signer.md)
 - [Ledger — How to Confirm the Account Address on Your Device](../learn/how-to/ledger-confirm-address.md)
-- [Ledger — How to Use Polkadot and Stake DOT with Ledger Live](../learn/how-to/ledger-stake-ledger-live.md)
 <!-- how-to-guides -->

@@ -23,7 +23,7 @@ It's important to highlight that the duration of the locking period of your bala
 
     Undelegating your voting power doesn't mean that your funds will be immediately accessible, even if your selected delegate never voted. Your voting balance will become available after the conviction lock period you applied to it has expired and only once you unlock it.
 
-    Learn how to unlock your referenda locks in "Polkadot Developer Interface: How to Remove Expired Democracy Locks"
+    Learn how to unlock your referenda locks in "[How to Remove Expired Referenda Locks](remove-referenda-locks.md)"
 
 * * *
 

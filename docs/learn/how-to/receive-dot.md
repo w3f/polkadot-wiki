@@ -8,7 +8,7 @@ description: "In this article, you'll learn how to copy your account address in 
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 In this article, you'll learn how to copy your account address in order to receive funds to your account. The process is the same whether you send DOT to yourself from another account or someone else sends it to you.
 

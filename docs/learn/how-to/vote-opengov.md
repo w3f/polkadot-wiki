@@ -18,7 +18,6 @@ Polkadot and Kusama allow community members to participate and influence decisio
 Built by the community, several tools allow you to participate in the governance of Polkadot and Kusama. Here is a list of some of them:
 
   * [Subsquare](https://www.subsquare.io/). It offers a place to discuss and add contextual information to the referenda. It allows commenting on each referendum, and also voting and delegating.
-  * [Bright Treasury](https://treasury.bright.dev/). A tool focused on proposals, bounties, and referenda on treasury matters.
   * [Nova Wallet](https://novawallet.io/). Mobile wallet with extensive tools to facilitate voting and delegating from your own wallet.
 
 * * *
@@ -27,7 +26,7 @@ Built by the community, several tools allow you to participate in the governance
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 If you have an account on Polkadot Developer Interface or it is connected to the UI (for example using the Polkadot Developer Signer), you can vote directly on the trusted Polkadot Developer Interface in a few simple steps:
 
@@ -77,7 +76,7 @@ It's important to notice that each referendum should be accompanied by contextua
 
     If you want to participate in Polkadot OpenGov but you either don't have time to review all the referenda or you think other people can be more knowledgeable than you about certain topics, you can delegate your voting power to trusted members.
 
-    Learn how to do it in the article "Polkadot OpenGov: How to Delegate your Voting Power."
+    Learn how to do it in the article "[Polkadot OpenGov: How to Delegate your Voting Power](delegate-voting-power.md)."
 
 * * *
 

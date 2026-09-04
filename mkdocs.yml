@@ -60,6 +60,8 @@ theme:
 # Plugins
 plugins:
   - search
+  - open-in-new-tab:
+      add_icon: true
   - social:
       cards_layout_options:
           font_family: DM Sans
@@ -288,9 +290,9 @@ nav:
       - Polkadot-JS Claims Guides: learn/learn-guides-claims.md
       - Polkadot-JS How-To:
         - "How to Create an Account": learn/how-to/create-account.md
+        - "How to Create a Vanity Address": learn/how-to/create-vanity-address.md
         - "How to Restore Your Account": learn/how-to/restore-account.md
         - "How to Receive DOT to My Account": learn/how-to/receive-dot.md
-        - "How to Import a Private Key from Another Wallet": learn/how-to/import-private-key.md
         - "The Difference Between Accounts and Address Book": learn/how-to/accounts-vs-address-book.md
         - "How to Switch Network Nodes": learn/how-to/switch-network-nodes.md
         - "How to Set Identities for Sub Accounts": learn/how-to/set-subaccount-identities.md
@@ -311,12 +313,12 @@ nav:
         - "How to Add a Ledger Account": learn/how-to/add-ledger-account.md
         - "Polkadot Vault — How to Add Your Account": learn/how-to/vault-add-account.md
         - "How to Add Your Account from Parity Signer": learn/how-to/parity-signer-add-account.md
-        - "How to Restore Your Account (Signer)": learn/how-to/restore-account-signer.md
-        - "How to Add Your Ledger Account (Signer)": learn/how-to/add-ledger-account-signer.md
-        - "How to Sign a Transaction (Signer)": learn/how-to/sign-transaction-signer.md
+        - "How to Restore Your Account (Developer Signer)": learn/how-to/restore-account-signer.md
+        - "How to Add Your Ledger Account (Developer Signer)": learn/how-to/add-ledger-account-signer.md
+        - "How to Sign a Transaction (Developer Signer)": learn/how-to/sign-transaction-signer.md
         - "Where to Download the Polkadot Developer Signer": learn/how-to/signer-where-to-download.md
-        - "How to View Your Mnemonic Phrase (Signer)": learn/how-to/view-mnemonic-signer.md
-        - "How to Update the Metadata (Signer)": learn/how-to/update-metadata-signer.md
+        - "How to View Your Mnemonic Phrase (Developer Signer)": learn/how-to/view-mnemonic-signer.md
+        - "How to Update the Metadata (Developer Signer)": learn/how-to/update-metadata-signer.md
     - Other Guides:
       - learn/learn-guides-ledger.md
       - learn/learn-guides-vault.md
@@ -325,7 +327,6 @@ nav:
     - How-To Guides:
       - Accounts & Wallets:
         - "How to Create a Polkadot Account": learn/how-to/create-polkadot-account.md
-        - "How to Create a Vanity Address": learn/how-to/create-vanity-address.md
         - "How to Create an Account in Subkey": learn/how-to/create-account-subkey.md
         - "How to Create and Use a Multisig Account": learn/how-to/create-multisig-account.md
         - "How to Create a Proxy Account": learn/how-to/create-proxy-account.md
@@ -342,13 +343,11 @@ nav:
         - "Error 'Frozen' — I Can't Transfer All My DOT": learn/how-to/error-frozen-cant-transfer.md
         - "How to Withdraw USDT from Exchanges on Asset Hub": learn/how-to/withdraw-usdt-from-exchanges.md
       - Staking:
-        - "Staking Dashboard — How to Stake Your DOT": learn/how-to/stake-your-dot.md
         - "How to Choose Validators": learn/how-to/choose-validators.md
         - "Staking Dashboard — How to Create a Nomination Pool": learn/how-to/create-nomination-pool.md
         - "Staking Dashboard — How to Join a Nomination Pool": learn/how-to/join-nomination-pool.md
         - "Staking Dashboard — How to Unbond Your Tokens": learn/how-to/unbond-tokens.md
         - "Staking Dashboard — How to Connect Your Account": learn/how-to/connect-account.md
-        - "Nomination Pool Members & OpenGov Participation": learn/how-to/nomination-pool-opengov-changes.md
         - "How to See My Staking Rewards": learn/how-to/see-staking-rewards.md
         - "Staking Dashboard — How to Claim Nomination Pool Rewards": learn/how-to/claim-pool-rewards.md
         - "Staking Dashboard — How to Unbond from a Nomination Pool": learn/how-to/unbond-from-nomination-pool.md
@@ -358,7 +357,6 @@ nav:
       - Ledger:
         - "Ledger — How to Sign a Transaction": learn/how-to/ledger-sign-transaction.md
         - "Ledger — How to Confirm the Account Address on Your Device": learn/how-to/ledger-confirm-address.md
-        - "Ledger — How to Use Polkadot and Stake DOT with Ledger Live": learn/how-to/ledger-stake-ledger-live.md
       - Polkadot Vault:
         - "Polkadot Vault — How to Create an Account": learn/how-to/vault-create-account.md
         - "Polkadot Vault — How to Restore Your Account": learn/how-to/vault-restore-account.md
@@ -375,6 +373,5 @@ nav:
         - "What is Asset Hub and How Do I Use It?": learn/how-to/what-is-asset-hub.md
         - "Asset Hub Migration — What You Must Know": learn/how-to/asset-hub-migration.md
         - "Polkadot and Kusama — What's the Difference?": learn/how-to/polkadot-vs-kusama.md
-        - "What to Do If You Fell Victim to a Scam or Hack": learn/how-to/scam-or-hack-recovery.md
         - "Block Explorers for Polkadot and Kusama": learn/how-to/block-explorers.md
         - "Where to Store DOT — Polkadot Wallet Options": learn/how-to/where-to-store-dot.md

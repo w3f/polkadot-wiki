@@ -33,7 +33,7 @@ This example uses Paseo, but the processes are the same for Polkadot and Kusama.
 
 3\. Once you enter the amount, click "Submit" and sign the transaction to unbond.
 
-The usual unbonding period applies when unbonding from a nomination pool, 28 days in Polkadot, 7 days in Kusama. After it ends, you can withdraw the tokens to make them transferable.
+The usual unbonding period applies when unbonding from a nomination pool, 1-2 days in Polkadot, 7 days in Kusama. After it ends, you can withdraw the tokens to make them transferable.
 
 * * *
 
@@ -47,7 +47,7 @@ The usual unbonding period applies when unbonding from a nomination pool, 28 day
 
 **![](../../assets/how-to/65032613193.png)**
 
-The usual unbonding period applies when exiting a nomination pool, 28 days in Polkadot, 7 days in Kusama. After it ends, you can withdraw the tokens to make them transferable.
+The usual unbonding period applies when exiting a nomination pool, 1-2 days in Polkadot, 7 days in Kusama. After it ends, you can withdraw the tokens to make them transferable.
 
 * * *
 
@@ -57,7 +57,7 @@ The usual unbonding period applies when exiting a nomination pool, 28 days in Po
 
 !!! tip "GOOD TO KNOW"
 
-    It takes 7 days (28 eras) to unbond on Kusama, 28 days (28 eras) on Polkadot, and 12 hours (2 eras) on Westend.
+    It takes 7 days (28 eras) to unbond on Kusama, 1-2 days on Polkadot, and 12 hours (2 eras) on Westend.
 
 Once this period is complete, you can select the "Manager Unlock" icon to redeem your tokens back to the transferable balance in your account:
 

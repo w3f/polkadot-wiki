@@ -6,7 +6,7 @@ description: "This article will help you choose the Polkadot or Kusama nominatio
 !!!info "Related concepts"
     For the underlying concepts, see [Nomination Pools](../learn-nomination-pools.md).
 
-_Discover this new Staking Dashboard that makes staking much easier and check the extensive article list in the[Overview article](../../general/dashboards/staking-dashboard.md) to help you get started._
+_Check the [Staking Dashboard overview](../../general/dashboards/staking-dashboard.md) and the [dashboard documentation](https://docs.staking.polkadot.cloud/) to get started with staking._
 
 * * *
 
@@ -18,11 +18,11 @@ It's important to do your own research before joining a nomination pool. When yo
 
 !!! warning "IMPORTANT"
 
-    Please remember that to switch a nomination pool, you need to unbond first. The unbonding period is 28 days on Polkadot and 7 days on Kusama. During the unbonding period, you aren't earning rewards. So, make sure to choose a nomination pool you'll be happy with.
+    Please remember that to switch a nomination pool, you need to unbond first. The unbonding period is 1-2 days on Polkadot and 7 days on Kusama. During the unbonding period, you aren't earning rewards. So, make sure to choose a nomination pool you'll be happy with.
 
 If you want to have more control of your nominations and monitor them yourself, you can stake solo, but remember that the minimum stake to earn rewards is much higher in that case:
 
-[Staking Dashboard: How to Stake Your DOT](stake-your-dot.md)
+[Staking Dashboard: Overview](../../general/dashboards/staking-dashboard.md)
 
 [How Do I Know Which Validators to Choose?](choose-validators.md)
 

@@ -12,7 +12,7 @@ This article explains how to unbond staked tokens using the[Staking Dashboard](h
 
 !!! tip "GOOD TO KNOW"
 
-    Please note that there is an unbonding period, currently 28 days on Polkadot and 7 days on Kusama.
+    Please note that there is an unbonding period, currently 1-2 days on Polkadot and 7 days on Kusama.
     
 
 In this example, Polkadot is used, but the process is the same for Kusama.
@@ -32,7 +32,7 @@ In this example, Polkadot is used, but the process is the same for Kusama.
 
     If you change your mind once the unbonding period has be initiated, you can rebond your funds following this guide: "[Staking Dashboard: How to Rebond Your Tokens](dashboard-rebond-tokens.md)"
 
-3. After the unbonding period has concluded (28 days in Polkadot or 7 days in Kusama), click any of the unlocked padlocks icons to fully withdraw the unbonded tokens.
+3. After the unbonding period has concluded (1-2 days in Polkadot or 7 days in Kusama), click any of the unlocked padlocks icons to fully withdraw the unbonded tokens.
 
 ![](../../assets/how-to/65028271365.png)
 
@@ -60,7 +60,7 @@ The previous section described how to stop nominating and unbond _all_ your fund
 
 ![](../../assets/how-to/65028270459.png)
 
-3. After the unbonding period has concluded (28 days in Polkadot or 7 days in Kusama), click any of the unlocked padlocks icons to withdraw the unbonded tokens.
+3. After the unbonding period has concluded (1-2 days in Polkadot or 7 days in Kusama), click any of the unlocked padlocks icons to withdraw the unbonded tokens.
 
 ![](../../assets/how-to/65028271365.png)
 

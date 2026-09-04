@@ -19,9 +19,9 @@ Signing a transaction is the final step of any transaction, like [sending funds 
 
 !!! warning "IMPORTANT"
 
-    For most users, adding Ledger through the **Polkadot browser extension** is strongly recommended. [Click here to see the benefits and instructions.](add-ledger-account-signer.md)
+    For most users, adding Ledger through the **Polkadot Developer Signer** is strongly recommended. [Click here to see the benefits and instructions.](add-ledger-account-signer.md)
 
-Whether you add your Ledger through the [Polkadot browser extension](add-ledger-account-signer.md) or directly on the[ Polkadot Developer Interface](add-ledger-account.md), you need a UI to interact with your accounts and initiate transactions.
+Whether you add your Ledger through the [Polkadot Developer Signer](add-ledger-account-signer.md) or directly on the[ Polkadot Developer Interface](add-ledger-account.md), you need a UI to interact with your accounts and initiate transactions.
 
 1. Connect your Ledger to the computer, unlock it, and open the Polkadot app:
 
@@ -35,7 +35,7 @@ Whether you add your Ledger through the [Polkadot browser extension](add-ledger-
 
 ![](../../assets/how-to/65016332727.png)
 
-It is the Polkadot browser extension asking you to sign a transaction. Click on the "Sign on Ledger" button. The button will grey out, awaiting confirmation from your Ledger device.
+It is the Polkadot Developer Signer asking you to sign a transaction. Click on the "Sign on Ledger" button. The button will grey out, awaiting confirmation from your Ledger device.
 
 4\. The message "Please review" will appear on your Ledger device:
 
@@ -81,6 +81,6 @@ Please check [this article](why-cant-i-transfer-dot.md) to help you understand w
 
 #### **I get an error**
 
-Several possible reasons can cause errors when signing a transaction on Ledger. If you can't resolve it, you can [contact Polkadot support](https://docs.polkadot.com/get-support/) for help.
+Several possible reasons can cause errors when signing a transaction on Ledger. If you can't resolve it, you can ask the [Polkadot community](../../general/community.md) for help.
 
 * * *

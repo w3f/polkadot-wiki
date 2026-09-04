@@ -8,7 +8,7 @@ description: "How to add a Parity Signer to the Polkadot Developer Interface to 
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 [Parity Signer](https://signer.parity.io/) is the iOS and Android account manager app. It is meant to be used on an old phone that can permanently stay offline. You'll still need a UI, like the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), to interact with your accounts and initiate transactions.
 

@@ -6,7 +6,7 @@ description: "There are a couple of reasons why you might not be able to transfe
 !!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
-There are a couple of reasons why you might not be able to transfer your DOT. This article examines the most common of them, but if you encounter a situation not covered by this article or have any questions, feel free to [get in touch](https://docs.polkadot.com/get-support/).
+There are a couple of reasons why you might not be able to transfer your DOT. This article examines the most common of them, but if you encounter a situation not covered by this article or have any questions, consider asking the [Polkadot community](../../general/community.md).
 
 * * *
 

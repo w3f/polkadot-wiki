@@ -15,7 +15,7 @@ In this article, you will learn how to **create a new account** in Polkadot Vaul
 
 ### How to create a new account in Polkadot Vault
 
-1. Download the Polkadot Vault app for your factory-reset phone [from the official site](https://signer.parity.io/) and install it on your phone.
+1\. Download the Polkadot Vault app for your factory-reset phone [from the official site](https://signer.parity.io/) and install it on your phone.
 
 2\. Read through the introductory screens and click "Continue," then agree to the Terms of Service and Privacy Policy.
 

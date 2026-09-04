@@ -62,7 +62,7 @@ Your account should now be successfully restored.
 
 ### What can I do next?
 
-You can add your Parity Signer account to the Polkadot browser extension to use it with [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts). The step-by-step guide can be found [here](parity-signer-add-account.md) and video instructions can be found at the [4:58](https://www.youtube.com/watch?v=hgv1R9mPEXw&t=298s) timestamp in the link at the bottom of the article.
+You can add your Parity Signer account to the Polkadot Developer Signer to use it with [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts). The step-by-step guide can be found [here](parity-signer-add-account.md) and video instructions can be found at the [4:58](https://www.youtube.com/watch?v=hgv1R9mPEXw&t=298s) timestamp in the link at the bottom of the article.
 
 !!! warning "IMPORTANT"
 

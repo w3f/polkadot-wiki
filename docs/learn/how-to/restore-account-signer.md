@@ -1,5 +1,5 @@
 ---
-title: How to Restore Your Account (Signer)
+title: How to Restore Your Account (Developer Signer)
 description: "Learn how to restore your Polkadot account either from the account's 12-word mnemonic phrase or its JSON file in the Polkadot Developer Signer."
 ---
 
@@ -10,7 +10,7 @@ In this article, you will learn how to restore your Polkadot account in the Polk
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 
 **Adding your accounts in the browser extension is highly recommended, as it has many advantages:**
@@ -20,8 +20,6 @@ In this article, you will learn how to restore your Polkadot account in the Polk
 2. Your browser won't "forget" your accounts if its cookies are cleared
 
 3. It allows you to interact with any Web 3.0 compatible site in the Polkadot ecosystem
-
-4. The extension recognizes all known Polkadot scams and alerts you when you try to visit a known scam site. This will help you protect yourself and your funds.
 
 If you haven't installed the Polkadot Developer Signer yet, you can find download instructions [here](signer-where-to-download.md).
 

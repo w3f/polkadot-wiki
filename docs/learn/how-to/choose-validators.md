@@ -65,7 +65,7 @@ More information, such as the [era points](../learn-staking.md), elected stake, 
 
 #### **7\. Nominate!**
 
-Now that you've decided on your validators, you can nominate them. [This guide](stake-your-dot.md) can help you with the process, but consider also checking all the articles in the [Staking Dashboard: Overview](../../general/dashboards/staking-dashboard.md) page.
+Now that you've decided on your validators, you can nominate them through the [Staking Dashboard](https://staking.polkadot.cloud/). The [Staking Dashboard: Overview](../../general/dashboards/staking-dashboard.md) page can help you with the process.
 
 * * *
 

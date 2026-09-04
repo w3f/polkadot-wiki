@@ -63,7 +63,7 @@ Disconnecting and removing accounts is also covered:
 
 ![](../../assets/how-to/65028445519.png)
 
-Now, you can [start staking](stake-your-dot.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](../../general/dashboards/staking-dashboard.md) to see what else you can do on the Staking Dashboard.
+Now, you can [start staking](../../general/dashboards/staking-dashboard.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](../../general/dashboards/staking-dashboard.md) to see what else you can do on the Staking Dashboard.
 
 * * *
 
@@ -103,7 +103,7 @@ If you're not using the default account type of 0, click the "Import Another Acc
 
 ![](../../assets/how-to/65028445585.png)
 
-Now you can [start staking](stake-your-dot.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](../../general/dashboards/staking-dashboard.md) to see what else you can do on the Staking Dashboard.
+Now you can [start staking](../../general/dashboards/staking-dashboard.md) or join a [nomination pool](join-nomination-pool.md). Check out [this article](../../general/dashboards/staking-dashboard.md) to see what else you can do on the Staking Dashboard.
 
 If you are a visual learner, check out this video tutorial:
 

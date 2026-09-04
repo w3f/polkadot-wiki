@@ -8,7 +8,7 @@ description: "Steps on how to join a nomination pool on Polkadot or Kusama."
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 Nomination pools are designed to permissionlessly allow members to pool their funds together and act as a single nominator account. You can read more details about this feature [here](../learn-nomination-pools.md).
 
@@ -27,7 +27,7 @@ Benefits of joining a nomination pool:
 
 ### How to Join a Pool
 
-Any nominator can join a nomination pool, either through the staking dashboard (instructions on how to do it in [this article](join-nomination-pool.md)) or the Polkadot Developer Interface. This article goes through the steps to do it using the latter.
+Any nominator can join a nomination pool. This article goes through the steps to do it using the Polkadot Developer Interface.
 
 !!! info
 
@@ -37,7 +37,7 @@ Any nominator can join a nomination pool, either through the staking dashboard (
 
 !!! warning "ATTENTION"
 
-    Choose your nomination pool wisely. Before switching pools, a member must wait for the unbounding process: 28 days on Polkadot and 7 days on Kusama.
+    Choose your nomination pool wisely. Before switching pools, a member must wait for the unbounding process: 1-2 days on Polkadot and 7 days on Kusama.
 
 !!! tip "GOOD TO KNOW"
 
@@ -64,7 +64,7 @@ Members can exit the pool at any time by selecting "**Unbond funds** " instead, 
 
 !!! tip "GOOD TO KNOW"
 
-    Funds exiting a pool will be subject to the normal unbonding period, which is 7 days on Kusama, and 28 days on Polkadot.
+    Funds exiting a pool will be subject to the normal unbonding period, which is 7 days on Kusama, and 1-2 days on Polkadot.
 
 * * *
 
@@ -88,7 +88,7 @@ To do this, select the "Withdraw unbonded" button from the menu above after the 
 
 ### Limitations
 
-  * In order for a member to switch pools, they must wait for the unbonding period to end: 28 days on Polkadot and 7 days on Kusama.
+  * In order for a member to switch pools, they must wait for the unbonding period to end: 1-2 days on Polkadot and 7 days on Kusama.
 
   * Auto-compounding isn't active by default, but it can be done either manually or permissionlessly if you opt for it.
   * A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).

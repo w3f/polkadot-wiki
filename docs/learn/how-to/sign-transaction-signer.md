@@ -1,5 +1,5 @@
 ---
-title: How to Sign a Transaction (Signer)
+title: How to Sign a Transaction (Developer Signer)
 description: "A step-by-step guide on how to sign a transaction using the Polkadot Developer Signer extension"
 ---
 
@@ -13,17 +13,17 @@ Signing a transaction is the final step of any transaction, like [sending funds 
 
 ### Signing a transaction in the Polkadot Developer Signer
 
-When you create your accounts in the Polkadot browser extension, you need a UI to interact with your accounts and initiate transactions.
+When you create your accounts in the Polkadot Developer Signer, you need a UI to interact with your accounts and initiate transactions.
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 1\. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/), after you initiate a transaction and click "Sign and Submit," a new window will pop up:
 
 ![](../../assets/how-to/65012680339.png)
 
-2\. It is the Polkadot browser extension asking you to sign a transaction. Here you can check the transaction details once again:
+2\. It is the Polkadot Developer Signer asking you to sign a transaction. Here you can check the transaction details once again:
 
 [How can I verify what extrinsic I'm signing?](verify-extrinsic.md)
 

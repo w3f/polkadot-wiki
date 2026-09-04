@@ -10,7 +10,7 @@ The Polkadot Developer Signer is an account manager developed by Parity. In this
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager **meant for power users and developers.** There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
+    The Polkadot Developer Signer is an account manager **meant for power users and developers.** There are several user-friendly browser extensions that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 **Adding your accounts in the browser extension is highly recommended, as it has many advantages:**
 
@@ -19,8 +19,6 @@ The Polkadot Developer Signer is an account manager developed by Parity. In this
 2. Your browser won't "forget" your accounts if its cookies are cleared
 
 3. It allows you to interact with any Web 3.0-compatible site in the Polkadot ecosystem
-
-4. The extension recognizes all known Polkadot scams and alerts you when you try to visit a known scam site. This will help you protect yourself and your funds.
 
 !!! danger "READ THIS FIRST!"
 

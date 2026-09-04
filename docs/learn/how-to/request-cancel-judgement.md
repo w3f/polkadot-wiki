@@ -8,13 +8,13 @@ description: "How to request or cancel an identity judgment on Polkadot."
 
 Polkadot offers an identity mechanism that enables users to include their personal details into their on-chain account and later request registrars to verify this information.
 
-This article will go through the steps to request, and cancelling, a judgment from one of this registrars.
+This article will go through the steps to request, and cancel, a judgment from one of these registrars.
 
 !!! warning "ATTENTION"
 
     Identities on **Kusama and Polkadot** have moved to the new **People** system parachains. To set an identity on Polkadot or Kusama networks, you need to perform the actions below on the Polkadot and Kusama People chains, respectively.
 
-    Follow [this guide](switch-network-nodes.md) on how to switch networks, or you can follow this links:
+    Follow [this guide](switch-network-nodes.md) on how to switch networks, or you can follow these links:
     [Polkadot People](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-people-rpc.polkadot.io#/explorer)
     [Kusama People](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-people-rpc.polkadot.io#/accounts)
 
@@ -45,11 +45,13 @@ To "waiting":
 
 ![](../../assets/how-to/65012681848.png)
 
-2\. At this point, direct contact with the registrar is required - the contact info is in their identity as shown above. Each registrar will have their own set of procedures to verify your identity and values, and only once you've satisfied their requirements will the process continue.
+2\. At this point, direct contact with the registrar may be required - the contact info is in their identity as shown above. Each registrar will have their own set of procedures to verify your identity and values, and only once you've satisfied their requirements will the process continue.
 
 Once the registrar has confirmed the identity, a green checkmark should appear next to your account name with the appropriate confidence level:
 
-![](../../assets/how-to/65012681863.png)_Note that changing even a single field's value after you've been verified will un-verify your account and you'll need to start the judgement process anew. However, you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
+![](../../assets/how-to/65012681863.png)
+
+_Note that changing even a single field's value after you've been verified will un-verify your account and you'll need to start the judgement process anew. However, you can still change fields while the judgement is going on - it's up to the registrar to keep an eye on the changes._
 
 * * *
 

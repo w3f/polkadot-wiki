@@ -123,7 +123,7 @@ Here, you can see:
 
 3\. Copy "multisig call data" and share it with Bob and Charlie. They'll need this information to finalize the call. Then click "Sign and Submit."
 
-4\. Once the extrinsic is signed, the multisig call is initiated, and some funds (about 20 DOT on Polkadot) are reserved in Alice's account. Also, an icon appears next to the multisig account, indicating there's a pending call that needs approval.
+4\. Once the extrinsic is signed, the multisig call is initiated, and some funds (a little more than 0.2 DOT on Polkadot) are reserved in Alice's account. Also, an icon appears next to the multisig account, indicating there's a pending call that needs approval.
 
 ![](../../assets/how-to/65016359904.png)
 
@@ -148,7 +148,7 @@ This switch is **automatically** enabled or disabled based on whether this is th
 
 ![](../../assets/how-to/65016360053.jpeg)
 
-8\. Satisfied that everything is in order (keep in mind that the value above is displayed in [Planck](../learn-DOT.md#the-planck-unit)), Bob gives the final approval, and the balance is transferred. Also, Alice's deposit is unreserved:
+8\. Satisfied that everything is in order (keep in mind that, depending on the call, the value above may be displayed in [Planck](../learn-DOT.md#the-planck-unit)), Bob gives the final approval, and the balance is transferred. Also, Alice's deposit is unreserved:
 
 ![](../../assets/how-to/65016360064.png)
 

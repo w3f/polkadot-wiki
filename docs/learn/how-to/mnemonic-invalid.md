@@ -22,6 +22,8 @@ If your mnemonic phrase appears to be invalid, please check the following:
 
   * All the words are spelled correctly. You can check them against [this list](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt) to ensure they are spelled properly.
 
+  * The words are entered in the correct order.
+
   * You enter the words in small letters only.
 
   * You use only one space between the words and no space or new line at the end or beginning.

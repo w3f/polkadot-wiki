@@ -243,7 +243,7 @@ to maximize their reward.
 - [How to Send / Transfer Funds](how-to/transfer-funds.md)
 - [Why Can't I Transfer My DOT?](how-to/why-cant-i-transfer-dot.md)
 - [How to Verify What Extrinsic You're Signing](how-to/verify-extrinsic.md)
-- [How to Sign a Transaction (Signer)](how-to/sign-transaction-signer.md)
+- [How to Sign a Transaction (Developer Signer)](how-to/sign-transaction-signer.md)
 - [Error 'Frozen' — I Can't Transfer All My DOT](how-to/error-frozen-cant-transfer.md)
 - [How to Sign a Transaction](how-to/sign-transaction.md)
 - [How to Send All of Your Funds Out of Your Account](how-to/send-all-funds.md)

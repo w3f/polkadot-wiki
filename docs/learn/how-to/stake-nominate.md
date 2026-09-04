@@ -6,18 +6,12 @@ description: "This article gives you short step-by-step instructions on how to s
 !!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover the new Staking Dashboard that makes staking much easier, and check the [extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
-
-* * *
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot Developer Interface) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 Nominators help secure the network by bonding their DOT and selecting validators they deem trustworthy to produce blocks. If you want to learn more about the benefits and risks of being a nominator, you can check [this article](../learn-staking.md).
-
-This article explains how to stake on Polkadot Developer Interface. If you're interested in other options, check the last section of this article:
-How else can I stake
 
 
 ### What to know before starting
@@ -56,7 +50,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 3\. Click on the "+ Nominator" button on the top right.
 
-4. Choose your Stash account from the drop-down menu.
+4\. Choose your Stash account from the drop-down menu.
 
 5\. Select the amount you want to bond. Make sure you leave a small amount of DOT transferrable in both the stash and the staking proxy. You'll need some transferrable funds to pay transaction fees when changing your nominations, bonding more, or unbonding.
 
@@ -74,18 +68,6 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 * * *
 
-### How else can I stake
-
-For most users, staking through the new [Staking Dashboard](https://staking.polkadot.cloud/#/overview) is recommended. It's compatible with several browser extensions within the ecosystem, including the Polkadot browser extension, and is more user-friendly. To get started, check this article:
-
-[Staking Dashboard: How to Stake Your DOT](stake-your-dot.md)
-
-If you have a Ledger device, you can also stake using Ledger Live. You can follow the steps in this article to start staking:
-
-[Ledger: How to Use Polkadot and Stake DOT with Ledger Live](ledger-stake-ledger-live.md)
-
-* * *
-
-That's it. You'll begin earning rewards in the next era or the one after that if you nominated during the last epoch.
+That's it. You'll begin earning rewards after the next era or the era after that, depending on the timing of your nominations.
 
 * * *

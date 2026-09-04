@@ -8,7 +8,7 @@ description: "In order to access your Kusama accounts you need to be on the Kusa
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 _The Polkadot Developer Interface allows you to connect to multiple nodes which provide on-chain information and facilitate interaction with the network. While these nodes offer the same services, they may encounter occasional connection issues. In such cases, you can effortlessly switch to a different node with the same functionalities. This article will explain how to switch nodes and networks from the same menu._
 

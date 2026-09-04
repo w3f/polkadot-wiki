@@ -6,9 +6,6 @@ description: "View your staking rewards on block explorers like Subscan or Polka
 !!!info "Related concepts"
     For the underlying concepts, see [Staking](../learn-staking.md).
 
-_Discover the new Staking Dashboard that makes staking much easier and check the[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
-
-* * *
 
 You can view your staking rewards on the new [Staking Dashboard](https://staking.polkadot.cloud/#/) or block explorers like [Subscan](https://www.subscan.io/).
 
@@ -31,7 +28,7 @@ For a full breakdown of what each of these indicates, click on the small informa
 
 ### Block Explorers
 
-On most block explorers, you can enter your address in the Search field to see information about it. Some, like [SubID](https://sub.id/), let you connect your account through a browser extension instead of searching by its address. Here's how to find staking rewards on [Subscan](https://www.subscan.io/).
+On most block explorers, you can enter your address in the Search field to see information about it. Here's how to find staking rewards on [Subscan](https://www.subscan.io/).
 
 #### Subscan
 

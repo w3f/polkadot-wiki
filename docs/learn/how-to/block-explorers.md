@@ -10,9 +10,7 @@ There are several block explorers that you can use to explore Polkadot, Kusama, 
 EXPLORER| RELAY CHAINS| PARACHAINS| OTHER
 ---|---|---|---
 [Subscan](https://www.subscan.io/)| Polkadot and Kusama| Yes| Testnets, XCM transfers
-[Statescan](https://www.statescan.io/)| Kusama| Yes| NFT, testnet
-[Singular](https://singular.app/)| -| -| NFT explorer and marketplace
-[KodaDot](https://kodadot.xyz/)| -| -| NFT explorer and marketplace (RMRK and Basilisk)
+[Statescan](https://www.statescan.io/)| Polkadot and Kusama| Yes| NFT, testnet
 
 !!! info
 
@@ -22,7 +20,7 @@ EXPLORER| RELAY CHAINS| PARACHAINS| OTHER
 
 ### **Other third-party Tools**
 
-In addition to block explorers, many other tools are being built by the community to help support the ecosystem. Some of them are listed below:
+In addition to block explorers, there are other tools and resources. Some of them are listed below:
 
 **TOOL**| **USE**
 ---|---

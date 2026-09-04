@@ -6,7 +6,7 @@ description: "Polkadot Vault is the new mobile app that turns your phone into a 
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-_Polkadot Vault is the new mobile app developed by Parity that replaces Parity Signer. It's redesigned with additional functionality and for a better and more streamlined user experience._
+_Polkadot Vault is a mobile app that replaces Parity Signer, turning a spare phone into a cold-storage wallet for your Polkadot accounts._
 
 * * *
 
@@ -20,7 +20,7 @@ In this article, you will learn how to add additional chains to Polkadot Vault a
 
     Make sure that you **explicitly trust** the source of the chain spec and metadata. Adding metadata from an untrusted source could lead to **loss of funds.**
 
-    The instructions in this article are provided with the assumption that you trust the source of the chain spec and metadata. Web3 Foundation does **not endorse** third-party metadata, with the exception of the ones provided by Parity.
+    The instructions in this article are provided with the assumption that you trust the source of the chain spec and metadata.
 
 
 ### Metadata updates

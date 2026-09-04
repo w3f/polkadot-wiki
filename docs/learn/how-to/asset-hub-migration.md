@@ -12,7 +12,7 @@ description: "Several key features are moving from the Polkadot Relay Chain to A
 
     **No action was  required on your part**. The process happenned in the background and it took a few hours.
 
-    Your funds moved from one network to another, but never left your account. If you have any questions about the process, [contact support](https://docs.polkadot.com/get-support/).
+    Your funds moved from one network to another, but never left your account.
 
 To increase the ecosystem's scalability, Polkadot distributes its functionalities across different chains. Thanks to its interoperability, this distribution is seamless, and you don't need to worry about which network a feature runs on. All functionalities remain accessible through your preferred tools and wallets as part of the overall Polkadot experience.
 
@@ -82,7 +82,7 @@ With balances now recorded on the Polkadot Asset Hub, wallets will query this ch
 
     If your wallet shows no balance, it probably hasn't updated to the migration yet. Check for a new version and reach out to the wallet's support team for help.
 
-    If you use Polkadot Developer Interface (Polkadot Developer Interface), connect to Asset Hub:
+    If you use Polkadot Developer Interface, connect to Asset Hub:
     [Polkadot Developer Interface: How to Switch Network Nodes](switch-network-nodes.md)
 
 The same applies to staking or governance activities. All interactions will occur on the Polkadot Asset Hub. Wallets and interfaces will be ready to support this change, so you don't need to adjust any settings.

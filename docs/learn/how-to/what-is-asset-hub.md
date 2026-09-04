@@ -60,17 +60,11 @@ Obtain more information about smart contracts on Polkadot in the documentation:
 
 There are two types of assets on Asset Hub: sufficient and non-sufficient.
 
-To hold a non-sufficient asset in an account, the account needs to exist on-chain, which means it needs to have a balance in the native asset at least as much as the [Existential Deposit (ED)](existential-deposit.md). This means **0.01 DOT**  on Polkadot Asset Hub and **0.000003333 KSM** on Kusama Asset Hub. These existential deposits are ten times smaller than those on the Relay Chains.
+To hold a non-sufficient asset in an account, the account needs to exist on-chain, which means it needs to have a balance in the native asset at least as much as the [Existential Deposit (ED)](existential-deposit.md). This means **0.01 DOT**  on Polkadot Asset Hub and **0.000003333 KSM** on Kusama Asset Hub. These existential deposits are smaller than those on the Relay Chains.
 
 So, to send a non-sufficient asset, you need to ensure that the recipient account has at least the ED. A sufficient asset doesn't require the account to have any balance in the native token to be received.
 
 However, each asset (either sufficient or non-sufficient) has its own minimum balance that an account must hold.
-
-!!! warning "ATTENTION"
-
-    Tether, the entity behind USDT, [has announced the discontinuation of USDT on the Kusama network](https://tether.to/en/tether-makes-strategic-transition-to-meet-community-demands-and-foster-innovation) (though it'll still be available on Polkadot).
-
-    It's recommended you redeem your USDT from Kusama Asset Hub (formerly Statemine) by sending them to a compatible exchange (like[ Bitfinex](withdraw-usdt-from-exchanges.md)) before the specified deadline mentioned in Tether's official announcement.
 
 Currently, the sufficient tokens and foreign assets (native assets on other networks) in Polkadot Asset Hub are:
 

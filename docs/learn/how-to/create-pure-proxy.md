@@ -45,15 +45,13 @@ Polkadot offers different types of proxies you can set, depending on the permiss
 
   * Non-transfer – this proxy type will allow any type of transaction except for balance transfers.
 
-  * Governance – proxies of this type can make transactions related to governance (Democracy pallet, Treasury pallet, etc).
+  * Governance – proxies of this type can make transactions related to governance (ConvictionVoting pallet, Treasury pallet, etc).
 
   * Staking – these proxies allow staking-related transactions. Not to be confused with the soon-to-be-deprecated _controller_ accounts, which are needed for certain transactions. Staking proxies are meant to allow you to access your stash account less frequently.
 
   * Identity Judgement – proxies that are in charge of allowing registrars to make judgement on an account's identity. See more information [here](../learn-identity.md#judgements).
 
-  * Auction – proxies of this type allow transactions related to auctions and crowdloans.
-
-See more in-depth info about proxy types [in this article](../learn-proxies.md).
+See more in-depth info about proxies [in this article](../learn-proxies.md).
 
 !!! warning "ATTENTION"
 
@@ -115,7 +113,7 @@ Pure proxies, in particular, can be used for permissionless management. In the e
 
 If you are more of a visual learner, check these videos from the Tech Ed team. They show how to create and delete pure proxies and when you may want to use them:
 
-  * [Creating and Deleting Anonymous (Pure) Proxies on Polkadot ](https://www.youtube.com/watch?v=T443RcCYP24)
-  * [When and Why you can use Anonymous (Pure) Proxies on Polkadot](https://www.youtube.com/watch?v=YkYApbhU3i0)
+  * [Creating and Deleting Pure Proxies on Polkadot](https://www.youtube.com/watch?v=T443RcCYP24)
+  * [When and Why you can use Pure Proxies on Polkadot](https://www.youtube.com/watch?v=YkYApbhU3i0)
 
 * * *

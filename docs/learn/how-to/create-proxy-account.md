@@ -65,13 +65,13 @@ Polkadot offers different types of proxies you can set, depending on the permiss
 
   * Non-transfer - this proxy type will allow any type of transaction except for balance transfers.
 
-  * Governance - proxies of this type can make transactions related to governance (Democracy pallet, Treasury pallet, etc).
+  * Governance - proxies of this type can make transactions related to governance (ConvictionVoting pallet, Treasury pallet, etc).
 
   * Staking - these proxies allow staking-related transactions. Not to be confused with the soon-to-be-deprecated _controller_ accounts, which are needed for certain transactions. Staking proxies are meant to allow you to access your stash account less frequently.
 
 For more proxy types, visit the [Proxy Types](../learn-proxies.md#proxy-types) article.
 
-See more in-depth info about proxy types [in this article](../learn-proxies.md).
+See more in-depth info about proxies [in this article](../learn-proxies.md).
 
 !!! warning "ATTENTION"
 
@@ -89,7 +89,7 @@ For example, perhaps the owner of an account, Ferdie, wishes to delegate certain
 
 * * *
 
-Check out this video from the Tech Ed team, which explains proxy accounts in more detail:
+Check out this video, which explains proxy accounts in more detail:
 
 [What are Proxy Accounts on Polkadot Network?](https://www.youtube.com/watch?v=1tcygkq52tU)
 

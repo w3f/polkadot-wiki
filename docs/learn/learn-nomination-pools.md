@@ -127,7 +127,7 @@ learn how to claim rewards for another pool member.
 Nomination pool members can vote in Polkadot OpenGov with funds they delegated to the pool. In the past, pool members' funds were transferred to the pool system account. A [delegation staking system](https://hackmd.io/@ak0n/454-np-governance#Pallet-Delegation-Staking) was introduced to allow keeping ownership of your funds and voting in governance. 
 
 !!!info "Dual Staking"
-    For pool members who were dual staking (i.e., pool members and nominators) before the introduction of delegation staking, follow [**these guides**](how-to/nomination-pool-opengov-changes.md) to migrate manually to the new system. 
+    Since the runtime 1.6.1 upgrade, any account can be both a nomination pool member and a solo staker at the same time, and the earlier manual migration for dual stakers is no longer required.
 
 ### Unbond and withdraw Funds
 
@@ -247,7 +247,6 @@ following statements are true:
 <!-- how-to-guides -->
 ## How-to guides
 
-- [Nomination Pool Members & OpenGov Participation](how-to/nomination-pool-opengov-changes.md)
 - [Staking Dashboard — How to Create a Nomination Pool](how-to/create-nomination-pool.md)
 - [Staking Dashboard — How to Join a Nomination Pool](how-to/join-nomination-pool.md)
 - [Nomination Pools on the Polkadot Developer Interface](how-to/nomination-pools-guide.md)

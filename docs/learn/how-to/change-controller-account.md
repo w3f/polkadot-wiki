@@ -6,13 +6,10 @@ description: "Changing the controller account on your Polkadot stash account onl
 !!!info "Related concepts"
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
-_Discover the Staking Dashboard that makes staking much easier and check the[extensive article list](../../general/dashboards/staking-dashboard.md) to help you get started._
-
-* * *
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 !!! warning "ATTENTION"
 

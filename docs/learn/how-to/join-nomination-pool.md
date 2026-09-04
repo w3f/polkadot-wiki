@@ -43,7 +43,7 @@ You can learn how to choose the best nomination pool based on your preferences i
 
 !!! warning "IMPORTANT"
 
-    Choose wisely. As a pool member you must wait for the unbounding period before switching pools: 28 days on Polkadot and 7 days on Kusama.
+    Choose wisely. As a pool member you must wait for the unbounding period before switching pools: 1-2 days on Polkadot and 7 days on Kusama.
 
 4. In this panel, under the "Overview" tab, you can see key information about the pool, such as the reward history, total bonded amount, and assigned roles. In the "Nominations" tab, you can check which validators the pool is nominating.
 
@@ -71,7 +71,7 @@ On the right side, you can enter the amount you want to bond and choose how rewa
 
 ### Limitations
 
-  * To switch pools, a member must wait for the unbonding period: 7 days on Kusama and 28 days on Polkadot.
+  * To switch pools, a member must wait for the unbonding period: 7 days on Kusama and 1-2 days on Polkadot.
   * Auto-compounding isn't enabled by default, but it can be done manually or permissionlessly, depending on your chosen settings.
   * A member can also partially unbond their staked funds in the pool, with up to 16 partial unbonds allowed. See [this article](unbond-from-nomination-pool.md) for more details on how to unbond or exit a pool.
   * See this [article](../learn-nomination-pools.md) for a comparison between nominating directly and joining a nomination pool.

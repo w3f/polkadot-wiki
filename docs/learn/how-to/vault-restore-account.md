@@ -6,7 +6,7 @@ description: "Polkadot Vault is the new mobile app that turns your phone into a 
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-_Polkadot Vault is the new mobile app developed by Parity that replaces Parity Signer. It's redesigned with additional functionality and for a better and more streamlined user experience._
+_Polkadot Vault is a mobile app that replaces Parity Signer, turning a spare phone into a cold-storage wallet for your Polkadot accounts._
 
 * * *
 
@@ -25,7 +25,7 @@ In this article you will learn how to **restore an account** in Polkadot Vault t
 
 ### How to restore your account in Polkadot Vault
 
-1. Download the Polkadot Vault app [from the official site](https://signer.parity.io/) and install it on your phone.
+1\. Download the Polkadot Vault app [from the official site](https://signer.parity.io/) and install it on your phone.
 
 2\. If this is a new installation, read through the introductory screens and click "Continue," then agree to the Terms of Service and Privacy Policy.
 

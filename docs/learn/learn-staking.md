@@ -178,7 +178,7 @@ article. The tutorial presented in the article is demonstrated on Polkadot, but 
 procedure is the same for Kusama.
 
 !!!info "Polkadot Staking Dashboard"
-    The [Staking Dashboard](https://staking.polkadot.cloud/) provides a more user-friendly alternative to staking. See the instructions in [this](how-to/stake-your-dot.md) article to learn how to stake with the dashboard.
+    The [Staking Dashboard](https://staking.polkadot.cloud/) provides a more user-friendly alternative to staking. See the [Staking Dashboard overview](../general/dashboards/staking-dashboard.md) and the [dashboard documentation](https://docs.staking.polkadot.cloud/) to learn how to stake with it.
 
 **Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking,
 without sacrificing Polkadot's strict security model.
@@ -451,7 +451,6 @@ long as at least one is active.
 <!-- how-to-guides -->
 ## How-to guides
 
-- [Staking Dashboard — How to Stake Your DOT](how-to/stake-your-dot.md)
 - [How to Unstake Your Tokens](how-to/unstake-tokens.md)
 - [Staking Dashboard — How to Connect Your Account](how-to/connect-account.md)
 - [Staking Dashboard — How to Unbond Your Tokens](how-to/unbond-tokens.md)

@@ -14,5 +14,5 @@ The `Metadata Explorer` tool helps visualize the metadata of various parachains 
 <!-- how-to-guides -->
 ## How-to guides
 
-- [How to Update the Metadata (Signer)](../learn/how-to/update-metadata-signer.md)
+- [How to Update the Metadata (Developer Signer)](../learn/how-to/update-metadata-signer.md)
 <!-- how-to-guides -->

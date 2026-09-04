@@ -1,5 +1,5 @@
 ---
-title: How to View Your Mnemonic Phrase (Signer)
+title: How to View Your Mnemonic Phrase (Developer Signer)
 description: "The Polkadot Developer Signer only shows your mnemonic seed once: during the initial creation of your account."
 ---
 
@@ -12,11 +12,11 @@ If you miss taking note of it, or if you misplaced your mnemonic phrase, there i
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md).
 
 The only workaround for this would be to send your DOT to a newly created account:
 
-1\. Create a new Polkadot account.
+1. Create a new Polkadot account.
 
 2. Take note of the mnemonic phrase and save your new JSON file in a safe and secure place.
 

@@ -17,7 +17,7 @@ This article will guide you through creating a Polkadot account using the battle
 
     The wallets mentioned in this section are highly recommended most users, specially for newcomers. They provide identical functionalities and security standards, but the interface and user experience are tailored for everyday use.
 
-On the [wallet options page](where-to-store-dot.md), you can find articles about some wallets funded by the Polkadot Treasury and well-regarded by the community, describing some of their basic features like creating an account, receiving and sending funds, staking, etc.
+On the [wallet options page](where-to-store-dot.md), you can find articles about some wallets well-regarded by the community, describing some of their basic features like creating an account, receiving and sending funds, staking, etc.
 
 The following articles guide you through the process of creating a Polkadot account using these user-friendly wallets:
 
@@ -51,13 +51,13 @@ The following wallets are oriented toward **developers and advanced users** :
 
 !!! warning "IMPORTANT"
 
-    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions funded by the Polkadot Treasury that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md) and check how to create a Polkadot account with them in the section above.
+    The Polkadot Developer Signer is an account manager meant for power users and developers. There are several user-friendly browser extensions that support a lot of features right from the extension. Discover them in [this article](where-to-store-dot.md) and check how to create a Polkadot account with them in the section above.
 
 No matter the [type](../learn-account-advanced.md) of your account, add your accounts through a browser extension, as it has many advantages:
 
-  * It provides better security than using the Web UI directly.
+  * You can use your accounts with any compatible app in the ecosystem, not just the Polkadot Developer Interface.
+  * It provides better security than using a web UI directly.
   * Your browser won't "forget" your accounts if its cookies are cleared.
-  * The extension recognizes all known Polkadot scams and alerts you when you access a phishing site. This will help you protect yourself and your funds.
 
 !!! tip "GOOD TO KNOW"
 
