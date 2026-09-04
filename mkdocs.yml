@@ -261,9 +261,8 @@ nav:
   - Analytics:
      - Parity Data Dashboards: general/dashboards/parity-data-dashboards.md
   - Guides:
-    - general/polkadotjs.md
+    - Overview: general/polkadotjs.md
     - Polkadot-JS Guides:
-      - general/polkadotjs.md
       - Polkadot Developer Interface: general/polkadotjs-ui.md
       - Polkadot-JS Account Guides:
         - learn/learn-guides-accounts.md
