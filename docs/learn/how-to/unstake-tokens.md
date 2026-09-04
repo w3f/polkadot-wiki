@@ -27,16 +27,16 @@ You can decide to unbond (unstake) and stop being a nominator at any time. Howev
 
     Controller accounts have been removed from staking. Staking actions are now signed by your stash account or, optionally, a [staking proxy](create-proxy-account.md) that can act on its behalf.
 
-Unbonding your tokens can be done by navigating to the Network > Staking > [Accounts](https://polkadot.js.org/apps/#/staking/actions)page on Polkadot Developer Interface. The example below is on the Westend testnet, but the process will be the same on Polkadot.
+Unbonding your tokens can be done by navigating to the Network > Staking > [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)page on Polkadot Developer Interface. The example below is on the Westend testnet, but the process will be the same on Polkadot.
 
 
 ### Step 1: Chilling
 
 #### Unbond all your tokens
 
-Navigate to the "Network" > "Staking Async" > "[Accounts](https://polkadot.js.org/apps/#/staking/actions)"page on Polkadot Developer Interface. If you want to unbond _all_ your funds, you need to chill your account first, that is, stop nominating. Click on the Stop button to the right of your account:
+Navigate to the "Network" > "Staking Async" > "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)"page on Polkadot Developer Interface. If you want to unbond _all_ your funds, you need to chill your account first, that is, stop nominating. Click on the Stop button to the right of your account:
 
-[![](../../assets/how-to/65011122678.png)](https://polkadot.js.org/apps/#/staking/actions)
+[![](../../assets/how-to/65011122678.png)](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)
 
 !!! warning "IMPORTANT"
 

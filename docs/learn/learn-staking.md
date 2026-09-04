@@ -246,7 +246,7 @@ validator can produce blocks for a parachain (i.e. para-validators) or the relay
 para-validators earning more era points per unit time (see
 [this](https://docs.polkadot.com/infrastructure/staking-mechanics/rewards-payout/#era-points) page for more information). The
 role can switch between sessions, and you can look at
-[the staking tab on the Polkadot Developer Interface](https://polkadot.js.org/apps/#/staking) to know which
+[the staking tab on the Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async) to know which
 validator is producing blocks for the relay chain or parachains.
 
 It is not recommended to change nominations because of the low era points of a validator in a single
@@ -321,7 +321,7 @@ era. Staking rewards are kept available for
 For more information on why this is so, see the page on [simple payouts](learn-staking-advanced.md).
 
 !!!info "Payouts"
-    Payouts are unclaimed rewards waiting to be paid out to both validators and nominators. If you go to the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking), you will see a list of all validators that you have nominated in the past 84 eras and for which you have not yet received a payout. The payout page is visible only to stakers.
+    Payouts are unclaimed rewards waiting to be paid out to both validators and nominators. If you go to the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async), you will see a list of all validators that you have nominated in the past 84 eras and for which you have not yet received a payout. The payout page is visible only to stakers.
 
 Each validator as well as their nominators have the option to trigger the payout for all unclaimed
 eras. Note that this will pay everyone who was nominating that validator during those eras.
@@ -452,9 +452,6 @@ long as at least one is active.
 ## How-to guides
 
 - [How to Unstake Your Tokens](how-to/unstake-tokens.md)
-- [Staking Dashboard — How to Connect Your Account](how-to/connect-account.md)
-- [Staking Dashboard — How to Unbond Your Tokens](how-to/unbond-tokens.md)
 - [How Do I Stake (Nominate) on Polkadot?](how-to/stake-nominate.md)
 - [How to See My Staking Rewards](how-to/see-staking-rewards.md)
-- [Staking Dashboard — How to Rebond Your Tokens](how-to/dashboard-rebond-tokens.md)
 <!-- how-to-guides -->

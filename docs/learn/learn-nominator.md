@@ -116,7 +116,7 @@ rewards is extremely unsafe.
 ### Targets Page
 
 There are many factors to consider when deciding which of your nominations. One helpful tool to
-choose validators is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets) table in
+choose validators is the Staking [Targets](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/all-validators) table in
 the Polkadot Developer Interface. This allows sorting validators using various metrics. Below are the relevant
 metrics shown as an example, followed by a brief description of each.
 
@@ -213,7 +213,7 @@ For guidelines about how to rebag or move your account within a bag, see the fol
 
 ### Validator Stats
 
-Nominators can query [validator histories](https://polkadot.js.org/apps/#/staking/query/) to see
+Nominators can query [validator histories](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/query) to see
 statistics such as era points, elected stake, rewards and slashes, and commission. It is good
 practice to do comprehensive research on validator candidates. This could include (but should not be
 limited to) checking the validators' [identity](learn-identity.md) (if they have set one) and going
@@ -323,7 +323,7 @@ Thus, for **nominator counters**, we have:
 
 ### Active vs. Inactive Nomination
 
-When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
+When you go to the [Account actions](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
 [this](./learn-guides-nominator.md#nominate-using-polkadot-js) guide to configure it first. Your
 nominations will be effective in the next era; eras are roughly 24 hours on Polkadot (6 hours on

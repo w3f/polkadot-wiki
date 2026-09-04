@@ -109,7 +109,7 @@ Nomination pool administrators can be active on their social media and in the ec
 
 Once you have done your own research and picked a nomination pool, join it. The steps are described in these guides:
 
-[Staking Dashboard: How to Join a Nomination Pool](join-nomination-pool.md)
+[Staking Dashboard documentation on joining a pool](https://docs.staking.polkadot.cloud/en/nomination-pools#joining-a-pool)
 
 [Polkadot Developer Interface: Nomination Pools](nomination-pools-guide.md)
 

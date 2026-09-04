@@ -344,16 +344,8 @@ nav:
         - "How to Withdraw USDT from Exchanges on Asset Hub": learn/how-to/withdraw-usdt-from-exchanges.md
       - Staking:
         - "How to Choose Validators": learn/how-to/choose-validators.md
-        - "Staking Dashboard — How to Create a Nomination Pool": learn/how-to/create-nomination-pool.md
-        - "Staking Dashboard — How to Join a Nomination Pool": learn/how-to/join-nomination-pool.md
-        - "Staking Dashboard — How to Unbond Your Tokens": learn/how-to/unbond-tokens.md
-        - "Staking Dashboard — How to Connect Your Account": learn/how-to/connect-account.md
         - "How to See My Staking Rewards": learn/how-to/see-staking-rewards.md
-        - "Staking Dashboard — How to Claim Nomination Pool Rewards": learn/how-to/claim-pool-rewards.md
-        - "Staking Dashboard — How to Unbond from a Nomination Pool": learn/how-to/unbond-from-nomination-pool.md
         - "How Do I Know Which Nomination Pool to Choose?": learn/how-to/choose-nomination-pool.md
-        - "Staking Dashboard — How to Update Your Controller Account": learn/how-to/dashboard-update-controller.md
-        - "Staking Dashboard — How to Rebond Your Tokens": learn/how-to/dashboard-rebond-tokens.md
       - Ledger:
         - "Ledger — How to Sign a Transaction": learn/how-to/ledger-sign-transaction.md
         - "Ledger — How to Confirm the Account Address on Your Device": learn/how-to/ledger-confirm-address.md
@@ -374,10 +366,10 @@ nav:
         - "Parity Signer — How to Sign a Transaction": learn/how-to/parity-signer-sign-transaction.md
       - OpenGov:
         - "How to Participate in Polkadot OpenGov": learn/how-to/opengov-participate.md
-      - Concepts & Essentials:
-        - "What is the Existential Deposit?": learn/how-to/existential-deposit.md
-        - "What is Asset Hub and How Do I Use It?": learn/how-to/what-is-asset-hub.md
-        - "Asset Hub Migration — What You Must Know": learn/how-to/asset-hub-migration.md
-        - "Polkadot and Kusama — What's the Difference?": learn/how-to/polkadot-vs-kusama.md
-        - "Block Explorers for Polkadot and Kusama": learn/how-to/block-explorers.md
-        - "Where to Store DOT — Polkadot Wallet Options": learn/how-to/where-to-store-dot.md
+    - Essentials:
+      - "What is the Existential Deposit?": learn/how-to/existential-deposit.md
+      - "What is Asset Hub and How Do I Use It?": learn/how-to/what-is-asset-hub.md
+      - "Asset Hub Migration — What You Must Know": learn/how-to/asset-hub-migration.md
+      - "Polkadot and Kusama — What's the Difference?": learn/how-to/polkadot-vs-kusama.md
+      - "Block Explorers for Polkadot and Kusama": learn/how-to/block-explorers.md
+      - "Where to Store DOT — Polkadot Wallet Options": learn/how-to/where-to-store-dot.md

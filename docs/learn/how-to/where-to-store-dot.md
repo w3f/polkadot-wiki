@@ -38,7 +38,7 @@ You can install [Polkadot Vault](https://www.parity.io/signer/) (rebranded from 
 
 #### **Ledger**
 
-Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us/articles/360016289919) which supports Polkadot. You can use it natively with [Ledger Live](../../general/ledger.md#using-ledger-live) or connect it to many of the wallets mentioned in this article and directly to the [Staking Dashboard](connect-account.md#how-to-connect-your-ledger-account).
+Another secure option is the [Ledger wallet](https://support.ledger.com/hc/en-us/articles/360016289919) which supports Polkadot. You can use it natively with [Ledger Live](../../general/ledger.md#using-ledger-live) or connect it to many of the wallets mentioned in this article and directly to the [Staking Dashboard](../../general/dashboards/staking-dashboard.md).
 
 * * *
 

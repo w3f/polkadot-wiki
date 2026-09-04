@@ -33,7 +33,7 @@ Any nominator can join a nomination pool. This article goes through the steps to
 
     The convenience of being a member of a nomination pool may involve having to pay a commission set by the pool manager. Check the pool's commission before joining one.
 
-1. To join a nomination pool, navigate to the **Network > Staking Async > Pools** [page](https://polkadot.js.org/apps/#/staking-async/pools) on the Polkadot Developer Interface and select the "**\+ Join** " button next to the selected pool:
+1. To join a nomination pool, navigate to the **Network > Staking Async > Pools** [page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/pools) on the Polkadot Developer Interface and select the "**\+ Join** " button next to the selected pool:
 
 !!! warning "ATTENTION"
 
@@ -60,7 +60,7 @@ Any nominator can join a nomination pool. This article goes through the steps to
 
     You **cannot rebond during the unbonding period** with a nomination pool. If you change your mind, you must wait for the unbonding period to end before you can join a nomination pool again.
 
-Members can exit the pool at any time by selecting "**Unbond funds** " instead, as shown in the screenshot above. This is in the same drop-down menu under "**Network** "  **> "Staking**"  **> "[Accounts](https://polkadot.js.org/apps/#/staking-async/actions)" >** **Pooled**.
+Members can exit the pool at any time by selecting "**Unbond funds** " instead, as shown in the screenshot above. This is in the same drop-down menu under "**Network** "  **> "Staking**"  **> "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)" >** **Pooled**.
 
 !!! tip "GOOD TO KNOW"
 
@@ -72,7 +72,7 @@ Members can exit the pool at any time by selecting "**Unbond funds** " instead, 
 
 The member can claim their portion of any rewards that have accumulated since the previous time they claimed (or, in the case that they have never claimed, any rewards that have accumulated since the era after they joined). Rewards are split pro rata among the actively bonded members.
 
-On the Polkadot Developer Interface, navigate to "**Network** "  **> "Staking**"  **> "[Accounts](https://polkadot.js.org/apps/#/staking-async/actions)" > "Pooled**," where you can view your pool member account details. To claim rewards, click on the three vertical dots and click on "**Withdraw claimable**."
+On the Polkadot Developer Interface, navigate to "**Network** "  **> "Staking**"  **> "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)" > "Pooled**," where you can view your pool member account details. To claim rewards, click on the three vertical dots and click on "**Withdraw claimable**."
 
 ![](../../assets/how-to/65032559217.png)
 

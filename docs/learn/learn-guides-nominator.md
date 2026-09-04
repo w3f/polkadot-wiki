@@ -38,22 +38,22 @@ last block number that they produced. If you click on the chart button it will t
 "Validator Stats" page for that validator that shows you more detailed and historical information
 about the validator's stake, rewards and [slashes](./learn-offenses.md).
 
-The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
+The "Account actions" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)) allows you
 to stake and nominate.
 
-The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)) allows you to
+The "Payouts" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)) allows you to
 claim rewards from staking.
 
-The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
+The "Targets" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/all-validators)) will help you
 estimate your earnings and this is where it's good to start picking favorites.
 
-The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
+The "Waiting" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough KSM backing them (as allocated through the
 [Phragmén election mechanism](./learn-phragmen.md)). It is possible validator can remain in the
 queue for a very long time if they never get enough backing.
 
-The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
+The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
 rewards, and [slashes](./learn-offenses.md).
 
@@ -97,7 +97,7 @@ Select them, confirm the transaction, and you're done - you are now nominating. 
 will become active in the next era. Eras last six hours on Kusama - depending on when you do this,
 your nominations may become active almost immediately, or you may have to wait almost the entire six
 hours before your nominations are active. You can check how far along Kusama is in the current era
-on the [Staking page](https://polkadot.js.org/apps/#/staking).
+on the [Staking page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
@@ -121,7 +121,7 @@ fee. Someone must submit a transaction with a validator ID and an era index. Pol
 automatically calculate that validator's reward and distribute the rewards pro rata.
 
 These details are handled for you automatically if you use the
-[Polkadot Developer Interface](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
+[Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async), which also allows you to submit
 batches of eras at once.
 
 To claim rewards on Polkadot Developer Interface, you will need to be in the "Payouts" tab underneath "Staking",
@@ -198,7 +198,7 @@ Result:
 
 You can check the transaction status by using the value of the `InBlock` in
 [Subscan](https://www.subscan.io/). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot Developer Interface.
+[Staking](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async) page on the Polkadot Developer Interface.
 
 ### Step 3: Nominate a Validator
 

@@ -7,7 +7,7 @@ description: "You can rebond your locked tokens before the unbonding period is o
     For the underlying concepts, see [Staking (advanced)](../learn-staking-advanced.md).
 
 
-If you unbonded your tokens but changed your mind, you can rebond them before the unbonding period is over through the  "**Network** "  **> "Staking**"  **> "**[**Account page**](https://polkadot.js.org/apps/#/staking-async/actions)" on the Polkadot Developer Interface. This extrinsic is issued by the **stash or staking proxy** account.
+If you unbonded your tokens but changed your mind, you can rebond them before the unbonding period is over through the  "**Network** "  **> "Staking**"  **> "**[**Account page**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)" on the Polkadot Developer Interface. This extrinsic is issued by the **stash or staking proxy** account.
 
 !!! tip "GOOD TO KNOW"
 

@@ -20,7 +20,7 @@ Nominators help secure the network by bonding their DOT and selecting validators
 
 !!! warning "IMPORTANT"
 
-    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is **dynamic** and can be found on the [Targets](https://polkadot.js.org/apps/#/staking/targets) page on Polkadot Developer Interface. Please refer to [this referendum](https://polkadot.subsquare.io/democracy/referenda/55) for details.
+    Not all nominators with over 250 DOT will get staking rewards. The minimum amount needed to **earn rewards** is **dynamic** and can be found on the [Targets](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/all-validators) page on Polkadot Developer Interface. Please refer to [this referendum](https://polkadot.subsquare.io/democracy/referenda/55) for details.
 
   * If you are staking **above the dynamic minimum**  amount and still **aren't receiving rewards** , it's possible that your account needs to be re-adjusted by calling an extrinsic. This is due to the new **bags-list** feature. You can find instructions on how to fix this [here](../learn-staking-advanced.md).
   * If you don't have enough DOT to earn rewards, consider [joining a nomination pool](nomination-pools-guide.md) instead of staking solo.
@@ -42,7 +42,7 @@ You can nominate validators (also known as "staking") on Polkadot Developer Inte
 
 [How to Create a Polkadot Account](create-polkadot-account.md)
 
-2\. "Navigate to Network" > "Staking Async" > "[Accounts](https://polkadot.js.org/apps/#/staking/actions)" page on Polkadot Developer Interface:
+2\. "Navigate to Network" > "Staking Async" > "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)" page on Polkadot Developer Interface:
 
 ![](../../assets/how-to/65031344278.png)
 
