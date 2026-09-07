@@ -198,4 +198,5 @@ for detailed instructions. If you choose this approach, you should trust the pro
 - [Polkadot Vault — How to Restore Your Account](../learn/how-to/vault-restore-account.md)
 - [Polkadot Vault — How to Sign a Transaction](../learn/how-to/vault-sign-transaction.md)
 - [Polkadot Vault — How to Create the Same Account on Different Networks](../learn/how-to/vault-same-account-networks.md)
+- [Polkadot Vault — How to Replicate an Account for Asset Hub](../learn/how-to/vault-replicate-account.md)
 <!-- how-to-guides -->

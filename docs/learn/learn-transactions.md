@@ -247,4 +247,7 @@ to maximize their reward.
 - [Error 'Frozen' — I Can't Transfer All My DOT](how-to/error-frozen-cant-transfer.md)
 - [How to Sign a Transaction](how-to/sign-transaction.md)
 - [How to Send All of Your Funds Out of Your Account](how-to/send-all-funds.md)
+- [Where Can I See My Transaction History?](how-to/view-transaction-history.md)
+- [How to Export Your Transaction History to CSV](how-to/export-transaction-history.md)
+- [How to See Transaction Costs Before a Transfer](how-to/transaction-costs.md)
 <!-- how-to-guides -->

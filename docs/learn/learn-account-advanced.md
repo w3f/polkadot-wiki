@@ -530,4 +530,5 @@ for (var key in accounts) {
 ## How-to guides
 
 - [How to Create an Account in Subkey](how-to/create-account-subkey.md)
+- [How to Restrict Your Account to One Network](how-to/restrict-account-network.md)
 <!-- how-to-guides -->

@@ -292,6 +292,7 @@ nav:
         - "How to Create a Vanity Address": learn/how-to/create-vanity-address.md
         - "How to Restore Your Account": learn/how-to/restore-account.md
         - "How to Receive DOT to My Account": learn/how-to/receive-dot.md
+        - "How Can I Find and Copy My Address": learn/how-to/find-copy-address.md
         - "The Difference Between Accounts and Address Book": learn/how-to/accounts-vs-address-book.md
         - "How to Create and Use a Multisig Account": learn/how-to/create-multisig-account.md
         - "How to Create a Proxy Account": learn/how-to/create-proxy-account.md
@@ -301,11 +302,14 @@ nav:
         - "My Mnemonic Phrase Is Invalid": learn/how-to/mnemonic-invalid.md
         - "My Password Is Not Working": learn/how-to/password-not-working.md
         - "How to Switch Network Nodes": learn/how-to/switch-network-nodes.md
+        - "How to Change the Developer Interface Language": learn/how-to/change-interface-language.md
+        - "How to Restrict Your Account to One Network": learn/how-to/restrict-account-network.md
         - "How to Set Identities for Sub Accounts": learn/how-to/set-subaccount-identities.md
         - "How to Set and Clear an Identity": learn/how-to/set-clear-identity.md
         - "How to Request and Cancel Identity Judgement": learn/how-to/request-cancel-judgement.md
         - "How to Send / Transfer Funds": learn/how-to/transfer-funds.md
         - "How to Send All of Your Funds Out of Your Account": learn/how-to/send-all-funds.md
+        - "How to See Transaction Costs Before a Transfer": learn/how-to/transaction-costs.md
         - "How to Transfer Tether (USDT) on Polkadot": learn/how-to/transfer-usdt.md
         - "How to Teleport DOT or KSM": learn/how-to/teleport-dot-ksm.md
         - "How to Sign a Transaction": learn/how-to/sign-transaction.md
@@ -336,11 +340,14 @@ nav:
         - "How to Create a Polkadot Account": learn/how-to/create-polkadot-account.md
         - "How to Create an Account in Subkey": learn/how-to/create-account-subkey.md
         - "How to Store Your Mnemonic Phrase & Backup Safely": learn/how-to/store-mnemonic-safely.md
+        - "I Can't Find My Account on the Polkadot Network": learn/how-to/cant-find-account.md
       - Transactions:
         - "Why Can't I Transfer My DOT?": learn/how-to/why-cant-i-transfer-dot.md
         - "How to Verify What Extrinsic You're Signing": learn/how-to/verify-extrinsic.md
         - "Error 'Frozen' — I Can't Transfer All My DOT": learn/how-to/error-frozen-cant-transfer.md
         - "How to Withdraw USDT from Exchanges on Asset Hub": learn/how-to/withdraw-usdt-from-exchanges.md
+        - "Where Can I See My Transaction History?": learn/how-to/view-transaction-history.md
+        - "How to Export Your Transaction History to CSV": learn/how-to/export-transaction-history.md
       - Staking:
         - "How to Choose Validators": learn/how-to/choose-validators.md
         - "How to See My Staking Rewards": learn/how-to/see-staking-rewards.md
@@ -360,6 +367,7 @@ nav:
         - "Polkadot Vault — How to Sign a Transaction": learn/how-to/vault-sign-transaction.md
         - "Polkadot Vault — How to Add a New Chain and Update Metadata": learn/how-to/vault-add-chain-metadata.md
         - "Polkadot Vault — How to Create the Same Account on Different Networks": learn/how-to/vault-same-account-networks.md
+        - "Polkadot Vault — How to Replicate an Account for Asset Hub": learn/how-to/vault-replicate-account.md
         - "Parity Signer — How to Create an Account": learn/how-to/parity-signer-create-account.md
         - "Parity Signer — How to Restore Your Account": learn/how-to/parity-signer-restore-account.md
         - "Parity Signer — How to Sign a Transaction": learn/how-to/parity-signer-sign-transaction.md

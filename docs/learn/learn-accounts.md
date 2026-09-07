@@ -179,4 +179,6 @@ but gets put back when it has the existential deposit.
 - [The Difference Between Accounts and Address Book](how-to/accounts-vs-address-book.md)
 - [How to Create a Polkadot Account](how-to/create-polkadot-account.md)
 - [How to View Your Mnemonic Phrase (Developer Signer)](how-to/view-mnemonic-signer.md)
+- [How Can I Find and Copy My Address](how-to/find-copy-address.md)
+- [I Can't Find My Account on the Polkadot Network](how-to/cant-find-account.md)
 <!-- how-to-guides -->
