@@ -8,11 +8,6 @@ description: "On Polkadot and Kusama, addresses are only active if they hold a m
 
 If you can't find your assets in your account, don't worry just yet. There are a few possible reasons why your wallet or block explorer might not show any assets or activity. Keep reading to learn more.
 
-#### **TABLE OF CONTENTS**
-
-  * Assets on a different network
-  * Account below the existential deposit
-
 * * *
 
 ### Assets on a different network
