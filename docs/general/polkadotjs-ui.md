@@ -134,4 +134,5 @@ granular functions such as
 
 - [How to Switch Network Nodes](../learn/how-to/switch-network-nodes.md)
 - [How to Change the Developer Interface Language](../learn/how-to/change-interface-language.md)
+- [How to Troubleshoot Connection Issues](../learn/how-to/troubleshoot-connection-issues.md)
 <!-- how-to-guides -->

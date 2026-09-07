@@ -301,6 +301,8 @@ nav:
         - "How to Change the Style of Your DOT Icon": learn/how-to/change-dot-icon-style.md
         - "My Mnemonic Phrase Is Invalid": learn/how-to/mnemonic-invalid.md
         - "My Password Is Not Working": learn/how-to/password-not-working.md
+        - "How to Troubleshoot Connection Issues": learn/how-to/troubleshoot-connection-issues.md
+        - "The 'Unable to Retrieve Key Pair' Error": learn/how-to/error-key-pair.md
         - "How to Switch Network Nodes": learn/how-to/switch-network-nodes.md
         - "How to Change the Developer Interface Language": learn/how-to/change-interface-language.md
         - "How to Restrict Your Account to One Network": learn/how-to/restrict-account-network.md
@@ -348,6 +350,7 @@ nav:
         - "How to Withdraw USDT from Exchanges on Asset Hub": learn/how-to/withdraw-usdt-from-exchanges.md
         - "Where Can I See My Transaction History?": learn/how-to/view-transaction-history.md
         - "How to Export Your Transaction History to CSV": learn/how-to/export-transaction-history.md
+        - "I Sent Funds to the Wrong Address": learn/how-to/sent-to-wrong-address.md
       - Staking:
         - "How to Choose Validators": learn/how-to/choose-validators.md
         - "How to See My Staking Rewards": learn/how-to/see-staking-rewards.md

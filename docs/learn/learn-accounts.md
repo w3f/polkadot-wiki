@@ -181,4 +181,5 @@ but gets put back when it has the existential deposit.
 - [How to View Your Mnemonic Phrase (Developer Signer)](how-to/view-mnemonic-signer.md)
 - [How Can I Find and Copy My Address](how-to/find-copy-address.md)
 - [I Can't Find My Account on the Polkadot Network](how-to/cant-find-account.md)
+- [The 'Unable to Retrieve Key Pair' Error](how-to/error-key-pair.md)
 <!-- how-to-guides -->

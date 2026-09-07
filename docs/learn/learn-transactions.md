@@ -250,4 +250,5 @@ to maximize their reward.
 - [Where Can I See My Transaction History?](how-to/view-transaction-history.md)
 - [How to Export Your Transaction History to CSV](how-to/export-transaction-history.md)
 - [How to See Transaction Costs Before a Transfer](how-to/transaction-costs.md)
+- [I Sent Funds to the Wrong Address](how-to/sent-to-wrong-address.md)
 <!-- how-to-guides -->
