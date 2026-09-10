@@ -6,7 +6,7 @@ description: "A step-by-step guide on how to update the metadata in the Polkadot
 !!!info "Related concepts"
     For the underlying concepts, see [Metadata](../../general/metadata.md).
 
-Every once in a while, when you visit [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts) (Polkadot Developer Interface), you may see a counter next to Settings or this warning asking you to apply updates to your extension:
+Every once in a while, when you visit [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) (Polkadot Developer Interface), you may see a counter next to Settings or this warning asking you to apply updates to your extension:
 
 ![You have 1 extension that needs to be updated with the latest chain properties in order to display the correct information for the chain you are connected to. This update includes chain metadata and chain properties.](../../assets/how-to/65016445308.png)
 
@@ -26,11 +26,11 @@ This guide uses the Polkadot Developer Signer, but the same steps can be used fo
 
 ### How to update the Polkadot Developer Signer metadata on the Polkadot Developer Interface
 
-1\. If one of your extensions needs to be updated, you'll see a counter next to [Settings](https://polkadot.js.org/apps/#/settings) and a warning on the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface:
+1\. If one of your extensions needs to be updated, you'll see a counter next to [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) and a warning on the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page on the Polkadot Developer Interface:
 
 ![](../../assets/how-to/65032425522.png)
 
-2\. Please navigate to Settings and switch to the [Metadata](https://polkadot.js.org/apps/#/settings/metadata) tab, or simply click the link in the message :
+2\. Please navigate to Settings and switch to the [Metadata](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings/metadata) tab, or simply click the link in the message :
 
 ![](../../assets/how-to/65032425540.png)
 

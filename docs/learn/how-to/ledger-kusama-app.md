@@ -6,7 +6,7 @@ description: "Use the Polkadot Ledger app to easily interact with the Kusama net
 !!!info "Related concepts"
     For the underlying concepts, see [Ledger](../../general/ledger.md).
 
-_The Polkadot Ledger app can interact with any compatible Substrate-based network since version 100.0.0. That means you can now use the Polkadot app to sign from its account on multiple networks, including Kusama, and not just on Polkadot._
+_The Polkadot Ledger app can interact with any compatible Polkadot SDK-based network since version 100.0.0. That means you can now use the Polkadot app to sign from its account on multiple networks, including Kusama, and not just on Polkadot._
 
 * * *
 

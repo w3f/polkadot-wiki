@@ -43,7 +43,7 @@ If any details are incorrect, **do not sign the transaction** and click "**Cance
 
 ### Verify an extrinsic in the Polkadot Developer Interface
 
-If you are using the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), you will see the confirmation window after you enter the extrinsic's details, where you confirm it is what you mean to sign. Click on the arrow next to the extrinsic you are about to sign to see the details:
+If you are using the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), you will see the confirmation window after you enter the extrinsic's details, where you confirm it is what you mean to sign. Click on the arrow next to the extrinsic you are about to sign to see the details:
 
 ![](../../assets/how-to/65032433865.png)
 

@@ -13,13 +13,13 @@ _If you want your DOT address to contain specific words, letters, or numbers, yo
 
 ### How to create your vanity address
 
-1\. On the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot Developer Interface, click on the [Vanity generator](https://polkadot.js.org/apps/#/accounts/vanity) tab.
+1\. On the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page on Polkadot Developer Interface, click on the [Vanity generator](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts/vanity) tab.
 
 2\. Enter the word, letter, or number combination you want your address to contain in the "search for" field. You can choose if you want it to be case-sensitive. You can also specify what type of account you'd like to generate: Edwards will allow you to find the address you want faster, but Schnorrkel is more secure. Once you've set the parameters, click the "Start generation" button.
 
 !!! info
 
-    The address format in Substrate-based chains is SS58, a modification of [Base58Check](https://en.bitcoin.it/wiki/Base58Check_encoding) from Bitcoin. This encoding does not allow characters that look the same in some fonts (i.e., 0OIl).
+    The address format in Polkadot SDK-based chains is SS58, a modification of [Base58Check](https://en.bitcoin.it/wiki/Base58Check_encoding) from Bitcoin. This encoding does not allow characters that look the same in some fonts (i.e., 0OIl).
 
 This example uses the word "dot":
 

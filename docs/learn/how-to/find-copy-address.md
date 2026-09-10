@@ -10,7 +10,7 @@ description: "The simplest way to copy your Polkadot address is to click on your
 
     Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-The [Accounts](https://polkadot.js.org/apps/#/accounts) page lists all your Polkadot accounts, whether they were added directly on the Polkadot Developer Interface or through compatible browser extensions.
+The [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page lists all your Polkadot accounts, whether they were added directly on the Polkadot Developer Interface or through compatible browser extensions.
 
 In this article we demonstrate two ways to copy your address from there.
 

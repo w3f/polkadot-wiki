@@ -25,11 +25,11 @@ In this article, you will learn how to create a new account in the Polkadot Deve
 
 ### How to Create an Account on Polkadot Developer Interface
 
-1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab. In the account options, allow local in-browser account storage and click Save:
+1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) tab. In the account options, allow local in-browser account storage and click Save:
 
 ![](../../assets/how-to/65032557838.png)
 
-2\. Navigate to the "[Accounts](https://polkadot.js.org/apps/#/accounts)" page and click on the "+ Account" button:
+2\. Navigate to the "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts)" page and click on the "+ Account" button:
 
 ![](../../assets/how-to/65032557846.png)
 
@@ -57,7 +57,7 @@ In this article, you will learn how to create a new account in the Polkadot Deve
 
 _12rsESKfXTArErw95PC4sBAwEmP3FX3oSEhFAFwY1DGX6SJ7.json_
 
-Your account has been successfully created, and you will see it listed on your "[Accounts](https://polkadot.js.org/apps/#/accounts)" page.
+Your account has been successfully created, and you will see it listed on your "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts)" page.
 
 * * *
 

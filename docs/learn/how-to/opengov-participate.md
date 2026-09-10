@@ -16,7 +16,7 @@ This article guides you on the basic functionalities offered by [Subsquare](http
 
 ### How to use Subsquare
 
-[Subsquare](https://www.subsquare.io/) is a complete platform that allows you to engage with the democratic processes across multiple Substrate-based networks. The sections below outline how to participate in Polkadot OpenGov using Subsquare.
+[Subsquare](https://www.subsquare.io/) is a complete platform that allows you to engage with the democratic processes across multiple Polkadot SDK-based networks. The sections below outline how to participate in Polkadot OpenGov using Subsquare.
 
 #### **Connect your wallet**
 

@@ -30,7 +30,7 @@ A transaction fee is deducted from your transferrable balance every time you mak
 
 * * *
 
-If you want to send all of your funds out, you would have to deduct the transaction costs from the total amount you want to send. Otherwise, your transfer will not go through, but the transaction fee will be taken anyway. [This guide](send-all-funds.md) will help you send your entire balance out using the Polkadot Developer Interface.
+If you want to send all of your funds out, [this guide](send-all-funds.md) will help you send your entire balance out using the Polkadot Developer Interface.
 
 * * *
 

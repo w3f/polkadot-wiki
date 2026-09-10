@@ -11,7 +11,7 @@ Polkadot allows users to set proxy accounts to perform a limited number of actio
 
 ### Setting Proxies
 
-1\. To set up a proxy account on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/explorer), navigate to the "[Accounts](https://polkadot.js.org/apps/#/accounts)" page and click on the three vertical dots next to the account you'd like to select.
+1\. To set up a proxy account on the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer), navigate to the "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts)" page and click on the three vertical dots next to the account you'd like to select.
 
 !!! warning "IMPORTANT"
 
@@ -59,7 +59,7 @@ Either method will present the same menu, in which you can remove individual pro
 
 ### Types
 
-Polkadot offers different types of proxies you can set, depending on the permissions use case. You can create the following types with the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), among others:
+Polkadot offers different types of proxies you can set, depending on the permissions use case. You can create the following types with the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), among others:
 
   * Any - this proxy type has permission to make any type of transaction, including balance transfers.
 

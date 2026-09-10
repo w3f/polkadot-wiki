@@ -10,11 +10,11 @@ description: "In order to withdraw DOT and send funds out of your account on the
 
     Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-Whether your account is in the [Polkadot Developer Signer](signer-where-to-download.md) or created/added directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), you'll need to use the Polkadot Developer Interface to send funds or issue any extrinsic. The Polkadot Developer Signer is an account manager, not a wallet, so it requires a UI to interact with.
+Whether your account is in the [Polkadot Developer Signer](signer-where-to-download.md) or created/added directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), you'll need to use the Polkadot Developer Interface to send funds or issue any extrinsic. The Polkadot Developer Signer is an account manager, not a wallet, so it requires a UI to interact with.
 
 * * *
 
-1\. To withdraw DOT from your account and send funds out, click on "Transfer" in the Accounts menu or click the "Send" button on the [Accounts](https://polkadot.js.org/apps/#/accounts) page next to the account you want to send from:
+1\. To withdraw DOT from your account and send funds out, click on "Transfer" in the Accounts menu or click the "Send" button on the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page next to the account you want to send from:
 
 ![](../../assets/how-to/65032390534.png)
 

@@ -39,7 +39,7 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 ![](../../assets/how-to/65016560996.png)
 
-7\. Show the QR code to the camera. Your Polkadot Vault account is now added to the extension. You'll also see the account on the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface.
+7\. Show the QR code to the camera. Your Polkadot Vault account is now added to the extension. You'll also see the account on the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page on the Polkadot Developer Interface.
 
 * * *
 
@@ -51,7 +51,7 @@ In this article, you will learn how to add your Polkadot Vault account to the Po
 
 1\. [Create](vault-create-account.md) or [restore](vault-restore-account.md) an account in Polkadot Vault.
 
-2\. To add your account directly on the Polkadot Developer Interface, go to the [Accounts](https://polkadot.js.org/apps/#/accounts) page and click "Add via Qr":
+2\. To add your account directly on the Polkadot Developer Interface, go to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page and click "Add via Qr":
 
 [![](../../assets/how-to/65016543776.png)](../../assets/how-to/65012709859.png)
 

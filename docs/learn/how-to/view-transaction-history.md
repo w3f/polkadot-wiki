@@ -6,16 +6,7 @@ description: "The best way to view your transaction history is to use Polkadot b
 !!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
-You can look up your Polkadot (or Kusama) transaction history on block explorers like [Subscan](https://www.subscan.io/). In this article, we will use these two explorers as an example, but there are [more block explorers](block-explorers.md) you can use.
-
-#### **TABLE OF CONTENTS**
-
-  * How to Find Your Account on Block Explorers
-* Directly from Block Explorers
-* Through Polkadot Developer Interface
-  * How to See Your Account History
-* On Subscan
-* Exporting your transaction history
+You can look up your Polkadot (or Kusama) transaction history on block explorers like [Subscan](https://www.subscan.io/) or [Statescan](https://www.statescan.io/).
 
 * * *
 
@@ -33,13 +24,13 @@ Choose the network among all the available options where you want to review your
 
 ![](../../assets/how-to/65032451169.png)
 
-Once your account has been selected, paste on the search bar your public address:
+Once your network has been selected, paste on the search bar your public address:
 
 ![](../../assets/how-to/65032451262.png)
 
 **Through Polkadot Developer Interface**
 
-You can see your account on a block explorer from your [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface. There are several block explorers to choose from. You can see the buttons by clicking on your account's name:
+You can see your account on a block explorer from your [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page on the Polkadot Developer Interface. You can see the buttons by clicking on your account's name:
 
 ![](../../assets/how-to/65032451599.png)
 

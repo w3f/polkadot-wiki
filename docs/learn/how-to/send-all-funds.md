@@ -27,7 +27,7 @@ If you want to send your total balance out of your account, be aware that your a
 
 To send all of your funds and reap the account, you should follow the steps below:
 
-1\. Click on "Transfer" in the Accounts menu or click the "Send" button on the [Accounts](https://polkadot.js.org/apps/#/accounts) page next to the account you want to send from:
+1\. Click on "Transfer" in the Accounts menu or click the "Send" button on the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page next to the account you want to send from:
 
 ![](../../assets/how-to/65032403845.png)
 

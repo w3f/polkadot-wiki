@@ -28,7 +28,7 @@ In this article, you will learn how to confirm your account address on your Ledg
 
     This is available only if your Ledger account has been added directly on Polkadot Developer Interface (it will have a type of '_hardware')_. If it is added in the Polkadot Developer Signer or any other browser extension (type '_extension')_ , this functionality won't be available.
 
-1\. On the [Accounts](https://polkadot.js.org/apps/#/accounts) page on Polkadot Developer Interface, click on the three dots next to your Ledger account and select "Show address on hardware device":
+1\. On the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page on Polkadot Developer Interface, click on the three dots next to your Ledger account and select "Show address on hardware device":
 
 ![](../../assets/how-to/65032425759.png)
 

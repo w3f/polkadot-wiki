@@ -17,7 +17,7 @@ _The Polkadot Developer Interface allows you to connect to multiple nodes which 
 
 ### Switching Nodes
 
-If you're experiencing connection issues or having trouble making a transaction on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), it can be useful to switch to another network node and try again.
+If you're experiencing connection issues or having trouble making a transaction on the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), it can be useful to switch to another network node and try again.
 
 1\. To do this, first click on the current network on the top left.
 
@@ -35,7 +35,7 @@ If you're experiencing connection issues or having trouble making a transaction 
 
 You can also use the same panel to switch to a completely different network, for example from Polkadot to Kusama.
 
-1. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), click on the currently selected network on the top left. In the case below, you're currently on the Polkadot Asset Hub network.
+1. On the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), click on the currently selected network on the top left. In the case below, you're currently on the Polkadot Asset Hub network.
 
 ![](../../assets/how-to/65031478453.png)
 

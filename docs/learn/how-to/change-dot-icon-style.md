@@ -6,7 +6,7 @@ description: "On the accounts page on the Polkadot Developer Interface, your acc
 !!!info "Related concepts"
     For the underlying concepts, see [Accounts](../learn-accounts.md).
 
-On the [Accounts page on Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), in the Polkadot Developer Signer, and on many block explorers, small icons (also called identicons) appear next to your account address:
+On the [Accounts page on Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), in the Polkadot Developer Signer, and on many block explorers, small icons (also called identicons) appear next to your account address:
 
 ![](../../assets/how-to/65014963157.png)
 
@@ -16,7 +16,7 @@ They are generated randomly when you create an account on Polkadot. If you don't
 
 ### How to Change the Style of Your DOT Icon on Polkadot Developer Interface
 
-1\. Navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab on Polkadot Polkadot Developer Interface:
+1\. Navigate to the [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) tab on Polkadot Polkadot Developer Interface:
 
 ![](../../assets/how-to/65014963186.png)
 

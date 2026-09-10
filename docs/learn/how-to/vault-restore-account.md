@@ -97,7 +97,7 @@ Remember that Polkadot Vault is meant to work as cold storage and that can only 
 
 ### What can I do next?
 
-You can add your Polkadot Vault account to the Polkadot Developer Signer to use it with [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), if it's not there already. The step-by-step guide can be found [here](vault-add-account.md).
+You can add your Polkadot Vault account to the Polkadot Developer Signer to use it with [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), if it's not there already. The step-by-step guide can be found [here](vault-add-account.md).
 
 !!! warning "IMPORTANT"
 

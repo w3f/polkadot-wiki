@@ -28,7 +28,7 @@ The steps change slightly depending on whether your account is added [directly o
 
 ![](../../assets/how-to/65015945810.png)
 
-2\. Initiate the transfer from the Polkadot Developer Interface, either from the ["Account" tab](https://polkadot.js.org/apps/#/accounts) or from the top menu, as described in [this article](transfer-funds.md).
+2\. Initiate the transfer from the Polkadot Developer Interface, either from the ["Account" tab](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) or from the top menu, as described in [this article](transfer-funds.md).
 
 3\. When you reach the step to sign the transaction, you won't be asked for a password because Ledger accounts don't have one. Click "Sign and Submit":
 

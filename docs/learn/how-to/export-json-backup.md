@@ -53,7 +53,7 @@ where the number at the end is a [Unix timestamp](https://en.wikipedia.org/wiki/
 
 ### On the Polkadot Developer Interface
 
-1\. First, navigate to the [Accounts](https://polkadot.js.org/apps/#/accounts) page of the Polkadot Developer Interface:
+1\. First, navigate to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page of the Polkadot Developer Interface:
 
 ![](../../assets/how-to/65015988470.png)
 

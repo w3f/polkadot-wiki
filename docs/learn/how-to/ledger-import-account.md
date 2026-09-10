@@ -31,8 +31,6 @@ If you have staked funds in your account, then you would need to unstake them fi
   * [Using the Staking Dashboard](../../general/dashboards/staking-dashboard.md)
   * [Using Polkadot Developer Interface](unstake-tokens.md)
 
-The unbonding process takes 28 days on Polkadot (7 days on Kusama) and during that time you won't receive staking rewards.
-
-However, if you haven't actively nominated any validators and received rewards in the last 28 days (or the last 7 days on Kusama), you could be eligible for fast unstake, which can make your funds transferable in a few minutes. Please check [this article](unstake-tokens.md) for more details.
+The unbonding process takes 1-2 days for nominators and 28 days for validators, and during that time you won't receive staking rewards.
 
 * * *

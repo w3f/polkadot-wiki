@@ -29,7 +29,7 @@ Users can also link accounts by setting "sub accounts," each with its own identi
 
 ### Steps to set a sub-identity
 
-1\. Go to the [Accounts](https://polkadot.js.org/apps/#/accounts) tab while connected to the People chain.
+1\. Go to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-people-rpc.polkadot.io#/accounts) tab while connected to the People chain.
 
 2\. Click on the three vertical dots corresponding to the account to which you already set the identity. You should see an option to "Set on-chain sub-identities." Click on it.
 

@@ -61,7 +61,7 @@ Suppose Alice, Bob, and Charlie want to create a 2-of-3 multisig to manage their
 
 1\. They first need to add everyone else's account in their Address Book on Polkadot Developer Interface. This example plays as Alice, but the other two need to do the same. Obviously, everyone is assumed to have access to their own account on the Accounts page.
 
-On Polkadot Developer Interface, go to "Accounts" > "[Address Book](https://polkadot.js.org/apps/#/addresses)":
+On Polkadot Developer Interface, go to "Accounts" > "[Address Book](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/addresses)":
 
 ![](../../assets/how-to/65016359535.png)
 

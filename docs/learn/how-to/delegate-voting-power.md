@@ -29,7 +29,7 @@ It's important to highlight that the duration of the locking period of your bala
 
 ### **Delegate on the Polkadot Developer Interface**
 
-1\. Go to the ["Governance" > "Referenda](https://polkadot.js.org/apps/#/referenda)" tab on the Polkadot Developer Interface and click on the "Delegate" button:
+1\. Go to the ["Governance" > "Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/referenda)" tab on the Polkadot Developer Interface and click on the "Delegate" button:
 
 ![](../../assets/how-to/65032406717.png)
 
@@ -71,7 +71,7 @@ This information can help you identify the delegates who are or have been active
 
 If you wish to stop delegating, whether because you want to vote personally or delegate to another account, you can remove your delegations for specific tracks from the "Developer" tab on Polkadot Developer Interface. Follow the steps below to proceed:
 
-1\. Go to the ["Developer" > "Extrinsic"](https://polkadot.js.org/apps/#/extrinsics) tab on Polkadot Developer Interface:
+1\. Go to the ["Developer" > "Extrinsic"](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics) tab on Polkadot Developer Interface:
 
 ![](../../assets/how-to/65032407417.png)
 

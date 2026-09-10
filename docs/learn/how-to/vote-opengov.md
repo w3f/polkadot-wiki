@@ -30,7 +30,7 @@ Built by the community, several tools allow you to participate in the governance
 
 If you have an account on Polkadot Developer Interface or it is connected to the UI (for example using the Polkadot Developer Signer), you can vote directly on the trusted Polkadot Developer Interface in a few simple steps:
 
-1\. On the Polkadot Developer Interface, go to the ["Governance" > "Referenda"](https://polkadot.js.org/apps/#/referenda) tab.
+1\. On the Polkadot Developer Interface, go to the ["Governance" > "Referenda"](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/referenda) tab.
 
 ![](../../assets/how-to/65032514099.png)
 

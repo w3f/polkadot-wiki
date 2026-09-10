@@ -6,11 +6,9 @@ description: "Learn how to use your Polkadot account on the Polkadot app on Polk
 !!!info "Related concepts"
     For the underlying concepts, see [Polkadot Vault](../../general/polkadot-vault.md).
 
-As part of an improvement on the scalability and future developments on Polkadot, some features that used to be handled by Polkadot Relay Chain are being migrated to Polkadot Asset Hub. This migration introduces several benefits to the ecosystem, including a lower existential deposit and reduced transaction fees. Learn more about the migration of these features in the article below:
+As part of an improvement on the scalability and future developments on Polkadot, some features that used to be handled by Polkadot Relay Chain were migrated to Polkadot Asset Hub. This migration introduced several benefits to the ecosystem, including a lower existential deposit and reduced transaction fees.
 
-[Polkadot Asset Hub Migration: What You Must Know](asset-hub-migration.md)
-
-For most users who manage their funds through Polkadot ecosystem wallets, nothing will change after the migration. However, Polkadot Vault is an exception, since this wallet uses a derivation path that is unique to each network, and it results in different accounts for each one.
+Polkadot Vault (in versions < 7.1) uses a derivation path that is unique to each network, and it results in different accounts for each one.
 
 !!! warning "ATTENTION"
 
@@ -21,11 +19,6 @@ Find below a step-by-step guide on how to use the existing account on Polkadot V
 !!! warning "IMPORTANT"
 
     This articles focuses on Polkadot and Polkadot Asset Hub ("Statemint"), but the same instructions can be applied to Kusama and Kusama Asset Hub ("Statemine").
-
-#### **TABLE OF CONTENTS**
-
-  * Default derivation path for each network
-  * Customize the derivation path
 
 * * *
 

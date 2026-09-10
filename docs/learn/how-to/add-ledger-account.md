@@ -10,7 +10,7 @@ description: "In this tutorial, you will learn how to install the Polkadot app o
 
     Polkadot Developer Interface is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
-This article explains how to add a Ledger account directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts), either using the Generic Polkadot app or the Migration Polkadot app.
+This article explains how to add a Ledger account directly on the [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), either using the Generic Polkadot app or the Migration Polkadot app.
 
 !!! warning "IMPORTANT"
 
@@ -27,7 +27,7 @@ However, **adding your Ledger through the other wallet extensions compatible wit
 
 2\. Open a Chromium-based browser (Google Chrome, Edge, Brave, etc.) and make sure you're using the latest version.
 
-3\. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab to change two settings.
+3\. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) tab to change two settings.
 
 4\. Under account options, choose "Attach Ledger via WebUSB" from the drop-down menu "Manage hardware connections."
 
@@ -35,7 +35,7 @@ However, **adding your Ledger through the other wallet extensions compatible wit
 
 ![](../../assets/how-to/65024729380.png)
 
-4\. Next, go to the[Accounts](https://polkadot.js.org/apps/#/accounts) page, and you will see the "From Ledger" button:
+4\. Next, go to the[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page, and you will see the "From Ledger" button:
 
 ![](../../assets/how-to/65024729407.png)
 

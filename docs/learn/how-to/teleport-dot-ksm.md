@@ -70,7 +70,7 @@ Teleports come with an additional fee on the destination chain. This fee is dedu
 
 1\. Make sure to [switch](switch-network-nodes.md) to the source chain.
 
-2\. On top of the page, navigate to "[Accounts](https://polkadot.js.org/apps/#/accounts)" > "Teleport":
+2\. On top of the page, navigate to "[Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts)" > "Teleport":
 
 ![](../../assets/how-to/65031176795.png)
 

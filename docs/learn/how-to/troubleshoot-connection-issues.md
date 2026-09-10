@@ -14,8 +14,6 @@ Sometimes you may experience connection issues, e.g., when trying to confirm a t
 
 This article will indicate some of the more common causes that might bring connection issues from the Polkadot Developer Interface.
 
-### ![](../../assets/how-to/65015946566.png)
-
 * * *
 
 ### Troubleshooting

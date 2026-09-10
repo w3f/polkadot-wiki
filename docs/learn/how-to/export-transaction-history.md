@@ -6,7 +6,7 @@ description: "In order to see and export your Polkadot account's transaction his
 !!!info "Related concepts"
     For the underlying concepts, see [Transactions](../learn-transactions.md).
 
-To see and export your account's transaction history, you need to use a block explorer. In this example, we offer instructions for Subscan, but other [block explorers](block-explorers.md) might offer similar functionality.
+To see and export your account's transaction history, you need to use a block explorer. In this example, we offer instructions for Subscan.
 
 * * *
 
@@ -18,11 +18,15 @@ To see and export your account's transaction history, you need to use a block ex
 
 ![](../../assets/how-to/65030158980.png)
 
-3\. Next, scroll to the bottom of the page and click on the "Download all data" button.
+3\. Next, scroll to the bottom of the page and click on the "Download" button.
 
 ![](../../assets/how-to/65030158988.png)
 
 4\. Verify you are human by filling in the reCAPTCHA, and the CSV file will be downloaded to your computer.
+
+!!! info "Downloading your full history"
+
+    The download button exports only the transactions shown on the current page, so you need to repeat the process for each page. To download your entire history in bulk, you need a [Subscan API key](https://support.subscan.io/) and to run a script against the API.
 
 #### **How to view and export your staking rewards**
 

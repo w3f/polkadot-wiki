@@ -162,8 +162,6 @@ See [Ledger Live](https://www.ledger.com/ledger-live) to learn how to use Polkad
 - [How to Add Your Ledger Account (Developer Signer)](../learn/how-to/add-ledger-account-signer.md)
 - [Ledger — How to Confirm the Account Address on Your Device](../learn/how-to/ledger-confirm-address.md)
 - [Ledger — How to Migrate Your Account to the Generic App](../learn/how-to/ledger-migrate-generic-app.md)
-- [Ledger — How to Use Your Device with Asset Hub](../learn/how-to/ledger-asset-hub.md)
-- [Ledger — How to Use Your Account on Parachains](../learn/how-to/ledger-parachains.md)
 - [Ledger — How to Send DOT from Your Account](../learn/how-to/ledger-send-dot.md)
 - [Ledger — Can I Import an Existing Account to My Device?](../learn/how-to/ledger-import-account.md)
 - [Ledger — Can I Use the Polkadot App for Kusama?](../learn/how-to/ledger-kusama-app.md)

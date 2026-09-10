@@ -25,11 +25,11 @@ In this article, you'll learn how to restore your Polkadot account either from y
 
 ### Restore from your 12-word mnemonic phrase
 
-1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
+1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
 
 ![](../../assets/how-to/65032555452.png)
 
-2\. Navigate to the [Accounts](https://polkadot.js.org/apps/#/accounts) page and click on the "+ Account" button:
+2\. Navigate to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page and click on the "+ Account" button:
 
 ![](../../assets/how-to/65032555459.png)
 
@@ -55,7 +55,7 @@ In this article, you'll learn how to restore your Polkadot account either from y
 
 _12rsESKfXTArErw95PC4sBAwEmP3FX3oSEhFAFwY1DGX6SJ7.json_
 
-Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page.
 
 * * *
 
@@ -65,11 +65,11 @@ Your account has been successfully restored, and you'll see it listed on your [A
 
     You can't restore a "batch" JSON file (that contains multiple accounts) directly on the Polkadot Developer Interface. These files can only be used to [restore in the Polkadot Developer Signer](restore-account-signer.md).
 
-1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
+1. On the Polkadot Developer Interface, navigate to the [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
 
 ![](../../assets/how-to/65032555564.jpeg)
 
-2\. Navigate to the [Accounts](https://polkadot.js.org/apps/#/accounts) page and click on the "From JSON" button:
+2\. Navigate to the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page and click on the "From JSON" button:
 
 ![](../../assets/how-to/65032555767.png)
 
@@ -81,13 +81,13 @@ Your account has been successfully restored, and you'll see it listed on your [A
 
 ![](../../assets/how-to/65032555670.png)
 
-Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page.
 
 * * *
 
 ### Restore from your raw private key
 
-1\. Go to the Polkadot Developer Interface and navigate to the [Settings](https://polkadot.js.org/apps/#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
+1\. Go to the Polkadot Developer Interface and navigate to the [Settings](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/settings) tab. In the account options, allow local in-browser account storage and click "Save":
 
 ![](../../assets/how-to/65032555731.jpeg)
 
@@ -107,7 +107,7 @@ Your account has been successfully restored, and you'll see it listed on your [A
 
 5\. Give your account a descriptive name and a good password. Click Next, then review the details and click Save.
 
-Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+Your account has been successfully restored, and you'll see it listed on your [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page.
 
 
 

@@ -20,7 +20,7 @@ On Polkadot Developer Interface, you will see Accounts as well as Address Book, 
 
 #### **Accounts Page**
 
-You control any address you have under [Accounts](https://polkadot.js.org/apps/#/accounts), and you can therefore send funds out or perform other actions with it.
+You control any address you have under [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts), and you can therefore send funds out or perform other actions with it.
 
 Addresses on your Accounts page have been [created](create-polkadot-account.md) or [restored](restore-account-signer.md) by you either directly on Polkadot Developer Interface in one of the ways highlighted in the image below or through a browser extension. In all cases, you control those addresses because you own their private keys.
 
@@ -28,7 +28,7 @@ Addresses on your Accounts page have been [created](create-polkadot-account.md) 
 
 #### **Address Book**
 
-Addresses that show up in your [Address Book](https://polkadot.js.org/apps/#/addresses) are read-only. They don't require private keys to be added there, allowing you to add any address here as a contact.
+Addresses that show up in your [Address Book](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/addresses) are read-only. They don't require private keys to be added there, allowing you to add any address here as a contact.
 
 Here you can, for example, add your DOT deposit addresses at exchanges that you'd like to monitor or regularly send funds to. Your address book is a passive "watch tool," making sending funds to your contact addresses easier.
 

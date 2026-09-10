@@ -29,7 +29,7 @@ This article explains how to undo the connection between your stash and controll
 
     Check how to do it in the article "[How to Create a Proxy Account](create-proxy-account.md)".
 
-1\. On Polkadot Developer Interface, navigate to Developer > [Extrinsics](https://polkadot.js.org/apps/#/extrinsics) tab.
+1\. On Polkadot Developer Interface, navigate to Developer > [Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics) tab.
 
 2\. Ensure that your stash account is selected on the top field, "Using the selected account."
 

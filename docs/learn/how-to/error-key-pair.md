@@ -8,15 +8,6 @@ description: "How to troubleshoot the error \"unable to retrieve keypair\" when 
 
 There are several situations where errors can occur, but the message should indicate the potential source of the issue. In this article, we will discuss the error and potential remedies for the "Unable to retrieve key pair" message that may arise when attempting to use Polkadot Developer Interface.
 
-#### **TABLE OF CONTENTS**
-
-  * Error
-  * Possible causes and solutions
-* Are you using a Ledger hardware wallet?
-* Troubleshoot the Polkadot Developer Signer
-* Disable other extensions
-* Restore the account
-
 * * *
 
 ### Error
@@ -41,7 +32,7 @@ Make sure your Ledger device is connected to your computer, it's unlocked, and t
 
 Update your browser to the latest version and then restart it.
 
-  1. Go to [Polkadot Developer Interface](https://polkadot.js.org/apps/#/accounts). It's likely that you'll see a small "1" next to Settings. If that's the case, go to Settings > Metadata and click on "Update metadata".
+  1. Go to [Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts). It's likely that you'll see a small "1" next to Settings. If that's the case, go to Settings > Metadata and click on "Update metadata".
   2. Then go to the Accounts page and try sending again.
 
 If that doesn't work, please do the following:

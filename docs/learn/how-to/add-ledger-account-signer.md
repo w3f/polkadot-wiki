@@ -78,7 +78,7 @@ If you haven't installed the Polkadot Developer Signer yet, you can find downloa
 
     If this doesn't help, please ensure that your browser has permissions to access USB devices, in particular if it is running as a snap such as Brave on Ubuntu.  As a workaround, uninstall the default version and reinstall it from the official package repositories.
 
-If your Ledger account doesn't appear on your [Accounts page](https://polkadot.js.org/apps/#/accounts) right away, allow access to it from "Settings" > "Manage Website access," ensure that the account is selected, and refresh the page.
+If your Ledger account doesn't appear on your [Accounts page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) right away, allow access to it from "Settings" > "Manage Website access," ensure that the account is selected, and refresh the page.
 
 Remember that from now on, you will need to approve any extrinsic from the imported account using the Ledger app you used to add it to the Polkadot Developer Signer, whether it was the Generic Polkadot app or the Polkadot Migration app.
 

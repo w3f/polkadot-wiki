@@ -99,7 +99,7 @@ No matter the [type](../learn-account-advanced.md) of your account, add your acc
 
 8\. Confirm your password and add the account.
 
-You're all set. Refresh the [Accounts](https://polkadot.js.org/apps/#/accounts) page on the Polkadot Developer Interface and you should see your account.
+You're all set. Refresh the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page on the Polkadot Developer Interface and you should see your account.
 
 * * *
 
