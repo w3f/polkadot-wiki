@@ -8,7 +8,7 @@ description: "Learn how to send DOT from your Ledger account using the Polkadot 
 
 !!! warning "IMPORTANT"
 
-    [Polkadot Developer Interface](https://polkadot.js.org/apps) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    [Polkadot Developer Interface](https://polkadot.js.org/apps) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 In this article, we demonstrate how to send DOT from your Ledger account using the Polkadot Developer Interface, with or without the help of the Polkadot Developer Signer. If you are using Ledger Live, please check [this article](../../general/ledger.md#using-ledger-live).
 

@@ -8,7 +8,7 @@ description: "How to see transaction fees on the Polkadot network before complet
 
 !!! warning "IMPORTANT"
 
-    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets funded by the Polkadot Treasury that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
+    Polkadot Developer Interface (Polkadot-JS UI) is a web wallet meant for power users and developers. For everyday use, there are several user-friendly wallets that support a plethora of features and platforms. Discover them in [this article](where-to-store-dot.md).
 
 A transaction fee is deducted from your transferrable balance every time you make a transaction. It cannot be deducted from your bonded funds or the amount you send. Here is how you can see the fee before making a transaction.
 
