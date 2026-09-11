@@ -27,6 +27,10 @@ Polkadot smart contracts will reside on the **Asset Hub**. When we talk about sm
 - **pallet-contracts**: Uses **wasmi** (a WebAssembly interpreter).
 - **pallet-revive**: Executes **PVM bytecode**, optimized for RISC-V architecture.
 
+### Polkadot Hub
+
+In this context, the smart-contract environment on the [Asset Hub](../learn/learn-assets.md) is commonly referred to as the **Polkadot Hub**. Polkadot Hub is best understood as a platform rather than a network: while contracts are technically deployed on the Asset Hub, their reach is not confined to that single chain. Through the shared security and cross-chain interoperability provided by the relay chain, contracts on the Hub can interact with the wider Polkadot ecosystem.
+
 ## Wasm vs. PVM
 
 While WebAssembly (Wasm) is widely used in blockchain, it has limitations:

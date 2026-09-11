@@ -124,4 +124,12 @@ See [this page](./learn-guides-identity.md#registrars) to learn how to become a 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about account identity](./learn-guides-identity.md).
     
-    See also [these Polkadot-JS support guides](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity).
+    See also [these Polkadot-JS guides](how-to/set-clear-identity.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Set Identities for Sub Accounts](how-to/set-subaccount-identities.md)
+- [How to Set and Clear an Identity](how-to/set-clear-identity.md)
+- [How to Request and Cancel Identity Judgement](how-to/request-cancel-judgement.md)
+<!-- how-to-guides -->

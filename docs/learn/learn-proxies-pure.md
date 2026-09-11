@@ -64,3 +64,9 @@ Here is an example usage of a remote proxy call: If you have a pure proxy setup 
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about pure proxy accounts](./learn-guides-accounts-proxy-pure.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create a Pure Proxy](how-to/create-pure-proxy.md)
+<!-- how-to-guides -->

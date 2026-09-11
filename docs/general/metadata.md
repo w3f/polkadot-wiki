@@ -11,4 +11,8 @@ The `Metadata Explorer` tool helps visualize the metadata of various parachains 
 !!!info
     You can enter custom RPC endpoints for Polkadot SDK based chains and explore their metadata using [Parity Tech Subxt Explorer](https://paritytech.github.io/subxt-explorer/#/).
 
+<!-- how-to-guides -->
+## How-to guides
 
+- [How to Update the Metadata (Developer Signer)](../learn/how-to/update-metadata-signer.md)
+<!-- how-to-guides -->

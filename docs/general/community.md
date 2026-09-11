@@ -14,15 +14,13 @@ Below are the most essential links to the community channels for Polkadot and Ku
 
     - [Polkadot Forum](https://forum.polkadot.network/) - a place for thoughtful comments and discussions on the future of Polkadot, and the steps we can take to get there together.
     - [Polkadot GitHub](https://github.com/paritytech/polkadot-sdk/tree/master/polkadot) - Parity maintained repository that houses the Rust implementation of the Polkadot Host.
-    - [Polkadot Support Knowledgebase](https://support.polkadot.network/support/home) and [Polkadot Support Contact](https://support.polkadot.network).
+    - [Polkadot Support Contact](https://docs.polkadot.com/get-support/).
     - [Polkadot's Latest Research (news)](https://research.web3.foundation/news).
     - [Polkadot Meetup Hub](https://www.notion.so/web3foundation/Polkadot-Meetup-Hub-4511c156770e4ba9936386d8be5fe5be) - Information on hosting meetups, applying for funding, and materials for running it.
-    - [Polkadot Discussion and Governance on Polkassembly](https://polkadot.polkassembly.io/).
     - [Polkadot Discussion and Governance on Subsquare](https://polkadot.subsquare.io/discussions).
 
 === "Kusama"
 
-    - [Kusama Discussion and Governance on Polkassembly](https://kusama.polkassembly.io/).
     - [Kusama Discussion and Governance on Subsquare](https://kusama.subsquare.io/discussions).
 
 ### Events
@@ -31,7 +29,7 @@ Below are the most essential links to the community channels for Polkadot and Ku
 applying for funding, and materials for running it.
 
 [Community Events](https://dotevents.xyz/) -
-Information on events funded by the [Treasury](https://polkadot.polkassembly.io/bounty/17) and
+Information on events funded by the [Treasury](https://polkadot.subsquare.io/treasury/bounties/17) and
 organized by the Polkadot community (candidates or ambassadors) focused on promoting Polkadot,
 Kusama, and related technologies. The events are educational and informative, and their goal is to
 create an impact in the community.
@@ -71,23 +69,25 @@ community members. The application we use most often to interact with the Matrix
 
 - [Polkadot Discord](https://polkadot-discord.w3f.tools/) (RECOMMENDED)
 - [Kusama Discord](https://kusama-discord.w3f.tools/)
+- [Polkadot Announcements on Telegram](https://t.me/PolkadotAnnouncements) - official channel for
+  Polkadot announcements.
 
 ### Social media
 
 === "Web3 Foundation"
 
-    - [Web3 Foundation Twitter](https://twitter.com/web3foundation)
+    - [Web3 Foundation X](https://x.com/web3foundation)
     - [Web3 Foundation YouTube](https://www.youtube.com/channel/UClnw_bcNg4CAzF772qEtq4g)
 
 === "Polkadot"
 
-    - [Polkadot Twitter](https://twitter.com/Polkadot)
+    - [Polkadot X](https://x.com/Polkadot)
     - [Polkadot Reddit](https://www.reddit.com/r/polkadot)
     - [Polkadot YouTube](https://www.youtube.com/channel/UCB7PbjuZLEba_znc7mEGNgw)
 
 === "Kusama"
 
-    - [Kusama Twitter](https://twitter.com/kusamanetwork)
+    - [Kusama X](https://x.com/kusamanetwork)
     - [Kusama Reddit](https://www.reddit.com/r/Kusama)
     - [Kusama YouTube Channel](https://youtube.com/c/kusamanetwork)
 

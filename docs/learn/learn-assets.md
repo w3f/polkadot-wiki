@@ -90,8 +90,8 @@ for certainty on privileged roles.
 An asset's details contain one field not accessible to its owner or admin team,
 [asset sufficiency](#sufficient-assets).
 
-!!!info "Transaction Fees on Polkadot-JS UI"
-    Polkadot-JS UI [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot-JS UI, transaction fee needs to be paid using the native asset (DOT or KSM).
+!!!info "Transaction Fees on Polkadot Developer Interface"
+    Polkadot Developer Interface [doesn't support the functionality to pay with a sufficient asset yet](https://github.com/polkadot-js/apps/issues/7812). When using Polkadot Developer Interface, transaction fee needs to be paid using the native asset (DOT or KSM).
 
 ## Fungible Assets
 
@@ -121,14 +121,14 @@ balance of 10 and an account has a balance of 25, then an attempt to transfer 20
 transfer all 25.
 
 !!!info
-    See [this support article](https://support.polkadot.network/support/solutions/articles/65000181118-how-to-transfer-tether-usdt-on-statemine) to learn more about transferring assets using the Asset Hub.
+    See [this article](how-to/transfer-usdt.md) to learn more about transferring assets using the Asset Hub.
 
 ### Destroying an Asset
 
 !!!info "Walk-through video tutorial about destroying assets"
     See [this technical explainer video](https://youtu.be/knNLZEyposM?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&t=422) to learn how to destroy assets on the Asset Hub.
 
-To destroy an asset, go to the Polkadot-JS UI on the Asset Hub > Developer > Extrinsics. If you
+To destroy an asset, go to the Polkadot Developer Interface on the Asset Hub > Developer > Extrinsics. If you
 created an asset without minting any unit, you could call `assets.startDestroy` and then the
 `assets.finishDestroy` extrinsics specifying the asset id you want to destroy. If you created an
 asset and minted some units, follow the steps below:
@@ -194,3 +194,12 @@ For example, if a team wants sign-off from two groups to perform a privileged op
 create a 2-of-2 [**multisig**](./learn-account-multisig.md) from two
 [**pure proxies**](./learn-proxies-pure.md), and then set members from
 each group as proxies to those two accounts.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [Asset Hub Migration — What You Must Know](how-to/asset-hub-migration.md)
+- [What is Asset Hub and How Do I Use It?](how-to/what-is-asset-hub.md)
+- [How to Transfer Tether (USDT) on Polkadot](how-to/transfer-usdt.md)
+- [How to Withdraw USDT from Exchanges on Asset Hub](how-to/withdraw-usdt-from-exchanges.md)
+<!-- how-to-guides -->

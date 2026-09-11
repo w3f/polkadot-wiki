@@ -21,7 +21,7 @@ There are four types of account balances:
 
 - **Free Balance** is a portion of an account's total balance that is not held (see below). It is the balance that can be used for any on-chain activity ([staking](./learn-staking.md), [governance](./learn-polkadot-opengov.md), and deposits) as long as the total balance (free + reserved) remains above the maximum of frozen balance and [existential deposit (ED)](./learn-accounts.md#existential-deposit-and-reaping).
 
-- **Reserved Balance** (also called holds, or held balance) is the balance removed from free and does not overlay. It can be slashed, but only after all the free balance has been slashed. Reserved balance is used for:
+- **Reserved Balance** (also called holds, or held balance) is the balance removed from free and does not overlay. It can be slashed, but only after all the free balance has been slashed. Unlike locks, which overlap on the same funds, reserves stack: each action requiring a deposit adds its amount to any previously reserved balance. Reserved balance is used for:
     - native [staking](./learn-staking.md) on the Polkadot Hub as an individual nominator, or via nomination pools
     - deposits such as [governance](./learn-polkadot-opengov.md) decision and submission deposits, [identity](./learn-identity.md) deposits, and [proxy](./learn-proxies.md) and [multi-signature](./learn-account-multisig.md) accounts deposits. It cannot be used for transfers or paying fees.
 
@@ -192,3 +192,9 @@ Following the previous example, if you:
 You will get a 6x conviction for 24 DOT! See
 [here](https://substrate.stackexchange.com/questions/5067/delegating-and-undelegating-during-the-lock-period-extends-it-for-the-initial-am)
 for more information.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [What is the Existential Deposit?](how-to/existential-deposit.md)
+<!-- how-to-guides -->

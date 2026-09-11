@@ -38,3 +38,9 @@ threshold, they will immediately have access to these tokens.
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about multi-signature accounts](./learn-guides-accounts-multisig.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create and Use a Multisig Account](how-to/create-multisig-account.md)
+<!-- how-to-guides -->

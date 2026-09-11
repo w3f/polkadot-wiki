@@ -10,7 +10,7 @@ us envision the future direction of the Polkadot as a high-performance decentral
 
 Polkadot is **a multi-core decentralized computer** that provides resilient and verifiable computation via virtual cores. Chains that continuously operate in parallel on different virtual cores are called [rollup chains](../learn/learn-parachains.md) (also called parachains).
 
-The Polkadot community [voted on a Wish for Change proposal](https://polkadot.polkassembly.io/referenda/747) stating that Polkadot 2.0 includes the following major technical upgrades:
+The Polkadot community [voted on a Wish for Change proposal](https://polkadot.subsquare.io/referenda/747) stating that Polkadot 2.0 includes the following major technical upgrades:
 
 - [asynchronous backing](../learn/learn-async-backing.md) allowing pipelining and thus a more efficient rollup system that grants rollups more throughput without compromising security.
 - [coretime](../learn/learn-agile-coretime.md) allowing agile allocation of cores and thus execution on the Polkadot decentralized computer.

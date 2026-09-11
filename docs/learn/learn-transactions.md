@@ -236,3 +236,19 @@ to maximize their reward.
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about transfers](./learn-guides-transfers.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Send / Transfer Funds](how-to/transfer-funds.md)
+- [Why Can't I Transfer My DOT?](how-to/why-cant-i-transfer-dot.md)
+- [How to Verify What Extrinsic You're Signing](how-to/verify-extrinsic.md)
+- [How to Sign a Transaction (Developer Signer)](how-to/sign-transaction-signer.md)
+- [Error 'Frozen' — I Can't Transfer All My DOT](how-to/error-frozen-cant-transfer.md)
+- [How to Sign a Transaction](how-to/sign-transaction.md)
+- [How to Send All of Your Funds Out of Your Account](how-to/send-all-funds.md)
+- [Where Can I See My Transaction History?](how-to/view-transaction-history.md)
+- [How to Export Your Transaction History to CSV](how-to/export-transaction-history.md)
+- [How to See Transaction Costs Before a Transfer](how-to/transaction-costs.md)
+- [I Sent Funds to the Wrong Address](how-to/sent-to-wrong-address.md)
+<!-- how-to-guides -->

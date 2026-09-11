@@ -48,3 +48,9 @@ destination of having put the received assets back into circulation. The result 
 teleportation should result in the same circulating supply of the asset, and failing to uphold this
 condition will result in a change in the asset's total issuance (in the case of fungible tokens) or
 a complete loss/duplication of an NFT.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Teleport DOT or KSM](how-to/teleport-dot-ksm.md)
+<!-- how-to-guides -->

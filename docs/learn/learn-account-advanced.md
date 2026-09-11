@@ -34,6 +34,21 @@ byte**, **32 byte**, and **arbitrary raw byte** variants. It also enhances the o
 !!!info
     Many wallets allow you to convert between formats. Stand-alone tools exist as well; you can find them in the [address conversion tools](#address-conversion-tools) section.
 
+### Using the Same Account Across Chains
+
+Because every network format is only a different representation of the same public key, a single
+account can be used on most Substrate-based chains, including Polkadot, Kusama, and their parachains
+(a few chains are exceptions). Only the address representation changes from one chain to the next;
+the underlying key pair and the account's visual identicon remain constant across networks, which is
+a reliable way to confirm that two differently-formatted addresses belong to the same account.
+
+Reusing one account across chains means fewer mnemonic phrases and backup files to safeguard, and it
+can be necessary to manage assets such as crowdloan rewards, which are delivered to the account that
+participated. The trade-off is that a single account becomes a single point of failure: if its
+mnemonic is compromised, funds on _every_ chain are at risk. The shifting address format per network
+can also cause confusion, particularly when a wallet displays the generic Substrate format (starting
+with `5`) while an interface shows each chain's network-specific format.
+
 ### For the Curious: How Prefixes Work
 
 The [SS58 registry](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json) states
@@ -194,7 +209,7 @@ contact the project maintainers.
 
 |                       | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
 | :-------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
-| Polkadot-JS Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
+| Polkadot Developer Signer |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
 | Polkadot-JS Apps      |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
 | Ledger                |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
 | Subkey                |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
@@ -387,7 +402,7 @@ indicating whether this is claimed permanently.
 ![query account index](../assets/accounts/query-index.png)
 
 Submit a `claim` extrinsic to the `indices` pallet to register an index. The easiest way to do this
-is via Polkadot-JS UI through the _Developer -> Extrinsics_ menu:
+is via Polkadot Developer Interface through the _Developer -> Extrinsics_ menu:
 
 ![Indices extrinsics](../assets/accounts/index.png)
 
@@ -406,7 +421,7 @@ general users. Follow the instructions in the
 [Subkey documentation](https://docs.polkadot.com/polkadot-protocol/basics/accounts/#using-subkey).
 
 !!!info
-    For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this support article**](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+    For guidelines about how to create an account using Subkey, see [**this video tutorial**](https://youtu.be/SWfE_EwxgIU) and visit [**this article**](how-to/create-account-subkey.md).
 
 ## Using ENS with DOT/KSM accounts
 
@@ -510,3 +525,10 @@ for (var key in accounts) {
 
 11. Refresh Polkadot-JS App browser and check the Accounts and Addresses pages. All of your accounts
     and addresses should now be available.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create an Account in Subkey](how-to/create-account-subkey.md)
+- [How to Restrict Your Account to One Network](how-to/restrict-account-network.md)
+<!-- how-to-guides -->

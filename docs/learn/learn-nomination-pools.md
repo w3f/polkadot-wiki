@@ -92,7 +92,7 @@ The current minimum bond to join a pool can be seen
     Depending on how much control you want to give your proxy, you might choose between any > non-transfer > staking > nomination pool proxy, with the latter being only able to sign transactions related to the `NominationPool` pallet.
 
 Check the "How to join a pool" section in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+[this article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 ### Claim Rewards
@@ -101,7 +101,7 @@ The member can claim their portion of any rewards that have accumulated since th
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
 era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How
 to claim rewards" section in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+[this article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 ### Claim Permissions
@@ -127,7 +127,7 @@ learn how to claim rewards for another pool member.
 Nomination pool members can vote in Polkadot OpenGov with funds they delegated to the pool. In the past, pool members' funds were transferred to the pool system account. A [delegation staking system](https://hackmd.io/@ak0n/454-np-governance#Pallet-Delegation-Staking) was introduced to allow keeping ownership of your funds and voting in governance. 
 
 !!!info "Dual Staking"
-    For pool members who were dual staking (i.e., pool members and nominators) before the introduction of delegation staking, follow [**these guides**](https://support.polkadot.network/support/solutions/articles/65000188140-changes-for-nomination-pool-members-and-opengov-participation) to migrate manually to the new system. 
+    Since the runtime 1.6.1 upgrade, any account can be both a nomination pool member and a solo staker at the same time, and the earlier manual migration for dual stakers is no longer required.
 
 ### Unbond and withdraw Funds
 
@@ -137,7 +137,7 @@ At any point in time after joining the pool, a member can start the process of e
 withdraw their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship
 with their pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded
 funds" section in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+[this article](how-to/nomination-pools-guide.md)
 for guidelines.
 
 !!!info "Unbonding transaction automatically triggers withdrawal of rewards"
@@ -244,3 +244,9 @@ following statements are true:
 !!!info "Advanced How-to Guides"
     See [this page](./learn-guides-staking-pools.md#pool-creation-with-polkadot-js) for more information about the lifecycle of nomination pools. The cycle includes creation, upkeep and destruction.
 
+<!-- how-to-guides -->
+## How-to guides
+
+- [Nomination Pools on the Polkadot Developer Interface](how-to/nomination-pools-guide.md)
+- [How Do I Know Which Nomination Pool to Choose?](how-to/choose-nomination-pool.md)
+<!-- how-to-guides -->

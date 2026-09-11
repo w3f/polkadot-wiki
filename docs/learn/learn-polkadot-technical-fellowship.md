@@ -24,7 +24,7 @@ The fellowship's governance model has multiple tracks with their own approval an
 parameters, where the votes are weighted by the rank of the member. Members of the Fellowship can
 vote on any given Fellowship proposal and the aggregated opinion of the members (weighted by their
 rank) constitutes the Fellowship's collective opinion. The list of current and historic fellowship
-referenda can be viewed on [Polkassembly](https://collectives.polkassembly.io/) or
+referenda can be viewed on [Subsquare](https://collectives.subsquare.io/) or
 [Subsquare.](https://collectives.subsquare.io/) The fellowship governance is primarily used for its
 membership management, [approving RFCs](https://github.com/polkadot-fellows/RFCs) and whitelisting
 Polkadot OpenGov proposals created on the whitelist track.
@@ -40,8 +40,8 @@ only be enacted when the referendum passes successfully.
 
 The whitelisting process starts as a fellowship referenda with embedded XCM call from the
 collectives system chain to the Polkadot relay chain. For instance,
-[the Polkadot Fellowship referenda 68](https://collectives.polkassembly.io/referenda/68) was used to
-**whitelist** [the Polkadot OpenGov referenda 440](https://polkadot.polkassembly.io/referenda/440).
+[the Polkadot Fellowship referenda 68](https://collectives.subsquare.io/fellowship/referenda/68) was used to
+**whitelist** [the Polkadot OpenGov referenda 440](https://polkadot.subsquare.io/referenda/440).
 
 ![whitelist-xcm](../assets/fellowship-whitelist-xcm.png)
 
@@ -74,7 +74,7 @@ amounts for each ranked members.
 
 The Polkadot technical Fellowship was initially
 [seeded](https://github.com/polkadot-fellows/seeding) with its members and their corresponding
-ranks, and got [added on to Polkadot's Collectives](https://polkadot-old.polkassembly.io/motion/403)
+ranks, and got [added on to Polkadot's Collectives](https://polkadot.subsquare.io/council/motions/403)
 system chain. Membership requests will go through the fellowship governance and the
 procedure is outlined in the section below.
 
@@ -89,7 +89,7 @@ tenets:
 - Respect fellow Members and the wider community.
 
 !!!tip "Register your interest"
-    For new fellowship inductions, Polkassembly has created an interface (still in beta) to [apply for the Polkadot Technical Fellowship.](https://collectives.polkassembly.io/join-fellowship?network=collectives) This initiative is funded by Polkadot treasury through [OpenGov referendum 373](https://polkadot-old.polkassembly.io/treasury/574)
+    New fellowship inductions are handled through the [fellowship dashboard](https://polkadot-fellows.xyz/#/membership). This initiative was funded by the Polkadot treasury through [OpenGov referendum 373](https://polkadot.subsquare.io/treasury/proposals/574).
 
 The full set of instructions to be inducted to the Polkadot Technical Fellowship are available on
 [the fellowship dashboard](https://polkadot-fellows.xyz/#/membership).

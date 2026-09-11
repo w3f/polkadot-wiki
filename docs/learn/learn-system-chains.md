@@ -55,12 +55,12 @@ KSM. In fact, there will likely be a system parachain specifically for network g
     ### Collectives
 
     The Polkadot Collectives parachain was added in
-    [Referendum 81](https://polkadot-old.polkassembly.io/referendum/81) and exists only on Polkadot (i.e.,
+    [Referendum 81](https://polkadot.subsquare.io/democracy/referenda/81) and exists only on Polkadot (i.e.,
     there is no Kusama equivalent). The Collectives chain hosts on-chain collectives that serve the
     Polkadot network.
 
     Some of these collectives are the
-    [Polkadot Alliance](https://polkadot-old.polkassembly.io/referendum/94) and the Polkadot Technical
+    [Polkadot Alliance](https://polkadot.subsquare.io/democracy/referenda/94) and the Polkadot Technical
     [Fellowship](./learn-polkadot-technical-fellowship.md). These on-chain collectives will play
     important roles in the future of network stewardship and decentralized governance.
 
@@ -100,14 +100,14 @@ KSM. In fact, there will likely be a system parachain specifically for network g
     ### Encointer
 
     Encointer is a blockchain platform for self-sovereign ID and a global universal basic income. With
-    [referendum 158](https://kusama.polkassembly.io/referendum/158) Encointer was registered as the
+    [referendum 158](https://kusama.subsquare.io/democracy/referenda/158) Encointer was registered as the
     second system parachain on Kusama's network. The functionality of Encointer adds logic to the Relay
     Chain that aims to bring financial inclusivity to Web3 and mitigate Sybil attacks with a novel Proof
     of Personhood (PoP) system for unique identity.
 
     Encointer offers a framework that, in principle, allows for any group of real people to create,
     distribute, and use their own digital community tokens.
-    [Referendum 187](https://kusama.polkassembly.io/referendum/187) introduced a runtime upgrade
+    [Referendum 187](https://kusama.subsquare.io/democracy/referenda/187) introduced a runtime upgrade
     bringing governance and full functionality for communities to be able to use the protocol.
 
     Encointer aims to invert the

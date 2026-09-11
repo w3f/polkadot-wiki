@@ -30,7 +30,7 @@ operating under SUDO.
 As for weights (size and time), we use an overestimate compared with those returned by the Polkadot
 Relay Runtime API.
 
-To check the exact weights, you can navigate to Polkadot JS UI > Developer > Runtime Calls and then
+To check the exact weights, you can navigate to Polkadot Developer Interface > Developer > Runtime Calls and then
 select `transactionPaymentCallInfo` and `queryCallInfo` and include the extrinsic being sent in the
 `send` instruction of the XCM message:
 [0x4603e3070000320d0000](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp.network%2Fpolkadot#/extrinsics/decode/0x4603e3070000320d0000)

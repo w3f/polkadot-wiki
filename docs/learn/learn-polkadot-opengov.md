@@ -11,8 +11,8 @@ description: Dive into Polkadot OpenGov, its decentralized governance model, ref
       balances and locks.
     </a>
     For additional support about Polkadot OpenGov, see the
-    <a href="https://support.polkadot.network/support/solutions/65000105211" target="_blank" rel="noopener noreferrer">
-      dedicated support pages.
+    <a href="./learn-guides-polkadot-opengov" target="_blank" rel="noopener noreferrer">
+      Polkadot-JS OpenGov guides.
     </a>
   </p>
   <button class="close-messagebox" aria-label="Close message">✖</button>
@@ -142,7 +142,7 @@ its track to be executed simultaneously. In contrast, Root will allow only one p
 track. Once the track capacity is filled, additional proposals in the lead-in period will queue
 until place is available to enter the decision period.
 
-For examples of collectives, see the [Polkadot Alliance](https://polkadot-old.polkassembly.io/referendum/94) and the [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md).
+For examples of collectives, see the [Polkadot Alliance](https://polkadot.subsquare.io/democracy/referenda/94) and the [Polkadot Technical Fellowship](./learn-polkadot-technical-fellowship.md).
 
 ### Origins and Tracks
 
@@ -305,6 +305,10 @@ amount earlier than those which use highly privileged classes such as `Root`.
 In Polkadot OpenGov, the proposer suggests the enactment period, but there is also a minimum set for
 each origin track. For example, `root` origin approvals require an extended period because of the
 importance of the changes they bring to the network.
+
+Approved referenda are enforced on-chain automatically. Once the enactment period elapses, the
+runtime executes the proposal's preimage directly, rather than treating the outcome as an advisory
+signal that a third party must choose to implement.
 
 ### Cancelling, Killing & Blacklisting
 
@@ -470,3 +474,12 @@ Below is a comparison table between the first iteration of Polkadot governance (
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about OpenGov](./learn-guides-polkadot-opengov.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Remove Expired Referenda Locks](how-to/remove-referenda-locks.md)
+- [How to Vote on Polkadot OpenGov](how-to/vote-opengov.md)
+- [How to Participate in Polkadot OpenGov](how-to/opengov-participate.md)
+- [How to Delegate Your Voting Power on Polkadot OpenGov](how-to/delegate-voting-power.md)
+<!-- how-to-guides -->

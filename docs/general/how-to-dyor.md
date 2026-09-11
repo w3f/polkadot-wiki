@@ -15,6 +15,9 @@ make that decision for you.
 Furthermore, a legitimate project does not necessarily mean it will also be successful, and **this
 guide is not meant to be viewed as financial or investment advice.**
 
+!!! tip "Community project directories"
+    To check whether a project is really part of the ecosystem, community-curated directories such as [Parachains.info](https://parachains.info/) list many teams building on Polkadot and Kusama and can be a useful starting point. Their accuracy and objectivity **cannot** be guaranteed, so treat them as one input to your own research — not a seal of approval.
+
 ## _Powered by Polkadot_ or _Polka_ prefix clarification
 
 The statement "Powered by Polkadot" on many projects' sites is often a cause of confusion. This

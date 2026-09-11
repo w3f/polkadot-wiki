@@ -137,7 +137,7 @@ transition proofs for the validators.
 
 ## Collectives
 
-The Polkadot Collectives parachain was added in [Referendum 81](https://polkadot-old.polkassembly.io/referendum/81) and exists only on Polkadot (i.e., there is no Kusama equivalent). The Collectives chain hosts on-chain groups that serve the Polkadot network, such as the [Polkadot Technical Fellowship](#technical-fellowship), the [Polkadot Alliance](#polkadot-alliance), and the Ambassador Fellowship. Collectives enable governance through customizable parameters, manage sub-treasuries, and facilitate collaborative decision-making.
+The Polkadot Collectives parachain was added in [Referendum 81](https://polkadot.subsquare.io/democracy/referenda/81) and exists only on Polkadot (i.e., there is no Kusama equivalent). The Collectives chain hosts on-chain groups that serve the Polkadot network, such as the [Polkadot Technical Fellowship](#technical-fellowship), the [Polkadot Alliance](#polkadot-alliance), and the Ambassador Fellowship. Collectives enable governance through customizable parameters, manage sub-treasuries, and facilitate collaborative decision-making.
 
 ## Commission
 
@@ -310,7 +310,7 @@ margin that each validator deems reasonable.
 ## Injected Account
 
 An account that is not directly managed by the Polkadot UI but can be accessed through it, such as
-accounts controlled by the Polkadot-JS extension.
+accounts controlled by the Polkadot Developer Signer.
 
 ## Interoperability
 
@@ -468,7 +468,7 @@ perform arbitrary, cross-chain communication under shared security.
 
 The Polkadot Alliance is an [on-chain collective](#collectives) founded by Acala, Astar, Interlay,
 Kilt, Moonbeam, Phala, and Subscan, to establish standards and ethics for open-source development in
-[referendum #94](https://polkadot-old.polkassembly.io/referendum/94). It aims to support development
+[referendum #94](https://polkadot.subsquare.io/democracy/referenda/94). It aims to support development
 standards and expose bad actors within the ecosystems of Polkadot.
 
 ## Polkadot SDK
@@ -788,4 +788,4 @@ A tool for running local Polkadot and Substrate testnets.
 See below other glossaries about the Polkadot Ecosystem.
 
 - [Polkadot Glossary by UX Bounty](https://polkadot-ux-bounty.notion.site/UX-Glossary-v01-1a4e1c2781f3809c9292c6764804fa74)
-- [Glossary by Polkadot Support](https://support.polkadot.network/support/solutions/articles/65000110873-glossary)
+- [Glossary by Polkadot Support](https://docs.polkadot.com/reference/glossary/)

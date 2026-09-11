@@ -11,7 +11,8 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
 - [Polkadot Staking Dashboard](#polkadot-staking-dashboard)
 - [PAPI Staking Dashboard](#papi-staking-dashboard)
 - [NOMI](#nomi)
-- [SubWallet Earning](#subwallet-ear[Polkadot Staking Dashboard](https://staking.polkadot.cloud/) is a Web3 application for native, non-custodial [staking](../learn/learn-staking.md) on Polkadot Hub.This section covers the official Polkadot Staking Dashboard for native, non-custodial staking on Polkadot Hub.[Polkadot Staking Dashboard](https://staking.polkadot.cloud/) is a Web3 application for native, non-custodial [staking](../learn/learn-staking.md) on Polkadot Hub.ning)
+- [SubWallet Earning](#subwallet-earning)
+- [Polkadot Staking Dashboard](https://staking.polkadot.cloud/) is a Web3 application for native, non-custodial [staking](../learn/learn-staking.md) on Polkadot Hub.
 
 ## Polkadot Staking Dashboard
 
@@ -28,7 +29,7 @@ description: Explore staking apps in the Polkadot ecosystem, including dashboard
  The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/) enables users to stake either as a solo nominator or as a [nomination pool](../learn/learn-nomination-pools.md) member, and also supports creating and managing nomination pools. The dashboard offers a Simple mode for new stakers and an Advanced mode for experienced stakers. It works with the most popular browser extension and hardware wallets, and supports [staking proxies](../learn/learn-staking.md#stash-account-and-staking-proxy).
 
 Support is available via Discord and email accessible within the app. You can also find more information on the dedicated [wiki page](./dashboards/staking-dashboard.md) and
-[support articles](https://support.polkadot.network/support/solutions/folders/65000157523).
+[articles](../learn/learn-nomination-pools.md).
 
 Below is a simple list of video tutorials about the Polkadot Staking Dashboard:
 

@@ -4,7 +4,7 @@ description: Learn about Polkadot accounts, their structure, identity, and how t
 ---
 
 !!!info "User friendly wallets"
-    Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the [Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+    Create your Polkadot accounts with any of the secure and user-friendly wallets listed on the [wallet options page](how-to/where-to-store-dot.md).
 
 This document covers the basics of accounts in the Polkadot ecosystem. See the
 [Advanced Account](./learn-account-advanced.md) page for more information about accounts such as
@@ -63,7 +63,7 @@ when dealing with non-trivial amounts of funds.
 
 Generating a mnemonic seed on a browser extension or a mobile application will create a hot key or
 hot wallet. Create your Polkadot accounts with a secure and user-friendly wallet listed on the
-[Polkadot website](https://www.polkadot.network/ecosystem/wallets/).
+[wallet options page](how-to/where-to-store-dot.md).
 
 Cold keys are generated on special devices such as those provided by [Ledger](../general/ledger.md).
 Additionally, you can generate your account using the [Polkadot Vault](../general/polkadot-vault.md)
@@ -114,10 +114,23 @@ the unified address format include the following:
 
     To assist, a feature for copying legacy addresses is being implemented to ensure a seamless experience during this interim period.
 
+!!!info "Why an address may start with `5` or a capital letter instead of `1`"
+    Each network has its own address representation of the _same_ public key: Polkadot addresses start
+    with `1`, Kusama addresses start with a capital letter, and the generic Substrate format starts
+    with `5` ([SS58 prefix](./learn-account-advanced.md#for-the-curious-how-prefixes-work) `42`). An
+    address shown starting with `5` or a capital letter is therefore still valid and points to the same
+    account; only the format differs. This commonly happens when a wallet displays the generic Substrate
+    format while an interface shows the network-specific one. Most wallets and interfaces let you choose
+    which format to display - for example, in the [Polkadot Developer Interface](./learn-guides-accounts.md) the
+    address prefix can be set to match the connected network from the Settings page. See the
+    [Address Format](./learn-account-advanced.md#address-format) and
+    [address conversion tools](./learn-account-advanced.md#address-conversion-tools) sections for how to
+    convert between formats.
+
 ## Existential Deposit and Reaping
 
 !!!info
-    Visit [**this support page**](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-) for more information about existential deposit.
+    Visit [**this page**](how-to/existential-deposit.md) for more information about existential deposit.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the
@@ -149,3 +162,24 @@ but gets put back when it has the existential deposit.
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about accounts](./learn-guides-accounts.md).
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create a Vanity Address](how-to/create-vanity-address.md)
+- [How to Export Your JSON Backup File](how-to/export-json-backup.md)
+- [How to Store Your Mnemonic Phrase & Backup Safely](how-to/store-mnemonic-safely.md)
+- [How to Restore Your Account (Developer Signer)](how-to/restore-account-signer.md)
+- [How to Create an Account](how-to/create-account.md)
+- [How to Receive DOT to My Account](how-to/receive-dot.md)
+- [How to Restore Your Account](how-to/restore-account.md)
+- [My Mnemonic Phrase Is Invalid](how-to/mnemonic-invalid.md)
+- [My Password Is Not Working](how-to/password-not-working.md)
+- [How to Change the Style of Your DOT Icon](how-to/change-dot-icon-style.md)
+- [The Difference Between Accounts and Address Book](how-to/accounts-vs-address-book.md)
+- [How to Create a Polkadot Account](how-to/create-polkadot-account.md)
+- [How to View Your Mnemonic Phrase (Developer Signer)](how-to/view-mnemonic-signer.md)
+- [How Can I Find and Copy My Address](how-to/find-copy-address.md)
+- [I Can't Find My Account on the Polkadot Network](how-to/cant-find-account.md)
+- [The 'Unable to Retrieve Key Pair' Error](how-to/error-key-pair.md)
+<!-- how-to-guides -->

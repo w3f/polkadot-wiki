@@ -6,8 +6,8 @@ description: Detailed guides for creating, managing, and destroying nomination p
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -19,7 +19,7 @@ See [this page](./learn-nomination-pools.md) to learn about nomination pools.
 ## Pool Creation with Polkadot-JS
 
 !!!info
-    You easily create a pool using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool) for more information.
+    You easily create a pool using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See the [dashboard documentation](https://docs.staking.polkadot.cloud/en/nomination-pools#creating-a-pool-5-step-wizard) for more information.
 
 The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
 funds to the pool to add themselves as the first member. As stated above, the depositor must always
@@ -51,7 +51,7 @@ Apps UI.
 ## Pool Upkeep with Polkadot-JS
 
 The nominator can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
-[Network > Staking > Accounts page](https://polkadot.js.org/apps/#/staking/actions) and click on
+[Network > Staking > Accounts page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async) and click on
 Pooled button. If you have any pooled accounts with the role of nominator, you will notice the
 option to set nominees. Select the validators to nominate like you would normally using a nominator
 account.
@@ -64,13 +64,13 @@ members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggl
 ## Pool Destruction with Polkadot-JS
 
 !!!info
-    As a pool admin, you can easily destroy a pool and permissionlessly remove all members using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool) for more information.
+    As a pool admin, you can easily destroy a pool and permissionlessly remove all members using the [Polkadot Staking Dashboard](../general/dashboards/staking-dashboard.md#pools). See the [dashboard documentation](https://docs.staking.polkadot.cloud/en/nomination-pools#change-pool-state-root-or-bouncer) for more information.
 
 A pool can be pushed into the “destroying” state via one of:
 
 - The root and bouncer set the pool to “destroying”. This can be done by submitting the
   `nominationPools.setState(poolId, state)` extrinsic using the
-  [Polkadot-JS UI extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
+  [Polkadot Developer Interface extrinsic tab](https://polkadot.js.org/apps/#/extrinsics). Where `poolId` is the
   specific ID of the pool and `state` is the pool's state that must be set to "destroying". Other
   possible states are "open" and "blocked".
 - Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
@@ -91,7 +91,7 @@ options.
 Let's take the example of ALICE setting the claim permissions to `PermissionlessAll`. Another
 account STASH can now claim ALICE's rewards (as a free balance or compound them to the existing
 bonded balance). To do so, STASH can go to the
-[Polkadot-JS UI Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue the following
+[Polkadot Developer Interface Extrinsic Tab](https://polkadot.js.org/apps/#/extrinsics) and issue the following
 extrisics:
 
 - `nominationPools.claimPayoutOthers` extrinsic specifying ALICE's account. This will claim the

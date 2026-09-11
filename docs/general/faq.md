@@ -5,8 +5,7 @@ description: Find answers to common questions about Polkadot and its ecosystem.
 
 !!!info
     This FAQ focuses on technically oriented questions for users interested in certain aspects of
-    Polkadot. If you have a more general question related to usage, you may search for the answer on our support
-    [Knowledge Base](https://support.polkadot.network/support/home) or the main
+    Polkadot. If you have a more general question related to usage, you may find the answer in the main
     [Polkadot network FAQ](https://polkadot.network/faq).
 
 
@@ -181,7 +180,7 @@ size of the active set and how many validators are waiting in the pool.
 There are a few ways to estimate the minimum stake.
 
 One way can be to navigate to the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/targets). The value at the top of the screen saying "lowest/avg staked" is the least staked validator. You need at least this much + 1 to enter the set.
+[Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/all-validators). The value at the top of the screen saying "lowest/avg staked" is the least staked validator. You need at least this much + 1 to enter the set.
 
 You can also use some tools some to perform estimations.
 

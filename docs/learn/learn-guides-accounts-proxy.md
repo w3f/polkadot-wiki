@@ -6,8 +6,8 @@ description: Learn how to create, manage, and use proxy accounts on Polkadot-JS 
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -45,17 +45,17 @@ account. The videos below contain more information about using proxies.
 ## Creating Proxy with Polkadot-JS
 
 To create a proxy account with Polkadot-JS read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account).
+[this article](how-to/create-proxy-account.md).
 
 ## Removing Proxy with Polkadot-JS
 
 Read the section "Removing Proxies" on
-[this support page](https://support.polkadot.network/support/solutions/articles/65000182179-how-to-create-a-proxy-account)
+[this page](how-to/create-proxy-account.md)
 to learn how to remove proxies.
 
 ## View your Proxy on Polkadot-JS
 
-To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next to the proxied
+To view your proxy, just go on the _Accounts_ menu in the Polkadot Developer Interface, next to the proxied
 account you will notice a blue icon. Hover on it, and you will see _Proxy overview_. Click on it and
 you will be presented with a list of all proxies for that account.
 
@@ -89,7 +89,7 @@ Let's take for example the stash account Eleanor setting Bob as a time-delayed s
 this way, if Bob submits an extrinsic to change the reward destination, such extrinsic can be
 rejected by Eleanor. This implies that Eleanor monitors Bob, and that within the time-delay she can
 spot the announced extrinsic. Eleanor can check all the proxy call announcements made by her
-account's proxies on-chain. On Polkadot-JS UI, go to Developer > Storage > Proxy > Announcements to
+account's proxies on-chain. On Polkadot Developer Interface, go to Developer > Storage > Proxy > Announcements to
 check the hashes for the calls made by the proxy accounts and the block height at which they are
 enabled for execution.
 
@@ -121,7 +121,7 @@ the staking proxy account. Also, Alice is the only one who can remove P-C as a s
 P-C can only perform staking-related tasks. For example, P-C cannot send funds out from Alice's
 account.
 
-Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be
+Proxy calls can be done using the Extrinsic Tab in the Polkadot Developer Interface. Nested proxy calls can be
 done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last
 `proxy.proxy` extrinsic. In the diagram above, submitting the proxy call from P-C to Alice will
 automatically ask for Charly's signature. Thus one proxy call will trigger the second one because

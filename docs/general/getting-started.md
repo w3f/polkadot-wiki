@@ -6,7 +6,7 @@ template: explore-cards.html
 
 ## What is Polkadot?
 
-!!!info "Explore Polkadot with [user-friendly wallets](https://www.polkadot.network/ecosystem/wallets/)."
+!!!info "Explore Polkadot with [user-friendly wallets](../learn/how-to/where-to-store-dot.md)."
 
 Polkadot is a **blockchain-based multi-core decentralized cloud computer**. Let's break it down bit by bit:
 
@@ -75,8 +75,8 @@ Depending on your understanding of blockchain, Web3, and Polkadot, several learn
   paper that describes the protocol in more technical terms.
 - [The Technical Explainer Videos](https://www.youtube.com/playlist?list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8):
   These introductory videos explain and demonstrate how to interact with Polkadot using the [Polkadot-JS tools](./polkadotjs.md) and more user-friendly [wallets](https://polkadot.com/ecosystem).
-- [Polkadot Knowledge Base](https://support.polkadot.network/) - Troubleshooting resources for
-  specific errors and problems while using tools such as the [Polkadot Staking Dashboard](./dashboards/staking-dashboard.md) and [Polkadot-JS UI](./polkadotjs-ui.md).
+- [Polkadot Support](https://docs.polkadot.com/get-support/) - Get help with
+  specific errors and problems while using tools such as the [Polkadot Staking Dashboard](./dashboards/staking-dashboard.md) and [Polkadot Developer Interface](./polkadotjs-ui.md).
 
 ### Advanced Level
 

@@ -9,7 +9,7 @@ bold experimentation and early-stage deployment. Polkadot is more conservative, 
 stability and dependability. Cousins have their differences after all.
 
 !!!info
-    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this support article](https://support.polkadot.network/support/solutions/articles/65000182146-kusama-and-polkadot-what-s-the-difference-).
+    To get a better understanding of the key similarities and difference between Polkadot and Kusama, checkout [this article](how-to/polkadot-vs-kusama.md).
 
 ## Cost and Speed
 
@@ -69,3 +69,9 @@ communities, their own governance, and their own complementary use cases, though
 to maintain a close relationship, with many teams likely deploying applications to both networks.
 Web3 Foundation remains committed to both networks going forward, providing crucial support and
 guidance to teams building for the ecosystem.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [Polkadot and Kusama — What's the Difference?](how-to/polkadot-vs-kusama.md)
+<!-- how-to-guides -->

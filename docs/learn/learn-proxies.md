@@ -115,3 +115,9 @@ account has, an additional amount defined by the
 
 !!!info "Polkadot-JS Guides"
     If you are an advanced user, see the [Polkadot-JS guides about proxy accounts](./learn-guides-accounts-proxy.md). You can find information about creating and removing proxies, and more.
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Create a Proxy Account](how-to/create-proxy-account.md)
+<!-- how-to-guides -->

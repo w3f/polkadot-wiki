@@ -11,8 +11,8 @@ these messages, a tool parsing the blockchain data needs to request _chain metad
 That metadata explains how to read the messages. One such tool with a built-in parser for chain
 metadata is the [Polkadot-JS Apps UI](https://polkadot.js.org/apps).
 
-If this page does not answer your question, try searching for your problem at the
-[Polkadot Knowledge Base](https://support.polkadot.network/) for more information on troubleshooting
+If this page does not answer your question, you can
+[contact Polkadot support](https://docs.polkadot.com/get-support/) for more help troubleshooting
 your issue.
 
 ## Polkadot-JS Apps Explorer
@@ -74,6 +74,7 @@ The table below lists the most commonly encountered errors and ways to resolve t
 | Stale              | Transaction nonce too low.                                                                                   | Increase the nonce to +1 of current nonce. Check current nonce by inspecting the address you're using to send the transaction.                                                                                                                                                                                                                                                            |
 | ExhaustsResources  | There aren't enough resources left in the current block to submit this transaction.                          | Try again in the next block.                                                                                                                                                                                                                                                                                                                                                              |
 | Payment            | Unable to pay for TX fee.                                                                                    | You might not have enough free balance to cover the fee this transaction would incur.                                                                                                                                                                                                                                                                                                     |
+| InsufficientBalance | You are trying to send more than your transferable balance allows, e.g. sending out all of your funds without leaving enough to cover the transaction fee or the [existential deposit](../learn/how-to/existential-deposit.md). | The transaction fee is shown before you confirm the transfer. Reduce the amount you're sending so that enough transferable balance remains to pay the fee. To move all of your funds out in one go, use the option to transfer the full account balance, which lets the system account for the fee and existential deposit for you. See [transferring funds](../learn/how-to/transfer-funds.md). |
 | Temporarily banned | The transaction is temporarily banned.                                                                       | The tx is already in pool. Either try on a different node, or wait to see if the initial transaction goes through.                                                                                                                                                                                                                                                                        |
 
 !!!note "Future Error"

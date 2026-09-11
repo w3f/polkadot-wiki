@@ -4,7 +4,7 @@ description: Explore advanced staking concepts in Polkadot, including staking pr
 ---
 
 !!!tip "New to Staking?"
-      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
+      Start your staking journey or explore more information about staking on [Polkadot's Home Page](https://polkadot.network/staking/). Discover the [Staking Dashboard](https://staking.polkadot.cloud/#/overview), and check this [extensive article list](../general/dashboards/staking-dashboard.md) to help you get started. You can now stake natively with a [small number of tokens](../general/chain-state-values.md) and earn staking rewards. For additional information, check out [this blog post](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/).
 
 This page is meant to provide advanced information about staking on Polkadot. For a more general
 introduction, checkout the [Introduction to Staking](./learn-staking.md) page.
@@ -92,15 +92,17 @@ scenario applies to a slashing event, i.e., when a nominator gets slashed, their
 bag does not change. This might result in a scenario where the node is in the wrong bag and needs to
 be placed in the right bag. To address this issue, any account on-chain can submit the
 permissionless extrinsic **`rebag`** within the `voterList` pallet instance to update the positions of
-the nodes that do not belong to their bag and place them in the correct one. Note that rebag works in both ways, i.e., rebag in a higher or lower bag, and the Polkadot-JS UI rebags all accounts in your bag that need rebagging. To reiterate, **actions like bonding and unbonding tokens automatically rebag the nominator node, but events like compounding staking rewards and slashing do not**. See the [bags-list](learn-nominator.md#bags-list) section for more
+the nodes that do not belong to their bag and place them in the correct one. Note that rebag works in both ways, i.e., rebag in a higher or lower bag, and the Polkadot Developer Interface rebags all accounts in your bag that need rebagging. To reiterate, **actions like bonding and unbonding tokens automatically rebag the nominator node, but events like compounding staking rewards and slashing do not**. See the [bags-list](learn-nominator.md#bags-list) section for more
 information.
 
 !!!info "Important Notes"
-      The `putInFrontOf` extrinsic does not check which account is the lightest (i.e., the account with the least tokens where you can move in front of), as opposed to `rebag`, which automatically puts you in the right bag. Suppose you have the account with 7 DOT and your bag configuration is 8 3 4 9 1 7 5. You can move in front of 1 or 4 (i.e., lighter accounts) or in front of 3 (i.e., lightest account). Ideally, you need to find the lightest account and give it as an argument to the extrinsic. This is what Polkadot-JS UI does for you: it finds the "lightest" account in the bag and puts you in front of it.
+      The `putInFrontOf` extrinsic does not check which account is the lightest (i.e., the account with the least tokens where you can move in front of), as opposed to `rebag`, which automatically puts you in the right bag. Suppose you have the account with 7 DOT and your bag configuration is 8 3 4 9 1 7 5. You can move in front of 1 or 4 (i.e., lighter accounts) or in front of 3 (i.e., lightest account). Ideally, you need to find the lightest account and give it as an argument to the extrinsic. This is what Polkadot Developer Interface does for you: it finds the "lightest" account in the bag and puts you in front of it.
 
       If you want the best placement in the bags list, the recommended order of actions is first to rebag yourself (if possible) and then issue the `putInFrontOf` extrinsic.
 
       `Rebagging` and `putInFrontOf` only matter if you are in the last bag, close to the minimum active bond. If you bond way above that value, you do not need to issue those extrinsics.
+
+      Note that `putInFrontOf` only moves a node ahead of a lighter node within the same bag and therefore does not by itself guarantee rewards: the node it is placed in front of may itself fall outside the electing set. A node bonded above the dynamic minimum active bond should, however, begin earning rewards from the following era.
 
 The bags list can include unlimited nodes, subject to the chain's runtime
 storage. In the current staking system configuration, at most 22500 nominators in the bags list (12500 on Kusama) come out as the electing nominators. See
@@ -249,7 +251,7 @@ calculated, and nobody issued a payout for that era from that validator in the n
 reward would no longer be claimable.
 
 !!!info "Advanced How-to Guides"
-    In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout before 28 eras have passed. See [this page](./learn-guides-nominator.md#claiming-rewards-with-polkadot-js) for more information about how to claim rewards using the Polkadot-JS UI.
+    In order to be absolutely sure that staking rewards can be claimed, users should trigger a payout before 28 eras have passed. See [this page](./learn-guides-nominator.md#claiming-rewards-with-polkadot-js) for more information about how to claim rewards using the Polkadot Developer Interface.
 
 ### FAQ and Cautionary Notes
 
@@ -395,3 +397,10 @@ resources section below.
 - [Staking Miner repository](https://github.com/paritytech/staking-miner-v2)
 - [Election Pallet definition](https://crates.parity.io/pallet_election_provider_multi_phase/index.html)
 - [Signed phase parameter configuration on Polkadot](https://github.com/paritytech/polkadot-sdk/blob/f610ffc05876d4b98a14cee245b4cc27bd3c0c15/runtime/polkadot/src/lib.rs#L389:L397)
+
+<!-- how-to-guides -->
+## How-to guides
+
+- [How to Rebond Tokens During the Unbonding Period](how-to/rebond-tokens.md)
+- [How to Change Your Controller Account](how-to/change-controller-account.md)
+<!-- how-to-guides -->

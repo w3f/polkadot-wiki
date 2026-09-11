@@ -8,10 +8,10 @@ description: Use the Polkadot Ledger Application.
   <p>
     If you need help using Ledger, see
     <a href="https://support.ledger.com/article/Migrate-Assets-to-Polkadot-Generic-App-Accounts-Using-the-Polkadot-Generic-App" target="_blank" rel="noopener noreferrer">
-      this support article.
+      this article.
     </a>
     If the problem persists, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -24,7 +24,7 @@ description: Use the Polkadot Ledger Application.
 
     Using the Polkadot Ledger app on a Nano S will not allow you to install any other Ledger application on your device, and add Polkadot accounts to the Ledger Live App. But you will be able to add them to wallets and extensions that support Ledger devices.
     
-    For more information about Ledger Nano S limitations, see [this support page](https://support.ledger.com/article/Ledger-Nano-S-Limitations). You can migrate your wallet from a Nano S to a newer device with your 24-word seed phrase. If you are unsure which Ledger device best suits your needs, see [this comparison documentation](https://shop.ledger.com/pages/hardware-wallets-comparison).
+    For more information about Ledger Nano S limitations, see [this page](https://support.ledger.com/article/Ledger-Nano-S-Limitations). You can migrate your wallet from a Nano S to a newer device with your 24-word seed phrase. If you are unsure which Ledger device best suits your needs, see [this comparison documentation](https://shop.ledger.com/pages/hardware-wallets-comparison).
 
 The Polkadot [Ledger](https://www.ledger.com/) application is compatible with the Ledger Nano S Plus, Nano X, Stax, Flex and newer devices. Ledger devices are hardware wallets that keep your secret key secured on a
 physical device that does not expose it to your computer or the internet. The private keys will not
@@ -90,7 +90,7 @@ that case, you will need the Polkadot Migration app to move fungible and non-fun
 identities, etc., from old Ledger accounts to a new one or an existing one created with the Polkadot Ledger app.
 
 !!! note "The migration app has nothing to do with the Asset Hub migration"
-    The migration app was made before [the Asset Hub migration](https://support.polkadot.network/support/solutions/articles/65000190561).
+    The migration app was made before [the Asset Hub migration](../learn/how-to/asset-hub-migration.md).
     
     With the Asset Hub migration, users who have old Kusama Ledger accounts will need to use the migration app to transfer funds and assets to a new account generated via the Polkadot (Generic) app.
 
@@ -146,9 +146,7 @@ Chains and parachains, and Polkadot parachains, see the procedure below:
 
 ## Using Ledger Live
 
-See
-[this support article](https://support.polkadot.network/support/solutions/articles/65000175822-how-to-use-polkadot-and-stake-with-ledger-live)
-to learn how to use Polkadot with ledger live.
+See [Ledger Live](https://www.ledger.com/ledger-live) to learn how to use Polkadot with Ledger Live.
 
 ---
 
@@ -156,4 +154,15 @@ to learn how to use Polkadot with ledger live.
     If you are an advanced user, see the
     [Polkadot-JS guides about Ledger](../learn/learn-guides-ledger.md).
 
+<!-- how-to-guides -->
+## How-to guides
 
+- [Ledger — How to Sign a Transaction](../learn/how-to/ledger-sign-transaction.md)
+- [How to Add a Ledger Account](../learn/how-to/add-ledger-account.md)
+- [How to Add Your Ledger Account (Developer Signer)](../learn/how-to/add-ledger-account-signer.md)
+- [Ledger — How to Confirm the Account Address on Your Device](../learn/how-to/ledger-confirm-address.md)
+- [Ledger — How to Migrate Your Account to the Generic App](../learn/how-to/ledger-migrate-generic-app.md)
+- [Ledger — How to Send DOT from Your Account](../learn/how-to/ledger-send-dot.md)
+- [Ledger — Can I Import an Existing Account to My Device?](../learn/how-to/ledger-import-account.md)
+- [Ledger — Can I Use the Polkadot App for Kusama?](../learn/how-to/ledger-kusama-app.md)
+<!-- how-to-guides -->

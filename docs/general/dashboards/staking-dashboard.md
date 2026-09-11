@@ -16,7 +16,7 @@ The [Polkadot Staking Dashboard](https://staking.polkadot.cloud/#/overview) supp
 
 The dashboard also has **native [Ledger](../ledger.md) support**, meaning that you do not need an
 extension or a wallet to use it; you just need your Ledger device.
-[Metadata updates](../../learn/learn-guides-transfers.md#metadata-updates-with-the-polkadot-js-browser-extension)
+[Metadata updates](../../learn/learn-guides-transfers.md#metadata-updates-with-the-polkadot-developer-signer)
 are thus not necessary, as you only need to keep your Ledger apps up-to-date.
 
 Before using the dashboard, make sure you have a wallet or extension with a funded account. Note
@@ -125,7 +125,7 @@ most recently received rewards.
 ### Pools
 
 !!!info "Joining a Nomination Pool - Walk-through video tutorial"
-    [This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a [nomination pool](../../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read the [dedicated support article](https://support.polkadot.network/support/solutions/articles/65000182376-staking-dashboard-how-to-join-a-nomination-pool) about joining a pool.
+    [This video tutorial](https://youtu.be/dDIG7QAApig) shows you how to join a [nomination pool](../../learn/learn-nomination-pools.md) with the Staking Dashboard. You can also read the [dashboard documentation on joining a pool](https://docs.staking.polkadot.cloud/en/nomination-pools#joining-a-pool).
 
 ![dashboard pools](../../assets/dashboard-pools.png)
 
@@ -149,7 +149,7 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
     ![dashboard-permissionlessPoolClaims](../../assets/dashboard-permissionlessPoolClaims.png)
 
     !!!info
-        For more information about how-to update your claim permissions with the staking dashboard see [this support article](https://support.polkadot.network/support/solutions/articles/65000182399-staking-dashboard-how-to-claim-nomination-pool-rewards#Permissionless-claiming).
+        For more information about how to update your claim permissions with the staking dashboard, see the [dashboard documentation](https://docs.staking.polkadot.cloud/en/nomination-pools#claim-permission).
 
     - Leave the pool and unbond all the funds in the pool.
 
@@ -165,17 +165,17 @@ This page of the dashboard has four main panels (Sidebar and Accounts Panels exc
     ![dashboard-manage-commission](../../assets/dashboard-managePoolCommission.png)
 
     !!!info
-        For more information about how-to manage commission of your nomination pool with the staking dashboard see [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#Pool-management-options).
+        For more information about how to manage commission of your nomination pool with the staking dashboard, see the [dashboard documentation](https://docs.staking.polkadot.cloud/en/nomination-pools#commission-root-only).
 
     - Rename Pool: you can change the pool's name.
     - Lock Pool: you can lock the pool so that new members are not allowed.
     - Destroy Pool: you can destroy the pool. See
     [this wiki page](../../learn/learn-guides-staking-pools.md#pool-destruction-with-polkadot-js) and
-    [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-destroy-a-pool) for more information.
+    the [dashboard documentation](https://docs.staking.polkadot.cloud/en/nomination-pools#change-pool-state-root-or-bouncer) for more information.
 
     You can see any unclaimed rewards in the middle of the panel. You can claim and bond the rewards (`+ Compound` button) or withdraw them as a free balance (`Withdraw` button). In this case, there are approximately 0.0012 KSM that can be claimed. You can see the Pool Status at the bottom of the panel, currently set to "Nominating and Earning Rewards".
 
-    Note that if it is the first time you log in to the dashboard, you will see two buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a nomination pool, see [this support article](https://support.polkadot.network/support/solutions/articles/65000182388-staking-dashboard-how-to-create-a-nomination-pool#How-to-create-a-pool).
+    Note that if it is the first time you log in to the dashboard, you will see two buttons `Create` and `Join`, instead of `Manage`. For more information about how to create a nomination pool, see the [dashboard documentation](https://docs.staking.polkadot.cloud/en/nomination-pools#creating-a-pool-5-step-wizard).
 
 - **Section D: The Pool Nominations Panel** shows the nominations of the pool you are currently in,
   highlighting the validator that is active and will pay rewards to the pool at the end of the era
@@ -247,15 +247,33 @@ This page of the dashboard has two main panels (Sidebar and Accounts Panels excl
 
 - **Panel A: The Stats Panel** shows the total number of active validators, all validators currently
   registered (active and inactive), and average commission across all validators.
-- **Panel B: The Validators Panel** shows all validators. You can order them by low/high commission
-  or apply the following filters:
-  - Include only active validators
-  - Exclude validators that have 100% commission, blocked nominations, and have missing identity.
+- **Panel B: The Validators Panel** shows all validators. They can be ordered by either "Performance"
+  or "Commission" (low/high), or filtered by the following criteria:
+  - Include only active validators (excludes validators that are waiting, i.e. not in the current
+    [active set](../../learn/learn-validator.md)). A new set is selected every era, so an active
+    validator is not guaranteed to remain active in future eras.
+  - Exclude validators with 100% commission (nominating these yields no staking rewards).
+  - Exclude validators with blocked nominations (attempting to nominate them causes the transaction
+    to fail, even when nominating others alongside them).
+  - Exclude validators with a missing [on-chain identity](../../learn/learn-identity.md).
+
+For each validator, the panel displays: the account icon and address (replaced by the on-chain
+identity when set, which may or may not be verified by a [registrar](../../learn/learn-identity.md#registrars));
+a small graph of the validator's 30-day performance; a copy icon for its public address; a heart icon
+to add or remove it from the Favorites tab; and a metrics icon that opens detailed statistics such as
+self stake, recent performance, and reward history. Also shown are the estimated Annual Percentage
+Yield (APY), the "Top x%" ranking (displayed when the validator is among the top performers over the
+last 30 days), the commission rate (from 0% to 100%), and the status in the current validator set
+(active or waiting, with the total stake shown for active validators).
+
+The Validators page also includes a **Favorites** tab, which lists the validators marked with the
+heart icon. These can be quickly selected when [nominating](#nominate), and removed by toggling the
+heart icon again.
 
 ## Support
 
 Support for the Staking Dashboard is available at
-[the official Polkadot support website](https://support.polkadot.network/support/home).
+[the official Polkadot support website](https://docs.polkadot.com/get-support/).
 
 ## Network
 

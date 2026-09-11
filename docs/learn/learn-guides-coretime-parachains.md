@@ -59,7 +59,7 @@ Polkadot-SDK repository.
 Reserving a `ParaID` requires a
 [deposit](../general/chain-state-values.md). The first step is to
 register a [`ParaID`](../general/glossary.md#paraid) for the parachain. This can be done through
-Polkadot-JS UI by navigating to
+Polkadot Developer Interface by navigating to
 [Network > Parachains > Parathreads](https://polkadot.js.org/apps/#/parachains/parathreads) and
 clicking on ParaID button. Ensure that you have sufficient tokens to reserve the displayed `ParaID`
 successfully.
@@ -137,7 +137,7 @@ After the collator node is fully synced with the relay chain, navigate to
     - `onDemandAssignmentProvider.placeOrderKeepAlive` includes a check which will **not** reap the account if the provided funds will run out, ensuring the account is kept alive.
 
 With each successful on-demand extrinsic, the parachain head changes (you may have to zoom out on
-the browser for parachain head details to show up on Polkadot-JS UI).
+the browser for parachain head details to show up on Polkadot Developer Interface).
 
 ![coretime-ondemand-parahead](../assets/coretime/coretime-on-demand-parahead.png)
 

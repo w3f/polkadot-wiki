@@ -51,6 +51,15 @@ The smallest unit of account balance on Polkadot SDK-based blockchains is Planck
 
 ## DOT Inflation
 
+### Total supply
+
+The current total supply is approximately **1.6 billion DOT**, with a **maximum supply capped at 2.1 billion DOT**. You can check the latest value on the [Subscan token supply dashboard](https://assethub-polkadot.subscan.io/tools/charts?type=token_supply), the [Developer Interface Explorer](https://polkadot.js.org/apps/#/explorer), or on [CoinGecko](https://www.coingecko.com/en/coins/polkadot) / [CoinMarketCap](https://coinmarketcap.com/currencies/polkadot-new/).
+
+New DOT is minted to reward validators and nominators who secure the network through staking, and to fund the [Polkadot Treasury](./learn-polkadot-opengov-treasury.md). The issuance model has evolved through OpenGov: [Referendum 1710](https://polkadot.subsquare.io/referenda/1710) (implemented January 2026) introduced a **capped, stepped schedule** in which inflation steps down every two years — 13.14% of the remaining gap to the 2.1 billion DOT cap every two years, with the first step on 14 March 2026 — so it declines as the circulating supply approaches the cap.
+
+!!! info
+    The fixed-rate figure and 25-year projection described below reflect Polkadot's earlier inflation model, prior to the [Referendum 1710](https://polkadot.subsquare.io/referenda/1710) stepped schedule above.
+
 DOT is an inflationary token, with
 [**fixed annual expansion of the token supply of 120,000,000 DOT**](https://github.com/polkadot-fellows/runtimes/pull/471),
 of which 15% goes to the [treasury](./learn-polkadot-opengov-treasury.md) and 85% to

@@ -6,8 +6,8 @@ description: Learn how to bond tokens, nominate validators, and claim staking re
 <!-- MessageBox -->
 <div id="messageBox" class="floating-message-box">
   <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot-JS UI, you can contact the
-    <a href="https://support.polkadot.network/support/home" target="_blank" rel="noopener noreferrer">
+    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
+    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
       Polkadot Support Team.
     </a>
   </p>
@@ -25,10 +25,10 @@ See [this page](./learn-staking.md) to learn about staking.
 
 ### Bond your Tokens
 
-!!!info "Support Article"
-    Read the support article about [How to Bond Tokens and Nominate](https://support.polkadot.network/support/solutions/articles/65000168057-polkadot-js-ui-how-do-i-stake-nominate-on-polkadot-).
+!!!info "Related guide"
+    Read the article about [How to Bond Tokens and Nominate](how-to/stake-nominate.md).
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
+On the [Polkadot Developer Interface](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
 "Network" menu).
 
 The "Staking Overview" subsection will show you all the active validators and their information -
@@ -38,22 +38,22 @@ last block number that they produced. If you click on the chart button it will t
 "Validator Stats" page for that validator that shows you more detailed and historical information
 about the validator's stake, rewards and [slashes](./learn-offenses.md).
 
-The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
+The "Account actions" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)) allows you
 to stake and nominate.
 
-The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)) allows you to
+The "Payouts" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)) allows you to
 claim rewards from staking.
 
-The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
+The "Targets" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/all-validators)) will help you
 estimate your earnings and this is where it's good to start picking favorites.
 
-The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
+The "Waiting" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough KSM backing them (as allocated through the
 [Phragmén election mechanism](./learn-phragmen.md)). It is possible validator can remain in the
 queue for a very long time if they never get enough backing.
 
-The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
+The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
 rewards, and [slashes](./learn-offenses.md).
 
@@ -79,8 +79,8 @@ earn compound interest.
 
 ### Nominate a Validator
 
-!!!info "Support Article"
-    Read the support article about [How to Select Validators](https://support.polkadot.network/support/solutions/articles/65000150130-how-do-i-know-which-validators-to-choose-).
+!!!info "Related guide"
+    Read the article about [How to Select Validators](how-to/choose-validators.md).
 
 You are now bonded. Being bonded means your tokens are locked and could be
 [slashed](./learn-offenses.md) if the validators you nominate misbehave. All bonded funds can be
@@ -97,7 +97,7 @@ Select them, confirm the transaction, and you're done - you are now nominating. 
 will become active in the next era. Eras last six hours on Kusama - depending on when you do this,
 your nominations may become active almost immediately, or you may have to wait almost the entire six
 hours before your nominations are active. You can check how far along Kusama is in the current era
-on the [Staking page](https://polkadot.js.org/apps/#/staking).
+on the [Staking page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
@@ -108,8 +108,8 @@ more details.
 
 ### Stop Nominating
 
-!!!info "Support Article"
-    Read the support article about [How to Stop Nominating & Unbond Tokens](https://support.polkadot.network/support/solutions/articles/65000167902-how-can-i-unstake-my-tokens-again-). See also the support article about [How to Rebond Tokens](https://support.polkadot.network/support/solutions/articles/65000170241-polkadot-js-ui-how-to-rebond-tokens-during-the-unbonding-period).
+!!!info "Related guide"
+    Read the article about [How to Stop Nominating & Unbond Tokens](how-to/unstake-tokens.md). See also the article about [How to Rebond Tokens](how-to/rebond-tokens.md).
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them.
@@ -121,10 +121,10 @@ fee. Someone must submit a transaction with a validator ID and an era index. Pol
 automatically calculate that validator's reward and distribute the rewards pro rata.
 
 These details are handled for you automatically if you use the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
+[Polkadot Developer Interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async), which also allows you to submit
 batches of eras at once.
 
-To claim rewards on Polkadot-JS UI, you will need to be in the "Payouts" tab underneath "Staking",
+To claim rewards on Polkadot Developer Interface, you will need to be in the "Payouts" tab underneath "Staking",
 which will list all the pending payouts for your stashes.
 
 ![pending-payouts](../assets/polkadotjs_payout_page.png)
@@ -141,7 +141,7 @@ transaction.
 
 ## Using Command-Line Interface (CLI)
 
-Apart from using the Polkadot-JS UI to participate in the staking, you can do all these things in
+Apart from using the Polkadot Developer Interface to participate in the staking, you can do all these things in
 CLI instead. The CLI approach allows you to interact with the network without using Polkadot-JS.
 
 ### Step 1: Install @polkadot/api-cli
@@ -155,19 +155,17 @@ npm install -g @polkadot/api-cli
 
 ### Step 2: Bond Tokens
 
-!!!info "Controller accounts are deprecated"
-    Controller accounts are deprecated. For more information, see [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
+!!!info "Controller accounts have been removed"
+    Controller accounts have been removed from staking: the `bond` extrinsic no longer takes a
+    controller argument, and rewards can no longer be paid to a controller. Bonding is now signed by
+    the stash account itself. For background, see
+    [this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748).
 
 Executing the following command:
 
 ```bash
-polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
+polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
 ```
-
-`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. (Controller accounts
-are now deprecated. Refer to
-[this discussion](https://forum.polkadot.network/t/staking-controller-deprecation-plan-staking-ui-leads-comms/2748)
-for additional context)
 
 `NUMBER_OF_TOKENS`: The number of native tokens (in Plancks) you would like to stake to the network.
 For more information, see [this page](../learn/learn-DOT.md).
@@ -178,12 +176,12 @@ For more information, see [this page](../learn/learn-DOT.md).
 - `Stash` - Pay into the stash account, not increasing the amount at stake.
 - `Account` - Pay into a custom account that is not the stash (can be a proxy or another type of
   account).
-- `Controller` - Pay into the controller account.
+- `None` - Receive no reward.
 
 Example for Kusama:
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io
+polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond 1000000000000 Staked --ws wss://kusama-rpc.polkadot.io
 ```
 
 For wss endpoints see [this page](https://docs.polkadot.com/develop/networks/).
@@ -200,7 +198,7 @@ Result:
 
 You can check the transaction status by using the value of the `InBlock` in
 [Subscan](https://www.subscan.io/). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS UI.
+[Staking](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/staking-async) page on the Polkadot Developer Interface.
 
 ### Step 3: Nominate a Validator
 
@@ -215,4 +213,4 @@ polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoi
 ```
 
 After a few seconds, you should see the hash of the transaction, and if you would like to verify the
-nomination status, you can check that on the Polkadot-JS UI as well.
+nomination status, you can check that on the Polkadot Developer Interface as well.
