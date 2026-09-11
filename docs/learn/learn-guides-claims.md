@@ -2,16 +2,6 @@
 title: Polkadot-JS Token Claims Guide
 description: Step-by-step guide to claiming your DOT and KSM tokens using Polkadot Developer Interface.
 ---
-<!-- MessageBox -->
-<div id="messageBox" class="floating-message-box">
-  <p>
-    Polkadot-JS is for developers and power users only. If you need help using the Polkadot Developer Interface, you can contact the
-    <a href="https://docs.polkadot.com/get-support/" target="_blank" rel="noopener noreferrer">
-      Polkadot Support Team.
-    </a>
-  </p>
-  <button class="close-messagebox" aria-label="Close message">✖</button>
-</div>
 
 If you participated in a previous DOT sale before 2020 and received your DOT allocation indicator
 tokens, you can now claim your DOT (and a proportional amount of KSM on the Kusama network). The
