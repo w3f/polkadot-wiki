@@ -16,12 +16,16 @@ def format(value, filter):
     match filter:
         case "percentage":
             return f"{value / 10000}%"
+        case "percentage_perbill":
+            return f"{value / 10000000}%"  # Perbill: 1e9 = 100%
         case "human_readable":
             return f"{human_readable(10, value)} DOT"
         case "human_readable_kusama":
             return f"{human_readable(12, value)} KSM"
         case "blocks_to_days":
             return str(blocks_to_days(value))
+        case "eras_to_days_kusama":
+            return str(eras_to_days(value, 6))  # Kusama era = 6 hours
         case "precise_ksm":
             return f"{human_readable(12, value, rounded=False)} KSM"
         case "precise_dot":
@@ -29,8 +33,13 @@ def format(value, filter):
         case _:
             return str(value)
         
-def blocks_to_days(blocks): 
+def blocks_to_days(blocks):
     return (blocks * 6) / 86400
+
+def eras_to_days(eras, era_hours):
+    # BondingDuration is denominated in eras, not blocks:
+    # eras * era length (hours) / hours-per-day
+    return (eras * era_hours) / 24
 
 def get_network_url(network):
     match network:

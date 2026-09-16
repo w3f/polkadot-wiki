@@ -89,7 +89,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Minimum Validator Commission
 
-    The minimum commission a Polkadot Validator can set is {{ rpc("polkadot-assethub", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
+    The minimum commission a Polkadot Validator can set is {{ rpc("polkadot-assethub", "Staking", "MinCommission", 0, is_constant=false, readable="percentage_perbill") }}. [This does not guarantee entry into the active set and earning rewards](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
 
     #### Multisig Deposit Base
 
@@ -101,7 +101,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Nomination Pool Max Commission
 
-    The maximum commission that can be set for a Polkadot nomination pool is {{ rpc("polkadot-assethub", "NominationPools", "GlobalMaxCommission", 100000000, is_constant=false, readable="percentage") }}.
+    The maximum commission that can be set for a Polkadot nomination pool is {{ rpc("polkadot-assethub", "NominationPools", "GlobalMaxCommission", 100000000, is_constant=false, readable="percentage_perbill") }}.
 
     #### Nomination Pool Members
 
@@ -245,7 +245,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Minimum Validator Commission
 
-    The minimum commission a Kusama Validator can set is {{ rpc("kusama-assethub", "Staking", "MinCommission", 0, is_constant=false, readable="percentage") }}. [This does not guarantee entry into the active set and earning rewards](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
+    The minimum commission a Kusama Validator can set is {{ rpc("kusama-assethub", "Staking", "MinCommission", 0, is_constant=false, readable="percentage_perbill") }}. [This does not guarantee entry into the active set and earning rewards](https://docs.polkadot.com/infrastructure/running-a-validator/#running-a-validator).
 
     #### Multisig Deposit Base
 
@@ -257,7 +257,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Nomination Pool Max Commission
 
-    The maximum commission that can be set for a Kusama nomination pool is {{ rpc("kusama-assethub", "NominationPools", "GlobalMaxCommission", 100000000, is_constant=false, readable="percentage") }}.
+    The maximum commission that can be set for a Kusama nomination pool is {{ rpc("kusama-assethub", "NominationPools", "GlobalMaxCommission", 100000000, is_constant=false, readable="percentage_perbill") }}.
 
     #### Nomination Pool Members
 
@@ -316,7 +316,7 @@ description: Explore chain constants and storage values for Polkadot, Kusama, an
 
     #### Unbonding Duration
 
-    The unbonding duration on Kusama is set to {{ rpc("kusama-assethub", "Staking", "BondingDuration", 0, is_constant=true, readable="blocks_to_days") }} days. This is
+    The unbonding duration on Kusama is set to {{ rpc("kusama-assethub", "Staking", "BondingDuration", 0, is_constant=true, readable="eras_to_days_kusama") }} days. This is
     calculated by taking the **bonding duration** (in eras), multiplying it by the **length of a single
     era** (in hours), and dividing by the **hours in a day** (24). Example: 28 × 6 ÷ 24 = 7 days.
 
