@@ -119,6 +119,9 @@ community members. The application we use most often to interact with the Matrix
   building on Polkadot and/or Substrate. (Note that this may contain inaccuracies, as it's
   unofficial).
 - [Jobs in Polkadot Ecosystem](https://jobs.polkadot.com/jobs) - Join the Polkadot Talent Network.
+- [Maneki](https://www.maneki.work/) - Aggregated Web3 job board tracking 2,500+ live openings
+  from 500+ crypto companies' career pages, updated daily. (Note that this is an unofficial,
+  ecosystem-wide resource, not Polkadot-specific).
 - [Polkadot Blockchain Academy](https://polkadot.network/development/blockchain-academy/) - a
   classroom-based educational program covering the conceptual underpinnings and the hands-on
   application of blockchain technology, using Polkadot and Substrate as its foundations.
