@@ -38,12 +38,13 @@ fellowship cannot unanimously change the network parameters, conduct rescues or 
 whitelisted proposals still have to go through the whole life cycle of an OpenGov referendum and can
 only be enacted when the referendum passes successfully.
 
-The whitelisting process starts as a fellowship referenda with embedded XCM call from the
-collectives system chain to the Polkadot relay chain. For instance,
-[the Polkadot Fellowship referenda 68](https://collectives.subsquare.io/fellowship/referenda/68) was used to
-**whitelist** [the Polkadot OpenGov referenda 440](https://polkadot.subsquare.io/referenda/440).
+The whitelisting process starts as a Fellowship referendum on the Collectives system chain that sends an XCM message to Polkadot Asset Hub, where OpenGov and the Whitelist pallet have run since the Asset Hub migration. The message calls `whitelist.whitelist_call` with the hash of the call that the Whitelisted Caller referendum will dispatch. For instance, [Fellowship referendum 665](https://collectives.subsquare.io/fellowship/referenda/665) whitelisted the call for the runtime upgrade in [Polkadot OpenGov referendum 1960](https://polkadot.subsquare.io/referenda/1960). The same mechanism can also remove a call from the whitelist (`whitelist.remove_whitelisted_call`).
+
+You can check which call hashes are currently whitelisted under `whitelist.whitelistedCall` on Polkadot Asset Hub. Before the Asset Hub migration, the same process targeted the Polkadot relay chain, for example [Fellowship referendum 68](https://collectives.subsquare.io/fellowship/referenda/68) whitelisted [Polkadot referendum 440](https://polkadot.subsquare.io/referenda/440).
 
 ![whitelist-xcm](../assets/fellowship-whitelist-xcm.png)
+
+_Example from before the Asset Hub migration, when the destination was the relay chain._
 
 !!!info "Submitting Whitelisted Proposals"
     For more information about how to submit a whitelisted proposal see the [dedicated advanced how-to guides](./learn-guides-polkadot-opengov.md#submitting-a-referendum-on-the-whitelisted-caller-track).
