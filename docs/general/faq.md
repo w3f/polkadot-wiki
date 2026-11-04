@@ -215,15 +215,7 @@ the train of this assertion, one might assume that Polkadot's governance is susc
 ruled by a few large token holders (called _whales_ in trading parlance) and therefore become a mere
 plutocracy (rule of the rich).
 
-There are several other mechanisms that are built-in to the governance system to resist this
-plutocratic tendency. One of these mechanisms is called conviction voting, and imbues greater voting
-power to token holders who are willing to lock their tokens on the protocol for longer lengths of
-time. Longer lock-ups display _conviction_ in a vote. Conviction voting could allow a highly
-determined minority to overrule the vote of an apathetic majority in certain situations. Another
-mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
-approval or rejection based on what part of the governance protocol the proposal originated in. For
-details on the subtleties of Polkadot's governance system, please see the
-[governance page](../learn/learn-polkadot-opengov.md).
+There are several other mechanisms that are built-in to the governance system to resist this plutocratic tendency. One of these mechanisms is called conviction voting, and imbues greater voting power to token holders who are willing to lock their tokens on the protocol for longer lengths of time. Longer lock-ups display _conviction_ in a vote. Conviction voting could allow a highly determined minority to overrule the vote of an apathetic majority in certain situations. OpenGov also measures two things for every referendum: approval (conviction-weighted Aye votes as a share of all conviction-weighted Aye and Nay votes) and support (Aye and Abstain tokens, ignoring conviction, as a share of active issuance). Each track sets its own time-varying requirements for both, so passing a referendum takes enough tokens taking part, not only a majority of the votes cast. Voters can also [delegate](../learn/learn-polkadot-opengov.md#multirole-delegation) their voting power per track to people they trust. (Adaptive Quorum Biasing belonged to Governance V1 and is no longer used.) For details on the subtleties of Polkadot's governance system, please see the [governance page](../learn/learn-polkadot-opengov.md).
 
 ## Parachains
 
