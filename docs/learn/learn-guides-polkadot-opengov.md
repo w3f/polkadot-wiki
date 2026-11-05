@@ -148,7 +148,7 @@ For detailed instructions on how to vote on Polkadot OpenGov referenda, check
 
 ### Removing Votes
 
-To remove votes, you need to use the [Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and
+To remove votes, you need to use the [Extrinsics tab](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics) and
 call the `removeVote` function through the `convictionVoting` pallet.
 
 ![rm-vote](../assets/rm-vote.png)
@@ -159,7 +159,7 @@ on and the `index` is the referendum number.
 ### Removing Expired Voting Locks
 
 To remove an expired lock, you need to use the
-[Extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and call the `unlock` function through
+[Extrinsics tab](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics) and call the `unlock` function through
 the `convictionVoting` pallet. Note that if you voted on referenda in multiple tracks, the tokens
 will be unlocked after removing votes and unlocking on all the tracks. Similarly, if you you
 [delegated](#delegations) on multiple tracks, the funds will be unlocked after
@@ -187,7 +187,7 @@ Instructions to do delegations with Polkadot-JS are also available on the
 ### Delegate Votes
 
 You can start delegating your votes by clicking the "Delegate" button on
-[Governance > Referenda](https://polkadot.js.org/apps/#/referenda).
+[Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda).
 
 ![js-delegation-start](../assets/js-delegation-start.png)
 
@@ -203,7 +203,7 @@ Note that if you want to delegate just a few tracks, you have two options:
 
 - Repeat the process using the "Delegate" button multiple times
 - Issue a batch call with multiple `convictionVoting.delegate` extrinsics under
-  [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics)
+  [Developer > Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics)
 
 ![js-delegation-delegate](../assets/js-delegation-delegate.png)
 
@@ -211,9 +211,9 @@ By clicking on "Add item" you can add new extrinsics for multiple tracks.
 
 ### Undelegate Votes
 
-The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only
+The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda) is only
 for delegating votes. You cannot undelegate or modify your delegations. If you wish to undelegate,
-you will need to go to [Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics) and
+you will need to go to [Developer > Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics) and
 submit a `convictionVoting.undelegate` extrinsic, specifying the track you wish to undelegate.
 
 ![js-delegation-undelegate](../assets/js-delegation-undelegate.png)
@@ -232,10 +232,10 @@ To remove expired locks from delegations, you can
 
 ### Modify your Delegations
 
-The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/#/referenda) is only
+The "Delegate" button on [Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda) is only
 for delegating votes. You cannot undelegate or modify your delegations. If you wish to update the
 delegated account, the conviction, and the number of votes you will need to go to
-[Developer > Extrinsics](https://polkadot.js.org/apps/#/extrinsics), [undelegate](#undelegate-votes)
+[Developer > Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/extrinsics), [undelegate](#undelegate-votes)
 the track and [delegate](#delegate-votes) again with updated information.
 
 ## Claiming OpenGov Deposits
@@ -247,13 +247,13 @@ the track and [delegate](#delegate-votes) again with updated information.
 
 After a referendum finishes its life cycle (and gets approved or rejected or timed out), the
 preimage and decision deposits can be claimed. For claiming the preimage deposit, navigate to
-[Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/#/preimages) and click on
+[Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages) and click on
 unnote button shown on the preimage you submitted.
 
 ![Claim Preimage Deposit](../assets/claim-preimage-deposit.png)
 
 Similarly, to claim the decision deposit, navigate to
-[Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and scroll down
+[Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda) and scroll down
 to the end of the page to click on the referenda with the decision deposit and claim it.
 
 ![Claim Referendum Deposits](../assets/claim-referendum-decision-deposit.png)
@@ -277,7 +277,7 @@ To refund your slashed deposit, you can start a new referendum and specifically 
 from the treasury. You need to make sure you have enough balance for a new submission and decision
 deposit, and you will need to select the right track to ask for a refund. For example, the
 [Small Tipper Track](./learn-polkadot-opengov-origins.md#small-tipper) would be fine for any kind of
-deposit refund up to 250 DOT (8.25 KSM on Kusama).
+deposit refund up to 250 DOT (8.33 KSM on Kusama).
 
 ## Cancel or Kill a Referendum
 
@@ -289,7 +289,7 @@ attain
 [specific approval and support levels](./learn-polkadot-opengov-origins.md#referendum-canceller).
 
 To cancel a referendum, you need first to submit a preimage with the `referenda.cancel` extrinsic.
-Go to the [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and
+Go to the [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda) and
 click on the "Add Preimage" button. You must specify the `referenda.cancel` extrinsic with the index
 equal to the ongoing Referendum you wish to cancel. In the screenshot below, the Referendum to be
 cancelled is 249.
@@ -300,16 +300,16 @@ This call will cancel the referendum and return the deposit. You can also kill a
 the `referenda.kill` extrinsic. This will cancel the referendum and slash the deposit.
 
 !!!info "Preimage Submission Deposit"
-    A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional to the amount of information stored within the preimage. The deposit amount required for a preimage with a treasury spend transaction is around 41 DOT (1.4 KSM on Kusama). Ensure you have enough account balance to pay for this submission deposit as well as the transaction fees.
+    A deposit is required for the preimage to be stored on chain. The preimage deposit is proportional to the amount of information stored within the preimage. Since governance moved to Asset Hub, the deposit for a preimage with a treasury spend transaction is about 0.4 DOT on Polkadot (about 0.013 KSM on Kusama). Ensure you have enough account balance to pay for this preimage deposit as well as the transaction fees.
 
 Once a preimage is submitted, it can be checked under
-[Governance > Preimages](https://polkadot.js.org/apps/#/preimages).
+[Governance > Preimages](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages).
 
 ![cancel-referenda-preimage-check](../assets/cancel-referenda-preimage-check.png)
 
 You must copy the preimage to use it when you submit your proposal. To submit the proposal to cancel
 referendum 249, for example, you need to go under
-[Governance > Referenda](https://polkadot.js.org/apps/#/referenda) and click the "Submit Proposal"
+[Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda) and click the "Submit Proposal"
 button.
 
 ![cancel-referenda-proposal](../assets/cancel-referenda-proposal.png)

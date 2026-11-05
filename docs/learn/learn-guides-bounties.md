@@ -48,10 +48,10 @@ an OpenGov referendum.
 </div>
 
 When you add a bounty, this will show as "proposed" in the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties). Once the community approves your bounty
+[Bounties page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/bounties). Once the community approves your bounty
 proposal as an OpenGov referendum, the bounty will show as "funded" at the end of the
 [spending period](../general/glossary.md#spend-period) on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties). You can then proceed with assigning
+[Bounties page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/bounties). You can then proceed with assigning
 curators to the bounty.
 
 To minimize storage on chain in the same way as any proposal, bounties don't contain contextual
@@ -70,7 +70,7 @@ Submitting a bounty proposal will require a
     See [this written tutorial](https://scribehow.com/shared/How_to_Assign_a_Curator_to_a_Bounty_on_Polkadotjs_Apps__JgK3eSfXQdm_PSvtz8TelQ) to learn more about how to assign a curator to a bounty.
 
 Once your bounty is shown as "funded" on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties), you can propose a bounty curator. The
+[Bounties page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/bounties), you can propose a bounty curator. The
 referendum must be submitted on the same track used for proposing the bounty or a track with a
 higher spending limit
 ([see the code snippet](https://github.com/paritytech/polkadot-sdk/blob/22e90b1c11509f1f13083f1ac6c5f028f54432e7/substrate/frame/bounties/src/lib.rs#L412)).
@@ -91,10 +91,10 @@ how you can add a curator to a bounty and submit it for approval through an Open
 
 Once your OpenGov referendum has been approved by the community and served the required
 [spending period](../general/glossary.md#spend-period), the bounty will still show as "funded" on
-the main [Bounties page](https://polkadot.js.org/apps/#/bounties) and await the curator's
+the main [Bounties page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/bounties) and await the curator's
 acceptance. The curator must formally accept the curator role by signing a `bounties.acceptCurator`
 extrinsic. More information about when to do this can be found on the main
-[Bounties page](https://polkadot.js.org/apps/#/bounties). Only after the curators claim their
+[Bounties page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/bounties). Only after the curators claim their
 candidacy the bounty will show as "active" on the main Bounty page.
 
 !!!info "Curator assignment call must be executed after bounty is funded"

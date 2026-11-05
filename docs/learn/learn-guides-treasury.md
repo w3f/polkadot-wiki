@@ -54,7 +54,7 @@ unchanged.
 The example below shows how to create a [preimage](../general/glossary.md#preimage) for a
 transaction that requests 100 DOT from Treasury.
 
-- Navigate to [Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/#/preimages)
+- Navigate to [Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages)
   and then click on Add Preimage.
 - Select the account which will be used to submit the preimage.
 - Choose `treasury` pallet in the "propose" dropdown and the `spendLocal(amount, beneficiary)`call
@@ -83,7 +83,7 @@ the image below). Take a note of this preimage hash, which is required to submit
 
 The example below shows how to submit a Treasury track referendum.
 
-- Navigate to [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/referenda)
+- Navigate to [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda)
   and then click on Submit proposal.
 - Select the account which will be used to submit the proposal.
 - Choose the appropriate submission track (The example below selected Small Spender track).
@@ -95,7 +95,7 @@ The example below shows how to submit a Treasury track referendum.
 ![Submit Treasury Proposal](../assets/treasury/submit-proposal-treasury.png)
 
 Once your submission is executed, your referendum will appear under your chosen track on the
-Polkadot Developer Interface [referenda page](https://polkadot.js.org/apps/#/referenda).
+Polkadot Developer Interface [referenda page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/referenda).
 
 ### Placing a Decision Deposit for the Treasury Track Referendum
 
@@ -158,7 +158,7 @@ The following tutorial mostly goes over how to utilize the `spend` extrinsic, wh
 The example below shows how to create a [preimage](../general/glossary.md#preimage) for a transaction
 that requests 100 USDT from AssetHub.
 
-- Navigate to [Polkadot Developer Interface > Governance > Referenda](https://polkadot.js.org/apps/#/preimages)
+- Navigate to [Polkadot Developer Interface > Governance > Preimages](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fpolkadot-asset-hub-rpc.polkadot.io#/preimages)
   and then click on Add Preimage.
 - Select the account to submit the preimage.
 - Choose the `treasury` pallet in the "propose" dropdown and the

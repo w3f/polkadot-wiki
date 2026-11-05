@@ -34,8 +34,11 @@ Here below there links to useful tools about Polkadot OpenGov.
 - **[OpenGov.Watch](https://www.opengov.watch/)**  
   🕵️ OpenGov Watch is your gateway to understanding current efforts in OpenGov. Access reports, referenda info, guides, and even book a call.
 
-- **[OpenGov Tracker](https://ogtracker.io/)**  
-  📊 Shows the status of referenda and bounties in OpenGov with beautiful visualizations.
+- **[Subsquare](https://polkadot.subsquare.io/)**  
+  📊 Browse referenda, tracks, treasury spends and bounties, with live approval and support curves.
+
+- **[Polkassembly](https://polkadot.polkassembly.io/)**  
+  💬 Discussion and voting platform for referenda, with proposal histories and delegation.
 
 - **[OpenGov Portal](https://opengovwatch.notion.site/Polkadot-OpenGov-Portal-f8baf91a46864144ae96c47173a10225)**  
   📚 The Notion-based OpenGov Portal helps you dive into governance areas and learn how things work.
@@ -46,15 +49,7 @@ See also [Polkadot-JS OpenGov Guides](./learn-guides-polkadot-opengov.md).
 
 ## Summary
 
-In Polkadot OpenGov, all the proposals are initiated by the public. The proposal will enter a
-Lead-in period (for more information, see [Referenda Timeline](#referenda-timeline)), after which it
-will follow a specific [track](#origins-and-tracks) which has a dedicated origin. There are
-[15 origins](./learn-polkadot-opengov-origins.md#origins-and-tracks-info), each with a different
-track configuration. Tracks parameters are preset values that set the duration of a referendum as
-well as how many referenda can be voted on simultaneously. For example, a treasury proposal can now
-be submitted in different tracks depending on the amount requested. A proposal for a small tip will
-need to be submitted to the Small Tipper track, while a proposal requiring substantial funds will
-need to be submitted to the Medium or Big Spender track.
+In Polkadot OpenGov, all the proposals are initiated by the public. The proposal will enter a Lead-in period (for more information, see [Referenda Timeline](#referenda-timeline)), after which it will follow a specific [track](#origins-and-tracks) which has a dedicated origin. Polkadot has [18 tracks](./learn-polkadot-opengov-origins.md#origins-and-tracks-info) (Kusama has 16), each with its own origin and configuration. Tracks parameters are preset values that set the duration of a referendum as well as how many referenda can be voted on simultaneously. For example, a treasury proposal can now be submitted in different tracks depending on the amount requested. A proposal for a small tip will need to be submitted to the Small Tipper track, while a proposal requiring substantial funds will need to be submitted to the Medium or Big Spender track.
 
 ![opengov-overview](../assets/opengov-overview.png)
 
@@ -85,9 +80,13 @@ so as often as they wish. [**Origins and Tracks**](#origins-and-tracks) help fac
 
 ### OpenGov Deposits
 
-A submission deposit is needed to store a proposal's preimage as part of the proposal creation process. On Polkadot, the submission deposit is around [42 DOT](https://polkadot.js.org/apps/#/preimages). 
+A referendum can involve up to three deposits:
 
-An origin-dependent decision deposit is also needed to enter the decision period of a particular referendum (see below). See how you can claim back your deposits [here](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits).
+- **Preimage deposit:** if you store the proposal's call on chain as a separate preimage that has not already been requested, you hold a deposit that grows with the size of the call. On Polkadot Asset Hub it is about 0.4 DOT for a typical treasury spend. A preimage that has already been requested can be stored without a deposit. Short calls can instead be included inline in the referendum, with no separate preimage. You get the deposit back by calling `preimage.unnotePreimage`.
+- **Submission deposit:** submitting the referendum itself requires {{ rpc("polkadot-assethub", "Referenda", "SubmissionDeposit", 100000000000, is_constant=true, readable="human_readable") }} on Polkadot, the same for every track. It is refundable only if the referendum is approved or cancelled. It is not returned if the referendum is rejected, times out or is killed.
+- **Decision deposit:** an origin-dependent deposit needed to enter the decision period (see below and the [track table](./learn-polkadot-opengov-origins.md#origins-and-tracks-info)). Anyone can place it, not only the proposer. It is refundable once the referendum is approved, rejected, timed out or cancelled, and it is lost only if the referendum is killed.
+
+See how you can claim back your deposits [here](./learn-guides-polkadot-opengov.md#claiming-opengov-deposits).
 
 ### Referenda Timeline
 
@@ -108,11 +107,7 @@ three criteria:
   on the number of proposals that can be decided simultaneously. Origins that have more potent
   abilities will have lower limits. For example, the Root level origin has a limit of one, implying
   that only a single proposal may be decided on at once on its track.
-- A decision deposit must be submitted. Creating a referendum is cheap as the submission deposit value consists
-  of only the value required for the on-chain storage needed to track it. But, having a referendum
-  reviewed and decided upon carries the risk of using up the limited spots available in the
-  referenda queue. Having a more significant but refundable deposit requirement helps
-  mitigate spam. Failing to submit the decision deposit will lead to a referendum _timeout_.
+- A decision deposit must be submitted. Creating a referendum is cheap as the submission deposit value consists of only the value required for the on-chain storage needed to track it. But, having a referendum reviewed and decided upon carries the risk of using up the limited spots available in the referenda queue. Having a more significant but refundable deposit requirement helps mitigate spam. If no decision deposit is placed within {{ rpc("polkadot-assethub", "Referenda", "UndecidingTimeout", 43200, is_constant=true, readable="blocks_to_days") }} days of submission on Polkadot, the referendum _times out_ and the submission deposit is not returned.
 
 !!!info "Decision Deposit Amounts"
     In Polkadot OpenGov, someone must submit the Decision Deposit for a referendum to enter its Decision Period. The number of tokens required for the Decision Deposit depends on the origin’s privilege level. The higher the privilege, the higher the deposit. For example, malicious referenda posted on the Small Tipper origin inflict low economic damage to the network. In contrast, malicious referenda on the Root origin can inflict more significant harm, such as changing the entire network's runtime.
