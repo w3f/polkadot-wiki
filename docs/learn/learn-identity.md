@@ -73,7 +73,7 @@ here, you must reach out to specific registrars individually if you want to be j
     ~~12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8~~ <br /> **Fee**: ~~0 DOT~~ <br />
 
     Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-    1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ <br /> **Fee**: 20 DOT <br />
+    1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ <br /> **Fee**: 50 DOT <br />
 
     ~~Registrar 2~~: <br /> **Account**: ~~1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB~~ <br />
     **Fee**: ~~0 DOT~~ <br />
@@ -91,13 +91,13 @@ here, you must reach out to specific registrars individually if you want to be j
 
 === "Kusama"
 
-    ~~Registrar 0~~ : <br /> **URL**: NA <br /> **Account**:
+    ~~Registrar 0~~ : <br /> **Account**:
     ~~H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF~~ <br /> **Fee**: ~~0.04 KSM~~ <br />
 
     Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-    Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn <br /> **Fee**: 4.5 KSM <br />
+    Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn <br /> **Fee**: 15 KSM <br />
 
-    Registrar 2: is no longer offering registrar services on Kusama. <br /> **Account**:
+    ~~Registrar 2~~: <br /> **Account**:
     ~~EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7~~ <br /> **Fee**: ~~1 KSM~~ <br />
 
     Registrar 3: <br /> **Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM <br /> **Fee**: 1
