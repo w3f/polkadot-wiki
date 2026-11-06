@@ -27,14 +27,9 @@ mechanisms:
 
 The outflow is determined by the following mechanisms:
 
-- **Burned tokens:** at the end of each spend period,
-  **[a fraction](../general/chain-state-values.md) of the available funds are
-  burned**.
-- **Treasury proposals & Bounties:** they make up the largest share of outflow tokens to the
-  community and need to be approved by governance. Then, payouts occur at the end of a
-  [spend period](../general/glossary.md#spend-period).
-- **Tips:** smaller payouts directly to grantees that can happen within a
-  [spend period](../general/glossary.md#spend-period).
+- **Burned tokens:** the treasury has a burn factor that applies at the end of each spend period. On Polkadot it is currently {{ rpc("polkadot-assethub", "Treasury", "Burn", 0, is_constant=true, readable="percentage") }}, so nothing is burned. The burn was removed by a runtime upgrade ([polkadot-fellows/runtimes#1028](https://github.com/polkadot-fellows/runtimes/pull/1028), December 2025) following Wish For Change referendum [1781](https://polkadot.subsquare.io/referenda/1781) ("Preserve DOT Treasury from Burn").
+- **Treasury spends & Bounties:** they need to be approved by governance on one of the [treasury tracks](#treasury-tracks). Spends made with `spend_local` (DOT only) are processed at the end of a [spend period](../general/glossary.md#spend-period) and paid when the treasury has enough available funds; otherwise they wait for a later spend period. Spends made with `spend` (DOT or an approved asset such as USDT or USDC) do not wait for a spend period: each one has a `valid_from` block (the enactment block if not set, or later for milestone-based spends), and anyone can trigger the payout from that block onwards. The payout must be started within {{ rpc("polkadot-assethub", "Treasury", "PayoutPeriod", 1296000, is_constant=true, readable="blocks_to_days") }} days of `valid_from`, otherwise the spend expires. Because `valid_from` can be set in the past, a newly approved spend may have less time left than that.
+- **Tips:** small payouts approved through the Small Tipper and Big Tipper tracks. The separate tipping mechanism from Governance V1 no longer exists.
 
 !!!info "Spend Period Schedule"
     On Polkadot Developer Interface, navigate to Governance > Treasury to view the status of current [spend period](../general/glossary.md#spend-period).
@@ -73,9 +68,7 @@ track. Then,
 
 ## Sub-treasuries
 
-The treasury currently operates on a single account on-chain. The above tracks manage the outflow of
-the treasury on the network. With _sub_-treasuries, having treasury accounts that correspond to each
-[collective](./learn-system-chains.md#collectives) is also possible.
+The Polkadot treasury holds its funds in a single account on Polkadot Asset Hub, in DOT and in approved assets such as USDT and USDC. The Technical Fellowship has its own treasury on the Collectives chain. The above tracks manage the outflow of the treasury on the network. With _sub_-treasuries, having treasury accounts that correspond to each [collective](./learn-system-chains.md#collectives) is also possible.
 
 Rather than have many referenda through OpenGov, the treasury can allocate funds to each
 sub-treasury (through [governance](./learn-polkadot-opengov.md)), from which each respective collective
