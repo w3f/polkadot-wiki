@@ -29,7 +29,7 @@ pymdown-extensions==13.0
 python-dateutil==4.0.0
 PyYAML==6.0.3
 pyyaml_env_tag==1.1
-regex==2026.11.7
+regex==2026.11.9
 requests==2.34.2
 six==1.17.0
 urllib3==2.8.0
