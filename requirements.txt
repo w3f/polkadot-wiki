@@ -6,7 +6,7 @@ click==8.5.1
 colorama==0.4.6
 ghp-import==2.1.0
 idna==3.20
-importlib_metadata==10.1.0
+importlib_metadata==10.2.0
 Jinja2==3.1.6
 Markdown==3.11.3
 MarkupSafe==3.0.4
